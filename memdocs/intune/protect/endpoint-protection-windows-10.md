@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: HT
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329349"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437112"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Definições do Windows 10 (e mais tarde) para proteger dispositivos que utilizem Intune
 
@@ -895,7 +895,7 @@ Bloqueie os itens seguintes para impedir ameaças de script:
   - **Bloco** - Bloqueie processos não confiáveis e não assinados que funcionam a partir de USB.  
   - **Apenas auditoria**  
   
-- **Ficheiros executáveis que não correspondam a uma prevalência, idade ou lista de critérios de confiança**  
+- **Executáveis que não satisfaçam critérios de prevalência, idade ou lista de confiança**  
   **Predefinição**: Não configurado  
   Regra: [Bloquear ficheiros executáveis de executar a menos que satisfaçam um critério de prevalência, idade ou lista de confiança](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
@@ -1226,7 +1226,7 @@ Utilize estas opções para configurar as definições da segurança local em di
    - **Bloco** - Permita que apenas contas locais com senhas em branco assinem utilizando o teclado do dispositivo.  
    - **Não configurado** - Permita que contas locais com senhas em branco sintetizam em outros locais que não o dispositivo físico.  
 
-#### <a name="admin"></a>Admin  
+#### <a name="admin"></a>Administração  
 
 - **Conta de administração local**  
   **Predefinição**: Não configurado  
@@ -1649,240 +1649,6 @@ Utilize estas opções para configurar as definições da segurança local em di
   - **Manual**
   - **Automático**
   - **Deficientes**
-
-## <a name="user-rights"></a>Direitos dos Utilizadores
-
-- **Aceda ao Credential Manager como chamador de confiança**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  Este direito de utilizador é utilizado pelo Credential Manager durante as operações de Backup e Restauro. As credenciais guardadas pelos utilizadores podem ser comprometidas se este privilégio for dado a outras entidades.
-  - **Não configurado**
-  - **Permitir**
-
-- **Permitir o login local**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  Este direito de utilizador determina quais os utilizadores que podem iniciar sessão no computador.
-  - **Não configurado**
-  - **Permitir**
-
-- **Permitir o acesso da Rede**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  Este direito de utilizador determina quais os utilizadores e grupos que podem ligar-se ao computador sobre a rede.
-  - **Não configurado**
-  - **Permitir**
-
-- **Agir como parte do Sistema Operativo**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/ActaspartofTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  Agir como parte do Sistema Operativo
-  - **Não configurado**
-  - **Permitir**  
-
-- **Ficheiros e diretórios de backup**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  Este direito de utilizador determina quais os utilizadores que podem contornar as permissões de ficheiros, diretórios, registos e outros objetos persistentes ao fazer backup de ficheiros e diretórios.
-  - **Não configurado**
-  - **Permitir**
-
-- **Alterar o tempo do sistema**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  Este direito de utilizador determina quais os utilizadores e grupos que podem alterar a hora e a data no relógio interno do computador.
-  - **Não configurado**
-  - **Permitir**
-
-- **Criar objetos globais**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  Esta definição de segurança determina se os utilizadores podem criar objetos globais que estão disponíveis para todas as sessões. Os utilizadores que possam criar objetos globais podem afetar processos que decorrem nas sessões de outros utilizadores, o que pode levar à falha da aplicação ou à corrupção de dados.
-  - **Não configurado**
-  - **Permitir**
-
-- **Criar ficheiro de página**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/CreatePagefile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  Este direito de utilizador determina quais os utilizadores e grupos que podem chamar uma API interna para criar e alterar o tamanho de um ficheiro de página.
-  - **Não configurado**
-  - **Permitir**
-
-- **Criar objetos partilhados permanentes**  
-  **Predefinição**: Não configurado  
-  CSP: [Direitos de utilizador/criarobjetos partilhados permanentes](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  Este direito de utilizador determina quais as contas que podem ser utilizadas por processos para criar um objeto de diretório utilizando o gestor de objetos.
-  - **Não configurado**
-  - **Permitir**
-
-- **Criar ligações simbólicas**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  Este direito de utilizador determina se o utilizador pode criar uma ligação simbólica a partir do computador para o qual está ligado.
-  - **Não configurado**
-  - **Permitir**
-
-- **Criar fichas**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  Este direito de utilizador determina quais os utilizadores/grupos que podem ser utilizados por processos para criar um símbolo que pode ser usado para ter acesso a quaisquer recursos locais quando o processo utiliza uma API interna para criar um sinal de acesso.
-  - **Não configurado**
-  - **Permitir**
-
-- **Programas de depuração**  
-  **Predefinição**: Não configurado  
-    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  Este direito de utilizador determina quais os utilizadores que podem anexar um desordeiro a qualquer processo ou ao núcleo.
-  - **Não configurado**
-  - **Permitir**
-
-- **Negar o acesso da rede**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  Este direito de utilizador determina quais os utilizadores que estão impedidos de aceder a um computador por toda a rede.
-  - **Não configurado**
-  - **Permitir**
-
-- **Negar o log on como um serviço**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  Esta definição de segurança determina quais as contas de serviço que estão impedidas de registar um processo como serviço.
-  - **Não configurado**
-  - **Permitir**
-
-- **Negar iniciar sessão através dos Serviços de Ambiente de Trabalho Remoto**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  Este direito de utilizador determina quais os utilizadores e grupos que estão proibidos de iniciar sessão como cliente dos Serviços de Ambiente de Trabalho Remoto.
-  - **Não configurado**
-  - **Permitir**
-
-- **Permitir a delegação**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/Enabledelegação](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- Este direito de utilizador determina quais os utilizadores que podem definir a definição de Confiança para delegação num utilizador ou objeto de computador.
-  - **Não configurado**
-  - **Permitir**
-
-- **Gerar auditorias de segurança**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  Este direito de utilizador determina quais as contas que podem ser utilizadas por um processo para adicionar entradas ao registo de segurança. O registo de segurança é usado para rastrear acesso não autorizado ao sistema.
-  - **Não configurado**
-  - **Permitir**
-
-- **Fazer-se passar por um cliente**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  Atribuir este direito de utilizador a um utilizador permite que os programas em execução em nome desse utilizador se personifiquem de um cliente. Exigir este direito de utilizador a este tipo de personificação impede um utilizador não autorizado de convencer um cliente a ligar-se a um serviço que criou e, em seguida, personificar esse cliente, o que pode elevar as permissões do utilizador não autorizado para níveis administrativos ou de sistema.
-  - **Não configurado**
-  - **Permitir**
-
-- **Aumentar a prioridade de agendamento**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/AumentarA Prioridade](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority) de Agendamento
-
-  Este direito de utilizador determina quais as contas que podem utilizar um processo com o acesso da Write Property a outro processo para aumentar a prioridade de execução atribuída ao outro processo.
-  - **Não configurado**
-  - **Permitir**
-
-- **Carregador e descarregar controladores de dispositivos**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/LoadunloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  Este direito de utilizador determina quais os utilizadores que podem carregar e descarregar dinamicamente os controladores do dispositivo ou outro código no modo kernel.
-  - **Não configurado**
-  - **Permitir**
-
-- **Bloquear páginas na memória**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  Este direito de utilizador determina quais as contas que podem utilizar um processo para manter os dados na memória física, o que impede o sistema de apagar os dados para a memória virtual no disco.
-  - **Não configurado**
-  - **Permitir**
-
-- **Gerir registo de auditoria e segurança**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  Este direito de utilizador determina quais os utilizadores que podem especificar opções de auditoria de acesso a objetos para recursos individuais, tais como ficheiros, objetos de Diretório Ativo e chaves de registo.
-  - **Não configurado**
-  - **Permitir**
-
-- **Executar tarefas de manutenção de volume**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  Este direito de utilizador determina quais os utilizadores e grupos que podem executar tarefas de manutenção num volume, como desfragmentação remota.
-  - **Não configurado**
-  - **Permitir**
-
-- **Modificar os valores ambientais do firmware**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ModificarFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  Este direito de utilizador determina quem pode modificar os valores ambientais do firmware.
-  - **Não configurado**
-  - **Permitir**
-
-- **Modificar uma etiqueta de objeto**  
-  **Predefinição**: Não configurado  
-  CSP: [Userrights/ModificarObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  Este direito de utilizador determina quais as contas de utilizador que podem modificar a etiqueta de integridade dos objetos, tais como ficheiros, chaves de registo ou processos detidos por outros utilizadores.
-  - **Não configurado**
-  - **Permitir**
-
-- **Processo único de perfil**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  Este direito de utilizador determina quais os utilizadores que podem utilizar ferramentas de monitorização do desempenho para monitorizar o desempenho dos processos do sistema.
-  - **Não configurado**
-  - **Permitir**
-
-- **Paragem remota**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  Este direito de utilizador determina quais os utilizadores autorizados a desligar um computador a partir de uma localização remota da rede. O uso indevido deste direito de utilizador pode resultar numa negação de serviço.
-  - **Não configurado**
-  - **Permitir**
-  
-- **Restaurar ficheiros e diretórios**  
-  **Predefinição**: Não configurado  
-  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  Este direito de utilizador determina quais os utilizadores que podem contornar as permissões de ficheiros, diretórios, registos e outros objetos persistentes ao restaurar ficheiros e diretórios de reserva, e determina quais os utilizadores que podem definir qualquer diretor de segurança válido como proprietário de um objeto.
-  - **Não configurado**
-  - **Permitir**
-  
-- **Tomar posse de ficheiros ou objetos**  
-  **Predefinição**: Não configurado  
-  CSP: [Direitos de Utilizador/Apropriação](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  Este direito de utilizador determina quais os utilizadores que podem apropriar-se de qualquer objeto titular no sistema, incluindo objetos de Diretório Ativo, ficheiros e pastas, impressoras, chaves de registo, processos e fios.
-  - **Não configurado**
-  - **Permitir**
 
 ## <a name="next-steps"></a>Próximos passos
 
