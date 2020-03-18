@@ -1,0 +1,25 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: security-baseline-settings-one
+  title: Linhas de base de segurança
+  prompt: Escolha a sua linha de base de segurança
+  pivots:
+  - id: windows-mdm
+    title: Windows MDM
+  - id: microsoft-defender-atp
+    title: Proteção Avançada Contra Ameaças do Microsoft Defender
+- id: windows-mdm-versions
+  title: Versões de base do Windows MDM
+  prompt: Escolha uma versão
+  pivots:
+  - id: mdm-may-2019
+    title: maio de 2019
+  - id: mdm-preview
+    title: Pré-visualização - outubro 2018
+metadata:
+  ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79327433"
