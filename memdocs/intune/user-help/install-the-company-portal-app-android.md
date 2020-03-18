@@ -1,0 +1,51 @@
+---
+title: Instalar a aplicação Portal da Empresa | Documentos da Microsoft
+description: ''
+keywords: ''
+author: lenewsad
+ms.author: lanewsad
+manager: dougeby
+ms.date: 04/19/2019
+ms.topic: article
+ms.prod: ''
+ms.service: microsoft-intune
+ms.subservice: end-user
+ms.technology: ''
+ms.assetid: 68e5a234-4353-4cb9-b869-4f2af5e59f31
+searchScope:
+- User help
+ROBOTS: ''
+ms.reviewer: arnab
+ms.suite: ems
+ms.custom: intune-enduser
+ms.collection: ''
+ms.openlocfilehash: 2f33d7060d4edd4d73694ca9e998d5102e712beb
+ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79324589"
+---
+# <a name="install-the-company-portal-app-for-android"></a>Instalar a aplicação Portal da Empresa para Android
+
+O Portal da Empresa é uma aplicação que lhe concede acesso a e-mail, ligações à Internet e aplicações empresariais e escolares. Esta aplicação ajuda-o a manter as informações da sua organização em segurança ao proteger o seu dispositivo – por exemplo, ao manter as aplicações da empresa atualizadas ou ao assegurar que o seu dispositivo bloqueia automaticamente após um determinado período de tempo. Para saber mais sobre as funcionalidades do Portal da Empresa e a sua parte na gestão de dispositivos, consulte [porquê inscrever o seu dispositivo Android.](why-enroll-android-device.md)  
+
+1. Toque em **Ecrã Principal** > **Play Store**.
+
+2. Na caixa **de pesquisa,** digite o **portal da empresa Intune**.  
+
+3. Toque em **Portal da Empresa do Intune**.
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. Toque em **INSTALAR**.
+
+    ![android-install-company-portal](./media/and-cpinstall-2-install.png)
+
+5. Toque em **ACEITAR**.
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
+
+Depois de descarregar a aplicação Portal da Empresa, provavelmente irá querer [inscrever o seu dispositivo em Intune](enroll-device-android-company-portal.md) para ter acesso total às suas informações de trabalho. Também pode [iniciar sessão noutro dispositivo](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).  
+
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
