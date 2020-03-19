@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c131992d4f9b736aea2653272f81d52da7021ef7
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331577"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508496"
 ---
 # <a name="what-is-device-enrollment"></a>O que é a inscrição de dispositivos?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Por predefinição, os dispositivos para todas as plataformas têm permissão pa
 |:---:|:---:|:---:|:---:|:---:|
 | | Os dispositivos são apagados durante a inscrição. | Associa cada dispositivo a um utilizador.| Se sim, os utilizadores não podem desinscrever dispositivos. | |
 |**[BYOD](#bring-your-own-device)** | Não| Sim | Não | [Mais informações](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| Não |Não |Não | [Mais informações](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| Não |Não |Não | [Mais informações](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Sim | Opcional | Opcional|[Mais informações](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Sim | Opcional | Não| [Mais informações](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Não | Não | Não|[Mais informações](apple-configurator-enroll-ios.md)|
@@ -89,7 +89,7 @@ Os [dispositivos pertencentes à empresa (COD)](corporate-identifiers-add.md) in
 ### <a name="device-enrollment-manager"></a>Gestor de inscrição de dispositivos
 A gestão de inscrição de dispositivos (DEM) é uma conta especial do utilizador que serve para inscrever e gerir múltiplos dispositivos pertencentes à empresa. Os gestores podem instalar o Portal da Empresa e inscrever muitos dispositivos sem utilizador. Estes tipos de dispositivo são ideais, por exemplo, para aplicações de utilitários ou ponto de venda, mas não para utilizadores que necessitem de aceder a recursos de e-mail ou da empresa. Saiba mais sobre o [DEM](device-enrollment-manager-enroll.md).
 
-### <a name="apple-device-enrollment-program"></a>Programa de Inscrição de Dispositivos Apple
+### <a name="apple-device-enrollment-program"></a>Programa de Inscrição de Dispositivos da Apple
 A gestão do Programa de Inscrição de Dispositivos da Apple (DEP) permite criar e implementar a política "no ar" para dispositivos iOS/iPadOS e macOS que são comprados e geridos com DEP. O dispositivo é inscrito quando os utilizadores ligarem o dispositivo pela primeira vez e executarem o Assistente de Configuração. Este método suporta o modo supervisionado iOS/iPadOS, que permite configurar um dispositivo com funcionalidadeespecífica.
 
 Saiba mais sobre a inscrição iOS/iPadOS DEP:

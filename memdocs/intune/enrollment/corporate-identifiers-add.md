@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57e2af03ba1d035f8285c4075d5cbc8ff6cfd38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331597"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526313"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar os dispositivos como pertencentes à empresa
 
@@ -49,7 +49,7 @@ Esta funcionalidade é suportada para as seguintes plataformas:
 
 | Platform | Números IMEI | Números de série |
 |---|---|---|
-| Portal do | Suportado (Windows Phone) | Não suportado |
+| Windows | Suportado (Windows Phone) | Não suportado |
 | iOS/macOS | Não suportado | Suportado |
 | Administração de dispositivogerido Android OS v10 | Não suportado | Não suportado |
 | Outros Android | Não suportado | Suportado |
@@ -78,7 +78,7 @@ Se visualizar este ficheiro .csv num editor de texto, este é apresentado como:
 
 > [!IMPORTANT]
 > Alguns dispositivos Android e iOS/iPadOS têm vários números IMEI. O Intune só lê um número IMEI por cada dispositivo inscrito. Se importar um número IMEI, mas não for um número inventariado pelo Intune, o dispositivo será classificado como um dispositivo pessoal em vez de um dispositivo pertencente à empresa. Se importar múltiplos números IMEI para um dispositivo, os números não inventariados apresentarão o estado de inscrição **Desconhecido**.<br>
->Nota: Os números de série são a forma recomendada de identificação para dispositivos iiOS/iPadOSOS.
+>Nota: Os números de série são a forma recomendada de identificação para dispositivos iOS/iPadOSOS.
 >Não se garante que os Números de série do Android sejam exclusivos ou estejam presentes. Contacte o fornecedor do seu dispositivo para saber se o número de série é um ID de dispositivo fiável.
 >Os números de série comunicados pelo dispositivo ao Intune poderão não corresponder ao ID apresentado nos menus Definições/Acerca do Android no dispositivo. Verifique o tipo de número de série comunicado pelo fabricante do dispositivo.
 >Tentar carregar um ficheiro com números de série que contenham pontos (.) irá fazer com que o carregamento falhe. Os números de série com pontos não são suportados.

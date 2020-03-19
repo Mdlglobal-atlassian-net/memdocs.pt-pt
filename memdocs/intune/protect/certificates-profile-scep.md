@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a7e8d625505383caacbbefd67402d46c04c72c6e
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329797"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526636"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Criar e atribuir perfis de certificado SCEP em Intune
 
@@ -209,7 +209,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
 
    - **Certificado de raiz:**
 
-     Selecione o *perfil de certificado fidedigno* que configurado anteriormente e atribuído aos utilizadores e dispositivos aplicáveis para este perfil de certificado SCEP. O perfil de certificado fidedigno é utilizado para fornecer utilizadores e dispositivos com o certificado Trust Root CA. Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o seu certificado de CA de raiz fidedigna](certificates-configure.md#export-the-trusted-root-ca-certificate) e criar perfis de [certificados fidedignos](certificates-configure.md#create-trusted-certificate-profiles) em *certificados de utilização para autenticação no Intune*. Se tiver uma Autoridade de Certificação de Raiz e uma Autoridade de Certificação emissora, selecione o perfil de certificado De Raiz Fidedigno que está associado à Autoridade de Certificação emissora.
+     Selecione o *perfil de certificado fidedigno* que configurado anteriormente e atribuído aos utilizadores e dispositivos aplicáveis para este perfil de certificado SCEP. O perfil de certificado fidedigno é utilizado para fornecer utilizadores e dispositivos com o certificado Trust Root CA. Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o seu certificado de CA de raiz fidedigna](certificates-configure.md#export-the-trusted-root-ca-certificate) e criar perfis de [certificados fidedignos](certificates-configure.md#create-trusted-certificate-profiles) em *certificados de utilização para autenticação no Intune*. Se tiver uma Autoridade de Certificação de Raiz e uma Autoridade de Certificação emissora, selecione o perfil de certificado De Raiz Fidedigno que valida a Autoridade de Certificação emissora.
 
    - **Utilização alargada da chave:**
 

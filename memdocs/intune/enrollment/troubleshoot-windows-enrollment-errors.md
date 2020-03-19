@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327025"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526279"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas de registo de dispositivos Windows em Microsoft Intune
 
@@ -321,6 +321,8 @@ Erro 0x800707774: Algo correu mal. Confirme que está a usar as informações co
 Este problema ocorre tipicamente antes de o dispositivo ser reiniciado num cenário de Piloto Automático AD Hybrid Azure, quando o dispositivo se estem durante o sinal inicial no ecrã. Significa que o controlador de domínio não pode ser encontrado ou alcançado com sucesso devido a problemas de conectividade. Ou que o dispositivo entrou num estado que não pode aderir ao domínio.
 
 **Causa:** A causa mais comum é que o Hybrid Azure AD Join está a ser utilizado e a funcionalidade de utilizador da Atribuição está configurada no perfil autopiloto. A utilização da função de utilizador Dasign executa uma adesão do Azure AD ao dispositivo durante o ecrã de início de início de sessão que coloca o dispositivo num estado em que não pode aderir ao seu domínio no local. Por isso, a função de utilizador atribuir apenas deve ser utilizada em cenários padrão de AD AD Join Autopilot.  A funcionalidade não deve ser utilizada em cenários de AD Hybrid Azure Join.
+
+Outra causa possível para este erro é que o dispositivo AzureAD associado do objeto Autopilot foi eliminado. Para resolver isto, elimine o objeto Autopilot e reimporte o hash para gerar um novo.
 
 #### <a name="resolution"></a>Resolução
 

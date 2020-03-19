@@ -15,15 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40d290fbe07ab4d1f0cf66761b0c78867cf5677
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325221"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526449"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Conector de Defesa de Ameaças Móveis Sophos com Intune
-
 Pode controlar o acesso de dispositivos móveis a recursos corporativos utilizando acesso condicionado com base na avaliação de risco realizada pela Sophos Mobile, uma solução de Defesa de Ameaças Móveis (MTD) que se integra com a Microsoft Intune. O risco é avaliado com base na telemetria recolhida a partir de dispositivos que executam a aplicação Sophos Mobile.
 Pode configurar políticas de acesso condicional com base na avaliação de risco móvel Sophos ativada através de políticas de conformidade de dispositivos Intune, que pode utilizar para permitir ou bloquear dispositivos não conformes para aceder a recursos corporativos com base em ameaças detetadas.
 

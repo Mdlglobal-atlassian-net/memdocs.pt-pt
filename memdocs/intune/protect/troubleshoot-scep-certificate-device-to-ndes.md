@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328861"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526466"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Dispositivo de resolução de problemas para comunicação do servidor NDES para perfis de certificadoS SCEP no Microsoft Intune
 
@@ -242,6 +242,19 @@ Se o conjunto de aplicações SCEP não estiver iniciado, verifique o registo do
   **Resolução**: Ativar a **autenticação anónima** e desativar a **autenticação do Windows**e, em seguida, reiniciar o servidor NDES.
 
   ![Permissões IIS](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+
+- **Causa 4**: O certificado de módulo NDESPolicy expirou.
+
+  O registo CAPI2 (ver resolução da Cause 2) mostrará erros relacionados com o certificado referenciado por 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' estando fora do período de validade do certificado.
+
+  **Resolução**: Atualize a referência com a impressão digital de um certificado válido.
+  1. Identifique um certificado de substituição:
+     - Renovar o certificado existente
+     - Selecione um certificado diferente com adereços semelhantes (sujeito, EKU, tipo de chave e comprimento, etc.)
+     - Inscrever um novo certificado
+  2. Exportar a chave `NDESPolicy` Registo para apoiar os valores atuais.
+  3. Substitua os dados do valor do Registo `NDESCertThumbprint` pela impressão digital do novo certificado, removendo todo o espaço branco e convertendo o texto para minúscula.
+  4. Reinicie as Piscinas de Aplicações NDES IIS ou execute `iisreset` a partir de um pedido de comando elevado.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 

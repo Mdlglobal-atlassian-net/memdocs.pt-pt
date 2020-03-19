@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 16b0a07837eee0f44a1f66fe9751e578b5475734
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324981"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526398"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Encontre o utilizador principal de um dispositivo Intune
 
@@ -68,16 +68,16 @@ Intone automaticamente o utilizador primário aos dispositivos durante ou logo a
 
 | Platform | Método de inscrição | Utilizador primário atribuído | Utilizador primário é atribuído |
 | ---- | ---- | ---- | ---- |
-| Portal do | Adicionar trabalho ou escola (orientado pelo utilizador) | Utilizador inscrito | Durante a inscrição |   
-| Portal do | Inscrição na Aplicação Moderna (orientada pelo utilizador) | Utilizador inscrito | Durante a inscrição | 
-| Portal do | Matricule-se apenas no MDM (acionado pelo utilizador) | Utilizador inscrito | Durante a inscrição | 
-| Portal do | Azure AD junta-se (fora da experiência box) | Utilizador inscrito | Durante a inscrição | 
-| Portal do | Azure AD junta-se (Autopilot fora da experiência box) | Utilizador inscrito | Durante a inscrição | 
-| Portal do | Matricule-se apenas no MDM | Utilizador inscrito | Durante a inscrição | 
-| Portal do | Híbrido AADJ + GPO de inscrição automática | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows| 
-| Portal do | Cogestão | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows | 
-| Portal do | Azure AD junta-se (símbolo de inscrição a granel) | Nenhum | Não aplicável | 
-| Portal do | AD Azure (modo de auto-implantação autopiloto) | Nenhum | Não aplicável | 
+| Windows | Adicionar trabalho ou escola (orientado pelo utilizador) | Utilizador inscrito | Durante a inscrição |   
+| Windows | Inscrição na Aplicação Moderna (orientada pelo utilizador) | Utilizador inscrito | Durante a inscrição | 
+| Windows | Matricule-se apenas no MDM (acionado pelo utilizador) | Utilizador inscrito | Durante a inscrição | 
+| Windows | Azure AD junta-se (fora da experiência box) | Utilizador inscrito | Durante a inscrição | 
+| Windows | Azure AD junta-se (Autopilot fora da experiência box) | Utilizador inscrito | Durante a inscrição | 
+| Windows | Matricule-se apenas no MDM | Utilizador inscrito | Durante a inscrição | 
+| Windows | Híbrido AADJ + GPO de inscrição automática | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows| 
+| Windows | Cogestão | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows | 
+| Windows | Azure AD junta-se (símbolo de inscrição a granel) | Nenhum | Não aplicável | 
+| Windows | AD Azure (modo de auto-implantação autopiloto) | Nenhum | Não aplicável | 
 | Plataforma cruzada | Inscrição orientada pelo utilizador com App Portal da Empresa | Utilizador inscrito | Durante a inscrição |
 | Plataforma cruzada | Gestor de Inscrição de Dispositivos (DEM) | Inscrição do utilizador DEM | Durante a inscrição |
 | iOS/iPadOS, macOS | Apple Automated Device Matricula (DEP com afinidade do utilizador | Utilizador inscrito | Durante a inscrição |

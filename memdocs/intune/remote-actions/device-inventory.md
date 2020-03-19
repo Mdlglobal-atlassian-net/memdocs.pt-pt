@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325049"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508479"
 ---
 # <a name="see-device-details-in-intune"></a>Consultar os detalhes do dispositivo no Intune
 
@@ -36,7 +36,7 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
 1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos** > **Todos os dispositivos** e selecione um dos seus dispositivos apresentados para abrir os respetivos detalhes:
 
-   - **A visão geral** mostra o nome do dispositivo e lista algumas propriedades chave do dispositivo, como se é um dispositivo de bring-your-your-device (BYOD), check-in a tempo e muito mais. Pode fazer o seguinte no dispositivo:
+   - **A visão geral** mostra o nome do dispositivo e lista algumas propriedades chave do dispositivo, como se é um dispositivo pessoal ou corporativo, número de série, utilizador primário, e muito mais. Pode fazer o seguinte no dispositivo:
       - [Extinguir](devices-wipe.md#retire)
       - [Eliminação](devices-wipe.md#wipe)
       - [Eliminar](devices-wipe.md#delete-devices-from-the-intune-portal)
@@ -62,7 +62,7 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 > [!Note]  
 > O inventário de hardware e software é atualizado no serviço Intune a cada 7 dias.
 
-|Detalhe|Descrição|Platform| 
+|Detalhe|Description|Platform| 
 |--------------|----------------------|----|  
 |Nome|O nome do dispositivo.|Windows, iOS|
 |Nome da gestão|O nome do dispositivo utilizado apenas na consola. Alterar este nome não irá alterar o nome no dispositivo.|Windows, iOS|

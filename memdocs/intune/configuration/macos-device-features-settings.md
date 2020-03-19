@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332005"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526296"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>funcionalidade do dispositivo macOS em Intune
 
@@ -105,7 +105,7 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
 - **Botão de reiniciar**: **Ocultar** não mostra o botão de reiniciar o sinal no ecrã. **Não configurado** (predefinido) mostra o botão de reinício.
 - **Botão de sono**: **O hide** não mostra o botão de sono no sinal no ecrã. **Não configurado** (predefinido) mostra o botão de sono.
 
-#### <a name="other"></a>Other
+#### <a name="other"></a>Outros
 
 - **Desative o login do utilizador a partir da Consola:** **Desative** a linha de comando macOS utilizada para iniciar sessão. Para utilizadores típicos, **desative** esta definição. **Não configurado** (predefinido) permite que os utilizadores avançados assinem utilizando a linha de comando macOS. Para entrar no modo consola, os utilizadores introduzem `>console` no campo Username e devem autenticar na janela da consola.
 
