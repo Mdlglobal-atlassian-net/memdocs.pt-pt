@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333069"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087034"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Configurações do dispositivo Android Enterprise para configurar e-mail, autenticação e sincronização em Intune
-
-
 
 Este artigo lista e descreve as diferentes definições de e-mail que pode controlar em dispositivos Android Enterprise. Como parte da sua solução de gestão (MDM) de dispositivos móveis, utilize estas definições para configurar um servidor de e-mail, utilize o SSL para encriptar mensagens de correio eletrónico e muito mais.
 
@@ -35,16 +33,16 @@ Para saber mais sobre perfis de e-mail em Intune, consulte [configurar as defini
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Crie um perfil de [configuração](email-settings-configure.md#create-a-device-profile) do dispositivo (escolha o perfil de trabalho) ou crie uma política de configuração de [aplicações](../apps/app-configuration-policies-use-android.md).
+Crie um perfil de [configuração](email-settings-configure.md) do dispositivo (escolha o perfil de trabalho) ou crie uma política de configuração de [aplicações](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **Aplicação de e-mail**: selecione **Gmail** ou **Nine Work**
-- **Servidor de e-mail**: o nome de anfitrião do seu servidor Exchange. Por exemplo, introduza `outlook.office365.com`.
+- **Aplicativo de e-mail**: Selecione **Gmail** ou **Nine Work**.
+- **Servidor de e-mail**: introduza o nome de anfitrião do seu servidor Exchange. Por exemplo, introduza `outlook.office365.com`.
 - **Atributo de nome de utilizador do AAD**: este nome é o atributo que o Intune obtém do Azure Active Directory (Azure AD). O Intune gera de forma dinâmica o nome de utilizador utilizado por este perfil. As opções são:
 
-  - **Nome Principal de Utilizador**: obtém o nome, como `user1` ou `user1@contoso.com`
-  - **Nome de utilizador**: obtém apenas o nome como `user1`
+  - **Nome principal do utilizador**: Obtém o nome, como `user1` ou `user1@contoso.com`.
+  - **Nome do utilizador**: Obtém apenas o nome, como `user1`.
 
 - **Atributo de endereço de e-mail da AAD**: Este nome é o atributo de e-mail que Intune recebe da AD Azure. Intune gera dinamicamente o endereço de e-mail que é usado por este perfil. As opções são:
   - **Nome principal**do utilizador : Utiliza o nome principal completo, como `user1@contoso.com` ou `user1`, como o endereço de e-mail.

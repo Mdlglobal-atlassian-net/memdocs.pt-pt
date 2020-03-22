@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc5cd2926f85ebf2f81d681646be7973e6ba444
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330061"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085784"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Novidades no portal clássico do Intune – meses anteriores
 
@@ -320,7 +320,7 @@ O Intune marca todos os novos dispositivos como pessoais, a menos que o administ
 ### <a name="notices"></a>Avisos
 
 __Autenticação multi-factor na inscrição movendo-se para o portal Azure__ <!--VSO 750545-->
-Anteriormente, os administradores utilizariam a consola do Intune ou a consola do Gestor de Configuração (anterior à versão de outubro 2016) para configurar a MFA para inscrições no Intune. Com esta funcionalidade atualizada, irá agora iniciar a sessão no [portal do Microsoft Azure](https://manage.windowsazure.com) com as suas credenciais do Intune e configurar as definições da MFA através do Azure AD. Saiba mais sobre o assunto [aqui](https://aka.ms/mfa_ad).
+Anteriormente, os administradores utilizariam a consola do Intune ou a consola do Gestor de Configuração (anterior à versão de outubro 2016) para configurar a MFA para inscrições no Intune. Com esta funcionalidade atualizada, irá agora iniciar a sessão no [portal do Microsoft Azure](https://manage.windowsazure.com) com as suas credenciais do Intune e configurar as definições da MFA através do Azure AD. Saiba mais sobre o assunto [aqui](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __App Portal da empresa para Android já disponível na China__ <!--VSO 658093-->
 Estamos a disponibilizar a aplicação Portal da Empresa para Android para transferência na China. Devido à ausência da Google Play Store na China, os dispositivos Android devem obter aplicações de marketplaces de aplicações chinesas. A aplicação do Portal da Empresa para Android estará disponível para transferência através das seguintes lojas:

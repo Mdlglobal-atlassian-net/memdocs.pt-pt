@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f8d7a2f8944535cb16f6cd01c117799a3c92904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326649"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086892"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Windows 10 e Windows Holographic para configurações de dispositivos empresariais funcionam como um quiosque dedicado usando Intune
 
@@ -54,7 +54,7 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
     - **Quiosque de uma aplicação de ecrã inteiro**: o dispositivo é executado como uma única conta de utilizador e bloqueia-a para uma única aplicação da Loja. Quando o utilizador inicia sessão, é iniciada uma aplicação específica. Este modo também impede que o utilizador abra novas aplicações ou mude a aplicação em execução.
     - **Quiosque de várias aplicações**: o dispositivo executa várias aplicações da Loja, aplicações Win32 ou aplicações do Windows da caixa de entrada através do ID do Modelo de Utilizador da Aplicação (AUMID). Apenas as aplicações que adicionar estarão disponíveis no dispositivo.
 
-        A vantagem de um quiosque de várias aplicações ou dispositivos de objetivo fixo é o facto de proporcionar uma experiência fácil de compreender pelos utilizadores através do acesso às aplicações de que precisam. Além disso, também não lhes permite ver as aplicações de que não precisam.
+        A vantagem de um quiosque de várias aplicações ou dispositivos de objetivo fixo é o facto de proporcionar uma experiência fácil de compreender pelos utilizadores através do acesso às aplicações de que precisam. E, removendo também da sua visão as aplicações de que não precisam.
 
     Para uma lista de todas as configurações, e o que fazem, veja:
       - [Definições de quiosque do Windows 10](kiosk-settings-windows.md)
@@ -69,7 +69,7 @@ O perfil é criado e mostrado na lista de perfis. Em seguida, [atribua](device-p
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 
 Pode criar perfis de quiosque para dispositivos que executem as seguintes plataformas:
-- [Android](device-restrictions-android.md#kiosk)
+- [Administrador de dispositivos Android](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
 - [Windows 10 e posterior](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

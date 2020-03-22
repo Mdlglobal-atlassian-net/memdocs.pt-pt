@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65f2fa658069b9ff9ac99026adbb8b56d955727b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329153"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084851"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Adicionar e atribuir aplicações de MTD (Defesa Contra Ameaças para Dispositivos Móveis) com o Intune
 
@@ -34,7 +34,7 @@ Pode utilizar o Intune para adicionar e implementar aplicações de Defesa de Am
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Complete os seguintes passos em Intune. Verifique se está familiarizado com o processo de:
+Complete os seguintes passos em Intune. Certifique-se de que está familiarizado com o processo de:
 
 - [Adicionar uma aplicação no Intune](../apps/apps-add.md).
 - [Adicionar uma política de configuração de aplicações iOS no Intune](../apps/app-configuration-policies-use-ios.md).
@@ -224,7 +224,7 @@ Veja as instruções sobre como [utilizar políticas de configuração de aplica
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Política de configuração de aplicativos Sophos Mobile
 
-Crie a política de configuração de aplicações iOS, tal como descrito no artigo de política de configuração de [aplicações iOS.](../apps/app-configuration-policies-use-ios.md)
+Crie a política de configuração de aplicações iOS, tal como descrito no artigo de política de configuração de [aplicações iOS.](../apps/app-configuration-policies-use-ios.md) Para obter informações adicionais, consulte [Sophos Intercept X para Mobile iOS - Configurações geridas disponíveis](https://community.sophos.com/kb/133963) na base de conhecimento Sophos.
 
 ### <a name="wandera-app-configuration-policy"></a>Política de configuração de aplicativos Wandera
 

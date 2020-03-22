@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46188be8ed347e488a89dc5f6f4e10390aa821bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ca465bf8356a16f9716d45456f9675384ffb518
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332945"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086425"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Adicionar definições de Wi-Fi para dispositivos Android no Microsoft Intune
 
@@ -34,7 +34,7 @@ Este artigo descreve estas definições.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-[Crie um perfil de dispositivo](device-profile-create.md).
+[Crie um perfil de dispositivo](wi-fi-settings-configure.md).
 
 ## <a name="basic"></a>Básica
 
@@ -42,7 +42,7 @@ Este artigo descreve estas definições.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
 - **Rede oculta**: escolha **Ativar** para ocultar esta rede da lista de redes disponíveis no dispositivo. O SSID não é difundido. Escolha **Desativar** para mostrar esta rede na lista de redes disponíveis no dispositivo.
 
-## <a name="enterprise"></a>Enterprise
+## <a name="enterprise"></a>Empresarial
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.

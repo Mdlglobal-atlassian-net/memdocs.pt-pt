@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326313"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083543"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Quadro de proteção de dados utilizando políticas de proteção de aplicações 
 
@@ -55,7 +55,7 @@ Como indica o quadro acima indicado, todas as alterações às Políticas de Pro
 
 Ao testar alterações numa APP, esteja ciente do tempo de [entrega](app-protection-policy-delivery.md). O estado da entrega de APP para um determinado utilizador pode ser monitorizado. Para mais informações, consulte como monitorizar as políticas de [proteção de aplicações](app-protection-policies-monitor.md).
 
-As definições individuais de APP para cada aplicação podem ser validadas em dispositivos que utilizem o Edge e o URL *sobre:Intunehelp*. Para mais informações, consulte os registos de proteção de [aplicações do cliente E](app-protection-policy-settings-log.md) [gerencie o acesso à Web utilizando](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)o Microsoft Edge com o Microsoft Intune .
+As definições individuais de APP para cada aplicação podem ser validadas em dispositivos que utilizem o Edge e o URL *sobre:Intunehelp*. Para mais informações, consulte os registos de proteção de [aplicações do cliente E](app-protection-policy-settings-log.md) [gerencie o acesso à Web utilizando](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)o Microsoft Edge com o Microsoft Intune .
 
 ## <a name="app-data-protection-framework-settings"></a>Definições do quadro de proteção de dados da APP
 

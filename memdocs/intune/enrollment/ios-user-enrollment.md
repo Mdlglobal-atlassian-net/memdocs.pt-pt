@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331525"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086107"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configurar iOS/iPadOS e iPadOS User Registration (pré-visualização)
 
@@ -59,7 +59,7 @@ Um perfil de inscrição define as definições aplicadas a um grupo de disposit
 
     - **Inscrição**do dispositivo : Todos os utilizadores deste perfil utilizarão a Inscrição do Dispositivo.
     - **Inscrição**do utilizador : Todos os utilizadores deste perfil utilizarão a Inscrição do Utilizador.
-    - **Determine com base na escolha**do utilizador : Todos os utilizadores deste grupo terão a escolha do tipo de inscrição a utilizar. Quando os utilizadores matriculam os seus dispositivos, verão uma opção para escolher entre **eu ser dono deste dispositivo** e **(Empresa) possuir este dispositivo**. Se escolherem este último, o dispositivo será matriculado utilizando a Inscrição do Dispositivo. Se o utilizador escolher **que sou dono deste dispositivo,** terá outra opção para proteger todo o dispositivo ou apenas proteger aplicações e dados relacionados com o trabalho. A seleção do utilizador final de se possuir o dispositivo determina que tipo de inscrição é implementado no seu dispositivo. Esta escolha do utilizador também se reflete no atributo de Propriedade do Dispositivo em Intune. Para saber mais sobre a experiência do utilizador, consulte [Configurar o acesso do dispositivo iOS/iPadOS aos recursos da sua empresa.](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)
+    - **Determine com base na escolha**do utilizador : Todos os utilizadores deste grupo terão a escolha do tipo de inscrição a utilizar. Quando os utilizadores matriculam os seus dispositivos, verão uma opção para escolher entre **eu ser dono deste dispositivo** e **(Empresa) possuir este dispositivo**. Se escolherem este último, o dispositivo será matriculado utilizando a Inscrição do Dispositivo. Se o utilizador escolher **que sou dono deste dispositivo,** terá outra opção para proteger todo o dispositivo ou apenas proteger aplicações e dados relacionados com o trabalho. A seleção do utilizador final de se possuir o dispositivo determina que tipo de inscrição é implementado no seu dispositivo. Esta escolha do utilizador também se reflete no atributo de Propriedade do Dispositivo em Intune. Para saber mais sobre a experiência do utilizador, consulte [Configurar o acesso do dispositivo iOS/iPadOS aos recursos da sua empresa.](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)
     
 5. Selecione **Seguinte**.
 

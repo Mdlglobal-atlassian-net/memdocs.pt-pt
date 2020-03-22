@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d31d83aff2bc2dc6c0c62c46220bf73b430a912c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331905"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086568"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Configurações do dispositivo Android para configurar VPN em Intune
 
@@ -32,7 +32,7 @@ Para saber mais sobre perfis VPN em Intune, consulte [perfis VPN](vpn-settings-c
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-[Crie um perfil](vpn-settings-configure.md#create-a-device-profile)de configuração do dispositivo , e escolha **o Android.**
+[Crie um perfil](vpn-settings-configure.md)de configuração do dispositivo e escolha o **administrador do dispositivo Android.**
 
 ## <a name="base-vpn"></a>Base VPN
 
@@ -53,7 +53,7 @@ Para saber mais sobre perfis VPN em Intune, consulte [perfis VPN](vpn-settings-c
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Impressão digital** (apenas na VPN Check Point Capsule): introduza uma cadeia (por exemplo, **Código de Impressão Digital da Contoso**) para verificar a fidedignidade do servidor VPN. Uma impressão digital é enviada para o cliente para que o cliente saiba confiar em qualquer servidor que tenha a mesma impressão digital. Se o dispositivo ainda não incluir a impressão digital, pedirá ao utilizador para confiar no servidor VPN ao mostrar a impressão digital. O utilizador verifica manualmente a impressão digital e opta por confiar para se conectar.
+- **Impressão digital** (apenas na VPN Check Point Capsule): introduza uma cadeia (por exemplo, **Código de Impressão Digital da Contoso**) para verificar a fidedignidade do servidor VPN. Uma impressão digital é enviada para o cliente para que o cliente saiba confiar em qualquer servidor que tenha a mesma impressão digital. Se o dispositivo não tiver a impressão digital, leva o utilizador a confiar no servidor VPN enquanto mostra a impressão digital. O utilizador verifica manualmente a impressão digital e opta por confiar para se conectar.
 - **Introduzir pares de chave e valor para os atributos de VPN do Citrix** (apenas no Citrix): introduza pares de chave e valor disponibilizados pelo Citrix. Estes valores configuram as propriedades da ligação VPN. 
 
   Também pode **importar** um ficheiro de valores separados de vírem (.csv) com chaves e pares de valor. Certifique-se de rever os **meus dados tem cabeçalhos** e propriedades **chave.**

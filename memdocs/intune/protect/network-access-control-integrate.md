@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1fe46894a9905cba4267e8ff9baa949dde5709a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329141"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084829"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integração de controlo de acesso à rede (NAC) com o Intune
 
@@ -65,36 +65,35 @@ A lista seguinte é uma descrição geral sobre como a integração do NAC funci
 8. Uma vez que o dispositivo esteja inscrito e em conformidade, a solução de parceiro de NAC obtém o estado do Intune.
 9. A ligação é estabelecida com êxito, o que permite que o dispositivo aceda aos recursos empresariais.
 
-## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Utilize o NAC para VPN nos seus dispositivos iOS/iPadOS  
+## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Utilize o NAC para VPN nos seus dispositivos iOS/iPadOS
 
 O NAC está disponível nas seguintes VPNs sem permitir o NAC no perfil VPN:
 
-  - NAC para Cisco Legacy AnyConnect
-  - Legado de acesso F5
-  - Citrix VPN
+- NAC para Cisco Legacy AnyConnect
+- Legado de acesso F5
+- Citrix VPN
 
-O NAC também é suportado para Cisco AnyConnect, Citrix SSO e F5 Access. 
+O NAC também é suportado para Cisco AnyConnect, Citrix SSO e F5 Access.
 
-### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Para ativar o NAC para a Cisco AnyConnect para iOS:
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Para ativar o NAC para cisco AnyConnect para iOS
 
-  - Integrar o ISE com intune para O NAC, conforme descrito no link abaixo.
-  - Defina a definição de Controlo de Acesso à **Rede ativa (NAC)** no perfil VPN para **Sim**.
+- Integrar o ISE com intune para O NAC, conforme descrito no link abaixo.
+- Defina a definição de Controlo de Acesso à **Rede ativa (NAC)** no perfil VPN para **Sim**.
 
-### <a name="to-enable-nac-for-citrix-sso"></a>Para ativar o NAC para citrix SSO:
+### <a name="to-enable-nac-for-citrix-sso"></a>Para permitir o NAC para Citrix SSO
 
-  - Utilize citrix Gateway 12.0.59 ou superior.  
-  - Os utilizadores devem ter Citrix SSO 1.1.6 ou posteriormente instalados.
-  - [Integrar o NetScaler com intune para O NAC,](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) conforme descrito na documentação do produto Citrix.
-  - No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
+- Utilize citrix Gateway 12.0.59 ou superior.  
+- Os utilizadores devem ter Citrix SSO 1.1.6 ou posteriormente instalados.
+- [Integrar o NetScaler com intune para O NAC,](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) conforme descrito na documentação do produto Citrix.
+- No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
 
+### <a name="to-enable-nac-for-f5-access"></a>Para permitir o NAC para o Acesso F5
 
-### <a name="to-enable-nac-for-f5-access"></a>Para permitir o NAC para o acesso f5:
+- Utilize F5 BIG-IP 13.1.1.5 ou posteriormente.
+- Integrar big-IP com Intune para NAC. A [visão geral: Configurar a APM para verificação](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) da postura do dispositivo com sistemas de gestão de pontos finais O guia F5 lista as etapas.
+- No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
 
-  - Utilize F5 BIG-IP 13.1.1.5. O BIG-IP 14 não é suportado.
-  - Integrar big-IP com Intune para NAC. A [visão geral: Configurar a APM para verificação](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) da postura do dispositivo com sistemas de gestão de pontos finais O guia F5 lista as etapas.
-  - No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
-
-  A ligação VPN é desligada a cada 24 horas por razões de segurança. A VPN pode ser imediatamente reconectada.
+A ligação VPN é desligada a cada 24 horas por razões de segurança. A VPN pode ser imediatamente reconectada.
 
 Estamos a trabalhar com os nossos parceiros para lançar uma solução NAC para estes clientes mais novos. Quando as soluções estiverem prontas, este artigo será atualizado com informações adicionais.
 

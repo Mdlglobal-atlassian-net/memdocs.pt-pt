@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330141"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085822"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novidades do Microsoft Intune – meses anteriores
 
@@ -255,7 +255,7 @@ Para obter mais informações sobre estas melhorias, consulte a publicação do 
 ### <a name="app-management"></a>Gestão de aplicações
 
 #### <a name="managed-google-play-private-lob-apps---1464182----"></a>Aplicativos lob privados geridos do Google Play<!-- 1464182  -->'
-Intune agora permite que os administradores de TI publiquem aplicações privadas do Android LOB para gerir o Google Play através de um iframe incorporado na consola 'ntune'  Anteriormente, os administradores de TI precisavam de publicar aplicações LOB diretamente na consola de publicação Play da Google, que exigia vários passos e era demorado. Esta nova funcionalidade permite uma publicação fácil das aplicações LOB com um conjunto mínimo de passos, sem necessidade de sair da consola Intune.  Os administradores deixarão de precisar de se registar manualmente como programador com a Google, e deixarão de precisar de pagar a taxa de inscrição do Google de 25 dólares.  Qualquer um dos cenários de gestão do Android Enterprise que utilizam o Managed Google Play pode tirar partido desta funcionalidade (perfil de trabalho, dispositivos dedicados, totalmente geridos e não inscritos). A partir de Intune, selecione **aplicações do Cliente** > **Apps** > **Add**. Em seguida, selecione **Managed Google Play** a partir da lista do **tipo App.** Para obter mais informações sobre aplicações geridas do Google Play, consulte [adicionar aplicações do Google Play geridas para dispositivos Android Enterprise com Intune](../apps/apps-add-android-for-work.md).
+Intune agora permite que os administradores de TI publiquem aplicações privadas do Android LOB para gerir o Google Play através de um iframe incorporado na consola Intune.  Anteriormente, os administradores de TI precisavam de publicar aplicações LOB diretamente na consola de publicação Play da Google, que exigia vários passos e era demorado. Esta nova funcionalidade permite uma publicação fácil das aplicações LOB com um conjunto mínimo de passos, sem necessidade de sair da consola Intune.  Os administradores deixarão de precisar de se registar manualmente como programador com a Google, e deixarão de precisar de pagar a taxa de inscrição do Google de 25 dólares.  Qualquer um dos cenários de gestão do Android Enterprise que utilizam o Managed Google Play pode tirar partido desta funcionalidade (perfil de trabalho, dispositivos dedicados, totalmente geridos e não inscritos). A partir de Intune, selecione **aplicações do Cliente** > **Apps** > **Add**. Em seguida, selecione **Managed Google Play** a partir da lista do **tipo App.** Para obter mais informações sobre aplicações geridas do Google Play, consulte [adicionar aplicações do Google Play geridas para dispositivos Android Enterprise com Intune](../apps/apps-add-android-for-work.md).
 
 #### <a name="windows-company-portal-experience---1473353-3598357---"></a>Experiência portal da empresa Windows<!-- 1473353, 3598357 -->
 O Portal da Empresa Windows está a ser atualizado. Poderá utilizar vários filtros na página apps dentro do Portal da Empresa windows. A página Detalhes do Dispositivo também está a ser atualizada com uma experiência melhorada do utilizador. Estamos em processo de divulgação destas atualizações a todos os clientes e esperamos estar concluídas até ao final da próxima semana.
@@ -294,7 +294,7 @@ A aplicação Microsoft Intune para Android foi atualizada com as seguintes melh
 - Acrescentou o ecrã de notificações push personalizadas, alinhando a app com o suporte recentemente adicionado na aplicação Portal da Empresa para iOS e Android. Para mais informações, consulte [Enviar notificações personalizadas em Intune](../remote-actions/custom-notifications.md).
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>Para dispositivos iOS, personalize o ecrã de privacidade do processo de inscrição do Portal da Empresa<!-- 4394993 -->
-Utilizando o Markdown, pode personalizar o ecrã de privacidade do Portal da Empresa que os utilizadores finais vêem durante a inscrição do iOS. Especificamente, poderá personalizar a lista de coisas que a sua organização não consegue ver ou fazer no dispositivo. Para mais informações, consulte [Como configurar a aplicação Intune Company Portal](../apps/company-portal-app.md#privacy-statement-customization).
+Utilizando o Markdown, pode personalizar o ecrã de privacidade do Portal da Empresa que os utilizadores finais vêem durante a inscrição do iOS. Especificamente, poderá personalizar a lista de coisas que a sua organização não consegue ver ou fazer no dispositivo. Para mais informações, consulte [Como configurar a aplicação Intune Company Portal](../apps/company-portal-app.md#configuration).
 
 
 
@@ -316,7 +316,7 @@ Aplica-se a:
 
 Intune, cria perfis para dispositivos iOS e macOS (**Configuração** de **dispositivos** > Perfis > **Criar perfis** > **iOS** ou **macOS** para funcionalidades de plataforma > **Dispositivo,** restrições de **dispositivos**ou **extensões** para tipo de perfil). 
 
-Neste 'pdate, as configurações disponíveis no portal Intune são categorizadas pelo tipo de inscrição a que se aplicam:
+Nesta atualização, as definições disponíveis no portal Intune são categorizadas pelo tipo de inscrição a que se aplicam:
 
 - iOS
   - Inscrição do utilizador""
@@ -1094,7 +1094,7 @@ O Portal da Empresa para ecrãs e etapas de matrícula do iOS foi atualizado par
 * Abra a aplicação Definições para instalar o perfil de gestão no seu dispositivo.
 * Volte à aplicação Portal da Empresa para completar a inscrição.  
 
-Para ver etapas e ecrãs de inscrição atualizados, consulte [O dispositivo 'Inscrever o iOS' no Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+Para ver etapas e ecrãs de inscrição atualizados, consulte [O dispositivo 'Inscrever o iOS' no Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>Encriptação OpenSSL para políticas de proteção de aplicativos Android<!-- 3747362 -->
 Intune app protection policies (APP) em dispositivos Android agora usa uma biblioteca de encriptação OpenSSL que é compatível com O FIPS 140-2. Para mais informações, consulte a secção de [encriptação](../apps/app-protection-policy-settings-android.md#encryption) das definições de política de proteção de [aplicações Android no Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -1390,7 +1390,7 @@ Existem novas mensagens de erro de instalação de aplicações relacionadas com
 Intune, selecione **Aplicações cliente** > **Apps** > "Nome de aplicação" > Estado de **instalação do dispositivo.** Novas mensagens de erro estarão disponíveis na coluna de detalhes do **Estado.**
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Nova app categorias ecrã na app Portal da Empresa para Windows 10<!-- 3834780  -->
-Foi adicionado um novo ecrã chamado **Categorias app** para melhorar a experiência de navegação e seleção de aplicações no Portal da Empresa para o Windows 10. Os utilizadores verão agora as suas aplicações classificadas em categorias como **Featured**, **Education**e **Productivity**. Esta alteração aparece nas versões 10.3.3451.0 e posteriormente. Para ver o novo ecrã, veja [o que há de novo na aplicação UI](whats-new-app-ui.md). Para obter mais informações sobre aplicações no Portal da Empresa, consulte [Instalar e partilhar aplicações no seu dispositivo.](https://docs.microsoft.com/user-help/install-apps-cpapp-windows)  
+Foi adicionado um novo ecrã chamado **Categorias app** para melhorar a experiência de navegação e seleção de aplicações no Portal da Empresa para o Windows 10. Os utilizadores verão agora as suas aplicações classificadas em categorias como **Featured**, **Education**e **Productivity**. Esta alteração aparece nas versões 10.3.3451.0 e posteriormente. Para ver o novo ecrã, veja [o que há de novo na aplicação UI](whats-new-app-ui.md). Para obter mais informações sobre aplicações no Portal da Empresa, consulte [Instalar e partilhar aplicações no seu dispositivo.](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows)  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Aplicação power bi compliance<!-- 1455231 doc-work-item -->
 Aceda ao seu Intune Data Warehouse em Power BI Online utilizando a aplicação [Intune Compliance (Data Warehouse).](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) Com esta aplicação Power BI, já pode aceder e partilhar relatórios pré-criados sem qualquer configuração e sem sair do seu navegador web. Para obter informações adicionais, consulte [alterar o registo - aplicação de conformidade do Power BI](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -2284,7 +2284,7 @@ Adicionámos novas funcionalidades, com base no feedback dos clientes, ao site d
 - Desempenho melhorado para grandes catálogos de aplicações
 - Acessibilidade melhorada para todos os utilizadores  
 
-A [documentação do site do Portal da Empresa do Intune](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) foi atualizada para refletir estas alterações. Para ver um exemplo das melhorias ao nível das aplicações, veja [Atualização da IU para aplicações de utilizadores finais do Intune](whats-new-app-ui.md).  
+A [documentação do site do Portal da Empresa do Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) foi atualizada para refletir estas alterações. Para ver um exemplo das melhorias ao nível das aplicações, veja [Atualização da IU para aplicações de utilizadores finais do Intune](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorizar e resolver problemas
 
@@ -2907,7 +2907,7 @@ Criar perfil\Proteção de ponto final\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Redução da Superfície de Ataque
 
-|Nome da definição  |Opções da definição  |Descrição  |
+|Nome da definição  |Opções da definição  |Description  |
 |---------|---------|---------|
 |Proteção de ransomware avançada|Ativado, Auditar, Não configurado|Utilize proteção contra ransomware intensiva.|
 |Sinalizar o roubo de credenciais do subsistema de autoridade de segurança local do Windows|Ativado, Auditar, Não configurado|Sinalize o roubo de credenciais do subsistema de autoridade de segurança local do Windows (Lsass.exe).|
@@ -2917,7 +2917,7 @@ Criar perfil\Proteção de ponto final\Windows Defender Exploit Guard.
 
 #### <a name="controlled-folder-access"></a>Acesso a pastas controladas
 
-|              Nome da definição               |                                                              Opções da definição                                                              | Descrição |
+|              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
@@ -3000,7 +3000,7 @@ No painel **Resolução de problemas**, pode agora ver as [restrições de inscr
 
 O Intune agora dá-lhe a opção de autenticar dispositivos através da aplicação Portal da Empresa para os seguintes métodos de inscrição:
 
-- Programa de Inscrição de Dispositivos Apple
+- Programa de Inscrição de Dispositivos da Apple
 - Gestor Escolar da Apple
 - Inscrição no Apple Configurator
 
@@ -3080,7 +3080,7 @@ Por exemplo, uma conta de recurso como **Sala de Conferência B41/6233**.
 
 ##### <a name="attack-surface-reduction"></a>Redução da Superfície de Ataque
 
-|Nome da definição  |Opções da definição  |Descrição  |
+|Nome da definição  |Opções da definição  |Description  |
 |---------|---------|---------|
 |Execução de conteúdos executáveis protegidos por palavra-passe a partir do e-mail|Bloquear, Auditar, Não configurado|Impeça a execução de ficheiros executáveis protegidos por palavra-passe transferidos do e-mail.|
 |Proteção de ransomware avançada|Ativado, Auditar, Não configurado|Utilize proteção contra ransomware intensiva.|
@@ -3091,7 +3091,7 @@ Por exemplo, uma conta de recurso como **Sala de Conferência B41/6233**.
 
 ##### <a name="controlled-folder-access"></a>Acesso a pastas controladas
 
-|              Nome da definição               |                                                              Opções da definição                                                              | Descrição |
+|              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
@@ -3547,7 +3547,7 @@ Pode definir os recursos do Enterprise Cloud, intervalos de endereços IP e serv
 | | |
 |---|---|
 | Não Configurado | A definição **Não Configurado** utiliza o nível de bloqueio predefinido do Antivírus do Windows Defender e oferece um sistema de deteção avançado sem aumentar o risco de detetar ficheiros legítimos. |
-| High | A opção**Alto** aplica um nível de deteção elevado.
+| Alto | A opção**Alto** aplica um nível de deteção elevado.
 | Alto +  | A opção **Alto +** proporciona o nível de deteção Alto com medidas adicionais de proteção que podem afetar o desempenho do cliente.
 | Tolerância zero  | A opção **Tolerância zero** bloqueia todos os executáveis desconhecidos. |
 
@@ -3938,7 +3938,7 @@ Adicionámos uma página dedicada ao site do Portal da Empresa que permite aos u
 ### <a name="additional-help-desk-troubleshooting-details-----applies-to-1263399-1326964-1341642----"></a>Detalhes adicionais sobre a resolução de problemas do suporte técnico<!---  Applies to 1263399, 1326964, 1341642 --->
 O Intune atualizou o ecrã de resolução de problemas e acrescentou mais informações para a equipa de administradores e suporte técnico. Agora pode ver uma tabela **Atribuições**, que resume todas as atribuições do utilizador com base na associação a grupos. Esta lista inclui:
 - Aplicações móveis
-- Políticas de conformidade
+- Compliance políticas
 - Perfis de configuração
 
 Para além disso, a tabela **Dispositivos** agora inclui as colunas **Tipo de associação Azure AD** e **Em conformidade com o Azure AD**. Para obter mais informações, veja [Ajudar os utilizadores na resolução de problemas](help-desk-operators.md).

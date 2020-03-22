@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331541"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086119"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscreva dispositivos iOS/iPadOS em Intune
 
@@ -46,7 +46,7 @@ Pode permitir que os seus utilizadores inscrevam os respetivos dispositivos pess
 - Inscrição no Dispositivo é o que você pode pensar como inscrição típica byod. Fornece aos administradores um vasto leque de opções de gestão.
 - A Inscrição do Utilizador é um processo de inscrição mais simplificado que fornece aos administradores um subconjunto de opções de gestão de dispositivos. Esta funcionalidade encontra-se em pré-visualização. 
 
-Depois de ter preenchido os pré-requisitos e as licenças de utilizador atribuídas, os utilizadores podem descarregar a aplicação Intune Company Portal a partir da App Store e seguir as instruções de inscrição na app. Pode personalizar a declaração de privacidade do Portal da Empresa nos dispositivos iOS/iPadOS, conforme explicado na personalização da declaração de [privacidade.](../apps/company-portal-app.md#privacy-statement-customization)
+Depois de ter preenchido os pré-requisitos e as licenças de utilizador atribuídas, os utilizadores podem descarregar a aplicação Intune Company Portal a partir da App Store e seguir as instruções de inscrição na app. Pode personalizar a declaração de privacidade do Portal da Empresa nos dispositivos iOS/iPadOS, conforme explicado em [Como personalizar as aplicações intune Company Portal, website do Portal da Empresa e aplicação Intune.](../apps/company-portal-app.md#configuration)
 
 ## <a name="company-owned-iosipados-devices"></a>Dispositivos iOS/iPadOS da empresa
 

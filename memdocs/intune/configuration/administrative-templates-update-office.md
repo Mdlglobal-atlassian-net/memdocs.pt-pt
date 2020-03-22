@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 235fabd5f184117e680c44b87e5eab4334596e1c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328761"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083885"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Utilize as definições do Canal de Atualização e da Versão target para atualizar o Office 365 com modelos administrativos intune da Microsoft
 
@@ -53,7 +53,7 @@ Certifique-se de [ativar as Atualizações Automáticas Do Office365 ProPlus](ht
 2. Certifique-se de [atribuir a apólice](device-profile-assign.md) aos seus dispositivos Windows 10. Para testar a sua política mais cedo, também pode sincronizar a política:
 
     - [Sincronizar a política em Intune](../remote-actions/device-sync.md)
-    - [Sincronizar manualmente a política do dispositivo](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Sincronizar manualmente a política do dispositivo](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Verifique as teclas de registo Intune
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: eac0eff9167e46d73dffe1c74ce073ffa68c7070
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332745"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085697"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Métodos de inscrição do Intune para dispositivos Windows
 
@@ -36,7 +36,7 @@ Há duas formas de obter dispositivos matriculados em Intune:
 
 Os utilizadores podem auto-inscrever o seu dispositivo Windows utilizando qualquer um destes métodos:
 
-- [Traga o seu próprio dispositivo (BYOD)](https://docs.microsoft.com/user-help/enroll-windows-10-device): Os utilizadores matriculam os seus dispositivos pessoalmente, optando por ligar uma conta **De Trabalho e Escola** a partir das **Definições** do dispositivo. Este processo:
+- [Traga o seu próprio dispositivo (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Os utilizadores matriculam os seus dispositivos pessoalmente, optando por ligar uma conta **De Trabalho e Escola** a partir das **Definições** do dispositivo. Este processo:
   - Regista o dispositivo com o Azure Ative Directory para ter acesso a recursos corporativos como e-mail.
   - Inscreve o dispositivo em Intune como um dispositivo pessoal (BYOD).
 Se um administrador tiver configurado a inscrição automática (disponível com subscrições premium Azure AD), o utilizador só tem de introduzir as suas credenciais uma vez. Caso contrário, terão de se inscrever separadamente através do MDM apenas através da inscrição do MDM e reintroduzir as suas credenciais.  

@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332337"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087104"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
 
-O Microsoft Intune inclui definições e funcionalidades que pode ativar ou desativar em diferentes dispositivos na sua organização. Estas definições e funcionalidades são adicionadas aos “perfis de configuração”. Pode criar perfis para diferentes dispositivos e diferentes plataformas, incluindo iOS/iPadOS, Android e Windows. Em seguida, utilizar o Intune para aplicar ou “atribuir” o perfil aos dispositivos.
+O Microsoft Intune inclui definições e funcionalidades que pode ativar ou desativar em diferentes dispositivos na sua organização. Estas definições e funcionalidades são adicionadas aos “perfis de configuração”. Pode criar perfis para diferentes dispositivos e diferentes plataformas, incluindo iOS/iPadOS, administrador de dispositivos Android, Android Enterprise e Windows. Em seguida, utilizar o Intune para aplicar ou “atribuir” o perfil aos dispositivos.
 
 Como parte da solução de gestão de dispositivos móveis (MDM), utilize estes perfis de configuração para concluir diferentes tarefas. Alguns exemplos de perfil incluem:
 
@@ -55,7 +55,7 @@ Os [certificados](../protect/certificates-configure.md) configuram certificados 
 
 Esta funcionalidade suporta: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ As [definições personalizadas](custom-settings-configure.md) permitem que os a
 
 Esta funcionalidade suporta:
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ As [restrições de dispositivos](device-restrictions-configure.md) controlam a 
 
 Esta funcionalidade suporta:
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ As [definições de e-mail](email-settings-configure.md) criam, atribuem e monit
 
 Esta funcionalidade suporta: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - Wnodows Phone 8.1
@@ -184,7 +184,7 @@ Esta funcionalidade suporta:
 - Windows 10 e posterior
 - Windows Holographic for Business  
 
-## <a name="kiosk"></a>Local Público
+## <a name="kiosk"></a>Modo de Local Público
 
 O perfil [Definições de quiosque](kiosk-settings.md) configura um dispositivo para que execute uma aplicação ou execute várias aplicações. Também pode personalizar outras funcionalidades no modo de quiosque, incluindo o menu Iniciar e um browser.
 
@@ -241,7 +241,7 @@ As redes virtuais privadas (VPN) permitem-lhe conceder aos utilizadores acesso r
 
 Esta funcionalidade suporta: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ As [definições de Wi-Fi](wi-fi-settings-configure.md) atribuem definições de
 
 Esta funcionalidade suporta: 
 
-- Android
+- Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ As [Extensões de Mobilidade (MX) da Zebra](android-zebra-mx-overview.md) permit
 
 Esta funcionalidade suporta:
 
-- Android (Extensões de Mobilidade)
+- Administrador de dispositivos Android (Extensões de Mobilidade)
 
 ## <a name="manage-and-troubleshoot"></a>Gestão e resolução de problemas
 

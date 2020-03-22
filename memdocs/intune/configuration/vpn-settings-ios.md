@@ -1,11 +1,11 @@
 ---
 title: Configure as definições vpN para dispositivos iOS/iPadOS no Microsoft Intune - Azure Microsoft Docs
-description: Adicione ou crie um perfil de configuração VPN utilizando configurações de configuração de rede privada virtual (VPN), incluindo os detalhes de ligação, métodos de autenticação e túneis divididos nas definições da base; as definições vpn personalizadas com o identificador, e os pares chave e valor; as definições VPN por aplicação que incluem URLs de Safari, e VPNs a pedido com SSIDs ou domínios de pesquisa DNS; e as definições de procuração para incluir um script de configuração, endereço IP ou FQDN, e porta TCP no Microsoft Intune em dispositivos que executam iOS/iPadOS.
+description: Adicione ou crie um perfil de configuração VPN em dispositivos iOS/iPadOS utilizando configurações de configuração de rede privada virtual (VPN). Configure os detalhes de ligação, métodos de autenticação, túneis divididos, configurações VPN personalizadas com os pares de identificador, chave e valor, configurações VPN por app que incluam URLs de Safari e VPNs a pedido com SSIDs ou domínios de pesquisa DNS, configurações de procuração para incluir um script de configuração, endereço IP ou FQDN e porta TCP no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331901"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086542"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Adicione as definições vpN em dispositivos iOS e iPadOS no Microsoft Intune
 
@@ -82,10 +82,10 @@ As definições apresentadas na seguinte lista são determinadas pelo tipo de li
 
 - Ativar o controlo de acesso à **rede (NAC)** (Cisco AnyConnect, Citrix SSO, Acesso F5): Quando **escolher, concordo,** o ID do dispositivo está incluído no perfil VPN. Este ID pode ser utilizado para autenticação na VPN para permitir ou impedir o acesso à rede.
 
-    **Ao utilizar o Cisco AnyConnect com o ISE,** certifique-se de:
+  **Ao utilizar o Cisco AnyConnect com o ISE,** certifique-se de:
 
-    - Se ainda não o fez, integre o ISE com o Intune para o NAC, conforme descrito no **Configure Microsoft Intune como um Servidor MDM** no Guia de Administrador de Motores de [Serviços](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)de Identidade da Cisco .
-    - Ativar o NAC no perfil VPN.
+  - Se ainda não o fez, integre o ISE com o Intune para o NAC, como descrito na **Configure Microsoft Intune como um Servidor MDM** no Guia de Administrador de Motores de [Serviços](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)de Identidade da Cisco .
+  - Ativar o NAC no perfil VPN.
 
   **Ao utilizar o Citrix SSO com gateway,** certifique-se de:
 
@@ -107,6 +107,34 @@ As definições apresentadas na seguinte lista são determinadas pelo tipo de li
 ## <a name="ikev2-settings"></a>Definições IKEv2
 
 Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**.
+
+- **VPN sempre ligado**: **Ativar** configura um cliente VPN para ligar e voltar a ligar-se automaticamente à VPN. As ligações VPN Sempre Ativada permanecem ativadas ou ativam-se imediatamente quando o utilizador bloqueia o dispositivo, quando o dispositivo é reiniciado ou quando a rede sem fios é alterada. Quando definido para **Desativar** (predefinido), vpN sempre ligado para todos os clientes VPN é desativado. Quando ativado, configure também:
+
+  - **Interface de rede**: Todas as definições IKEv2 aplicam-se apenas à interface de rede que escolher. As opções são:
+    - **Wi-Fi e Cellular** (predefinido): As definições IKEv2 aplicam-se ao Wi-Fi e às interfaces celulares do dispositivo.
+    - **Celular**: As definições IKEv2 aplicam-se apenas à interface celular do dispositivo. Selecione esta opção se estiver a implementar em dispositivos com a interface Wi-Fi desativada ou removida.
+    - **Wi-Fi**: As definições IKEv2 aplicam-se apenas à interface Wi-Fi do dispositivo.
+  - **Utilizador para desativar a configuração VPN**: **Ativar** permite que os utilizadores desliguem o VPN sempre ligado. **Desativar** (predefinido) impede os utilizadores de o desligarem. O valor predefinido para esta definição é a opção mais segura.
+  - **Correio de voz**: Escolha o que acontece com o tráfego de correio de voz quando a VPN sempre ligado estiver ativada. As opções são:
+    - Tráfego de rede de força através de **VPN** (predefinição): Esta definição é a opção mais segura.
+    - **Permitir que o tráfego de rede passe para fora da VPN**
+    - **Tráfego de rede de queda**
+  - **AirPrint**: Escolha o que acontece com o tráfego AirPrint quando a VPN sempre ligado estiver ativada. As opções são:
+    - Tráfego de rede de força através de **VPN** (predefinição): Esta definição é a opção mais segura.
+    - **Permitir que o tráfego de rede passe para fora da VPN**
+    - **Tráfego de rede de queda**
+  - **Serviços celulares**: No iOS 13.0+, escolha o que acontece com o tráfego celular quando a VPN sempre ligado está ativada. As opções são:
+    - Tráfego de rede de força através de **VPN** (predefinição): Esta definição é a opção mais segura.
+    - **Permitir que o tráfego de rede passe para fora da VPN**
+    - **Tráfego de rede de queda**
+  - Permitir que o tráfego de aplicações de rede cativa não **nativas passe para fora da VPN**: Uma rede cativa refere-se a hotspots Wi-Fi tipicamente encontrados em restaurantes e hotéis. As opções são:
+    - **Não**: Força todo o tráfego de aplicações de rede cativa (CN) através do túnel VPN.
+    - **Sim, todas as aplicações**: Permite que todo o tráfego de aplicações CN contorne a VPN.
+    - **Sim, aplicações específicas**: **Adicione** uma lista de aplicações CN cujo tráfego pode contornar a VPN. Introduza os identificadores de pacote da aplicação CN. Por exemplo, introduza `com.contoso.app.id.package`.
+
+  - **Tráfego da aplicação Websheet Cativa para passar fora VPN**: WebSheet cativo é um navegador web incorporado que lida com o sinal cativo. **O Enable** permite que o tráfego de aplicações do navegador contorne a VPN. **Desativar** (predefinido) o tráfego webSheet para utilizar o VPN sempre ligado. O valor predefinido é a opção mais segura.
+  - **A tradução de endereços de rede (NAT) mantém o intervalo vivo (segundos)** : Para se manter ligado à VPN, o dispositivo envia pacotes de rede para se manter ativo. Introduza um valor em segundos sobre a frequência com que estes pacotes são enviados, de 20-1440. Por exemplo, insira um valor de `60` enviar os pacotes de rede para a VPN a cada 60 segundos. Por predefinição, este valor está definido para `110` segundos.
+  - **Descarregue o NAT mantenha-se vivo no hardware quando**o dispositivo estiver a dormir : Quando um dispositivo está a dormir, **o Enable** (padrão) tem o NAT a enviar pacotes de keep-alive para que o dispositivo permaneça ligado à VPN. **Desativar** desativa esta funcionalidade.
 
 - **Identificador remoto**: Introduza o endereço IP da rede, FQDN, UserFQDN ou ASN1DN do servidor IKEv2. Por exemplo, introduza: `10.0.0.3` ou `vpn.contoso.com`. Normalmente, introduz-se no mesmo valor que o [**nome Ligação**](#base-vpn-settings) (neste artigo). Mas depende das definições do servidor IKEv2.
 
@@ -193,8 +221,8 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
   - **SSIDs ou domínios de pesquisa DNS**: selecione se esta condição utiliza **SSIDs** de rede sem fios ou **domínios de pesquisa DNS**. Selecione **Adicionar** para configurar um ou mais SSIDs ou domínios de pesquisa.
   - **Pesquisa de cadeia de URL**: opcional. Introduza um URL para a regra utilizar como um teste. Se o dispositivo aceder a este URL sem reorientação, então a ligação VPN é iniciada. Além disso, o dispositivo será ligado ao URL de destino. O utilizador não vê o site de pesquisa de cadeia de URL.
 
-    Por exemplo, uma sonda de cadeia de URL é um URL de servidor Web auditando que verifica a conformidade do dispositivo antes de ligar o VPN. Ou, o URL testa a capacidade da VPN de se ligar a um site antes de ligar o dispositivo ao URL do alvo através da VPN.
-.
+    Por exemplo, uma sonda de cadeia de URL é um URL de servidor Web auditando que verifica a conformidade do dispositivo antes de ligar o VPN. Ou, o URL testa a capacidade da VPN de se ligar a um site antes de o dispositivo se ligar ao URL do alvo através da VPN.
+
   - **Ação de domínio**: selecione um dos seguintes itens:
     - Ligar se necessário
     - Nunca ligar

@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f33d7060d4edd4d73694ca9e998d5102e712beb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 23ae0ec9d91a0bd1a171708699ae88e7c572a250
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324589"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084497"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalar a aplicação Portal da Empresa para Android
 
@@ -46,6 +46,6 @@ O Portal da Empresa é uma aplicação que lhe concede acesso a e-mail, ligaçõ
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
-Depois de descarregar a aplicação Portal da Empresa, provavelmente irá querer [inscrever o seu dispositivo em Intune](enroll-device-android-company-portal.md) para ter acesso total às suas informações de trabalho. Também pode [iniciar sessão noutro dispositivo](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).  
+Depois de descarregar a aplicação Portal da Empresa, provavelmente irá querer [inscrever o seu dispositivo em Intune](enroll-device-android-company-portal.md) para ter acesso total às suas informações de trabalho. Também pode [iniciar sessão noutro dispositivo](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).  
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

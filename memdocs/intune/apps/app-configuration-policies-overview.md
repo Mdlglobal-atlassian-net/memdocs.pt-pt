@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7d58d2766444be924bd525b5aff20e17a302d56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326381"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083676"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Políticas de configuração de aplicações para o Microsoft Intune
 
@@ -93,7 +93,7 @@ Pode validar a política de configuração da aplicação utilizando os seguinte
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>configuração iOS/iPadOS em dispositivos não geridos
 
-Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos não geridos para configuração de aplicações geridas. Além dos passos abaixo, pode aceder a registos de aplicações geridos através do Microsoft Edge. Para mais informações, consulte [Use Microsoft Edge no iOS/iPadOS para aceder a registos de aplicações geridos](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos não geridos para configuração de aplicações geridas. Além dos passos abaixo, pode aceder a registos de aplicações geridos através do Microsoft Edge. Para mais informações, consulte [Use Microsoft Edge no iOS/iPadOS para aceder a registos de aplicações geridos](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 1. Caso ainda não estivesse instalado no dispositivo, descarregue e instale o **Microsoft Edge** a partir da App Store. Para mais informações, consulte [as aplicações protegidas microsoft Intune](apps-supported-intune-apps.md).
 2. Lance o **Microsoft Edge** e selecione **cerca** de > **insonize a** partir da barra de navegação.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328353"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084708"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Remover dispositivos ao apagar os dados, extinguir ou anular a inscrição do dispositivo de forma manual
 
@@ -36,7 +36,7 @@ Ao realizar as ações **Extinguir** ou **Limpar**, pode remover do Intune os di
 
 A ação **Limpar** restaura um dispositivo para as predefinições de fábrica. Os dados do utilizador são mantidos se selecionar a caixa de verificação **Reter estado de inscrição e conta de utilizador**. Caso contrário, todos os dados, aplicações e configurações serão removidos.
 
-|Ação Limpar|**Reter estado de inscrição e conta de utilizador**|Removido da gestão do Intune|Descrição|
+|Ação Limpar|**Reter estado de inscrição e conta de utilizador**|Removido da gestão do Intune|Description|
 |:-------------:|:------------:|:------------:|------------|
 |**Eliminação**| Opção não selecionada | Sim | Apaga todas as contas, dados, políticas de MDM e definições do utilizador. Repõe as definições e estado predefinidos do sistema operativo.|
 |**Eliminação**| Opção selecionada | Não | Apaga todas as políticas de MDM. Mantém os dados e as contas do utilizador. Repõe as definições predefinidas do utilizador. Repõe as definições e estado predefinidos do sistema operativo.|
@@ -130,7 +130,7 @@ Só pode limpar dispositivos de quiosque. Não é possível extinguir dispositiv
 |Outlook|Se o Acesso Condicional estiver ativado, o dispositivo não recebe correio novo.|
 |Anulação da associação ao Azure AD|O registo do Azure AD é removido.|
 
-### <a name="windows"></a>Portal do
+### <a name="windows"></a>Windows
 
 |Tipo de dados|Windows 8.1 (MDM) e Windows RT 8.1|Windows RT|Windows Phone 8.1 e Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
@@ -188,7 +188,7 @@ Se pretender remover completamente um dispositivo DEP da Apple da gestão pelo I
 1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > **Todos os dispositivos** > selecione o dispositivo > **Extinguir**.
 ![Captura de ecrã da extinção](./media/devices-wipe/retire.png)
-3. Aceda a [deploy.apple.com](http://deploy.apple.com) e procure o dispositivo através do respetivo número de série.
+3. Visite [business.apple.com](http://business.apple.com) e procure o dispositivo pelo seu número de série.
 4. No menu **Atribuído a**, selecione **Não atribuído**.
 
 5. Selecione **Reatribuir**.

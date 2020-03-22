@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333061"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087020"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Configurações do dispositivo Android para configurar e-mail, autenticação e sincronização em Intune
 
@@ -32,25 +32,23 @@ Para saber mais sobre perfis de e-mail em Intune, consulte [configurar as defini
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-Criar um perfil de [configuração do dispositivo](email-settings-configure.md#create-a-device-profile).
+Criar um perfil de [configuração do dispositivo](email-settings-configure.md).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
 - **Servidor de e-mail**: introduza o nome de anfitrião do seu servidor Exchange. Por exemplo, introduza `outlook.office365.com`.
 - **Nome da conta**: introduza o nome a apresentar da conta de e-mail. Este nome será apresentado nos dispositivos dos utilizadores.
 - **Atributo de nome de utilizador do AAD**: este nome é o atributo que o Intune obtém do Azure Active Directory (Azure AD). O Intune gera de forma dinâmica o nome de utilizador utilizado por este perfil. As opções são:
-  - **Nome Principal de Utilizador**: obtém o nome, como `user1` ou `user1@contoso.com`
-  - **Nome de utilizador**: obtém apenas o nome como `user1`
-  - **Nome da Conta SAM**: precisa do domínio, como `domain\user1`. O nome da conta sAM é usado apenas com dispositivos Android.
-
-    Introduza também:  
+  - **Nome principal do utilizador**: Obtém o nome, como `user1` ou `user1@contoso.com`.
+  - **Nome do utilizador**: Obtém apenas o nome, como `user1`.
+  - **Nome da Conta SAM**: precisa do domínio, como `domain\user1`. O nome da conta sAM é usado apenas com dispositivos Android. Introduza também:  
     - **Origem de nome de domínio do utilizador**: selecione **AAD** (Azure Active Directory) ou **Personalizado**.
 
       Ao optar por obter os atributos do **AAD**, introduza:
-      - **Origem de nome de domínio do utilizador do AAD**: selecione esta opção para obter o atributo **Nome de domínio completo** ou **Nome NetBIOS** do utilizador
+      - **Atributo de nome de domínio do utilizador a partir de AAD**: Opte por obter o **nome de domínio completo** ou o atributo de **nome NetBIOS** do utilizador.
 
       Ao optar por utilizar atributos **Personalizados**, introduza:
-      - **Nome de domínio personalizado para utilizar**: introduza um valor para o Intune utilizar como nome de domínio, como `contoso.com` ou `contoso`
+      - **Nome de domínio personalizado a utilizar**: Introduza um valor que Intune utiliza para o nome de domínio, como `contoso.com` ou `contoso`.
 
 - **Atributo de endereço de e-mail da AAD**: Este nome é o atributo de e-mail que Intune recebe da AD Azure. Intune gera dinamicamente o endereço de e-mail que é usado por este perfil. As opções são:
   - **Nome principal**do utilizador : Utiliza o nome principal completo, como `user1@contoso.com` ou `user1`, como o endereço de e-mail.

@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332585"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086039"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Como obter suporte para o Microsoft Intune
 
@@ -35,7 +35,6 @@ Enquanto administrador do Intune, pode utilizar a opção **Ajuda e Suporte** pa
 > Para obter suporte técnico para produtos de terceiros que funcionam com o Intune (como a Saaswedo, a Cisco ou a Lookout), contacte primeiro o fornecedor desse produto. Antes de abrir um pedido com o suporte do Intune, certifique-se de que configurou o outro produto corretamente.
 >
 > Para obter informações sobre a resolução de problemas relacionados com o Microsoft Intune, veja a [secção Resolução de problemas](help-desk-operators.md) da documentação do Intune.
-
 
 ## <a name="help-and-support-experience"></a>Experiência da ajuda e suporte
 
@@ -52,10 +51,9 @@ Quando você usa um inquilino recém-criado para Intune, é possível que *a Aju
 
 - *Encontrámos um problema desconhecido. Por favor, refresque a página mas se o problema persistir, por favor crie uma caixa através do [Centro de Administração M365](https://admin.microsoft.com) e consulte o ID da sessão fornecido.*
 
-Os detalhes do erro incluem um ID de *sessão,* detalhes de *extensão,* e muito mais. 
- 
-Este problema ocorre quando ainda não autenticou a sua nova conta de inquilinos através do **Centro de Administração M365** em https://admin.microsoft.com, ou do **portal Office 365** no https://portal.office.com. Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou visite https://portal.office.com, e inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
+Os detalhes do erro incluem um ID de *sessão,* detalhes de *extensão,* e muito mais.
 
+Este problema ocorre quando não autenticou a sua nova conta de inquilinos através do **Centro de Administração M365** em https://admin.microsoft.com, ou do **portal Office 365** em https://portal.office.com. Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou visite https://portal.office.com, e inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
 
 **Ajuda de acesso e suporte:**
 
@@ -67,18 +65,28 @@ Este problema ocorre quando ainda não autenticou a sua nova conta de inquilinos
   > Se o seu caso de Intune é hospedado na nuvem privada para o governo, também conhecido como uma nuvem soberana como o Governo de Azure, veja [o apoio intune para](#intune-support-for-private-cloud-for-government)a nuvem privada para o governo , mais tarde neste artigo. A *intune Help e a* experiência de apoio só estarão disponíveis na nuvem privada para o governo no próximo ano.
 
 - **Do Microsoft Endpoint Manager Admin Center**
-  - Depois de ter selecionado uma área de recurso para Intune, selecione a opção de **Ajuda e suporte**.
-  - De qualquer nó no Microsoft Endpoint Manager Admin Center, selecione o **?** ícone no canto superior direito do portal e, em seguida, use a gota para baixo para selecionar o serviço com o que deseja ajuda. **O.** o ícone no Microsoft Endpoint Manager Admin Center suporta vários serviços, e você deve selecionar o serviço específico para o que deseja assistência.  
 
-    ![Selecione o seu serviço](./media/get-support/select-a-service.png)
+  - De qualquer nó no Microsoft Endpoint Manager Admin Center, selecione o **?** ícone no canto superior direito do portal e, em seguida, use o drop-down para selecionar o tipo de gestão com o que deseja ajuda. O Microsoft Endpoint Manager Admin Center suporta os seguintes tipos de gestão, e você deve selecionar aquele para o qual deseja assistência, como Intune:
 
-    Depois de selecionar um serviço, verá a página *de Ajuda e Suporte* para esse serviço onde poderá especificar detalhes para encontrar [soluções](#find-solutions) para um problema específico.
+    - Configure Manager (inclui Desktop Analytics)
+    - Intune
+    - Cogestão  
 
-    Quando os resultados da sua pesquisa não parecem corresponder às expectativas do seu serviço, verifique para se certificar de que o serviço correto foi selecionado. A seleção de serviçoaparece logo após *ajuda e suporte.*  Se o serviço certo não foi selecionado, clique em *Select um serviço* para voltar ao drop-down da seleção de serviço.
+    > [!div class="mx-imgBorder"]
+    > ![Selecione o seu tipo de gestão](./media/get-support/select-management-type.png)
 
-    ![Confirme o seu serviço](./media/get-support/confirm-your-service-selection.png)
+    Depois de selecionar um tipo de gestão, a página *de ajuda e suporte* abre onde pode especificar detalhes para encontrar [soluções](#find-solutions) para um problema específico. Os detalhes são filtrados com base no tipo de gestão que seleciona.
 
-###  <a name="the-support-experience"></a>A experiência de apoio
+     Se o tipo de gestão certo não foi selecionado **(1)** clique em Select um tipo de *gestão* **(2)** para voltar ao drop-down da seleção do tipo de gestão:
+
+    > [!div class="mx-imgBorder"]
+    > ![Confirme o seu tipo de gestão](./media/get-support/confirm-management-selection.png)
+
+  - Se abrir ajuda e suporte de **Troubleshooting + suporte** > **Ajuda e suporte,** não verá o tipo de gestão que selecionou listado abaixo *Ajuda e suporte*.
+
+  - Se perfurar qualquer outro nó como *Dispositivos,* *Apps,* ou *Utilizadores,* e depois selecionar *Ajuda e suporte,* não terá a oportunidade de selecionar um tipo de gestão nem o tipo abaixo do ecrã *de ajuda e suporte*. Neste caso, *Intune* é assumido. Se não quer que o contexto seja Intune, use **o?** opção para que possa selecionar um tipo de gestão diferente.
+
+### <a name="the-support-experience"></a>A experiência de apoio
 
   Ao abrir ajuda e suporte, o portal exibe a **janela Need?**
 
@@ -144,8 +152,7 @@ A seleção de uma questão de gravidade **A** ou **Crítica** limita-o a um cas
 Já não pode utilizar a experiência de suporte Azure *Help +* para obter assistência com intune, a menos que a sua subscrição esteja numa nuvem privada para o governo.
 Se o seu caso de Intune não funcionar numa nuvem privada para o governo, navegar através do Azure *Help + o suporte* redireciona-o para a *Intune Help e apoiar* a experiência para criar e gerir incidentes de apoio:
 
-Quando utilizar o painel de navegação esquerdo **Ajuda + suporte,** ou utilize o **?** opção de abrir o painel *de ajuda* e, em seguida, selecionar Ajuda **+ suporte,** abre a página de suporte Azure *Help +.* 
-
+Quando utilizar o painel de navegação esquerdo **Ajuda + suporte,** ou utilize o **?** opção de abrir o painel *de ajuda* e, em seguida, selecionar Ajuda **+ suporte,** abre a página de suporte Azure *Help +.*
 
 A partir desta página selecione **+ Novo pedido** de suporte para abrir o separador *Basics* da Ajuda + suporte + nova página de pedido de *suporte.*
 
@@ -159,7 +166,6 @@ Nesta página:
   Em seguida, é-lhe apresentado um link que o redireciona para a [página de Ajuda e Suporte Intune](https://aka.ms/intunehelpsupport).
   
   ![Novo pedido de suporte](./media/get-support/new-request.png)
-
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Apoio insintonizado para nuvem privada para o governo
 

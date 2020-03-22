@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330013"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085216"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatizar e-mail e adicionar ações para dispositivos não conformes em Intune
 
@@ -40,7 +40,16 @@ Existem vários tipos de ação:
 
 - **Marcar dispositivos como não conformes**: crie um agendamento (ao nível do número de dias) após o dispositivo ser marcado como não conforme. Pode configurar a ação para entrar em vigor imediatamente ou dar ao utilizador um período de tolerância para este ficar em conformidade.
 
-Este artigo mostra-lhe como:
+- **Retire o dispositivo não conforme**: Esta ação remove todos os dados da empresa do dispositivo e remove o dispositivo da gestão intune. Para evitar a limpeza acidental de um dispositivo, esta ação suporta um horário mínimo de 30 dias. As seguintes plataformas apoiam esta ação:
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 e posterior
+
+  Saiba mais sobre [dispositivos de aposentadoria.](../remote-actions/devices-wipe.md#retire)
+  
+  Este artigo mostra-lhe como:
 
 - Criar um modelo de notificação por mensagem
 - Criar uma ação de não conformidade, como enviar um e-mail ou bloquear um dispositivo remotamente
@@ -76,7 +85,7 @@ Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notif
    - **Rodapé do e-mail – incluir o nome da empresa**
    - **Rodapé do e-mail – incluir informações de contacto**
 
-   O logótipo que envia como parte da marca Portal da Empresa é usado para modelos de e-mail. Para obter mais informações sobre a imagem corporativa do Portal da Empresa, veja [Personalização da imagem corporativa da empresa](../apps/company-portal-app.md#company-identity-branding-customization).
+   O logótipo que envia como parte da marca Portal da Empresa é usado para modelos de e-mail. Para obter mais informações sobre a imagem corporativa do Portal da Empresa, veja [Personalização da imagem corporativa da empresa](../apps/company-portal-app.md#customizing-the-user-experience).
 
    ![Exemplo de uma mensagem de notificação de conformidade no Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ Além da ação padrão para marcar dispositivos como não conformes, pode adici
 
    - **Bloquear remotamente o dispositivo em não conformidade**: quando o dispositivo não estiver em conformidade, bloqueie-o. Esta ação obriga o utilizador a introduzir um PIN ou uma senha para desbloquear o dispositivo.
 
-5. Configurar um **Horário**: Insira o número de dias (0 a 365) após o incumprimento para desencadear a ação nos dispositivos dos utilizadores. Após este período de carência, pode impor uma política de [acesso condicional.](conditional-access-intune-common-ways-use.md) Se introduzir o número de **dias 0** (zero) e ntão o acesso condicional entra em vigor **imediatamente**. Por exemplo, se um dispositivo não for conforme, utilize o acesso condicional para bloquear o acesso a e-mail, SharePoint e outros recursos da organização imediatamente.
+   - **Retire o dispositivo não conforme**: Quando o dispositivo não estiver em conformidade, retire todos os dados da empresa do dispositivo e retire o dispositivo da gestão intune. Para evitar a limpeza acidental de um dispositivo, esta ação suporta um horário mínimo de **30** dias.
+
+5. Configurar um **Horário**: Insira o número de dias (0 a 365) após o incumprimento para desencadear a ação nos dispositivos dos utilizadores. (Reformar*o dispositivo não conforme* suporta um mínimo de 30 dias.) Após este período de carência, pode impor uma política de [acesso condicional.](conditional-access-intune-common-ways-use.md) Se introduzir o número de **dias 0** (zero) e ntão o acesso condicional entra em vigor **imediatamente**. Por exemplo, se um dispositivo não for conforme, utilize o acesso condicional para bloquear o acesso a e-mail, SharePoint e outros recursos da organização imediatamente.
 
    Quando cria uma política de conformidade, a ação não conforme do **dispositivo Mark** é automaticamente criada e configura-se automaticamente para **0** dias (imediatamente). Com esta ação, quando o dispositivo faz o check-in, o dispositivo é avaliado como não conforme imediatamente. Se também utilizar acesso condicional, o acesso condicional começa imediatamente. Se pretender permitir um período de carência, altere a **Agenda** da ação não conforme do **dispositivo Mark.**
 
-   Na sua política de conformidade, por exemplo, também pretende notificar o utilizador. Pode adicionar o **e-mail enviar para terminar** a ação do utilizador. Neste enviar ação **por e-mail,** você definir o **Horário** para 2 dias. Se o dispositivo ou utilizador final ainda for avaliado como incompatível no dia 2, então o seu e-mail é enviado no dia 2. Se quiser enviar novamente um e-mail ao utilizador no dia 5 de incumprimento, adicione outra ação e marque o **Horário** para 5 dias.
+  Na sua política de conformidade, por exemplo, também pretende notificar o utilizador. Pode adicionar o **e-mail enviar para terminar** a ação do utilizador. Neste enviar ação **por e-mail,** você definir o **Horário** para dois dias. Se o dispositivo ou utilizador final ainda for avaliado como incompatível no segundo dia, então o seu e-mail é enviado no segundo dia. Se quiser enviar novamente um e-mail ao utilizador no quinto dia de incumprimento, adicione outra ação e marque o **Horário** para cinco dias.
 
    Para obter mais informações sobre o cumprimento e as ações incorporadas, consulte a visão geral da [conformidade.](device-compliance-get-started.md)
 

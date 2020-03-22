@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a38a7a0e191990871724e217d84c6bd8babb12dc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: db3ceb67b0ada19d1679f3bf133305214af8fd9f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332333"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087061"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configurações de restrições de dispositivos Android e Samsung Knox Standard em Intune
 
@@ -29,6 +29,10 @@ Este artigo mostra-lhe todas as definições de restrições de dispositivos do 
 
 >[!TIP]
 >Se as definições que pretende não estiverem disponíveis, poderá conseguir configurá-las nos seus dispositivos através de um [perfil personalizado](custom-settings-android.md).
+
+## <a name="before-you-begin"></a>Antes de começar
+
+Criar um perfil de [configuração do dispositivo](device-restrictions-configure.md).
 
 ## <a name="general"></a>Geral
 
@@ -147,7 +151,7 @@ Para cada definição, adicione uma lista de aplicações. As opções são:
 - **Wi-Fi (apenas Samsung Knox)** : Escolha **o bloco** para evitar a utilização de Wi-Fi no dispositivo. **Não configurado** permite utilizar as funcionalidades Wi-Fi do dispositivo.
 - **Wi-Fi tethering (apenas Samsung Knox)** : Escolha o **bloco** para evitar a utilização de wi-fi no dispositivo. **Não configurado** permite a utilização de tetering Wi-Fi no dispositivo.
 
-## <a name="kiosk"></a>Local Público
+## <a name="kiosk"></a>Modo de Local Público
 
 As definições de modo de local público aplicam-se apenas a dispositivos Samsung Knox Standard e apenas a aplicações que gere com o Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325321"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084815"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditar, exportar ou eliminar dados pessoais no Intune
 
@@ -39,13 +39,13 @@ Por motivos de segurança, o Intune poderá manter os registos de auditoria das 
 
 Para rever os registos de auditoria, veja [Registos de auditoria das atividades do Intune](../fundamentals/monitor-audit-logs.md). 
 
-Os administradores não podem eliminar os registos de auditoria.
+Os administradores não podem apagar registos de auditoria.
 
 Estes eventos de auditoria são retidos durante um ano. Os administradores de inquilinos podem solicitar os registos de auditoria através [deste formulário de pedido de suporte](https://privacy.microsoft.com/en-US/privacy-questions?).
 
 ## <a name="export-personal-data"></a>Exportar dados pessoais
 
-Os administradores podem exportar dados pessoais do utilizador final, incluindo contas, dados do serviço e registos associados, para cumprir as exigências associadas aos Direitos do Titular dos Dados. A decisão de fornecer ou não uma cópia dos dados pessoais ao titular dos dados é sua e da sua organização ou se tiver um motivo profissional legítimo para reter os dados. Se optar por fornecê-los, pode disponibilizar uma cópia do documento, uma versão não confidencial adequada ou uma captura de ecrã das partes que considera adequadas para partilhar.
+Os administradores podem exportar dados pessoais do utilizador final, incluindo contas, dados do serviço e registos associados, para cumprir as exigências associadas aos Direitos do Titular dos Dados. Cabe a si e à sua organização decidir se deve ou não fornecer ao titular dos dados uma cópia dos dados pessoais ou se tem uma razão de negócio legítima para os reter. Se optar por fornecê-los, pode disponibilizar uma cópia do documento, uma versão não confidencial adequada ou uma captura de ecrã das partes que considera adequadas para partilhar.
 
 Para exportar os dados pessoais de um utilizador, pode utilizar: 
 - o painel Dispositivo de MDM do Intune para exportar uma lista de dispositivos. Também pode copiar diretamente dados do dispositivo.
@@ -60,16 +60,16 @@ Existem três formas de remover os dados pessoais da gestão do Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Eliminar um utilizador do Intune
 
-Para eliminar os dados pessoais de um utilizador final do Intune, o administrador tem de [eliminar o utilizador do Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando o utilizador é eliminado do AAD (eliminado definitivamente), o Intune recebe o sinal de eliminação do AAD e, em seguida, inicia automaticamente a remoção de todos os dados pessoais desse utilizador do serviço do Intune. As informações do utilizador serão eliminadas do serviço do Intune no prazo de 30 dias após a ação de remoção.
+Para eliminar os dados pessoais de um utilizador final a partir de Intune, um administrador deve [excluir o utilizador do Diretório Ativo Azure (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando o utilizador é eliminado do AAD (eliminado duramente), intune recebe o sinal de eliminação de AAD e, em seguida, automaticamente começa a expurgar todos os dados pessoais desse utilizador do serviço Intune. As informações do utilizador serão eliminadas do serviço Intune no prazo de 30 dias a partir da ação de remoção.
 
 ### <a name="reset-device-to-factory-settings"></a>Repor as predefinições de fábrica do dispositivo
 A reposição das predefinições de fábrica restaura todas as definições e dados pessoais empresariais para as predefinições de fábrica. Isto é útil quando se fornece um dispositivo a outro colaborador. São removidos ficheiros do utilizador, aplicações instaladas pelo utilizador e definições não predefinidas. Estes dados são eliminados do serviço do Intune no prazo de 30 dias após a ação de remoção.
 
 ### <a name="user-self-removal-from-intune-management"></a>Remoção automática da gestão do Intune por parte do utilizador
-Os utilizadores podem remover os respetivos dispositivos pessoais [Android, Apple ou Windows](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) da gestão do Intune sem assistência administrativa.   
+Os utilizadores podem remover os respetivos dispositivos pessoais [Android, Apple ou Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) da gestão do Intune sem assistência administrativa.   
 
 ### <a name="retire"></a>Extinguir
-A ação **Extinguir** remove dados aprovisionados do Intune, tais como aplicações da empresa, dados sobre aplicações geridas pelo Intune, definições de política e perfis de e-mail aprovisionados através do Intune. Esta ação mantém os dados pessoais do utilizador no dispositivo.
+A ação **Extinguir** remove dados aprovisionados do Intune, tais como aplicações da empresa, dados sobre aplicações geridas pelo Intune, definições de política e perfis de e-mail aprovisionados através do Intune. Esta ação deixa os dados pessoais do utilizador no dispositivo.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Eliminar um inquilino do Microsoft Intune
 

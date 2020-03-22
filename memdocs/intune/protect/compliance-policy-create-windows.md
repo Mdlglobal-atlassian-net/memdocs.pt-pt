@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2f0d78fa929a7ed7ca33f7688027fb55c083280
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329661"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084932"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 10 e posteriordefinições para marcar dispositivos como conformes ou não conformes usando Intune
 
@@ -67,7 +67,7 @@ Mais recursos:
 - Para mais detalhes sobre como funciona o serviço de Attestation Health, consulte [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 - [Dica de suporte: Utilizando as definições de atestado de saúde do dispositivo como parte da sua política de conformidade intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
-## <a name="device-properties"></a>Device Properties
+## <a name="device-properties"></a>Propriedades do Dispositivo
 
 ### <a name="operating-system-version"></a>Versão do Sistema Operativo
 
@@ -108,7 +108,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 
     Por exemplo, pode exigir que todas as atualizações do software sejam instaladas nos dispositivos. No Gestor de Configuração, este requisito tem o estado "Instalado". Se algum programa no dispositivo estiver num estado desconhecido, então o dispositivo não está em conformidade no Intune.
 
-## <a name="system-security"></a>System Security
+## <a name="system-security"></a>Segurança do sistema
 
 ### <a name="password"></a>Palavra-passe
 
@@ -177,7 +177,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
   [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Se o dispositivo sincronizar imediatamente após um reboot, ou sincronizar imediatamente o sono, então esta definição pode reportar como um **Erro**. Este cenário pode não afetar o estado geral de conformidade do dispositivo. Para reavaliar o estado de conformidade, [sincronize](https://docs.microsoft.com/user-help/sync-your-device-manually-windows)manualmente o dispositivo .
+  > Se o dispositivo sincronizar imediatamente após um reboot, ou sincronizar imediatamente o sono, então esta definição pode reportar como um **Erro**. Este cenário pode não afetar o estado geral de conformidade do dispositivo. Para reavaliar o estado de conformidade, [sincronize](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows)manualmente o dispositivo .
 
 - **Módulo de Plataforma Fidedigna (TPM)** :  
   - **Não configurado** *(predefinido)* - Intune não verifica o dispositivo para uma versão de chip TPM.

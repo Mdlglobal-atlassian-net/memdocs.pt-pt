@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326117"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083812"
 ---
 # <a name="app-protection-policies-overview"></a>Descrição geral das políticas de proteção de aplicações
 
@@ -34,7 +34,7 @@ As políticas de proteção de aplicações (APP) são regras que garantem que o
 As políticas de proteção de aplicações mobile Application Management (MAM) permitem-lhe gerir e proteger os dados da sua organização dentro de uma aplicação. Com a **MAM sem matrícula** (MAM-WE), uma aplicação relacionada com trabalho ou escola que contenha dados sensíveis pode ser gerida em quase todos os [dispositivos](app-management.md#app-management-capabilities-by-platform), incluindo dispositivos pessoais em cenários de **bring-your-own-device** (BYOD). Muitas aplicações de produtividade, como as aplicações do Microsoft Office, podem ser geridas pela MAM do Intune. Consulte a lista oficial de [aplicações protegidas](apps-supported-intune-apps.md) microsoft Intune disponíveis para uso público.
 
 ## <a name="how-you-can-protect-app-data"></a>Como pode proteger dados de aplicações
-Os seus empregados utilizam dispositivos móveis para tarefas pessoais e profissionais. Se, por um lado, quer garantir que os seus funcionários são produtivos, por outro, quer evitar a perda de dados, intencional e não intencional. Também irá querer proteger os dados da empresa que são acedidos a partir de dispositivos que não são geridos por si.
+Os seus funcionários utilizam dispositivos móveis para tarefas pessoais e profissionais. Se, por um lado, quer garantir que os seus funcionários são produtivos, por outro, quer evitar a perda de dados, intencional e não intencional. Também irá querer proteger os dados da empresa que são acedidos a partir de dispositivos que não são geridos por si.
 
 Pode utilizar as políticas de proteção de aplicações do Intune **independentemente de qualquer solução de gestão de dispositivos móveis (MDM)** . Esta independência ajuda-o a proteger dados da sua empresa com ou sem inscrição de dispositivos numa solução de gestão de dispositivos. Ao implementar **políticas ao nível da aplicação**, pode restringir o acesso aos recursos da empresa e manter os dados sob a alçada do seu departamento de TI.
 
@@ -205,6 +205,9 @@ Para um exemplo de contexto "pessoal", considere um utilizador que inicie um nov
 Para um exemplo de trabalho ou contexto "corporativo", considere um utilizador que inicie a aplicação OneDrive utilizando a sua conta de trabalho. No contexto de trabalho, não pode mover ficheiros para uma localização de armazenamento pessoal. Posteriormente, quando utiliza o OneDrive com a sua conta pessoal, pode copiar e mover dados dos seus OneDrive pessoais, sem restrições.
 
 O Outlook tem uma visão combinada de e-mail seletiva mente e-mail. Nesta situação, a aplicação Outlook solicita o Intune PIN no lançamento.
+
+  >[!NOTE]
+  > Embora o Edge esteja em contexto "corporativo", o utilizador pode transferir intencionalmente ficheiros de contexto "corporativo" da OneDrive para um local desconhecido de armazenamento em nuvem pessoal. Para evitar isto, consulte [a lista de sites autorizados ou bloqueados para](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) o Microsoft Edge e configure a lista de sites permitida/bloqueada para o Edge.
 
 Para obter mais informações sobre multi-identidade em Intune, consulte [MAM e multi-identidade.](apps-supported-intune-apps.md)
 

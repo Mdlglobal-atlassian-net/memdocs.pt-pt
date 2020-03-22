@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 718ca1a6b17ff967df2267aa9f9b27cd2d5980a6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326585"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086434"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Adicione as definições de Wi-Fi para dispositivos Android Enterprise dedicados e totalmente geridos no Microsoft Intune
 
@@ -31,7 +31,7 @@ Este artigo descreve estas definições. [Utilize Wi-Fi nos seus dispositivos,](
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-[Crie um perfil de dispositivo](wi-fi-settings-configure.md#create-a-device-profile).
+[Crie um perfil de dispositivo](wi-fi-settings-configure.md).
 
 ## <a name="device-owner-only"></a>Proprietário do dispositivo apenas
 
@@ -49,7 +49,7 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
   - **Chave WEP pré-partilhada**: introduza a palavra-passe na **Chave pré-partilhada**. Quando a rede da sua organização é configurada, uma chave de rede ou palavra-passe também é configurada. Introduza esta chave de rede ou palavra-passe para o valor PSK.
   - **Chave WPA pré-partilhada**: introduza a palavra-passe na **Chave pré-partilhada**. Quando a rede da sua organização é configurada, uma chave de rede ou palavra-passe também é configurada. Introduza esta chave de rede ou palavra-passe para o valor PSK.
 
-### <a name="enterprise"></a>Enterprise
+### <a name="enterprise"></a>Empresarial
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
@@ -105,7 +105,7 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
 - **Rede oculta**: escolha **Ativar** para ocultar esta rede da lista de redes disponíveis no dispositivo. O SSID não é difundido. Escolha **Desativar** para mostrar esta rede na lista de redes disponíveis no dispositivo.
 
-### <a name="enterprise"></a>Enterprise
+### <a name="enterprise"></a>Empresarial
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.

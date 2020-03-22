@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66dafbeea3d5fa540a4306c811f784a4c6088c2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328045"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084489"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalar e iniciar sessão na aplicação Portal da Empresa
 
@@ -38,6 +38,6 @@ Instale a aplicação Portal da Empresa no seu dispositivo iOS para obter acesso
 
 3. Abra a aplicação Portal da Empresa, introduza o seu endereço de e-mail escolar ou profissional e a palavra-passe e, em seguida, toque em **Iniciar sessão**.
 
-    Se está a iniciar sessão na aplicação Portal da Empresa pela primeira vez e se a sua empresa ou escola utiliza o Intune, ser-lhe-á pedido que inscreva o seu dispositivo no Intune. Para se inscrever, siga os passos na secção [inscrever o dispositivo iOS no Intune](enroll-your-device-in-intune-ios.md). Também pode [iniciar sessão noutro dispositivo](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
+    Se está a iniciar sessão na aplicação Portal da Empresa pela primeira vez e se a sua empresa ou escola utiliza o Intune, ser-lhe-á pedido que inscreva o seu dispositivo no Intune. Para se inscrever, siga os passos na secção [inscrever o dispositivo iOS no Intune](enroll-your-device-in-intune-ios.md). Também pode [iniciar sessão noutro dispositivo](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

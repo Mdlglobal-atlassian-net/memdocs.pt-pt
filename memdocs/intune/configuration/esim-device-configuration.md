@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086997"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurar perfis celulares eSIM no Intune – pré-visualização pública
 
 O eSIM é um chip SIM incorporado e permite-lhe ligar-se à Internet através de uma ligação de dados celular num dispositivo compatível com eSIM, como o [Surface Pro LTE](https://www.microsoft.com/surface/business/surface-pro). Com um eSIM, não precisa de obter um cartão SIM junto do seu operador de rede móvel. Enquanto viajante global, pode também alternar entre operadores de redes móveis e planos de dados para estar sempre ligado.
 
 Por exemplo, poderá ter um plano de dados celular para o trabalho e outro plano de dados com uma operadora de rede móvel diferente para utilização pessoal. Quando viaja, pode aceder à Internet ao localizar operadoras de redes móveis com planos de dados numa determinada área.
+
+Esta funcionalidade aplica-se a:
+
+- Windows 10 e mais recente
 
 No Intune, pode importar códigos de ativação de utilização única fornecidos pela sua operadora de rede móvel. Para configurar planos de dados celulares no módulo eSIM, implemente esses códigos de ativação nos seus dispositivos compatíveis com eSIM. Quando o Intune instalar o código de ativação, o módulo de hardware eSIM irá utilizar os dados no código de ativação para contactar a operadora de rede móvel. Quando a instalação for concluída, o perfil eSIM será transferido para o dispositivo e configurado para a ativação celular.
 

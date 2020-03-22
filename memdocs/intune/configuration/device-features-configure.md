@@ -1,11 +1,11 @@
 ---
 title: Crie o perfil do iOS/iPadOS ou do dispositivo macOS com o Microsoft Intune - Azure  Microsoft Docs
-description: Adicione ou crie um perfil de dispositivo iOS, iPadOS ou macOS e, em seguida, configure as definições para o AirPrint, layout do ecrã principal, notificações de aplicações, dispositivo partilhado, entrada única e definições de filtro de conteúdo web no Microsoft Intune.
+description: Adicione ou crie um perfil de dispositivo iOS, iPadOS ou macOS e, em seguida, configure as definições para o AirPrint, layout do ecrã principal, notificações de aplicações, dispositivo partilhado, definição de inscrição única e filtro de conteúdo web no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328725"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084099"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adicione as definições de funcionalidades do iOS, iPadOS ou macOS em Intune
 
@@ -149,12 +149,12 @@ Aplica-se a:
 
 ## <a name="single-sign-on-app-extension"></a>Extensão única da aplicação de inscrição
 
-Estas configurações configuram uma extensão de aplicação que permite um único sinal (SSO) para os seus dispositivos iOS, iPadOS e macOS. A maioria das aplicações e websites da organização da Linha de Negócios (LOB) requerem algum nível de autenticação segura do utilizador. Em muitos casos, a autenticação requer que os utilizadores introduzam repetidamente as mesmas credenciais. O SSO dá aos utilizadores acesso a apps e websites depois de terem entrado nas suas credenciais uma vez. Depois de iniciaro sessão, os utilizadores podem aceder automaticamente a apps e websites ou utilizar o Face ID, o Touch ID ou o Apple passcode para aceder.
+Estas configurações configuram uma extensão de aplicação que permite um único sinal (SSO) para os seus dispositivos iOS, iPadOS e macOS. A maioria das aplicações e websites da organização da Linha de Negócios (LOB) requerem algum nível de autenticação segura do utilizador. Em muitos casos, a autenticação requer que os utilizadores introduzam repetidamente as mesmas credenciais. O SSO dá aos utilizadores acesso a apps e websites depois de terem entrado nas suas credenciais uma vez. O SSO também fornece uma melhor experiência de autenticação para os utilizadores, e reduz o número de pedidos repetidos para credenciais.
 
-Intune, utilize estas configurações para configurar uma extensão ap SSO criada pela sua organização, fornecedor de identidade ou Apple. A extensão da aplicação SSO trata da autenticação para os seus utilizadores. Estas configurações configuram extensões de aplicações SSO tipo redirecionamento e credenciais.
+No Intune, utilize estas definições para configurar uma extensão de aplicação SSO criada pela sua organização, pelo seu fornecedor de identidade, Microsoft ou Apple. A extensão da aplicação SSO trata da autenticação para os seus utilizadores. Estas configurações configuram extensões de aplicações SSO tipo redirecionamento e credenciais.
 
-- O tipo redireccional foi concebido para protocolos de autenticação modernos como o OAuth e o SAML2.
-- O tipo credencial foi concebido para fluxos de autenticação de desafio e resposta. Pode escolher entre uma extensão de credencial específica da Kerberos fornecida pela Apple e uma extensão de credencial genérica.
+- O tipo redireccional foi concebido para protocolos de autenticação modernos, tais como OAuth e SAML2. A Microsoft tem uma extensão de aplicação SSO do tipo IOS/iPadOS Azure que pode ser ativada com as definições de extensão de aplicações de início de sinal único.
+- O tipo credencial foi concebido para fluxos de autenticação de desafio e resposta. Pode escolher entre uma extensão de credencial específica da Kerberos fornecida pela Apple, ou uma extensão de credencial genérica.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte a extensão da [aplicação iOS/iPadOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) e a extensão da [aplicação macOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -167,7 +167,7 @@ Para obter mais informações sobre o desenvolvimento de uma extensão de aplica
 >
 > - As definições **de extensão de aplicações** de assinatura única definem extensões para utilização por fornecedores de identidade ou organizações para oferecer uma experiência de inscrição de empresa sem emenda. As definições **de inscrição única** definem as informações da conta Kerberos para quando os utilizadores acedem a servidores ou aplicações.
 >
-> - A extensão da **aplicação de início de sessão Single** utiliza o sistema operativo Apple para autenticar. Assim, pode proporcionar uma experiência de utilizador final que é melhor do que a de **um único sinal.**
+> - A extensão da **aplicação de início de sessão Single** utiliza o sistema operativo Apple para autenticar. Portanto, pode proporcionar uma experiência de utilizador final que é melhor do que o **único sinal.**
 >
 > - Do ponto de vista do desenvolvimento, com a extensão da **aplicação de inscrição única,** pode utilizar qualquer tipo de autenticação SSO redirecionária ou credencial SSO. Com **um único sinal,** só pode utilizar a autenticação Kerberos SSO.
 >
@@ -194,7 +194,7 @@ Aplica-se a:
 
 ## <a name="web-content-filter"></a>Filtro de conteúdo web
 
-Estas definições podem usar o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só pode permitir que `contoso` web sites se abram.
+Estas definições usam o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só pode permitir que `contoso` web sites se abram.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte o filtro de [conteúdo web no iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 

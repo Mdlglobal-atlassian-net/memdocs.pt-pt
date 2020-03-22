@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326473"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083643"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gerir o acesso Web através de um browser protegido por políticas do Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "79326473"
 Ao utilizar um browser protegido com a política do Intune (Microsoft Edge ou Intune Managed Browser), pode garantir que os sites empresariais são sempre acedidos com as proteções ativas.  Quando configurados com o Intune, os browsers protegidos podem tirar partido do seguinte:
 
 - Políticas de proteção de aplicações
-- Acesso Condicional
+- Conditional Access
 - Início de sessão único
 - Definições de configuração de aplicações
 - Integração do proxy de aplicações do Azure
@@ -88,6 +88,9 @@ Enquanto o Managed Browser ou o Microsoft Edge não for gerido pelo Intune, não
 ## <a name="conditional-access-for-protected-browsers"></a>Acesso Condicional para browsers protegidos
 
 O Managed Browser é agora uma aplicação aprovada do cliente para Acesso Condicional. Isto significa que pode restringir o acesso móvel através do browser às aplicações Web ligadas ao Azure AD em que os utilizadores apenas podem utilizar o Managed Browser e o acesso a partir de outros browsers desprotegidos, como o Safari ou o Chrome, é bloqueado. Esta proteção pode ser aplicada a recursos do Azure, como o Exchange Online e o SharePoint Online, o centro de administração do Microsoft 365 e sites no local que foram expostos a utilizadores externos através do [Proxy de Aplicações do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+
+> [!NOTE]
+> Novos web clips (aplicações web fixas) em dispositivos iOS serão abertos no Microsoft Edge em vez do Navegador Gerido Intune quando necessário abrir num navegador protegido. Para os web clips mais antigos do iOS, tem de redirecionar estes web clips para garantir que se abrem no Microsoft Edge em vez do Navegador Gerido.
 
 Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Managed Browser em plataformas móveis, pode criar uma política de Acesso Condicional que exija aplicações cliente aprovadas. 
 

@@ -1,11 +1,11 @@
 ---
 title: Funcionalidades de dispositivos iOS/iPadOS no Microsoft Intune - Azure / Microsoft Docs
-description: Consulte todas as definições para configurar dispositivos iOS e iPadOS para AirPrint, layout do ecrã principal, notificações de aplicações, dispositivo partilhado, entrada única e definições de filtro de conteúdo web no Microsoft Intune. Utilize estas definições num perfil de configuração do dispositivo para configurar dispositivos iOS/iPadOS para utilizar estas funcionalidades da Apple na sua organização.
+description: Consulte todas as definições para configurar dispositivos iOS e iPadOS para AirPrint, layout de ecrã principal, notificações de aplicações, dispositivos partilhados, definições de entrada única e filtro de conteúdo web no Microsoft Intune. Utilize estas definições num perfil de configuração do dispositivo para configurar dispositivos iOS/iPadOS para utilizar estas funcionalidades da Apple na sua organização.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332093"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086968"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Definições de dispositivos iOS e iPadOS para utilizar funcionalidades comuns do iOS/iPadOS em Intune
 
-Intune inclui algumas definições incorporadas para permitir que os utilizadores de iOS/iPadOS utilizem diferentes funcionalidades da Apple nos seus dispositivos. Por exemplo, os administradores podem controlar como os utilizadores de iOS/iPadOS usam impressoras AirPrint, adicionar aplicações e pastas à doca e páginas no ecrã principal, mostrar notificações de apps, mostrar detalhes de etiquetas de ativo no ecrã de bloqueio, usar a autenticação de entrada única e autenticar utilizadores com certificados.
+Intune inclui algumas definições incorporadas para permitir que os utilizadores de iOS/iPadOS utilizem diferentes funcionalidades da Apple nos seus dispositivos. Por exemplo, pode controlar impressoras AirPrint, adicionar apps e pastas às páginas do dock e do ecrã principal, mostrar notificações de apps, mostrar detalhes de etiquetas de ativo no ecrã de bloqueio, usar a autenticação de sinal único e usar a autenticação do certificado.
 
 Utilize estas funcionalidades para controlar dispositivos iOS/iPadOS como parte da sua solução de gestão de dispositivos móveis (MDM).
 
@@ -48,7 +48,7 @@ Crie um perfil de configuração do [dispositivo iOS/iPadOS](device-features-con
 - **Endereço IP**: Introduza o endereço IPv4 ou IPv6 da impressora. Se utilizar nomes de anfitriões para identificar impressoras, pode obter o endereço IP pingando a impressora no terminal. Obtenha o endereço IP e o caminho (neste artigo) fornece mais detalhes.
 - **Caminho**: O caminho é tipicamente `ipp/print` para impressoras na sua rede. Obtenha o endereço IP e o caminho (neste artigo) fornece mais detalhes.
 - **Porta**: Introduza a porta de escuta do destino AirPrint. Se deixar esta propriedade em branco, o AirPrint utiliza a porta predefinida. Disponível no iOS 11.0+, e iPadOS 13.0+.
-- **TLS**: Escolha **o Enable** para assegurar as ligações AirPrint com a Segurança da Camada de Transporte (TLS). Disponível no iOS 11.0+, e iPadOS 13.0+.
+- **TLS**: **Ativar** as ligações AirPrint com a Segurança da Camada de Transporte (TLS). Disponível no iOS 11.0+, e iPadOS 13.0+.
 
 Para adicionar servidores AirPrint, pode:
 
@@ -81,7 +81,7 @@ Esta funcionalidade aplica-se a:
 
 ### <a name="dock"></a>Doca
 
-Utilize as definições **da Doca** para adicionar seis itens ou pastas à doca do ecrã iOS/iPadOS. Muitos dispositivos suportam menos itens. Por exemplo, os dispositivos do iPhone suportam até quatro itens. Neste caso, apenas os quatro primeiros itens que adiciona são mostrados no dispositivo.
+Utilize as definições **da Doca** para adicionar seis itens ou pastas à doca no ecrã. Muitos dispositivos suportam menos itens. Por exemplo, os dispositivos do iPhone suportam até quatro itens. Neste caso, apenas os quatro primeiros itens que adiciona são mostrados no dispositivo.
 
 Pode adicionar até **seis** itens (apps e pastas combinadas) para a doca do dispositivo.
 
@@ -283,8 +283,32 @@ Esta funcionalidade aplica-se a:
 - **Tipo de extensão da aplicação SSO:** Escolha o tipo de extensão da aplicação SSO. As opções são:
 
   - **Não configurado**: As extensões de aplicações não são utilizadas. Para desativar uma extensão da aplicação, pode mudar o tipo de extensão da aplicação SSO para **Não configurado**.
-  - **Redirecionamento**: Utilize uma extensão de aplicação de redirecionamento genérica e personalizável para executar SSO com fluxos de autenticação modernos. Certifique-se de que conhece o ID de extensão para a extensão da aplicação da sua organização.
-  - **Credencial**: Utilize uma extensão de aplicação credencial genérica e personalizável para executar SSO com fluxos de autenticação de desafio e resposta. Certifique-se de que conhece o ID de extensão para a extensão da aplicação da sua organização.
+  - **Redirecionamento**: Utilize uma extensão de aplicação de redirecionamento genérica e personalizável para utilizar o SSO com fluxos de autenticação modernos. Certifique-se de que conhece o ID de extensão para a extensão da aplicação da sua organização.
+
+    Nos dispositivos iOS/iPadOS 13.0+, pode configurar a extensão da **aplicação Microsoft Azure AD AD SSO** utilizando este tipo de extensão de aplicação SSO redirecionamento. A extensão da AD do Microsoft Azure permite um único sinal entre aplicações da Microsoft e aplicações de organização que utilizam o Azure AD para autenticação. A extensão Azure AD funciona como um corretor avançado de autenticação que oferece melhorias na experiência de segurança e no utilizador final. Todas as aplicações que usaram anteriormente a autenticação intermediada com a aplicação Microsoft Authenticator continuam a obter SSO com a extensão SSO. A extensão Azure AD SSO ainda não suporta o navegador SSO. Para obter mais informações sobre o SSO e o corretor de autenticação iOS/iPadOS, consulte [Configure SSO no macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **Para configurar a extensão aD iOS Microsoft Azure:**
+
+    1. Desloque o tipo de extensão da **aplicação SSO** para **redirecionar**.
+    2. Detete o ID de **extensão** para `com.microsoft.azureauthenticator.ssoextension`.
+    3. Detete o **ID da equipa** para `SGGM6D27TK`.
+    4. Na definição **urls,** introduza os seguintes URLs:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > Para obter o SSO com a extensão iOS/iPadOS Microsoft Azure AD, instale primeiro a aplicação iOS/iPadOS Microsoft Authenticator no dispositivo. O autenticador fornece a extensão Azure AD ao dispositivo, e as definições de extensão da aplicação MDM SSO ativam a extensão Azure AD. Assim que o Autenticador e o perfil de extensão da aplicação SSO estiverem instalados no dispositivo, os utilizadores devem introduzir as suas credenciais para iniciar sessão e estabelecer uma sessão. Esta sessão é então utilizada em diferentes aplicações sem exigir que os utilizadores voltem a autenticar.
+
+  - **Credencial**: Utilize uma extensão de aplicação credencial genérica e personalizável para utilizar o SSO com fluxos de autenticação de desafio e resposta. Certifique-se de que conhece o ID de extensão para a extensão da aplicação da sua organização.
   - **Kerberos**: Use a extensão Kerberos incorporada da Apple, que está incluída no iOS 13.0+ e iPadOS 13.0+. Esta opção é uma versão específica da Extensão da aplicação **Credencial** da Kerberos.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Esta funcionalidade aplica-se a:
   - Todos os domínios da sua única extensão de aplicação de início de sessão Os perfis Intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações de início de sessão, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Estes domínios não são sensíveis a casos.
 
-- **URLs** (apenas redirecionamento): Introduza os prefixos URL dos seus fornecedores de identidade em nome de quem a extensão da aplicação de redirecionamento executa SSO. Quando um utilizador é redirecionado para estes URLs, a extensão da aplicação SSO intervirá e solicitará sSO.
+- **URLs** (apenas redirecionamento): Introduza os prefixos URL dos seus fornecedores de identidade em nome de quem a extensão da aplicação de redirecionamento utiliza SSO. Quando os utilizadores são redirecionados para estes URLs, a extensão da aplicação SSO intervém e solicita sSO.
 
   - Todos os URLs nos seus perfis de extensão de aplicações intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações SSO, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Os URLs devem começar com http:// ou https://.
@@ -320,7 +344,7 @@ Esta funcionalidade aplica-se a:
 
   - **Adicione**: Selecione para adicionar as suas chaves de configuração.
 
-- **Utilização** em cadeia de chaves (apenas Kerberos): Escolha **o Bloco** para evitar que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Se bloqueado, o utilizador não é solicitado a guardar a sua palavra-passe e precisa de reintroduzir a palavra-passe quando o bilhete Kerberos expirar. **Não configurado** (predefinido) permite que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Os utilizadores não são solicitados a reintroduzir a sua palavra-passe quando o bilhete expirar.
+- **Utilização** em cadeia de chaves (apenas Kerberos): Escolha **o Bloco** para evitar que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Se bloqueados, os utilizadores não são solicitados a guardar a sua palavra-passe e precisam de reintroduzir a palavra-passe quando o bilhete Kerberos expirar. **Não configurado** (predefinido) permite que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Os utilizadores não são solicitados a reintroduzir a sua palavra-passe quando o bilhete expirar.
 - **Id do rosto, Touch ID ou código de acesso** (apenas Kerberos): **Exigir** que os utilizadores introduzam o seu ID facial, touch ID ou código de acesso do dispositivo quando a credencial é necessária para refrescar o bilhete Kerberos. **Não configurado** (padrão) não requer que os utilizadores utilizem a biometria ou a senha do dispositivo para atualizar o bilhete Kerberos. Se o uso do **Keychain** estiver bloqueado, esta definição não se aplica.
 - **Reino padrão** (apenas Kerberos): Escolha **ativar** para definir o valor real **que** introduziu como o reino padrão. **Não configurado** (predefinido) não define um reino predefinido.
 

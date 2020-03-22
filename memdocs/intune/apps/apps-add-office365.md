@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e72993141de963d78d6aeaf512af0165d747c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325981"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083472"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Adicione 365 aplicações do Office aos dispositivos windows 10 com microsoft Intune
 
@@ -206,7 +206,7 @@ A seguinte tabela lista códigos de erro comuns que poderá encontrar e o seu si
 
 ### <a name="status-for-office-csp"></a>Estado do CSP do Office
 
-| Estado | Fase | Descrição |
+| Estado | Fase | Description |
 |--------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1460 (ERROR_TIMEOUT) | Transferência | Falha ao transferir a Ferramenta de Implementação do Office |
 | 13 (ERROR_INVALID_DATA) | - | Não foi possível verificar a assinatura da Ferramenta de Implementação do Office transferida |
@@ -234,4 +234,4 @@ A seguinte tabela lista códigos de erro comuns que poderá encontrar e o seu si
 
 ## <a name="next-steps"></a>Próximos passos
 
-- Para atribuir o suite de aplicações a grupos adicionais, consulte [as aplicações de atribuição a grupos](/intune-azure/manage-apps/deploy-apps).
+- Para atribuir o suite de aplicações a grupos adicionais, consulte [as aplicações de atribuição a grupos](/mem/intune/apps/apps-deploy).

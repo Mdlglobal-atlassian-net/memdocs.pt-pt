@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99ba07c5895c5a299a2e0b55b0ff16dcbcb2913f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325585"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084085"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Pacote iDs para aplicações incorporadas para iOS e iPadOS que pode utilizar no Intune
 
@@ -32,6 +32,7 @@ Quando configurar funcionalidades em dispositivos iOS/iPadOS, também pode adici
 | ID do Pacote                   | Nome da Aplicação     | Publicador |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
+| com.apple.store.Jolly       | Loja Apple  | Apple     |
 | com.apple.calculator        | Calculadora   | Apple     |
 | com.apple.mobilecal         | Calendário     | Apple     |
 | com.apple.camera            | Câmara       | Apple     |

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332921"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086339"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guia para programadores do SDK da Aplicação do Microsoft Intune para Android
 
@@ -225,7 +225,7 @@ A ferramenta de linha de comandos pode ser invocada com os scripts auxiliares fo
 
 A ferramenta espera os parâmetros seguintes.
 
-| Parâmetro | Descrição |
+| Parâmetro | Description |
 | -- | -- |
 | `--input` | Uma lista delimitada por pontos e vírgulas de ficheiros jar e diretórios de ficheiros de classe a modificar. Esta lista deve incluir todos os jars/diretórios que pretende reescrever. |
 | `--output` | Uma lista delimitada por pontos e vírgulas de ficheiros jar e diretórios nos quais as classes modificadas devem ser armazenadas. Deve existir um valor de saída por cada valor de entrada, com apresentação por ordem. |
@@ -297,7 +297,7 @@ Além das classes base, algumas classes que a sua aplicação pode utilizar sem 
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -318,13 +318,13 @@ Além das classes base, algumas classes que a sua aplicação pode utilizar sem 
 | android.support.v4.content.FileProvider | MAMFileProvider
 | android.support.v4.content.WakefulBroadcastReceiver | MAMWakefulBroadcastReceiver
 
-### <a name="microsoftintunemamsdksupportv7jar"></a>Microsoft.Intune.MAM.SDK.Support.v7.jar:
+### <a name="microsoftintunemamsdksupportv7jar"></a>Microsoft.Intune.MAM.SDK.Suppout.v7.jar:
 
 |Classe Android | Substituição do SDK da Aplicação do Intune |
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -596,7 +596,7 @@ O parâmetro `service` deve ser um dos seguintes valores `SaveLocation`:
 
 O `username` deve ser o UPN/username/email associado ao serviço de nuvem a que o serviço de nuvem está a ser guardado (*não* necessariamente o mesmo que o utilizador que possui o documento a ser guardado). Utilize nulo se não existir um mapeamento entre o AAD UPN e o nome de utilizador do serviço na nuvem ou se não for conhecido o nome de utilizador. `SaveLocation.LOCAL` não é um serviço na nuvem e por isso deve ser sempre utilizado com um parâmetro `null` nome de utilizador.
 
-O método anterior para determinar se uma política de utilizador permitia guardar dados em várias localizações era `getIsSaveToPersonalAllowed()`, dentro da mesma classe **AppPolicy**. Esta função é agora **preterida** e não deve ser utilizada, a invocação seguinte é equivalente a `getIsSaveToPersonalAllowed()`:
+O método anterior para determinar se a política de um utilizador lhes permitia guardar dados para vários locais foi `getIsSaveToPersonalAllowed()` dentro da mesma classe **AppPolicy.** Esta função é agora **preterida** e não deve ser utilizada, a invocação seguinte é equivalente a `getIsSaveToPersonalAllowed()`:
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
@@ -775,7 +775,7 @@ Veja também os requisitos para [Acesso Condicional](#conditional-access) abaixo
 
 Autoridade e NonBrokerRedirectURI podem ser especificados se for necessário.
 
-### <a name="conditional-access"></a>Acesso Condicional
+### <a name="conditional-access"></a>Conditional Access
 O Acesso Condicional (AC) é uma [funcionalidade](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) do Azure Active Directory que pode ser utilizada para controlar o acesso aos recursos do AAD. [Os administradores do Intune podem definir regras de AC](https://docs.microsoft.com/intune/conditional-access) que permitem aceder aos recursos apenas a partir de dispositivos ou aplicações que são geridos pelo Intune. Para garantir que a sua aplicação pode aceder aos recursos quando for adequado, tem de seguir os passos abaixo. Se a aplicação não adquirir tokens de acesso do AAD, ou aceder apenas a recursos que não podem ser protegidos por AC, pode ignorar estes passos.
 
 1. Siga as [diretrizes de integração do ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
@@ -1079,7 +1079,7 @@ O método `getComplianceStatus()` devolve o resultado da tentativa de reparaçã
 | PENDING | A tentativa de remediar o cumprimento falhou porque a resposta ao estado ainda não tinha sido recebida do serviço quando o prazo foi ultrapassado. A aplicação deverá tentar a sua aquisição simbólica novamente mais tarde. |
 | COMPANY_PORTAL_REQUIRED | O Portal da Empresa deve ser instalado no dispositivo para que a reparação de conformidade seja bem sucedida.  Se o Portal da Empresa já estiver instalado no dispositivo, a aplicação precisa de ser reiniciada.  Neste caso, será mostrado um diálogo a pedir ao utilizador que reinicie a aplicação. |
 
-Se o estado de conformidade for `MAMCAComplianceStatus.COMPLIANT`, a aplicação deverá reiniciar a sua aquisição original (para o seu próprio recurso). Se a tentativa de reparação de conformidade falhar, os métodos `getComplianceErrorTitle()` e `getComplianceErrorMessage()` devolverão as cordas localizadas que a aplicação pode apresentar ao utilizador final, se assim o desejar.  A maioria dos casos de erro não são remediados pela aplicação, pelo que, para o caso geral, pode ser melhor falhar na criação de conta ou no login e permitir que o utilizador tente novamente mais tarde.  Se uma falha for persistente, os registos mAM podem ajudar a determinar a causa.  O utilizador final pode submeter os registos utilizando as instruções [aqui](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Enviar registos ao suporte da empresa por e-mail")encontradas .
+Se o estado de conformidade for `MAMCAComplianceStatus.COMPLIANT`, a aplicação deverá reiniciar a sua aquisição original (para o seu próprio recurso). Se a tentativa de reparação de conformidade falhar, os métodos `getComplianceErrorTitle()` e `getComplianceErrorMessage()` devolverão as cordas localizadas que a aplicação pode apresentar ao utilizador final, se assim o desejar.  A maioria dos casos de erro não são remediados pela aplicação, pelo que, para o caso geral, pode ser melhor falhar na criação de conta ou no login e permitir que o utilizador tente novamente mais tarde.  Se uma falha for persistente, os registos mAM podem ajudar a determinar a causa.  O utilizador final pode submeter os registos utilizando as instruções [aqui](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Enviar registos ao suporte da empresa por e-mail")encontradas .
 
 Uma vez que `MAMComplianceNotification` estende `MAMUserNotification`, a identidade do utilizador para quem foi tentada a reparação também está disponível.
 
@@ -1206,7 +1206,7 @@ Um BackupAgent permite-lhe ser muito mais explícito sobre os dados que farão p
 
 **Restauro de várias identidades:**
 
-O guia de Cópia de Segurança de Dados especifica um algoritmo geral para restaurar os dados da aplicação e fornece um exemplo de código na secção [Extending BackupAgent (Expandir o BackupAgent)](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent). Para realizar um restauro de várias identidades com êxito, tem de seguir a estrutura geral fornecida neste exemplo de código dando especial atenção ao seguinte:
+O guia de backup de dados especifica um algoritmo geral para restaurar os dados da sua aplicação e fornece uma amostra de código na secção [Extending BackupAgent.](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) Para realizar um restauro de várias identidades com êxito, tem de seguir a estrutura geral fornecida neste exemplo de código dando especial atenção ao seguinte:
 
 1. Você deve usar um loop `while(data.readNextHeader())` para passar pelas entidades de backup. No código anterior, `data` é o nome variável local para o **MAMBackupDataInput** que é passado para a sua app após o restauro.
 
@@ -1343,7 +1343,7 @@ Se não substituir `onSwitchMAMIdentityComplete` (ou chamar o método `super`), 
 Além da capacidade da aplicação de definir a identidade, a identidade de um contexto ou thread poderá mudar com base na entrada de dados de outra aplicação gerida pelo Intune com uma política de proteção de aplicações.
 
 #### <a name="examples"></a>Exemplos
-1. Se uma atividade for iniciada a partir de um `Intent` enviado por outra aplicação para MAM, a identidade da atividade será definida com base na identidade real na outra aplicação no ponto em que o `Intent` foi enviado.
+1. Se uma atividade for lançada a partir de um `Intent` enviado por outra aplicação MAM, a identidade da atividade será definida com base na identidade efetiva na outra app no momento em que o `Intent` foi enviado.
 
 2. Para serviços, a identidade do thread será definida de forma semelhante durante uma chamada `onStart` ou `onBind`. As chamadas para `Binder` devolvidas do `onBind` também irão definir temporariamente a identidade do thread.
 
@@ -1445,7 +1445,7 @@ O `MAMIdentityExecutors` permite-lhe encapsular uma instância existente do `Exe
 ```
 
 ### <a name="file-protection"></a>Proteção de Ficheiros
-Todos os ficheiros têm uma identidade associada na altura da criação, com base na identidade de processo e thread. Esta identidade será utilizada para encriptação de ficheiros e eliminação seletiva. Apenas os ficheiros cuja identidade é gerida e tenha uma política que requeira encriptação serão encriptados. A funcionalidade de eliminação seletiva predefinida do SDK irá eliminar apenas ficheiros associados à identidade gerida para a qual uma eliminação tenha sido solicitada. A aplicação poderá consultar ou alterar a identidade de um ficheiro ao utilizar a classe `MAMFileProtectionManager`.
+Todos os ficheiros têm uma identidade associada na altura da criação, com base na identidade de processo e thread. Esta identidade será utilizada para encriptação de ficheiros e eliminação seletiva. Apenas os ficheiros cuja identidade é gerida e tenha uma política que requeira encriptação serão encriptados. A funcionalidade de eliminação seletiva predefinida do SDK irá eliminar apenas ficheiros associados à identidade gerida para a qual uma eliminação tenha sido solicitada. A aplicação pode consultar ou alterar a identidade de um ficheiro utilizando a classe `MAMFileProtectionManager`.
 
 ```java
 public final class MAMFileProtectionManager {
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ O SDK do Intune mantém o contrato fornecido pela API Android, embora possam ser
 O SDK da Aplicação Intune para Android não controla a coleção de dados da sua aplicação. A aplicação do Portal da Empresa regista dados gerados pelo sistema por padrão. Estes dados são enviados para o Microsoft Intune. De acordo com a Política da Microsoft, não recolhemos quaisquer dados pessoais.
 
 > [!NOTE]
-> Se os utilizadores finais não enviarem estes dados, têm de desativar a telemetria em Definições na aplicação Portal da Empresa. Para saber mais, veja [Desativar a recolha de dados da Microsoft](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Se os utilizadores finais não enviarem estes dados, têm de desativar a telemetria em Definições na aplicação Portal da Empresa. Para saber mais, veja [Desativar a recolha de dados da Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Melhores práticas recomendadas para Android
 

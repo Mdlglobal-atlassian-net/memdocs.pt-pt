@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329405"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084894"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Use credenciais derivadas no Microsoft Intune
 
@@ -106,7 +106,7 @@ Seguem-se considerações fundamentais para cada parceiro apoiado.  Familiarize-
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Reveja o fluxo de trabalho do [utilizador para DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). Os requisitos-chave para este fluxo de trabalho incluem:
+Reveja o fluxo de trabalho do [utilizador para DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). Os requisitos-chave para este fluxo de trabalho incluem:
 
 - Os utilizadores precisam de acesso a um computador ou quiosque onde possam usar o seu cartão inteligente para autenticar o emitente.
 
@@ -122,7 +122,7 @@ Para obter informações sobre a obtenção e configuração da app DISA Purebre
 
 #### <a name="entrust-datacard"></a>Cartão de Dados de Confiar
 
-Reveja o fluxo de trabalho do utilizador para a Confie na [Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). Os requisitos-chave para este fluxo de trabalho incluem:
+Reveja o fluxo de trabalho do utilizador para a Confie na [Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). Os requisitos-chave para este fluxo de trabalho incluem:
 
 - Os utilizadores precisam de acesso a um computador ou quiosque onde possam usar o seu cartão inteligente para autenticar o emitente.
 
@@ -132,7 +132,7 @@ Reveja o fluxo de trabalho do utilizador para a Confie na [Datacard](https://doc
 
 #### <a name="intercede"></a>Interceto
 
-Reveja o fluxo de trabalho do utilizador para o [Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). Os requisitos-chave para este fluxo de trabalho incluem:
+Reveja o fluxo de trabalho do utilizador para o [Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). Os requisitos-chave para este fluxo de trabalho incluem:
 
 - Os utilizadores precisam de acesso a um computador ou quiosque onde possam usar o seu cartão inteligente para autenticar o emitente.
 
@@ -221,17 +221,34 @@ Pode especificar **a credencial derivada** para os seguintes tipos e propósitos
 Utilize credenciais derivadas para autenticação baseada em certificados em web sites e aplicações. Para entregar uma credencial derivada para autenticação de aplicações:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
-3. Introduza as seguintes definições:
 
-    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é credencial derivada para o perfil de **dispositivos iOS/iPadOS**.
-    - **Descrição**: introduza uma descrição que lhe permita obter uma descrição geral da definição e outros detalhes importantes.
-    - **Plataforma**: Selecione **iOS/iPadOS**.
-    - **Tipo de perfil**: Selecione **credencial derivada**.
+3. Introduza as seguintes propriedades:
+   - **Plataforma**: Selecione a plataforma dos dispositivos que receberão este perfil.
+   - **Perfil**: Selecione **credencial derivada**
 
-4. Selecione **OK** para guardar as alterações.
-5. Quando terminar, selecione **OK** > **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
-6. Selecione o seu novo perfil > **Atribuições**. Selecione os grupos que devem receber a apólice.
+4. Selecione **Criar**.
+
+5. No Básico, insira as **seguintes**propriedades:
+
+   - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é credencial derivada para o perfil de **dispositivos iOS/iPadOS**.
+   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+
+6. Selecione **Seguinte**.
+
+7. Nas **definições de Configuração**, set **Utilize uma credencial derivada para autenticação** de aplicações a **Sim**, e, em seguida, selecione **Next**.
+
+8. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+   Selecione **Seguinte**.
+
+9. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+10. Em **Review + criar,** reveja as suas definições. Quando selecionar Criar, as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
  
 Os utilizadores recebem a aplicação ou notificação de e-mail dependendo das definições especificadas quando configurar o emitente credencial derivado. A notificação informa o utilizador para o lançamento do Portal da Empresa para que as políticas de credenciais derivadas possam ser processadas.
 

@@ -1,27 +1,27 @@
 ---
 title: Criar um perfil Wi-Fi para os dispositivos no Microsoft Intune – Azure | Microsoft Docs
-description: Veja os passos para criar um perfil de configuração dos dispositivos de Wi-Fi no Microsoft Intune. Crie perfis para Android, Android Enterprise, quiosque Android, iOS, iPadOS, macOS, Windows 10 e mais recente, e Windows Holographic para Negócios. Utilize estes perfis para criar uma ligação Wi-Fi para utilizar certificados, escolher um tipo de EAP, selecionar um método de autenticação, ativar um proxy e mais.
+description: Veja os passos para criar um perfil de configuração dos dispositivos de Wi-Fi no Microsoft Intune. Crie perfis para administrador de dispositivos Android, Android Enterprise, quiosque Android, iOS, iPadOS, macOS, Windows 10 e mais recente, e Windows Holographic para Negócios. Utilize estes perfis para criar uma ligação Wi-Fi para utilizar certificados, escolher um tipo de EAP, selecionar um método de autenticação, ativar um proxy e mais.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: tycast
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5297f87dd3aad6b88281b491ccb7c1f0878ffc1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326569"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086399"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Adicionar e utilizar definições de Wi-Fi nos seus dispositivos no Microsoft Intune
 
@@ -31,7 +31,7 @@ Por exemplo, instale uma nova rede Wi-Fi com o nome Contoso Wi-Fi. Em seguida, p
 
 1. Crie um perfil Wi-Fi que inclua as definições que se ligam à rede sem fios Contoso Wi-Fi.
 2. Atribuir o perfil a um grupo que inclua todos os utilizadores de dispositivos iOS/iPadOS.
-3. Os utilizadores encontrarão a nova rede Contoso Wi-Fi na lista de redes sem fios do dispositivo deles. Podem, em seguida, ligar-se à rede através do método de autenticação à sua escolha.
+3. Nos seus dispositivos, os utilizadores encontram a nova rede Wi-Fi Contoso na lista de redes sem fios. Podem, em seguida, ligar-se à rede através do método de autenticação à sua escolha.
 
 Este artigo lista os passos para criar um perfil Wi-Fi. Também inclui links que descrevem as diferentes configurações para cada plataforma.
 
@@ -49,42 +49,54 @@ Os perfis de Wi-Fi suportam as seguintes plataformas de dispositivos:
 > [!NOTE]
 > Nos dispositivos que executam o Windows 8.1, pode importar uma configuração de Wi-Fi que tenha sido exportada anteriormente a partir de outro dispositivo.
 
-## <a name="create-a-device-profile"></a>Criar um perfil de dispositivo
+## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil Wi-Fi para toda a empresa**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:
 
-      - **Android**
+      - **Administrador de dispositivos Android**
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows 8.1 e posterior**
       - **Windows 10 e posterior**
+      - **Windows 8.1 e posterior**
 
-    - **Tipo de perfil**: Selecione **Wi-Fi**.
+    - **Perfil**: Selecione **Wi-Fi**.
 
       > [!TIP]
       >
       > - Para dispositivos **Android Enterprise** que funcionam como um dispositivo dedicado (quiosque), escolha o proprietário do **Dispositivo apenas** > **Wi-Fi**.
       > - Para **Windows 8.1 e posterior**, pode escolher **Importação de Wi-Fi**. Esta opção permite-lhe importar definições de Wi-Fi como um ficheiro XML que exportou anteriormente a partir de um dispositivo diferente.
 
-4. Algumas das definições de Wi-Fi são diferentes para cada plataforma. Para ver as definições para uma plataforma específica, escolha a sua plataforma:
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
-    - [Android](wi-fi-settings-android.md)
+    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil Wi-Fi para toda a empresa**.
+    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+
+6. Selecione **Seguinte**.
+7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Selecione a sua plataforma para configurações detalhadas:
+
+    - [Administrador de dispositivos Android](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), incluindo dispositivos dedicados
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
     - [Windows 10 e posterior](wi-fi-settings-windows.md)
     - [Windows 8.1 e posterior](wi-fi-settings-import-windows-8-1.md), incluindo o Windows Holographic for Business
 
-5. Quando terminar, selecione **Criar perfil** > **Criar**.
+8. Selecione **Seguinte**.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
-O perfil é criado e mostrado na lista de perfis **(configuração** do dispositivo > **Perfis).**
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 ## <a name="next-steps"></a>Próximos passos
 

@@ -1,12 +1,12 @@
 ---
 title: Configurar definições de e-mail no Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Crie um perfil de e-mail no Microsoft Intune e implemente este perfil para dispositivos Android Enterprise, iOS, iPadOS e Windows. Utilize um perfil de e-mail para configurar definições de e-mail comuns, incluindo um servidor de e-mail e um método de autenticação para ligar ao e-mail empresarial em dispositivos que gere.
+description: Crie um perfil de e-mail no Microsoft Intune e implemente este perfil para o administrador de dispositivos Android, Android Enterprise, iOS, iPadOS e dispositivos Windows. Utilize perfis de e-mail para configurar definições comuns de e-mail, incluindo um servidor de e-mail e métodos de autenticação para se conectar a e-mails corporativos em dispositivos que gere.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333065"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086971"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Adicionar definições de e-mail a dispositivos com o Intune
 
@@ -29,7 +29,7 @@ O Microsoft Intune inclui várias definições de e-mail que pode implementar em
 
 Pode utilizar os perfis de e-mail para configurar as definições de e-mail incorporadas dos seguintes dispositivos:
 
-- Android Samsung Knox Standard 4.0 e mais recente
+- Administrador de dispositivos Android na Samsung Knox Standard 4.0 e mais recente
 - Android Enterprise
 - iOS 8.0 e mais recente
 - iPadOS 13.0 e mais recente
@@ -38,35 +38,48 @@ Pode utilizar os perfis de e-mail para configurar as definições de e-mail inco
 
 Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Também inclui ligações para definições mais específicas das diferentes plataformas.
 
-## <a name="create-a-device-profile"></a>Criar um perfil de dispositivo
+## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **definições de e-mail para todos os dispositivos Windows**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:
+    - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
 
-        - **Android** (apenas Samsung Android Knox Standard)
+        - **Administrador de dispositivos Android** (apenas Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 e posterior**
+        - **Windows Phone 8.1**
 
-    - **Tipo de perfil**: Selecione **E-mail**.
+    - **Perfil**: Selecione **Email**.
 
-4. Consoante a plataforma que escolheu, as definições que pode configurar variam. Escolha a sua plataforma para configurações detalhadas:
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
-    - [Configurações padrão Android Samsung Knox](email-settings-android.md)
-    - [Configurações do Android Enterprise](email-settings-android-enterprise.md)
-    - [definições iOS/iPadOS](email-settings-ios.md)
-    - [Definições do Windows Phone 8.1](email-settings-windows-phone-8-1.md)
-    - [Definições do Windows 10](email-settings-windows-10.md)
+    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **Windows 10: Definições de e-mail para todos os dispositivos Windows 10**.
+    - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
 
-5. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+6. Selecione **Seguinte**.
 
-Após introduzir as suas definições e criar o perfil, este será apresentado na lista de perfis. Em seguida, [atribua este perfil a alguns grupos](device-profile-assign.md).
+7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Escolha a sua plataforma para configurações detalhadas:
+
+    - [Administrador de dispositivos Android (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Selecione **Seguinte**.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 ## <a name="remove-an-email-profile"></a>Remover um perfil de e-mail
 
@@ -104,4 +117,4 @@ Se fizer alterações a um perfil de e-mail atribuído anteriormente, os utiliza
 
 ## <a name="next-steps"></a>Próximos passos
 
-O perfil não estará ativo assim que for criado. Em seguida, [atribua o perfil](device-profile-assign.md).
+O perfil não estará ativo assim que for criado. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326325"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083745"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>O que é a gestão de aplicações do Microsoft Intune?
 
@@ -94,7 +94,7 @@ O topo do menu de navegação de carga de trabalho da App fornece detalhes da ap
     - Estado de instalação de **aplicações**: Veja o estado de uma atribuição de aplicações que criou. Para obter mais informações, veja [Como monitorizar informações e atribuições da aplicação com o Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
     - **Estado da proteção da aplicação**: veja o estado da política de proteção de uma aplicação de um utilizador selecionado.
 - **Por Plataforma**: Selecione estas plataformas para visualizar as aplicações disponíveis por plataforma.
-    - Portal do
+    - Windows
     - iOS
     - macOS
     - Android
@@ -118,7 +118,7 @@ Os seguintes itens dentro da consola fornecem funcionalidaderelacionada com a ap
 - **Chaves de sideloading do Windows**: adicione uma chave de sideloading do Windows que pode utilizar para instalar uma aplicação diretamente nos dispositivos, em vez de publicar e transferir a aplicação da Loja Windows. Para mais informações, consulte [side-load uma aplicação Windows](app-sideload-windows.md).
 - **Fichas Apple VPP**: Aplicar e ver as suas licenças iOS/iPadOS Volume Purchase Program (VPP). Para mais informações, consulte [aplicações adquiridas em volume iOS/iPadOS.](vpp-apps-ios.md)
 - **Gerido Google Play**: Managed Google Play é a loja de aplicações da Google e única fonte de aplicações para Android Enterprise. Para mais informações, consulte [adicionar aplicações do Google Play geridas para dispositivos Android Enterprise com Intune](apps-add-android-for-work.md).
-- **Branding e personalização:** Personalize o Portal da Empresa para lhe dar a marca da empresa. Para mais informações, consulte a [configuração do Portal da Empresa.](company-portal-app.md)
+- **Personalização**: Personalize o Portal da Empresa para lhe dar a marca da sua empresa. Para mais informações, consulte a [configuração do Portal da Empresa.](company-portal-app.md)
 
 ## <a name="next-steps"></a>Próximos passos
 

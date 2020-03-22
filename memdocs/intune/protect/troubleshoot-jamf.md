@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328873"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084642"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Integração de problemas do Jamf Pro com a Microsoft Intune
 
@@ -89,8 +89,8 @@ Depois de configurar a integração intune e jamf Pro e implementar políticas d
 Por exemplo, aparece uma solicitação com texto semelhante ao seguinte exemplo ao abrir as Equipas Microsoft:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Causa**: Estas solicitações são geradas pela Jamf Pro para cada aplicação aplicável que requer o registo da AD Azure. 
@@ -156,7 +156,7 @@ Na aplicação Portal da Empresa, o utilizador poderá ver **`Not registered`** 
 
 **Resolução**  
 Para alterar a fonte de registo de Intune para Jamf:
-1. [Desinscreva o dispositivo macOS a partir de Intune](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). Para evitar mais complicações para dispositivos que não sejam totalmente removidos de Intune, consulte a [*Causa 6*](#cause-6) nesta lista de causas.  
+1. [Desinscreva o dispositivo macOS a partir de Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Para evitar mais complicações para dispositivos que não sejam totalmente removidos de Intune, consulte a [*Causa 6*](#cause-6) nesta lista de causas.  
 
 2. No dispositivo, utilize o Jamf Self Service para abrir a aplicação Do Portal da Empresa e, em seguida, matricular o dispositivo com intune. Esta tarefa requer que tenha [utilizado o Jamf para implementar a aplicação Portal da Empresa para o macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro), e ter [criado uma política no Jamf Pro que regista o dispositivo de utilizadores com a Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
@@ -186,7 +186,7 @@ O servidor Jamf Pro envia um pulso aos servidores Intune quando a integração �
 Reativar a integração intune dentro do Jamf Pro. Consulte [Configure Microsoft Intune Integration in Jamf Pro](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 
-#### <a name="cause-6"></a>Causa 6  
+#### <a name="cause-6"></a><a name="cause-6"></a>Causa 6  
 
 **O dispositivo foi previamente matriculado em Intune, ou o utilizador tentou registar o dispositivo várias vezes**
 
@@ -242,9 +242,9 @@ Se um dispositivo não estiver matriculado no Jamf, mas não for corretamente re
 Durante o registo, o utilizador de um dispositivo macOS recebe a seguinte solicitação para permitir o acesso do JamfAAD a uma chave a partir do seu porta-chaves: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Resolução**  

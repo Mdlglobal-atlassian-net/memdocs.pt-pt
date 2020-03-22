@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324409"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084405"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalar defesa de ameaça móvel   
 
@@ -79,9 +79,9 @@ Para obter mais informações sobre o registo do dispositivo, consulte [Registar
 Se a instalação falhar, contacte a pessoa de suporte de TI. Vá ao site do Portal da [Empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para encontrar os contactos da sua organização.  
 
 Também pode enviar os registos da sua aplicação para a sua pessoa de suporte de TI para lhes fornecer mais contexto sobre a instalação.  
-* Utilizadores Android: [Faça upload e envie os seus registos](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) do Portal da Empresa.   
+* Utilizadores Android: [Faça upload e envie os seus registos](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) do Portal da Empresa.   
 
-* utilizadores de dispositivos iOS: [Recupere e envie os seus registos](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) do Microsoft Edge para iOS.  
+* utilizadores de dispositivos iOS: [Recupere e envie os seus registos](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) do Microsoft Edge para iOS.  
 
 ## <a name="resolve-a-threat"></a>Resolver uma ameaça  
 Se uma ameaça exceder o nível de ameaça definido da sua organização, a sua organização também:  

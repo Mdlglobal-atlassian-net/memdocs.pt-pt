@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a6345afe4258ff7141228a7284932f083791c70
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6bc170c5260dc099d0a2b4109ed119572e0dbaff
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332217"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086860"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>Quickstart: Criar um perfil de dispositivo de e-mail para iOS/iPadOS
 
@@ -37,39 +37,47 @@ Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https:/
 
 ## <a name="create-an-iosipados-email-profile"></a>Criar um perfil de e-mail iOS/iPadOS
 
-1. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   ![Criar um perfil de e-mail para iOS/iPadOS em Intune](./media/quickstart-email-profile/ios-create-profile.png)
+2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
+   ![Criar um perfil de e-mail para iOS/iPadOS no Intune](./media/quickstart-email-profile/ios-create-profile.png)
 
-2. Em **Nome**, introduza um nome descritivo para o novo perfil. Neste exemplo, introduza **O iOS necessita de um e-mail de trabalho**.
-3. Introduza as seguintes informações de perfil:
-    - Para **descrição**, insira Requisito **seleção de dispositivos iOS/iPadOS para utilizar e-mail**de trabalho .
-    - Para **plataforma**, selecione **iOS/iPadOS**.
-    - Em **Tipo de perfil**, selecione **E-mail**.
+3. Introduza as seguintes propriedades:
+   - **Plataforma**: Selecione **iOS/iPadOS**
+   - **Perfil**: **Selecione E-mail**
+  
+4. Selecione **Criar**.
+
+5. No Básico, insira as **seguintes**propriedades:
+   - **Nome**: introduza um nome descritivo para o novo perfil. Neste exemplo, introduza **O iOS necessita de um e-mail de trabalho**.
+   - **Descrição**: Enter **Require iOS/iPadOS dispositivos para usar e-mail de trabalho**
+
 
         ![Criar um perfil de e-mail para utilização com dispositivos iOS/iPadOS em Intune](./media/quickstart-email-profile/ios-email-profile-name.png)
 
-4. Selecione **Definições** e introduza as definições que se seguem (nas outras definições, deixe as predefinições):
+6. Selecione **Seguinte**.
+
+7. Nas definições de **Configuração,** introduza as seguintes definições (deixe as predefinições para outras definições):
    - **Servidor de e-mail**: neste início rápido, introduza **outlook.office365.com**. Esta definição especifica a localização de Troca (URL) do servidor de e-mail que a aplicação de correio iOS/iPadOS utilizará para se ligar ao e-mail.
    - **Nome da conta**: introduza o **E-Mail da Empresa**.
    - **Atributo de nome de utilizador do AAD**: este nome é o atributo que o Intune obtém do Azure Active Directory (Azure AD). O Intune gera dinamicamente o nome de utilizador para este perfil através deste nome. Para este arranque rápido, assumimos que queremos que o **Nome Principal** do Utilizador seja usado como nome de utilizador para o perfil (por exemplo, user1@contoso.com).
    - **Atributo de endereço de e-mail do AAD**: esta definição é o endereço de e-mail do Azure AD que será utilizado para iniciar sessão no Exchange. Neste início rápido, selecione **Nome Principal de Utilizador**.
    - **Método de autenticação**: neste início rápido, selecione **Nome de utilizador e palavra-passe**. (Também pode escolher **Certificado** se já tiver configurado um certificado para Intune.)
 
-        ![Criar um perfil de e-mail para uso iOS/iPadOS](./media/quickstart-email-profile/ios-email-profile.png)
+8. Selecione **Seguinte**.
 
-5. Selecione **OK** > **Criar**. O novo perfil aparece na lista de perfis com o painel de instrumentos apresentado para que possa monitorizar a forma como o perfil foi atribuído aos dispositivos iOS/iPadOS e aos utilizadores de iOS/iPadOS.
-6. Selecione **Atribuições**.
-7. Selecione o separador **Incluir** e, em seguida, selecione **Todos os Utilizadores e Todos os Dispositivos**. 
-8. Selecione **Guardar**.
+9. Nas **etiquetas de âmbito** (opcional), Selecione **Seguinte**. Não usaremos uma etiqueta de mira para este perfil.
+
+10. Em **Atribuições,** utilize a entrega para **Atribuir** e selecione todos os utilizadores e todos **os dispositivos**.  Depois, selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. 
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
 Se não pretender utilizar o perfil que criou para tutoriais ou testes adicionais, pode apagá-lo agora.
 
-1. No Intune, selecione **Configuração do dispositivo** e, em seguida, selecione **Perfis**.
-2. Selecione o perfil de teste que criou, **iOS/iPadOS requer e-mail**de trabalho .
-3. Selecione as reticências ( **...** ) que se encontram junto ao perfil e, em seguida, selecione **Eliminar**.
+1. Em Intune, selecione**Dispositivos** > **Configuração**do Dispositivo .
+2. Selecione o perfil de teste que criou, **o iOS/iPadOS requer e-mail**de trabalho e, em seguida, selecione **Delete**. 
 
 ## <a name="next-steps"></a>Próximos passos
 

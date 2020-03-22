@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 89fdcaefebc7329959cc1e5d77a97034d038d5c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327733"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084180"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Utilizar o seu dispositivo Windows com o Portal da Empresa do Intune
 
@@ -33,7 +33,7 @@ Esta secção apresenta uma lista de tarefas e informações específicas do Por
 ## <a name="how-to-get-company-portal"></a>Como obter o Portal da Empresa
 O Portal da Empresa está disponível na versão de site e também como uma transferência de aplicação. Para [aceder ao site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980), inicie sessão com as suas credenciais profissionais ou escolares.  
 
-Veja [Iniciar sessão no Portal da Empresa](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal) para obter passos detalhados e capturas de ecrã.
+Veja [Iniciar sessão no Portal da Empresa](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) para obter passos detalhados e capturas de ecrã.
 
 ## <a name="supported-versions"></a>Versões suportadas
 

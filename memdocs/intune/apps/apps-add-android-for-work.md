@@ -1,12 +1,12 @@
 ---
-title: Atribuir aplicações do Managed Google Play a dispositivos Android Enterprise
+title: Adicione e atribua aplicações geridas do Google Play a dispositivos Android Enterprise
 titleSuffix: Microsoft Intune
 description: Saiba como sincronizar e atribuir aplicações a dispositivos Android Enterprise a partir da loja do Managed Google Play.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326053"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083401"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -183,7 +183,7 @@ Se aprovou uma aplicação da loja e não a vê na carga de trabalho das **Apps,
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Atribuir uma aplicação do Managed Google Play aos dispositivos de perfil de trabalho do Android Enterprise
 
-Quando a aplicação é exibida no nó de **licenças** da App do painel de **carga** de trabalho apps, pode [atribuí-la tal como atribuiria qualquer outra aplicação](/intune-azure/manage-apps/deploy-apps) atribuindo a app a grupos de utilizadores.
+Quando a aplicação é exibida no nó de **licenças** da App do painel de **carga** de trabalho apps, pode [atribuí-la tal como atribuiria qualquer outra aplicação](/mem/intune/apps/apps-deploy) atribuindo a app a grupos de utilizadores.
 
 Depois de atribuir a aplicação, esta é instalada (ou disponível para instalação) nos dispositivos dos utilizadores a que tem como alvo. Não é pedida aprovação da instalação ao utilizador do dispositivo. Para obter mais informações sobre os dispositivos de perfil de trabalho do Android Enterprise, veja [Configurar a inscrição de dispositivos de perfil de trabalho do Android Enterprise](../enrollment/android-work-profile-enroll.md). 
 

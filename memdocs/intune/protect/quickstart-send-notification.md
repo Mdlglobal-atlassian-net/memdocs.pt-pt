@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe62fa8082923b960773ce3ca45654a541132ca6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325285"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084789"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Guia de Início Rápido: enviar notificações para dispositivos não conformes
 
@@ -66,9 +66,9 @@ Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notif
 
 Para mais informações sobre a definição do nome da sua empresa, informações de contacto da empresa e logotipo da empresa, consulte os seguintes artigos:
 
-- [Informações da empresa e declaração de privacidade](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [Informações da empresa e declaração de privacidade](../apps/company-portal-app.md#configuration)
 - [Informação de suporte](../apps/company-portal-app.md#support-information)
-- [Personalização de marca](../apps/company-portal-app.md#company-identity-branding-customization)de identidade da empresa.
+- [Personalizando a experiência do utilizador.](../apps/company-portal-app.md#customizing-the-user-experience)
 
 ## <a name="add-a-noncompliance-policy"></a>Adicionar uma política de não conformidade
 

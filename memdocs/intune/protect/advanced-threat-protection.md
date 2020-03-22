@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329997"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085203"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Impor cumprimento do Microsoft Defender ATP com acesso condicional em Intune
 
@@ -43,7 +43,7 @@ O exemplo que se segue ajuda a explicar como estas soluções funcionam em conju
 Considere um evento onde alguém envia um anexo Word com código malicioso incorporado a um utilizador dentro da sua organização.
 
 - O utilizador abre o anexo e ativa o conteúdo.
-- É iniciado um ataque de privilégios elevados e o atacante tem direitos de administrador no dispositivo da vítima a partir de um computador remoto.
+- Um ataque de privilégio elevado começa, e um agressor de uma máquina remota tem direitos de administração sobre o dispositivo da vítima.
 - O atacante, em seguida, acede remotamente aos outros dispositivos do utilizador. Esta falha de segurança pode afetar toda a organização.
 
 O Microsoft Defender ATP pode ajudar a resolver eventos de segurança como este cenário.
@@ -136,24 +136,26 @@ Quando estabeleceu a ligação ao Microsoft Defender ATP, intune recebeu um paco
 
 A política de conformidade determina o nível de risco que considera aceitável para um dispositivo.
 
-### <a name="create-the-compliance-policy"></a>Criar a política de conformidade
+Se não estiver familiarizado com a criação de uma política de conformidade, consulte o Procedimento [de Política Criar um](../protect/create-compliance-policy.md#create-the-policy) procedimento de conformidade no artigo Microsoft *Intune.* As seguintes informações são específicas para configurar o Defender ATP como parte de uma política de conformidade.
 
 1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Políticas de **conformidade** > **Criar a política**.
-3. Introduza um **Nome** e uma **Descrição**.
-4. Em **Plataforma**, selecione **Windows 10 e posterior**.
-5. Em **Definições,** selecione **Microsoft Defender ATP**.
-6. Configuração **Exigir que o dispositivo esteja na pontuação de risco da máquina ou abaixo do** nível preferido.
+
+2. Selecione **Dispositivos** > **políticas** de conformidade > **políticas** > **criar políticas**.
+
+3. Para **a Plataforma** selecione o Windows *10 e, posteriormente,* selecione **Criar** para abrir a janela de configuração da **política Criar.**
+
+4. No separador **Basics,** especifique um **Nome** que o ajude a identificá-lo mais tarde. Também pode optar por especificar uma **Descrição**.
+  
+5. No separador **de definições** de Conformidade, expanda o grupo **ATP** do Microsoft Defender e desloque-se Exigir que o dispositivo esteja na pontuação de risco da **máquina ou abaixo da pontuação** de risco da máquina ao nível preferido.
 
    As classificações de nível de ameaça são [determinadas pelo Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Seguro**: este é o nível mais seguro. O dispositivo não pode ter ameaças existentes e ainda aceder aos recursos da empresa. Se forem detetadas ameaças, o dispositivo será avaliado como não conforme. (Microsoft Defender UTILIZADORES ATP the value *Secure*.)
+   - **Seguro**: este é o nível mais seguro. O dispositivo não pode ter ameaças existentes e ainda aceder aos recursos da empresa. Se forem detetadas ameaças, o dispositivo será avaliado como não conforme. (Microsoft Defender ATP utiliza o valor *Secure*.)
    - **Baixo**: o dispositivo estará em conformidade se só existirem ameaças de nível baixo. Dispositivos com níveis de ameaça médios ou elevados não são compatíveis.
    - **Médio**: o dispositivo estará conforme se as ameaças encontradas no dispositivo forem de nível baixo ou médio. Se forem detetadas ameaças de nível alto, o estado do dispositivo será determinado como não conforme.
    - **Alto**: Este nível é o menos seguro e permite todos os níveis de ameaça. Assim, os dispositivos que com níveis de ameaça elevados, médios ou baixos são considerados conformes.
 
-7. Selecione **OK** e **Criar** para guardar as alterações (e criar o perfil).
-8. [Atribuir a política de conformidade do dispositivo](create-compliance-policy.md#assign-the-policy) aos grupos aplicáveis.
+6. Complete a configuração da política, incluindo a atribuição da política aos grupos aplicáveis.
 
 ## <a name="create-a-conditional-access-policy"></a>Criar uma política de acesso condicional
 

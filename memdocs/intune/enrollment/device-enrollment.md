@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c131992d4f9b736aea2653272f81d52da7021ef7
-ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508496"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086174"
 ---
 # <a name="what-is-device-enrollment"></a>O que é a inscrição de dispositivos?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -67,7 +67,7 @@ Por predefinição, os dispositivos para todas as plataformas têm permissão pa
 
 | **Pessoal** | **Métodos de Inscrição** | **Reposição obrigatória** | **Afinidade de Utilizador** | **Bloqueado** | **Detalhes**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Admin de dispositivos Android**|**Utilizador iniciado via Portal da Empresa** | Não | Sim | Não | [Mais informações](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Admin de dispositivos Android**|**Utilizador iniciado via Portal da Empresa** | Não | Sim | Não | [Mais informações](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Perfil de trabalho da empresa android**|**Utilizador iniciado via Portal da Empresa**| Não | Sim | Não | [Mais informações](android-work-profile-enroll.md)|
 
 

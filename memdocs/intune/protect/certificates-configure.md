@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329833"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085051"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utilize certificados para autenticação no Microsoft Intune
 
@@ -107,31 +107,47 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
 
-   ![Navegue para Intune e crie um novo perfil para um certificado de confiança](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Navegue para Intune e crie um novo perfil para um certificado de confiança](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Introduza as seguintes propriedades:
+   - **Plataforma**: Escolha a plataforma dos dispositivos que receberão este perfil.
+   - **Perfil**: Selecione **certificado fidedigno**
+  
+4. Selecione **Criar**.
 
-   - O **Nome** do perfil
-   - Definir opcionalmente uma **Descrição**
-   - A **Plataforma** na qual vai implementar o perfil
-   - Defina o **Tipo de perfil** como **Certificado fidedigno**
+5. No Básico, insira as **seguintes**propriedades:
+   - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é *perfil de certificado fidedigno para toda a empresa*.
+   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
-4. Selecione **Definições,** e, em seguida, navegue para o certificado CA de raiz fidedigno .cer file que exportou para uso com este perfil de certificado e, em seguida, selecione **OK**.
+6. Selecione **Seguinte**.
 
-5. Apenas para os dispositivos Windows 8.1 e Windows 10, selecione o **Arquivo de Destino** do certificado fidedigno em:
+7. Nas definições de **Configuração,** especifique o ficheiro .cer para o certificado root CA fidedigno que exportou anteriormente. 
+
+   Apenas para os dispositivos Windows 8.1 e Windows 10, selecione o **Arquivo de Destino** do certificado fidedigno em:
 
    - **Arquivo de certificados no computador – Raiz**
    - **Arquivo de certificados no computador – Intermédio**
    - **Armazenamento de certificados de utilizador – Intermédio**
 
-6. Quando tiver terminado, selecione **OK**, volte ao painel **Criar perfil** e selecione **Criar**.
+   ![Criar um perfil e carregar um certificado fidedigno](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-O perfil aparece na lista de perfis na janela *Dispositivos - Configuração* de perfis, com um tipo de perfil de **certificado Fidedigno**. Certifique-se de atribuir este perfil a dispositivos que utilizarão certificados SCEP ou PKCS. Para atribuir o perfil a grupos, consulte os [perfis do dispositivo de atribuição](../configuration/device-profile-assign.md).
+8. Selecione **Seguinte**.
 
-> [!NOTE]
-> Os dispositivos Android podem mostrar uma mensagem de que um terceiro instalou um certificado de confiança.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+   Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. (*Aplica-se apenas ao Windows 10)* Nas Regras de **Aplicabilidade,** especifique as regras de aplicabilidade para refinar a atribuição deste perfil. Pode optar por atribuir ou não atribuir o perfil com base na edição ou versão de um dispositivo.
+
+  Para mais informações, consulte as regras de [aplicabilidade](../configuration/device-profile-create.md#applicability-rules) em Criar um perfil de *dispositivo no Microsoft Intune*.
+
+12. Em **Review + criar,** reveja as suas definições. Quando selecionar Criar, as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

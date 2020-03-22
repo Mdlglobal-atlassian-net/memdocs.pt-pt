@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331461"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085818"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utilizar o portal de resolução de problemas para ajudar os utilizadores na sua empresa
 
@@ -36,7 +36,7 @@ Para obter passos sobre como adicionar uma função de operador de suporte técn
 
 Quando um utilizador contacta o suporte acerca de um problema técnico com o Intune, o operador de suporte técnico introduz o nome do utilizador. O Intune mostra dados úteis que podem ajudar a resolver vários problemas de nível 1, incluindo:
 
-- Estado do utilizador
+- Estado de utilizador
 - Atribuições
 - Resolver problemas de compatibilidade
 - O dispositivo não responde
@@ -61,12 +61,12 @@ Pode utilizar o painel **Resolução de problemas** para analisar as informaçõ
 
 ![Painel de resolução de problemas, com áreas numeradas descritas pela tabela seguinte](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Área | Nome | Descrição |
+| Área | Nome | Description |
 | ---  | ---  | ---         |
 | 1.   | Estado da conta  | Mostra o estado do inquilino do Intune atual como **Ativo** ou **Inativo**.       |
 | 2.   | Seleção do utilizador  | O nome do utilizador atualmente selecionado. Clique em **Alterar utilizador** para selecionar um novo utilizador.       |
-| 3.   | Estado do utilizador  | Apresenta o estado da licença do Intune do utilizador, número de dispositivos, conformidade de cada dispositivo, número de aplicações e conformidade das aplicações.       |
-| 4.   | Informações do utilizador  | Utilize a lista para selecionar os detalhes a consultar no painel. <br>Pode selecionar: <ul><li>Aplicações do cliente<li>Políticas de conformidade<li> Políticas de configuração<li>Políticas de proteção de aplicações <li>Restrições de inscrição</ul>      |
+| 3.   | Estado de utilizador  | Apresenta o estado da licença Intune do utilizador, número de dispositivos e conformidade de cada dispositivo.       |
+| 4.   | Informações do utilizador  | Utilize a lista para selecionar os detalhes a consultar no painel. <br>Pode selecionar: <ul><li>Aplicações do cliente<li>Compliance políticas<li> Políticas de configuração<li>Políticas de proteção de aplicações <li>Restrições de inscrição</ul>      |
 | 5.   | Associação a grupos  | Mostra os grupos atuais dos quais o utilizador selecionado é membro.       |
 
 <!-- this section needs to be updated
@@ -248,7 +248,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 A tabela Falhas de Inscrição lista as tentativas de inscrição que falharam. Um dispositivo listado na tabela abaixo pode ter sido inscrito posteriormente com êxito durante outra tentativa. É possível que algumas tentativas falhadas não sejam listadas. As informações de mitigação não estão disponíveis para todas as falhas.
 
-| Coluna de tabela | Descrição |
+| Coluna de tabela | Description |
 |-------------|----------|
 | Início da inscrição | A hora de início em que o utilizador começou a inscrição. |
 | SO | O sistema operativo do dispositivo. |
@@ -259,7 +259,7 @@ A tabela Falhas de Inscrição lista as tentativas de inscrição que falharam. 
 
 Ao selecionar uma linha de falha, são fornecidos mais detalhes.
 
-| Secção | Descrição |
+| Section | Description |
 |-------------|----------|
 | Detalhes da falha | Uma explicação em maior detalhe sobre a falha. |
 | Potenciais remediações | Passos sugeridos para resolver o erro. Poderão não existir remediações para determinadas falhas. |
@@ -267,7 +267,7 @@ Ao selecionar uma linha de falha, são fornecidos mais detalhes.
 
 ### <a name="enrollment-errors"></a>Erros de inscrição
 
-| Erro | Detalhes |
+| Error | Detalhes |
 |-------------|----------|
 | iOS/iPadOS Timeout ou Falha | Exceder do tempo limite entre o dispositivo e o Intune devido ao utilizador demorar demasiado tempo a concluir a inscrição. |
 | Utilizador não encontrado ou licenciado | O utilizador não possui uma licença ou foi removido do serviço. |

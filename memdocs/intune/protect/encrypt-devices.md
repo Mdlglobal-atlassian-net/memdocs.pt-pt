@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329381"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084883"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utilizar encriptação do dispositivo com Intune
 
@@ -97,7 +97,7 @@ Depois de a Intune encriptar um dispositivo macOS com fileVault, pode visualizar
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Recuperar a chave de recuperação pessoal dos dispositivos macOS encriptados mEM
 
-Os utilizadores finais recuperam a sua chave de recuperação pessoal (chave FileVault) utilizando a aplicação portal da empresa iOS. O dispositivo que tenha a chave de recuperação pessoal deve ser matriculado com Intune e encriptado com fileVault através de Intune. Utilizando a aplicação portal da empresa iOS, o utilizador final pode abrir uma página web que inclui a chave de recuperação pessoal fileVault. Também pode recuperar a chave de recuperação de Intune selecionando **Dispositivos** > *o dispositivo macOS encriptado e matriculado* > Obter a chave de **recuperação**. 
+Os utilizadores finais podem recuperar a sua chave de recuperação pessoal (chave FileVault) utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android ou através da aplicação Android Intune. O dispositivo que tenha a chave de recuperação pessoal deve ser matriculado com Intune e encriptado com fileVault através de Intune. Utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android, a aplicação Android Intune ou o website Do Portal da Empresa, o utilizador final pode ver a chave de recuperação **do FileVault** necessária para aceder aos seus dispositivos Mac. Os utilizadores **finais** podem selecionar Dispositivos > *dispositivo macOS encriptado e inscrito* > Obter a chave de **recuperação**. O navegador mostrará o Portal da Empresa Web e exibirá a chave de recuperação. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Encriptação BitLocker para Windows 10
 
