@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge baseline settings (Definições de linha de base do Microsoft Edge)
               href: security-baseline-settings-edge.md
+        - name: Antivirus policy settings (Definições de política de antivírus)
+          items:
+            - name: macOS Defender Antivirus settings (Definições do Antivírus do Defender para macOS)
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender Antivirus settings (Definições do Antivírus do Microsoft Defender para Windows 10)
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows update settings (Definições do Windows Update)
           href: windows-update-settings.md
         - name: Definições de políticas de conformidade – Android
