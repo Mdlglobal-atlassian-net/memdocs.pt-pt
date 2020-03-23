@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dec3087ea4dab1e79cf85d43bdea0d18b13f17ff
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325417"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117335"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Programa de registo de aparelho da Apple
 
@@ -85,7 +85,7 @@ Usa o portal Apple Business Manager ou apple school manager para criar um símbo
 
    ![Captura de ecrã a mostrar o painel Token do Programa de Inscrição, na área de trabalho Certificados da Apple, para transferir a chave pública.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Selecione **Transferir a chave pública** para transferir e guardar o ficheiro da chave de encriptação (.pem) localmente. O ficheiro .pem é utilizado para pedir um certificado de relação de confiança a partir do portal do Programa de Inscrição de Dispositivos da Apple.
+3. Selecione **Transferir a chave pública** para transferir e guardar o ficheiro da chave de encriptação (.pem) localmente. O ficheiro .pem é utilizado para pedir um certificado de relação de confiança a partir do portal do Programa de Registo de Aparelho da Apple.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Passo 2: Utilize a sua chave para transferir um token a partir da Apple.
@@ -110,7 +110,7 @@ Usa o portal Apple Business Manager ou apple school manager para criar um símbo
 
    No portal da Apple, vá a Programas de **Implementação** &gt; Programa de **Inscrição de Dispositivos** &gt; **ver o Histórico** de Atribuição para ver uma lista de dispositivos e a sua atribuição de servidores MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Passo 3. Guarde o Apple ID que serviu para criar este token.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Passo 3: Guarde o Apple ID que serviu para criar este token.
 
 No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)forneça o Apple ID para referência futura.
 
@@ -204,7 +204,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 15. Na página de personalização do Assistente de **Configuração,** configure as seguintes definições de perfil: ![Configuração assistente de configuração.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Definições do departamento | Descrição |
+    | Definições do departamento | Description |
     |---|---|
     | <strong>Nome do Departamento</strong> | É apresentado quando os utilizadores tocam em <strong>Acerca da Configuração</strong> durante a ativação. |
     |    <strong>Número de Telefone do Departamento</strong>     | Aparece quando o utilizador clica no botão <strong>Preciso de Ajuda</strong> durante a ativação. |
@@ -278,6 +278,10 @@ Ativou a gestão e sincronização entre a Apple e o Intune e atribuiu um perfil
 Consulte [Inscrever o seu dispositivo iOS/iPadOS em Sintonia com o Programa de Inscrição de Dispositivos](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>Renovar um token de DEP  
+
+> [!NOTE]
+> Além de renovar o seu token DEP anualmente, terá de renovar o seu programa de inscrição token dentro de Intune e Apple Business Manager quando a palavra-passe do Apple ID gerida mudar para o utilizador que configura o token no Apple business Manager ou que o utilizador deixa o seu Organização Apple Business Manager.
+
 1. Aceda a deploy.apple.com.  
 2. Em **Gerir Servidores**, selecione o servidor de MDM associado ao ficheiro de token que pretende renovar.
 3. Selecione **Gerar Novo Token**.

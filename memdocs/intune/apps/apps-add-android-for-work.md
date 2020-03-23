@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083401"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117284"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -33,7 +33,7 @@ Para facilitar a configuração e utilização da gestão do Android Enterprise,
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Usado para Android Enterprise cenários totalmente geridos. Esta aplicação é automaticamente instalada em dispositivos totalmente geridos durante o processo de inscrição do dispositivo.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Ajuda-o a iniciar sessão nas suas contas se utilizar a verificação de dois fatores. Esta aplicação é automaticamente instalada em dispositivos totalmente geridos durante o processo de inscrição do dispositivo.
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Usado para políticas de proteção de aplicações (APP) e cenários de perfil de trabalho Android Enterprise.
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Usado para políticas de proteção de aplicações (APP) e cenários de perfil de trabalho Android Enterprise. Esta aplicação é automaticamente instalada em dispositivos totalmente geridos durante o processo de inscrição do dispositivo.
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Usado para Android Enterprise dedicado cenários de quiosque multi-app. Os administradores de TI devem criar uma atribuição para instalar esta aplicação em dispositivos dedicados que serão usados em cenários de quiosque de várias aplicações.
 
 >[!NOTE]
@@ -197,7 +197,7 @@ Os [dispositivos totalmente geridos do Android Enterprise](../enrollment/android
 Por predefinição, um dispositivo totalmente gerido do Android Enterprise não permitirá que os funcionários instalem quaisquer aplicações que não sejam aprovadas pela organização. Além disso, os funcionários não poderão remover quaisquer aplicações instaladas que poderia ir contra a política. Se quiser permitir que os utilizadores acedam à Google Play Store completa para instalarem aplicações, em vez de terem acesso apenas a aplicações aprovadas na loja do Managed Google Play, poderá definir **Permitir o acesso a todas as aplicações na Google Play Store** como **Permitir**. Com esta definição, o utilizador pode aceder a todas as aplicações na Google Play Store com a conta empresarial, mas as compras podem ser limitadas. Pode remover a restrição de compras limitadas ao permitir que os utilizadores adicionem novas contas ao dispositivo. Se o fizer, permitirá que os utilizadores finais possam comprar aplicações na Google Play Store com as contas pessoais, bem como efetuar compras na aplicação. Para obter mais informações, veja [Definições de dispositivos Android Enterprise para permitir ou restringir funcionalidades com o Intune](../configuration/device-restrictions-android-for-work.md). 
 
 > [!NOTE]
-> A aplicação do Microsoft Intune e a aplicação do Microsoft Authenticator serão instaladas como aplicações necessárias em todos os dispositivos totalmente geridos durante a integração. Ter estas aplicações instaladas automaticamente fornece suporte de Acesso Condicional, e os utilizadores de aplicações Microsoft Intune podem ver e resolver problemas de conformidade. 
+> A aplicação Microsoft Intune, a aplicação Microsoft Authenticator e a aplicação Portal da Empresa serão instaladas conforme as aplicações necessárias em todos os dispositivos totalmente geridos durante o embarque. Ter estas aplicações instaladas automaticamente fornece suporte de Acesso Condicional, e os utilizadores de aplicações Microsoft Intune podem ver e resolver problemas de conformidade. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Gerir permissões de aplicações do Android Enterprise
 O Android Enterprise necessita que aprove as aplicações na consola Web do Managed Google Play para as poder sincronizar com o Intune e as atribuir aos utilizadores. Uma vez que o Android Enterprise lhe permite transferir automática e silenciosamente estas aplicações para os dispositivos dos utilizadores, tem de aceitar as permissões das aplicações em nome de todos os utilizadores. Os utilizadores não veem as permissões das aplicações durante a instalação das aplicações, pelo que é importante que compreenda as permissões.
