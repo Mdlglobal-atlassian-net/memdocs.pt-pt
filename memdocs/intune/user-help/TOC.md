@@ -68,7 +68,7 @@
 ### Inscrever o dispositivo
 #### [Inscrever o seu dispositivo iOS](enroll-your-device-in-intune-ios.md)
 #### [Inscrever um dispositivo iOS fornecido pela organização](enroll-your-device-dep-ios.md)
-#### Enroll with derived credentials (Inscrever com credenciais derivadas)
+#### Inscrever com credenciais derivadas
 ##### [Enroll with Entrust Datacard (Inscrever com o Entrust Datacard)](enroll-ios-device-entrust-datacard.md)
 ##### [Enroll with Intercede (Inscrever com o Intercede)](enroll-ios-device-intercede.md)
 ##### [Enroll with DISA Purebred (Inscrever com o DISA Purebred)](enroll-ios-device-disa-purebred.md)
