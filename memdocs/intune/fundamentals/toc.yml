@@ -282,5 +282,5 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Erros comuns da proteção de pontos finais
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Documentação para utilizadores finais do Intune
-      href: /user-help/use-managed-devices-to-get-work-done
+    - name: Intune end-user documentation (Documentação para utilizadores finais do Intune)
+      href: ../user-help/use-managed-devices-to-get-work-done.md
