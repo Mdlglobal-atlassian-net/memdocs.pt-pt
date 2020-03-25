@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94916362fd9c2fd8dfdfdc3f586940d108cdabae
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083686"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233525"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Como criar e atribuir políticas de proteção de aplicações
 
@@ -58,7 +58,7 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 
     O valor da **Plataforma** é definido com base na sua escolha acima.
 
-    ![Screenshot da página Basics do painel de política Criar](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Screenshot da página Basics do painel de política Criar](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Clique em **Seguir** para exibir a página **apps.**<br>
     A página **Apps** permite-lhe escolher como pretende aplicar esta política a aplicações em diferentes dispositivos. Deve adicionar pelo menos uma aplicação.<p>

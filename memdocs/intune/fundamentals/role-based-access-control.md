@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b01f9444cf70c447c916d3d0a550a8cf46efc28a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220171"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Controlo de acesso baseado em funções (RBAC) com microsoft Intune
 
@@ -72,10 +72,6 @@ Pode criar os seus próprios papéis com permissões personalizadas. Para mais i
 
 > [!TIP]
 > Intune também mostra três extensões Azure AD: **Utilizadores**, **Grupos**, e **Acesso Condicional**, que são controlados usando O Azure AD RBAC. Além disso, o **Administrador da Conta de Utilizador** só executa as atividades do utilizador/grupo do AAD e não tem permissões completas para executar todas as atividades no Intune. Para mais informações, consulte [RBAC com Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
-### <a name="roles-created-in-the-intune-classic-portal"></a>Funções criadas no portal clássico do Intune
-Apenas os utilizadores **Administradores de Serviços** do Intune com permissões “Completas” são migrados do portal clássico do Intune para o Intune no portal do Azure. Deve reatribuir os utilizadores de Administradores de **Serviço** Intune com acesso "Read-Only" ou "Helpdesk" às funções Intune no portal Azure e removê-los do portal clássico.
-> [!IMPORTANT]
-> Poderá ter de manter o acesso do Administrador de Serviço Intune no portal clássico se os seus administradores ainda precisarem de acesso para gerir computadores usando o Intune.
 
 ## <a name="role-assignments"></a>Atribuições de funções
 Uma atribuição de funções define:

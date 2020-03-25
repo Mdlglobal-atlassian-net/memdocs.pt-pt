@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235fabd5f184117e680c44b87e5eab4334596e1c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219882"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Utilize as definições do Canal de Atualização e da Versão target para atualizar o Office 365 com modelos administrativos intune da Microsoft
 
@@ -39,13 +39,15 @@ Aplica-se a:
 
 Certifique-se de [ativar as Atualizações Automáticas Do Office365 ProPlus](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) para as suas aplicações do Office. Pode fazê-lo usando a política de grupo, ou o modelo INTune Office 2016 ADMX:
 
-![No modelo administrativo intune, defina a definição de atualizações automáticas ativas para o Office](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> ![intune modelo administrativo, defina a definição de atualizações automáticas ativadas para o Office](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Defina o Canal de Atualização no modelo administrativo Intune
 
-1. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-a-template)vá à definição do **Canal de Atualização** e introduza o canal que deseja. Por exemplo, escolha `Semi-Annual Channel`:
+1. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-the-template)vá à definição do **Canal de Atualização** e introduza o canal que deseja. Por exemplo, escolha `Semi-Annual Channel`:
 
-    ![No modelo administrativo intune, defina a definição do Canal de Atualização para o Office](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![No modelo administrativo intune, defina a definição do Canal de Atualização para o Office](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > É aconselhável atualizar com mais frequência. Semi-anualmente só é usado como exemplo.
@@ -72,7 +74,8 @@ Depois de atribuir a apólice e os sincronizados do dispositivo, pode confirmar 
 
     Olhando para o exemplo seguinte, vê-se `L_UpdateBranch` tem um valor semelhante ao `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`. Este valor significa que está definido para o Canal Semi-Anual:
 
-    ![Modelo administrativo L_Updatebranch exemplo chave do registo](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![modelo administrativo L_Updatebranch exemplo de exemplo de registo](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > Gerir o [Office 365 ProPlus com O Gestor](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) de Configuração lista os valores e o que significam. Os valores do registo baseiam-se no canal de distribuição selecionado:
@@ -99,7 +102,8 @@ Neste momento, a política Intune é aplicada com sucesso ao dispositivo.
 
     Olhando para o seguinte exemplo, vê-se `UpdateChannel` está definido para `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, que é **mensalmente:**
 
-    ![Modelo administrativo Office UpdateChannel exemplo de chave de registo](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![modelo administrativo de registo do Office UpdateChannel exemplo](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Este exemplo significa que a política ainda não foi aplicada, uma vez que ainda está definida para **mensalmente**, em vez de **semi-anual**.
 
@@ -120,7 +124,8 @@ Para testar a sua política, pode forçar as definições de política no dispos
     2. Expandir a Biblioteca do Programador de **Tarefas** > **Microsoft** > **Office**.
     3. Selecione **Atualizações Automáticas de Escritório 2.0** > **Executar:**
 
-        ![Agenda de tarefas abertas e executar atualizações automáticas do Office](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![Agenda de Tarefas Abertas e executar atualizações automáticas do Office](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Aguarde a tarefa para terminar, o que pode levar alguns minutos.
 
@@ -138,11 +143,12 @@ Se quiser fazer mais, pode forçar o Office a obter a mais recente atualização
 
 1. Confirme que a versão do Office suporta o canal de atualização que está a escolher. [Atualizar o histórico para o Office 365 ProPlus](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) lista os números de construção que suportam os diferentes canais de atualização.
 
-2. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-a-template)vá à definição da **Versão Target** e introduza a versão pretendida.
+2. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-the-template)vá à definição da **Versão Target** e introduza a versão pretendida.
 
     A definição da **versão Target** é semelhante à seguinte definição:
 
-    ![No modelo administrativo intune, defina a definição de versão-alvo para o Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![No modelo administrativo intune, defina a definição de versão-alvo para o Office](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ Considere utilizar estes passos para testar a sua política antes de implementar
       1. No aparelho, vá para `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`.
       2. Abra o ficheiro `VersionDescriptor.xml` e vá para a secção `<Version>`. A versão disponível deve ser a mesma versão que inscreveu na política Intune, tais como:
 
-          ![Verifique a secção de versão no ficheiro descritor do Office XML](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![Verifique a secção de versão na versão do descritor Office XML ficheiro](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. Após a instalação da atualização, a aplicação do Office deve mostrar a nova versão (por exemplo, no menu **Conta)**
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220256"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Enviar notificações personalizadas em Intune
 
@@ -73,7 +73,6 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 - Para criar uma mensagem, utilize uma conta que seja atribuída uma função Intune que inclua a permissão correta, conforme descrito na secção *Permissões* anteriores. Para atribuir permissões a um utilizador, consulte [as atribuições](../fundamentals/role-based-access-control.md#role-assignments)de role .
 - As notificações personalizadas estão limitadas a títulos de 50 caracteres e mensagens de 500 caracteres.  
 - Intune não guarda texto de notificações personalizadas previamente enviadas. Para reenviar uma mensagem, tem de recriar essa mensagem.  
-- Só pode enviar até 25 mensagens para grupos por hora. Esta restrição está ao nível dos inquilinos. Esta limitação não se aplica no envio de notificações para dispositivos individuais.
 - Só pode enviar até 25 mensagens para grupos por hora. Esta restrição está ao nível dos inquilinos. Esta limitação não se aplica no envio de notificações a indivíduos.
 - Ao enviar mensagens para dispositivos individuais, só pode enviar até 10 mensagens por hora para o mesmo dispositivo.
 - Pode enviar notificações aos utilizadores em grupos. Ao enviar notificações a grupos, cada notificação pode direcionar diretamente até 25 grupos. Grupos aninhados não contam contra este total. Ao enviar uma notificação a um grupo, as mensagens visam apenas os utilizadores do grupo e são enviadas para cada dispositivo iOS/iPadOS ou Android que o utilizador tenha registado. Os dispositivos do grupo serão ignorados quando visarem a notificação.

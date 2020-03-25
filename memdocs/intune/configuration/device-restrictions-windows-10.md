@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de11883a852bab3b0e47153c96ad718699dcfcec
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220103"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para permitir ou restringir funcionalidades usando Intune
 
@@ -888,7 +888,7 @@ Estas definições utilizam a [política de defensores CSP](https://docs.microso
   
   - **Limpar**
   - **Quarentena**
-  - **Remover**
+  - **Remove**
   - **Permitir**
   - **Definido pelo utilizador**
   - **Bloquear**
@@ -898,10 +898,11 @@ Estas definições utilizam a [política de defensores CSP](https://docs.microso
   [Defender/AmeaçaSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Exclusões antivírus do Microsoft Defender
-Pode excluir certos ficheiros dos scans antivírus do Windows Defender modificando listas de exclusão. **Geralmente, não deve aplicar exclusões.** O Windows Defender Antivírus inclui uma série de exclusões automáticas baseadas em comportamentos conhecidos do sistema operativo e ficheiros de gestão típicos, tais como os utilizados na gestão de empresas, gestão de bases de dados e outros cenários e situações empresariais.
+
+Pode excluir certos ficheiros dos exames Antivírus do Microsoft Defender modificando listas de exclusão. **Geralmente, não deve aplicar exclusões.** O Microsoft Defender Antivirus inclui uma série de exclusões automáticas baseadas em comportamentos conhecidos do SO e ficheiros típicos de gestão, tais como os utilizados na gestão de empresas, gestão de bases de dados e outros cenários e situações empresariais.
 
 > [!WARNING]
-> **A definição de exclusões reduz a proteção oferecida pelo Antivírus Do Windows Defender**. Deve avaliar sempre os riscos associados à implementação de exclusões, e só deve excluir ficheiros que esteja confiante não serem maliciosos.
+> **A definição de exclusões reduz a proteção oferecida pelo Microsoft Defender Antivírus**. Avalie sempre os riscos associados à implementação de exclusões. Só exclua ficheiros que sabe que não são maliciosos.
 
 - **Ficheiros e pastas para excluir de digitalizações e proteção em tempo real**: Adiciona um ou mais ficheiros e pastas como **C:\Path** ou **%ProgramFiles%\Path\filename.exe** à lista de exclusões. Estes ficheiros e pastas não são incluídos em análises em tempo real ou agendadas.
 - **Extensões de ficheiros para excluir de digitalizações e proteção em tempo real**: Adicione uma ou mais extensões de ficheiros como **jpg** ou **txt** à lista de exclusões. Quaisquer ficheiros com estas extensões não estão incluídos em nenhum scans em tempo real ou programado.

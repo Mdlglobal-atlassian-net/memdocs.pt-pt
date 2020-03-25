@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220120"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos do Android Enterprise para permitir ou restringir funcionalidades com o Intune
 
@@ -178,10 +178,10 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   - **Predefinição do dispositivo**
   - **Palavra-passe obrigatória, sem restrições**
   - **Biométrico fraco**: [Biometria forte vs. biométrico fraco](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre o site do Android)
-  - **Numérico:** A palavra-passe só deve ser números, como `123456789`. Introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
-  - **Complexo numérico**: Números repetidos ou consecutivos, como "1111" ou "1234", não são permitidos. Introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
-  - **Alfabética:** São necessárias letras no alfabeto. Não são obrigatórios números nem símbolos. Introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
-  - **Alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos. Introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
+  - **Numérico:** A palavra-passe só deve ser números, como `123456789`. introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
+  - **Complexo numérico**: Números repetidos ou consecutivos, como "1111" ou "1234", não são permitidos. introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
+  - **Alfabética:** São necessárias letras no alfabeto. Não são obrigatórios números nem símbolos. introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
+  - **Alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos. introduza o **comprimento mínimo da palavra-passe** que um utilizador tem de introduzir, entre 4 e 16 carateres.
   - **Alfanumérico com símbolos**: Inclui letras maiúsculas, letras minúsculas, caracteres numéricos, marcas de pontuação e símbolos. Introduza também:
 
     - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, entre 4 e 16 caracteres.
@@ -316,7 +316,7 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 - **Comprimento mínimo da palavra-passe**: introduza o número mínimo de carateres que a palavra-passe do utilizador tem de ter, de **4**-**16**.
 - **Máximo de minutos de inatividade até ao bloqueio do perfil de trabalho**: selecione a quantidade de tempo antes de o perfil de trabalho ser bloqueado. Em seguida, o utilizador tem de introduzir as credenciais para recuperar o acesso.
 - **Número de falhas de início de sessão antes de limpar o dispositivo**: introduza o número de vezes que uma palavra-passe incorreta pode ser introduzida antes de o perfil de trabalho do dispositivo ser eliminado.
-- **Expiração da palavra-passe (dias)** : introduza o número de dias até ser preciso alterar a palavra-passe do utilizador final (**1**-**255**).
+- **Expiração da palavra-passe (dias)** : Introduza o número de dias até que a palavra-passe de um utilizador final seja alterada (de **1**-**365**).
 - **Tipo de palavra-passe necessária**: selecione o tipo de palavra-passe que tem de ser definido no dispositivo. Escolha entre:
   - **Predefinição do dispositivo**
   - **Biométrica de segurança baixa**
@@ -337,7 +337,7 @@ Estas definições de palavra-passe aplicam-se aos perfis pessoais nos dispositi
 - **Comprimento mínimo da palavra-passe**: introduza o número mínimo de carateres que a palavra-passe do utilizador tem de ter, de **4**-**14**.
 - **Máximo de minutos de inatividade até o ecrã ser bloqueado**: selecione a quantidade de tempo antes de um dispositivo inativo ser automaticamente bloqueado
 - **Número de falhas de início de sessão antes de limpar o dispositivo**: introduza o número de vezes que uma palavra-passe incorreta pode ser introduzida antes de o perfil de trabalho do dispositivo ser eliminado.
-- **Expiração da palavra-passe (dias)** : introduza o número de dias até ser preciso alterar a palavra-passe do utilizador final (**1**-**255**)
+- **Expiração da palavra-passe (dias)** : Introduza o número de dias até que a palavra-passe de um utilizador final seja alterada (de **1**-**365**)
 - **Tipo de palavra-passe necessária**: selecione o tipo de palavra-passe que tem de ser definido no dispositivo. Escolha entre:
   - **Predefinição do dispositivo**
   - **Biométrica de segurança baixa**

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326353"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233452"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos geridos iOS/iPadOS
 
@@ -106,7 +106,7 @@ Os carateres \{\{ e \}\} são utilizados apenas por tipos de token e não devem 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir apenas contas de organização configuradas nas aplicações de várias identidades 
 
-Para dispositivos iOS/iPadOS, utilize os seguintes pares chave/valor:
+Como administrador da Microsoft Intune, pode controlar quais as contas de utilizador adicionadas às aplicações da Microsoft em dispositivos geridos. Pode limitar o acesso exclusivamente a contas de utilizadores autorizadas e bloquear contas pessoais em dispositivos inscritos. Para dispositivos iOS/iPadOS, utilize os seguintes pares chave/valor:
 
 | **Chave** | **Valores** |
 |----|----|
@@ -114,7 +114,10 @@ Para dispositivos iOS/iPadOS, utilize os seguintes pares chave/valor:
 | IntuneMAMUPN | <ul><li>UPN da conta permitida para assinar na app.</li><li> Para os dispositivos inscritos no Intune, o token <code>{{userprincipalname}}</code> pode ser utilizado para representar a conta de utilizador inscrito.</li></ul>  |
 
    > [!NOTE]
-   > Deve utilizar o OneDrive para iOS 10.34 ou mais tarde, Outlook para iOS 2.99.0 ou mais tarde ou Edge para iOS 44.8.7 ou posterior e a aplicação deve ser direcionada com políticas de proteção de [aplicações Intune](app-protection-policy.md) ao permitir apenas contas de organização configuradas com identidade múltipla.
+   > As seguintes aplicações processam a configuração da aplicação acima e apenas permitem contas de organização:
+   > - Borda para iOS (44.8.7 e mais tarde)
+   > - OneDrive para iOS (10.34 e mais tarde)
+   > - Perspetivas para (iOS 2.99.0 ou posterior)
 
 ## <a name="enter-xml-data"></a>Introduzir dados XML
 

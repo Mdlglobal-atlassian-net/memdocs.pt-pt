@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219848"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Impor a conformidade em Macs geridos com o Jamf Pro
 
@@ -41,7 +41,10 @@ Os procedimentos deste artigo requerem acesso às consolas Intune e Jamf Pro.
 
 2. Selecione **Dispositivos** > políticas de **conformidade**. Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
 
-3. Sobre as políticas *Painel de visão geral,* selecione **Atribuições**. Utilize as opções disponíveis para configurar quais os utilizadores e grupos de segurança do Azure Ative Directory (Azure AD) que recebem esta política. A integração do Jamf com a Intune não suporta a política de conformidade que visa grupos de dispositivos.
+3. Sobre as políticas *Painel de visão geral,* selecione **Atribuições**. Utilize as opções disponíveis para configurar quais os utilizadores e grupos de segurança do Azure Ative Directory (Azure AD) que recebem esta política. **A integração do Jamf com a Intune não suporta a política de conformidade que visa grupos de dispositivos.**
+
+> [!NOTE]
+> A integração do Jamf com a Intune apenas suporta grupos de utilizadores AAD. As políticas de conformidade do dispositivo que são direcionadas aos grupos de dispositivos não se aplicarão.
 
 4. Quando selecionar **Save**, a política é implementada para os utilizadores.  
 

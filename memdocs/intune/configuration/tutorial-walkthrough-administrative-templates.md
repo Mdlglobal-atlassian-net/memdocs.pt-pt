@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326613"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220235"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Use a nuvem para configurar a política de grupo em dispositivos Windows 10 com modelos ADMX e Microsoft Intune
 
@@ -101,7 +101,7 @@ Esta funcionalidade aplica-se a:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Abra o centro de administração do Endpoint Manager
 
 1. Abra um navegador web de crómio, como a versão 77 do Microsoft Edge e mais tarde.
-2. Vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Inscreva-se com a seguinte conta:
+2. Vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Inscreva-se com a seguinte conta:
 
     **Utilizador**: Insira a conta de administrador da sua subscrição de inquilino Microsoft 365.  
     **Palavra-passe**: Introduza a sua palavra-passe.
@@ -111,7 +111,7 @@ Este centro de administração está focado na gestão de dispositivos, e inclui
 Também pode abrir o centro de administração endpoint manager do centro de administração Microsoft [365:](https://admin.microsoft.com)
 
 1. Vai para [https://admin.microsoft.com. ](https://admin.microsoft.com)
-2. Inscreva-se na sua conta de administrador da sua subscrição de inquilino Microsoft 365.
+2. Inscreva-se na conta de administrador da sua subscrição de inquilino Microsoft 365.
 3. Sob **os centros de Administração**, selecione Todos os centros de **administração** > **gestão endpoint.** O centro de administração do Endpoint Manager abre.
 
     > [!div class="mx-imgBorder"]
@@ -146,7 +146,7 @@ Nestes próximos passos, você vai criar grupos de segurança, e adicionar utili
     - **Tipo de grupo**: Selecione **Segurança**.
     - **Nome do grupo**: Introduza **todos os dispositivos Windows**.
     - **Tipo de membro**: Selecione **Dispositivo Dinâmico**.
-    - **Membros dinâmicos do dispositivo**: Configure a sua consulta:
+    - **Membros do dispositivo dinâmico**: Selecione **Adicionar consulta dinâmica,** e configurar a sua consulta:
 
         - **Propriedade**: Selecione **dispositivoOSType**.
         - **Operador**: Selecione **Iguais**.
@@ -166,7 +166,7 @@ Nestes próximos passos, você vai criar grupos de segurança, e adicionar utili
     - **Tipo de grupo**: Selecione **Segurança**.
     - **Nome do grupo**: Insira **Todos os Professores**.
     - **Tipo de membro**: Selecione **Utilizador Dinâmico**.
-    - **Membros dinâmicos do utilizador**: Configure a sua consulta:
+    - **Membros dinâmicos do utilizador**: Selecione **Adicionar consulta dinâmica,** e configurar a sua consulta:
 
       - **Propriedade**: Selecione **departamento**.
       - **Operador**: Selecione **Iguais**.
@@ -225,12 +225,17 @@ Nesta secção, criamos um modelo administrativo em Intune, olhamos para algumas
 1. No centro de administração do Endpoint Manager, selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 2. Introduza as seguintes propriedades:
 
+    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+    - **Perfil**: Selecionar **modelos administrativos**.
+
+3. Selecione **Criar**.
+4. No Básico, insira as **seguintes**propriedades:
+
     - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, introduza o **modelo De Administrador - Dispositivos estudantis do Windows 10**.
     - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil**: Selecionar **modelos administrativos**.
 
-3. Selecione **Criar**. Na lista **de descidas de categoria Select,** selecione **Todos os produtos**. Todas as definições são mostradas. Nestas definições, note as seguintes propriedades:
+5. Selecione **Seguinte**.
+6. Nas definições de **Configuração**, na lista de drop-down, selecione **Todos os produtos**. Todas as definições são mostradas. Nestas definições, note as seguintes propriedades:
 
     - O **Caminho** para a política é o mesmo que a Gestão de Políticas de Grupo ou O GPEdit.
     - A definição aplica-se aos utilizadores ou dispositivos.
@@ -263,7 +268,7 @@ Nesta secção, mostramos uma política em Intune e a sua política de correspon
     > [!div class="mx-imgBorder"]
     > ![Consulte as opções de definição de configuração do Computador na política do grupo](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. No centro de gestão de dispositivos, vá ao seu modelo de Administrador - modelo de **dispositivos estudantis do Windows 10.**
+5. No centro de administração do Endpoint Manager, vá ao seu **modelo de dispositivos de estudante do Windows 10.**
 6. Selecione **todos os produtos** da lista de drop-down e procure **personalização:**
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ Nesta secção, mostramos uma política em Intune e a sua política de correspon
 
 #### <a name="compare-an-edge-policy"></a>Compare uma política edge
 
-1. No centro de gestão de dispositivos, vá ao seu modelo de Administrador - modelo de **dispositivos estudantis do Windows 10.**
+1. No centro de administração do Endpoint Manager, vá ao seu **modelo de dispositivos de estudante do Windows 10.**
 2. Selecione **versão Edge 77 e, mais tarde,** a partir da lista de lançamentos.
 3. Pesquisa por **arranque.** Repare nas definições disponíveis.
 4. No Editor de Gestão de Políticas do Grupo, encontre estas definições:
@@ -338,17 +343,16 @@ Neste modelo, configuramos algumas definições do Internet Explorer para bloque
 
 ### <a name="assign-your-template"></a>Atribuir o seu modelo
 
-1. No seu modelo, selecione **Atribuições**. Pode ter de fechar o seu modelo e, em seguida, selecioná-lo a partir da lista de perfis de **configuração - Configuração:**
+1. No seu modelo, selecione **Atribuições** > **Selecionar grupos para incluir:**
 
     > [!div class="mx-imgBorder"]
     > ![Selecione o seu perfil de modelo administrativo na lista de perfis de configuração do dispositivo no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. Escolha **Selecionar grupos para incluir**. É apresentada uma lista de utilizadores e grupos existentes.
-3. Selecione o grupo de **dispositivos estudantis All Windows 10** que criou anteriormente > **Selecione**.
+2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo de **dispositivos estudantis All Windows 10** que criou anteriormente > **Selecione**.
 
     Se você está usando este tutorial em um ambiente de produção, então considere adicionar grupos que estão vazios. O objetivo é praticar a atribuição do seu modelo.
 
-4. **Guarde** as suas alterações.
+3. Selecione **Next** to the **Review + crie** o separador. Selecione **Criar** para guardar as suas alterações.
 
 Assim que o perfil é guardado, aplica-se aos dispositivos quando fazem o check-in com o Intune. Se os dispositivos estiverem ligados à internet, pode acontecer imediatamente. Para obter mais informações sobre os tempos de atualização da política, veja quanto tempo leva para os [dispositivos obterem uma política, perfil ou app depois](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)de atribuídos .
 
@@ -366,14 +370,17 @@ Nesta secção, cria-se um modelo de administração OneDrive In Intune para con
 
 2. Introduza as seguintes propriedades:
 
-    - **Nome**: Introduza **o modelo De Administrador - As políticas OneDrive que se aplicam a todos os utilizadores do Windows 10**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil**: Selecionar **modelos administrativos**.
+    - **Perfil**: Selecione **modelos administrativos**.
 
 3. Selecione **Criar**.
-4. Selecione **Office** da lista de lançamentos.
-5. **Ativar** as seguintes definições. Certifique-se de que seleciona **OK** para guardar as suas alterações.
+4. No Básico, insira as **seguintes**propriedades:
+
+    - **Nome**: Introduza **o modelo De Administrador - As políticas OneDrive que se aplicam a todos os utilizadores do Windows 10**.
+    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+
+5. Selecione **Seguinte**.
+6. Nas definições de **Configuração,** selecione **Office** da lista de drop-down. **Ativar** as seguintes definições. Certifique-se de que seleciona **OK** para guardar as suas alterações.
 
     - **Inscreva-se silenciosamente nos utilizadores do cliente sincronizado OneDrive com as suas credenciais Windows**
     - **Use ficheiros OneDrive a pedido**
@@ -388,13 +395,12 @@ Para obter mais informações sobre as definições do cliente OneDrive, consult
 
 ### <a name="assign-your-template"></a>Atribuir o seu modelo
 
-1. No seu modelo, selecione **Atribuições**.
-2. Escolha **Selecionar grupos para incluir**. É apresentada uma lista de utilizadores e grupos existentes.
-3. Selecione o grupo **de dispositivos All Windows** que criou anteriormente > **Selecione**.
+1. No seu modelo, selecione **Atribuições** > **Selecione grupos para incluir**
+2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo **de dispositivos All Windows** que criou anteriormente > **Selecione**.
 
     Se você está usando este tutorial em um ambiente de produção, então considere adicionar grupos que estão vazios. O objetivo é praticar a atribuição do seu modelo.
 
-4. **Guarde** as suas alterações.
+3. Selecione **Next** to the **Review + crie** o separador. Selecione **Criar** para guardar as suas alterações.
 
 Neste ponto, criou alguns modelos administrativos e atribuiu-os a grupos que criou. O próximo passo é criar um modelo administrativo utilizando o Windows PowerShell e o Microsoft Graph API para Intune.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c567cdeb6cd4e91d40068ba642be4f3838e41d3f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330105"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233483"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune é um fornecedor de MDM e MAM para os seus dispositivos
 
@@ -107,7 +107,7 @@ Intune é usado em muitos setores, incluindo [governo](https://docs.microsoft.co
 
 ## <a name="next-steps"></a>Próximos passos
 
-- Leia alguns dos [problemas comerciais comuns que Intune ajuda a resolver.](https://docs.microsoft.com/intune/common-scenarios)
+- Leia alguns dos [problemas comerciais comuns que Intune ajuda a resolver.](common-scenarios.md)
 - Comece com um [julgamento de 30 dias de Intune.](free-trial-sign-up.md)
 - Planeie a sua [migração para Intune.](migration-guide.md)
 - Utilizando o seu teste ou subscrição gratuitos, passe pelo [Quickstart: Crie um perfil de dispositivo de e-mail para iOS](../configuration/quickstart-email-profile.md).

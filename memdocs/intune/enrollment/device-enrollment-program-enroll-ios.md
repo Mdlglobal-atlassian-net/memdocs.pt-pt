@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec3087ea4dab1e79cf85d43bdea0d18b13f17ff
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117335"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220205"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Programa de registo de aparelho da Apple
 
@@ -110,7 +110,7 @@ Usa o portal Apple Business Manager ou apple school manager para criar um símbo
 
    No portal da Apple, vá a Programas de **Implementação** &gt; Programa de **Inscrição de Dispositivos** &gt; **ver o Histórico** de Atribuição para ver uma lista de dispositivos e a sua atribuição de servidores MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Passo 3: Guarde o Apple ID que serviu para criar este token.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Passo 3. Guarde o Apple ID que serviu para criar este token.
 
 No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)forneça o Apple ID para referência futura.
 
@@ -194,6 +194,9 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 10. Escolha se quer a inscrição bloqueada para os dispositivos com este perfil. **A inscrição bloqueada** desativa as definições do iOS/iPadOS que permitem remover o perfil de gestão do menu **Definições.** Após a inscrição de dispositivos, não poderá alterar esta definição sem apagar os dados do dispositivo. Esses dispositivos têm de ter o Modo de Gestão **Supervisionado** definido como *Sim*. 
 
 11. Escolha se quer que os dispositivos com este perfil consigam **Sincronizar com computadores**. Se escolher **Permitir o Apple Configurator por certificado**, terá de escolher um certificado em **Certificados do Apple Configurator**.
+
+     > [!NOTE]
+     > Se o **Sync com computadores** estiver definido para **negar tudo,** a porta será limitada nos dispositivos iOS e iPadOS. A porta só pode ser utilizada para carregamento e nada mais. A porta será bloqueada de utilizar o iTunes ou o Apple Configurator.
 
 12. Se tiver escolhido **Permitir o Apple Configurator por certificado** no passo anterior, escolha um Certificado do Apple Configurator a importar.
 

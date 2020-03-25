@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d16d85beea637cf1e756e5068c0ed8d0106b2902
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083617"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233462"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos Android Enterprise geridos
 
@@ -94,7 +94,7 @@ Pode escolher as seguintes opções, se selecionar a variável como o tipo de va
 | Id do dispositivo AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | ID de conta | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | ID de Dispositivo do Intune | b9841cd9-9843-405f-be28-b2265c59ef97 |
-| Domain | contoso.com |
+| Domínio | contoso.com |
 | Correio | john@contoso.com |
 | UPN Parcial | joão |
 | ID de Utilizador | 3ec2c00f-b125-4519-acf0-302ac3761822 |
@@ -103,15 +103,18 @@ Pode escolher as seguintes opções, se selecionar a variável como o tipo de va
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir apenas contas de organização configuradas nas aplicações de várias identidades 
 
-Para os dispositivos Android, utilize os seguintes pares chave/valor:
+Como administrador da Microsoft Intune, pode controlar quais as contas de utilizador adicionadas às aplicações da Microsoft em dispositivos geridos. Pode limitar o acesso exclusivamente a contas de utilizadores autorizadas e bloquear contas pessoais em dispositivos inscritos. Para os dispositivos Android, utilize os seguintes pares chave/valor:
 
 | **Chave** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Valores** | <ul><li>Um ou mais UPNs delimitados por <code>;</code>.</li><li>Apenas conta(s) permitidas são as contas de utilizador geridas definidas por esta chave.</li><li> Para os dispositivos inscritos no Intune, o token <code>{{userprincipalname}}</code> pode ser utilizado para representar a conta de utilizador inscrito.</li></ul> |
 
    > [!NOTE]
-   > Você deve usar o Outlook para Android 2.2.222 e mais tarde, Office, Word, Excel, PowerPoint para Android 16.0.9327.1000 e mais tarde, ou OneDrive para Android 5.28 e mais tarde quando permitir apenas contas de organização configuradas com multiidentidade.<p></p>
-   > Como administrador da Microsoft Intune, pode controlar quais as contas de utilizador adicionadas às aplicações do Microsoft Office em dispositivos geridos. Pode limitar o acesso exclusivamente a contas de utilizadores autorizadas e bloquear contas pessoais em dispositivos inscritos. As aplicações de apoio processam a configuração da aplicação e removem e bloqueiam contas não aprovadas.<p></p>
+   > As seguintes aplicações processam a configuração da aplicação acima e apenas permitem contas de organização:
+   > - Borda para Android (42.0.4.4048 e mais tarde)
+   > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 e mais tarde)
+   > - OneDrive para Android (5.28 e mais tarde)
+   > - Perspetivas para Android (2.2.222 e mais tarde)
 
 ## <a name="enter-json-data"></a>Insira os dados da JSON
 

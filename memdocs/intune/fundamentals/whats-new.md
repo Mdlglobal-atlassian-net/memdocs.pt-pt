@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3712fbf575c8afc049c43f59a561c2651a9130e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220188"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -66,7 +66,7 @@ O painel de perfil do portal macOS e iOS company foi atualizado para incluir o b
 #### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-----"></a>Redirecione os web clips para o Microsoft Edge em dispositivos iOS<!-- 5455276   -->
 Os clips web recentemente implantados (aplicações web fixas) em dispositivos iOS que são necessários para abrir num navegador protegido, serão abertos no Microsoft Edge em vez do Navegador Gerido intune. Tem de redirecionar os web clips pré-existentes para garantir que se abrem no Microsoft Edge em vez do Navegador Gerido. Para mais informações, consulte Gerir o acesso à Web utilizando o Microsoft Edge com o [Microsoft Intune](../apps/manage-microsoft-edge.md) e [adicionar aplicações web ao Microsoft Intune](../apps/web-app.md).
 
-#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---473544----"></a>Utilize a ferramenta de diagnóstico Intune com o Microsoft Edge para Android<!-- 473544  -->
+#### <a name="use-the-intune-diagnostic-tool-with-microsoft-edge-for-android---4735244----"></a>Utilize a ferramenta de diagnóstico Intune com o Microsoft Edge para Android<!-- 4735244  -->
 O Microsoft Edge para Android está agora integrado com a ferramenta de diagnóstico Intune. Da mesma forma que a experiência no Microsoft Edge para iOS, a introdução de "cerca de:intunehelp" na barra de URL (a caixa de endereços) do Microsoft Edge no dispositivo iniciará a ferramenta de diagnóstico Intune. Esta ferramenta fornecerá registos detalhados. Os utilizadores podem ser guiados para recolher e enviar estes registos para o seu departamento de TI, ou ver registos de MAM para aplicações específicas.
 
 #### <a name="updates-to-intune-branding-and-customization---5236032----"></a>Atualizações para marca Intune e personalização<!-- 5236032  -->
@@ -89,6 +89,12 @@ Estas alterações serão lançadas numa base faseada ao longo do mês de março
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Configuração do dispositivo
 
+#### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nova experiência do utilizador ao criar modelos administrativos em dispositivos Windows<!--5096036 -->
+Com base no feedback do cliente, e na nossa mudança para a nova experiência de ecrã completo do Azure, reconstruímos a experiência de perfil dos Modelos Administrativos com uma visão de pasta. Não fizemos alterações a nenhuma definição ou perfis existentes. Então, os perfis existentes permanecerão os mesmos, e serão utilizáveis na nova visão. Ainda pode navegar em todas as opções de definições selecionando **Todas as Definições**e utilizando a procura. A vista para a árvore é dividida por configurações de computador e utilizador. Encontrará as definições de Windows, Office e Edge nas suas pastas associadas.  
+
+Aplica-se a:
+- Windows 10 e mais recente
+
 #### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>Perfis VPN com ligações VPN IKEv2 podem usar sempre com dispositivos iOS/iPadOS<!-- 1947932   -->
 Nos dispositivos iOS/iPadOS, pode criar um perfil VPN que utiliza uma ligação IKEv2 (**Dispositivos** > Perfis de **Configuração** > **Criar perfis** > **iOS/iPadOS** para plataforma > **VPN** para o tipo de perfil). Agora, pode configurar sempre com IKEv2. Quando configurados, os perfis VPN IKEv2 ligam-se automaticamente e mantêm-se ligados (ou reconectarem-se rapidamente) à VPN. Mantém-se ligado mesmo quando se desloca entre redes ou dispositivos de reinício.
 
@@ -104,10 +110,10 @@ Nos dispositivos Android Enterprise, cria e atualiza os perfis OEMConfig (**Disp
 
 Para obter mais informações sobre os perfis da OEMConfig, consulte [use e gerencie dispositivos Android Enterprise com OEMConfig no Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-Esta funcionalidade aplica-se a:
+Aplica-se a:
 - Android Enterprise
 
-#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---567534-----"></a>Configure a extensão da aplicação iOS/iPadOS Microsoft Azure AD SSO<!-- 567534   -->
+#### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>Configure a extensão da aplicação iOS/iPadOS Microsoft Azure AD SSO<!-- 5672534   -->
 A equipa da Microsoft Azure AD criou uma extensão de aplicação de inscrição única (SSO) para permitir aos utilizadores do iOS/iPadOS 13.0+ terem acesso a aplicações e websites da Microsoft com um único registo. Todas as aplicações que anteriormente tinham intermediado a autenticação com a aplicação Microsoft Authenticator continuarão a receber SSO com a nova extensão SSO. Com a versão da extensão da aplicação Azure AD SSO, pode configurar a extensão SSO com o tipo de extensão de aplicação SSO redirecionado (**Dispositivos** > Perfis de **configuração** > **Criar perfil** > **iOS/iPadOS** para as **funcionalidades** da plataforma > Dispositivo para o tipo de perfil > **extensão de aplicação de inscrição única).**
 
 Aplica-se a:
@@ -138,7 +144,7 @@ Adicionámos uma nova ação para dispositivos não conformes que pode adicionar
 
 As novas opções da Enterprise são como as que estão disponíveis para um perfil Wi-Fi Básico para iOS.
 
-#### <a name="new-user-experience-for-certificate-profiles---5615208-----"></a>Nova experiência do utilizador para perfis de certificado<!-- 5615208   -->
+#### <a name="new-user-experience-for-certificate-email-vpn-and-wi-fi-vpn-profiles---5615208-----"></a>Nova experiência de utilizador para certificado, e-mail, VPN e Wi-Fi, perfis VPN<!-- 5615208   -->
 Atualizámos a [experiência](../configuration/device-profile-create.md) do utilizador no Endpoint Management Admin Center (**Dispositivos** > Perfis de **Configuração** > **Criar perfil)** para criar e modificar os seguintes tipos de perfis. A nova experiência apresenta as mesmas definições de antes, mas usa uma experiência semelhante a um assistente que não requer tanto scrolling horizontal. Não terá de modificar as configurações existentes com a nova experiência.
 
 - Credencial derivada
