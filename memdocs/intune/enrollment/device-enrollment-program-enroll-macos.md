@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0bfd781740459821c6f0d65b3f5f1e12e0fc6b08
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332937"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256747"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Inscreva automaticamente dispositivos macOS com o Apple Business Manager ou Apple School Manager
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> A Apple mudou recentemente de utilização do Programa de Inscrição de Dispositivos da Apple (DEP) para a Apple Automated Device Registration (ADE). A Intune está em processo de atualização da interface de utilizador Intune para refletir isso. Até que tais alterações estejam completas, continuará a ver o Programa de Inscrição de *Dispositivos* no portal Intune. Onde quer que isso seja mostrado, agora utiliza inscrição automática de dispositivos.
 
 Pode configurar a inscrição intune para dispositivos macOS adquiridos através do [Apple Business Manager](https://business.apple.com/) ou apple school [manager](https://school.apple.com/). Pode utilizar qualquer uma destas inscrições para um grande número de dispositivos de forma remota. Pode enviar dispositivos macOS diretamente para os utilizadores. Quando o utilizador ativar o dispositivo, o Assistente de Configuração será executado com as predefinições configuradas e o dispositivo será inscrito na gestão do Intune.
 
@@ -50,9 +51,9 @@ Nem a inscrição do Apple Business Manager nem o Apple School Manager trabalham
 - [Autoridade MDM](../fundamentals/mdm-authority-set.md)
 - [Certificado Push de MDM da Apple](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Obter um token DEP da Apple
+## <a name="get-an-apple-ade-token"></a>Obtenha um símbolo Apple ADE
 
-Para poder inscrever dispositivos macOS no DEP ou no Apple School Manager, precisará de um ficheiro de token DEP (.p7m) da Apple. Este token permite ao Intune sincronizar informações sobre os dispositivos que são propriedade da sua organização. Também permite que o Intune carregue perfis de inscrição para a Apple e para estes perfis nos dispositivos.
+Antes de poder inscrever dispositivos macOS com ADE ou Apple School Manager, precisa de um ficheiro simbólico (.p7m) da Apple. Este token permite ao Intune sincronizar informações sobre os dispositivos que são propriedade da sua organização. Também permite que o Intune carregue perfis de inscrição para a Apple e para estes perfis nos dispositivos.
 
 Pode utilizar o portal da Apple para criar um token. Também pode utilizar o portal da Apple para atribuir dispositivos ao Intune para gestão.
 
@@ -103,7 +104,7 @@ Na caixa **Token da Apple**, procure o ficheiro de certificado (.pem), escolha *
 
 Agora que instalou o token, pode criar um perfil de inscrição para os dispositivos. Um perfil de inscrição de dispositivos especifica as definições aplicadas a um grupo de dispositivos durante a inscrição.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > macOS > fichas do programa de **inscrição** > de matrícula do **macOS** .
+1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > macOS > fichas do programa de **inscrição** > de matrícula do **macOS** . **macOS Enrollment**
 2. Selecione um token, escolha **Perfis** e, em seguida, escolha **Criar perfil**.
 
     ![Crie uma captura de ecrã de perfil.](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -115,7 +116,7 @@ Agora que instalou o token, pode criar um perfil de inscrição para os disposit
 4. Em **Plataforma**, selecione **macOS**.
 
 5. Em **Afinidade de Utilizador**, escolha se os dispositivos com este perfil têm ou não de ser inscritos com ou sem um utilizador atribuído.
-    - **Inscrever com Afinidade de Utilizador**: selecione esta opção para os dispositivos que pertençam aos utilizadores e que queiram utilizar a aplicação Portal da Empresa para serviços como a instalação de aplicações. Se estiver a utilizar o Sistema de Ficheiros Distribuído do Azure, a afinidade de utilizador precisa de um [Nome de utilizador/Ponto final misto WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Saiba mais](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). A autenticação multifator não é suportada para os dispositivos DEP de macOS com afinidade de utilizador.
+    - **Inscrever com Afinidade de Utilizador**: selecione esta opção para os dispositivos que pertençam aos utilizadores e que queiram utilizar a aplicação Portal da Empresa para serviços como a instalação de aplicações. Se estiver a utilizar o Sistema de Ficheiros Distribuído do Azure, a afinidade de utilizador precisa de um [Nome de utilizador/Ponto final misto WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Saiba mais.](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) A autenticação multifactor não é suportada para dispositivos MacOS ADE com afinidade do utilizador.
 
     - **Inscrever sem Afinidade do Utilizador** – escolha esta opção para dispositivos não associados a um único utilizador. Utilize esta opção para dispositivos que realizem tarefas sem aceder aos dados de utilizador locais. As aplicações, como o Portal da Empresa, não funcionam.
 
@@ -127,7 +128,7 @@ Agora que instalou o token, pode criar um perfil de inscrição para os disposit
 
 8. Selecione **Definições do Assistente de Configuração** para configurar as seguintes definições de perfil: ![Personalização do Assistente de Configuração.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
-    | Definições do departamento | Descrição |
+    | Definições do departamento | Description |
     |---|---|
     | <strong>Nome do Departamento</strong> | É apresentado quando os utilizadores tocam em <strong>Acerca da Configuração</strong> durante a ativação. |
     | <strong>Número de Telefone do Departamento</strong> | Aparece quando o utilizador clica no botão <strong>Preciso de Ajuda</strong> durante a ativação. |
@@ -168,7 +169,7 @@ Agora que o Intune tem permissão para gerir os seus dispositivos, pode sincroni
 1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **macOS** > **macOS Matricula** > Programa de **Inscrição** ; escolha um símbolo na lista > **Dispositivos** > **Sync**. ![Screenshot dos dispositivos do programa de inscrição, o nó selecionado e a ligação Sync a ser escolhida.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Para cumprir os termos da Apple para um tráfego aceitável do programa de inscrição, o Intune impõe as seguintes restrições:
-   - As sincronizações completas não podem ser executadas mais do que uma vez a cada sete dias. Durante uma sincronização completa, o Intune obtém a lista atualizada completa de números de série atribuídos ao servidor de MDM da Apple ligado ao Intune. Depois de um dispositivo do Programa de Registo ser eliminado do portal do Intune sem a inscrição no servidor de MDM da Apple ser anulada no portal de DEP, o mesmo não voltará a ser importado para o Intune até a sincronização completa ser executada.   
+   - As sincronizações completas não podem ser executadas mais do que uma vez a cada sete dias. Durante uma sincronização completa, o Intune obtém a lista atualizada completa de números de série atribuídos ao servidor de MDM da Apple ligado ao Intune. Depois de um dispositivo do Programa de Inscrição ser eliminado do portal Intune sem ser atribuído do servidor Apple MDM no portal da Apple, este não será reimportado para Intune até que a sincronização completa seja executada.   
    - É executa automaticamente uma sincronização a cada 24 horas. Também pode sincronizar ao clicar no botão **Sincronizar** (não mais do que uma vez a cada 15 minutos). Todos os pedidos de sincronização têm 15 minutos para serem concluídos. O botão **Sincronizar** está desativado até a sincronização ser concluída. Esta sincronização irá atualizar o estado do dispositivo existente e importar novos dispositivos atribuídos ao servidor de MDM da Apple.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Atribuir um perfil de inscrição a dispositivos
@@ -190,7 +191,7 @@ Pode escolher um perfil padrão de macOS e iOS/iPadOS a aplicar a todos os dispo
 
 Ativou a gestão e a sincronização entre a Apple e o Intune e atribuiu um perfil para permitir a inscrição dos dispositivos. Agora pode distribuir os dispositivos aos utilizadores. Os dispositivos com afinidade do utilizador necessitam que seja atribuída uma licença do Intune a cada utilizador. Os dispositivos sem afinidade do utilizador necessitam de uma licença de dispositivo. Um dispositivo ativado não poderá aplicar um perfil de inscrição até que os dados do mesmo sejam apagados.
 
-## <a name="renew-a-dep-token"></a>Renovar um token de DEP
+## <a name="renew-an-ade-token"></a>Renovar um símbolo da ADE
 
 1. Aceda a deploy.apple.com.  
 2. Em **Gerir Servidores**, selecione o servidor de MDM associado ao ficheiro de token que pretende renovar.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086119"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256458"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscreva dispositivos iOS/iPadOS em Intune
 
@@ -52,23 +52,23 @@ Depois de ter preenchido os pré-requisitos e as licenças de utilizador atribu�
 
 Para as organizações que compram dispositivos para os seus utilizadores, a Intune suporta os seguintes métodos de inscrição de dispositivos iOS/iPadOS:
 
-- Programa de Registo de Aparelho (DEP) da Apple
+- Inscrição automática de dispositivos da Apple (ADE)
 - Gestor Escolar da Apple
 - Inscrição do Assistente de Configuração do Apple Configurator
 - Inscrição direta no Apple Configurator
 
 Também pode inscrever dispositivos iOS/iPadOS da empresa com uma conta de gestor de [inscrição](device-enrollment-manager-enroll.md) de dispositivos.
 
-## <a name="device-enrollment-program"></a>Programa de Inscrição de Dispositivos
+## <a name="automated-device-enrollment"></a>Automated Device Enrollment (Inscrição de Dispositivos Automatizada)
 
-As organizações podem adquirir dispositivos iOS/iPadOS através do Programa de Inscrição de Dispositivos da Apple (DEP). O DEP permite-lhe implementar um perfil de inscrição "sobre o ar" para trazer dispositivos para a gestão. Para mais informações, consulte [o Programa de Inscrição de Dispositivos.](device-enrollment-program-enroll-ios.md)
+As organizações podem adquirir dispositivos iOS/iPadOS através da Inscrição automática de Dispositivos da Apple (ADE). A ADE permite-lhe implementar um perfil de inscrição "sobre o ar" para trazer dispositivos para a gestão. Para mais informações, consulte [o Programa de Inscrição de Dispositivos.](device-enrollment-program-enroll-ios.md)
 
 ## <a name="user-enrollment"></a>Inscrição do utilizador
 A Inscrição do Utilizador confere aos administradores um subconjunto de opções de gestão em comparação com outros métodos de inscrição. Para mais informações, consulte [as ações suportadas pelo Utilizador, palavras-passe e outras opções](ios-user-enrollment-supported-actions.md) e [configurar iOS/iPadOS e iPadOS User Registration](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Gestor Escolar da Apple
 
-O Gestor Escolar da Apple é um programa de compra e inscrição de dispositivos da Apple para escolas. À semelhança do DEP, pode implementar um perfil para inscrever dispositivos para gestão. Saiba mais sobre o [Gestor Escolar da Apple](apple-school-manager-set-up-ios.md).
+O Gestor Escolar da Apple é um programa de compra e inscrição de dispositivos da Apple para escolas. Tal como a ADE, pode implementar um perfil para inscrever dispositivos na gestão. Saiba mais sobre o [Gestor Escolar da Apple](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,15 +79,15 @@ Pode inscrever dispositivos iOS/iPadOS com o Configurator apple a funcionar num 
 
 Saiba mais sobre a [inscrição no Apple Configurator](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Utilizar o Portal da Empresa em dispositivos inscritos pelo Apple Configurator ou pelo DEP
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Utilize o Portal da Empresa em dispositivos inscritos na ADE ou na Apple Configurator
 
-Os dispositivos configurados com a afinidade de utilizador podem instalar e executar a aplicação do Portal da Empresa para transferir aplicações e gerir dispositivos. Assim que os utilizadores recebem os respetivos dispositivos, têm de executar vários passos adicionais para concluir o Assistente de Configuração e instalar a aplicação do Portal da Empresa.
+Os dispositivos configurados com a afinidade de utilizador podem instalar e executar a aplicação do Portal da Empresa para transferir aplicações e gerir dispositivos. Assim que os utilizadores recebem os respetivos dispositivos, têm de executar vários passos adicionais para concluir o Assistente de Configuração e instalar a aplicação Portal da Empresa.
 
 A afinidade de utilizador é necessária para suportar o seguinte:
 
 - Aplicações de gestão de aplicações móveis (MAM)
 - Acesso Condicional a emails e dados da empresa
-- Aplicação Portal da Empresa
+- Aplicação do Portal da Empresa
 
 ### <a name="how-users-enroll-corporate-owned-iosipados-devices-with-user-affinity"></a>Como os utilizadores matriculam dispositivos iOS/iPadOS de propriedade corporativa com afinidade do utilizador
 

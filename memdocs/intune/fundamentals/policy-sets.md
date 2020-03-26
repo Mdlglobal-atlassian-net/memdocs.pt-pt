@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: efd9b064e4ca6c3c375be227af7414544f4692a9
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330873"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275004"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Use conjuntos de políticas para agrupar coleções de objetos de gestão
 
@@ -63,7 +63,7 @@ Quando se cria um conjunto de políticas, cria-se uma única unidade de atribui�
     - **Nome definido pela política** - Forneça um nome para este conjunto de políticas.
     - **Descrição** - Opcionalmente, forneça uma descrição para o conjunto de políticas.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Clique **em Seguir: Gestão de aplicações**.<br>
    Na página de gestão de **aplicações** pode [opcionalmente adicionar aplicações,](../apps/apps-add.md)políticas de configuração de [aplicações](../apps/app-configuration-policies-overview.md)e políticas de proteção de [aplicações](../apps/app-protection-policy.md) ao seu conjunto de políticas. Para obter informações sobre a gestão de apps, consulte o que é a gestão de [aplicações microsoft Intune?](../apps/app-management.md)

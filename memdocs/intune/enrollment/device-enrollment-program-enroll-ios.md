@@ -18,37 +18,41 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 68edd2ba9d69ee58a3fbdbb2efec568e4550e4dc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220205"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256815"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Programa de registo de aparelho da Apple
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscreva automaticamente dispositivos iOS/iPadOS com inscrição automática de dispositivos da Apple
 
-Pode configurar o Intune para inscrever dispositivos iOS/iPadOS adquiridos através do Programa de Inscrição de Dispositivos da Apple [(DEP)](https://deploy.apple.com). O DEP permite-lhe inscrever um grande número de dispositivos de forma remota. Dispositivos como iPhones, iPads e MacBooks podem ser enviados diretamente para os utilizadores. Quando o utilizador liga o dispositivo, o Assistente de Configuração, que inclui a experiência típica fora de caixa para produtos Apple, funciona com configurações pré-configuradas e o dispositivo matricula-se na gestão.
+> [!IMPORTANT]
+> A Apple mudou recentemente de utilização do Programa de Inscrição de Dispositivos da Apple (DEP) para a Apple Automated Device Registration (ADE). A Intune está em processo de atualização da interface de utilizador Intune para refletir isso. Até que tais alterações estejam completas, continuará a ver o Programa de Inscrição de *Dispositivos* no portal Intune. Onde quer que isso seja mostrado, agora utiliza inscrição automática de dispositivos.
 
-Para permitir a inscrição de DEP, utiliza os portais Intune e Apple Business Manager (ABM) ou Apple School Manager (ASM). É necessária uma lista de números de série ou um número de encomenda de compra para que possa atribuir dispositivos à Intune para gestão em ABM/ASM. Cria perfis de inscrição DEP em Intune contendo definições que são aplicadas aos dispositivos durante a inscrição. Note que a inscrição de DEP não pode ser utilizada com uma conta de gestor de [inscrição](device-enrollment-manager-enroll.md) de dispositivos.
+Pode configurar o Intune para inscrever dispositivos iOS/iPadOS adquiridos através da Inscrição automática de [Dispositivos (ADE)](https://deploy.apple.com) da Apple (anteriormente Programa de Inscrição de Dispositivos). A Inscrição automática de Dispositivos permite-lhe inscrever um grande número de dispositivos sem nunca tocá-los. Dispositivos como iPhones, iPads e MacBooks podem ser enviados diretamente para os utilizadores. Quando o utilizador liga o dispositivo, o Assistente de Configuração, que inclui a experiência típica fora de caixa para produtos Apple, funciona com configurações pré-configuradas e o dispositivo matricula-se na gestão.
+
+Para ativar os portais Intune e [Apple Business Manager (ABM)](https://business.apple.com/) ou [Apple School Manager (ASM).](https://school.apple.com/) É necessária uma lista de números de série ou um número de encomenda de compra para que possa atribuir dispositivos à Intune para gestão em qualquer portal da Apple. Cria perfis de inscrição ADE em Intune contendo definições que são aplicadas aos dispositivos durante a inscrição. Note que a ADE não pode ser utilizada com uma conta de gestor de [inscrição](device-enrollment-manager-enroll.md) de dispositivos.
 
 > [!NOTE]
-> O DEP define configurações do dispositivo que não podem necessariamente ser removidas pelo utilizador final. Portanto, antes de [migrar para dep,](../fundamentals/migration-guide-considerations.md)o dispositivo deve ser limpo para devolvê-lo a um estado fora da caixa (novo).
+> O ADE define configurações do dispositivo que não podem necessariamente ser removidas pelo utilizador final. Portanto, antes de [migrar para a ADE,](../fundamentals/migration-guide-considerations.md)o dispositivo deve ser limpo para o devolver a um estado fora da caixa (novo).
 
-## <a name="dep-and-the-company-portal"></a>DEP e o Portal da Empresa
+## <a name="automated-device-enrollment-and-the-company-portal"></a>Inscrição automática de Dispositivos e o Portal da Empresa
 
-As matrículas do DEP não são compatíveis com a versão da app store da aplicação Portal da Empresa. Pode dar aos utilizadores acesso à aplicação Portal da Empresa num dispositivo DEP. É dever fornecer este acesso para permitir que os utilizadores escolham quais as aplicações corporativas que desejam utilizar no seu dispositivo ou utilizar a autenticação moderna para completar o processo de inscrição. 
+As matrículas do ADE não são compatíveis com a versão da app store da aplicação Portal da Empresa. Pode dar aos utilizadores acesso à aplicação Portal da Empresa num dispositivo ADE. É dever fornecer este acesso para permitir que os utilizadores escolham quais as aplicações corporativas que desejam utilizar no seu dispositivo ou utilizar a autenticação moderna para completar o processo de inscrição. 
 
-Para permitir a autenticação moderna durante a inscrição, empurre a app para o dispositivo utilizando o Portal da **Empresa de Instalação com VPP** (Programa de Compra de Volume) no perfil DEP. Para mais informações, consulte [Automaticamente inscrever dispositivos iOS/iPadOS com o Programa de Inscrição de Dispositivos da Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Para permitir a autenticação moderna durante a inscrição, empurre a app para o dispositivo utilizando o Portal da **Empresa de Instalação com VPP** (Programa de Compra de Volume) no perfil ADE. Para mais informações, consulte Automaticamente a inscrição de [dispositivos iOS/iPadOS com o ADE da Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
-Para permitir que o Portal da Empresa atualize automaticamente e forneça a aplicação Portal da Empresa em dispositivos já inscritos com DEP, implemente a aplicação Portal da Empresa através do Intune como uma aplicação necessária para o Programa de Compra de Volume (VPP) com uma política de Configuração de [Aplicações](../apps/app-configuration-policies-use-ios.md) aplicada.
+Para permitir que o Portal da Empresa atualize automaticamente e forneça a aplicação Portal da Empresa em dispositivos já matriculados com a ADE, implemente a aplicação Portal da Empresa através do Intune como uma aplicação de Programa de Compra de Volume (VPP) necessária com uma política de configuração de [aplicações](../apps/app-configuration-policies-use-ios.md) aplicada.
 
-Nota: Durante a inscrição automática do dispositivo, enquanto o Portal da Empresa está a funcionar no modo de aplicação única, clicar no link 'Saiba mais' resulta numa mensagem de erro por causa do modo de aplicação simples. Após a inscrição ser concluída, pode ver mais informações no CP quando o dispositivo já não se encontra no modo de aplicação. 
+> [!NOTE]
+> Durante a inscrição automática do dispositivo, enquanto o Portal da Empresa está a funcionar no modo de aplicação única, clicar no link **Saiba mais,** resulta numa mensagem de erro devido ao modo de aplicação única. Após a inscrição ser concluída, pode ver mais informações no CP quando o dispositivo já não se encontra no modo de aplicação. 
 
 ## <a name="what-is-supervised-mode"></a>O que é o modo supervisionado?
 
-A Apple introduziu o modo supervisionado no iOS/iPadOS 5. Um dispositivo iOS/iPadOS em modo supervisionado pode ser gerido com mais controlos, tais como a captura de ecrã sinuoso e a instalação de aplicações a partir da App Store. Como tal, é especialmente útil para dispositivos pertencentes à empresa. Como parte do Programa de Inscrição de Dispositivos Apple (DEP), o Intune suporta a configuração de dispositivos para o modo supervisionado.
+A Apple introduziu o modo supervisionado no iOS/iPadOS 5. Um dispositivo iOS/iPadOS em modo supervisionado pode ser gerido com mais controlos, tais como a captura de ecrã sinuoso e a instalação de aplicações a partir da App Store. Como tal, é especialmente útil para dispositivos pertencentes à empresa. Intune suporta configurar dispositivos para o modo supervisionado como parte da ADE.
 
-O suporte para dispositivos DEP não supervisionados foi depreciado no iOS/iPadOS 11. Nos dispositivos configurados iOS/iPadOS 11 e posteriormente, os dispositivos configurados DEP devem ser sempre supervisionados. A bandeira is_supervised DEP será ignorada numa futura versão iOS/iPadOS.
+O suporte para dispositivos ADE não supervisionados foi depreciado no iOS/iPadOS 11. Nos dispositivos configurados iOS/iPadOS 11 e posteriormente, os dispositivos configurados aADE devem ser sempre supervisionados. A bandeira *is_supervised* ADE será ignorada numa futura versão iOS/iPadOS.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -59,18 +63,18 @@ O suporte para dispositivos DEP não supervisionados foi depreciado no iOS/iPadO
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## <a name="prerequisites"></a>Pré-requisitos
-- Dispositivos adquiridos através do [Programa de Inscrição de Dispositivos da Apple](https://deploy.apple.com)
+- Dispositivos adquiridos na [ADE da Apple](https://deploy.apple.com)
 - [Autoridade de Gestão de Dispositivos Móveis (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certificado Push de MDM da Apple](apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Obter um token DEP da Apple
+## <a name="get-an-apple-ade-token"></a>Obtenha um símbolo Apple ADE
 
-Antes de poder inscrever dispositivos iOS/iPadOS com DEP, precisa de um ficheiro de token (.p7m) da Apple. Este token permite ao Intune sincronizar informações sobre os dispositivos DEP que são propriedade da sua empresa. Também permite ao Intune carregar perfis de inscrição para a Apple e atribuir dispositivos a esses perfis.
+Antes de poder inscrever dispositivos iOS/iPadOS com ADE, precisa de um ficheiro DeTo (.p7m) da Apple. Este token permite à Intune sincronizar informações sobre dispositivos ADE que a sua empresa possui. Também permite ao Intune carregar perfis de inscrição para a Apple e atribuir dispositivos a esses perfis.
 
-Usa o portal Apple Business Manager ou apple school manager para criar um símbolo. Também utiliza o portal ABM/ASM para atribuir dispositivos à Intune para gestão.
+Usa o portal [Apple Business Manager (ABM)](https://business.apple.com/) ou [Apple School Manager (ASM)](https://school.apple.com/) para criar um símbolo. Também utiliza o portal ABM/ASM para atribuir dispositivos à Intune para gestão.
 
 > [!NOTE]
-> Se eliminar o token do portal clássico do Intune antes da migração para o Azure, o Intune poderá restaurar um token DEP da Apple eliminado. Pode eliminar novamente o token DEP do portal do Azure.
+> Se apagar o símbolo do portal clássico Intune antes de migrar para O Azure, Intune poderá restaurar um token Apple ADE apagado. Pode eliminar novamente o token ADE do portal Azure.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Passo 1. Transfira o certificado de chave pública do Intune, que é obrigatório para criar o token.
 
@@ -81,17 +85,17 @@ Usa o portal Apple Business Manager ou apple school manager para criar um símbo
 2. Conceda permissão à Microsoft para enviar informações sobre o utilizador e o dispositivo à Apple, ao selecionar **Concordo**.
 
 > [!NOTE]
-> Uma vez que progrida para além do passo 2 para descarregar o certificado de chave pública Intune, não feche o assistente nem navegue para longe desta página. Ao fazê-lo, invalidará o certificado que descarregou e terá de repetir este processo novamente. Se encontrar esta situação, notará normalmente que o botão Criar no separador Review + criar está acinzentado e não pode completar o processo.
+> Uma vez que progrida para além do passo 2 para descarregar o certificado de chave pública Intune, não feche o assistente nem navegue para longe desta página. Ao fazê-lo, invalidará o certificado que descarregou e terá de repetir este processo novamente. Se encontrar esta situação, notará normalmente que o botão **Criar** no separador **Review + criar** está acinzentado e não pode completar o processo.
 
    ![Captura de ecrã a mostrar o painel Token do Programa de Inscrição, na área de trabalho Certificados da Apple, para transferir a chave pública.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Selecione **Transferir a chave pública** para transferir e guardar o ficheiro da chave de encriptação (.pem) localmente. O ficheiro .pem é utilizado para pedir um certificado de relação de confiança a partir do portal do Programa de Registo de Aparelho da Apple.
+3. Selecione **Transferir a chave pública** para transferir e guardar o ficheiro da chave de encriptação (.pem) localmente. O ficheiro .pem é utilizado para pedir um certificado de relação de confiança a partir do portal da Apple.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Passo 2: Utilize a sua chave para transferir um token a partir da Apple.
 
-1. Selecione **Criar um token para o Programa de Registo de Aparelho da Apple** para abrir o portal Programa de Implementação da Apple e inicie sessão com o Apple ID da sua empresa. Pode utilizar este Apple ID para renovar o seu token DEP.
-2. No [portal dos Programas de Implementação](https://deploy.apple.com) da Apple, selecione **Começar** em **Programa de Registo de Aparelho**.
+1. Escolha Criar um símbolo para o Programa de Inscrição de **Dispositivos da Apple** para abrir o portal de negócios da Apple e iniciar sessão com o Apple ID da sua empresa. Pode usar este Apple ID para renovar o seu token ADE.
+2. No portal [business](https://business.apple.com)da Apple, escolha **Iniciar** o programa de inscrição de **dispositivos.**
 
 3. Na página **Gerir Servidores**, selecione **Adicionar Servidor MDM**.
 4. Introduza o **Nome do Servidor MDM** e, em seguida, selecione **Seguinte**. O nome do servidor é uma referência para identificar o servidor de gestão de dispositivos móveis (MDM). Não é o nome nem o URL do servidor do Microsoft Intune.
@@ -126,7 +130,7 @@ Com o certificado push, a Intune pode inscrever-se e gerir dispositivos iOS/iPad
 
 ## <a name="create-an-apple-enrollment-profile"></a>Criar um perfil de inscrição da Apple
 
-Agora que instalou o seu token, pode criar um perfil de inscrição para dispositivos DEP. Um perfil de inscrição de dispositivos especifica as definições aplicadas a um grupo de dispositivos durante a inscrição. Há um limite de 100 perfis de inscrição por token DEP.
+Agora que instalou o seu símbolo, pode criar um perfil de inscrição para dispositivos ADE. Um perfil de inscrição de dispositivos especifica as definições aplicadas a um grupo de dispositivos durante a inscrição. Há um limite de 100 perfis de inscrição por token ADE.
 
 > [!NOTE]
 > Os dispositivos serão bloqueados se não houver licenças suficientes do Portal da Empresa para um token VPP, ou se o token tiver expirado. O Intune apresentará um alerta quando um token estiver prestes a expirar ou se existirem poucas licenças.
@@ -163,7 +167,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 6. Se escolheu o **Portal da Empresa** para Selecionar onde os utilizadores devem **autenticar,** pode utilizar um sinal VPP para instalar automaticamente o Portal da Empresa no dispositivo. Neste caso, o utilizador não tem de fornecer um ID Apple. Para instalar o Portal da Empresa com um token VPP, selecione um token em **Instalar Portal da Empresa com o VPP**. Exige que o Portal da Empresa já tenha sido adicionado ao sinal de VPP. Para garantir que a aplicação Portal da Empresa continua a ser atualizada após a inscrição, certifique-se de ter configurado uma implementação de aplicações em Intune (Intune>Client Apps). Para que a interação do utilizador não seja necessária, é provável que queira ter o Portal da Empresa como uma aplicação iOS/iPadOS VPP, torná-la uma aplicação necessária e utilizar o licenciamento do dispositivo para a atribuição. Certifique-se de que o token não expira e que tem licenças de dispositivos suficientes para a aplicação Portal da Empresa. Se o token expirar ou se esgotar as licenças, o Intune instalará o Portal da Empresa a partir da App Store e pedirá um ID Apple. 
 
     > [!NOTE]
-    > Quando **selecionar onde os utilizadores devem autenticar** é para o Portal da **Empresa,** certifique-se de que o processo de inscrição do dispositivo é realizado nas primeiras 24 horas do portal da empresa ser descarregado para o dispositivo DEP. Caso contrário, a inscrição poderá falhar e será necessário um reset de fábrica para inscrever o dispositivo.
+    > Quando **selecionar onde os utilizadores devem autenticar** é para o Portal da **Empresa,** certifique-se de que o processo de inscrição do dispositivo é realizado nas primeiras 24 horas do portal da empresa ser descarregado para o dispositivo ADE. Caso contrário, a inscrição poderá falhar e será necessário um reset de fábrica para inscrever o dispositivo.
     
     ![Captura de ecrã a mostrar a opção Instalar Portal da Empresa com o VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
@@ -181,7 +185,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 
     ![Captura de ecrã a mostrar a opção Definições de Gestão de Dispositivos.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do DEP como mecanismo para ativar o modo supervisionado, especialmente se estiver a implementar um grande número de dispositivos iOS/iPadOS.
+    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do ADE como mecanismo para ativar o modo supervisionado, especialmente se estiver a implementar um grande número de dispositivos iOS/iPadOS.
 
     Os utilizadores são notificados de que os seus dispositivos são supervisionados de duas formas:
 
@@ -254,7 +258,7 @@ Agora que o Intune tem permissão para gerir os seus dispositivos, pode sincroni
 1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matricular** > Programa de **Inscrição Tokens** > escolha um símbolo na lista > **Dispositivos** > **Sync**. ![Screenshot do nó dos dispositivos do programa de inscrição e link Sync.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Para seguir os termos da Apple para o tráfego aceitável do programa de inscrição, intune impõe as seguintes restrições:
-   - As sincronizações completas não podem ser executadas mais do que uma vez a cada sete dias. Durante uma sincronização completa, o Intune obtém a lista atualizada completa de números de série atribuídos ao servidor de MDM da Apple ligado ao Intune. Se um dispositivo DEP for eliminado do portal do Intune, a sua atribuição deverá ser anulada no servidor MDM da Apple no portal DEP. Se a atribuição não for anulada, não será importado novamente para o Intune até que a sincronização completa seja executada.   
+   - As sincronizações completas não podem ser executadas mais do que uma vez a cada sete dias. Durante uma sincronização completa, o Intune obtém a lista atualizada completa de números de série atribuídos ao servidor de MDM da Apple ligado ao Intune. Se um dispositivo ADE for eliminado do portal Intune, este deve não ser atribuído a partir do servidor Apple MDM no portal ADE. Se a atribuição não for anulada, não será importado novamente para o Intune até que a sincronização completa seja executada.   
    - É executa automaticamente uma sincronização a cada 24 horas. Também pode sincronizar ao clicar no botão **Sincronizar** (não mais do que uma vez a cada 15 minutos). Todos os pedidos de sincronização têm 15 minutos para serem concluídos. O botão **Sincronizar** está desativado até a sincronização ser concluída. Esta sincronização irá atualizar o estado do dispositivo existente e importar novos dispositivos atribuídos ao servidor de MDM da Apple.   
 
 
@@ -276,16 +280,16 @@ Pode escolher um perfil predefinido a aplicar a todos os dispositivos que inscre
 2. Escolha **Definir o Perfil Predefinido**, escolha um perfil na lista pendente e, em seguida, escolha **Guardar**. Este perfil será aplicado a todos os dispositivos inscritos com o token.
 
 ## <a name="distribute-devices"></a>Distribuir dispositivos
-Ativou a gestão e sincronização entre a Apple e o Intune e atribuiu um perfil para permitir a inscrição dos seus dispositivos DEP. Agora pode distribuir os dispositivos aos utilizadores. Os dispositivos com afinidade do utilizador necessitam que seja atribuída uma licença do Intune a cada utilizador. Os dispositivos sem afinidade do utilizador necessitam de uma licença de dispositivo. Um dispositivo ativado não poderá aplicar um perfil de inscrição até que os dados do mesmo sejam apagados.
+Permitiu a gestão e sincronização entre a Apple e a Intune, e atribuiu um perfil para permitir a inscrição dos seus dispositivos ADE. Agora pode distribuir os dispositivos aos utilizadores. Os dispositivos com afinidade do utilizador necessitam que seja atribuída uma licença do Intune a cada utilizador. Os dispositivos sem afinidade do utilizador necessitam de uma licença de dispositivo. Um dispositivo ativado não poderá aplicar um perfil de inscrição até que os dados do mesmo sejam apagados.
 
 Consulte [Inscrever o seu dispositivo iOS/iPadOS em Sintonia com o Programa de Inscrição de Dispositivos](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-a-dep-token"></a>Renovar um token de DEP  
+## <a name="renew-an-ade-token"></a>Renovar um símbolo da ADE  
 
 > [!NOTE]
-> Além de renovar o seu token DEP anualmente, terá de renovar o seu programa de inscrição token dentro de Intune e Apple Business Manager quando a palavra-passe do Apple ID gerida mudar para o utilizador que configura o token no Apple business Manager ou que o utilizador deixa o seu Organização Apple Business Manager.
+> Além de renovar o seu token ADE anualmente, terá de renovar o seu programa de inscrição token dentro de Intune e Apple Business Manager quando a palavra-passe do Apple ID gerida mudar para o utilizador que configura o token no Apple business Manager ou que o utilizador deixa o seu Organização Apple Business Manager.
 
-1. Aceda a deploy.apple.com.  
+1. Vai para business.apple.com.  
 2. Em **Gerir Servidores**, selecione o servidor de MDM associado ao ficheiro de token que pretende renovar.
 3. Selecione **Gerar Novo Token**.
 

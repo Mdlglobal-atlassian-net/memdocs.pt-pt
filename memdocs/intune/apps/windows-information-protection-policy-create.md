@@ -1,12 +1,12 @@
 ---
 title: Política de proteção de aplicações para proteção de informações do Windows (WIP)
 titleSuffix: Microsoft Intune
-description: Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Microsoft Intune
+description: Criar e implementar a política de Proteção de Informação do Windows (WIP) com a Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 88e26a023b745e96926b9611d7bcab41faac261c
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327357"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274732"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Criar e implementar a política de Proteção de Informação do Windows (WIP) com o Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Pode utilizar políticas de proteção de aplicações com as aplicações do Windows 10 para proteger aplicações sem a inscrição de dispositivos.
+Pode utilizar as políticas de Proteção de Informação do Windows (WIP) com aplicações do Windows 10 para proteger aplicações sem a inscrição do dispositivo.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -49,10 +49,10 @@ Tem de compreender alguns conceitos ao adicionar uma política WIP:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para poder criar uma política de proteção de aplicações do WIP, tem de configurar o fornecedor de MAM. Saiba mais sobre [como configurar o fornecedor de MAM com o Intune](app-protection-policies-configure-windows-10.md).  
+Tem de configurar o fornecedor MAM antes de poder criar uma política wip. Saiba mais sobre [como configurar o fornecedor de MAM com o Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> O WIP não suporta várias identidades, apenas pode existir uma identidade gerida de cada vez.
+> O WIP não suporta várias identidades, apenas pode existir uma identidade gerida de cada vez. Para obter mais informações sobre as capacidades e limitações do WIP, consulte Proteja os seus dados empresariais utilizando a Proteção de [Informação do Windows (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Além disso, tem de ter a seguinte licença e atualização:
 
@@ -63,7 +63,7 @@ Além disso, tem de ter a seguinte licença e atualização:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>Para adicionar uma política de proteção de aplicações WIP
+## <a name="to-add-a-wip-policy"></a>Para adicionar uma política WIP
 
 Depois de configurar o Intune na sua organização, pode criar uma política específica do WIP.
 
@@ -76,7 +76,7 @@ Depois de configurar o Intune na sua organização, pode criar uma política esp
 3. Adicione os seguintes valores:
     - **Nome:** introduza um nome (obrigatório) para a nova política.
     - **Descrição:** (opcional) escreva uma descrição.
-    - **Plataforma:** escolha o **Windows 10** como a plataforma suportada para a política de proteção de aplicações.
+    - **Plataforma:** Escolha o **Windows 10** como plataforma suportada para a sua política wip.
     - **Estado de inscrição:** escolha **Sem inscrição** como o estado de inscrição da política.
 4. Selecione **Criar**. A política é criada e aparece na tabela sobre o painel de políticas de proteção da **App.**
 

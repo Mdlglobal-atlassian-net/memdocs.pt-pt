@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 90c3445110eb9f85493a9280199c70a478f5ef52
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526313"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256798"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar os dispositivos como pertencentes à empresa
 
@@ -54,7 +54,7 @@ Esta funcionalidade é suportada para as seguintes plataformas:
 | Administração de dispositivogerido Android OS v10 | Não suportado | Não suportado |
 | Outros Android | Não suportado | Suportado |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [Saiba como localizar o número de série de um dispositivo Apple](https://support.apple.com/HT204308).<br>
 [Saiba como localizar o número de série do seu dispositivo Apple](https://support.google.com/store/answer/3333000).

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: dd2add4751601ccecc109bd937aa49212503815c
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220188"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274868"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
-Saiba o que há de novo a cada semana no Microsoft Intune. Também pode encontrar [avisos importantes, lançamentos](#notices) [anteriores](whats-new-archive.md)e informações sobre [como as atualizações de serviço intune são lançadas.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) 
+Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Também pode encontrar [avisos importantes, lançamentos](#notices) [anteriores](whats-new-archive.md)e informações sobre [como as atualizações de serviço intune são lançadas.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) 
 
 > [!Note]
 > Cada [atualização mensal](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) pode demorar até três dias a ser lançada e estará na seguinte ordem:
@@ -90,7 +90,7 @@ Estas alterações serão lançadas numa base faseada ao longo do mês de março
 ### <a name="device-configuration"></a>Configuração do dispositivo
 
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nova experiência do utilizador ao criar modelos administrativos em dispositivos Windows<!--5096036 -->
-Com base no feedback do cliente, e na nossa mudança para a nova experiência de ecrã completo do Azure, reconstruímos a experiência de perfil dos Modelos Administrativos com uma visão de pasta. Não fizemos alterações a nenhuma definição ou perfis existentes. Então, os perfis existentes permanecerão os mesmos, e serão utilizáveis na nova visão. Ainda pode navegar em todas as opções de definições selecionando **Todas as Definições**e utilizando a procura. A vista para a árvore é dividida por configurações de computador e utilizador. Encontrará as definições de Windows, Office e Edge nas suas pastas associadas.  
+Com base no feedback do cliente, e na nossa mudança para a nova experiência de ecrã completo do Azure, reconstruímos a experiência de perfil dos Modelos Administrativos com uma visão de pasta. Não fizemos alterações a nenhuma definição ou perfis existentes. Assim, os seus perfis existentes permanecerão os mesmos, e serão utilizáveis na nova visão. Ainda pode navegar em todas as opções de definições selecionando **Todas as Definições**e utilizando a procura. A vista para a árvore é dividida por configurações de computador e utilizador. Encontrará as definições de Windows, Office e Edge nas suas pastas associadas.  
 
 Aplica-se a:
 - Windows 10 e mais recente

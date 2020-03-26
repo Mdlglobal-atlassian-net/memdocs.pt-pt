@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 128b63f2b7b789fdd6a11fb196c4d92b14a88cf0
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526279"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274834"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas de registo de dispositivos Windows em Microsoft Intune
 
@@ -41,7 +41,7 @@ Recolher as seguintes informações sobre o problema:
 - Quantos utilizadores são afetados? Todos os utilizadores são afetados ou apenas alguns?
 - Quantos dispositivos são afetados? Todos os dispositivos são afetados ou apenas alguns?
 - O que é a autoridade do MDM?
-- Como é que as inscrições estão a ser realizadas? É "Bring your own device" (BYOD) ou Apple Device Registration Program (DEP) com perfis de inscrição?
+- Como é que as inscrições estão a ser realizadas? É "Trazer o seu próprio dispositivo" (BYOD) ou Apple Automated Device Registration (ADE) com perfis de inscrição?
 
 ## <a name="error-messages"></a>Mensagens de erro
 
@@ -141,7 +141,7 @@ Atribuir uma licença Intune válida ao utilizador e, em seguida, inscrever o di
 Para corrigir este problema, utilize um dos seguintes métodos: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Atribuir uma licença válida ao utilizador
-Vá ao [Microsoft 365 Admin Center](https://portal.office.com/adminportal/home), e depois atribua uma licença Intune ou uma Licença Office 365 ao utilizador.
+Vá ao [Microsoft 365 Admin Center](https://admin.microsoft.com), e depois atribua uma licença Intune ou uma Licença Office 365 ao utilizador.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Corrija os termos de URL de utilização do MDM
   1. Inscreva-se no [portal Azure](https://portal.azure.com/)e, em seguida, selecione **Azure Ative Directory**.    

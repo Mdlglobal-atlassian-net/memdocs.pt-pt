@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d57c852784d882a0e608d1ada3730b20a3f2172a
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087104"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274375"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
 
@@ -59,7 +59,7 @@ Esta funcionalidade suporta:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wnodows Phone 8.1
+- Windows Phone 8.1
 - Windows 8,1
 - Windows 10 e posterior
 
@@ -73,7 +73,7 @@ Esta funcionalidade suporta:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wnodows Phone 8.1
+- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Otimização da entrega
 
@@ -133,7 +133,7 @@ Esta funcionalidade suporta:
 
 ## <a name="education"></a>Educação
 
-As [definições de educação para Windows 10](education-settings-configure.md) configuram as opções da [aplicação Fazer um Teste do Windows](https://education.microsoft.com/gettrained/win10takeatest). Quando configurar estas opções, não pode executar qualquer outra aplicação no dispositivo até o teste estar concluído.
+As [definições de educação para Windows 10](education-settings-configure.md) configuram as opções da [aplicação Fazer um Teste do Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Quando configurar estas opções, não pode executar qualquer outra aplicação no dispositivo até o teste estar concluído.
 
 [Definições de educação - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) utiliza a aplicação iOS/iPadOS Classroom para orientar a aprendizagem e controlar os dispositivos estudantis na sala de aula. Pode configurar dispositivos iPad para que vários estudantes possam partilhar um único dispositivo.
 
@@ -146,7 +146,7 @@ Esta funcionalidade suporta:
 - Administrador de dispositivos Android
 - Android Enterprise
 - iOS/iPadOS
-- Wnodows Phone 8.1
+- Windows Phone 8.1
 - Windows 10 e posterior
 
 ## <a name="endpoint-protection"></a>Proteção de ponto final
@@ -245,7 +245,7 @@ Esta funcionalidade suporta:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wnodows Phone 8.1
+- Windows Phone 8.1
 - Windows 8,1
 - Windows 10 e posterior
 

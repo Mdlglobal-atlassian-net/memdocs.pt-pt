@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b903b1e021829890fc7de6b660db947e3ceb58a
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325793"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274273"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Incluir e excluir atribuições de aplicações no Microsoft Intune
 
@@ -90,7 +90,7 @@ Quando realizar atribuições de grupo, os grupos que já tiverem sido atribuíd
 
 Pode editar atribuições, na lista de **Atribuições** da aplicação, selecione a linha que contém a atribuição específica que quer alterar. Além disso, pode remover uma atribuição ao selecionar as reticências ( **…** ) no final da linha e ao selecionar **Remover**. Para alterar a vista da lista de **Atribuições**, agrupe por **Tipo de atribuição** ou por **Incluído/Excluído**.
 
-![Atribuições de aplicações do Intune – concluir](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Atribuições de aplicações do Intune – concluir](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>Próximos passos
 

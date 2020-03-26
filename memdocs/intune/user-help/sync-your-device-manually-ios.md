@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 67ea2757e066b70154baea9f87a95a12dd2fe632
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327821"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274953"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronizar o seu dispositivo iOS manualmente
 
@@ -34,13 +34,13 @@ Por vezes, uma aplicação pode demorar demasiado tempo a ser transferida do Por
 
 2. Toque em **Dispositivos**. Se tiver múltiplos dispositivos, verá uma lista de dispositivos. Selecione o dispositivo que está a utilizar atualmente. Se só tiver um dispositivo, irá diretamente para o ecrã de detalhes do dispositivo.
 
-    ![Captura do ecrã Dispositivos, a mostrar dois dispositivos. O dispositivo superior tem o texto que indica "Este é o iPhone 6 Plus que está a utilizar atualmente".](/user-help/media/ios_sync_1_CP_after_1804.png)
+    ![Captura do ecrã Dispositivos, a mostrar dois dispositivos. O dispositivo superior tem o texto que indica "Este é o iPhone 6 Plus que está a utilizar atualmente".](./media/ios_sync_1_CP_after_1804.png)
 
 3. Toque em **Verificar Definições** para sincronizar o seu dispositivo. Será apresentada uma barra de carregamento no ecrã até que a sincronização seja concluída.
 
-    ![Captura de ecrã de Detalhes do dispositivo a mostrar a hora do último registo do dispositivo e a ligação Verificar Definições.](/user-help/media/ios_sync_2_CP_after_1804.png)  
+    ![Captura de ecrã de Detalhes do dispositivo a mostrar a hora do último registo do dispositivo e a ligação Verificar Definições.](./media/ios_sync_2_CP_after_1804.png)  
 
-   ![Captura de ecrã de Detalhes do dispositivo a mostrar a barra de carregamento após o utilizador clicar em Verificar Definições.](/user-help/media/ios_sync_3_CP-after_1804.png)
+   ![Captura de ecrã de Detalhes do dispositivo a mostrar a barra de carregamento após o utilizador clicar em Verificar Definições.](./media/ios_sync_3_CP-after_1804.png)
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8545614baa180f59475b1f28e6675156ee475464
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085865"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256781"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Inscrição de dispositivo de resolução de problemas no Microsoft Intune
 
@@ -286,9 +286,9 @@ Para resolver o problema, os utilizadores têm de selecionar o botão **Configur
 Após a inscrição, os dispositivos regressam a um bom estado e recuperam o acesso aos recursos da empresa.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Confirmar se WS-Trust 1.3 está ativado
-**Edição** Dispositivos do Programa de Inscrição de Dispositivos (DEP) iOS/iPadOS não podem ser matriculados
+**Edição** Dispositivos automatizados de inscrição de dispositivos (ADE) iOS/iPadOS não podem ser matriculados
 
-Inscrever dispositivos DEP com afinidade de utilizador requer a ativação de um ponto final de Nome de Utilizador/Misto WS-Trust 1.3 para pedir os tokens de utilizador. O Active Directory ativa este ponto final por predefinição. Para obter uma lista dos pontos finais ativados, utilize o cmdlet Get-AdfsEndpoint do PowerShell e procure o ponto final de confiança/13/Nome de Utilizador Misto. Por exemplo:
+A inscrição de dispositivos ADE com afinidade do utilizador requer que o Nome de Utilizador/Ponto Final Misto WS-Trust 1.3 seja ativado para solicitar fichas ao utilizador. O Active Directory ativa este ponto final por predefinição. Para obter uma lista dos pontos finais ativados, utilize o cmdlet Get-AdfsEndpoint do PowerShell e procure o ponto final de confiança/13/Nome de Utilizador Misto. Por exemplo:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -413,7 +413,7 @@ O certificado de conta da conta anterior ainda está presente no computador.
 1. Tente voltar a inscrever.
 
     > [!IMPORTANT]
-    > Esta secção, método ou tarefa contém passos que indicam como modificar o registo. No entanto, poderão ocorrer problemas graves se modificar o registo incorretamente. Por isso, certifique-se de que segue estes passos cuidadosamente. Para maior proteção, faça uma cópia de segurança do registo antes de o modificar. Em seguida, pode restaurar o registo se ocorrer um problema.
+    > Esta secção, método ou tarefa contém passos que indicam como modificar o registo. Poderão, no entanto, ocorrer problemas graves se modificar o registo incorretamente. Por isso, certifique-se de que segue estes passos cuidadosamente. Para proteção adicional, faça uma cópia de segurança do registo antes de o modificar. Em seguida, poderá restaurar o registo se ocorrer um problema.
     > Para obter mais informações sobre como criar cópias de segurança e restaurar o registo, leia o artigo [Como fazer cópias de segurança e restaurar o registo no Windows](https://support.microsoft.com/kb/322756)
 
 ## <a name="general-enrollment-error-codes"></a>Códigos de erros de inscrição gerais

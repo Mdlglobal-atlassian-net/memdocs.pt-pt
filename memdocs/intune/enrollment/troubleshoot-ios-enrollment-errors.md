@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7e4d3e150e8e4ed890de4717c6093104e2b49d1f
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332765"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274885"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas iOS/iPadOS problemas de inscrição no microsoft Intune
 
@@ -41,7 +41,7 @@ Recolher as seguintes informações sobre o problema:
 - Quantos utilizadores são afetados? Todos os utilizadores são afetados ou apenas alguns?
 - Quantos dispositivos são afetados? Todos os dispositivos são afetados ou apenas alguns?
 - O que é a autoridade do MDM?
-- Como é que as inscrições estão a ser realizadas? É "Bring your own device" (BYOD) ou Apple Device Registration Program (DEP) com perfis de inscrição?
+- Como é que as inscrições estão a ser realizadas? É "Trazer o seu próprio dispositivo" (BYOD) ou Apple Automated Device Registration (ADE) com perfis de inscrição?
 
 ## <a name="error-messages"></a>Mensagens de erro
 
@@ -79,7 +79,7 @@ Se houver mais de um domínio verificado, crie um registo CNAME para cada domín
 |TIPO|Nome do anfitrião|Aponta para|TTL|
 |------|------|------|------|
 |CNAME|EnterpriseEnrollment.dominio_empresa.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.dominio_da_empresa.com|EnterpriseRegistration.windows.net|1 Hr|
+|CNAME|EnterpriseRegistration.dominio_empresa.com|EnterpriseRegistration.windows.net|1 Hr|
 
 Se a sua empresa utilizar vários domínios para as credenciais do utilizador, crie os registos CNAME para cada domínio.
 
@@ -106,7 +106,7 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Microsoft Intune.
 
 #### <a name="resolution"></a>Resolução
-1. Vá ao [Office 365 Admin Center,](https://portal.office.com/adminportal/home#/homepage)e depois escolha **Utilizadores > Utilizadores Ativos**.
+1. Vá ao [Office 365 Admin Center,](https://admin.microsoft.com)e depois escolha **Utilizadores > Utilizadores Ativos**.
 2. Selecione a conta de utilizador a que pretende atribuir uma licença de utilizador Intune e, em seguida, escolha as licenças do **Produto > Edit**.
 3. Mude o alternância para a posição **On** para a licença que pretende atribuir a este utilizador e, em seguida, escolha **Guardar**.
 4. Reinscreva o dispositivo.
@@ -157,7 +157,7 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Intune válida.
 
 #### <a name="resolution"></a>Resolução
-1. Vá ao centro de administração da [Microsoft 365](https://portal.office.com/adminportal/home#/homepage)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
+1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
 2. Selecione a conta de utilizador afetada > **Licenças** de produto > **Editar**.
 3. Verifique se uma licença Intune válida é atribuída a este utilizador.
 4. Reinscreva o dispositivo.
@@ -166,7 +166,7 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Intune válida.
 
-1. Vá ao centro de administração da [Microsoft 365](https://portal.office.com/adminportal/home#/homepage)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
+1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
 2. Selecione a conta de utilizador afetada e, em seguida, escolha **as licenças** do Produto > **Editar**.
 3. Verifique se uma licença Intune válida é atribuída a este utilizador.
 4. Reinscreva o dispositivo.
@@ -203,7 +203,7 @@ Renovar o certificado APNs e, em seguida, reinscrever o dispositivo.
 
 ### <a name="xpc_type_error-connection-invalid"></a>ligação XPC_TYPE_ERROR inválida
 
-Quando liga um dispositivo gerido pelo DEP que lhe é atribuído um perfil de inscrição, a inscrição falha e recebe a seguinte mensagem de erro:
+Quando liga um dispositivo gerido pelo ADE que lhe é atribuído um perfil de inscrição, a inscrição falha e recebe a seguinte mensagem de erro:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Causa:** Há um problema de ligação entre o dispositivo e o serviço Apple DEP.
+**Causa:** Há um problema de ligação entre o dispositivo e o serviço Apple ADE.
 
 #### <a name="resolution"></a>Resolução
 Corrija o problema de ligação ou utilize uma ligação de rede diferente para inscrever o dispositivo. Poderá também ter de contactar a Apple se o problema persistir.
@@ -221,20 +221,20 @@ Corrija o problema de ligação ou utilize uma ligação de rede diferente para 
 
 ## <a name="other-issues"></a>Outras questões
 
-### <a name="dep-enrollment-doesnt-start"></a>A inscrição do DEP não começa
-Quando liga um dispositivo gerido pelo DEP que é atribuído a um perfil de inscrição, o processo de inscrição intune não é iniciado.
+### <a name="ade-enrollment-doesnt-start"></a>A inscrição no ADE não começa
+Quando liga um dispositivo gerido pelo ADE que é atribuído a um perfil de inscrição, o processo de inscrição intune não é iniciado.
 
-**Causa:** O perfil de inscrição é criado antes do token DEP ser enviado para Intune.
+**Causa:** O perfil de inscrição é criado antes do token ADE ser enviado para Intune.
 
 #### <a name="resolution"></a>Resolução
 
 1. Editar o perfil de inscrição. Pode fazer qualquer alteração no perfil. O objetivo é atualizar o tempo de modificação do perfil.
-2. Synchronize dispositivos geridos pelo DEP: No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matricular** > programa de inscrição  **Inscrição;** escolha agora um token > **Sync.** É enviado um pedido de sincronização para a Apple.
+2. Synchronize dispositivos geridos pelo ADE: No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matricular** > Programa de **Inscrição** ; escolha agora um token > **Sync.** É enviado um pedido de sincronização para a Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>Inscrição de DEP presa no login do utilizador
-Quando liga um dispositivo gerido pelo DEP que lhe é atribuído um perfil de inscrição, a configuração inicial fica depois de introduzir credenciais.
+### <a name="ade-enrollment-stuck-at-user-login"></a>Inscrição aDE presa no login do utilizador
+Quando liga um dispositivo gerido pelo ADE que lhe é atribuído um perfil de inscrição, a configuração inicial fica depois de introduzir credenciais.
 
-**Causa:** A autenticação multi-Factor (MFA) está ativada. Atualmente, o MFA não funciona durante a inscrição em dispositivos DEP.
+**Causa:** A autenticação multi-Factor (MFA) está ativada. Atualmente, o MFA não funciona durante a inscrição em dispositivos ADE.
 
 #### <a name="resolution"></a>Resolução
 Desative o MFA e, em seguida, reinscreva o dispositivo.

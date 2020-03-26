@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f126e2d14623d7dd2a80416c474cc3ad1e460dc1
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331621"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256849"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurar a inscrição de dispositivos iOS/iPadOS com o Apple School Manager
 
@@ -31,7 +31,7 @@ ms.locfileid: "79331621"
 
 Pode configurar o Intune para inscrever dispositivos iOS/iPadOS adquiridos através do programa [Apple School Manager.](https://school.apple.com/) Utilizando intune com apple school manager, você pode inscrever um grande número de dispositivos iOS/iPadOS sem nunca tocá-los. Quando um estudante ou professor ativar o dispositivo, o Assistente de Configuração é executado com as predefinições configuradas e o dispositivo é inscrito para gestão.
 
-Para ativar a inscrição do Apple School Manager, utilize os portais do Intune e do Apple School Manager. É necessária uma lista de números de série ou um número de encomenda para poder atribuir dispositivos ao Intune para gestão. São criados os perfis de inscrição DEP com as definições aplicadas aos dispositivos durante a inscrição.
+Para ativar a inscrição do Apple School Manager, utilize os portais do Intune e do Apple School Manager. É necessária uma lista de números de série ou um número de encomenda para poder atribuir dispositivos ao Intune para gestão. Cria perfis de inscrição de dispositivos automatizados (ADE) contendo definições que se aplicavam aos dispositivos durante a inscrição.
 
 Não pode utilizar a inscrição do Apple School Manager com o [Programa de Registo de Aparelho da Apple](device-enrollment-program-enroll-ios.md) nem com o [gestor de inscrição de dispositivos](device-enrollment-manager-enroll.md).
 
@@ -106,7 +106,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
     > Estas ações não são suportadas durante a autenticação com o Assistente de Configuração da Apple.
 
 6. Escolha **Definições de Gestão de Dispositivos** e selecione se quer que os dispositivos com este perfil sejam supervisionados.
-    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do DEP como mecanismo para ativar o modo supervisionado, especialmente para organizações que estão a implementar um grande número de dispositivos iOS/iPadOS.
+    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do ADE como mecanismo para ativar o modo supervisionado, especialmente para organizações que estão a implementar um grande número de dispositivos iOS/iPadOS.
 
     Os utilizadores são notificados de que os seus dispositivos são supervisionados de duas formas:
 
@@ -131,7 +131,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 13. Escolha **Definições do Assistente de Configuração** para configurar as seguintes definições de perfil: ![Personalização do Assistente de Configuração.](./media/apple-school-manager-set-up-ios/setupassistantcustom.png)
 
 
-    |                 Definição                  |                                                                                               Descrição                                                                                               |
+    |                 Definição                  |                                                                                               Description                                                                                               |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |     <strong>Nome do Departamento</strong>     |                                                             É apresentado quando os utilizadores tocam em <strong>Acerca da Configuração</strong> durante a ativação.                                                              |
     |    <strong>Número de Telefone do Departamento</strong>     |                                                          Aparece quando o utilizador clica no botão <strong>Preciso de Ajuda</strong> durante a ativação.                                                          |
