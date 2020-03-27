@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220256"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325319"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Enviar notificações personalizadas em Intune
 
@@ -89,7 +89,7 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 
 ## <a name="send-a-custom-notification-to-groups"></a>Enviar uma notificação personalizada a grupos
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir à **administração do Tenant** > **notificações personalizadas.**  
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir à **administração do Tenant** > **notificações personalizadas.**  
 
 2. No separador Basics, especifique o seguinte e, em seguida, selecione **Next** para continuar.  
    - **Título** – Especifique um título para esta notificação. Os títulos estão limitados a 50 caracteres.  
@@ -109,7 +109,7 @@ Intune não rastreia as notificações personalizadas que envia, e os dispositiv
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Envie uma notificação personalizada para um único dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações e depois ir para **Dispositivos** > **Todos os dispositivos**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações e, em seguida, ir para **Dispositivos** > **Todos os dispositivos**.
 
 2. Clique duas vezes no nome do dispositivo gerido para o qual pretende enviar uma notificação, para abrir a página *de Visualização geral* dos dispositivos.
 

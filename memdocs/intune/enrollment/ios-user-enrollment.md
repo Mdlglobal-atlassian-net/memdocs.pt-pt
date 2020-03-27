@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c3b66c0fd88910dc192af10a1b5ad701304c885e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086107"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327063"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configurar iOS/iPadOS e iPadOS User Registration (pré-visualização)
 
@@ -43,7 +43,7 @@ Para obter mais informações sobre as opções disponíveis com a Inscrição d
 
 Um perfil de inscrição define as definições aplicadas a um grupo de dispositivos durante a inscrição. 
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **ioS matricular** > tipos de **inscrição (pré-visualização)**  > **Criar perfil** > **iOS/iPadOS**. Este perfil é onde irá indicar qual a experiência de inscrição que os seus iOS/iPadOS e iPadOS terão em dispositivos não matriculados através de um método corporativo da Apple. Se quiser fazer alterações, pode editar este perfil depois de o ter criado.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **ioS matricular** > tipos de **inscrição (pré-visualização)**  > **Criar perfil** > **iOS/iPadOS**. Este perfil é onde irá indicar qual a experiência de inscrição que os seus iOS/iPadOS e iPadOS terão em dispositivos não matriculados através de um método corporativo da Apple. Se quiser fazer alterações, pode editar este perfil depois de o ter criado.
 
     ![Criar perfil de inscrição da Apple](./media/ios-user-enrollment/create-profile.png)
 
@@ -78,7 +78,7 @@ Um perfil de inscrição define as definições aplicadas a um grupo de disposit
 
 Depois de ter criado mais do que um perfil de tipo de inscrição, pode alterar a ordem prioritária na qual são aplicadas.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **iOS de matrícula** > Tipos de **inscrição (pré-visualização)** .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **iOS de inscrição** > Tipos de **inscrição (pré-visualização)** .
 2. Arraste e deixe cair os perfis na lista na ordem que pretende que sejam aplicados.
 
 Em caso de conflitos entre perfis para qualquer utilizador, o perfil prioritário mais elevado é aplicado ao utilizador.

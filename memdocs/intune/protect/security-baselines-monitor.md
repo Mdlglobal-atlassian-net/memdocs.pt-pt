@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e51e969abcc4e8ab1b37796df72381fa3bdbe335
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329021"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322619"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorize a linha de base de segurança e os perfis no Microsoft Intune
 
@@ -35,7 +35,7 @@ As linhas de base de [segurança em Intune](security-baselines.md) fornecem mais
 
 Quando monitoriza uma linha de base, obtém-se informações sobre o estado de segurança dos seus dispositivos com base nas recomendações da Microsoft. Pode visualizar estas informações a partir do painel de visão geral da linha de base de segurança na consola Intune.  Leva até 24 horas para que os dados apareçam depois de atribuir uma linha de base. As alterações posteriores demoram até seis horas a aparecer.
 
-Para visualizar os dados de monitorização da linha de base e dispositivos, inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Em seguida, selecione **a segurança endpoint** > **Security Baselines**, selecione uma linha de base e veja o painel de **visão geral.**
+Para visualizar os dados de monitorização da linha de base e dispositivos, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Em seguida, selecione **a segurança endpoint** > **Security Baselines**, selecione uma linha de base e veja o painel de **visão geral.**
 
 O painel **de visão geral** fornece dois métodos para monitorizar o estado:
 
@@ -110,7 +110,7 @@ Monitorizar o perfil dá-lhe uma visão do estado de implantação dos seus disp
 
 Consulte detalhes sobre as configurações de segurança que se aplicam a um dispositivo individual, o que pode ajudá-lo a isolar as definições que estão mal configuradas.
 
-1. Inscreva-se no signine no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no signine do centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vá ao **Dispositivo > ** Todos **os dispositivos** e selecione o dispositivo que pretende visualizar.
 

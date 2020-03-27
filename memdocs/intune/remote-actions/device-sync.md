@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a93f78f2c7517b335857ecbe53e8800520345f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328357"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326232"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Sincronizar dispositivos para obter as políticas e ações mais recentes com o Intune
 
@@ -30,7 +30,7 @@ A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar
 
 ## <a name="supported-platforms"></a>Plataformas suportadas
 
-- Portal do
+- Windows
 - Windows Phone
 - iOS
 - macOS
@@ -38,7 +38,7 @@ A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar
 
 ## <a name="sync-a-device"></a>Sincronizar um dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 3. Selecione **Dispositivos** > **Todos os dispositivos**.
 4. Na lista de dispositivos que gere, selecione um dispositivo para abrir o seu painel de *visão geral* e, em seguida, selecione **Sync**.
 5. Para confirmar, selecione **Sim**.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54cb4028001f2e6b64cba639cb27c58b31db172f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326885"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326802"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Criar um papel personalizado em Intune
 
@@ -34,13 +34,13 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 
 ## <a name="to-create-a-custom-role"></a>Para criar uma função personalizada
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > **Criar**.
+1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **Todas as funções** > **Create**.
 
 2. Na página **Basics,** introduza um nome e descrição para o novo papel e, em seguida, escolha **Next**.
 
 3. Na página **Permissões,** escolha as permissões que pretende utilizar com esta função.
 
-4. Na página **Scope (Tags),** escolha as etiquetas para este papel. Este papel pode aceder a recursos que também têm estas tags. Selecione **Next**.
+4. Na página **Scope (Tags),** escolha as etiquetas para este papel. Este papel pode aceder a recursos que também têm estas tags. Escolha **Seguinte**.
 
 5. Na página **Review + criar** página, quando terminar, escolha **Criar**. O novo papel é apresentado na lista nas **funções Intune - Todas as funções.**
 
@@ -48,7 +48,7 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 
 Também pode copiar um papel existente.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > selecione a caixa de verificação para um papel na lista > **Duplicate**.
+1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > selecione a caixa de verificação para um papel na lista > **Duplicate**.
 
 2. Na página **Basics,** insira um nome. Certifique-se de usar um nome único.
 

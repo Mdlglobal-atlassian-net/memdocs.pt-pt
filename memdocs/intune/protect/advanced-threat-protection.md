@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085203"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323290"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Impor cumprimento do Microsoft Defender ATP com acesso condicional em Intune
 
@@ -72,7 +72,7 @@ O primeiro passo que dá é configurar a ligação serviço-a-serviço entre int
 
 Só precisa de permitir ao Defender ATP uma única vez por inquilino.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a segurança endpoint** > **Microsoft Defender ATP**, e, em seguida, selecione **Abra o Microsoft Defender Security Center**.
 
@@ -86,7 +86,7 @@ Só precisa de permitir ao Defender ATP uma única vez por inquilino.
 
     3. Selecione **Guardar preferências**.
 
-4. Volte ao **Microsoft Defender ATP** no Microsoft Endpoint Manager Admin Center. No âmbito **das definições**de política de conformidade do MDM, desligue a **versão 10.0.15063 dos dispositivos Windows e acima para** o Microsoft Defender ATP to **On**.
+4. Volte ao **Microsoft Defender ATP** no centro de administração do Microsoft Endpoint Manager. No âmbito **das definições**de política de conformidade do MDM, desligue a **versão 10.0.15063 dos dispositivos Windows e acima para** o Microsoft Defender ATP to **On**.
 
 5. Selecione **Guardar**.
 
@@ -112,7 +112,7 @@ Quando estabeleceu a ligação ao Microsoft Defender ATP, intune recebeu um paco
 
 ### <a name="create-the-device-configuration-profile"></a>Criar o perfil de configuração do dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza um **Nome** e uma **Descrição**.
 4. Em **Plataforma**, selecione **Windows 10 e versões posteriores**
@@ -138,7 +138,7 @@ A política de conformidade determina o nível de risco que considera aceitável
 
 Se não estiver familiarizado com a criação de uma política de conformidade, consulte o Procedimento [de Política Criar um](../protect/create-compliance-policy.md#create-the-policy) procedimento de conformidade no artigo Microsoft *Intune.* As seguintes informações são específicas para configurar o Defender ATP como parte de uma política de conformidade.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **políticas** de conformidade > **políticas** > **criar políticas**.
 
@@ -162,9 +162,9 @@ Se não estiver familiarizado com a criação de uma política de conformidade, 
 A política de Acesso Condicional bloqueia o acesso a recursos para dispositivos que excedam o nível de ameaça que definiu na sua política de conformidade. Pode bloquear o acesso do dispositivo a recursos corporativos, como o SharePoint ou o Exchange Online.
 
 > [!TIP]
-> O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acedido a partir do Microsoft Endpoint Manager Admin Center é o mesmo nó a que o *Azure AD*.
+> O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acedido a partir do centro de administração do Microsoft Endpoint Manager é o mesmo nó a que o *Azure AD*.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **segurança endpoint** > **acesso condicional** > **Nova política.**
 
@@ -188,7 +188,7 @@ A política de Acesso Condicional bloqueia o acesso a recursos para dispositivos
 
 Em seguida, monitorize o estado dos dispositivos que têm a política de conformidade ATP do Microsoft Defender.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **monitorizar** > conformidade com a **política**.
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e4d3e150e8e4ed890de4717c6093104e2b49d1f
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274885"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326943"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas iOS/iPadOS problemas de inscrição no microsoft Intune
 
@@ -136,10 +136,10 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 **Causa:** O utilizador tenta inscrever mais dispositivos do que o limite de inscrição do dispositivo.
 
 #### <a name="resolution"></a>Resolução
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os Dispositivos**, e verifique o número de dispositivos que o utilizador inscreveu.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os Dispositivos**, e verifique o número de dispositivos que o utilizador inscreveu.
     > [!NOTE]
     > Deve também ter o logon do utilizador afetado no portal do [utilizador Intune](https://portal.manage.microsoft.com/) e verificar os dispositivos que se inscreveram. Podem existir dispositivos que aparecem no portal do [utilizador intune,](https://portal.manage.microsoft.com/) mas não no [portal de administração Intune,](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)estes dispositivos também contam para o limite de inscrição do dispositivo.
-2. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > Restrições de **Inscrição** > verifique o limite de inscrição do dispositivo. Por predefinição, o limite é fixado para 15. 
+2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > restrições de **inscrição** > verifique o limite de inscrição do dispositivo. Por predefinição, o limite é fixado para 15. 
 3. Se o número de dispositivos matriculados atingir o limite, remova dispositivos desnecessários ou aumente o limite de inscrição do dispositivo. Como cada dispositivo matriculado consome uma licença Intune, recomendamos que remova sempre os dispositivos desnecessários primeiro.
 4. Reinscreva o dispositivo.
 
@@ -229,7 +229,7 @@ Quando liga um dispositivo gerido pelo ADE que é atribuído a um perfil de insc
 #### <a name="resolution"></a>Resolução
 
 1. Editar o perfil de inscrição. Pode fazer qualquer alteração no perfil. O objetivo é atualizar o tempo de modificação do perfil.
-2. Synchronize dispositivos geridos pelo ADE: No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matricular** > Programa de **Inscrição** ; escolha agora um token > **Sync.** É enviado um pedido de sincronização para a Apple.
+2. Synchronize dispositivos geridos pelo ADE: No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **iOS matricula** do programa > **Inscrição tokens** > escolha agora um token > **Sync.** É enviado um pedido de sincronização para a Apple.
 
 ### <a name="ade-enrollment-stuck-at-user-login"></a>Inscrição aDE presa no login do utilizador
 Quando liga um dispositivo gerido pelo ADE que lhe é atribuído um perfil de inscrição, a configuração inicial fica depois de introduzir credenciais.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 958acb7c8e5342d4c85c94a8e6f99cd9f1fee7e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329841"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322672"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configurar conector de certificado intune para a plataforma DigiCert PKI
 
@@ -168,7 +168,7 @@ Se utilizar o conector apenas com o DigiCert CA, pode utilizar as instruções d
 
 Descarregue a mais recente versão do Intune Certificate Connector do portal de administração Intune e siga estas instruções.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **Conectores** de Certificado >  **+ Adicionar**.
 
@@ -239,7 +239,7 @@ Os certificados PKCS que irá implantar para dispositivos geridos intune devem s
 
 2. Criar um perfil de certificado fidedigno no portal Intune:
 
-   a. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+   a. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    b. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 
@@ -278,7 +278,7 @@ O perfil do certificado OID está associado a um modelo de perfil de certificado
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Criar um perfil de certificado PKCS
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 
@@ -291,7 +291,7 @@ O perfil do certificado OID está associado a um modelo de perfil de certificado
 
 4. No painel de **certificados PKCS,** configure os parâmetros com os valores da tabela seguinte. Estes valores são obrigados a emitir certificados PKCS de um DigiCert CA, através do Conector de CertificadoIno.
 
-   |Parâmetro de certificado PKCS | Valor | Descrição |
+   |Parâmetro de certificado PKCS | Valor | Description |
    | --- | --- | --- |
    | Autoridade de certificação | pki-ws.symauth.com | Este valor deve ser o serviço base DigiCert CA FQDN sem cortes de rasto. Se não tiver a certeza se este é o serviço base correto FQDN para a sua subscrição DigiCert CA, contacte o suporte ao cliente da DigiCert. <br><br>*Com a mudança de Symantec para DigiCert, este URL permanece inalterado*. <br><br> Se este FQDN estiver incorreto, o Intune Certificate Connector não emitirá certificados PKCS da DigiCert CA.| 
    | Nome da autoridade de certificação | Symantec | Este valor tem de ser a cadeia **Symantec**. <br><br> Se houver alguma alteração a este valor, o Intune Certificate Connector não emitirá certificados PKCS da DigiCert CA.|
@@ -321,7 +321,7 @@ Os registos de serviço do Conector de Certificado Intune estão disponíveis em
 
 | Mensagem de problema/erro | Passos de resolução |
 | --- | --- |
-| Incapaz de assinar com a conta de administrador intune no NDES Connector UI. | Isto pode acontecer quando o conector de certificados no local não está ativado no Microsoft Endpoint Manager Admin Center. Para resolver esta questão: <br><br> 1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Selecione **a administração do inquilino** > **Conectores e fichas** > **conectores**de certificados . <br> 3. Localize o conector do certificado e certifique-se de que está ativado. <br><br> Depois de completar os passos anteriores, tente iniciar sessão com a mesma conta de administrador intune no NDES Connector UI. |
+| Incapaz de assinar com a conta de administrador intune no NDES Connector UI. | Isto pode acontecer quando o conector de certificados no local não está ativado no centro de administração do Microsoft Endpoint Manager. Para resolver esta questão: <br><br> 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Selecione **a administração do inquilino** > **Conectores e fichas** > **conectores**de certificados . <br> 3. Localize o conector do certificado e certifique-se de que está ativado. <br><br> Depois de completar os passos anteriores, tente iniciar sessão com a mesma conta de administrador intune no NDES Connector UI. |
 | Não foi possível encontrar o certificado do Conector do NDES. <br><br> System.ArgumentNullException: O valor não pode ser nulo. | O Intune Certificate Connector mostrará este erro se a conta de administrador de inquilino do Intune nunca tiver iniciado sessão na IU do Conector do NDES. <br><br> Se este erro persistir, reinicie o Conector de Serviço Intune. <br><br> 1. **Serviços abertos.msc**. <br> 2. Selecione o serviço de **conector intune**. <br> 3. Clique à direita e selecione **Reiniciar**.|
 | Conector do NDES – IssuePfx – Exceção Genérica: <br> System.NullReferenceException: a referência do objeto não foi definida para uma instância de um objeto. | Este erro é transitório. Reiniciar o Conector de Serviço Intune. <br><br> 1. **Serviços abertos.msc**. <br> 2. Selecione o serviço de **conector intune**. <br> 3. Clique à direita e selecione **Reiniciar**. |
 | Provedor de DigiCert - Falhou na política da DigiCert. <br><br>"A operação tem esgotado." | O Conector de Certificado Intune recebeu um erro de tempo de funcionamento enquanto comunicava com o DigiCert CA. Se este erro continuar a ocorrer, aumente o valor de tempo de ligação e tente novamente. <br><br> Para aumentar o tempo de ligação: <br> 1. Vá ao computador DoConector NDES. <br>2. Abra o ficheiro **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** file in Notepad. <br> 3. Aumente o valor de tempo para o seguinte parâmetro: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Reiniciar o serviço de conector de certificado intune. <br><br> Se o problema persistir, contacte o apoio ao cliente da DigiCert. |

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 64b71c17a14ff77f828d4be69ed820b21bd7a246
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085216"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323351"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatizar e-mail e adicionar ações para dispositivos não conformes em Intune
 
@@ -71,7 +71,7 @@ Existem vários tipos de ação:
 
 Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notificação. Quando um dispositivo não estiver em conformidade, os detalhes que introduzir no modelo são apresentados no e-mail enviado aos utilizadores.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > Políticas de **conformidade** > **Notificações** > **Criar notificação**.
 3. Em princípio, especifique as *seguintes*informações:
 
@@ -102,7 +102,7 @@ Quando cria uma política de conformidade do dispositivo, o Intune cria automati
 
 Além da ação padrão para marcar dispositivos como não conformes, pode adicionar ações opcionais quando criar uma política de conformidade ou atualizar uma política existente.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Políticas de **conformidade** > **Políticas,** selecione uma das suas políticas e, em seguida, selecione **Propriedades**.
 

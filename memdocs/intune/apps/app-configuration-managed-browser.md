@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083643"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323399"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gerir o acesso Web através de um browser protegido por políticas do Microsoft Intune
 
@@ -97,7 +97,7 @@ Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Manag
 > [!TIP]  
 > O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acedido a partir do *Intune* é o mesmo nó acedido a partir do *Azure AD*.  
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > **Acesso Condicional** > **Nova política**.
 3. Adicione o **nome**da política . 
 4. Na secção **Atribuições**, selecione **Condições** > **Aplicações do cliente**. O painel de **aplicações do Cliente** é apresentado.
@@ -138,7 +138,7 @@ O SSO exige que o seu dispositivo seja registado pela aplicação Microsoft Auth
 >[!IMPORTANT]
 >Para aplicar as configurações de aplicações, o browser protegido do utilizador ou outra aplicação no dispositivo já tem de ser gerido pela [política de proteção de aplicações do Intune](app-protection-policy.md).
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > políticas de **configuração** de apps > **adicionar** > **aplicações geridas.**
 3. Na página **Basics** do painel de definição de **aplicações Create,** introduza um **Nome** e **uma Descrição** opcional para as definições de configuração da aplicação.
 4. Escolha **selecione a aplicação pública** e escolha o **Navegador Gerido** e/ou **Edge** para iOS/iPadOS, para Android, ou para ambos.

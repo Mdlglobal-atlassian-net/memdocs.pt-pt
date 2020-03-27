@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f68278e936a85ab21407e55c8d5c18529457938a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331545"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327090"
 ---
 # <a name="set-enrollment-restrictions"></a>Definir restrições de inscrição
 
@@ -46,7 +46,7 @@ As restrições de inscrição específicas que pode criar incluem:
   - Perfil de trabalho android Enterprise
   - iOS/iPadOS
   - macOS
-  - Portal do
+  - Windows
   - Windows Mobile
 - Versão do sistema operativo da plataforma para iOS/iPadOS, administrador de dispositivos Android, perfil de trabalho Android Enterprise, Windows e Windows Mobile. (Apenas as versões do Windows 10 podem ser utilizadas. Deixe em branco se o Windows 8.1 for permitido.)
   - Versão mínima.
@@ -59,7 +59,7 @@ As restrições predefinidas são fornecidas automaticamente para as restriçõe
 
 ## <a name="create-a-device-type-restriction"></a>Criar uma restrição de tipo de dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > Restrições de **inscrição** > **Criar restrições** de restrição > **restrição**do tipo de dispositivo .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **inscrição** > **Criar restrições** de restrição > **restrição**do tipo dispositivo .
 2. Na página **Basics,** dê à restrição um **nome** e **descrição**opcional.
 3. Escolha **O Próximo** para ir à página de definições da **Plataforma.**
 4. No âmbito **da Plataforma,** escolha **Permitir** as plataformas que pretende que esta restrição permita.
@@ -93,7 +93,7 @@ As restrições predefinidas são fornecidas automaticamente para as restriçõe
 
 ## <a name="create-a-device-limit-restriction"></a>Criar uma restrição de limite de dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > **Criar restrições** de restrição > **restrição**de limite de dispositivo .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > **Criar restrições** de restrição > **restrição**de limite de dispositivo .
 2. Na página **Basics,** dê à restrição um **nome** e **descrição**opcional.
 3. Escolha **O Próximo** para ir à página limite do **Dispositivo.**
 4. Para o limite do **dispositivo,** selecione o número máximo de dispositivos que um utilizador pode inscrever.
@@ -126,7 +126,7 @@ Durante as inscrições BYOD, os utilizadores verão uma notificação que os in
 
 Pode alterar as definições para uma restrição de inscrição seguindo os passos abaixo. Estas restrições não efetuam dispositivos que já foram matriculados. A inscrição de dispositivos com o [agente de PC do Intune](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) não pode ser bloqueada com esta funcionalidade.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > escolha a restrição que pretende alterar > **Properties**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > escolha a restrição que pretende alterar > **Properties**.
 2. Escolha **editar** ao lado das definições que pretende alterar.
 3. Na página **Editar,** faça as alterações que deseja e proceda à página **'Rever + guardar',** em seguida, escolha **Guardar**.
 

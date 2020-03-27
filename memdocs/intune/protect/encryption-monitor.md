@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c07fc8102504a9ca3ee5694e8cb9b1d5f8b568bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329373"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322446"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorizar encriptação do dispositivo com Intune
 
 O relatório de encriptação Microsoft Intune é um local centralizado para visualizar detalhes sobre o estado de encriptação de um dispositivo e encontrar opções para gerir as chaves de recuperação do dispositivo. As opções-chave de recuperação disponíveis dependem do tipo de dispositivo que está a ver.
 
-Para encontrar o relatório, inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Dispositivos** > **Monitor**, e, em seguida, em *Configuração,* selecione **relatório de encriptação**.
+Para encontrar o relatório, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Dispositivos** > **Monitor**, e, em seguida, em *Configuração,* selecione **relatório de encriptação**.
 
 ## <a name="view-encryption-details"></a>Ver detalhes de encriptação
 
@@ -188,7 +188,7 @@ Intune suporta múltiplas opções para rodar e recuperar chaves de recuperaçã
 
   Para rodar uma chave de recuperação:
 
-  1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Selecione **Dispositivos** > **Todos os dispositivos**.
   
@@ -216,7 +216,7 @@ Intune suporta múltiplas opções para rodar e recuperar chaves de recuperaçã
 
 Intune fornece acesso à lâmina AD Azure para BitLocker para que possa ver IDs de chave BitLocker e chaves de recuperação para os seus dispositivos Windows 10, a partir do portal Intune. Para ser acessível, o aparelho deve ter as chaves depositadas na AD Azure.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **Todos os dispositivos**.
 

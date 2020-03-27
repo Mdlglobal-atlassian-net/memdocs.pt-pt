@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a6833001b73678557d0c9a911005cf6c80faed5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328417"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322573"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Desativar bloqueio de ativação em dispositivos supervisionados iOS/iPadOS com Intune
 
@@ -74,7 +74,7 @@ Antes de poder desativar o bloqueio de ativação nos dispositivos, deve activar
 
 A ação do dispositivo remoto de ativação Intune **Desativação** remove o bloqueio de ativação de um dispositivo iOS/iPadOS sem necessitar do APPLE ID e da palavra-passe do utilizador. Depois de desativar o bloqueio de ativação, o dispositivo volta a ligar o Bloqueio de Ativação quando a aplicação Find My iPhone começar. Desative o bloqueio de ativação apenas se tiver acesso físico ao dispositivo.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. No painel do **Intune**, selecione **Dispositivos**.
 4. No painel **Dispositivos**, selecione **Todos os dispositivos**.
 5. Na lista de dispositivos que gere, selecione a ação remota do dispositivo **de ativação de ativação desativação.**

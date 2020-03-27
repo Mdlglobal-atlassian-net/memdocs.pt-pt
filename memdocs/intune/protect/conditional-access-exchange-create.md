@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4efae3dca2560c51cb818b6b81dae4a6f3f5188b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329601"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323135"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configure Exchange on-presacesso para Intune
 
@@ -70,7 +70,7 @@ Antes de configurar o Acesso Condicional, verifique se existem as seguintes conf
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Para configurar o Acesso Condicional para dispositivos de perfil de trabalho Android
 
-  1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Implemente a aplicação Gmail ou Nine Work conforme **necessário**.
 
@@ -97,7 +97,7 @@ A aplicação de **correio** nativo no Windows 8.1 e mais tarde (quando inscrito
 
 Antes de poder utilizar o seguinte procedimento para configurar o controlo de acesso exchange on-local, deve instalar e configurar pelo menos um [conector de intercâmbio intune](exchange-connector-install.md) no local para o Exchange on-premido.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vá à **administração do Inquilino** > **Exchange access**, e, em seguida, selecione **exchange on-pre-presacesso**.
 

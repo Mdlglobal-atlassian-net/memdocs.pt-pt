@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c64a860a8d132fafac575545c16573c5fa0c940b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ded5572d5b20ee1c9f59d3f4b253c71e34ef497f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329301"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322852"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Utilize o Windows Hello para negócios em dispositivos Windows 10 com microsoft Intune
 
@@ -42,7 +42,7 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
 
 ## <a name="create-the-device-profile"></a>Criar o perfil do dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 

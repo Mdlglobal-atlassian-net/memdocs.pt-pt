@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08a6ccb30d4397ce5d06483556579c32f3eb2819
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 237f2e5d1a0d6ae6a58ceb8e5f4afb5a27031195
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328369"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326430"
 ---
 # <a name="remove-a-user-from-a-shared-iosipados-device"></a>Remova um utilizador de um dispositivo iOS/iPadOS partilhado
 
@@ -41,7 +41,7 @@ A ação **Remover utilizador** elimina um utilizador selecionado da cache local
 
 ## <a name="remove-a-user"></a>Remover um utilizador
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > **Todos os dispositivos**.
 3. Na lista de dispositivos que gere, selecione um dispositivo iOS/iPadOS.
 4. No painel do dispositivo, selecione **Utilizadores**.

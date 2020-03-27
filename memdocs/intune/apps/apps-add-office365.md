@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 84e77a894e207d5dfb2ffe9247ef449050d46036
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083472"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324952"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Adicione 365 aplicações do Office aos dispositivos windows 10 com microsoft Intune
 
@@ -49,7 +49,7 @@ Antes de poder atribuir, monitorizar, configurar ou proteger aplicações, tem d
 
 ## <a name="select-the-office-365-suite-app-type"></a>Selecione o tipo de aplicativo Office 365 Suite
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. Selecione o **Windows 10** na secção **Suite Office 365** do painel do **tipo Select.**
 4. Clique em **Selecionar**. Os **passos da Suíte Add Office 365** são apresentados.
@@ -211,7 +211,7 @@ A seguinte tabela lista códigos de erro comuns que poderá encontrar e o seu si
 | 1460 (ERROR_TIMEOUT) | Transferência | Falha ao transferir a Ferramenta de Implementação do Office |
 | 13 (ERROR_INVALID_DATA) | - | Não foi possível verificar a assinatura da Ferramenta de Implementação do Office transferida |
 | Código de erro de CertVerifyCertificateChainPolicy | - | Falha na verificação de certificação da Ferramenta de Implementação do Office transferida |
-| 997 | WIP | A instalar |
+| 997 | WIP | Instalar o |
 | 0 | Após a instalação | Instalação concluída com êxito |
 | 1603 (ERROR_INSTALL_FAILURE) | - | Falhou qualquer verificação pré-requisito, como: SxS (Tentei instalar quando 2016 MSI é instalado)Desencontro de versãoOutros |
 | 0x8000ffff (E_UNEXPECTED) | - | Tentativa de desinstalação quando a tecnologia Clique-e-Use do Office não existe no computador |

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 128b63f2b7b789fdd6a11fb196c4d92b14a88cf0
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274834"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326872"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas de registo de dispositivos Windows em Microsoft Intune
 
@@ -60,7 +60,7 @@ Erro 80180003: "Algo correu mal. Este utilizador não está autorizado a inscrev
 Existem várias soluções possíveis para esta questão:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Remova os dispositivos que estavam matriculados
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).    
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
 2. Vá ao **Utilizador** > **todos os utilizadores**.    
 3. Selecione a conta de utilizador afetada e, em seguida, clique em **Dispositivos**.    
 4. Selecione quaisquer dispositivos não utilizados ou indesejados e, em seguida, clique em **Eliminar**. 
@@ -70,12 +70,12 @@ Existem várias soluções possíveis para esta questão:
 > [!NOTE]
 > Este método aumenta o limite de inscrição do dispositivo para todos os utilizadores, e não apenas para o utilizador afetado.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vá para **dispositivos** > Restrições de **inscrição** > **Padrão** (sob restrições de limite de **dispositivo)** > **Propriedades** > **Editar** (ao lado do limite do **dispositivo)** > aumente o limite de **dispositivo** (máximo 15)> Review + **Save**.    
  
 
 ##### <a name="check-device-type-restrictions"></a>Verifique as restrições de tipo de dispositivo
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta de administrador global.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta de administrador global.
 2. Vá aos **Dispositivos** > restrições de **inscrição**e, em seguida, selecione a restrição **predefinida** sob **restrições**do tipo de dispositivo .    
 3. Selecione **Plataformas**, e, em seguida, selecione **Permitir** para **Windows (MDM)** .
 
@@ -201,7 +201,7 @@ Erro: "Houve um problema. A sua organização não suporta esta versão do Windo
 #### <a name="resolution"></a>Resolução
 Para corrigir esta questão num ambiente autónomo intune, siga estes passos: 
  
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolhe **dispositivos** > restrições de **inscrição** > escolha uma restrição do tipo de dispositivo.    
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolhe **dispositivos** > restrições de **inscrição** > escolha uma restrição do tipo de dispositivo.    
 2. Escolha **propriedades** > **Editar** (ao lado das definições da **Plataforma)** > **Permitir** o **Windows (MDM)** .    
 3. Clique em **Rever + Guardar**.    
 
@@ -326,7 +326,7 @@ Outra causa possível para este erro é que o dispositivo AzureAD associado do o
 
 #### <a name="resolution"></a>Resolução
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha > **Dispositivos** > **dispositivos Windows** > **Windows**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha > **Dispositivos** > **Dispositivos Windows** > **Windows**.
 2. Selecione o dispositivo que está experimentando o problema > clique na elipse (...) no lado mais direito.
 3. Selecione **Unassign user** e aguarde que o processo termine.
 4. Verifique se o perfil híbrido Azure AD Autopilot é atribuído antes de voltar a tentar o OOBE.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57c852784d882a0e608d1ada3730b20a3f2172a
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274375"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327412"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
 
@@ -53,7 +53,7 @@ Esta funcionalidade suporta:
 
 Os [certificados](../protect/certificates-configure.md) configuram certificados fidedignos, SCEP e PKCS que são atribuídos aos dispositivos. Estes certificados autenticam os perfis de Wi-Fi, VPN e e-mail.
 
-Esta funcionalidade suporta: 
+Esta funcionalidade suporta:
 
 - Administrador de dispositivos Android
 - Android Enterprise
@@ -84,6 +84,15 @@ Utilize estas definições para controlar a forma como as atualizações de soft
 Esta funcionalidade suporta:
 
 - Windows 10 e posterior
+
+## <a name="derived-credential"></a>Credencial derivada
+
+[Credenciais derivadas](../protect/derived-credentials.md) são certificados em cartões inteligentes que podem autenticar, assinar e encriptar. No Intune, pode criar perfis com estas credenciais para usar em apps, perfis de e-mail, ligação a VPN, S/MIME e Wi-Fi.
+
+Esta funcionalidade suporta:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Funcionalidades do dispositivo
 
@@ -141,7 +150,7 @@ As [definições de educação para Windows 10](education-settings-configure.md)
 
 As [definições de e-mail](email-settings-configure.md) criam, atribuem e monitorizam as definições de e-mail do Exchange ActiveSync nos dispositivos. Os perfis de e-mail ajudam na consistência, reduzem as chamadas de suporte e permitem que os utilizadores finais acedam ao e-mail da empresa nos seus dispositivos pessoais sem precisarem de efetuar qualquer configuração. 
 
-Esta funcionalidade suporta: 
+Esta funcionalidade suporta:
 
 - Administrador de dispositivos Android
 - Android Enterprise
@@ -151,12 +160,13 @@ Esta funcionalidade suporta:
 
 ## <a name="endpoint-protection"></a>Proteção de ponto final
 
-As definições de proteção de [pontofinal para as definições](../protect/endpoint-protection-windows-10.md) bitLocker e Microsoft Defender do Windows 10 configurações para dispositivos Windows 10.
+[A proteção endpoint](../protect/endpoint-protection-configure.md) configura as definições bitLocker e Microsoft Defender para dispositivos Windows 10. E, configure a firewall, gateway e outros recursos em dispositivos macOS.
 
 Para embarcar na Microsoft Defender Advanced Threat Protection (WDATP) com a Microsoft Intune, consulte os [pontos finais da Configuração utilizando ferramentas de Gestão de Dispositivos Móveis (MDM).](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)
 
 Esta funcionalidade suporta:
 
+- macOS
 - Windows 10 e posterior
 
 ## <a name="esim-cellular---public-preview"></a>Rede celular eSIM – pré-visualização pública
@@ -194,6 +204,14 @@ Esta funcionalidade suporta:
 
 As definições de quiosque também estão disponíveis como restrições de dispositivos para [Android,](device-restrictions-android.md#kiosk) [Android Enterprise,](device-restrictions-android-for-work.md#dedicated-device-settings)e [ios/iPadOS.](device-restrictions-ios.md#kiosk)
 
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+O [Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integra-se com a Intune para monitorizar e ajudar a proteger os dispositivos. Estabelece-se níveis de risco e determina-se o que acontece se os dispositivos excederem esse nível. Quando combinado com acesso condicional, pode ajudar a prevenir atividades maliciosas na sua organização.
+
+Esta funcionalidade suporta:
+
+- Windows 10 e posterior
+
 ## <a name="oemconfig"></a>OEMConfig
 
 [OEMConfig](android-oem-configuration-overview.md) é uma norma que permite que os OEMs (fabricantes originais do equipamento) e EMMs (gestão de mobilidade empresarial) criem e ofereçam suporte a recursos específicos do OEM de forma padronizada em dispositivos Android Enterprise. Com o OEMConfig, um OEM cria um esquema que define as funcionalidades de gestão específicas do OEM e incorpora-as numa aplicação carregada no Google Play. O Intune lê o esquema na aplicação e, em seguida, permite que os administradores do Intune configurem as definições no esquema.
@@ -206,11 +224,18 @@ Esta funcionalidade suporta:
 
 [Os scripts PowerShell nos dispositivos Windows 10](../apps/intune-management-extension.md) utilizam a Extensão de Gestão Intune para carregar os scripts PowerShell em Intune e, em seguida, executar estes scripts nos seus dispositivos. Consulte também o que é necessário para usar a extensão, como adicioná-las a Intune, e outras informações importantes.
 
-
 Esta funcionalidade suporta:
 
 - Windows 10 e posterior
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>Ficheiro de preferência
+
+[Os ficheiros preferenciais](preference-file-settings-macos.md) em dispositivos macOS incluem informações sobre apps. Por exemplo, pode utilizar ficheiros preferenciais para controlar as definições do navegador web, personalizar aplicações e muito mais.
+
+Esta funcionalidade suporta:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Dispositivo multiutilizador partilhado
 
@@ -260,14 +285,6 @@ Esta funcionalidade suporta:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (importar apenas)
-- Windows 10 e posterior
-
-## <a name="windows-information-protection-profile"></a>Perfil do Windows Information Protection
-
-O [Windows Information Protection](../protect/windows-information-protection-configure.md) ajuda a proteger contra a fuga de dados sem interferir com a experiência do empregado. Também ajuda a proteger as aplicações e os dados da empresa contra fugas de dados acidentais em dispositivos pertencentes à empresa e em dispositivos pessoais que os funcionários utilizem no trabalho. Para utilizar o Windows Information Protection, não precisa de alterar o seu ambiente nem outras aplicações.
-
-Esta funcionalidade suporta:
-
 - Windows 10 e posterior
 
 ## <a name="zebra-mobility-extensions-mx"></a>Extensões de Mobilidade (MX) da Zebra

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26c30c947c6db1d44d8438aa63972fd5a3f663cd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332817"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326978"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Termos e condições do acesso dos utilizadores
 
@@ -46,7 +46,7 @@ Para saber qual o melhor método para si, confira a [solução de Termos certos 
 ## <a name="create-terms-and-conditions"></a>Criar termos e condições
 Conclua estes passos para criar os termos e condições. O nome a apresentar e a descrição são para utilização administrativa enquanto as propriedades dos termos são apresentadas aos utilizadores no Portal da Empresa.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha a **administração do Arrendatário** > **Termos e Condições**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > Termos e **Condições**.
 2. Selecione **Criar**.
 3. Na página **Basics,** especifique as seguintes informações:
 
@@ -83,7 +83,7 @@ O exemplo a seguir mostra os termos e as condições na consola de administraç�
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorizar os termos e as condições
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha a **administração do Arrendatário** > **Termos e Condições**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > Termos e **Condições**.
 2. Na lista de termos e condições, selecione os termos cuja aceitação pretende ver > **Relatórios de Aceitação**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Trabalhar com múltiplas versões de termos e condições
@@ -93,7 +93,7 @@ Pode editar os seus termos e condições e gerir as respetivas versões. Sempre 
 
 Mantenha o número da versão atual se, por exemplo, estiver a corrigir tipografias ou a mudar de formatação.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > Termos e **Condições** > escolha os termos e condições que pretende modificar > **Propriedades**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > Termos e **Condições** > escolha os termos e condições que pretende modificar > **Propriedades**.
 
 2. No painel **Propriedades**, selecione **Termos e Condições** e, em seguida, modifique o **Título**, **Resumo dos Termos** e **Termos e Condições**, conforme necessário. Se os utilizadores tiverem de voltar a aceitar os novos termos devido às alterações que fez, selecione **Exigir que os utilizadores voltem a aceitar e incrementem o número da versão para**
 

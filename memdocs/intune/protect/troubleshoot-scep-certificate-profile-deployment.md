@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 216cf1a4d84adf717ebf914732eab3d6a169508f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328813"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326614"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Implementação de um perfil de certificado SCEP para dispositivos no Microsoft Intune
 
@@ -36,7 +36,7 @@ Os perfis de certificado SCEP para Android resumem-se ao dispositivo como um Syn
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Valide que o dispositivo Android foi enviado a política
 
-Para validar um perfil foi enviado para o dispositivo que espera, no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 
@@ -63,7 +63,7 @@ Exemplos de entradas-chave:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Validar que o dispositivo iOS/iPadOS foi enviado a política
 
-Para validar um perfil foi enviado para o dispositivo que espera, no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 
@@ -86,11 +86,11 @@ Exemplos de entradas-chave:
 - `ModelName=AC_51bad41f.../LogicalName_1892fe4c...;Hash=-912418295`
 - `PayloadDependencyDomainCertificate`
 
-## <a name="windows"></a>Portal do
+## <a name="windows"></a>Windows
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Validar que o dispositivo Windows foi enviado a política
 
-Para validar o perfil foi enviado para o dispositivo que espera, no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) vai para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar o perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)o[Microsoft Endpoint Manager vai](https://go.microsoft.com/fwlink/?linkid=2109431) para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 

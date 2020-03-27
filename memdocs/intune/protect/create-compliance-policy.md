@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084915"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322998"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Criar uma política de conformidade no Microsoft Intune
 
@@ -53,7 +53,7 @@ Para utilizar as políticas de conformidade de dispositivos:
   - macOS
   - Windows 10
   - Windows 8,1
-  - Wnodows Phone 8.1
+  - Windows Phone 8.1
 
 - Inscreva os dispositivos no Intune (necessário para ver o estado de conformidade).
 
@@ -61,7 +61,7 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 ## <a name="create-the-policy"></a>Criar a política
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **políticas** de conformidade > **políticas** > **criar políticas**.
 
@@ -161,12 +161,12 @@ Se um dispositivo tiver múltiplas políticas de conformidade e estados de confo
 
 |Estado  |Gravidade  |
 |---------|---------|
-|Desconhecido     |1|
+|Unknown     |1|
 |NotApplicable     |2|
-|Compatível|3|
+|conformidade|3|
 |InGracePeriod|4|
 |NonCompliant|5|
-|Error|6|
+|Erro|6|
 
 Quando um dispositivo tem múltiplas políticas de conformidade, é atribuído o nível de gravidade mais elevado de todas as políticas a esse dispositivo.
 

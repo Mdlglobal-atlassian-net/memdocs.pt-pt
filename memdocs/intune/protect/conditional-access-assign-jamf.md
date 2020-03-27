@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219848"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323096"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Impor a conformidade em Macs geridos com o Jamf Pro
 
@@ -37,7 +37,7 @@ Os procedimentos deste artigo requerem acesso às consolas Intune e Jamf Pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configurar políticas de conformidade de dispositivos no Intune
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > políticas de **conformidade**. Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
 
@@ -114,7 +114,7 @@ Se o teste de ligação da consola Jamf Pro falhar, reveja a configuração do J
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Remover um dispositivo gerido por Jamf do Intune
 
-Para remover um dispositivo gerido pelo Jamf, abra o Microsoft Endpoint Manager Admin Center e selecione **Dispositivos** > **Todos os dispositivos,** selecione o dispositivo e, em seguida, selecione **Delete**.  A eliminação de dispositivos em massa pode ser ativada ao selecionar múltiplos dispositivos e clicar em **Eliminar**.
+Para remover um dispositivo gerido pelo Jamf, abra o centro de administração do Microsoft Endpoint Manager e selecione **Dispositivos** > **Todos os dispositivos,** selecione o dispositivo e, em seguida, selecione **Delete**.  A eliminação de dispositivos em massa pode ser ativada ao selecionar múltiplos dispositivos e clicar em **Eliminar**.
 
 Obtenha informações sobre como remover um dispositivo gerido pelo [Jamf nos docs Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Também pode apresentar um bilhete de apoio com suporte ao [Jamf](https://www.jamf.com/support/) para obter ajuda adicional. 
 

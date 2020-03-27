@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd5090e8c0afb8e8a3e6c989561c36acae5d5d0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329585"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323012"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrar o Jamf Pro com o Intune para conformidade
 
@@ -113,7 +113,7 @@ Para ligar intune com o Jamf Pro:
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Integrar o Intune com o Jamf Pro
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a administração do Inquilino** > **Conectores e fichas** > gestão de **dispositivos parceiros.**
 
@@ -162,7 +162,7 @@ Se já não utilizar o Jamf Pro para gerir os Macs na sua organização e preten
 
 3. Selecione **Guardar**. O Jamf Pro envia a sua configuração para Intune e a integração será terminada.
 
-4. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 5. Selecione **a administração** do Inquilino > **Conectores e fichas** > **gestão** do dispositivo partner para verificar se o estado está agora **terminado**.
 

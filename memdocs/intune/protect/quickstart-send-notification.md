@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084789"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325467"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Guia de Início Rápido: enviar notificações para dispositivos não conformes
 
@@ -41,7 +41,7 @@ Ao utilizar as políticas de conformidade do dispositivo para bloquear dispositi
 
 ## <a name="sign-in-to-intune"></a>Iniciar sessão no Intune
 
-Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) como [administrador global](../fundamentals/users-add.md#types-of-administrators) ou administrador de [serviço](../fundamentals/users-add.md#types-of-administrators)intune . Se criou uma subscrição intune Trial, a conta com a qual criou a subscrição é o administrador global.
+Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador [global](../fundamentals/users-add.md#types-of-administrators) ou administrador de [serviço](../fundamentals/users-add.md#types-of-administrators)intune . Se criou uma subscrição intune Trial, a conta com a qual criou a subscrição é o administrador global.
 
 ## <a name="create-a-notification-message-template"></a>Criar um modelo de mensagem de notificação
 

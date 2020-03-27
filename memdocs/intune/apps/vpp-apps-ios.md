@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d391bf08d963e26dd91607d7dad0347e77d130ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332357"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325698"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Como gerir aplicações iOS e macOS adquiridas através do Apple Volume Purchase Program com a Microsoft Intune
 
@@ -88,11 +88,11 @@ Migrar os conteúdos e fichas vPP adquiridos existentes para Apps e Livros no Ap
 2. Certifique-se de que todos os compradores de VPP dentro da sua organização completaram o passo 1 antes de prosseguir.
 3. Verifique se todas as aplicações e licenças adquiridas migraram para Apps e Livros no Apple Business Manager ou Apple School Manager.
 4. Descarregue o novo token de localização indo para **apple business (ou school) Manager** > **Definições** > **Apps and Books** > My Server **Tokens**.
-5. Atualização da localização token no Microsoft Endpoint Manager Admin Center indo para a **administração de inquilinos** > **Conectores e tokens** > **tokens Apple VPP** e sincronizar o token.
+5. Atualização da localização token no microsoft Endpoint Manager centro de administração, indo para a **administração tenant** > **Conectores e tokens** > **tokens Apple VPP** e sincronizar o token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Faça upload de um Apple VPP ou ficha de localização
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **a administração do Tenant** > **Conectores e fichas** > **fichas Apple VPP.**
 3. No painel da lista de tokens VPP, selecione **Criar**.
 4. No painel **Criar token VPP**, especifique as seguintes informações:

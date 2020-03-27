@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45c51496b515a526a2c1ea7756dbc3e32fa36892
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325861"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324509"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Como eliminar apenas dados empresariais de aplicações geridas pelo Intune
 
@@ -44,7 +44,7 @@ As políticas de Proteção de Informação do Windows (WIP) podem ser implement
 
 ## <a name="create-a-wipe-request"></a>Criar um pedido de apagamento
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **app limpeza seletiva** > Criar pedido de **limpeza**.<br>
    O painel de pedido de **limpeza Create** é apresentado.
 3. Clique em **Selecionar utilizador,** escolha o utilizador cujos dados da aplicação pretende limpar e clique em **Selecionar** na parte inferior do painel de **utilizadores Select.**

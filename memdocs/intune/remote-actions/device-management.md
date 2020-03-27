@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4acb2317ea2147f25ef5b19c7d92ae795df36629
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325025"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325273"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>O que é a gestão de dispositivos do Microsoft Intune?
 
@@ -33,7 +33,7 @@ A carga de trabalho dos **Dispositivos** dá-lhe informações sobre os disposit
 
 ## <a name="get-to-your-devices"></a>Aceder aos seus dispositivos
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos**. Esta vista mostra informações detalhadas sobre os dispositivos dos utilizadores e o que pode fazer com as mesmas, incluindo:
 
    - **A visão geral** mostra uma imagem visual dos dispositivos matriculados, quantos dispositivos estão a usar as diferentes plataformas, e muito mais.

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd2add4751601ccecc109bd937aa49212503815c
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: b33b33415628dab471d1d4951e141c2ce718eaa0
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274868"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326668"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
-Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Também pode encontrar [avisos importantes, lançamentos](#notices) [anteriores](whats-new-archive.md)e informações sobre [como as atualizações de serviço intune são lançadas.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) 
+Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft Endpoint Manager no centro de administração](https://go.microsoft.com/fwlink/?linkid=2109431). Também pode encontrar [avisos importantes, lançamentos](#notices) [anteriores](whats-new-archive.md)e informações sobre [como as atualizações de serviço intune são lançadas.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) 
 
 > [!Note]
 > Cada [atualização mensal](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) pode demorar até três dias a ser lançada e estará na seguinte ordem:
@@ -405,7 +405,7 @@ Atualizámos o nome da opção no centro de administração do Microsoft Endpoin
 ### <a name="role-based-access-control"></a>Controlo de acesso baseado em funções
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Intune Roles alterações na interface do utilizador<!--5801612   -->
-A interface de utilizador do [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **administração** do Inquilino > **Roles** foi melhorada para um design mais fácil de usar e intuitivo. Esta experiência fornece as mesmas definições e detalhes que utiliza agora, no entanto a nova experiência emprega um processo semelhante ao de um assistente.
+A interface de utilizador do [microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **administration** > **Roles** foi melhorada para um design mais fácil de usar e intuitivo. Esta experiência fornece as mesmas definições e detalhes que utiliza agora, no entanto a nova experiência emprega um processo semelhante ao de um assistente.
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>Semana de 17 de fevereiro de 2020
@@ -487,10 +487,10 @@ Aplica-se a:
 ### <a name="device-enrollment"></a>Inscrição de dispositivos
 
 #### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>Bloqueie as inscrições do Android pelo fabricante de dispositivos<!--5197392  -->
-Pode bloquear os dispositivos de inscrição com base no fabricante do dispositivo. Esta funcionalidade aplica-se ao administrador de dispositivos Android e aos dispositivos de perfil de trabalho Android Enterprise. Para ver as restrições de inscrição, vá ao [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > Restrições de **Inscrição**.
+Pode bloquear os dispositivos de inscrição com base no fabricante do dispositivo. Esta funcionalidade aplica-se ao administrador de dispositivos Android e aos dispositivos de perfil de trabalho Android Enterprise. Para ver as restrições de inscrição, vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > restrições de **inscrição**.
 
 #### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>Melhorias no iOS/iPadOS Criar perfil de tipo de inscrição UI<!-- 6055005 -->
-Para a inscrição do utilizador iOS/iPadOS, a página de **Definições** do perfil de **inscrição Create** foi simplificada para melhorar o processo de escolha do **tipo de inscrição,** mantendo a mesma funcionalidade. Para ver o novo UI, vá ao [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > iOS > **iOS** > **Os sios** de inscrição  tipos de **inscrição** > Criar a página **definições** de > de **perfil.** Para mais informações, consulte Criar um perfil de [Inscrição do Utilizador no Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
+Para a inscrição do utilizador iOS/iPadOS, a página de **Definições** do perfil de **inscrição Create** foi simplificada para melhorar o processo de escolha do **tipo de inscrição,** mantendo a mesma funcionalidade. Para ver o novo UI, vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > iOS > **iOS** de **inscrição** > tipos de **inscrição** > Criar página de definições de **perfil** > **Definições.** Para mais informações, consulte Criar um perfil de [Inscrição do Utilizador no Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Gestão de dispositivos

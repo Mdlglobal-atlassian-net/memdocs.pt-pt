@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331389"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326781"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Atribuir licenças aos utilizadores para que estes possam inscrever dispositivos no Intune
 
@@ -30,11 +30,11 @@ Quer adicione utilizadores manualmente ou sincronize a partir do Active Director
 > [!NOTE]
 > Os utilizadores designados pela política de proteção de aplicações Intune e não matricularem os seus dispositivos no Microsoft Intune também exigirão uma licença Intune para receber a política.
 
-## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Atribuir uma licença Intune Microsoft Endpoint Manager Admin Center
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Atribuir uma licença Intune Microsoft Endpoint Manager centro de administração
 
-Pode utilizar o [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) para adicionar manualmente utilizadores baseados na nuvem e atribuir licenças tanto a contas de utilizadores baseados na nuvem como a contas sincronizadas desde o seu Diretório Ativo no local até à AD Azure.
+Pode utilizar o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) para adicionar manualmente utilizadores baseados na nuvem e atribuir licenças tanto a contas de utilizadores baseados na nuvem como a contas sincronizadas desde o seu Diretório Ativo no local até à AD Azure.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores** > **Todos os Utilizadores** > escolha um utilizador > **Licenças** > **Atribuições**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores** > **Todos os Utilizadores** > escolha um utilizador > **Licenças** > **Atribuições**.
 
 2. Escolha a caixa para **Intune** > **Save**.
 
@@ -76,7 +76,7 @@ A forma como comprou o Intune determina as informações da sua subscrição:
 - Se adquiriu o Intune com um número de CC ou uma Fatura, a suas licenças serão baseadas no utilizador.
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Utilizar o PowerShell para gerir seletivamente licenças de utilizador do EMS
-As organizações que utilizam Microsoft Enterprise Mobility + Security (anteriormente denominado Enterprise Mobility Suite) podem ter utilizadores que apenas necessitam do Azure Active Directory Premium ou dos serviços do Intune no pacote EMS. Pode atribuir um ou um subconjunto de serviços através dos [cmdlets da PowerShell do Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).
+As organizações que utilizam Microsoft Enterprise Mobility + Security (anteriormente denominado Enterprise Mobility Suite) podem ter utilizadores que apenas necessitam do Azure Active Directory Premium ou dos serviços do Intune no pacote EMS. Pode atribuir um ou um subconjunto de serviços através dos [cmdlets do PowerShell do Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).
 
 Para atribuir seletivamente licenças de utilizador para serviços do EMS, abra o PowerShell como administrador num computador com o [Módulo Azure Active Directory para Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) instalado. Pode instalar o PowerShell num computador local ou num servidor do ADFS.
 

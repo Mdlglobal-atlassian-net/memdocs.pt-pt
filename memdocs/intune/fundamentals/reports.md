@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63034080c883452edadb3ae7812d936b841910e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330709"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326752"
 ---
 # <a name="intune-reports"></a>Relatórios do Intune
 Os relatórios Microsoft Intune permitem-lhe monitorizar de forma mais eficaz e proativa a saúde e atividade dos pontos finais em toda a sua organização, e também fornece outros dados de reporte em toda a Intune. Por exemplo, poderá ver relatórios sobre a conformidade do dispositivo, a saúde do dispositivo e as tendências do dispositivo. Além disso, pode criar relatórios personalizados para obter dados mais específicos. 
@@ -53,7 +53,7 @@ Os dispositivos não conformes reportam dados normalmente utilizados por funçõ
 
 Pode ver o relatório de **dispositivos não conformes** utilizando os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **dispositivos** > **monitor > ** **dispositivos não conformes**.
 
     ![Relatório de dispositivos não conformes](./media/intune-reports/intune-reports-02.png)
@@ -67,7 +67,7 @@ Os relatórios de conformidade do dispositivo devem ser de natureza ampla e forn
 
 Para ver um relatório gerado do estado do dispositivo, pode utilizar os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Relatórios** para ver o resumo dos relatórios.
 3. Selecione **Conformidade do dispositivo**.
 4. Selecione o **estado de conformidade,** **OS**e filtros **de propriedade** para refinar o seu relatório.
@@ -84,7 +84,7 @@ Para obter informações relacionadas, consulte Impor a conformidade com o [Micr
 
 O relatório de conformidade do dispositivo está disponível como relatório sumário na carga de trabalho dos **Relatórios.** Utilize os seguintes passos para visualizar o relatório de conformidade do dispositivo:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Relatórios** para ver o resumo dos relatórios.
 
     ![Resumo dos Relatórios Intune](./media/intune-reports/intune-reports-01.png)
@@ -97,7 +97,7 @@ Um relatório de tendência de conformidade do dispositivo para as tendências d
 
 Pode ver o relatório **Tendências** utilizando os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Relatórios** > **Tendências** para ver a conformidade do dispositivo ao longo de uma tendência de 60 dias.
 
     ![Relatório de tendências insintonizado](./media/intune-reports/intune-reports-03.png)
@@ -112,7 +112,7 @@ Um relatório especializado de exemplo iria corelate dados de propriedade do dis
 
 Pode criar e ver relatórios personalizados utilizando os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Relatórios** > **Definições de diagnóstico** adicione uma [definição de diagnóstico](reports.md#diagnostic-settings).
 
     ![Resumo dos Relatórios Intune](./media/intune-reports/intune-reports-04.png)

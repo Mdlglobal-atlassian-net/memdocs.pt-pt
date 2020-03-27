@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73173d599c3d19bb39090b34e0c5f6ffec5753fe
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083857"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324736"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Adicionar aplicações ao Microsoft Intune 
 
@@ -144,7 +144,7 @@ Considere os seguintes pontos antes de começar a adicionar e a atribuir as apli
 > [!IMPORTANT]
 > Se alterar o nome da aplicação através do portal do Azure no Intune após ter implementado e instalado a aplicação, a mesma deixará de poder ser visada através de comandos.
 
-## <a name="cloud-storage-space"></a>Espaço de armazenamento na cloud
+## <a name="cloud-storage-space"></a>Espaço de armazenamento na nuvem
 Todas as aplicações que criar com o tipo de instalação do instalador de software (por exemplo, uma aplicação de linha de negócio) são empacotadas e carregadas para o armazenamento na cloud do Intune. Uma subscrição de avaliação do Intune inclui 2 gigabytes (GB) de armazenamento baseado na cloud, o qual é utilizado para armazenar aplicações e atualizações geridas. Uma subscrição completa não limita a quantidade de armazenamento total.
 
 Requisitos de espaço de armazenamento na cloud:
@@ -161,7 +161,7 @@ As categorias de aplicações podem ser utilizadas para o ajudar a ordenar as ap
 
 Quando adiciona uma aplicação ao Intune, é-lhe dada a opção de selecionar a categoria que quiser. Utilize os tópicos das plataformas específicas para adicionar uma aplicação e atribuir categorias. Para criar e editar as suas próprias categorias, utilize o seguinte procedimento:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Apps** > categorias de **Aplicações.**  
     O painel **Categorias de aplicações** apresenta uma lista de categorias atuais. 
 5. Realize um dos seguintes procedimentos:

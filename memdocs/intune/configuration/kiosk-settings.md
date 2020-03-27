@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 778ce3e6d069347522a98977da65d651e059e41c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086892"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327387"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Windows 10 e Windows Holographic para configurações de dispositivos empresariais funcionam como um quiosque dedicado usando Intune
 
 Nos dispositivos Windows 10, utilize o Intune para executar dispositivos como um quiosque, por vezes conhecido como um dispositivo dedicado. Um dispositivo em modo quiosque pode executar uma aplicação, ou executar muitas aplicações. Você pode mostrar e personalizar um menu inicial, adicionar diferentes aplicações, incluindo aplicações Win32, adicionar uma página inicial específica a um navegador web, e muito mais. 
 
-Esta funcionalidade aplica-se aos dispositivos em execução:
+Esta funcionalidade aplica-se a:
 
 - Windows 10 e posterior
 - Windows Holographic for Business
+
+Para criar perfis de quiosque para outras plataformas, consulte o administrador de [dispositivos Android,](device-restrictions-android.md#kiosk) [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)e [iOS/iPadOS.](device-restrictions-ios.md#kiosk)
 
 O Intune suporta um perfil de quiosque por dispositivo. Se precisar de vários perfis de quiosque num só dispositivo, poderá utilizar um [OMA-URI personalizado](custom-settings-windows-10.md).
 
@@ -69,7 +71,9 @@ O perfil é criado e mostrado na lista de perfis. Em seguida, [atribua](device-p
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 
 Pode criar perfis de quiosque para dispositivos que executem as seguintes plataformas:
+
 - [Administrador de dispositivos Android](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
 - [Windows 10 e posterior](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

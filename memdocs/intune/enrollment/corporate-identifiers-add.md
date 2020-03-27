@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90c3445110eb9f85493a9280199c70a478f5ef52
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256798"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327156"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar os dispositivos como pertencentes à empresa
 
@@ -85,7 +85,7 @@ Se visualizar este ficheiro .csv num editor de texto, este é apresentado como:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Carregar uma lista .csv de identificadores empresariais
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **inscrever dispositivos** > **identificadores de dispositivos corporativos** > **Adicionar** > carregar **ficheiro CSV**de upload .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **Inscrever dispositivos** > **identificadores de dispositivos corporativos** > **adicionar** > carregar **ficheiro CSV**de upload .
 
 2. No painel **Adicionar identificadores**, especifique o tipo de identificador, **IMEI** ou **Série**.
 
@@ -95,7 +95,7 @@ Se visualizar este ficheiro .csv num editor de texto, este é apresentado como:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Introduzir identificadores empresariais manualmente
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **inscrever dispositivos** > **identificadores de dispositivos corporativos** > **adicionar** > **Enter manualmente**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **Inscrever dispositivos** > **identificadores de dispositivos corporativos** > **adicionar** > **Enter manualmente**.
 
 2. No painel **Adicionar identificadores**, especifique o tipo de identificador, **IMEI** ou **Série**.
 
@@ -109,7 +109,7 @@ Os dispositivos importados não são necessariamente inscritos. Os dispositivos 
 
 ## <a name="delete-corporate-identifiers"></a>Eliminar identificadores empresariais
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **Inscrever dispositivos** > **identificadores de dispositivos corporativos**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **dispositivos** > **inscrever dispositivos** > **identificadores de dispositivos corporativos**.
 2. Selecione os identificadores de dispositivo que pretende eliminar e selecione **Eliminar**.
 3. Confirme a eliminação.
 
@@ -123,7 +123,7 @@ Para obter especificações detalhadas sobre os Identificadores Internacionais d
 As propriedades dos dispositivos apresentam a **Propriedade** para os registos de cada dispositivo no Intune. Enquanto administrador, pode especificar dispositivos como **Pessoal** ou **Empresarial**. Quando o tipo de propriedade de um dispositivo é alterado de Corporate para Personal, intune elimina todas as informações da aplicação previamente recolhidas desse dispositivo no prazo de 7 dias. Se aplicável, intune também eliminará o número de telefone registado. 
 
 **Para alterar a propriedade dos dispositivos:**
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **Todos os dispositivos** > escolha o dispositivo.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os dispositivos** > escolha o dispositivo.
 2. Selecione **Propriedades**.
 3. Especifique a **Propriedade do dispositivo** como **Pessoal** ou **Empresarial**.
 

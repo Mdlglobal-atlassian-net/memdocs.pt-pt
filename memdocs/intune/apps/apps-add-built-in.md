@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81572ba929d97bd7c866d92a7536900201d7eb86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326045"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324934"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Adicionar aplicações incorporadas ao Microsoft Intune
 
@@ -37,7 +37,7 @@ Nas versões anteriores da consola do Intune, o Intune disponibilizava várias a
 ## <a name="add-a-built-in-app"></a>Adicionar uma aplicação incorporada
 
 Para adicionar uma aplicação incorporada às suas aplicações disponíveis no Microsoft Intune, faça o seguinte:
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. No painel do **tipo select,** sob os tipos de **aplicativos da Loja** disponíveis, selecione app **Built-In**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.

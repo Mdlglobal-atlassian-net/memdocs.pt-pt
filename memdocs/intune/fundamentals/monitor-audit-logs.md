@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a9d3ed650f9c366778427cee2f525dc6d9d90f9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331129"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326738"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Utilize registos de auditoria para monitorizar e monitorizar eventos no Microsoft Intune
 
@@ -40,7 +40,7 @@ Os utilizadores com as seguintes permissões podem rever os registos de auditori
 
 Pode rever os registos de auditoria no grupo de monitorização para cada carga horária intune:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **a administração do Inquilino** > **Registos de Auditoria.**
 3. Para filtrar os resultados, selecione **Filter** e refine os resultados utilizando as seguintes opções.
     - **Categoria**: tais como **Conformidade,** **Dispositivo**e **Função**.

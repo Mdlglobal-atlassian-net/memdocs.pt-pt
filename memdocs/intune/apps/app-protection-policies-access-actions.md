@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4e3f058e1edef4833959868201c120de93ff85c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326301"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323793"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Limpe seletivamente os dados utilizando ações de lançamento condicional da política de proteção de aplicações em Intune
 
@@ -33,7 +33,7 @@ Com estas definições, pode eliminar dados da empresa explicitamente do disposi
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Criar uma política de proteção de aplicações utilizando ações de lançamento condicional
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > Políticas de proteção de **aplicações**.
 3. Clique na **política Criar** e selecione a plataforma do dispositivo para a sua apólice. 
 4. Clique em **Configurar definições obrigatórias** para ver a lista de definições disponíveis a configurar para a política. 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4cf4948500d8b664d24c6766ad45d909dda541c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325929"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324663"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Adicione o Microsoft Defender ATP aos dispositivos macOS utilizando o Microsoft Intune
 
@@ -39,7 +39,7 @@ Antes de poder implementar, configurar, monitorizar ou proteger aplicações, de
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Adicione o Microsoft Defender ATP ao Intune
 Pode adicionar o Microsoft Defender ATP ao Intune utilizando os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. Na lista do **tipo App** no ATP do **Microsoft Defender,** selecione **macOS**.
 

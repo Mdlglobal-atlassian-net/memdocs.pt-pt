@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bdb5649450703215add20b88c262c0aa27e546e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325009"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325032"
 ---
 # <a name="rename-a-device-in-intune"></a>Mude o nome de um dispositivo em Intune
 
@@ -36,7 +36,7 @@ Esta funcionalidade não suporta atualmente renomear dispositivos híbridos Azur
 
 ## <a name="rename-a-device"></a>Mude o nome de um dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Escolha **Dispositivos** > **Todos os dispositivos** > escolha um dispositivo > **...** dispositivo ** > Rename**.
 4. Na lâmina do **dispositivo Rename,** digite o novo nome na caixa de texto. Pode usar letras, números e hífenes. O nome deve conter pelo menos uma letra ou hífen.
 5. Se pretender reiniciar o dispositivo depois de o renomear, escolha **Sim** ao lado do **Restart após o renome .**

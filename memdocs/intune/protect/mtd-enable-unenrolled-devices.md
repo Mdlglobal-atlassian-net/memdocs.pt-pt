@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e14713ef97896fd73dd0b7f8e819005f67dca492
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325365"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322436"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Ativar o conector de defesa de ameaças móveis em Intune para dispositivos não matriculados
 
@@ -56,7 +56,7 @@ Para ver as políticas clássicas de acesso condicional, em [Azure,](https://por
 
 ## <a name="to-enable-the-mtd-connector"></a>Para ativar o conector da MTD
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **Defesa de Ameaças Móveis.**
 

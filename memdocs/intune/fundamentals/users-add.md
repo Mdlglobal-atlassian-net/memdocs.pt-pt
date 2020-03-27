@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2814c1a7cc4dcb111e3454a6d359679df09c57b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330149"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326701"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Adicionar utilizadores e conceder permissões administrativas no Intune
 
@@ -37,7 +37,7 @@ Pode adicionar utilizadores à sua subscrição do Intune manualmente através d
 
 1. Inicie sessão no [centro de administração do Microsoft 365](https://admin.microsoft.com) com uma conta de administrador de gestão de utilizadores ou conta de administrador global.
 2. No menu do Office 365, selecione **Administrador**.
-3. No Centro de administração, selecione **Adicionar um utilizador**.
+3. No Centro de Administração, selecione **Adicionar um utilizador**.
 
    ![Captura de ecrã da secção Adicionar utilizador](./media/users-add/office-add-user.png)
 
@@ -57,7 +57,7 @@ Pode adicionar utilizadores à sua subscrição do Intune manualmente através d
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Adicionar utilizadores do Intune no portal do Azure
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **utilizadores** > **todos os utilizadores**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **utilizadores** > **todos os utilizadores**.
 2. No Centro de administração, selecione **Novo utilizador**.
 3. Especifique os seguintes detalhes de utilizador:
    - **Nome**
@@ -105,7 +105,7 @@ Atribua uma ou mais permissões de administrador aos utilizadores. Estas permiss
 - **Administrador global** (Office 365 e Intune) – acede a todas as funcionalidades administrativas no Intune. Por defeito, a pessoa que se inscreve no Intune torna-se uma administração global. Os administradores globais são os únicos administradores que podem atribuir outras funções de administração. Pode ter mais do que um administrador global na sua organização. Como melhor prática, recomendamos que apenas algumas pessoas na sua empresa tenham esta função para reduzir os riscos para o seu negócio.
 - **Administrador de palavras-passe** (Office 365 e Intune) – repõe palavras-passe, faz a gestão de pedidos de serviço e monitoriza o estado de funcionamento do serviço. Os administradores de palavras-passe estão limitados à reposição de palavras-passe para os utilizadores.
 - **Administrador de serviços** (Office 365 e Intune) – abre pedidos de suporte com a Microsoft e vê o dashboard do serviço e o centro de mensagens. Tem permissões de "visualizar apenas" exceto para a abertura e leitura de pedidos de suporte.
-- **Administrador de faturação** (Office 365 e Intune) – efetua compras, faz a gestão de subscrições e pedidos de suporte e monitoriza o estado de funcionamento do serviço.
+- **Administrador de faturação** – (Office 365 e Intune) efetua compras, faz a gestão de subscrições e pedidos de suporte e monitoriza o estado de funcionamento do serviço.
 - **Administrador de utilizadores** (Office 365 e Intune) – repõe palavras-passe, monitoriza o estado de funcionamento do serviço, adiciona e elimina contas de utilizador e faz a gestão de pedidos de serviço. O administrador da gestão de utilizadores não pode eliminar um administrador global, criar outras funções de administrador ou repor palavras-passe para outros administradores.
 - **Administrador do Serviço Intune** – todas as permissões de Administrador Global do Intune, exceto a permissão para criar utilizadores com opções de **Função de Diretório**.
 

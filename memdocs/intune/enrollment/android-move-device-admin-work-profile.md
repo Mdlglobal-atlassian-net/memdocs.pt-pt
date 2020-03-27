@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7126d3d3a8567a2567afc116037d67ffa1a6c8b2
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274699"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327279"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Mover dispositivos Android de administrador de dispositivo para gestão de perfis de trabalho
 
@@ -45,7 +45,7 @@ Quando os utilizadores virem que estão fora de conformidade por esta razão, po
 
 ## <a name="create-device-compliance-policy"></a>Criar a política de conformidade do dispositivo
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > políticas de **conformidade** > **Políticas** > **Criar Políticas**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > políticas de **conformidade** > **Políticas** > **Criar Políticas**.
 
     ![Criar política](./media/android-move-device-admin-work-profile/create-policy.png)
 

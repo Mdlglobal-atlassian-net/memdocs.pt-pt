@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219831"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326185"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Encontre o utilizador principal de um dispositivo Intune
 
@@ -30,7 +30,7 @@ O utilizador principal, também conhecido como User Device Affinity, é uma prop
 
 ## <a name="find-a-devices-primary-user"></a>Encontre o principal utilizador de um dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Escolha **Dispositivos** > escolha um dispositivo.
 3. Na página **'Visão Geral',** pode ver o utilizador principal listado.
 
@@ -38,7 +38,7 @@ O utilizador principal, também conhecido como User Device Affinity, é uma prop
 
 O utilizador principal de um dispositivo pode ser atualizado para dispositivos Windows 10 dispositivos que sejam Azure AD Joined ou Hybrid Azure AD Joined.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Escolha **dispositivos** > **Todos os dispositivos** > escolha um dispositivo > **Propriedades** > Alterar o **utilizador primário**.
 3. Selecione um novo utilizador e escolha **Selecionar**.
 

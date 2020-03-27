@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81246598fce3c03c95d9fd052e058749932bff4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 45e1d022f4b8d77684e22ec17cd3b1b169a06216
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326461"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323456"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configure o aplicativo de ecrã home gerido pela Microsoft para Android Enterprise
 
@@ -36,7 +36,7 @@ Normalmente, se as definições estiverem disponíveis através da configuraçã
 > [!NOTE]
 > Atualmente é possível, e aconselhável, definir aplicações listadas por permitir e ligações web fixas através de **Apps** e **configuração do Dispositivo**. Para obter a lista completa de definições disponíveis na **configuração do Dispositivo** que impactam o Ecrã Home Gerido, consulte [as definições do dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-Em primeiro lugar, navegue para o [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione **Apps** > políticas de **configuração**de apps . Adicione uma política de configuração para **dispositivos geridos** que executem **o Android** e escolha o Ecrã **Home Gerido** como aplicação associada. Clique nas definições de **Configuração** para configurar as diferentes definições de Ecrã Home Gerido disponíveis. 
+Em primeiro lugar, navegue para o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione **Apps** > políticas de **configuração**de apps . Adicione uma política de configuração para **dispositivos geridos** que executem **o Android** e escolha o Ecrã **Home Gerido** como aplicação associada. Clique nas definições de **Configuração** para configurar as diferentes definições de Ecrã Home Gerido disponíveis. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Escolher um formato de configuração
 
@@ -57,7 +57,7 @@ O designer de configuração permite-lhe selecionar configurações pré-povoada
 
 A tabela seguinte lista as teclas de configuração disponíveis do Ecrã Home Gerido, tipos de valor, valores predefinidos e descrições. A descrição fornece o comportamento esperado do dispositivo com base nos valores selecionados. As teclas de configuração que são desativadas no Designer de Configuração não estão listadas na tabela.
 
-| Chave de configuração | Tipo de Valor | Valor Predefinido | Descrição |
+| Chave de configuração | Tipo de Valor | Valor Predefinido | Description |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Definir tamanho da grelha | cadeia | Automático | Permite-lhe definir o tamanho da grelha para as aplicações serem posicionadas no ecrã principal gerido. Pode definir o número de linhas e colunas de aplicações para definir o tamanho da grelha no formato seguinte `columns;rows`. Se definir o tamanho da grelha, o número máximo de aplicações que serão mostradas em linha no ecrã principal seria o número de linhas que definiu e o número máximo de aplicações que serão mostradas numa coluna no ecrã principal seria o número de colunas que definiu. |
 | Ativar o crachá de notificações | bool | FALSO | Permite o crachá de notificação para ícones de aplicações que mostram o número de novas notificações na aplicação. Se ativar esta definição, os utilizadores finais verão crachás de notificação em aplicações que tenham notificações não lidas. Se mantiver esta chave de configuração desativada, o utilizador final não verá nenhuma notificação insígnada a apps que possam ter notificações não lidas. |
@@ -92,7 +92,7 @@ Introduza os dados da JSON para configurar todas as definições disponíveis pa
 
 Além da lista de configurações configuráveis listadas na tabela **'Configuração Designer'** (acima), a tabela seguinte fornece as teclas de configuração que só pode configurar através de dados jSON.
 
-|    Chave de configuração    |    Tipo de valor    |    Valor Predefinido    |    Descrição    |
+|    Chave de configuração    |    Tipo de valor    |    Valor Predefinido    |    Description    |
 |-------------------------------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Definir aplicações listadas por permitir    |    bundleArray    | <img alt="JSON - Example 1" src="./media/app-configuration-managed-home-screen-app/defaultvaluejson01.png" width="300"> |    Permite definir o conjunto de aplicações visíveis no ecrã principal entre as aplicações instaladas no dispositivo. Pode definir as aplicações ao introduzir o nome do pacote de aplicações das aplicações que gostaria de tornar visíveis, por exemplo, com.android.definições tornariam as definições acessíveis no ecrã principal. As aplicações que permite listar nesta secção já devem ser instaladas no dispositivo para serem visíveis no ecrã principal.    |
 |    Definir links web fixados    |    bundleArray    | <img alt="JSON - Example 2" src="./media/app-configuration-managed-home-screen-app/defaultvaluejson02.png" width="300"> |    Permite-lhe fixar websites como ícones de lançamento rápido no ecrã principal. Com esta configuração, pode definir o URL e adicioná-lo ao ecrã principal para o utilizador final lançar no navegador com um único toque.    |

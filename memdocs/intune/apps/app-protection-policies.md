@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233525"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323597"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Como criar e atribuir políticas de proteção de aplicações
 
@@ -45,7 +45,7 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Criar uma política de proteção de aplicações iOS/iPadOS ou Android
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. No portal Intune, escolha **Apps** > políticas de proteção de **aplicações.** Esta seleção abre o painel **Políticas de proteção de aplicações**, onde pode criar novas políticas e editar as já existentes.
 3. Selecione **Criar a política** e selecione **iOS/iPadOS** ou **Android**. O painel **de política Create** é exibido.
 4. Na página Basics, adicione os **seguintes valores:**

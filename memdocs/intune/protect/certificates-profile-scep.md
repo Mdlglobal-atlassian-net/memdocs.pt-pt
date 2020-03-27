@@ -16,24 +16,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084969"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323138"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Criar e atribuir perfis de certificado SCEP em Intune
 
 Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para suportar certificados simples de protocolo de inscrição de certificados (SCEP), pode criar e, em seguida, atribuir perfis de certificadoS SCEP aos utilizadores e dispositivos no Intune.
 
 > [!IMPORTANT]  
-> Antes de criar perfis de certificadoS SCEP, os dispositivos que utilizarão um perfil de certificado SCEP devem confiar na autoridade de certificação de raiz fidedigna (CA). Utilize um perfil de *certificado fidedigno* no Intune para fornecer o certificado De Raiz fidedigna aos utilizadores e dispositivos Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o certificado de raiz fidedigno](certificates-configure.md#export-the-trusted-root-ca-certificate) ca e criar perfis de certificado sintetizados em *certificados de utilização para autenticação no Intune*. [](certificates-configure.md#create-trusted-certificate-profiles)
+> Antes de criar perfis de certificadoS SCEP, os dispositivos que utilizarão um perfil de certificado SCEP devem confiar na autoridade de certificação de raiz fidedigna (CA). Utilize um perfil de *certificado fidedigno* no Intune para fornecer o certificado De Raiz fidedigna aos utilizadores e dispositivos Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o certificado de raiz fidedigno](certificates-configure.md#export-the-trusted-root-ca-certificate) ca e criar perfis de certificado sintetizados em *certificados de utilização para autenticação no Intune*. [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles)
 
 
 ## <a name="create-a-scep-certificate-profile"></a>Criar um perfil de certificado SCEP
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
 
@@ -134,13 +134,13 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
         > - As propriedades do dispositivo utilizadas no *assunto* ou *SAN* de um certificado de dispositivo, como **IMEI,** **SerialNumber**, e **FullQualifiedDomainName,** são propriedades que podem ser falsificadas por uma pessoa com acesso ao dispositivo.
         > - Um dispositivo deve suportar todas as variáveis especificadas num perfil de certificado para que esse perfil seja instalado nesse dispositivo.  Por exemplo, se **{{IMEI}}** for utilizado no nome do assunto de um perfil SCEP e for atribuído a um dispositivo que não tenha um número IMEI, o perfil não é instalado.
 
-   - **Nome alternativo do assunto**: Selecione como insintono cria automaticamente o nome alternativo do sujeito (SAN) no pedido de certificado. As opções para o SAN dependem do tipo certificado que selecionou; utilizador ou **dispositivo.**
+   - **Nome alternativo do assunto**: Selecione como insintono cria automaticamente o nome alternativo do sujeito (SAN) no pedido de certificado. As opções para o SAN dependem do tipo certificado que selecionou; utilizador **User** ou **dispositivo.**
 
       - **Tipo de certificado Utilizador**
 
         Selecione entre os atributos disponíveis:
 
-        - **Endereço de correio eletrónico**
+        - **Endereço de e-mail**
         - **Nome principal do utilizador (UPN)**
 
         Por exemplo, os tipos de certificados de utilizador podem incluir o nome principal do utilizador (UPN) no nome alternativo do assunto. Se um certificado de cliente for utilizado para autenticar um Servidor de Políticas de Rede, defina o nome alternativo do requerente como UPN.
@@ -151,7 +151,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
 
         Os atributos disponíveis incluem:
 
-        - **Endereço de correio eletrónico**
+        - **Endereço de e-mail**
         - **Nome principal do utilizador (UPN)**
         - **DNS**
 

@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5656e4cfbd6311c4bfb96e2845091911d975fe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326077"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325120"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Assine aplicações de linha de negócio para que possam ser implementadas nos dispositivos Windows com o Intune
 
@@ -52,7 +52,7 @@ Se implementar a aplicação conforme necessário aos utilizadores ou dispositiv
 
 Se o seu dispositivo Windows 10 ainda não confiar na autoridade do certificado, depois de ter assinado o seu pacote appx e o ter enviado para o serviço Intune, tem de enviar o certificado de assinatura de código para o portal Intune:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Clique na **administração do Inquilino** > **Conectores e fichas** > **empresa do Windows certifcates**.
 3. Selecione um ficheiro sob **o ficheiro de certificado de assinatura de Código**.
 4. Selecione o ficheiro *.cer* e clique em **Abrir**.
@@ -68,7 +68,7 @@ O certificado utilizado para implementar aplicações móveis Windows Phone 8.1 
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Como instalar o certificado atualizado para aplicações de linha de negócio (LOB)
 
-Wnodows Phone 8.1
+Windows Phone 8.1
 
 O serviço Intune já não pode implementar aplicações LOB para esta plataforma uma vez que o certificado de assinatura de código Symantec Mobile Enterprise existente expira. Ainda será possível carregar ficheiros XAP/APPX não assinados utilizando um cartão SD ou descarregando o ficheiro para o dispositivo. Para mais informações, consulte [como instalar ficheiros XAP no Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280).
 
@@ -126,7 +126,7 @@ Veja a seguir como pode assinar e implementar a aplicação desta forma:
 2. Transfira a aplicação Portal da Empresa do Windows 10 na Loja Microsoft para Empresas, conforme detalhado acima.  
 3. Execute o script com os parâmetros de entrada detalhados no cabeçalho do script para assinar a aplicação Portal da Empresa do Windows 10 (extraída abaixo). As dependências não precisam de ser transmitidas para o script. Só são precisas quando a aplicação está a ser carregada para a Consola de Administração do Intune.
 
-|       Parâmetro       |                                                                    Descrição                                                                    |
+|       Parâmetro       |                                                                    Description                                                                    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             O caminho onde está localizado o ficheiro appxbundle de origem.                                              |
 | OutputWin10AppxBundle |                                                  O caminho de saída do ficheiro appxbundle assinado.                                                  |

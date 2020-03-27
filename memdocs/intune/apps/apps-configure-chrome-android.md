@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: deca7632c590d63c31f32375bc3f72047ae30807
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274630"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324834"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Configure o Google Chrome para dispositivos Android usando o Intune 
 
@@ -36,7 +36,7 @@ Pode utilizar uma política de configuração de aplicações Intune para config
 
 ## <a name="add-the-google-chrome-app-to-intune"></a>Adicione a aplicação do Google Chrome ao Intune
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar** e adicionar a aplicação **Managed Google Play.**
 3. Vá ao Google Play gerido, procure no **Google Chrome** e aprove.
 

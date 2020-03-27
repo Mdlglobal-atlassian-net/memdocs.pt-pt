@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328321"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322329"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Ações de dispositivo de resolução de problemas em Intune
 
@@ -54,7 +54,7 @@ Não. E não precisas de entrar nas traços.
 ## <a name="remove-devices-action"></a>Remover a ação dos dispositivos
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Como posso dizer quem começou um aposentado/limpo?
-No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > **Registos de Auditoria** > verifique a coluna Iniciada por **Coluna.**
+No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > **Registos** de Auditoria > verifique a coluna **Iniciada por Coluna.**
 Se não vir uma entrada, a pessoa mais provável de ter iniciado a ação é o utilizador do dispositivo. Provavelmente usaram a aplicação do Portal da Empresa ou portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Porque é que a minha aplicação não foi desinstalada depois de usar o Reforma?
@@ -69,7 +69,7 @@ Este comportamento está previsto. A Google não permite a Reposição de Dispos
 Porque reformar um dispositivo não revoga fichas de acesso. Pode utilizar políticas de Acesso Condicional para mitigar esta condição.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Como posso monitorizar uma ação de aposentadoria/limpeza depois de ter sido emitida?
-No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > registos de **auditoria.**
+No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > registos de **auditoria.**
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Por que as toalhetes às vezes aparecem como pendentes indefinidamente?
 Os dispositivos nem sempre reportam o seu estado de volta ao serviço Intune antes do reset. Então, a ação mostra como Pendente. Se confirmou que a ação foi bem sucedida, elimine o dispositivo do serviço.

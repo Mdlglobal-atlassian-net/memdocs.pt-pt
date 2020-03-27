@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bbb8738acbfdfa2317d754797dbb171c6a5d8ac
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326957"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326854"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurar uma página de estado de inscrição
  
@@ -64,14 +64,14 @@ Também pode definir a ordem prioritária para que cada perfil tenha a responsab
 
 Para ligar a Página de Estado de Inscrição, siga os passos abaixo.
  
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows > Página de Estado de **Inscrição** .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
 2. No painel **Página de Estado de Inscrição**, selecione **Predefinição** > **Definições**.
 3. Para **Mostrar progresso de instalação de aplicações e perfis**, selecione **Sim**.
 4. Selecione as outras definições que pretende ativar e, em seguida, selecione **Guardar**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Criar perfil de página de estado de inscrição e atribuir a um grupo
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows página de estado de **inscriç > ão** > Criar o **perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **os dispositivos** > **Windows** > windows > página de estado de **inscrição** > Criar o **perfil**. **Enrollment Status Page**
 2. Forneça um **Nome** e uma **Descrição**.
 3. Selecione **Criar**.
 4. Selecione o novo perfil na lista **Página de Estado de Inscrição**.
@@ -82,7 +82,7 @@ Para ligar a Página de Estado de Inscrição, siga os passos abaixo.
 
 Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Estado de Inscrição. Para lidar com tais conflitos, pode definir as prioridades para cada perfil. Durante a inscrição, se alguém tiver mais do que um perfil de Página de Estado de Inscrição, apenas o perfil de prioridade mais elevado é aplicado ao dispositivo de inscrição.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows > Página de Estado de **Inscrição** .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
 2. Paire o cursor sobre o perfil na lista.
 3. Utilize os três pontos verticais para arrastar o perfil para a posição pretendida na lista.
 
@@ -90,7 +90,7 @@ Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Esta
 
 Pode especificar que aplicações têm de ser instaladas para o utilizador poder aceder à área de trabalho.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows > Página de Estado de **Inscrição** .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
 2. Escolha um perfil > **Definições**.
 3. Escolha **Sim** para **Mostrar progresso de instalação de aplicações e perfis**.
 4. Escolha **Sim** para **Bloquear a utilização de dispositivos até que todas as aplicações e perfis sejam instalados**.

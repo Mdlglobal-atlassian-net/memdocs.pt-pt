@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526262"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326672"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utilizar o controlo de acesso baseado em funções (RBAC) e etiquetas de âmbito para TI distribuídos
 
@@ -43,16 +43,16 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 ## <a name="to-create-a-scope-tag"></a>Para criar uma etiqueta de âmbito
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **Scope (Tags)**  > **Criar**.
-2. Na página **Basics,** forneça um **Nome** e **uma Descrição**opcional. Selecione **Next**.
-3. Na página **de Atribuição,** escolha os grupos que contêm os dispositivos que pretende atribuir esta etiqueta de âmbito. Selecione **Next**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **Scope (Tags)**  > **Criar**.
+2. Na página **Basics,** forneça um **Nome** e **uma Descrição**opcional. Escolha **Seguinte**.
+3. Na página **de Atribuição,** escolha os grupos que contêm os dispositivos que pretende atribuir esta etiqueta de âmbito. Escolha **Seguinte**.
 4. Na **página Review + criar,** escolha **Criar**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Para atribuir uma etiqueta de âmbito a uma função
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > escolha um papel > **Atribuições** > **Atribuição**.
-2. Na página **Basics,** forneça um nome de **atribuição** e **descrição.** Selecione **Next**.
-3. Na página dos **Grupos De Administração,** escolha **grupos Select para incluir**, e selecione os grupos que deseja como parte desta atribuição. Os utilizadores deste grupo terão permissões para gerir utilizadores/dispositivos no Âmbito (Grupos). Selecione **Next**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > escolha um papel > **Atribuições** > **Atribuição**.
+2. Na página **Basics,** forneça um nome de **atribuição** e **descrição.** Escolha **Seguinte**.
+3. Na página dos **Grupos De Administração,** escolha **grupos Select para incluir**, e selecione os grupos que deseja como parte desta atribuição. Os utilizadores deste grupo terão permissões para gerir utilizadores/dispositivos no Âmbito (Grupos). Escolha **Seguinte**.
 
     ![Screenshot de grupos membros selecionados.](./media/scope-tags/select-member-groups.png)
 
@@ -70,7 +70,7 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 Para objetos que suportam etiquetas de mira, as etiquetas de âmbito geralmente aparecem em **Propriedades**. Por exemplo, para atribuir uma etiqueta de âmbito a um perfil de configuração, siga estes passos:
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > Perfis de **Configuração** > escolha um perfil.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > perfis de **configuração** > escolha um perfil.
 
 2. Escolha **Propriedades** > **Scope (Tags)**  > **Editar** > **Selecione etiquetas** de âmbito > escolha as etiquetas que pretende adicionar ao perfil. Pode atribuir um máximo de 100 etiquetas de mira a um objeto.
 4. Escolha **Selecione** > **Rever + guardar**.

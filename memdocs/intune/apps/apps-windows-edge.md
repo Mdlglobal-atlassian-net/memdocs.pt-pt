@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1ef0c2c4b7fdd7bb25fcb0237eb68485f1be701
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4635c0e09bea54dd5a22dcb370154e4153bf217c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325661"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324249"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Adicione o Microsoft Edge para windows 10 ao Microsoft Intune
 
@@ -45,7 +45,7 @@ Antes de poder implementar, configurar, monitorizar ou proteger aplicações, de
 
 Pode adicionar uma versão 77 do Microsoft Edge e, mais tarde, a Intune utilizando os seguintes passos:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. Na lista do **tipo App** no **Microsoft Edge, versão 77 e posterior**, selecione O Windows **10**.
 
@@ -100,7 +100,7 @@ A aplicação criada é apresentada na lista de aplicações, onde a pode atribu
 
 Quando necessitar de desinstalar o Microsoft Edge a partir dos dispositivos do utilizador, utilize os seguintes passos.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > app *Microsoft Edge* > **Atribuições** > **Adicionar grupo**.
 3. No painel do **grupo Adicionar,** selecione **Desinstalar**.
 

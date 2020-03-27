@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f13125fb3c9f0b75ea83d94309f40d18f1b93c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325881"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324609"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Atribuir aplicações a grupos com o Microsoft Intune
 
@@ -55,7 +55,7 @@ A seguinte tabela indica as várias opções para atribuir as aplicações a uti
 
 ## <a name="assign-an-app"></a>Atribuir uma aplicação
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.**
 3. No painel **Aplicações**, selecione a aplicação que quer atribuir.
 4. Na secção **Gerir** do menu, selecione **Atribuições**.
@@ -93,7 +93,7 @@ A informação na tabela seguinte pode ajudá-lo a entender a intenção resulta
 | Objetivo do grupo 1 | Objetivo do grupo 2 | Objetivo resultante |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Utilizador – Necessário|Utilizador – Disponível|Necessário e Disponível|
-|Utilizador – Necessário|Utilizador – Desinstalar|Required|
+|Utilizador – Necessário|Utilizador – Desinstalar|Necessário|
 |Utilizador – Disponível|Utilizador – Desinstalar|Desinstalar|
 |Utilizador – Necessário|Dispositivo – Necessário|Ambas existem, o Intune trata da intenção Necessário
 |Utilizador – Necessário|Dispositivo – Desinstalar|Ambas existem, o Intune resolve a intenção Necessário
@@ -101,13 +101,13 @@ A informação na tabela seguinte pode ajudá-lo a entender a intenção resulta
 |Utilizador – Disponível|Dispositivo – Desinstalar|Ambas existem, o Intune resolve a intenção Disponível.<br><br>A aplicação é apresentada no Portal da Empresa.<br><br>Se a aplicação já estiver instalada (como aplicação necessária com a intenção anterior), será desinstalada.<br><br>Se o utilizador selecionar **Instalar a partir do Portal da Empresa**, a aplicação será instalada e a intenção de desinstalação não será cumprida.|
 |Utilizador – Desinstalar|Dispositivo – Necessário|Ambas existem, o Intune resolve a intenção Necessário|
 |Utilizador – Desinstalar|Dispositivo – Desinstalar|Ambas existem, o Intune resolve a intenção Desinstalar|
-|Dispositivo – Necessário|Dispositivo – Desinstalar|Required|
+|Dispositivo – Necessário|Dispositivo – Desinstalar|Necessário|
 |Utilizador – Necessário e Disponível|Utilizador – Disponível|Necessário e Disponível|
 |Utilizador – Necessário e Disponível|Utilizador – Desinstalar|Necessário e Disponível|
 |Utilizador – Necessário e Disponível|Dispositivo – Necessário|Ambas existem, Necessário e Disponível
 |Utilizador – Necessário e Disponível|Dispositivo – Desinstalar|Ambas existem, o Intune resolve a intenção Necessário (Necessário e Disponível)
 |Utilizador – Disponível sem inscrição|Utilizador – Necessário e Disponível|Necessário e Disponível
-|Utilizador – Disponível sem inscrição|Utilizador – Necessário|Required
+|Utilizador – Disponível sem inscrição|Utilizador – Necessário|Necessário
 |Utilizador – Disponível sem inscrição|Utilizador – Disponível|Disponível|
 |Utilizador – Disponível sem inscrição|Dispositivo – Necessário|Necessário e Disponível sem inscrição|
 |Utilizador – Disponível sem inscrição|Dispositivo – Desinstalar|Desinstalar e Disponível sem inscrição.<br><br>Se o utilizador não instalou a aplicação a partir do Portal da Empresa, a desinstalação é honrada.<br><br>Se o utilizador instalar a aplicação a partir do Portal da Empresa, a instalação terá prioridade sobre a desinstalação.|

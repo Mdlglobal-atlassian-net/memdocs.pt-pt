@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
-ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
+ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508479"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322508"
 ---
 # <a name="see-device-details-in-intune"></a>Consultar os detalhes do dispositivo no Intune
 
@@ -33,7 +33,7 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
 
 ## <a name="view-the-device-details"></a>Ver os detalhes do dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos** > **Todos os dispositivos** e selecione um dos seus dispositivos apresentados para abrir os respetivos detalhes:
 
    - **A visão geral** mostra o nome do dispositivo e lista algumas propriedades chave do dispositivo, como se é um dispositivo pessoal ou corporativo, número de série, utilizador primário, e muito mais. Pode fazer o seguinte no dispositivo:
@@ -71,7 +71,7 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 |Número de série|O número de série dado pelo fabricante do dispositivo.|Windows, iOS|
 |Dispositivo partilhado|Se definido como **Sim**, o dispositivo é partilhado por mais do que um utilizador.|Windows, iOS|
 |Inscrição de utilizador aprovado|Se **Sim**, então o dispositivo tem o utilizador aprovado a inscrição que permite aos administradores gerir certas definições de segurança no dispositivo.|Windows, iOS|
-|Sistema Operativo|O sistema operativo utilizado no dispositivo.|Windows, iOS|
+|Sistema operativo|O sistema operativo utilizado no dispositivo.|Windows, iOS|
 |Versão do sistema operativo|A versão do sistema operativo no dispositivo.|Windows, iOS|
 |Idioma do sistema operativo|O idioma definido para o sistema operativo no dispositivo.|Windows, iOS|
 |Número de compilação|O número de construção do sistema operativo.|Android|
@@ -80,7 +80,7 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 |Espaço de armazenamento livre|O espaço de armazenamento não utilizado no dispositivo (em gigabytes).|Windows, iOS|
 |IMEI|A Identidade Internacional do Equipamento Móvel do dispositivo.|Windows, iOS/iPadOS, Android|
 |MEID|O identificador de equipamento móvel do dispositivo.|Windows, iOS/iPadOS, Android|
-|Manufacturer|O fabricante do dispositivo.|Windows, iOS/iPadOS, Android|
+|Fabricante|O fabricante do dispositivo.|Windows, iOS/iPadOS, Android|
 |Model|O modelo do dispositivo.|Windows, iOS/iPadOS, Android|
 |Número de telefone|O número de telemóvel atribuído ao dispositivo.|Windows, iOS/iPadOS, Android*|
 |Operadora subscrita|A operadora sem fios do dispositivo.|Windows, iOS/iPadOS, Android|

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117284"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325018"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -61,7 +61,7 @@ Existem duas formas de navegar e aprovar aplicações geridas da Google Play sto
 
 ### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Adicione uma aplicação gerida da Google Play store diretamente na consola Intune
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada.
@@ -115,7 +115,7 @@ Existem duas formas de adicionar aplicações LOB ao Managed Google Play:
 
 ### <a name="managed-google-play-private-lob-app-publishing-directly-in-the-intune-console"></a>Aplicação privada (LOB) gerida do Google Play publicada diretamente na consola Intune
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada dentro do Intune.
@@ -156,7 +156,7 @@ As ligações web geridas pelo Google Play são instaladas e geríveis tal como 
 
 As ligações web serão abertas com o Microsoft Edge ou qualquer outra aplicação de navegador que escolha implementar. Certifique-se de que implementa pelo menos uma aplicação de navegador para dispositivos para que as ligações web possam abrir corretamente. No entanto, todas as opções de **Display** disponíveis para links web (ecrã completo, autónomo e UI mínimo) funcionarão apenas com o navegador Chrome. 
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada dentro do Intune.
@@ -174,7 +174,7 @@ As ligações web serão abertas com o Microsoft Edge ou qualquer outra aplicaç
 
 Se aprovou uma aplicação da loja e não a vê na carga de trabalho das **Apps,** force uma sincronização imediata da seguinte forma:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Apps** > **administração** de inquilinos > **Conectores e fichas** > **Managed Google Play**.
 5. No painel **Google Play Gerido**, selecione **Atualizar**.  
     A página atualizará a hora e o estado da última sincronização.

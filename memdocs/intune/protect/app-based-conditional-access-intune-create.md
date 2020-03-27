@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2883add5a3dbba274201bfeebb7960a312e33da
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329985"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323199"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurar políticas de acesso condicional baseadas em aplicativos com intune
 
@@ -38,11 +38,11 @@ Antes de poder utilizar as políticas de Acesso Condicional baseadas em aplicaç
 
 O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional a que acede a partir de *Intune* é o mesmo nó a que acede a partir de *Azure AD*. Como é o mesmo nó, não é preciso alternar entre Intune e Azure AD para configurar políticas.
 
-Antes de poder criar políticas de Acesso Condicional a partir do Microsoft Endpoint Manager Admin Center, deve ter uma licença Azure AD Premium.
+Antes de poder criar políticas de Acesso Condicional a partir do centro de administração do Microsoft Endpoint Manager, deve ter uma licença Azure AD Premium.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Para criar uma política de acesso condicional baseada em aplicativos
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Selecione **segurança endpoint** > **acesso condicional** > **Nova política.**
 

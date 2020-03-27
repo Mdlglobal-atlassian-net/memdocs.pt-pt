@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9a2e8a2fd66eaa4c0d80b4001b2f7fb1fefc7b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332553"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326841"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Adicionar grupos para organizar utilizadores e dispositivos
 
@@ -40,7 +40,7 @@ Pode adicionar os seguintes tipos de grupos:
 
 Utilize os seguintes passos para criar um novo grupo.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Grupos** > **Novo grupo:**
 
    ![Screenshot do portal Azure com novo grupo selecionado](./media/groups-add/groups-add-new.png)
@@ -52,7 +52,7 @@ Utilize os seguintes passos para criar um novo grupo.
         > [!TIP]
         > Os utilizadores e grupos criados também podem ser vistos no centro de administração da [Microsoft 365,](https://admin.microsoft.com)no Centro de Administração do Azure Ative Directory e [no Microsoft Intune no portal Azure.](https://go.microsoft.com/fwlink/?linkid=2090973) Na sua organização inquilino, você pode criar e gerir grupos em todas estas áreas.
         >
-        > Se a sua função principal é a gestão do dispositivo, recomendamos que utilize o [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+        > Se a sua função principal é a gestão do dispositivo, recomendamos que utilize o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
     - **Office 365**: Proporciona oportunidades de colaboração dando aos membros acesso a uma caixa de correio partilhada, calendário, ficheiros, site SharePoint, e muito mais. Esta opção também lhe permite conceder às pessoas fora da organização acesso ao grupo. Para mais informações, consulte [O Office 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 

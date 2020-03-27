@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f5b0505e5ceaccdb8df5a9a5eb53fe950ea8e14
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326757"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325670"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Tutorial: Configure A folga para usar Intune para configuração de EMM e app
 
@@ -48,7 +48,7 @@ Também vai precisar de um plano [slack Enterprise Grid.](https://get.slack.help
 Ligue o EMM para o seu plano Slack Enterprise Grid seguindo [as instruções da Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) e ligue o [Azure Ative Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) como fornecedor de identidade do seu plano grid (IDP).
 
 ## <a name="sign-in-to-intune"></a>Iniciar sessão no Intune
-Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador global ou administrador de serviço intune. Se criou uma Subscrição de avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
+Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador global ou administrador de serviço intune. Se criou uma Subscrição de avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Configurar a folga para emm em dispositivos iOS
 Adicione a aplicação iOS/iPadOS Slack for EMM ao seu inquilino Intune e crie uma política de configuração de aplicações para permitir aos utilizadores de iOS/iPadOS das suas organizações aceder em Slack com Intune como fornecedor em MEm.

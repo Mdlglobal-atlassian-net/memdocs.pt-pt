@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526331"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326970"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Implemente dispositivos híbridos de AD com a utilização de Intune e Windows Autopilot
 Pode utilizar dispositivos intune e Windows Autopilot para configurar dispositivos híbridos azure Ative Directory (Azure AD). Para tal, siga os passos deste artigo.
@@ -109,7 +109,7 @@ A unidade organizacional que concedeu os direitos de criar computadores deve cor
 
 O Conector Intune para Diretório Ativo deve ser instalado num computador que esteja a executar o Windows Server 2016 ou mais tarde. O computador também deve ter acesso à internet e ao seu Diretório Ativo. Para aumentar o dimensionamento e a disponibilidade ou suportar múltiplos domínios do Azure Active Directory, pode instalar múltiplos conectores no seu ambiente. Recomendamos a instalação do Conector num servidor que não esteja a executar outros conectores Intune.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > **windows inscrição** > **Intune Connector for Ative Directory** > **Add**. 
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > **windows inscrição** > **Intune Connector for Ative Directory** > **Add**. 
 2. Siga as instruções para descarregar o Conector.
 3. Abra o ficheiro de configuração do Connector descarregado, *ODJConnectorBootstrapper.exe,* para instalar o Conector.
 4. No final da configuração, **selecione Configurar**.
@@ -119,7 +119,7 @@ O Conector Intune para Diretório Ativo deve ser instalado num computador que es
 7. Vá a **Dispositivos** > **Windows** > **inscrição no Windows** > **Intune Connector para Diretório Ativo**, e depois confirme que o estado de ligação está **Ativo**.
 
 > [!NOTE]
-> Depois de iniciar sessão no Connector, pode levar alguns minutos a aparecer no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Só aparece se conseguir comunicar com sucesso com o serviço Intune.
+> Depois de iniciar sessão no Connector, pode levar alguns minutos a aparecer no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Só aparece se conseguir comunicar com sucesso com o serviço Intune.
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>Desligue a configuração de segurança melhorada do IE
 Por padrão, o Windows Server tem configuração de segurança melhorada do Internet Explorer. Se não conseguir iniciar sessão no Conector Intune para diretório ativo, desligue a configuração de segurança melhorada do IE para o Administrador. [Como desligar a configuração de segurança melhorada do Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -130,7 +130,7 @@ Se tiver um representante web no seu ambiente de networking, certifique-se de qu
 
 
 ## <a name="create-a-device-group"></a>Criar um grupo de dispositivos
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Grupos** > **Novo grupo**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Grupos** > **Novo grupo**.
 
 1. No painel do **Grupo,** faça o seguinte:
 
@@ -185,7 +185,7 @@ Depois de matriculados os seus dispositivos Autopilot, os seus nomes tornam-se o
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Criar e atribuir um perfil de implementação do Autopilot
 Os perfis de implementação do Autopilot são utilizados para configurar os dispositivos do Autopilot.
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > **Windows > ** Perfis de **implementação** > **Criar Perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > **Windows** > Perfis de **implementação** > **Criar Perfil**.
 2. Na página **Basics,** digite um **nome** e **descrição**opcional.
 3. Se pretender que todos os dispositivos nos grupos atribuídos sejam convertidos automaticamente no Autopilot, defina **Converter todos os dispositivos visados para o Piloto Automático** para **Sim**. Todos os dispositivos corporativos e não autopilotos em grupos designados registar-se-ão no serviço de implementação do Autopilot. Os dispositivos pessoais não serão convertidos para Piloto Automático. O processo de registo demora até 48 horas, pelo que deverá aguardar. Quando a inscrição do dispositivo for anulada e o dispositivo for reposto, o Autopilot irá inscrevê-lo. Após registar um dispositivo desta forma, desativar esta opção ou remover a atribuição de perfil não irá remover o dispositivo do serviço de implementação do Autopilot. Em alternativa, tem de [remover o dispositivo diretamente](enrollment-autopilot.md#delete-autopilot-devices).
 4. Selecione **Seguinte**.
@@ -202,7 +202,7 @@ Leva cerca de 15 minutos para que o estado do perfil do dispositivo mude de *Nã
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Opcional) Ligue a página de estado da inscrição
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > Windows > página de estado de **inscrição** .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > Windows > Página de Estado de **Inscrição** . **Enrollment Status Page**
 1. No painel da página de estado de **inscrição,** selecione **Definições** **predefinidas** > .
 1. Na **app Show e** na caixa de progresso de instalação de perfil, selecione **Sim**.
 1. Configure as outras opções conforme seja necessário.
@@ -210,7 +210,7 @@ Leva cerca de 15 minutos para que o estado do perfil do dispositivo mude de *Nã
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Criar e atribuir um perfil de Associação a um Domínio
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > perfis de **configuração** > **Criar Perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > perfis de **configuração** > **Criar Perfil**.
 2. Introduza as seguintes propriedades:
    - **Nome**: introduza um nome descritivo para o novo perfil.
    - **Descrição:** introduza uma descrição para o perfil.

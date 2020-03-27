@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8545614baa180f59475b1f28e6675156ee475464
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256781"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326998"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Inscrição de dispositivo de resolução de problemas no Microsoft Intune
 
@@ -63,9 +63,9 @@ Estes problemas podem ocorrer em todas as plataformas de dispositivos.
 
 Verifique se o utilizador não possui um número de dispositivos atribuídos superior ao máximo permitido ao seguir estes passos:
 
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > restrições de **inscrição** > **restrições de limite de dispositivos**. Observe o valor apresentado na coluna **Limite de dispositivos**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > restrições de **inscrição** > **restrições de limite de dispositivos**. Observe o valor apresentado na coluna **Limite de dispositivos**.
 
-2. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Utilizadores** > **Todos os utilizadores** > selecione o utilizador > **Dispositivos**. Observe o número de dispositivos inscritos.
+2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **utilizadores** > **Todos os utilizadores** > selecione o utilizador > **Dispositivos**. Observe o número de dispositivos inscritos.
 
 3. Se o número de dispositivos inscritos do utilizador for igual à respetiva restrição de limite de dispositivos, o utilizador não poderá inscrever mais dispositivos até:
     - [Os dispositivos existentes serem removidos](../remote-actions/devices-wipe.md) ou
@@ -339,7 +339,7 @@ Este problema pode acontecer se:
 4. Indicar ao utilizador que deve reiniciar o processo de inscrição.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Determinar se existe um problema com o token VPP
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matriculado** > programa de inscrição de **tokens** > nome token > **Profiles** > nome de perfil > **Gerir** > **Propriedades**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matriculado** > programa de inscrição de **tokens** > nome token > **Profiles** > nome de perfil > **Gerir** > **Propriedades**.
 2. Reveja as propriedades para ver se são apresentados erros semelhantes aos seguintes:
     - Este token expirou.
     - Este token está sem licenças do Portal da Empresa.
@@ -349,13 +349,13 @@ Este problema pode acontecer se:
 3. Corrija os problemas do token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identificar quais os dispositivos que estão bloqueados pelo token de VPP
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS**k > **iOS matriculado** > programa de inscrição de **tokens** > tokenname > **Token**name > Devices .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS**k > **iOS matricula** do programa de inscrição > **Tokens** > tokenname > **Token**name > Devices .
 2. Filtre a coluna **Estado do perfil** por **Bloqueado**.
 3. Anote os números de série de todos os dispositivos que estão **Bloqueados**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Apagar remotamente os dispositivos bloqueados
 Depois de ter corrigido os problemas com o símbolo VPP, tem de limpar os dispositivos que estão bloqueados.
-1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os dispositivos** > **Colunas** > **número de série** > **Aplicar**. 
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os dispositivos** > **Colunas** > **número de série** > **Aplicar**. 
 2. Para cada dispositivo bloqueado, selecione-o na lista **Todos os dispositivos** e, em seguida, selecione **Apagar** > **Sim**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Indique aos utilizadores que devem reiniciar o processo de inscrição
@@ -379,7 +379,7 @@ Depois de apagar os dispositivos bloqueados, pode indicar aos utilizadores que d
 - Se a sua organização ativou as restrições de inscrição que bloqueiam dispositivos macOS pessoais, tem de [adicionar o número de série do dispositivo pessoal](corporate-identifiers-add.md#manually-enter-corporate-identifiers) manualmente ao Intune.  
 - Se o dispositivo continuar atribuído a outro utilizador no Intune, o proprietário anterior não utilizou a aplicação Portal da Empresa para o remover ou repor. Para limpar o registo de dispositivo obsoleto do Intune:  
 
-    1. No [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)inscreva-se com as suas credenciais administrativas.
+    1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)inscreva-se com as suas credenciais administrativas.
     2. Escolha **dispositivos** > **Todos os dispositivos**.  
     3. Localize o dispositivo com o problema de inscrição. Procure pelo nome do dispositivo ou Endereço MAC/HW para restringir os seus resultados.
     4. Selecione o dispositivo > **Eliminar**. Elimine todas as outras entradas associadas ao dispositivo.  

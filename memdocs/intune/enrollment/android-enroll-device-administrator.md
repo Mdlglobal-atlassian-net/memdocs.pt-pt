@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 1afbd444f46d14bb272410da54d43c5a5f8207d0
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086224"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327332"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscrição de administrador de dispositivos Android
 
@@ -44,7 +44,7 @@ Para obter mais informações sobre as funcionalidades do Android Enterprise da 
 ## <a name="set-up-device-administrator-enrollment"></a>Configurar a inscrição do administrador do dispositivo
 
 1. Para se preparar para gerir dispositivos móveis, tem de definir a autoridade de gestão de dispositivos móveis (MDM) para o **Microsoft Intune**. Veja [Set the MDM authority (Definir a autoridade de MDM)](../fundamentals/mdm-authority-set.md) para obter instruções. Este item só é definido uma vez, quando está a configurar pela primeira vez o Intune para a gestão de dispositivos móveis.
-2. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha o > **Dispositivos** > android > **inscrição** **android** > **dispositivos pessoais e corporativos com privilégios** de administração de dispositivos > Utilizar o administrador **do dispositivo para gerir dispositivos.**
+2. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha o > **Dispositivos** > android > **inscrição** **android** > **dispositivos pessoais e corporativos com privilégios** de administração de dispositivos > Utilize o administrador do dispositivo para **gerir dispositivos.**
 3. [Indique aos seus utilizadores como devem inscrever os dispositivos](../user-help/enroll-device-android-company-portal.md).  
 
 Depois de um utilizador concluir a inscrição, pode começar a gerir os respetivos dispositivos no Intune, incluindo [atribuir políticas de conformidade](../protect/compliance-policy-create-android.md), [gerir aplicações](../apps/app-management.md) e mais.

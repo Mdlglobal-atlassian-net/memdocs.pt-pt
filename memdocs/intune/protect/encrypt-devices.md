@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084883"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322477"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utilizar encriptação do dispositivo com Intune
 
@@ -43,7 +43,7 @@ A inscrição do dispositivo aprovado pelo utilizador é necessária para que o 
 
 FileVault é um programa de encriptação de discos inteiros que está incluído com macOS. Pode utilizar o Intune para configurar o FileVault em dispositivos que executam **o macOS 10.13 ou posteriormente**.
 
-Para configurar o FileVault, crie um perfil de [configuração](../configuration/device-profile-create.md) do dispositivo para proteção de pontofinal para a plataforma macOS. As definições do FileVault são uma das categorias de definições disponíveis para a proteção do ponto final macOS.
+Para configurar o FileVault, crie um perfil de [configuração](endpoint-protection-configure.md) do dispositivo para proteção de pontofinal para a plataforma macOS. As definições do FileVault são uma das categorias de definições disponíveis para a proteção do ponto final macOS.
 
 Depois de criar uma política para encriptar dispositivos com FileVault, a política é aplicada aos dispositivos em duas fases. Em primeiro lugar, o dispositivo está preparado para permitir que a Intune recupere e volte a fazer o backup da chave de recuperação. Esta ação é referida como caução. Depois de a chave ser depositada, a encriptação do disco pode começar.
 
@@ -66,7 +66,7 @@ Seguem-se as permissões FileVault, que fazem parte da categoria de **tarefas Re
 
 ### <a name="how-to-configure-macos-filevault"></a>Como configurar o macOS FileVault
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 
@@ -105,13 +105,13 @@ Utilize insinopara configurar a encriptação bitLocker drive em dispositivos qu
 
 O BitLocker está disponível em dispositivos que executam **o Windows 10 ou mais tarde**.
 
-Configure o BitLocker quando criar um perfil de [configuração](../configuration/device-profile-create.md) do dispositivo para proteção de pontofinal para a plataforma Windows 10 ou posterior. As definições bitLocker estão na categoria de definições de encriptação do Windows para proteção de ponto final do Windows 10.
+Configure o BitLocker quando criar um perfil de [configuração](endpoint-protection-configure.md) do dispositivo para proteção de pontofinal para a plataforma Windows 10 ou posterior. As definições bitLocker estão na categoria de definições de encriptação do Windows para proteção de ponto final do Windows 10.
 
 ![Definições bitLocker](./media/encrypt-devices/bitlocker-settings.png)
 
 ### <a name="how-to-configure-windows-10-bitlocker"></a>Como configurar o Windows 10 BitLocker
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 
@@ -174,7 +174,7 @@ Os dispositivos devem cumprir os seguintes pré-requisitos para suportar a rota�
   
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Para rodar a chave de recuperação BitLocker
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **Todos os dispositivos**.
 

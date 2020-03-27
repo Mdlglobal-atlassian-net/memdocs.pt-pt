@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47156186b7ab4c9297dc1963d4a709d1da1c9670
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 23bb882c7dbf06264b3c8e5aa29947f8e4cb712c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326777"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325762"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Adicionar aplicações da Microsoft Store ao Microsoft Intune
 
@@ -34,7 +34,7 @@ Antes de poder atribuir, monitorizar, configurar ou proteger aplicações, tem d
 ## <a name="add-an-app-to-intune"></a>Adicionar uma aplicação ao Intune
 Pode adicionar uma aplicação da Microsoft Store ao Intune ao fazer o seguinte:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
 3. No painel do **tipo select,** nos tipos de **aplicativos da Loja** disponível, selecione a **aplicação de loja do Windows**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.

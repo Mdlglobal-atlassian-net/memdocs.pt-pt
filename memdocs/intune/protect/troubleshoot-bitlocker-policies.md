@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e1e3db367d7e8e9044201c8f5e02a9225305495
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325177"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325630"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Problemas bitLocker políticas no Microsoft Intune
 
@@ -66,7 +66,7 @@ Como confirma que as definições foram aplicadas ao dispositivo-alvo? Seguem-se
 
 Quando utilizar a política de configuração do dispositivo para configurar o BitLocker, pode verificar o estado da apólice no portal Intune.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > Perfis de **Configuração** e, em seguida, selecione o perfil que contém definições bitLocker.
 

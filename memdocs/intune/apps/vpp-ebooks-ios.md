@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b02e7fe5d2f2812f42a049b65d6162998e8af7c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327401"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323575"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Como gerir os iOS/iPadOS eBooks que adquiriu através de um programa de compra de volume com o Microsoft Intune
 
@@ -40,7 +40,7 @@ Os procedimentos para gerir livros são semelhantes à [gestão de aplicações 
 Compra várias licenças para livros iOS/iPadOS através do Programa de Compra de [Volume da Apple para Negócios](https://www.apple.com/business/vpp/) ou do Programa de Compra de Volume da Apple para [Educação](https://volume.itunes.apple.com/us/store). Este processo envolve configurar uma conta VPP da Apple no site da Apple e carregar o token VPP da Apple para o Intune.  Depois disso, pode sincronizar as informações de compra em volume com o Intune e controlar a utilização do livro comprado em volume.
 
 ## <a name="before-you-start"></a>Antes de começar
-Antes de começar, obtenha um token VPP da Apple e carregue o mesmo para a sua conta do Intune. Além disso:
+Antes de começar, obtenha um token VPP da Apple e carregue o mesmo para a sua conta do Intune. Além disso,
 
 * Se tiver utilizado anteriormente um token VPP com outro produto, tem de gerar um novo token para utilizar com o Intune.
 * Cada token é válido durante um ano.
@@ -57,7 +57,7 @@ Antes de começar, obtenha um token VPP da Apple e carregue o mesmo para a sua c
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Para obter e carregar um token Apple VPP
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **a administração do Tenant** > **Conectores e fichas** > **fichas Apple VPP.**
 3. No painel da lista de tokens VPP, clique em **Criar**.
 5. No painel **Novo Token VPP**, especifique as seguintes informações:

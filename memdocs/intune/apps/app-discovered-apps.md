@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e0115fcdf823e3881ef80edbe44c1762ac6cbf1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326341"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323829"
 ---
 # <a name="intune-discovered-apps"></a>Intune aplicativos descobertos
 
@@ -33,7 +33,7 @@ Intune **discovered apps** é uma lista de aplicações detetadas nos dispositiv
 
 Intune fornece uma lista agregada de aplicações detetadas nos dispositivos inscritos intune no seu inquilino.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -43,7 +43,7 @@ Intune fornece uma lista agregada de aplicações detetadas nos dispositivos ins
 
 Intune também fornece a lista de aplicativos descobertos para o dispositivo individual no seu inquilino.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > **Todos os Dispositivos**.
 3. Selecione um dispositivo.
 4. Para visualizar aplicações detetadas para este dispositivo, selecione **Aplicações Descobertas** na secção **Monitor.**

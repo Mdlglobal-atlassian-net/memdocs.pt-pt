@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b903b1e021829890fc7de6b660db947e3ceb58a
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274273"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324589"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Incluir e excluir atribuições de aplicações no Microsoft Intune
 
@@ -57,7 +57,7 @@ Como resultado, não é recomendado atribuir apps a grupos mistos.
 
 Para atribuir uma aplicação aos grupos através da atribuição de inclusão e exclusão:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.** É apresentada a lista de aplicações adicionadas.
 3. Selecione a aplicação que pretende atribuir. Um dashboard apresenta informações sobre a aplicação.
 4. Na secção **Gerir** do menu, selecione **Atribuições**.

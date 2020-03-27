@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc939b1719e214e93f06ddf13d1cc05f4d26560b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329773"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325745"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configure infraestruturas para apoiar o SCEP com Intune
 
@@ -256,7 +256,7 @@ Os seguintes procedimentos podem ajudá-lo a configurar o Serviço de Inscriçã
         A instalação do ASP.NET 4.5 instala o .NET Framework 4.5. Ao instalar o .NET Framework 4.5, instale a funcionalidade **.NET Framework 4.5** principal, o **ASP.NET 4.5** e a funcionalidade **Serviços do WCF** > **Ativação HTTP**.
 
       - **Ferramentas de Gestão** > **Compatibilidade de Gestão do IIS 6** > **Compatibilidade com Metabase do IIS 6**
-      - **Ferramentas de Gestão** > **Compatibilidade de Gestão do IIS 6** > **Compatibilidade do WMI do IIS 6**
+      - **Ferramentas de Gestão** > **Compatibilidade de Gestão do IIS 6** > **Compatibilidade WMI do IIS 6**
       - No servidor, adicione a conta do serviço do NDES como membro do grupo local **IIS_IUSR**.
 
 2. No computador que acolhe o serviço NDES, execute o seguinte comando num pedido de comando elevado. O seguinte comando define o SPN da conta de Serviço NDES:
@@ -359,7 +359,7 @@ O Conector de Certificado Intune da Microsoft instala-se no servidor que executa
 
 ### <a name="to-install-the-certificate-connector"></a>Para instalar o Conector de Certificado
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **conectores** de certificado > **Adicionar**.
 

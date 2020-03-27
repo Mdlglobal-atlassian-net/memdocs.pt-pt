@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e7bc7064fca5355f33aaa16306e452d8ecffb56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328345"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326330"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Reiniciar remotamente dispositivos com o Intune
 
@@ -44,7 +44,7 @@ A ação do dispositivo **Restart** faz com que o dispositivo que escolher seja 
 
 ## <a name="restart-a-device"></a>Reiniciar um dispositivo
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos** > **Todos os dispositivos**.
 4. Na lista de dispositivos que gere, selecione um dispositivo > **Restart** > **Yes**.
 

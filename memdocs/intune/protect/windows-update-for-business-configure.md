@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19f9d21afd46abccf36dbb3d50f81b16e854e92d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328441"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325380"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gerir atualizações de software do Windows 10 em Intune
 
@@ -77,7 +77,7 @@ Os anéis de atualização do Windows 10 suportam [etiquetas](../fundamentals/sc
 
 ### <a name="create-and-assign-update-rings"></a>Criar e atribuir cadências de atualização
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **dispositivos** > os anéis de atualização **do Windows** > **Windows 10** > **Criar**.
 
@@ -224,7 +224,7 @@ Os seguintes pré-requisitos devem ser cumpridos para utilizar as atualizações
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Criar e atribuir atualizações de funcionalidades do Windows 10
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Dispositivos** > **as** atualizações de funcionalidades do Windows > **Windows 10** > **Criar**.
 

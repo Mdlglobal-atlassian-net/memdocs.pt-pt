@@ -1,5 +1,5 @@
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.**
 3. Encontre e selecione a sua aplicação a partir da lista de aplicações.  
 4. Selecione **Propriedades** sob **Gestão** a partir do painel de aplicações.

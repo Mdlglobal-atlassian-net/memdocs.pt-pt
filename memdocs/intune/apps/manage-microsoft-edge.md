@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7781eba9e2115b37dd6590733b89130203da0365
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084161"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323965"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gerir o acesso à web utilizando o Microsoft Edge com o Microsoft Intune
 
@@ -64,7 +64,7 @@ Pode utilizar o Azure AD Conditional Access para redirecionar os seus utilizador
 > Novos web clips (aplicações web fixas) em dispositivos iOS serão abertos no Microsoft Edge em vez do Navegador Gerido Intune quando necessário abrir num navegador protegido. Para os web clips mais antigos do iOS, tem de redirecionar estes web clips para garantir que se abrem no Microsoft Edge em vez do Navegador Gerido.
 
 Para restringir aplicações web ligadas a AD Azure para usar o Microsoft Edge no iOS e Android:
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Sob o nó Intune, selecione **Acesso Condicional** > **Nova política.**
 3. **Selecione Grant** da secção de **controlos** de acesso do painel.
 4. Selecione **Requer aplicação aprovada do cliente**.
@@ -103,7 +103,7 @@ O SSO exige que o seu dispositivo seja registado pela aplicação Microsoft Auth
 
 Para criar a configuração da aplicação para o Microsoft Edge:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > políticas de **configuração** de apps > **adicionar**.
 3. No painel de política de **configuração Adicionar,** introduza um **Nome** e **uma descrição** opcional para as definições de configuração da aplicação.
 4. Para o tipo de **Inscrição de dispositivos**, selecione **Aplicações geridas**.

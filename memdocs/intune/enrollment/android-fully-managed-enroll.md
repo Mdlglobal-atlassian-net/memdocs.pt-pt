@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4fb6adadb4e0dbf593bbbe3d9ee51ed5783e152
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325481"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327302"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurar a inscrição intune de dispositivos geridos totalmente pela Android Enterprise 
 
@@ -56,7 +56,7 @@ Para configurar a gestão completa do dispositivo Android Enterprise, siga estes
 
 ### <a name="enable-corporate-owned-user-devices"></a>Ativar dispositivos de utilizador corporativos
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** ** > ** android > **android  > ** dispositivos de utilizador **totalmente geridos.**
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** ** > ** android > **android matricula**  > dispositivos de **utilizador totalmente geridos.**
 2. Em **Permitir que os utilizadores matriculem dispositivos de utilizador corporativos,** escolha **Sim**.
 
 > [!NOTE]

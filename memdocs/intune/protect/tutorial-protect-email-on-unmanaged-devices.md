@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1e6731e41ccc7c687cf6fa68dc06b8c6ee4e1e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f8be97edbbba9a998dd223a5a0e9c8982c1a16a1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328585"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326587"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Proteja o e-mail online de troca de dispositivos não geridos
 
@@ -42,13 +42,13 @@ Precisará de um inquilino de teste com as seguintes subscrições para este tut
 
 ## <a name="sign-in-to-intune"></a>Iniciar sessão no Intune
 
-Para este tutorial, quando iniciar sessão no [Microsoft Endpoint Manager Admin Center,](https://go.microsoft.com/fwlink/?linkid=2109431)inscreva-se como [administrador global](../fundamentals/users-add.md#types-of-administrators) ou administrador de [serviço](../fundamentals/users-add.md#types-of-administrators)intune . Se criou uma subscrição intune Trial, a conta com a qual criou a subscrição é o administrador global.
+Para este tutorial, quando iniciar sessão no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)inscreva-se como [administrador global](../fundamentals/users-add.md#types-of-administrators) ou administrador de [serviço](../fundamentals/users-add.md#types-of-administrators)intune . Se criou uma subscrição intune Trial, a conta com a qual criou a subscrição é o administrador global.
 
 ## <a name="create-the-app-protection-policy"></a>Criar a política de proteção de aplicações
 
 Neste tutorial, vamos criar uma política de proteção de aplicações Intune para o iOS para a aplicação Outlook para colocar proteções no lugar ao nível da aplicação. Vamos exigir um PIN para abrir a aplicação num contexto de trabalho. Também limitaremos a partilha de dados entre apps e evitaremos que os dados da empresa sejam guardados para uma localização pessoal.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **Apps** > políticas de proteção de **aplicações** > **Criar a política**, e selecione **iOS/iPadOS** para a plataforma.
 
@@ -113,7 +113,7 @@ Agora vamos criar duas políticas de Acesso Condicional para cobrir todas as pla
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Criar uma política de MFA para clientes de autenticação moderna  
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **segurança endpoint** >  **acesso condicional** > **Nova política.**  
 
@@ -163,7 +163,7 @@ Agora vamos criar duas políticas de Acesso Condicional para cobrir todas as pla
 
 ### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Criar uma política para clientes Exchange Ative Sync
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **segurança endpoint** > **acesso condicional** > **Nova política.**
 
@@ -229,7 +229,7 @@ Com as políticas que criou, os dispositivos terão de se inscrever no Intune e 
 
 Quando já não precisar das políticas de teste, poderá removê-las.
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **as políticas**de conformidade dos **dispositivos** .
 

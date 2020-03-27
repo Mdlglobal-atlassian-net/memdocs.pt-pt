@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc482163ea82f5e329b7486d1522e3536b75555d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328393"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326462"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Repor ou remover um código de acesso do dispositivo no Intune
 
@@ -40,7 +40,7 @@ Este documento discute tanto o reset de código de acesso do dispositivo como o 
 | Dispositivos Android matriculados com um perfil de trabalho | Não |
 | Dispositivos Android com a versão 7.0 ou posterior | Não |
 | macOS | Não |
-| Portal do | Não |
+| Windows | Não |
 
 Para dispositivos Android, isto significa que o reset da código de acesso ao nível do dispositivo só é suportado em dispositivos com 6.x ou anteriores, ou em dispositivos empresariais Android que executam no modo Quiosque. Isto acontece porque a Google removeu o suporte da reposição de códigos de acesso/palavras-passe para dispositivos Android 7 a partir de uma aplicação concedida ao Administrador de Dispositivos e aplica-se a todos os fornecedores MDM.
 
@@ -57,7 +57,7 @@ Para criar um novo código de acesso de perfil de trabalho, utilize a ação Rep
 ## <a name="reset-a-passcode"></a>Repor um código de acesso
 
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) com qualquer uma das seguintes funções: Azure Ative Directory Global Admin, Azure Ative Directory Intune Service Admin, Helpdesk Operator ou Role Administrator.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com qualquer uma das seguintes funções: Azure Ative Directory Global Admin, Azure Ative Directory Intune Service Admin, Helpdesk Operator ou Role Administrator.
 2. Selecione **Dispositivos** e, em seguida, selecione **Todos os dispositivos**.
 3. A partir da lista de dispositivos que gere, selecione um dispositivo e escolha **remover a senha**.
 

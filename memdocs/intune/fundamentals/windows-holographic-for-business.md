@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330041"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326629"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gerir e utilizar funcionalidades de gestão de dispositivos diferentes no Windows Holographic e dispositivos HoloLens com o Intune
 
@@ -41,7 +41,7 @@ O Azure Active Directory (AD) é um ótimo recurso para o ajudar a gerir e contr
 
 - **[Inscrever dispositivos Windows em massa](../enrollment/windows-bulk-enroll.md)** : pode associar inúmeros dispositivos Windows novos ao Azure Active Directory e ao Intune. Esta funcionalidade chama-se inscrição em massa e utiliza pacotes de aprovisionamento. Estes pacotes associam os dispositivos com o Windows Holographic for Business ao seu inquilino do Azure AD e inscrevem-nos no Intune.
 
-## <a name="company-portal"></a>Portal da Empresa
+## <a name="company-portal"></a>Company Portal
 
 **[Configurar a aplicação Portal da Empresa](../apps/company-portal-app.md)**
 
@@ -58,7 +58,7 @@ Com a aplicação Portal da Empresa, também pode realizar as seguintes ações:
 
 **[Criar uma política de conformidade de dispositivo](../protect/compliance-policy-create-windows.md)**
 
-As políticas de conformidade são regras e definições que os dispositivos têm de cumprir para estarem em conformidade. Utilize estas políticas com Acesso Condicional para bloquear o acesso aos recursos da empresa para dispositivos que não estejam em conformidade. No Intune, crie políticas de conformidade para permitir ou bloquear o acesso a dispositivos com o Windows Holographic for Business. Por exemplo, pode criar uma política que exija que o Bitlocker esteja ativado.
+As políticas de conformidade são regras e definições que os dispositivos têm de cumprir para estarem em conformidade. Utilize estas políticas com Acesso Condicional para bloquear o acesso aos recursos da empresa para dispositivos que não estejam em conformidade. No Intune, crie políticas de conformidade para permitir ou bloquear o acesso a dispositivos com o Windows Holographic for Business. Por exemplo, pode criar uma política que exija ativação do BitLocker.
 
 Veja também **[Introdução às políticas de conformidade](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Com o Intune, pode criar categorias de dispositivos para adicionar automaticamen
 
 ## <a name="device-configuration-profiles"></a>Perfis de configuração de dispositivos
 
-**[Introdução aos perfis de configuração](../configuration/device-profiles.md) e [criar o seu próprio perfil](../configuration/device-profile-create.md)**
+**Começar com perfis de [configuração,](../configuration/device-profiles.md)e [visão geral do perfil](../configuration/device-profile-create.md)**
 
 O Intune inclui definições e funcionalidades que pode ativar ou desativar em diferentes dispositivos na sua organização. Estas definições e funcionalidades são geridas com perfis. Por exemplo, pode criar um perfil que permite o Cortana ou utilizar o Microsoft Defender Smart Screen nos seus dispositivos que executam o Windows Holographic para O Negócio.
 

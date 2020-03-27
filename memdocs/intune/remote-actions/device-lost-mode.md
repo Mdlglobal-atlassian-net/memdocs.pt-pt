@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acb8a7d4c5ab73cde7f50365e91ef985fdaf341f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328401"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326519"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Ativar o modo perdido nos dispositivos iOS/iPadOS com Intune
 
@@ -35,14 +35,14 @@ A ação do dispositivo **lost** ajuda-o a ativar o modo perdido em dispositivos
 - iPadOS 13.0 ou mais tarde
 
 Esta funcionalidade não é suportada para os seguintes sistemas: 
-- Portal do
+- Windows
 - Windows Phone
 - macOS
 - Android
 
 ## <a name="enable-lost-mode"></a>Ativar o modo perdido
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos** e, em seguida, selecione **Todos os dispositivos**.
 4. A partir da lista de dispositivos que gere, escolha um dispositivo iOS/iPadOS e, em seguida, escolha o **modo Perdido (apenas supervisionado)** .
 5. No **modo Perdido,** selecione **Ativar**.

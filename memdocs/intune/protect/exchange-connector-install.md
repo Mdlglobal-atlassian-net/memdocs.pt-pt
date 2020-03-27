@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d78cfe25b28ef95d84ec7e618c4f73caffc214b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329317"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327488"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Configurar o conector Intune Exchange no local
 
@@ -83,7 +83,7 @@ Crie uma conta de utilizador de Diretório Ativo para o conector Intune Exchange
 
 Num servidor Windows que pode suportar o conector Intune Exchange:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).  Use uma conta que é um administrador no servidor de troca no local e que tem uma licença para usar o Exchange Server.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Use uma conta que é um administrador no servidor de troca no local e que tem uma licença para usar o Exchange Server.
 
 2. Selecione **a administração do Inquilino** > Exchange **access**.
 
@@ -214,7 +214,7 @@ Pode ser necessário reinstalar um conector Intune Exchange. Uma vez que apenas 
 
 Depois de configurar com sucesso o conector Exchange, pode visualizar o estado das ligações e a última tentativa de sincronização bem sucedida:
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selecione **a administração do Inquilino** > Exchange **access**.
 
@@ -234,7 +234,7 @@ Um conector Intune Exchange sincroniza automaticamente os registos do dispositiv
 
 Pode forçar um conector a executar uma sincronização utilizando as opções **Quick Sync** ou **Full Sync** no painel de instrumentos Intune:
 
-   1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+   1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
    2. Selecione **a administração do Inquilino** > trocar **acesso** >  trocar o **conector ActiveSync no local**.
 

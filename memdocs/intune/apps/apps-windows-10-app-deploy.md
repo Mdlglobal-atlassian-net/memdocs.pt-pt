@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2168833715bb1148adcb3e158e58c9f54bcd3fc4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325653"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324340"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementação de aplicações do Windows 10 utilizando o Microsoft Intune 
 
@@ -74,7 +74,7 @@ As aplicações microsoft Store for Business são aplicações modernas, comprad
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Categorize a Microsoft Store para aplicações empresariais 
 Para categorizar as aplicações da Microsoft Store para as empresas: 
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.** 
 3. Selecione uma aplicação Microsoft Store for Business. Em seguida, selecione **Propriedades** > categoria **de**informações de **aplicações** > . 
 4. Selecione uma categoria.

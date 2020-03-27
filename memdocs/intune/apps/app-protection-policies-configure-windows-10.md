@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98cff5540c6eaf571cc6b542a92dffb433820f4c
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274392"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323694"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Prepare-se para proteção de informações do Windows no Windows 10 
 
@@ -33,7 +33,7 @@ Ative a gestão de aplicações móveis (MAM) para o Windows 10 ao definir o for
 
 ## <a name="to-configure-the-mam-provider"></a>Para configurar o fornecedor de MAM
 
-1. Inscreva-se no [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Todos os serviços** e escolha o **M365 Azure Ative Directory** para trocar de dashboards.
 3. Selecione **Diretório Ativo Azure**.
 4. Selecione **Mobilidade (MDM e MAM)** no grupo **Gerir**.
