@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329321"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359457"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Definições de proteção de pontos finais MacOS em Intune  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Definições de proteção de ponto final do macOS no Intune  
 
 Este artigo mostra-lhe as definições de proteção de pontofinal que pode configurar para dispositivos que executam o macOS. Configura estas definições utilizando um perfil de configuração do dispositivo macOS para proteção de [pontos finais](endpoint-protection-configure.md) no Intune.  
+
+## <a name="before-you-begin"></a>Antes de começar
+
+[Crie um perfil de proteção de pontofinal macOS](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Controlador de chamadas  
 
@@ -97,7 +101,7 @@ Para obter mais informações sobre as definições do Apple FileVault, consulte
     As chaves de recuperação *das chaves pessoais* são criadas para dispositivos. Configure as seguintes definições para a chave pessoal.  
 
     - **Localização da chave de recuperação pessoal** - Especifique uma mensagem curta para o utilizador que explique como e onde pode recuperar a sua chave de recuperação pessoal. Este texto é inserido na mensagem que o utilizador vê no seu login no ecrã quando solicitado a introduzir a sua chave de recuperação pessoal se uma palavra-passe for esquecida.  
-      
+
     - Rotação da chave de **recuperação pessoal** - Especifique com que frequência a chave de recuperação pessoal de um dispositivo girará. Pode selecionar o padrão de **Não configurado,** ou um valor de **1** a **12** meses.  
 
   - **Desativar o pedido de sinalização**  
@@ -118,3 +122,8 @@ Para obter mais informações sobre as definições do Apple FileVault, consulte
 
 Para mais informações sobre fileVault com Intune, consulte as chaves de [recuperação do FileVault](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Próximos passos
+
+[Atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o respetivo estado](../configuration/device-profile-monitor.md).
+
+Também pode configurar a proteção de pontos finais no [Windows 10 e dispositivos mais recentes.](endpoint-protection-windows-10.md)

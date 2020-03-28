@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326661"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359284"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>definições do dispositivo macOS para configurar e utilizar extensões de kernel em Intune
-
-
 
 Este artigo lista e descreve as diferentes definições de extensão de kernel que pode controlar em dispositivos macOS. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para adicionar e gerir extensões de kernel nos seus dispositivos.
 
@@ -44,7 +43,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Definições aplicam-se a: Utilizador aprovado, inscrição automática do dispositivo
 
-- **Permitir sobreposições**do utilizador : **Permitir que** os utilizadores aprovem extensões de kernel não incluídas no perfil de configuração. **Não configurado** (predefinido) impede os utilizadores de permitir em extensões não incluídas no perfil de configuração. Ou seja, só são permitidas extensões incluídas no perfil de configuração.
+- **Permitir sobreposições**do utilizador : **Permitir que** os utilizadores aprovem extensões de kernel não incluídas no perfil de configuração. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode impedir que os utilizadores permitam extensões não incluídas no perfil de configuração. Ou seja, só são permitidas extensões incluídas no perfil de configuração.
 
   Consulte o [carregamento de extensão de kernel aprovado pelo utilizador](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (abre o site da Apple) para obter mais informações sobre esta funcionalidade.
 

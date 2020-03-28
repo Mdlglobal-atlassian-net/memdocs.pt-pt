@@ -5,27 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: ''
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526296"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359184"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>funcionalidade do dispositivo macOS em Intune
 
-Intune inclui algumas configurações incorporadas para personalizar funcionalidades nos seus dispositivos macOS. Por exemplo, os administradores podem adicionar impressoras AirPrint, escolher como os utilizadores entram, configurar os controlos de energia, usar a autenticação de entrada única e muito mais.
+Intune inclui configurações incorporadas para personalizar funcionalidades nos seus dispositivos macOS. Por exemplo, os administradores podem adicionar impressoras AirPrint, escolher como os utilizadores entram, configurar os controlos de energia, usar a autenticação de entrada única e muito mais.
 
 Utilize estas funcionalidades para controlar dispositivos macOS como parte da sua solução de gestão de dispositivos móveis (MDM).
 
@@ -40,7 +40,7 @@ Criar um perfil de configuração do [dispositivo macOS](device-features-configu
 
 ## <a name="airprint"></a>Impressão Aérea
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Definições aplicam-se a: Inscrição do dispositivo e inscrição automática de dispositivos 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Definições aplicam-se a: Inscrição do dispositivo e inscrição automática de dispositivos
 
 - **Endereço IP**: Introduza o endereço IPv4 ou IPv6 da impressora. Se utilizar os nomes do anfitrião para identificar impressoras, pode obter o endereço IP através do pingping da impressora na aplicação Terminal. [Obtenha o endereço IP e o caminho](#get-the-ip-address-and-path) (neste artigo) fornece mais detalhes.
 - **Caminho**: Entre no caminho da impressora. O caminho é tipicamente `ipp/print` para impressoras na sua rede. [Obtenha o endereço IP e o caminho](#get-the-ip-address-and-path) (neste artigo) fornece mais detalhes.
@@ -70,7 +70,7 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Definições aplicam-se a: Todos os tipos de inscrição
 
-- **Ficheiros, pastas e aplicações personalizadas**: **Adicione** o caminho de um ficheiro, pasta, aplicação personalizada ou aplicação do sistema que pretende abrir quando um utilizador faz o sinal de si no dispositivo. Aplicações do sistema, ou aplicações construídas ou personalizadas para a sua organização estão tipicamente na pasta `Applications`, com um caminho semelhante ao `/Applications/AppName.app`. 
+- **Ficheiros, pastas e aplicações personalizadas**: **Adicione** o caminho de um ficheiro, pasta, aplicação personalizada ou aplicação do sistema que pretende abrir quando os utilizadores iniciarem o insto nos seus dispositivos. Aplicações do sistema, ou aplicações construídas ou personalizadas para a sua organização estão tipicamente na pasta `Applications`, com um caminho semelhante ao `/Applications/AppName.app`. 
 
   Pode adicionar muitos ficheiros, pastas e aplicações. Por exemplo, introduza:  
   
@@ -79,7 +79,9 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Ao adicionar qualquer aplicação, pasta ou ficheiro, certifique-se de que introduza o caminho correto. Nem todos os itens estão na pasta `Applications`. Se um utilizador move um item de um local para outro, então o caminho muda. Este item movido não será aberto quando o utilizador entrar.
+  Ao adicionar qualquer aplicação, pasta ou ficheiro, certifique-se de que introduza o caminho correto. Nem todos os itens estão na pasta `Applications`. Se os utilizadores moverem um item de um local para outro, então o caminho muda. Este item movido não será aberto quando o utilizador entrar.
+
+- **Ocultar a configuração do utilizador**: **O Hide** não mostra a aplicação na lista de itens de login dos Utilizadores e Grupos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA mostra o item que começa a iniciar o login na lista de itens de login dos Utilizadores e Grupos com a opção de ocultação desmarcada.
 
 ## <a name="login-window"></a>Janela de login
 
@@ -87,37 +89,37 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
 
 #### <a name="window-layout"></a>Layout da janela
 
-- **Mostre informações adicionais na barra de menus**: Quando a área de tempo na barra de menus for selecionada, **permita** mostrar o nome do anfitrião e a versão macOS. **Não configurado** (predefinido) não mostra esta informação na barra de menus.
-- **Banner**: Introduza uma mensagem que está mostrada no sinal no ecrã do dispositivo. Por exemplo, insira as informações da sua organização, uma mensagem de boas-vindas, informação perdida e encontrada, e assim por diante.
-- Escolha o **formato de login**: Escolha como os utilizadores iniciam sessão no dispositivo. As opções são:
+- **Mostre informações adicionais na barra de menus**: Quando a área de tempo na barra de menus for selecionada, **permita** mostrar o nome do anfitrião e a versão macOS. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não mostrar esta informação na barra de menus.
+- **Banner**: Introduza uma mensagem que é mostrada no sinal no ecrã nos dispositivos. Por exemplo, insira as informações da sua organização, uma mensagem de boas-vindas, informação perdida e encontrada, e assim por diante.
+- **Escolha o formato de login**: Escolha como os utilizadores iniciam sessão nos dispositivos. As opções são:
   - **Solicitação para o nome de utilizador e palavra-passe** (predefinição): Requer que os utilizadores introduzam um nome de utilizador e uma palavra-passe.
   - **Liste todos os utilizadores, indique a palavra-passe**: Requer que os utilizadores selecionem o seu nome de utilizador a partir de uma lista de utilizadores e, em seguida, introduzam a sua palavra-passe. Também configurar:
 
-    - **Utilizadores locais**: **O Hide** não mostra as contas de utilizador locais na lista de utilizadores, o que pode incluir as contas padrão e de administração. Apenas são apresentadas as contas de utilizador da rede e do sistema. **Não configurado** (predefinido) mostra as contas de utilizador locais na lista de utilizadores.
-    - **Contas móveis:** **O Hide** não mostra contas móveis na lista de utilizadores. **Não configurado** (predefinido) mostra as contas móveis na lista de utilizadores. Algumas contas móveis podem mostrar como utilizadores da rede.
-    - **Utilizadores da rede**: Selecione **Mostrar** para listar os utilizadores da rede na lista de utilizadores. **Não configurado** (predefinido) não mostra as contas de utilizador da rede na lista de utilizadores.
-    - **Utilizadores de administrador:** **O Hide** não mostra as contas de utilizador do administrador na lista de utilizadores. **Não configurado** (predefinido) mostra as contas de utilizador do administrador na lista de utilizadores.
-    - **Outros utilizadores**: Selecione **Mostrar** para **listar Outros...** utilizadores na lista de utilizadores. **Não configurado** (predefinido) não mostra as outras contas de utilizador na lista de utilizadores.
+    - **Utilizadores locais**: **O Hide** não mostra as contas de utilizador locais na lista de utilizadores, o que pode incluir as contas padrão e de administração. Apenas são apresentadas as contas de utilizador da rede e do sistema. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode apresentar as contas de utilizador locais na lista de utilizadores.
+    - **Contas móveis:** **O Hide** não mostra contas móveis na lista de utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode apresentar as contas móveis na lista de utilizadores. Algumas contas móveis podem mostrar como utilizadores da rede.
+    - **Utilizadores da rede**: Selecione **Mostrar** para listar os utilizadores da rede na lista de utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não mostrar as contas de utilizador da rede na lista de utilizadores.
+    - **Utilizadores de administrador:** **O Hide** não mostra as contas de utilizador do administrador na lista de utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode mostrar as contas de utilizador do administrador na lista de utilizadores.
+    - **Outros utilizadores**: Selecione **Mostrar** para **listar Outros...** utilizadores na lista de utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não mostrar as outras contas de utilizador na lista de utilizadores.
 
 #### <a name="login-screen-power-settings"></a>Definições de potência do ecrã de login
 
-- **Botão desligar**: **Ocultar** não mostra o botão de paragem no sinal no ecrã. **Não configurado** (predefinido) mostra o botão de paragem.
-- **Botão de reiniciar**: **Ocultar** não mostra o botão de reiniciar o sinal no ecrã. **Não configurado** (predefinido) mostra o botão de reinício.
-- **Botão de sono**: **O hide** não mostra o botão de sono no sinal no ecrã. **Não configurado** (predefinido) mostra o botão de sono.
+- **Botão desligar**: **Ocultar** não mostra o botão de paragem no sinal no ecrã. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode mostrar o botão de paragem.
+- **Botão de reiniciar**: **Ocultar** não mostra o botão de reiniciar o sinal no ecrã. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode mostrar o botão de reinício.
+- **Botão de sono**: **O hide** não mostra o botão de sono no sinal no ecrã. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode mostrar o botão de sono.
 
 #### <a name="other"></a>Outros
 
-- **Desative o login do utilizador a partir da Consola:** **Desative** a linha de comando macOS utilizada para iniciar sessão. Para utilizadores típicos, **desative** esta definição. **Não configurado** (predefinido) permite que os utilizadores avançados assinem utilizando a linha de comando macOS. Para entrar no modo consola, os utilizadores introduzem `>console` no campo Username e devem autenticar na janela da consola.
+- **Desative o login do utilizador a partir da Consola:** **Desative** a linha de comando macOS utilizada para iniciar sessão. Para utilizadores típicos, **desative** esta definição. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores avançados assinem a utilização da linha de comando macOS. Para entrar no modo consola, os utilizadores introduzem `>console` no campo Username e devem autenticar na janela da consola.
 
 #### <a name="apple-menu"></a>Apple Menu
 
 Depois de os utilizadores iniciarem sessão nos dispositivos, as seguintes definições têm impacto no que podem fazer.
 
-- **Desligar**: **Desativar** impede os utilizadores de selecionar a opção **Desligar** após a instinação do utilizador. **Não configurado** (predefinido) permite que os utilizadores selecionem o item do menu **'Desligar'** no dispositivo.
-- **Desativar O arranque**: **Desativar** impede os utilizadores de selecionar a opção **Reiniciar** após a intenção do utilizador. **Não configurado** (predefinido) permite que os utilizadores selecionem o item do menu **Restart** no dispositivo.
-- **Desativar o desativado**: **Desativar** os utilizadores impede que os utilizadores selecionem a opção Desligar a **desativação** após a insactivação do utilizador. **Não configurado** (predefinido) permite que os utilizadores selecionem o item do menu **Desligar** no dispositivo.
-- **Desativar o Log out** (macOS 10.13 e mais tarde): **Desativar** os utilizadores impede que os utilizadores selecionem a opção **Iniciar sessão** após a hora do utilizador. **Não configurado** (predefinido) permite que os utilizadores selecionem o item do menu **'Iniciar sessão'** no dispositivo.
-- **Desativar** o ecrã de bloqueio (macOS 10.13 e mais tarde): **Desativar** os utilizadores impede que os utilizadores selecionem a opção de **ecrã de bloqueio** após a instinação do utilizador. **Não configurado** (predefinido) permite que os utilizadores selecionem o item do menu **do ecrã lock** no dispositivo.
+- **Desligar**: **Desativar** impede os utilizadores de selecionar a opção **Desligar** após a instinação do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores selecionem o item do menu **'Desligar'** nos dispositivos.
+- **Desativar O arranque**: **Desativar** impede os utilizadores de selecionar a opção **Reiniciar** após a intenção do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores selecionem o item do menu **Restart** nos dispositivos.
+- **Desativar o desativado**: **Desativar** os utilizadores impede que os utilizadores selecionem a opção Desligar a **desativação** após a insactivação do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores selecionem o item do menu **Desligar** em dispositivos.
+- **Desativar o Log out** (macOS 10.13 e mais tarde): **Desativar** os utilizadores impede que os utilizadores selecionem a opção **Iniciar sessão** após a hora do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores selecionem o item do menu **'Iniciar sessão'** nos dispositivos.
+- **Desativar** o ecrã de bloqueio (macOS 10.13 e mais tarde): **Desativar** os utilizadores impede que os utilizadores selecionem a opção de **ecrã de bloqueio** após a instinação do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores selecionem o item do menu **'Bloquear'** nos dispositivos.
 
 ## <a name="single-sign-on-app-extension"></a>Extensão única da aplicação de inscrição
 
@@ -130,8 +132,8 @@ Esta funcionalidade aplica-se a:
 - **Tipo de extensão da aplicação SSO**: Escolha o tipo de extensão da aplicação SSO credencial. As opções são:
 
   - **Não configurado**: As extensões de aplicações não são utilizadas. Para desativar uma extensão da aplicação, altere o tipo de extensão da aplicação SSO para **Não configurado**.
-  - **Redirecionamento**: Utilize uma extensão de aplicação de redirecionamento genérica e personalizável para executar SSO com fluxos de autenticação modernos. Certifique-se de que conhece a extensão e o ID da equipa para a extensão da aplicação da sua organização.
-  - **Credencial**: Utilize uma extensão de aplicação credencial genérica e personalizável para executar SSO com fluxos de autenticação de desafio e resposta. Certifique-se de que conhece o ID de extensão e o ID da equipa para a extensão da aplicação SSO da sua organização.  
+  - **Redirecionamento**: Utilize uma extensão de aplicação de redirecionamento genérica e personalizável para utilizar o SSO com fluxos de autenticação modernos. Certifique-se de que conhece a extensão e o ID da equipa para a extensão da aplicação da sua organização.
+  - **Credencial**: Utilize uma extensão de aplicação credencial genérica e personalizável para utilizar o SSO com fluxos de autenticação de desafio e resposta. Certifique-se de que conhece o ID de extensão e o ID da equipa para a extensão da aplicação SSO da sua organização.  
   - **Kerberos**: Use a extensão Kerberos incorporada da Apple, que está incluída no macOS Catalina 10.15 e mais recente. Esta opção é uma versão específica da Extensão da aplicação **Credencial** da Kerberos.
 
   > [!TIP]
@@ -149,7 +151,7 @@ Esta funcionalidade aplica-se a:
   - Todos os domínios da sua única extensão de aplicação de início de sessão Os perfis Intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações de início de sessão, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Estes domínios não são sensíveis a casos.
 
-- **URLs** (apenas redirecionamento): Introduza os prefixos URL dos seus fornecedores de identidade em nome de quem a extensão da aplicação de redirecionamento executa SSO. Quando um utilizador é redirecionado para estes URLs, a extensão da aplicação SSO intervirá e solicitará sSO.
+- **URLs** (apenas redirecionamento): Introduza os prefixos URL dos seus fornecedores de identidade em nome de quem a extensão da aplicação de redirecionamento utiliza SSO. Quando os utilizadores são redirecionados para estes URLs, a extensão da aplicação SSO intervém e solicita para SSO.
 
   - Todos os URLs nos seus perfis de extensão de aplicações intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações SSO, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Os URLs devem começar com http:// ou https://.
@@ -166,25 +168,25 @@ Esta funcionalidade aplica-se a:
   
   - **Adicione**: Selecione para adicionar as suas chaves de configuração.
 
-- **Utilização** em cadeia de chaves (apenas Kerberos): Escolha **o Bloco** para evitar que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Se bloqueado, o utilizador não é solicitado a guardar a sua palavra-passe e precisa de reintroduzir a palavra-passe quando o bilhete Kerberos expirar. **Não configurado** (predefinido) permite que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Os utilizadores não são solicitados a reintroduzir a sua palavra-passe quando o bilhete expirar.
-- **Id do rosto, Touch ID ou código de acesso** (apenas Kerberos): **Exigir** que os utilizadores introduzam o seu ID facial, touch ID ou código de acesso do dispositivo quando a credencial é necessária para refrescar o bilhete Kerberos. **Não configurado** (padrão) não requer que os utilizadores utilizem a biometria ou a senha do dispositivo para atualizar o bilhete Kerberos. Se o uso do **Keychain** estiver bloqueado, esta definição não se aplica.
-- **Reino padrão** (apenas Kerberos): Escolha **ativar** para definir o valor real **que** introduziu como o reino padrão. **Não configurado** (predefinido) não define um reino predefinido.
+- **Utilização** em cadeia de chaves (apenas Kerberos): Escolha **o Bloco** para evitar que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Se bloqueados, os utilizadores não são solicitados a guardar a sua palavra-passe e precisam de reintroduzir a palavra-passe quando o bilhete Kerberos expirar. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que as palavras-passe sejam guardadas e armazenadas no porta-chaves. Os utilizadores não são solicitados a reintroduzir a sua palavra-passe quando o bilhete expirar.
+- **Id do rosto, Touch ID ou código de acesso** (apenas Kerberos): **Exigir** que os utilizadores introduzam o seu ID facial, touch ID ou código de acesso do dispositivo quando a credencial é necessária para refrescar o bilhete Kerberos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode não exigir que os utilizadores utilizem a biometria ou a senha do dispositivo para atualizar o bilhete Kerberos. Se o uso do **Keychain** estiver bloqueado, esta definição não se aplica.
+- **Reino padrão** (apenas Kerberos): Escolha **ativar** para definir o valor real **que** introduziu como o reino padrão. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode não definir um reino padrão.
 
   > [!TIP]
   > - **Ative** esta definição se estiver a configurar várias extensões de aplicações Kerberos SSO na sua organização.
   > - **Ative** esta definição se estiver a utilizar vários reinos. Define o valor do **Reino** que introduziu como o reino padrão.
   > - Se tiver apenas um reino, deixe-o **não configurado** (predefinido).
 
-- **Autodescubra** (apenas Kerberos): Quando definida para **bloquear,** a extensão Kerberos não utiliza automaticamente LDAP e DNS para determinar o seu nome de site ative diretório. **Não configurado** (predefinido) permite que a extensão encontre automaticamente o nome do site do Diretório Ativo.
-- **Alterações de palavra-passe** (apenas Kerberos): **O bloco** impede que os utilizadores mudem as palavras-passe que utilizam para iniciar sessão nos domínios em que inseriu. **Não configurado** (predefinido) permite alterações de palavra-passe.  
-- **Sincronização de passwords** (apenas Kerberos): Escolha **ativar** para sincronizar as palavras-passe locais dos seus utilizadores para o Azure AD. **Não configurado** (padrão) desativa a sincronização de palavras-passe para o Azure AD. Utilize esta definição como alternativa ou cópia de segurança para o SSO. Esta definição não funciona se os utilizadores forem inscritos numa conta móvel da Apple.
-- Complexidade da **palavra-passe do Diretório Ativo do Windows Server** (apenas Kerberos): Escolha **exigir** que as palavras-passe dos utilizadores cumpram os requisitos de complexidade da palavra-passe do Ative Directory. Ver [Palavra-passe deve satisfazer os requisitos](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) de complexidade para mais informações. **Não configurado** (predefinido) não requer que os utilizadores cumpram o requisito de palavra-passe do Diretório Ativo.
-- Comprimento mínimo da **palavra-passe** (apenas Kerberos): Introduza o número mínimo de caracteres que podem compor a palavra-passe de um utilizador. **Não configurado** (predefinido) não impõe um comprimento mínimo de senha nos utilizadores.
-- Limite de **reutilização de palavra-passe** (apenas Kerberos): Introduza o número de novas senhas, de 1 a 24, que devem ser utilizadas até que uma palavra-passe anterior possa ser reutilizada no domínio. **Não configurado** (predefinido) não impõe um limite de reutilização da palavra-passe.
-- Idade mínima da **palavra-passe** (apenas Kerberos): Introduza o número de dias em que uma palavra-passe deve ser utilizada no domínio antes que um utilizador possa alterá-la. **Não configurado** (predefinido) não impõe uma idade mínima de senhas antes de poderem ser alteradas.
-- Notificação de expiração de **palavra-passe** (apenas Kerberos): Insira o número de dias antes de expirar uma palavra-passe para que os utilizadores sejam notificados de que a sua palavra-passe expirará. **Não configurado** (predefinido) utiliza `15` dias.
-- **Expiração da palavra-passe** (apenas Kerberos): Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada. **Não configurado** (predefinido) significa que as palavras-passe do utilizador nunca expiram.
-- **URL** de alteração de password (apenas Kerberos): Introduza o URL que é lançado quando o utilizador inicia uma alteração de senha kerberos.
+- **Autodescubra** (apenas Kerberos): Quando definida para **bloquear,** a extensão Kerberos não utiliza automaticamente LDAP e DNS para determinar o seu nome de site ative diretório. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que a extensão encontre automaticamente o nome do site do Diretório Ativo.
+- **Alterações de palavra-passe** (apenas Kerberos): **O bloco** impede que os utilizadores mudem as palavras-passe que utilizam para iniciar sessão nos domínios em que inseriu. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir alterações de palavra-passe.  
+- **Sincronização de passwords** (apenas Kerberos): Escolha **ativar** para sincronizar as palavras-passe locais dos seus utilizadores para o Azure AD. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode desativar a sincronização de palavra-passe para o Azure AD. Utilize esta definição como alternativa ou cópia de segurança para o SSO. Esta definição não funciona se os utilizadores forem inscritos numa conta móvel da Apple.
+- Complexidade da **palavra-passe do Diretório Ativo do Windows Server** (apenas Kerberos): Escolha **exigir** que as palavras-passe dos utilizadores cumpram os requisitos de complexidade da palavra-passe do Ative Directory. Para mais informações, consulte [a Palavra-passe deve satisfazer os requisitos](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)de complexidade . Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não exigir que os utilizadores cumpram o requisito de senha do Diretório Ativo.
+- **Comprimento mínimo da palavra-passe** (apenas Kerberos): Introduza o número mínimo de caracteres que podem compor as palavras-passe dos utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não impor um comprimento mínimo de senha aos utilizadores.
+- Limite de **reutilização de palavra-passe** (apenas Kerberos): Introduza o número de novas senhas, de 1 a 24, que devem ser utilizadas até que uma palavra-passe anterior possa ser reutilizada no domínio. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não impor um limite de reutilização de palavra-passe.
+- Idade mínima da **palavra-passe** (apenas Kerberos): Introduza o número de dias em que uma palavra-passe deve ser utilizada no domínio antes que os utilizadores possam alterá-la. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode não impor uma idade mínima de senhas antes de poderem ser alteradas.
+- Notificação de expiração de **palavra-passe** (apenas Kerberos): Insira o número de dias antes de expirar uma palavra-passe para que os utilizadores sejam notificados de que a sua palavra-passe expirará. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode utilizar `15` dias.
+- **Expiração da palavra-passe** (apenas Kerberos): Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode nunca expirar senhas.
+- URL de **alteração de palavra-passe** (apenas Kerberos): Introduza o URL que se abre quando os utilizadores iniciarem uma alteração de senha kerberos.
 - **Nome principal** (apenas Kerberos): Introduza o nome de utilizador do diretor kerberos. Não precisas de incluir o nome do reino. Por exemplo, em `user@contoso.com`, `user` é o nome principal, e `contoso.com` é o nome do reino.
 
   > [!TIP]
@@ -194,7 +196,7 @@ Esta funcionalidade aplica-se a:
 - Código de **site de Diretório Ativo** (apenas Kerberos): Introduza o nome do site Ative Directory que a extensão Kerberos deve utilizar. Pode não precisar de alterar este valor, uma vez que a extensão Kerberos pode automaticamente encontrar o código do site do Ative Directory.
 - **Nome cache** (apenas Kerberos): Introduza o nome genérico de serviços de segurança (GSS) da cache Kerberos. Provavelmente não precisa definir este valor.  
 - **Mensagem de prescrição de palavra-passe** (apenas Kerberos): Introduza uma versão de texto dos requisitos de palavra-passe da sua organização que é mostrada aos utilizadores. A mensagem é mostrada se não necessitar dos requisitos de complexidade da palavra-passe do Ative Directory ou se não introduzir um comprimento mínimo de senha.  
-- **IDs** de pacote de aplicativos (apenas Kerberos): **Adicione** os identificadores de pacote de aplicativos que devem usar um único sinal nos seus dispositivos. Estas aplicações têm acesso ao Bilhete de Concessão de Bilhetes Kerberos, ao bilhete de autenticação e autenticam os utilizadores aos serviços a que estão autorizados a aceder.
+- **IDs** de pacote de aplicativos (apenas Kerberos): **Adicione** os identificadores de pacote de aplicativos que devem usar um único sinal nos seus dispositivos. Estas aplicações têm acesso ao Bilhete de Concessão de Bilhetes Kerberos e ao bilhete de autenticação. As aplicações também autenticam os utilizadores aos serviços a que estão autorizados a aceder.
 - **Mapeamento** do domínio (apenas Kerberos): **Adicione** os sufixos dNS de domínio que devem mapear para o seu reino. Use este cenário quando os nomes DNS dos anfitriões não corresponderem ao nome do reino. Provavelmente não precisa de criar este mapeamento personalizado domínio-realm.
 - **Certificado PKINIT** (apenas Kerberos): **Selecione** o certificado de criptografia de chave pública para autenticação inicial (PKINIT) que pode ser usado para autenticação Kerberos. Pode escolher entre os certificados [PKCS](../protect/certficates-pfx-configure.md) ou [SCEP](../protect/certificates-scep-configure.md) que adicionou no Intune. Para obter mais informações sobre certificados, consulte [Utilize certificados para autenticação no Microsoft Intune](../protect/certificates-configure.md).
 

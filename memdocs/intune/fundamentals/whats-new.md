@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b33b33415628dab471d1d4951e141c2ce718eaa0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 9632f47d3ab5582365a059b888892c2e0fe6ec8e
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326668"
+ms.locfileid: "80358733"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -55,6 +55,46 @@ Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>Semana de 24 de março de 2020
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Melhoria da experiência de interface de utilizador ao criar perfis de restrições de dispositivos em dispositivos Android e Android Enterprise<!-- 5841361 -->
+
+Quando cria um perfil para dispositivos Android ou Android Enterprise, a experiência no centro de administração endpoint Management é atualizada. Esta alteração impacta os seguintes perfis de configuração do dispositivo **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **administrador de dispositivos Android** ou Android **Enterprise** para plataforma):
+
+- Restrições ao dispositivo: Administrador de dispositivos Android
+- Restrições ao dispositivo: Proprietário de dispositivos Android Enterprise
+- Restrições ao dispositivo: Perfil de trabalho Android Enterprise
+
+Para obter mais informações sobre as restrições do dispositivo, pode configurar, consulte o [administrador do dispositivo Android](../configuration/device-restrictions-android.md) e o Android [Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Melhoria da experiência de interface do utilizador ao criar perfis de configuração em dispositivos iOS/iPadOS e macOS<!-- 5569002 5568997 -->
+
+Quando cria um perfil para dispositivos iOS ou macOS, a experiência no centro de administração da Endpoint Management é atualizada. Esta alteração impacta os seguintes perfis de configuração do dispositivo **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **iOS/iPadOS** ou **macOS** para a plataforma):
+
+- Personalizado: iOS/iPadOS, macOS
+- Funcionalidades do dispositivo: iOS/iPadOS, macOS
+- Restrições ao dispositivo: iOS/iPadOS, macOS
+- Proteção endpoint: macOS
+- Extensões: macOS
+- Ficheiro preferencial: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Ocultar da configuração da configuração do utilizador nas funcionalidades do dispositivo em dispositivos macOS<!-- 6524869 -->
+
+Quando cria um dispositivo que possui um perfil de configuração nos dispositivos macOS, existe um novo **Hide a partir da configuração de configuração do utilizador** (**Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **macOS** para funcionalidades de plataforma > **Dispositivo** para itens de perfil > **Login).**
+
+Esta funcionalidade define a marca de verificação de ocultação de uma aplicação na lista de aplicações de login **de Utilizadores e Grupos** em dispositivos macOS. Os perfis existentes mostram esta definição dentro da lista como não configurada. Para configurar esta definição, os administradores podem atualizar os perfis existentes.
+
+Quando definido para **Ocultar,** a caixa de verificação de ocultação é verificada para a aplicação e os utilizadores não podem alterá-la. Também esconde a aplicação dos utilizadores depois de os utilizadores iniciarem sessão nos seus dispositivos.
+
+> [!div class="mx-imgBorder"]
+> ![Ocultar aplicações em dispositivos macOS após os utilizadores iniciarem sessão no dispositivo no Microsoft Intune e Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Para obter mais informações sobre a definição que pode configurar, consulte as definições de funcionalidades do [dispositivo macOS](../configuration/macos-device-features-settings.md).
+
+Esta funcionalidade aplica-se a:
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Semana de 16 de março de 2020 (lançamento do Serviço de 2003)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -295,7 +335,11 @@ Reveja o artigo de [pré-visualização técnica do Gestor](https://docs.microso
 Pode agora emitir comandos a granel para as seguintes ações remotas: reiniciar, mudar o nome, reiniciar o Piloto Automático, limpar e eliminar. Para ver as novas ações a granel, vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > **Todos os dispositivos** > **ações em massa**.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Todos os dispositivos listam melhor pesquisa, classificação e filtro<!--6179023-->
-A lista de todos os dispositivos foi melhorada para um melhor desempenho, pesquisa, triagem e filtragem. Para mais informações, consulte [esta Dica de Suporte](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
+A lista de todos os dispositivos foi melhorada para um melhor desempenho, pesquisa, triagem e filtragem. Para mais informações, consulte [esta Dica de Suporte](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+### <a name="app-management"></a>Gestão de aplicações  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Melhor experiência de inscrição no Portal da Empresa para Android    
+Atualizámos o layout de vários ecrãs de acesso no aplicativo Portal da Empresa para Android para tornar a experiência mais moderna, simples e limpa para os utilizadores. Para ver as melhorias, veja [What's New na app UI](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Semana de 24 de fevereiro de 2020

@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c25177b838b9a720ec51930c3ab9c069696067d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326174"
+ms.locfileid: "80359354"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Utilizar definições personalizadas para dispositivos macOS no Microsoft Intune
 
@@ -64,10 +65,8 @@ Este artigo fornece algumas orientações sobre a utilização do Apple Configur
   > [!NOTE]
   > As variáveis não são validadas na UI, e são sensíveis ao caso. Como resultado, pode ver perfis guardados com entrada incorreta. Por exemplo, se introduzir `{{DeviceID}}` em vez de `{{deviceid}}`, então a corda literal é mostrada em vez do ID único do dispositivo. Certifique-se de introduzir a informação correta.
 
-Selecione **OK** > **Criar** para guardar as alterações. O perfil é criado e mostrado na lista de perfis.
-
 ## <a name="next-steps"></a>Próximos passos
 
-O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md).
+O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 
-Veja como [criar o perfil nos dispositivos iOS/iPadOS](custom-settings-ios.md).
+Criar um [perfil personalizado nos dispositivos iOS/iPadOS](custom-settings-ios.md).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327412"
+ms.locfileid: "80359315"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
 
@@ -202,7 +202,7 @@ Esta funcionalidade suporta:
 
 - Windows 10 e posterior
 
-As definições de quiosque também estão disponíveis como restrições de dispositivos para [Android,](device-restrictions-android.md#kiosk) [Android Enterprise,](device-restrictions-android-for-work.md#dedicated-device-settings)e [ios/iPadOS.](device-restrictions-ios.md#kiosk)
+As definições de quiosque também estão disponíveis como restrições de dispositivos para [Android,](device-restrictions-android.md#kiosk) [Android Enterprise,](device-restrictions-android-for-work.md#dedicated-devices)e [ios/iPadOS.](device-restrictions-ios.md#kiosk)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

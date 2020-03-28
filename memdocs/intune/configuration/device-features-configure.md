@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084099"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359482"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adicione as definições de funcionalidades do iOS, iPadOS ou macOS em Intune
 
@@ -203,30 +203,45 @@ Aplica-se a:
 - iOS 7.0 e mais recente
 - iPadOS 13.0 e mais recente
 
-## <a name="create-a-device-profile"></a>Criar um perfil de dispositivo
+## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **macOS: Configures login screen**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **Tipo de perfil**: selecione **Funcionalidades do dispositivo**.
 
-4. Consoante a plataforma que escolheu, as definições que pode configurar variam. Escolha a sua plataforma para configurações detalhadas:
+    - **Perfil**: Selecione **as funcionalidades do dispositivo**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
+
+    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **macOS: Configures login screen**.
+    - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
+
+6. Selecione **Seguinte**.
+
+7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Escolha a sua plataforma para configurações detalhadas:
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+8. Selecione **Seguinte**.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
-O perfil é criado e mostrado na lista de perfis. Certifique-se de [atribuir o perfil](device-profile-assign.md) e monitorizar [o seu estado](device-profile-monitor.md).
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 ## <a name="next-steps"></a>Próximos passos
 
-Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 
 Ver todas as definições de funcionalidades do dispositivo para [dispositivos iOS/iPadOS](ios-device-features-settings.md) e [macOS.](macos-device-features-settings.md)

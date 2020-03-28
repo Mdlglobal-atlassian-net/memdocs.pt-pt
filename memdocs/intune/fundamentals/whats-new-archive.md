@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48c88c037a305f2e7f8ba8ab4be5a1accc9680e8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085822"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359265"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novidades do Microsoft Intune – meses anteriores
 
@@ -527,7 +527,7 @@ Nesta atualização, são adicionadas as seguintes funcionalidades:
 - **Dispositivos dedicados** > **Multi-app**: O controlo de volume dos meios de **comunicação** permite que os utilizadores controlem o volume de suporte slider do dispositivo. 
 - **Dispositivos dedicados** > **Multi-app**: Ative um protetor de **ecrã,** carregue uma imagem personalizada e controle quando o protetor de ecrã for mostrado.
 
-Para ver as definições atuais, vá às definições do [dispositivo Android Enterprise para permitir ou restringir funcionalidades usando Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Para ver as definições atuais, vá às definições do [dispositivo Android Enterprise para permitir ou restringir funcionalidades usando Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Aplica-se a:
 
@@ -1461,7 +1461,7 @@ Aplica-se a:
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>Dispositivos "Quiosque" passam a chamar-se "dispositivos dedicados" em dispositivos Android Enterprise<!-- 3598402   -->
 Para alinhar com a terminologia Android, o **quiosque** é alterado para **dispositivos dedicados** para dispositivos empresariais Android (**Configuração de dispositivos** > **Perfis** > **Criar perfil** > **Android enterprise para plataforma > Dispositivo **Proprietário Apenas** > Restrições de **Dispositivo s > ** **dispositivos dedicados).**
 
-Para ver as definições disponíveis, vá às definições do [Dispositivo para permitir ou restringir as funcionalidades](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Para ver as definições disponíveis, vá às definições do [Dispositivo para permitir ou restringir as funcionalidades](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Aplica-se a:  
 Android Enterprise
@@ -2466,11 +2466,11 @@ A página de imagem corporativa do Portal da Empresa tem um novo esquema, mensag
 Pode controlar o acesso de dispositivos móveis a recursos corporativos utilizando o Acesso Condicional com base na avaliação de risco realizada pela Pradeo, uma solução de Defesa de Ameaças Móveis que se integra com a Microsoft Intune.
 
 #### <a name="use-fips-mode-with-the-ndes-certificate-connector---1333688---"></a>Utilizar o modo FIPS com o conector do Certificado NDES<!-- 1333688 -->
-Ao instalar o conector do Certificado NDES num computador com o modo FIPS (Federal Information Processing Standard) ativado, a emissão e a revogação de certificados não funcionaram como esperado. Com esta atualização, é incluído suporte para o modo FIPS com o conector do Certificado NDES. 
+Ao instalar o conector do Certificado NDES num computador com o modo FIPS (Federal Information Processing Standard) ativado, a emissão e a revogação de certificados não funcionaram como esperado. Com esta atualização, é incluído suporte para FIPS com o conector do Certificado NDES. 
 
 Esta atualização também inclui:
 
-- O conector do Certificado NDES precisa do .NET 4.5 Framework, incluído automaticamente com o Windows Server 2016 e o Windows Server 2012 R2. Anteriormente, a versão mínima necessária era o .NET 3.5 Framework.
+- O conector do Certificado NDES precisa do .NET 4.5 Framework, que é incluído automaticamente com o Windows Server 2016 e o Windows Server 2012 R2. Anteriormente, a versão mínima necessária era o .NET 3.5 Framework.
 - É incluído suporte para o TLS 1.2 com o conector do Certificado NDES. Assim, se o servidor com o Certificate Connector do NDES instalado suportar o TLS 1.2, será utilizado o TLS 1.2. Se o servidor não suportar o TLS 1.2, será utilizado o TLS 1.1. Atualmente, é utilizado o TLS 1.1 para a autenticação entre os dispositivos e o servidor.
 
 Para obter mais informações, veja [Configurar e utilizar certificados SCEP](../protect/certificates-scep-configure.md) e [Configurar e utilizar certificados PKCS](../protect/certficates-pfx-configure.md).
@@ -2919,7 +2919,7 @@ Criar perfil\Proteção de ponto final\Windows Defender Exploit Guard.
 
 |              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
+| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novidade</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
 Proteja ficheiros e pastas contra alterações não autorizadas por aplicações não fidedignas.<br><br>**Ativar**: impede que aplicações não fidedignas modifiquem ou eliminem ficheiros em pastas protegidas e escrevam em setores do disco.<br><br>
 **Bloquear apenas a modificação do disco**:<br>Impeça que aplicações não fidedignas escrevam em setores do disco. As aplicações não fidedignas continuam a poder modificar ou eliminar ficheiros em pastas protegidas.|
@@ -2946,7 +2946,7 @@ Pode criar categorias de eBook personalizadas e depois atribuir eBooks do VPP a 
 A partir de 30 de abril de 2018, a opção **Enviar Feedback** na aplicação Portal da Empresa para Windows funcionará apenas em dispositivos com a Atualização de Aniversário do Windows 10 (1607) e versões posteriores. A opção para enviar feedback já não é suportada ao utilizar a aplicação Portal da Empresa para Windows com a:  
 - Versão 1507 do Windows 10  
 - Versão 1511 do Windows 10  
-- Wnodows Phone 8.1
+- Windows Phone 8.1
 
 Se o seu dispositivo estiver a executar o Windows 10 RS1 ou posterior, transfira a versão mais recente da aplicação Portal da Empresa para Windows a partir da Store. Se estiver a executar uma versão não suportada, continue a enviar feedback através dos seguintes canais:
 - Aplicação Hub de Comentários no Windows 10
@@ -3093,7 +3093,7 @@ Por exemplo, uma conta de recurso como **Sala de Conferência B41/6233**.
 
 |              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
+| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novidade</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
 Proteja ficheiros e pastas contra alterações não autorizadas por aplicações não fidedignas.<br><br>**Ativar**: impede que aplicações não fidedignas modifiquem ou eliminem ficheiros em pastas protegidas e escrevam em setores do disco.<br><br>
 **Bloquear apenas a modificação do disco**:<br>Impeça que aplicações não fidedignas escrevam em setores do disco. As aplicações não fidedignas continuam a poder modificar ou eliminar ficheiros em pastas protegidas.|
@@ -4212,7 +4212,7 @@ Os dispositivos com o Samsung Knox Standard agora suportam a [gestão de vários
 Adicionámos suporte para mais [definições de restrição de dispositivos Windows](../configuration/device-restrictions-windows-10.md), tais como suporte adicional para o browser Microsoft Edge, personalização do ecrã de bloqueio de dispositivos, personalizações do menu Iniciar, imagens de fundo definidas para pesquisas do Destaque do Windows e definição de proxy.
 
 ### <a name="multi-user-support-for-windows-10-creators-update---822547---"></a>Suporte para múltiplos utilizadores da Atualização para Criativos do Windows 10<!-- 822547 -->
-Adicionamos suporte para a [gestão de vários utilizadores](../enrollment/windows-enroll.md) para dispositivos a executar a Atualização para Criativos do Windows 10 e que estejam associados ao domínio do Azure Active Directory. Tal significa que, quando outros utilizadores padrão iniciarem sessão no dispositivo com as credenciais do Azure AD, receberão as aplicações e as políticas atribuídas aos seus nomes de utilizador. Atualmente, os utilizadores não podem utilizar o Portal da Empresa para cenários de self-service, tais como a instalação de aplicações.
+Adicionamos suporte para a [gestão de vários utilizadores](../enrollment/windows-enroll.md) para dispositivos a executar a Atualização para Criativos do Windows 10 e que estejam associados ao domínio do Azure Active Directory. Tal significa que, quando outros utilizadores padrão iniciarem sessão no dispositivo com as credenciais do Azure AD, receberão as aplicações e as políticas atribuídas aos seus nomes de utilizador. Atualmente, os utilizadores não podem utilizar o Portal da Empresa para cenários de self-service, tais como instalar aplicações.
 
 ### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Funcionalidade Começar do Zero para PCs com Windows 10<!-- 1004830 -->
 Está agora disponível uma [ação de dispositivo Fresh Start](../remote-actions/device-fresh-start.md) para PCs com Windows 10.  Ao executar esta ação, as aplicações instaladas no PC são removidas e o PC é automaticamente atualizado para a versão mais recente do Windows. Esta ação pode ajudar a remover aplicações OEM que vêm frequentemente pré-instaladas num PC novo. Pode configurar se os dados de utilizador são retidos ao efetuar esta ação.

@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191b2cdfa8fd99078bccee8edf99eb9b0cb275ee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332057"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359369"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Adicione extensões de kernel macOS em Intune
 
@@ -74,17 +75,31 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo uti
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: introduza um nome descritivo para o novo perfil.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **macOS**
-    - **Tipo de perfil**: Selecione **extensões**.
-    - **Definições**: Introduza as definições que pretende configurar. Para uma lista de todas as configurações, e o que fazem, veja:
+    - **Perfil**: **Selecione extensões**.
 
-        - [macOS](kernel-extensions-settings-macos.md)
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
-4. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **macOS: Adicione extensões de kernel aos dispositivos**.
+    - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
 
-O perfil é criado e mostrado na lista. Certifique-se de [atribuir o perfil](device-profile-assign.md) e monitorizar [o seu estado](device-profile-monitor.md).
+6. Selecione **Seguinte**.
+
+7. Nas definições de **Configuração,** configure as definições:
+
+    - [macOS](kernel-extensions-settings-macos.md)
+
+8. Selecione **Seguinte**.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 ## <a name="next-steps"></a>Próximos passos
 

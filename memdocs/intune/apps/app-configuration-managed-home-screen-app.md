@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45e1d022f4b8d77684e22ec17cd3b1b169a06216
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323456"
+ms.locfileid: "80358702"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configure o aplicativo de ecrã home gerido pela Microsoft para Android Enterprise
 
@@ -34,7 +34,7 @@ O Managed Home Screen é a aplicação utilizada para dispositivos dedicados ao 
 Normalmente, se as definições estiverem disponíveis através da configuração do Dispositivo, configure as definições. Ao fazê-lo, poupar-lhe-á tempo, minimizará os erros e dar-lhe-á uma melhor experiência de suporte intune. No entanto, algumas das definições de Ecrã Home Gerido estão atualmente disponíveis apenas através do painel de definição de **aplicações** na consola Intune. Utilize este documento para aprender a configurar as diferentes definições, utilizando o designer de configuração ou um script JSON. 
 
 > [!NOTE]
-> Atualmente é possível, e aconselhável, definir aplicações listadas por permitir e ligações web fixas através de **Apps** e **configuração do Dispositivo**. Para obter a lista completa de definições disponíveis na **configuração do Dispositivo** que impactam o Ecrã Home Gerido, consulte [as definições do dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> Atualmente é possível, e aconselhável, definir aplicações listadas por permitir e ligações web fixas através de **Apps** e **configuração do Dispositivo**. Para obter a lista completa de definições disponíveis na **configuração do Dispositivo** que impactam o Ecrã Home Gerido, consulte [as definições do dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
 
 Em primeiro lugar, navegue para o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione **Apps** > políticas de **configuração**de apps . Adicione uma política de configuração para **dispositivos geridos** que executem **o Android** e escolha o Ecrã **Home Gerido** como aplicação associada. Clique nas definições de **Configuração** para configurar as diferentes definições de Ecrã Home Gerido disponíveis. 
 
@@ -136,7 +136,7 @@ Segue-se um exemplo de script JSON com todas as chaves de configuração dispon�
                     "managedProperty": [
                         {
                             "key": "package",
-                            "valueString": “app package name here”
+                            "valueString": "app package name here"
                         }
                     ]
                 }
@@ -149,11 +149,11 @@ Segue-se um exemplo de script JSON com todas as chaves de configuração dispon�
                     "managedProperty": [
                         {
                             "key": "link",
-                            "valueString": “link here”
+                            "valueString": "link here"
                         },
                         {
                             "key": "label",
-                            "valueString": “weblink label here”
+                            "valueString": "weblink label here"
                         }
                     ]
                 }
@@ -335,7 +335,7 @@ Segue-se um exemplo de script JSON com todas as chaves de configuração dispon�
 A aplicação Managed Home Screen agora fornece acesso à aplicação Política de Dispositivos Android da Google. A aplicação Managed Home Screen é um lançador personalizado utilizado para dispositivos matriculados em Intune como dispositivos dedicados ao Android Enterprise (AE) utilizando o modo de quiosque multi-app. Pode aceder à aplicação Android Device Policy ou orientar os utilizadores para a aplicação Política de Dispositivos Android, para fins de suporte e depuração. Esta capacidade de lançamento está disponível no momento em que o dispositivo se inscreve e bloqueia no Ecrã Home Gerido. Não são necessárias instalações adicionais para utilizar esta funcionalidade.
 
 ## <a name="managed-home-screen-debug-screen"></a>Ecrã de depuração de Ecrã Doméstico Gerido
-Pode aceder ao ecrã de depuração do Ecrã Home Gerido clicando no botão **traseiro** até que o ecrã de depuração seja visualizado (clique no botão **de trás** 15 vezes ou mais). A partir deste ecrã de depuração, é possível lançar a aplicação De Política de Dispositivos Android, visualizar e carregar registos, ou interromper temporariamente o modo de quiosque para atualizar o dispositivo. Para obter mais informações sobre o modo de pausa do quiosque, consulte o item do **modo de quiosque Leave** nas [definições do dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)ao Android Enterprise .
+Pode aceder ao ecrã de depuração do Ecrã Home Gerido clicando no botão **traseiro** até que o ecrã de depuração seja visualizado (clique no botão **de trás** 15 vezes ou mais). A partir deste ecrã de depuração, é possível lançar a aplicação De Política de Dispositivos Android, visualizar e carregar registos, ou interromper temporariamente o modo de quiosque para atualizar o dispositivo. Para obter mais informações sobre o modo de pausa do quiosque, consulte o item do **modo de quiosque Leave** nas [definições do dispositivo dedicado](../configuration/device-restrictions-android-for-work.md#dedicated-devices)ao Android Enterprise .
 
 ## <a name="next-steps"></a>Próximos passos
 

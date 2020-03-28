@@ -1,27 +1,27 @@
 ---
 title: Definições de restrição de dispositivos para Android no Microsoft Intune – Azure | Microsoft Docs
-description: Veja uma lista de todas as definições de dispositivos Android que pode controlar e restringir no Microsoft Intune. Utilize estas definições para controlar a palavra-passe, aceder ao Google Play, permitir ou proibir aplicações, controlar as definições do browser, bloquear aplicações, criar cópias de segurança na cloud do Google e controlar as opções de mensagens, voz, roaming de dados, Wi-Fi e ligação Bluetooth.
+description: Consulte uma lista de todas as definições de administrador de dispositivos Android que pode controlar e restringir no Microsoft Intune. Utilize estas definições para controlar a palavra-passe, aceder ao Google Play, permitir ou proibir aplicações, controlar as definições do browser, bloquear aplicações, criar cópias de segurança na cloud do Google e controlar as opções de mensagens, voz, roaming de dados, Wi-Fi e ligação Bluetooth.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: ayesham, chrisbal
+ms.reviewer: chmaguir, chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3ceb67b0ada19d1679f3bf133305214af8fd9f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: ea84544223d890be7e61fafa5de082c242250403
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087061"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359346"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configurações de restrições de dispositivos Android e Samsung Knox Standard em Intune
 
@@ -36,120 +36,140 @@ Criar um perfil de [configuração do dispositivo](device-restrictions-configure
 
 ## <a name="general"></a>Geral
 
-- **Câmara**: Escolha **o Bloco** para impedir o acesso à câmara. **Não configurado** permite o acesso à câmara do dispositivo.
-- **Cópia e pasta (apenas Samsung Knox)** : Escolha **o Bloco** para evitar a cópia e a pasta. **Não configurado** permite funções de cópia e pasta no dispositivo.
-- **Partilha de clipboard entre apps (apenas Samsung Knox)** : Escolha **o Bloco** para evitar a utilização da pasta para copiar e colar entre apps. **Não configurado** permite usar a pasta para copiar e colar entre aplicações.
-- **Submissão de dados de diagnóstico (apenas Samsung Knox)** : Escolha o **Bloco** para impedir que o utilizador envie relatórios de bugs do dispositivo. **Não configurado** permite ao utilizador submeter os dados.
-- **Wipe (apenas Samsung Knox)** : Permite ao utilizador executar uma ação de [limpeza](../remote-actions/devices-wipe.md) no dispositivo.
-- **Geolocalização (apenas Samsung Knox)** : Escolha o **Bloco** para desativar o dispositivo de utilizar informações de localização. **Não configurado** permite que o dispositivo utilize as informações de localização.
-- **Desligar (apenas Samsung Knox)** : Escolha o **Bloco** para evitar que o utilizador desligue o dispositivo. Se esta definição estiver desativada, o **número de falhas de início de sessão antes** de limpar a regulação do dispositivo não pode ser definido e não funciona. **Não configurado** permite ao utilizador desligar o dispositivo.
-- **Captura de ecrã (apenas Samsung Knox)** : Escolha **o Bloco** para evitar imagens. **Não configurado** permite ao utilizador capturar o conteúdo do ecrã como uma imagem.
-- **Assistente de voz (apenas Samsung Knox)** : Escolha **o Bloco** para desativar o serviço S Voice. **Não configurado** permite a utilização do serviço S Voice e da aplicação no dispositivo. Esta definição não se aplica a Bixby ou ao assistente de voz para acessibilidade que lê o conteúdo do ecrã em voz alta.
-- **YouTube (apenas Samsung Knox)** : Escolha **o Bloco** para impedir que os utilizadores utilizem a aplicação do YouTube. **Não configurado** permite usar a aplicação do YouTube no dispositivo.
-- **Dispositivos partilhados (apenas Samsung Knox)** : Configure um dispositivo Samsung Knox Standard gerido como partilhado. Quando definido para **Permitir**, os utilizadores finais podem iniciar sessão e sair do dispositivo com as suas credenciais De AD Azure. O dispositivo mantém-se gerido, quer esteja a ser utilizado ou não.</br>Quando utilizada com um perfil de certificado SCEP, esta funcionalidade permite que os utilizadores finais partilhem um dispositivo com as mesmas aplicações para todos os utilizadores. Mas cada utilizador tem o seu próprio certificado de utilizador SCEP. Quando os utilizadores terminam sessão, todos os dados das aplicações são limpos. Esta funcionalidade é limitada a aplicações LOB. </br>**Não configurado** impede que vários utilizadores finais se inscrevam na aplicação Portal da Empresa no dispositivo utilizando as suas credenciais De AD Azure.
-- **Alterações na data e hora do bloco (Samsung Knox)** : Escolha o **Bloco** para evitar que o utilizador mude as definições de data e hora no dispositivo. **Não configurado** permite que os utilizadores alterem as definições de data e hora.
+- **Câmara**: **Bloco** impede o acesso à câmara. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara do dispositivo.
+- **Cópia e pasta (apenas Samsung Knox)** : **Bloco** impede a cópia e a pasta. **Não configurado** permite funções de cópia e pasta nos dispositivos.
+- **Partilha de clipboard entre apps (apenas Samsung Knox)** : **O bloco** impede a utilização da pasta para copiar e colar entre apps. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir funções de cópia e pasta nos dispositivos.
+- **Submissão de dados de diagnóstico (apenas Samsung Knox)** : **O bloco** impede os utilizadores de enviarem relatórios de bugs a partir de dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores enviem os dados.
+- **Wipe (apenas Samsung Knox)** : Permite que os utilizadores executem uma ação de [limpeza](../remote-actions/devices-wipe.md) nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Geolocalização (apenas Samsung Knox)** : **Bloquear** desativa dispositivos de utilização de informações de localização. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os dispositivos utilizem as informações de localização.
+- **Desligar (apenas Samsung Knox)** : **O bloco** impede que os utilizadores desliguem o dispositivo. Também impede que o **número de falhas de inscrição antes** de limpar a configuração do dispositivo seja configurado e de funcionar. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores desliguem os dispositivos.
+- **Captura de ecrã (apenas Samsung Knox)** : **Bloco** evita imagens. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores capturem o conteúdo do ecrã como uma imagem.
+- **Assistente de voz (apenas Samsung Knox)** : **O bloco** desativa o serviço S Voice. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização do serviço S Voice e da aplicação em dispositivos. Esta definição não se aplica a Bixby ou ao assistente de voz para acessibilidade que lê o conteúdo do ecrã em voz alta.
+- **YouTube (apenas Samsung Knox)** : **O bloco** impede os utilizadores de usarem a aplicação do YouTube. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir a utilização da aplicação do YouTube nos dispositivos.
+- **Dispositivos partilhados (apenas Samsung Knox)** : Configure um dispositivo Samsung Knox Standard gerido como partilhado. **Permitir que** os utilizadores insinem e saem dos dispositivos com as suas credenciais De AD Azure. Os dispositivos mantêm-se geridos, quer estejam a ser utilizados ou não.
+
+  Quando utilizada com um perfil de certificado SCEP, esta funcionalidade permite que os utilizadores partilhem um dispositivo com as mesmas aplicações para todos os utilizadores. Mas cada utilizador tem o seu próprio certificado de utilizador SCEP. Quando os utilizadores terminam sessão, todos os dados das aplicações são limpos. Esta funcionalidade é limitada a aplicações LOB.
+
+  Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode impedir vários utilizadores de iniciars sessão na aplicação Portal da Empresa em dispositivos que utilizem as suas credenciais De AD Azure.
+- **Alterações na data e hora do bloco (Samsung Knox)** : O **bloco** impede que os utilizadores mudem as definições de data e hora nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores alterem as definições de data e hora.
 
 ## <a name="password"></a>Palavra-passe
 
-- **Palavra-passe**: **Exija** que o utilizador final introduza uma senha para aceder ao dispositivo. **Não configurado** permite que os utilizadores acedam ao dispositivo sem introduzir uma palavra-passe.
+- **Palavra-passe**: **Exija que** os utilizadores introduzam uma palavra-passe para aceder aos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores acedam aos dispositivos sem introduzir uma palavra-passe.
 
     > [!NOTE]
     > Os dispositivos Samsung Knox exigem automaticamente um PIN de 4 dígitos durante a inscrição na MDM. Os dispositivos Android nativos podem exigir automaticamente que um PIN se torne compatível com o Acesso Condicional.
 
-- Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo da palavra-passe que um utilizador deve introduzir (entre 4 e 16 caracteres).
-- **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o número máximo de minutos de inatividade permitidos no aparelho até que o ecrã bloqueie. Num dispositivo, um utilizador final não pode definir um valor de tempo superior ao tempo configurado no perfil. Um utilizador final pode definir um valor de tempo inferior. Por exemplo, se o perfil estiver definido para 15 minutos, um utilizador final poderá definir o valor para 5 minutos. Um utilizador final não consegue definir o valor em 30 minutos. 
-- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de falhas de entrada para permitir antes de o dispositivo ser limpo.
-- **Expiração da palavra-passe (dias)** : Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada.
+- Comprimento mínimo da **palavra-passe**: Introduza o número mínimo de caracteres necessários, de 4 a 16. Por exemplo, insira `6` para exigir pelo menos seis números ou caracteres no comprimento da palavra-passe.
+- **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o tempo de tempo em que um dispositivo deve ficar inativo antes de o ecrã estar automaticamente bloqueado. Por exemplo, introduza `5` para bloquear dispositivos após 5 minutos de inatividade. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
+
+  Num dispositivo, os utilizadores não podem definir um valor de tempo superior ao tempo configurado no perfil. Os utilizadores podem definir um valor de tempo mais baixo. Por exemplo, se o perfil for definido para `15` minutos, os utilizadores podem definir o valor para 5 minutos. Os utilizadores não podem definir o valor para 30 minutos.
+
+- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de os dispositivos serem limpos, de 4 a 11. `0` (zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Expiração da palavra-passe (dias)** : Introduza o número de dias, até que a palavra-passe do dispositivo seja alterada, de 1 a 365. Por exemplo, insira `90` para expirar a senha após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - Tipo de **palavra-passe necessário**: Introduza o nível de complexidade da palavra-passe exigido e se podem ser utilizados dispositivos biométricos. As opções são:
   - **Predefinição do dispositivo**
-  - **Biométrica de segurança baixa**
-  - **Pelo menos numérica**
-  - **Complexo numérico**: Números repetidos ou consecutivos, como "1111" ou "1234", não são permitidos. <sup>1</sup>
-  - **Pelo menos alfabética**
-  - **Pelo menos alfanumérica**
-  - **Pelo menos alfanumérica com símbolos**
-- **Evite a reutilização de senhas anteriores**: Impede o utilizador final de criar uma palavra-passe que já utilizou anteriormente.
-- **Desbloqueio de impressões digitais (apenas Samsung Knox)** : Escolha **o Bloco** para evitar a utilização de uma impressão digital para desbloquear o dispositivo. **Não configurado** permite ao utilizador desbloquear o dispositivo através de uma impressão digital.
-- **Smart Lock e outros agentes fidedignos**: Escolha **o Bloco** para evitar que o Smart Lock ou outros agentes fiduciários ajustem as definições do ecrã de bloqueio (Samsung KNOX Standard 5.0+). Esta funcionalidade de telefone, por vezes conhecida como agente fiduciário, permite-lhe desativar ou contornar a palavra-passe do ecrã de bloqueio do dispositivo se o dispositivo estiver num local de confiança. Por exemplo, esta funcionalidade pode ser utilizada quando o dispositivo está ligado a um dispositivo Bluetooth específico, ou quando está perto de uma etiqueta NFC. Pode utilizar esta definição para impedir que os utilizadores configurem o Smart Lock.
-- **Encriptação**: Escolha **Exigir para** que os ficheiros do dispositivo sejam encriptados. Nem todos os dispositivos suportam encriptação. Para utilizar esta funcionalidade, também: 
-  1. Definir **palavra-passe** para **requerer**.
-  2. Definir **o tipo de palavra-passe exigido** para pelo menos **numérico**.
-  3. Defina o comprimento mínimo da **palavra-passe** para pelo menos 4 para reportar corretamente a conformidade com esta definição.
+  - **Biometria de baixa segurança**: [Biometria forte vs. biométrico fraco](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre o site do Android)
+  - **Pelo menos numérico:** Inclui caracteres numéricos, como `123456789`.
+  - **Complexo numérico**: Números repetidos ou consecutivos, como "1111" ou "1234", não são permitidos. Antes de atribuir esta definição aos dispositivos, certifique-se de atualizar a aplicação Portal da Empresa para a versão mais recente desses dispositivos.
+
+    Quando definido para **complexo numérico**, e você atribui a configuração a dispositivos que executam uma versão Android antes de 5.0, então o seguinte comportamento se aplica:
+
+    - Se a aplicação Do Portal da Empresa estiver a executar uma versão antes de 1704, nenhuma política PIN se aplica aos dispositivos, e um erro mostra no centro de administração do Microsoft Endpoint Manager.
+    - Se a aplicação Portal da Empresa executar a versão 1704 ou posterior, apenas pode ser aplicado um PIN simples. A versão Android anterior a 5.0 não suporta esta configuração. Não é mostrado nenhum erro no centro de administração do Microsoft Endpoint Manager.
+
+  - **Pelo menos alfabético:** Inclui letras no alfabeto. Não são obrigatórios números nem símbolos.
+  - **Pelo menos alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos.
+  - **Pelo menos alfanumérico com símbolos**: Inclui letras maiúsculas, letras minúsculas, caracteres numéricos, marcas de pontuação e símbolos.
+
+- **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, introduza `5` para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Desbloqueio de impressões digitais (apenas Samsung Knox)** : **Bloco** impede o uso de uma impressão digital para desbloquear dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores desbloqueiem dispositivos utilizando uma impressão digital.
+- **Smart Lock e outros agentes fidedignos:** **O Bloco** impede que o Smart Lock ou outros agentes fidedignos ajustem as definições do ecrã de bloqueio. Se o dispositivo estiver num local de confiança, então esta funcionalidade, também conhecida como agente fiduciário, permite-lhe desativar ou contornar a palavra-passe do ecrã de bloqueio do dispositivo. Por exemplo, utilize esta funcionalidade quando os dispositivos estiverem ligados a um dispositivo Bluetooth específico, ou quando os dispositivos estiverem perto de uma etiqueta NFC. Pode utilizar esta definição para impedir que os utilizadores configurem o Smart Lock.
+
+  Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+  Esta definição aplica-se a:
+
+  - Samsung KNOX Standard 5.0+
+
+- **Encriptação**: Escolha **Exigir para** que os ficheiros do dispositivo sejam encriptados. Nem todos os dispositivos suportam encriptação. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Para configurar esta definição e reportar corretamente a conformidade, configurar também:
+  1. **Palavra-passe**: Definir para **exigir**.
+  2. **Tipo de palavra-passe requerida**: Definir para **pelo menos numérico**.
+  3. **Comprimento mínimo da palavra-passe**: Definir para pelo menos `4`.
 
   > [!NOTE]
   > Se for imposta uma política de encriptação, os dispositivos Samsung Knox exigem que os utilizadores definam uma palavra-passe complexa de 6 carateres como o código de acesso do dispositivo.
 
-<sup>1</sup> Antes de atribuir esta definição aos dispositivos, certifique-se de atualizar a aplicação Portal da Empresa para a versão mais recente desses dispositivos.
-
-Se definir o tipo de **palavra-passe exigido** para **o complexo numérico,** e depois atribuí-lo a um dispositivo que executa uma versão do Android antes de 5.0, então o comportamento seguinte aplica-se:
-
-- Se a aplicação Do Portal da Empresa estiver a executar uma versão antes de 1704, nenhuma política PIN é aplicada ao dispositivo, e um erro é mostrado no centro de administração do Microsoft Endpoint Manager.
-- Se a aplicação Portal da Empresa executar a versão 1704 ou posterior, apenas pode ser aplicado um PIN simples. As versões do Android anteriores a 5.0 não suportam esta configuração. Não é mostrado nenhum erro no centro de administração do Microsoft Endpoint Manager.
-
 ## <a name="google-play-store"></a>Google Play Store
 
-- **Google Play store (apenas Samsung Knox)** : Escolha **o Bloco** para impedir que os utilizadores utilizem a loja Google Play. **O utilizador não configurado** permite ao utilizador aceder à loja Google Play no dispositivo.
+- **Google Play store (apenas Samsung Knox)** : **O bloco** impede os utilizadores de utilizarem a loja Google Play. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir aos utilizadores acederem à loja Google Play nos dispositivos.
 
 ## <a name="restricted-apps"></a>Aplicações restritas
 
-Utilize estas definições para permitir ou prevenir aplicações específicas no dispositivo. Esta funcionalidade é suportada em dispositivos Android e Samsung Knox Standard:
+Utilize estas definições para permitir ou prevenir aplicações específicas em dispositivos. Esta funcionalidade é suportada em dispositivos Android e Samsung Knox Standard.
 
-- **Aplicações proibidas**: Uma lista de aplicações não geridas pela Intune que não quer instaladas no dispositivo. Se um utilizador instalar uma aplicação desta lista, receberá uma notificação do Intune.
-- **Aplicações aprovadas**: Uma lista de aplicações que os utilizadores estão autorizados a instalar. Para permanecerem compatíveis, os utilizadores não podem instalar outras aplicações. As aplicações geridas pelo Intune são automaticamente permitidas.
+- **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+- **Aplicações proibidas**: Lista rita as aplicações (não geridas pela Intune) que os utilizadores não estão autorizados a instalar e executar. Se um utilizador instalar uma aplicação desta lista, receberá uma notificação do Intune.
+- **Aplicações aprovadas**: Lista as aplicações que os utilizadores estão autorizados a instalar. Para permanecerem compatíveis, os utilizadores não podem instalar outras aplicações.  As aplicações que são geridas pela Intune são automaticamente permitidas, incluindo a aplicação Portal da Empresa.
+- **Lista de aplicações**: **Adicionar-lhe** aplicação :
+  - Id do **pacote de aplicativos**: Introduza o pacote de aplicações ID.
+  - URL da loja de **aplicações**: Introduza o URL da Google Play Store da aplicação que deseja. Por exemplo, para adicionar a aplicação Microsoft Remote Desktop para Android, introduza `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
-Para adicionar app a estas listas, pode:
+    Para encontrar o URL de uma aplicação, abra a [loja Google Play](https://play.google.com/store/apps)e procure a app. Por exemplo, procure `Microsoft Remote Desktop Play Store` ou `Microsoft Planner`. Selecione a aplicação e copie o URL.
+  
+  - Nome da **aplicação**: Introduza o nome que deseja. Este nome é mostrado aos utilizadores.
+  - **Editor** (opcional): Insira o editor da app, como `Microsoft`.
 
-- **Adicione** o URL da Google Play Store da aplicação que deseja. Por exemplo, para adicionar a aplicação Microsoft Remote Desktop para Android, introduza `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`. Para encontrar o URL de uma aplicação, abra a [loja Google Play](https://play.google.com/store/apps)e procure a app. Por exemplo, procure `Microsoft Remote Desktop Play Store` ou `Microsoft Planner`. Selecione a aplicação e copie o URL.
-- Importe um ficheiro CSV com detalhes sobre a aplicação, incluindo o URL. Use o url de*aplicativo*<, < nome de*app*>, <*app publisher*> formato. Ou, **Exportar** uma lista existente que inclui a lista de aplicações restritas no mesmo formato.
+Também pode **importar** um ficheiro CSV com detalhes sobre a aplicação, incluindo o URL. Use o url de*aplicativo*<, < nome de*app*>, <*app publisher*> formato. Ou, **Exportar** uma lista existente que inclui a lista de aplicações restritas no mesmo formato.
 
 > [!IMPORTANT]
-> Os perfis de dispositivo que utilizam as definições de aplicações restritas têm de ser atribuídos a grupos de utilizadores.
+> Os perfis do dispositivo que utilizam as definições restritas da aplicação devem ser atribuídos a grupos de utilizadores e não a grupos de dispositivos.
 
 ## <a name="browser"></a>Browser
 
-- **Navegador web (apenas Samsung Knox)** : Escolha o **Bloco** para evitar que o navegador predefinido seja utilizado no dispositivo. **Não configurado** permite que o navegador padrão do dispositivo seja utilizado.
-- **Autofill (apenas Samsung Knox)** : Escolha **o Bloco** para evitar o enchimento automático de texto no navegador. **Não configurado** permite a função de auto-enchimento do navegador web ser utilizada.
-- **Cookies (apenas Samsung Knox)** : Escolha como pretende lidar com cookies a partir de websites do dispositivo. As opções são:
+- **Navegador web (apenas Samsung Knox)** : **O bloco** impede que o navegador predefinido seja utilizado em dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a aplicação do navegador predefinido do dispositivo.
+- **Autofill (apenas Samsung Knox)** : **O bloco** impede que o navegador preencha automaticamente o texto. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a auto-enchimento.
+- **Cookies (apenas Samsung Knox)** : Escolha como lidar com cookies a partir de websites em dispositivos. As opções são:
   - Permitir
   - Bloquear todos os cookies
   - Permitir cookies dos sites visitados
   - Permitir cookies do site atual
-- **Javascript (apenas Samsung Knox)** : Escolha o **Bloco** para evitar que o navegador web execute scripts Java. **Não configurado** permite que o navegador web do dispositivo execute scripts Java.
-- **Pop-ups (apenas Samsung Knox)** : Escolha **o Bloco** para evitar pop-ups no navegador web. **Não configurado** permite pop-ups no navegador web.
+- **JavaScript (apenas Samsung Knox)** : **O bloco** impede que o JavaScript esteja a funcionar no navegador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir estes scripts.
+- **Pop-ups (apenas Samsung Knox)** : **Block** liga o Pop-up Blocker para evitar pop-ups no navegador web. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode permitir pop-ups.
 
 ## <a name="allow-or-block-apps"></a>Permitir ou Bloquear aplicações
 
-Utilize estas definições para permitir, bloquear ou ocultar aplicações específicas em dispositivos Samsung Knox Standard. As aplicações ocultas não podem ser abertas ou ser percorreu pelo utilizador.
+Utilize estas definições para permitir, bloquear ou ocultar aplicações específicas em dispositivos Samsung Knox Standard. As aplicações ocultas não podem ser abertas ou ser percorreu os utilizadores.
 
 As opções são:
 
-- **Aplicações com permissão para serem instaladas (apenas no Samsung Knox Standard)**
-- **Aplicações com início bloqueado (apenas no Samsung Knox Standard)**
-- **Aplicações ocultadas do utilizador (apenas no Samsung Knox Standard)**
+- **Apps autorizadas a serem instaladas (apenas Samsung Knox Standard)** : Adicione aplicações que os utilizadores possam instalar. Os utilizadores não podem instalar aplicações que não estejam na lista.
+- **Apps bloqueadas de lançamento (apenas Samsung Knox Standard)** : Introduza as aplicações que os utilizadores não podem executar no seu dispositivo.
+- **Aplicações ocultas do utilizador (apenas Samsung Knox Standard)** : Introduza as aplicações escondidas nos dispositivos. Os utilizadores não podem descobrir ou executar estas aplicações.
 
-Para cada definição, adicione uma lista de aplicações. As opções são:
+Para cada definição, adicione as suas aplicações:
 
-- **Adicione aplicativos por nome de pacote**: Usado principalmente para aplicações de linha de negócio. Introduza o nome da aplicação e o nome do pacote de aplicação.
+- **Adicione aplicativos por nome**de pacote : Insira o nome da aplicação e o nome do pacote de aplicações. Usado principalmente para aplicações de linha de negócio. 
 - **Adicione aplicativos por URL**: Introduza o nome da aplicação e o seu URL na loja Google Play.
 - **Adicionar aplicativo de loja**: Selecione uma aplicação da lista existente de aplicações que gere no Intune.
 
 ## <a name="cloud-and-storage"></a>Cloud e Armazenamento
 
-- **Backup da Google (apenas Samsung Knox)** : Escolha o **Bloco** para evitar que o dispositivo se sincronize com a cópia de segurança da Google. **Não configurado** permite a utilização de backup do Google.
-- **Sincronização automática da conta google (apenas Samsung Knox)** : Escolha o **Bloco** para evitar a funcionalidade de sincronização automática da conta da Google no dispositivo. **Não configurado** permite que as definições da conta do Google sejam automaticamente sincronizadas.
-- **Armazenamento amovível (apenas Samsung Knox)** : Escolha **o Bloco** para evitar que o dispositivo utilize armazenamento amovível. **Não configurado** permite que o dispositivo utilize armazenamento amovível, como um cartão SD.
-- **Encriptação em cartões de armazenamento (apenas Samsung Knox)** : **Exigir** que os cartões de armazenamento sejam encriptados. **Não configurado** permite a sua aplicação de cartões de armazenamento não encriptados. Nem todos os dispositivos suportam encriptação de cartões de armazenamento. Para confirmar, consulte o fabricante do dispositivo.
+- **Backup da Google (apenas Samsung Knox)** : **O bloco** impede que os dispositivos se sincroniem à cópia de segurança da Google. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir a utilização de backup do Google.
+- **Sincronização automática da conta google (apenas Samsung Knox)** : **O bloco** impede a funcionalidade de sincronização automática da conta da Google nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que as definições da conta da Google sejam automaticamente sincronizadas.
+- **Armazenamento amovível (apenas Samsung Knox)** : **O bloco** impede que os dispositivos utilizem armazenamento amovível. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os dispositivos utilizem armazenamento amovível, como um cartão SD.
+- **Encriptação em cartões de armazenamento (apenas Samsung Knox)** : **Exigir** que os cartões de armazenamento sejam encriptados. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a sua aplicação de cartões de armazenamento não encriptados. Nem todos os dispositivos suportam encriptação de cartões de armazenamento. Para confirmar, consulte o fabricante do dispositivo.
 
 ## <a name="cellular-and-connectivity"></a>Rede Móvel e Conectividade
 
-- **Roaming de dados (apenas Samsung Knox)** : Escolha **o Bloco** para evitar que os dados perloquem a rede celular. **Não configurado** permite o roaming de dados quando o dispositivo está numa rede celular.
-- **SMS/MMS mensagens (apenas Samsung Knox)** : Escolha **o Bloco** para evitar mensagens de texto no dispositivo. **Não configurado** permite a utilização de mensagens SMS e MMS no dispositivo.
-- **Marcação por voz (apenas Samsung Knox)** : Escolha o **Bloco** para evitar que os utilizadores utilizem a função de marcação de voz no dispositivo. **Não configurado** permite a marcação de voz no dispositivo.
-- **Roaming de voz (apenas Samsung Knox)** : Escolha **o Bloco** para evitar que a voz vagueie pela rede celular. **Não configurado** permite o roaming de voz quando o dispositivo está numa rede celular.
-- **Bluetooth (apenas Samsung Knox)** : Escolha **o Bloco** para evitar a utilização de Bluetooth no dispositivo. **Não configurado** permite a utilização de Bluetooth no dispositivo.
-- **NFC (apenas Samsung Knox)** : Escolha **o Bloco** para parar a tecnologia Near Field Communication (NFC). **Não configurado** permite operações que utilizam comunicações de campo próximas em dispositivos suportados.
-- **Wi-Fi (apenas Samsung Knox)** : Escolha **o bloco** para evitar a utilização de Wi-Fi no dispositivo. **Não configurado** permite utilizar as funcionalidades Wi-Fi do dispositivo.
-- **Wi-Fi tethering (apenas Samsung Knox)** : Escolha o **bloco** para evitar a utilização de wi-fi no dispositivo. **Não configurado** permite a utilização de tetering Wi-Fi no dispositivo.
+- **Roaming de dados (apenas Samsung Knox)** : **Bloco** impede que os dados perversem a rede celular. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir o roaming de dados.
+- **Mensagens SMS/MMS (apenas Samsung Knox)** : **O bloco** impede a mensagem de texto nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização de mensagens SMS e MMS.
+- **Marcação por voz (apenas Samsung Knox)** : **O bloco** impede que os utilizadores utilizem a funcionalidade de marcação de voz nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode permitir a marcação de voz.
+- **Roaming de voz (apenas Samsung Knox)** : **Bloco** impede que a voz vagueie pela rede celular. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o roaming de voz.
+- **Bluetooth (apenas Samsung Knox)** : **Bloco** evita a utilização de Bluetooth nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização de Bluetooth.
+- **NFC (apenas Samsung Knox)** : **Bloquear** desativa operações que utilizam perto da comunicação de campo (NFC) em dispositivos que o suportam. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode permitir operações NFC.
+- **Wi-Fi (apenas Samsung Knox)** : **O bloco** impede a utilização de Wi-Fi nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode permitir a utilização de Wi-Fi.
+- **Wi-Fi tethering (apenas Samsung Knox)** : **O bloco** impede a utilização de wi-fi nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização de tetering Wi-Fi.
 
 ## <a name="kiosk"></a>Modo de Local Público
 
@@ -163,11 +183,11 @@ As definições de modo de local público aplicam-se apenas a dispositivos Samsu
   - **Adicione aplicativos por URL**: Introduza o nome da aplicação e o seu URL na loja Google Play.
   - **Adicionar aplicativo de loja**: Selecione uma aplicação da lista existente de aplicações que gere no Intune.
 
-- **Botão de sono de ecrã**: Escolha o **Bloco** para prevenir ou esconder o botão de sono do ecrã. **Não configurado** permite o botão de despertar do sono do ecrã no dispositivo.
-- **Botões de volume**: Escolha o **Bloco** para evitar que o utilizador ajuste o volume desativando os botões de volume. **Não configurado** permite utilizar os botões de volume do dispositivo.
+- **Botão de sono de tela**: **Bloqueie** ou esconda o botão de sono do ecrã. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o botão de despertar do sono do ecrã nos dispositivos.
+- **Botões de volume**: **O bloco** impede os utilizadores de ajustarem o volume desativando os botões de volume. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização dos botões de volume nos dispositivos.
 
 ## <a name="next-steps"></a>Próximos passos
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 
-Também pode criar perfis de quiosque para dispositivos [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) e [Windows 10.](kiosk-settings.md)
+Também pode criar perfis de quiosque para dispositivos [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [Windows 10.](kiosk-settings.md)

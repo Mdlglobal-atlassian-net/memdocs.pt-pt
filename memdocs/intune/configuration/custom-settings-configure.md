@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6122f4624cc40152184c1c460afa6a7a39976063
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083991"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359437"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Criar um perfil com definições personalizadas no Intune
 
@@ -38,20 +38,26 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
 2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
+    - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
+
+        - **Administrador de dispositivos Android**
+        - **Android Enterprise**
+        - **iOS/iPadOS**
+        - **macOS**
+        - **Windows 10 e posterior**
+        - **Windows Phone 8.1**
+
+    - **Perfil**: Selecione **Personalizado**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
+
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **Windows 10: Perfil personalizado que permite o OMA-URI personalizado allowVPNOverCellular**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Selecione a plataforma dos seus dispositivos. As opções são:
+    - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
 
-      - **Administrador de dispositivos Android**
-      - **Android Enterprise**
-      - **iOS/iPadOS**
-      - **macOS**
-      - **Windows 10 e posterior**
-      - **Windows 8.1 e posterior**
+6. Selecione **Seguinte**.
 
-    - **Tipo de perfil**: Selecione **Personalizado**.
-
-4. As definições são diferentes para cada plataforma. Para ver as definições de uma plataforma específica, selecione a sua plataforma:
+7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Escolha a sua plataforma para configurações detalhadas:
 
     - [Administrador de dispositivos Android](custom-settings-android.md)
     - [Android Enterprise](custom-settings-android-for-work.md)
@@ -61,10 +67,24 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-5. Quando terminar, selecione **Criar perfil** > **Criar**.
+8. Selecione **Seguinte**.
+9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
-O perfil é criado e mostrado na lista de perfis **(configuração** do dispositivo > **Perfis).**
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+## <a name="example"></a>Exemplo
+
+No seguinte exemplo, a definição **Conectividade/PermitirVPNAtravésDeRedeMóvel** está ativada. Esta definição permite que um dispositivo com o Windows 10 abra uma ligação VPN através de uma rede móvel.
+
+> [!div class="mx-imgBorder"]
+> ![Exemplo de uma política personalizada que contenha definições vpn em Intune e Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>Próximos passos
 
-Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
