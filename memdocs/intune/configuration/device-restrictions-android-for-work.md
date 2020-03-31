@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34ebee933d562404022d9b0bd9358896fd854256
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359163"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407892"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos do Android Enterprise para permitir ou restringir funcionalidades com o Intune
 
@@ -39,6 +39,9 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 
 - **Captura do ecrã**: **O bloco** evita imagens ou capturas de ecrã no dispositivo. Também impede que os conteúdos presentes sejam apresentados em dispositivos de visualização que não tenham uma saída de vídeo segura. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores capturem o conteúdo do ecrã como uma imagem.
 - **Câmara**: **Bloco** impede o acesso à câmara no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara.
+
+  Intune só consegue o acesso à câmara do dispositivo. Não tem acesso a fotografias ou vídeos.
+
 - **Política de permissões predefinida**: esta definição configura a política de permissões predefinida para pedidos de permissões de runtime. As suas opções
   - **Predefinição do dispositivo**: utiliza a predefinição do dispositivo.
   - **Solicitação**: Os utilizadores são solicitados a aprovar a permissão.

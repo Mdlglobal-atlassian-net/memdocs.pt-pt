@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7054cb658314d00c3e10388c50c2309038c8a15b
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359124"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407857"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições dos dispositivos macOS para permitir ou restringir funcionalidades com o Intune
 
@@ -117,6 +117,9 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 - **Block Safari AutoFill**: **Bloquear** desativa a função de enchimento automático no Safari nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores alterem as definições autocompletas no navegador web.
 - **Câmara de bloqueio**: **O bloco** impede o acesso à câmara nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara do dispositivo.
+
+  Intune só consegue o acesso à câmara do dispositivo. Não tem acesso a fotografias ou vídeos.
+
 - **Block Apple Music**: **Block** reverte a aplicação Music para o modo clássico e desativa o serviço Music. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir a utilização da aplicação Apple Music.
 - **Bloquear resultados**de pesquisa na Internet : **Bloquear** impede o Spotlight de devolver quaisquer resultados de uma pesquisa na Internet. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que a pesquisa de Holofotes se conectem à Internet e obtenha resultados de pesquisa.
 - **Transferência de ficheiros de bloco utilizando o iTunes**: **Bloquear** desativa serviços de partilha de ficheiros de aplicações. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir serviços de partilha de ficheiros de aplicação.

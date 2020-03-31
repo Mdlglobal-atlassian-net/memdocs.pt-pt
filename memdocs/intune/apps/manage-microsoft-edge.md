@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7781eba9e2115b37dd6590733b89130203da0365
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323965"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407711"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gerir o acesso à web utilizando o Microsoft Edge com o Microsoft Intune
 
@@ -343,7 +343,7 @@ Por padrão, o Microsoft Edge solicita aos utilizadores que naveguem na recolha 
 
 |    Chave    |    Valor    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **true** irá desativar esta solicitação de exibição para utilizadores finais.     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **true** irá desativar esta solicitação de exibição para utilizadores finais.     |
 
 ### <a name="disable-prompts-that-offer-to-save-passwords"></a>Desativar as solicitações que oferecem para guardar senhas
 

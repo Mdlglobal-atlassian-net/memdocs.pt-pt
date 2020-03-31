@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98567612b31604f79339a550275e274a2c90c3a4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326349"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407902"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referência de erro de instalação de aplicações intonizada
 
@@ -32,7 +32,7 @@ Além de seguir as medidas fornecidas para resolver erros de aplicação, també
 
 Esta secção menciona tanto o Administrador de Dispositivos (DA) como a Samsung Knox. Para mais informações, consulte a [inscrição](../enrollment/android-enroll-device-administrator.md) do administrador do dispositivo Android e [inscreva automaticamente dispositivos Android utilizando a Inscrição Móvel Knox da Samsung.](../enrollment/android-samsung-knox-mobile-enroll.md) 
 
-| Código de erro (Hex) | Código de erro (dez) | Mensagem/código de erro | Descrição |
+| Código de erro (Hex) | Código de erro (dez) | Mensagem/código de erro | Description |
 |--------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0xC7D14FB5 | -942583883 | A aplicação falhou na instalação.  | Esta mensagem de erro é apresentada quando intune não consegue determinar a causa principal do erro de instalação da aplicação Android. Nenhuma informação foi fornecida pelo Android durante a falha. Este erro é devolvido quando o download da APK foi bem sucedido, mas a instalação da aplicação falhou. Este erro pode ocorrer mais comummente devido a um ficheiro APK mau que não pode ser instalado no dispositivo. Uma possível causa pode ser quando o Google Play Protect bloqueia a instalação da app devido a problemas de segurança.   Outra possível causa deste erro é quando um dispositivo não suporta a aplicação. Por exemplo, se a aplicação necessitar da versão API 21+ e o dispositivo tiver aversão a versão API 19. Intune devolve este erro tanto para dispositivos DA como PARA KNOX e, embora possa haver uma notificação de que os utilizadores podem clicar para voltar a tentar, se houver algum problema com a APK, nunca continuará a falhar. Se a aplicação for uma aplicação disponível, a notificação pode ser rejeitada. No entanto, se a aplicação for necessária, não pode ser descartada. |
 | 0xC7D14FBA | -942583878 | A instalação da aplicação foi cancelada porque o ficheiro de instalação (APK) foi apagado após o download, mas antes da instalação.  | A APK foi transferida com êxito, mas o ficheiro foi removido do dispositivo antes de o utilizador instalar a aplicação. Isto poderia acontecer se houvesse uma grande diferença de tempo entre o download e a instalação. Por exemplo, o utilizador cancelou a instalação original, esperou e, em seguida, clicou na notificação para tentar novamente.   Esta mensagem de erro é devolvida para apenas cenários de DA. Os cenários knox podem ser feitos silenciosamente. Apresentamos uma notificação para voltar a tentar para que o utilizador possa aceitar em vez de cancelar. Se a aplicação for uma aplicação disponível, a notificação pode ser rejeitada. No entanto, se a aplicação for necessária, a notificação não pode ser dispensada. |
@@ -92,10 +92,12 @@ As seguintes mensagens de erro e descrições fornecem detalhes sobre erros de i
 | 0x87D13B77 | -2016330889 | A ligação segura falhou.  | Falha de validação do Manifesto da App devido à conectividade da rede (Ligação Segura falhou) |
 | 0x87D13B80 | -2016330880 | Erro de loja não pode connecttoiTunes | Instalação de apps falhou devido a falha na ligação à Loja ITunes |
 | 0x87D13B9F  | -2016330849 | A App VPP tem uma atualização disponível | Este código é devolvido quando uma aplicação VPP é instalada, mas há uma versão mais recente disponível. |
+| 0x87D13B9E | 2016330850 | Não pode impor a definição de desinstalação da aplicação. Retente instalar a aplicação. | A aplicação já está instalada no dispositivo, mas a definição de "desinstalar-se na reforma" não corresponde ao valor configurado. Aconselhe o utilizador a solicitar a instalação de aplicações no Portal da Empresa para tentar aplicar novamente a definição de "desinstalar-se na reforma". |
+
 
 ## <a name="other-installation-errors"></a>Outros erros de instalação
 
-| Código de erro (Hex) | Código de erro (dez) | Mensagem/código de erro | Descrição |
+| Código de erro (Hex) | Código de erro (dez) | Mensagem/código de erro | Description |
 |--------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x80073CFF | -2147009281 | (erro do cliente) | Para instalar esta aplicação, tem de ter um sistema de carga lateral. Certifique-se de que o pacote de aplicações é assinado com uma assinatura fidedigna e instalado num dispositivo unificado por domínios que tem a política AllowAllTrustApps ativada, ou um dispositivo que tem uma licença de Sideloading Windows com a política AllowAllTrustApps ativada. Para mais informações, consulte embalagens de resolução de problemas, implementação e consulta de aplicações da Windows Store. |
 | 0x80CF201C  | -2133909476 | (erro do cliente) | Para instalar esta aplicação, tem de ter um sistema de carga lateral. Certifique-se de que o pacote de aplicações é assinado com uma assinatura fidedigna e instalado num dispositivo unificado por domínios que tem a política AllowAllTrustApps ativada, ou um dispositivo que tem uma licença de Sideloading Windows com a política AllowAllTrustApps ativada. Para mais informações, consulte embalagens de resolução de problemas, implementação e consulta de aplicações da Windows Store. |

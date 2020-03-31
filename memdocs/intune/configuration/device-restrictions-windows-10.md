@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220103"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407829"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para permitir ou restringir funcionalidades usando Intune
 
@@ -208,7 +208,9 @@ Estas definições utilizam a política de [experiência CSP;](https://docs.micr
   Esta definição de política não se aplica se o computador for Azure AD aderiu e a inscrição automática estiver ativada.
 
 - **Instalação manual** do certificado de raiz (apenas móvel): **O bloco** impede os utilizadores finais de instalarmanualmente certificados de raiz e certificados intermédios DACAP. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
-- **Câmara**: **O bloco** impede que os utilizadores finais utilizem a câmara no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Câmara**: **O bloco** impede que os utilizadores finais utilizem a câmara no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara do dispositivo.
+
+  Intune só consegue o acesso à câmara do dispositivo. Não tem acesso a fotografias ou vídeos.
 
   [Câmara CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
@@ -888,7 +890,7 @@ Estas definições utilizam a [política de defensores CSP](https://docs.microso
   
   - **Limpar**
   - **Quarentena**
-  - **Remove**
+  - **Remover**
   - **Permitir**
   - **Definido pelo utilizador**
   - **Bloquear**

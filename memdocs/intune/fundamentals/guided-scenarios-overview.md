@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326825"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401432"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Visão geral dos cenários guiados insinados 
 
@@ -46,7 +46,7 @@ Os cenários guiados oferecem uma funcionalidade específica. Os seguintes detal
 
 ### <a name="launching"></a>Lançamento  
 
-Todos os cenários guiados estão disponíveis no portal de Gestão de **[Dispositivos](https://devicemanagement.microsoft.com)**  > **Resolução de Problemas + suporte** > **cenários guiados.** 
+Todos os cenários guiados estão disponíveis no portal de Gestão de **[Dispositivos](https://endpoint.microsoft.com)**  > **Resolução de Problemas + suporte** > **cenários guiados.** 
 
 O cenário guiado começa com uma introdução explicando o propósito do cenário e quaisquer pré-requisitos necessários para completar a configuração. Neste ponto, as suas permissões de administração são verificadas para verificar se tem todos os privilégios necessários para completar o cenário.  
 

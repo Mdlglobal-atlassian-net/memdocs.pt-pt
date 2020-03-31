@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083562"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401375"
 ---
 # <a name="review-client-app-protection-logs"></a>Rever registos de proteção de aplicações cliente
 
@@ -33,6 +33,9 @@ O processo de ativação e recolha de registos varia por plataforma:
 - **dispositivos iOS/iPadOS** - Utilize o Microsoft Edge para iOS/iPadOS para recolher registos. Para mais detalhes, consulte Gerir o acesso à web utilizando o Microsoft Edge com o [Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Dispositivos Windows 10** - Utilize *registos de MDMDiag* e eventos. Veja, [diagnostice falhas de MDM no Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) nos conteúdos de gestão de clientes do Windows e no blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
 - **Dispositivos Android** - Use o Microsoft Edge para Android para recolher registos. Para mais detalhes, consulte Gerir o acesso à web utilizando o Microsoft Edge com o [Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+
+  > [!Note]
+  > Em dispositivos Android Totalmente Geridos, em certos casos a aplicação Intune Company Portal pode ser visível em todas as aplicações. Isto pode acontecer quando uma aplicação associada a uma política de proteção de aplicações não é instalada ou não é lançada. 
 
 A tabela seguinte lista o nome da definição da política de proteção da App e valores suportados que são registados no registo. Além disso, cada definição identifica a definição de política encontrada no portal Microsoft Endpoint Manager. Para obter informações detalhadas sobre cada definição, consulte as definições da política de proteção de [aplicações iOS/iPadOS](app-protection-policy-settings-ios.md).
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4635c0e09bea54dd5a22dcb370154e4153bf217c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324249"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401342"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Adicione o Microsoft Edge para windows 10 ao Microsoft Intune
 
@@ -38,7 +38,7 @@ Antes de poder implementar, configurar, monitorizar ou proteger aplicações, de
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- É necessário o Windows 10 RS2 e superior.
+- Windows 10 versão 1703 ou mais tarde.
 - Quaisquer versões pré-instaladas da versão 77 do Microsoft Edge *e posteriormente* para todos os canais no contexto do utilizador serão substituídas com o Edge instalado no contexto do sistema.
 
 ## <a name="configure-the-app-in-intune"></a>Configure a app em Intune

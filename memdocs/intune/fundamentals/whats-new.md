@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9632f47d3ab5582365a059b888892c2e0fe6ec8e
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 57bafb990df3a9a47da95ad80306f4ee1ff020f0
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358733"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401397"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -53,6 +53,19 @@ Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>Semana de 30 de março de 2020
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Novo URL para o centro de administração do Microsoft Endpoint Manager<!-- 3704810 -->
+Para alinhar com o anúncio do Microsoft Endpoint Manager na Ignite no ano passado, mudamos o URL para o microsoft Endpoint Manager (anteriormente Microsoft 365 Device Management) para [https://endpoint.microsoft.com](https://endpoint.microsoft.com). O antigo URL do centro de administração ([https://devicemanagement.microsoft.com) ](https://devicemanagement.microsoft.com)continuará a funcionar, mas recomendamos que comece a aceder ao centro de administração do Microsoft Endpoint Manager utilizando o novo URL.
+
+Para obter mais informações, consulte as [tarefas de TI simplificadas utilizando o centro de administração do Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+
+### <a name="app-management"></a>Gestão de aplicações
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Suporte de script para dispositivos macOS (Pré-visualização pública)<!-- 4280361 wnready -->
+Pode adicionar e implementar scripts para dispositivos macOS. Este suporte alarga a sua capacidade de configurar dispositivos macOS para além do que é possível utilizando capacidades nativas de MDM em dispositivos macOS. Para mais informações, consulte [Utilize scripts de concha em dispositivos macOS em Intune](../apps/macos-shell-scripts.md).
 
 <!-- ########################## -->
 ## <a name="week-of-march-24-2020"></a>Semana de 24 de março de 2020

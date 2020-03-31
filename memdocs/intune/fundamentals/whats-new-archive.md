@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48c88c037a305f2e7f8ba8ab4be5a1accc9680e8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359265"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401476"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novidades do Microsoft Intune – meses anteriores
 
@@ -146,7 +146,7 @@ Para ver as definições atuais, vá às definições de [Wi-Fi Android](../conf
 
 Aplica-se a:
 
-- Administrador de dispositivos Android 
+- Android device administrator (Administrador de dispositivos Android) 
 - Android Enterprise
 
 
@@ -229,7 +229,7 @@ Quando utilizar o [Intune Graph API,](https://docs.microsoft.com/graph/api/resou
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 Gestão de Dispositivos
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Melhor experiência de administração na Microsoft 365 Device Management<!-- 5551239 -->
-Uma experiência de administração renovada e simplificada está agora geralmente disponível no espaço de trabalho especializado em Gestão de Dispositivos da Microsoft 365 em [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com), incluindo:
+Uma experiência de administração renovada e simplificada está agora geralmente disponível no espaço de trabalho especializado em Gestão de Dispositivos da Microsoft 365 em [https://endpoint.microsoft.com](https://endpoint.microsoft.com), incluindo:
 
 - **Navegação atualizada**: Encontrará uma navegação de nível 1 simplificado que logicamente agrupa.
 - **Novos filtros**de plataforma : Pode selecionar uma única plataforma, que mostra apenas as políticas e aplicações para a plataforma selecionada, nas páginas Dispositivos e Apps.
@@ -238,7 +238,7 @@ Uma experiência de administração renovada e simplificada está agora geralmen
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Introdução do nó de segurança endpoint na Microsoft 365 Device Management<!-- 5630102 -->
 
-O nó **endpoint Security** está agora geralmente disponível no espaço de trabalho especializado em Gestão de Dispositivos da Microsoft 365 na https://devicemanagement.microsoft.com, que reúne as capacidades para garantir pontos finais como:
+O nó **endpoint Security** está agora geralmente disponível no espaço de trabalho especializado em Gestão de Dispositivos da Microsoft 365 na https://endpoint.microsoft.com, que reúne as capacidades para garantir pontos finais como:
 
 - Bases de segurança: Grupo de definições pré-configurado que o ajudam a aplicar um grupo conhecido de configurações e valores predefinidos que são recomendados pela Microsoft.
 - Tarefas de Segurança: Aproveite a ameaça e a gestão de vulnerabilidades do Microsoft Defender ATPs (TVM) e utilize o Intune para remediar as fraquezas do ponto final.
@@ -348,7 +348,7 @@ Aplica-se a:
 - iOS 13.0 e mais tarde
 
 #### <a name="use-single-sign-on-for-apps-and-websites-on-your-ios-and-macos-devices---4893175-----"></a>Utilize um único sessão para apps e websites nos seus dispositivos iOS e macOS<!-- 4893175   -->
-Nesta atualização, existem algumas novas definições de início de sessão única para dispositivos iOS e macOS (**Configuração** do dispositivo > **Perfis** > **Criar perfil** > iOS ou **macOS** para **funcionalidades** de plataforma > Dispositivo para tipo de perfil).
+Nesta atualização, existem algumas novas definições de início de sessão única para dispositivos iOS e macOS (**Configuração** do dispositivo > **Perfis** > **Criar perfil** > iOS ou **macOS** para **macOS** **funcionalidades** de plataforma > Dispositivo para tipo de perfil).
 
 Utilize estas configurações para configurar uma única experiência de início de sessão, especialmente para apps e websites que utilizam a autenticação Kerberos. Você pode escolher entre uma extensão de uma aplicação de inscrição única credencial genérica, e a extensão Kerberos incorporada da Apple.
 
@@ -569,7 +569,7 @@ Intune agora suporta a instalação e utilização de vários [conectores de cer
 Para utilizar vários conectores, não precisa de fazer upgrade para a versão mais recente do software de conector.  
 
 #### <a name="new-settings-and-changes-to-existing-settings-to-restrict-features-on-ios-and-macos-devices---4867699-4867709-----"></a>Novas definições e alterações às definições existentes para restringir funcionalidades em dispositivos iOS e macOS<!-- 4867699 4867709   -->
-Pode criar perfis para restringir as definições em dispositivos que executam iOS e macOS (**configuração** de dispositivo ** > Perfis** > **Criar perfil** > iOS ou **macOS** para restrições do tipo de plataforma > **Dispositivo).** Esta atualização inclui as seguintes funcionalidades:
+Pode criar perfis para restringir as definições em dispositivos que executam iOS e macOS (**configuração** de dispositivo ** > Perfis** > **Criar perfil** > iOS ou **macOS** para restrições do tipo de plataforma > **macOS** **Dispositivo).** Esta atualização inclui as seguintes funcionalidades:
 
 - No **macOS** > Restrições de **dispositivos** > **Cloud e armazenamento,** utilize a nova definição de **Handoff** para impedir que os utilizadores comecem a trabalhar num dispositivo macOS e continue a trabalhar noutro dispositivo macOS ou iOS.
 
@@ -709,7 +709,7 @@ Para adicionar uma regra de aplicabilidade, consulte as regras de [aplicabilidad
 Aplica-se a: Windows 10 e posterior
 
 #### <a name="use-tokens-to-add-device-specific-information-in-custom-profiles-for-ios-and-macos-devices---3330008----"></a>Utilize tokens para adicionar informações específicas do dispositivo em perfis personalizados para dispositivos iOS e macOS<!-- 3330008  -->
-Pode utilizar perfis personalizados em dispositivos iOS e macOS para configurar configurações e **funcionalidades** não incorporadas no Intune (**configuração** do dispositivo > Perfis > **Criar perfil** > iOS ou **macOS** para o tipo de plataforma > **Personalizado** para o tipo de perfil). Nesta atualização, pode adicionar fichas aos seus ficheiros `.mobileconfig` para adicionar informações específicas do dispositivo. Por exemplo, pode adicionar `Serial Number: {{serialnumber}}` ao seu ficheiro de configuração para mostrar o número de série do dispositivo.
+Pode utilizar perfis personalizados em dispositivos iOS e macOS para configurar configurações e **funcionalidades** não incorporadas no Intune (**configuração** do dispositivo > Perfis > **Criar perfil** > iOS ou **macOS** para o tipo de plataforma > **Personalizado** para o tipo de perfil). **macOS** Nesta atualização, pode adicionar fichas aos seus ficheiros `.mobileconfig` para adicionar informações específicas do dispositivo. Por exemplo, pode adicionar `Serial Number: {{serialnumber}}` ao seu ficheiro de configuração para mostrar o número de série do dispositivo.
 
 Para criar um perfil personalizado, consulte [as definições personalizadas do iOS](../configuration/custom-settings-ios.md) ou [as definições personalizadas do macOS.](../configuration/custom-settings-macos.md)
 
@@ -1446,7 +1446,7 @@ Para obter uma lista destas definições, consulte:
 Aplica-se a: Windows 10 e posterior
 
 #### <a name="new-device-restriction-settings-for-ios-and-macos-devices---3448774-----"></a>Novas definições de restrição de dispositivos para dispositivos iOS e macOS<!-- 3448774   -->
-Pode restringir algumas definições e funcionalidades em dispositivos que executam iOS e macOS (**configuração** do dispositivo > **Perfis** > **Novo perfil** > iOS ou **macOS** para **restrições** de plataforma > Dispositivo para tipo de perfil). Esta atualização adiciona mais funcionalidades e configurações que pode controlar, incluindo configurar o tempo do ecrã, alterar as definições de eSIM e planos celulares, e muito mais em dispositivos iOS. Além disso, atrasando a visibilidade do utilizador das atualizações de software e bloqueando o bloqueio de conteúdos em dispositivos macOS.
+Pode restringir algumas definições e funcionalidades em dispositivos que executam iOS e macOS (**configuração** do dispositivo > **Perfis** > **Novo perfil** > iOS ou **macOS** para **macOS** **restrições** de plataforma > Dispositivo para tipo de perfil). Esta atualização adiciona mais funcionalidades e configurações que pode controlar, incluindo configurar o tempo do ecrã, alterar as definições de eSIM e planos celulares, e muito mais em dispositivos iOS. Além disso, atrasando a visibilidade do utilizador das atualizações de software e bloqueando o bloqueio de conteúdos em dispositivos macOS.
 
 Para ver as funcionalidades e configurações que pode restringir, consulte:
 
@@ -1654,7 +1654,7 @@ Nesta atualização, pode utilizar ligações VPN sempre ativada nos dispositivo
 Pode ativar o Always-on VPN na **configuração** do Dispositivo > **Perfis** > **Criar perfil** > **empresa Android** para as restrições de plataforma > dispositivo para as **definições** de Apenas > **Conectividade.** Para ver as definições, vá às definições de [restrição](../configuration/device-restrictions-android-for-work.md)do dispositivo Android Enterprise .
 
 #### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices---3285177---"></a>Nova configuração para acabar com processos em Task manager em dispositivos Windows 10<!-- 3285177 --> 
-Esta atualização inclui uma nova definição para terminar a processos usando o Gerenciador de tarefas em dispositivos Windows 10. Utilizando um perfil de configuração do dispositivo (**configuração** do dispositivo > **Perfis** > **Criar perfil** > Na **Plataforma,** escolha **o Windows 10** > No **tipo de Perfil,** escolha as restrições do Dispositivo > configurações **gerais),** opte por permitir ou impedir esta definição.
+Esta atualização inclui uma nova definição para terminar a processos usando o Gerenciador de tarefas em dispositivos Windows 10. Utilizando um perfil de configuração do dispositivo (**configuração** do dispositivo > **Perfis** > **Criar perfil** > Na **Plataforma,** escolha **o Windows 10** > No **tipo de Perfil,** escolha as restrições do Dispositivo > configurações **gerais),** opte por permitir ou impedir esta definição. **General**
 Para ver estas definições, vá às definições de restrição do [dispositivo Windows 10](../configuration/device-restrictions-windows-10.md).
 Aplica-se a: Windows 10 e posterior
 
@@ -2106,7 +2106,7 @@ Quando o Intune instalar o Office nos computadores dos seus utilizadores finais,
 ### <a name="monitor-and-troubleshoot"></a>Monitorizar e resolver problemas
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Nova Experiência de Suporte Intune no portal de Gestão de Dispositivos Microsoft 365<!-- 3076965 -->
-Estamos a implementar uma nova experiência de Ajuda e Suporte para o Intune no [portal de Gestão de Dispositivos do Microsoft 365]( https://devicemanagement.microsoft.com). A nova experiência permite-lhe descrever o seu problema pelas suas próprias palavras e receber informações de resolução de problemas e conteúdos de remediação baseados na Web. Estas soluções são disponibilizadas através de um algoritmo de aprendizagem automática baseado em regras, alimentado pelas perguntas dos utilizadores.  
+Estamos a implementar uma nova experiência de Ajuda e Suporte para o Intune no [portal de Gestão de Dispositivos do Microsoft 365]( https://endpoint.microsoft.com). A nova experiência permite-lhe descrever o seu problema pelas suas próprias palavras e receber informações de resolução de problemas e conteúdos de remediação baseados na Web. Estas soluções são disponibilizadas através de um algoritmo de aprendizagem automática baseado em regras, alimentado pelas perguntas dos utilizadores.  
 
 Para além das orientações específicas de problemas, pode utilizar o novo fluxo de trabalho de criação de processos para abrir um processo de suporte por e-mail ou telefone.  
 
@@ -2148,7 +2148,7 @@ Se tiver um dos dispositivos listados abaixo ou quiser inscrever um deles, tenha
 ### <a name="device-management"></a>Gestão de dispositivos
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Centro de administração da Gestão de Dispositivos do Microsoft 365<!-- 3078424 -->
-Uma das promessas do Microsoft 365 é a administração simplificada, e ao longo dos anos integrámos os serviços de back-end Microsoft 365 para fornecer cenários de ponta a ponta, como intune e Azure AD Conditional Access. O novo [Centro de administração do Microsoft 365](https://devicemanagement.microsoft.com) é o lugar certo para consolidar, simplificar e integrar a experiência de administração. A área de trabalho de especialista para a Gestão de Dispositivos fornece acesso fácil a todas as informações e tarefas de gestão de dispositivos e aplicações de que a sua organização precisa. Esperamos que esta se torne na principal área de trabalho da cloud das equipas de informática de utilizador final empresarial.
+Uma das promessas do Microsoft 365 é a administração simplificada, e ao longo dos anos integrámos os serviços de back-end Microsoft 365 para fornecer cenários de ponta a ponta, como intune e Azure AD Conditional Access. O novo [Centro de administração do Microsoft 365](https://endpoint.microsoft.com) é o lugar certo para consolidar, simplificar e integrar a experiência de administração. A área de trabalho de especialista para a Gestão de Dispositivos fornece acesso fácil a todas as informações e tarefas de gestão de dispositivos e aplicações de que a sua organização precisa. Esperamos que esta se torne na principal área de trabalho da cloud das equipas de informática de utilizador final empresarial.
 
 
 <!-- ########################## -->
@@ -2466,11 +2466,11 @@ A página de imagem corporativa do Portal da Empresa tem um novo esquema, mensag
 Pode controlar o acesso de dispositivos móveis a recursos corporativos utilizando o Acesso Condicional com base na avaliação de risco realizada pela Pradeo, uma solução de Defesa de Ameaças Móveis que se integra com a Microsoft Intune.
 
 #### <a name="use-fips-mode-with-the-ndes-certificate-connector---1333688---"></a>Utilizar o modo FIPS com o conector do Certificado NDES<!-- 1333688 -->
-Ao instalar o conector do Certificado NDES num computador com o modo FIPS (Federal Information Processing Standard) ativado, a emissão e a revogação de certificados não funcionaram como esperado. Com esta atualização, é incluído suporte para FIPS com o conector do Certificado NDES. 
+Ao instalar o conector do Certificado NDES num computador com o modo FIPS (Federal Information Processing Standard) ativado, a emissão e a revogação de certificados não funcionaram como esperado. Com esta atualização, é incluído suporte para o modo FIPS com o conector do Certificado NDES. 
 
 Esta atualização também inclui:
 
-- O conector do Certificado NDES precisa do .NET 4.5 Framework, que é incluído automaticamente com o Windows Server 2016 e o Windows Server 2012 R2. Anteriormente, a versão mínima necessária era o .NET 3.5 Framework.
+- O conector do Certificado NDES precisa do .NET 4.5 Framework, incluído automaticamente com o Windows Server 2016 e o Windows Server 2012 R2. Anteriormente, a versão mínima necessária era o .NET 3.5 Framework.
 - É incluído suporte para o TLS 1.2 com o conector do Certificado NDES. Assim, se o servidor com o Certificate Connector do NDES instalado suportar o TLS 1.2, será utilizado o TLS 1.2. Se o servidor não suportar o TLS 1.2, será utilizado o TLS 1.1. Atualmente, é utilizado o TLS 1.1 para a autenticação entre os dispositivos e o servidor.
 
 Para obter mais informações, veja [Configurar e utilizar certificados SCEP](../protect/certificates-scep-configure.md) e [Configurar e utilizar certificados PKCS](../protect/certficates-pfx-configure.md).
@@ -2919,7 +2919,7 @@ Criar perfil\Proteção de ponto final\Windows Defender Exploit Guard.
 
 |              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novidade</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
+| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
 Proteja ficheiros e pastas contra alterações não autorizadas por aplicações não fidedignas.<br><br>**Ativar**: impede que aplicações não fidedignas modifiquem ou eliminem ficheiros em pastas protegidas e escrevam em setores do disco.<br><br>
 **Bloquear apenas a modificação do disco**:<br>Impeça que aplicações não fidedignas escrevam em setores do disco. As aplicações não fidedignas continuam a poder modificar ou eliminar ficheiros em pastas protegidas.|
@@ -2946,7 +2946,7 @@ Pode criar categorias de eBook personalizadas e depois atribuir eBooks do VPP a 
 A partir de 30 de abril de 2018, a opção **Enviar Feedback** na aplicação Portal da Empresa para Windows funcionará apenas em dispositivos com a Atualização de Aniversário do Windows 10 (1607) e versões posteriores. A opção para enviar feedback já não é suportada ao utilizar a aplicação Portal da Empresa para Windows com a:  
 - Versão 1507 do Windows 10  
 - Versão 1511 do Windows 10  
-- Windows Phone 8.1
+- Wnodows Phone 8.1
 
 Se o seu dispositivo estiver a executar o Windows 10 RS1 ou posterior, transfira a versão mais recente da aplicação Portal da Empresa para Windows a partir da Store. Se estiver a executar uma versão não suportada, continue a enviar feedback através dos seguintes canais:
 - Aplicação Hub de Comentários no Windows 10
@@ -3093,7 +3093,7 @@ Por exemplo, uma conta de recurso como **Sala de Conferência B41/6233**.
 
 |              Nome da definição               |                                                              Opções da definição                                                              | Description |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novidade</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
+| Proteção de pastas (já implementada) | Não configurado, Ativar, Apenas auditoria (já implementada)<br><br> <strong>Novo</strong><br>Bloquear modificação do disco, Auditar modificação do disco |             |
 
 Proteja ficheiros e pastas contra alterações não autorizadas por aplicações não fidedignas.<br><br>**Ativar**: impede que aplicações não fidedignas modifiquem ou eliminem ficheiros em pastas protegidas e escrevam em setores do disco.<br><br>
 **Bloquear apenas a modificação do disco**:<br>Impeça que aplicações não fidedignas escrevam em setores do disco. As aplicações não fidedignas continuam a poder modificar ou eliminar ficheiros em pastas protegidas.|
@@ -4212,7 +4212,7 @@ Os dispositivos com o Samsung Knox Standard agora suportam a [gestão de vários
 Adicionámos suporte para mais [definições de restrição de dispositivos Windows](../configuration/device-restrictions-windows-10.md), tais como suporte adicional para o browser Microsoft Edge, personalização do ecrã de bloqueio de dispositivos, personalizações do menu Iniciar, imagens de fundo definidas para pesquisas do Destaque do Windows e definição de proxy.
 
 ### <a name="multi-user-support-for-windows-10-creators-update---822547---"></a>Suporte para múltiplos utilizadores da Atualização para Criativos do Windows 10<!-- 822547 -->
-Adicionamos suporte para a [gestão de vários utilizadores](../enrollment/windows-enroll.md) para dispositivos a executar a Atualização para Criativos do Windows 10 e que estejam associados ao domínio do Azure Active Directory. Tal significa que, quando outros utilizadores padrão iniciarem sessão no dispositivo com as credenciais do Azure AD, receberão as aplicações e as políticas atribuídas aos seus nomes de utilizador. Atualmente, os utilizadores não podem utilizar o Portal da Empresa para cenários de self-service, tais como instalar aplicações.
+Adicionamos suporte para a [gestão de vários utilizadores](../enrollment/windows-enroll.md) para dispositivos a executar a Atualização para Criativos do Windows 10 e que estejam associados ao domínio do Azure Active Directory. Tal significa que, quando outros utilizadores padrão iniciarem sessão no dispositivo com as credenciais do Azure AD, receberão as aplicações e as políticas atribuídas aos seus nomes de utilizador. Atualmente, os utilizadores não podem utilizar o Portal da Empresa para cenários de self-service, tais como a instalação de aplicações.
 
 ### <a name="fresh-start-for-windows-10-pcs---1004830---"></a>Funcionalidade Começar do Zero para PCs com Windows 10<!-- 1004830 -->
 Está agora disponível uma [ação de dispositivo Fresh Start](../remote-actions/device-fresh-start.md) para PCs com Windows 10.  Ao executar esta ação, as aplicações instaladas no PC são removidas e o PC é automaticamente atualizado para a versão mais recente do Windows. Esta ação pode ajudar a remover aplicações OEM que vêm frequentemente pré-instaladas num PC novo. Pode configurar se os dados de utilizador são retidos ao efetuar esta ação.

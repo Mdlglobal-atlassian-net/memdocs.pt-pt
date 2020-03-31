@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084209"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407757"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Como personalizar as aplicações intune Company Portal, site do Portal da Empresa e app Intune
 
@@ -56,7 +56,7 @@ A imagem de marca certa pode aumentar a confiança do utilizador apresentando um
 
 - Entre em contacto com o Departamento de Marketing ou de Artes Gráficas. Estes departamentos podem já ter um conjunto de imagens de marca aprovado. Também poderão ajudá-lo a otimizar as imagens conforme necessário.
 - Considere tanto a composição horizontal como a vertical. A imagem deve ter um fundo suficiente, de forma a envolver o ponto focal. A imagem pode ser recortada de forma diferente com base na orientação, no tamanho e na plataforma do dispositivo.
-- Evite utilizar uma imagem de stock genérica. A imagem deve refletir a marca da sua organização e sentir-se familiar aos utilizadores. Se não tiver uma, é melhor não utilizar uma imagem genérica que não faça sentido para o seu utilizador.
+- Evite utilizar uma imagem de stock genérica. A imagem deve refletir a marca da sua organização e sentir-se familiar aos utilizadores. Se não tiver um, é melhor não usar um do que usar um genérico que não tem significado para o seu utilizador.
 - Remova os metadados desnecessários. O ficheiro de imagem pode vir com metadados, tais como o perfil da câmara, a geolocalização, o título, a legenda, etc. Utilize uma ferramenta de otimização de imagens para retirar estas informações para manter a qualidade e cumprir o limite de tamanho do ficheiro.
 
 ### <a name="brand-image-examples"></a>Exemplos de imagem de marca
@@ -193,4 +193,4 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 
 ## <a name="next-steps"></a>Próximos passos
 
-- [Adicionar manualmente a aplicação Portal da Empresa do Windows 10 através do Microsoft Intune](company-portal-app.md)
+- [Adicionar aplicações](apps-add.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce6e6fd9c1a26762a0eb3081fde09ad9b05530a2
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274851"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401447"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Inscrever-se ou iniciar sessão no Microsoft Intune
 
@@ -62,7 +62,7 @@ Para conceder acesso à administração do serviço para utilizadores com outras
 
 ### <a name="intune-admin-portal-url"></a>URL do portal de administração intune
 
-Centro de administração do Microsoft Endpoint Manager: https://devicemanagement.microsoft.com
+Centro de administração do Microsoft Endpoint Manager: https://endpoint.microsoft.com
 
 Portal Intune Azure: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 

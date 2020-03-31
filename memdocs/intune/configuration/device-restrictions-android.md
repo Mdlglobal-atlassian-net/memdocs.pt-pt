@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea84544223d890be7e61fafa5de082c242250403
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359346"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407877"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listas de configurações de restrições de dispositivos Android e Samsung Knox Standard em Intune
 
@@ -36,7 +36,10 @@ Criar um perfil de [configuração do dispositivo](device-restrictions-configure
 
 ## <a name="general"></a>Geral
 
-- **Câmara**: **Bloco** impede o acesso à câmara. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara do dispositivo.
+- **Câmara**: **Bloco** impede o acesso à câmara do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o acesso à câmara do dispositivo.
+
+  Intune só consegue o acesso à câmara do dispositivo. Não tem acesso a fotografias ou vídeos.
+
 - **Cópia e pasta (apenas Samsung Knox)** : **Bloco** impede a cópia e a pasta. **Não configurado** permite funções de cópia e pasta nos dispositivos.
 - **Partilha de clipboard entre apps (apenas Samsung Knox)** : **O bloco** impede a utilização da pasta para copiar e colar entre apps. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir funções de cópia e pasta nos dispositivos.
 - **Submissão de dados de diagnóstico (apenas Samsung Knox)** : **O bloco** impede os utilizadores de enviarem relatórios de bugs a partir de dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores enviem os dados.

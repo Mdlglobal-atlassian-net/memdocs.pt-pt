@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326833"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401489"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Início Rápido: experimentar gratuitamente o Microsoft Intune
 
@@ -64,7 +64,7 @@ Pode experimentar o Intune de forma gratuita durante 30 dias. Se já tiver uma c
 
 Se ainda não se inscreveu no portal, complete os seguintes passos:
 
-1. Abra uma nova janela do browser e introduza **https://devicemanagement.microsoft.com** na barra de endereço. 
+1. Abra uma nova janela do browser e introduza **https://endpoint.microsoft.com** na barra de endereço. 
 2. Utilize o ID do utilizador que lhe foi dado nos passos acima para iniciar sessão *(yourID@yourdomain* .onmicrosoft.com).
 
     ![Imagem da página de inscrição do portal](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Como mencionado acima, se a sua organização tiver o seu próprio domínio pers
 ## <a name="admin-experiences"></a>Experiências de administrador
 
 Existem dois portais que irá utilizar com mais frequência:
-- O centro de administração do Microsoft Endpoint Manager[ (https://devicemanagement.microsoft.com/) ](https://devicemanagement.microsoft.com/)é onde pode explorar as [capacidades de Intune](what-is-intune.md). É aqui que um administrador trabalharia com intune.
+- O centro de administração do Microsoft Endpoint Manager[ (https://endpoint.microsoft.com/) ](https://endpoint.microsoft.com/)é onde pode explorar as [capacidades de Intune](what-is-intune.md). É aqui que um administrador trabalharia com intune.
 - O centro de administração do Microsoft 365[ (https://admin.microsoft.com) ](https://admin.microsoft.com)é onde pode adicionar e gerir os utilizadores, caso não esteja a utilizar o Azure Ative Directory para o fazer. Também pode gerir outros aspetos da sua conta, incluindo faturação e suporte.
 
 ## <a name="next-steps"></a>Próximos passos
