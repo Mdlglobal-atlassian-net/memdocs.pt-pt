@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: Scripts PowerShell
           href: intune-management-extension.md
+        - name: macOS shell scripts (Scripts de shell macOS)
+          href: macos-shell-scripts.md
     - name: Atribuir aplicações
       items:
         - name: Atribuir aplicações a grupos
