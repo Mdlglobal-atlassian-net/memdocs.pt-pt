@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 149a1dba78b32f2d59884fbb5b69ed58f4c0fccd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331381"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438775"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Pontos finais do governo dos EUA para a Microsoft Intune
 
@@ -51,6 +51,7 @@ As tabelas que se seguem listam as portas e os serviços a que o cliente do Intu
 - Portal Azure: https:\//portal.azure.us/ 
 - Escritório 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
+- Centro de administração do Microsoft Endpoint Manager: https:\//endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Pontos finais do serviço parceiro que Intune depende:
 - Serviço AAD Sync: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

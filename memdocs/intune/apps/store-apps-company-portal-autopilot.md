@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323821"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438752"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Adicione e atribua a aplicação Portal da Empresa do Windows 10 para dispositivos aprovisionados em Piloto Automático
 
@@ -52,9 +52,9 @@ O Portal da Empresa (Offline) é escolhido para ser instalado utilizando os pass
 ## <a name="assign-the-company-portal-app"></a>Atribuir a app Portal da Empresa
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com a sua conta de administração. 
-2. Selecione o separador **apps** no painel certo.
-3. Em **by plataforma,** selecione **Windows**.
-4. Selecione **Portal da Empresa (Offline)** .
+2. Selecione o separador**Apps**no painel certo.
+3. Em**by plataforma,** selecione**Windows**.
+4. Selecione**Portal da Empresa (Offline)** .
 5. Deve esperar que o calendário de sincronização esteja completo ou faça uma sincronização manual do centro de administração do Microsoft Endpoint Manager.
 6. Atribuir a aplicação Portal da Empresa como uma aplicação necessária aos grupos de dispositivos de piloto automático selecionados.
 

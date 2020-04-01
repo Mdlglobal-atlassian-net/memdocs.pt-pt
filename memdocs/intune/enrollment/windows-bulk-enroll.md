@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326989"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488089"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscrição em massa para dispositivos Windows
 
@@ -61,11 +61,13 @@ Os utilizadores do Azure AD são utilizadores padrão nestes dispositivos e obt
 7. Indique as suas credenciais do Azure AD para obter um token em massa.
    ![Captura do início de sessão na aplicação Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Clique em **Seguinte** quando **Token em Massa** for obtido com êxito.
+8. Na **conta Use esta conta em todo o lado nesta** página do dispositivo, selecione **apenas esta aplicação**.
 
-9. Opcionalmente, pode **Adicionar aplicações** e **Adicionar certificados**. Estas aplicações e certificados são aprovisionados no dispositivo.
+9. Clique em **Seguinte** quando **Token em Massa** for obtido com êxito.
 
-10. Opcionalmente, pode proteger o seu pacote de aprovisionamento por palavra-passe.  Clique em **Criar**.
+10. Opcionalmente, pode **Adicionar aplicações** e **Adicionar certificados**. Estas aplicações e certificados são aprovisionados no dispositivo.
+
+11. Opcionalmente, pode proteger o seu pacote de aprovisionamento por palavra-passe.  Clique em **Criar**.
     ![Captura da proteção do pacote na aplicação Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Aprovisionar dispositivos
@@ -97,5 +99,5 @@ Pode verificar se há sucesso/falha das definições do seu pacote no registo de
 
 Quando não utilizar uma rede aberta, deve utilizar [certificados de nível de dispositivo](../protect/certificates-configure.md) para iniciar ligações. Os dispositivos matriculados a granel não podem utilizar para certificados direcionados ao utilizador para acesso à rede. 
 
-### <a name="conditional-access"></a>Acesso Condicional
+### <a name="conditional-access"></a>Conditional Access
 O Acesso Condicional não está disponível para dispositivos Windows matriculados com matrícula a granel.

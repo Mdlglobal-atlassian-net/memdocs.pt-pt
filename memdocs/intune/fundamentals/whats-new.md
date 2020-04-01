@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57bafb990df3a9a47da95ad80306f4ee1ff020f0
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401397"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438816"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -236,7 +236,7 @@ Nestes dispositivos não conformes, na página de **definições** do dispositiv
 2. Matriculamento na gestão de perfil de trabalho
 3. Resolução de questões de conformidade 
  
-A Google está a diminuir o suporte do administrador de dispositivos em novas versões Android, num esforço para se mudar para uma gestão moderna, mais rica e segura de dispositivos com o Android Enterprise.  A Intune só pode fornecer suporte total para dispositivos Android geridos por administrador de dispositivos que executam o Android 10 e, posteriormente, através do Q2 CY2020. Dispositivos geridos por administrador de dispositivos (exceto Samsung) que estão a executar o Android 10 ou mais tarde depois desta época não serão capazes de ser totalmente geridos. Em particular, os dispositivos com impacto não receberão novos requisitos de senha. Para mais informações, consulte este [Aviso](#decreasing-support-for-android-device-administrator).
+A Google está a diminuir o suporte do administrador de dispositivos em novas versões Android, num esforço para se mudar para uma gestão moderna, mais rica e segura de dispositivos com o Android Enterprise.  A Intune só pode fornecer suporte total para dispositivos Android geridos por administrador de dispositivos que executam o Android 10 e, posteriormente, através do Q2 CY2020. Dispositivos geridos por administrador de dispositivos (exceto Samsung) que estão a executar o Android 10 ou mais tarde depois desta época não serão capazes de ser totalmente geridos. Em particular, os dispositivos com impacto não receberão novos requisitos de senha.
 
 Para obter mais informações sobre esta definição, consulte [mover dispositivos Android do administrador do dispositivo para a gestão de perfis](../enrollment/android-move-device-admin-work-profile.md)de trabalho. 
 

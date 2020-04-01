@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328681"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488056"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utilize linhas de base de segurança para configurar dispositivos Windows 10 em Intune
 
@@ -76,7 +76,7 @@ As seguintes instâncias de base de segurança estão disponíveis para utiliza�
 
 - **Microsoft Defender ATP linha** de base
    *(Para utilizar esta linha de base o seu ambiente deve satisfazer os pré-requisitos para a utilização de [Proteção avançada de ameaças do Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Linha de base ATP do Microsoft Defender](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP versão de base 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > A linha de segurança ATP do Microsoft Defender foi otimizada para dispositivos físicos e não é atualmente recomendada para utilização em máquinas virtuais (VMs) ou pontos finais VDI. Certas definições de base podem ter impacto em sessões interativas remotas em ambientes virtualizados.  Para mais informações, consulte Aumentar a conformidade com a linha de [segurança ATP do Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) na documentação do Windows.

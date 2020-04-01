@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f9d21afd46abccf36dbb3d50f81b16e854e92d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325380"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488059"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gerir atualizações de software do Windows 10 em Intune
 
@@ -209,7 +209,7 @@ Quando um dispositivo recebe uma política de atualizações de funcionalidades 
 
 Os seguintes pré-requisitos devem ser cumpridos para utilizar as atualizações da funcionalidade do Windows 10 em Intune.
 
-- Os dispositivos devem ser matriculados em Intune MDM e Azure AD aderiu ou Azure AD registado.
+- Os dispositivos devem ser matriculados no INTUNE MDM e ser a AD Híbrido aderido, Azure AD juntou-se ou Azure AD registado.
 - Para utilizar a política de Atualizações de Funcionalidades com O Intune, os dispositivos devem ter telemetria ligada, com uma definição mínima de [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). A telemetria está configurada no âmbito de *Reporting and Telemettry* como parte de uma política de [restrição](../configuration/device-restrictions-configure.md)de dispositivos.
   
   Os dispositivos que recebem a política de Atualizações de Funcionalidades e que tenham um conjunto de telemetria para *Não configurado*, o que significa que está desligado, poderão instalar uma versão posterior do Windows do que definida na política de Atualização de Funcionalidades. O pré-requisito para exigir telemetria está em revisão à medida que esta funcionalidade avança para a disponibilidade geral.
