@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359184"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551517"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>funcionalidade do dispositivo macOS em Intune
 
@@ -82,6 +82,9 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
   Ao adicionar qualquer aplicação, pasta ou ficheiro, certifique-se de que introduza o caminho correto. Nem todos os itens estão na pasta `Applications`. Se os utilizadores moverem um item de um local para outro, então o caminho muda. Este item movido não será aberto quando o utilizador entrar.
 
 - **Ocultar a configuração do utilizador**: **O Hide** não mostra a aplicação na lista de itens de login dos Utilizadores e Grupos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA mostra o item que começa a iniciar o login na lista de itens de login dos Utilizadores e Grupos com a opção de ocultação desmarcada.
+
+  > [!NOTE]
+  > Esta configuração está a ser lançada para todos os clientes nas próximas semanas.
 
 ## <a name="login-window"></a>Janela de login
 

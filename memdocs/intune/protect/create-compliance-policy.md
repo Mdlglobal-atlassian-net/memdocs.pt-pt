@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322998"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551373"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Criar uma política de conformidade no Microsoft Intune
 
@@ -47,17 +47,20 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 - Utilize uma plataforma suportada:
 
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Android Enterprise
   - iOS
   - macOS
   - Windows 10
   - Windows 8,1
-  - Windows Phone 8.1
+  - Wnodows Phone 8.1
 
 - Inscreva os dispositivos no Intune (necessário para ver o estado de conformidade).
 
 - Inscreva os dispositivos para um utilizador ou inscreva sem um utilizador primário. Os dispositivos inscritos para vários utilizadores não são suportados.
+
+> [!NOTE]
+> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
 
 ## <a name="create-the-policy"></a>Criar a política
 
@@ -161,12 +164,12 @@ Se um dispositivo tiver múltiplas políticas de conformidade e estados de confo
 
 |Estado  |Gravidade  |
 |---------|---------|
-|Unknown     |1|
+|Desconhecido     |1|
 |NotApplicable     |2|
-|conformidade|3|
+|Compatível|3|
 |InGracePeriod|4|
 |NonCompliant|5|
-|Erro|6|
+|Error|6|
 
 Quando um dispositivo tem múltiplas políticas de conformidade, é atribuído o nível de gravidade mais elevado de todas as políticas a esse dispositivo.
 

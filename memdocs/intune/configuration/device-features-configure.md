@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359482"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551393"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adicione as definições de funcionalidades do iOS, iPadOS ou macOS em Intune
 
@@ -37,6 +37,9 @@ Intune inclui muitas funcionalidades e configurações que ajudam os administrad
 Intune usa "perfis de configuração" para criar e personalizar estas configurações para as necessidades da sua organização. Depois de adicionar estas funcionalidades num perfil, empurre ou implemente o perfil para dispositivos iOS/iPadOS e macOS na sua organização.
 
 Este artigo descreve as diferentes funcionalidades que pode configurar e mostra-lhe como criar um perfil de configuração do dispositivo. Também pode ver todas as definições disponíveis para [dispositivos iOS/iPadOS](ios-device-features-settings.md) e [macOS.](macos-device-features-settings.md)
+
+> [!NOTE]
+> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
 
 ## <a name="airprint"></a>Impressão aérea
 

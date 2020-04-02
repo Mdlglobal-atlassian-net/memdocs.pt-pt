@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359322"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551498"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Adicione um ficheiro de lista de propriedades a dispositivos macOS usando o Microsoft Intune
 
@@ -43,6 +43,9 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 - Se não tiver a certeza de como introduzir uma chave de aplicação, altere a definição dentro da aplicação. Em seguida, reveja o ficheiro preferencial da aplicação usando [o Xcode](https://developer.apple.com/xcode/) para ver como a definição está configurada. A Apple recomenda a remoção de configurações não manejáveis utilizando o Xcode antes de importar o ficheiro.
 - Apenas algumas aplicações funcionam com preferências geridas, e podem não permitir-lhe gerir todas as definições.
 - Certifique-se de que faz o upload de ficheiros da lista de propriedades que visam as definições do canal do dispositivo, e não as definições do canal do utilizador. Os ficheiros da lista de propriedades visam todo o dispositivo.
+
+> [!NOTE]
+> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
 
 ## <a name="create-the-profile"></a>Criar o perfil
 

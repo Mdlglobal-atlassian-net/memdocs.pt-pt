@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323290"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551551"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Impor cumprimento do Microsoft Defender ATP com acesso condicional em Intune
 
@@ -35,6 +35,9 @@ Para ter sucesso, utiliza as seguintes configurações em concerto:
 - **Utilize uma política de acesso condicional** para impedir que os utilizadores acedam a recursos corporativos a partir de dispositivos que não sejam conformes.
 
 Quando integrar o Intune com o Microsoft Defender ATP, pode tirar partido da ATPs Threat & Vulnerability Management (TVM) e [utilizar o Intune para remediar a fraqueza do ponto final identificada pela TVM](atp-manage-vulnerabilities.md).
+
+> [!NOTE]
+> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Exemplo de utilização do Microsoft Defender ATP com Intune
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326714"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551624"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Use conjuntos de políticas para agrupar coleções de objetos de gestão
 
@@ -41,7 +41,7 @@ Pode utilizar conjuntos de políticas para:
 
 Pode incluir os seguintes objetos de gestão num conjunto de políticas:
 
-- Aplicações
+- Apps
 - Políticas de configuração de aplicações
 - Políticas de proteção de aplicações
 - Perfis de configuração de dispositivos
@@ -104,7 +104,7 @@ Os conjuntos políticos, novos para 1910, têm as seguintes questões conhecidas
 
 - Os tipos de política do MAM que apoiam os conjuntos de políticas incluem os seguintes: 
   - MAM WIP (Windows) MDM direcionado para a proteção de aplicações geridas 
-  - MAM iiOS/iPadOSOS direcionada para a proteção de aplicações geridas
+  - MAM iOS/iPadOS direcionado para a proteção de aplicações geridas
   - MAM Android direcionado para a proteção de aplicações geridas
   - Configuração de aplicações geridas mAM iOS/iPadOS
   - MAM Android direcionado para configuração de aplicativo gerido

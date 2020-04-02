@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324913"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551658"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Inscreva o seu dispositivo com o Portal da Empresa  
 Inscreva o seu dispositivo Android pessoal ou corporativo para obter acesso seguro a e-mails, aplicações e dados da empresa. O Portal da Empresa suporta dispositivos Android, incluindo samsung Knox, com o Android 4.4 e mais tarde.  
@@ -35,7 +35,7 @@ Inscreva o seu dispositivo Android pessoal ou corporativo para obter acesso segu
 > A Samsung Knox é um tipo de segurança que certos dispositivos da Samsung usam para proteção adicional fora do que o Android nativo fornece. Para verificar se tem um dispositivo Samsung Knox,> vá a **Definições** > **sobre o dispositivo**. Se não vir a **versão Knox** listada lá, tem um dispositivo Android nativo.
 
 ## <a name="enroll-device"></a>Dispositivo de inscrição  
-Certifique-se de [instalar a aplicação gratuita Intune Company Portal a partir do Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). 
+Certifique-se de instalar a aplicação Intune Company Portal [a partir do Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Consulte a [aplicação Install Company Portal na China continental](install-company-portal-android-china.md) para obter uma lista de lojas que oferecem a app na China continental.    
 
 Durante a inscrição, pode ser-lhe pedido que escolha uma categoria que melhor descreva como utiliza o seu dispositivo. O suporte da sua empresa utiliza a sua resposta para verificar as aplicações a que tem acesso.  
 

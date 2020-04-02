@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359369"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551438"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Adicione extensões de kernel macOS em Intune
 
@@ -68,6 +68,9 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo uti
 >
 > - [Notar a sua aplicação antes](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) da distribuição (abre o site da Apple) 
 > - [Prepare-se para alterações às extensões de kernel no macOS High Sierra](https://support.apple.com/en-us/HT208019) (abre o site da Apple)
+
+> [!NOTE]
+> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
 
 ## <a name="create-the-profile"></a>Criar o perfil
 

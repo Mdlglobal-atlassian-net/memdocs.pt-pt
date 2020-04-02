@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488056"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551679"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utilize linhas de base de segurança para configurar dispositivos Windows 10 em Intune
 
@@ -62,11 +62,20 @@ Quando cria um *perfil*de base de segurança, o perfil utiliza automaticamente a
 
 Pode optar por [alterar a versão](#change-the-baseline-version-for-a-profile) de uma linha de base que está em uso com um determinado perfil. Isto significa que quando uma nova versão sai, não é preciso criar um novo perfil de base para aproveitar. Em vez disso, quando estiver pronto, pode selecionar um perfil de base e, em seguida, usar a opção incorporada para mudar a versão por exemplo para esse perfil para um novo.
 
+## <a name="avoid-conflicts"></a>Evitar conflitos
+
+Pode utilizar uma ou mais das linhas de base disponíveis no seu ambiente Intune ao mesmo tempo. Também pode usar várias instâncias das mesmas linhas de base de segurança que têm diferentes personalizações.
+
+Quando utilizar várias linhas de base de segurança, reveja as definições em cada uma para identificar quando as suas diferentes configurações de base introduzem valores contraditórios para a mesma configuração. Uma vez que pode implementar linhas de base de segurança concebidas para diferentes intenções e implementar múltiplas instâncias da mesma linha de base que incluem configurações personalizadas, pode criar conflitos de configuração para dispositivos que devem ser investigados e resolvidos.
+
+Além disso, as linhas de base de segurança gerem frequentemente as mesmas definições que pode definir com perfis de [configuração](../configuration/device-profiles.md) do dispositivo ou outros tipos de política. Por isso, mantenha-se atento e considere as suas políticas e perfis adicionais para configurações quando procurar evitar ou resolver conflitos.
+
+Utilize as informações nos seguintes links para ajudar a identificar e resolver conflitos:
+
+- [Políticas e perfis de resolução de problemas em Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Monitorize as suas linhas de base de segurança](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Linhas de base de segurança disponíveis
-
- Pode utilizar uma ou mais das linhas de base disponíveis no seu ambiente Intune ao mesmo tempo. Também pode usar várias instâncias das mesmas linhas de base de segurança que têm diferentes personalizações.
-
-Quando utilizar várias linhas de base de segurança, reveja as definições em cada uma para identificar quando diferentes linhas de base introduzem valores contraditórios para a mesma configuração. Uma vez que pode implementar linhas de base de segurança concebidas para diferentes intenções e implementar múltiplas instâncias da mesma linha de base que incluem configurações personalizadas, pode criar conflitos de configuração [para dispositivos que devem ser investigados e resolvidos](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Também esteja atento aos perfis de configuração do [seu dispositivo,](../configuration/device-profiles.md)que podem configurar muitas das mesmas definições que as linhas de base de segurança.
 
 As seguintes instâncias de base de segurança estão disponíveis para utilização com o Intune. Utilize os links para visualizar as definições para a instância mais recente de cada linha de base.
 

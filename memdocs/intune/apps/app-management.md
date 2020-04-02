@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358717"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536853"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>O que é a gestão de aplicações do Microsoft Intune?
 
@@ -51,7 +51,7 @@ A MAM do Intune suporta dois tipos de configurações:
 
 O Intune oferece várias funcionalidades para o ajudar a obter as aplicações de que precisa, nos dispositivos nos quais quer executá-las. A seguinte tabela mostra um resumo das funcionalidades de gestão de aplicações.
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Wnodows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Adicionar e atribuir aplicações a dispositivos e utilizadores | Sim | Sim | Sim | Sim | Sim |
 | Atribuir aplicações a dispositivos não inscritos no Intune | Sim | Sim | Não | Não | Não |
@@ -119,6 +119,8 @@ Os seguintes itens dentro da consola fornecem funcionalidaderelacionada com a ap
 - **Fichas Apple VPP**: Aplicar e ver as suas licenças iOS/iPadOS Volume Purchase Program (VPP). Para mais informações, consulte [aplicações adquiridas em volume iOS/iPadOS.](vpp-apps-ios.md)
 - **Gerido Google Play**: Managed Google Play é a loja de aplicações da Google e única fonte de aplicações para Android Enterprise. Para mais informações, consulte [adicionar aplicações do Google Play geridas para dispositivos Android Enterprise com Intune](apps-add-android-for-work.md).
 - **Personalização**: Personalize o Portal da Empresa para lhe dar a marca da sua empresa. Para mais informações, consulte a [configuração do Portal da Empresa.](company-portal-app.md)
+
+Para mais informações sobre apps, consulte [Adicionar aplicações ao Microsoft Intune](../apps/apps-add.md).
 
 ## <a name="next-steps"></a>Próximos passos
 

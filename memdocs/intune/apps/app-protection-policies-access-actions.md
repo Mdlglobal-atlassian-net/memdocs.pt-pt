@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323793"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551340"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Limpe seletivamente os dados utilizando ações de lançamento condicional da política de proteção de aplicações em Intune
 
@@ -59,7 +59,7 @@ Para iOS/iPadOS, poderá configurar as ações para as seguintes definições ut
 - Modelos de dispositivos
 - Max permitiu o nível de ameaça do dispositivo
 
-Para utilizar a definição **do modelo do Dispositivo,** insera uma lista separada do modelo iOS/iPadOS. Estes valores não são sensíveis aos casos. Além de intune Reporting para a entrada 'Dispositivo modelo(s)', pode encontrar um identificador de modelo iOS/iPadOS sob a coluna Tipo dispositivo na [documentação de suporte do HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) ou neste [repositório GitHub de 3ª parte.](https://gist.github.com/adamawolf/3048717)<br>
+Para utilizar a definição **do modelo do Dispositivo,** insera uma lista separada do modelo iOS/iPadOS. Estes valores não são sensíveis aos casos. Além de intune Reporting para a entrada 'Modelo(s) do dispositivo, pode encontrar um identificador de modelo iOS/iPadOS neste [repositório GitHub 3.ª parte](https://gist.github.com/adamawolf/3048717).<br>
 Entrada de exemplo: *iPhone5,2;iPhone5,3*
 
 Nos dispositivos dos utilizadores finais, o cliente do Intune toma medidas com base numa única correspondência de cadeias do modelo de dispositivo especificadas no Intune para as Políticas de Proteção de Aplicações. A correspondência depende inteiramente do que é comunicado pelo dispositivo. Recomendamos-lhe (ao administrador de TI) que se certifique de que o comportamento previsto está a ocorrer ao testar esta definição com base numa variedade de fabricantes e modelos de dispositivos e direcionado para um pequeno grupo de utilizadores. O valor predefinido é **Não configurado**.<br>
