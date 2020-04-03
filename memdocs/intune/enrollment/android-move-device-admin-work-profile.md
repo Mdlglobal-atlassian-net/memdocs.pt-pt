@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327279"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624921"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Mover dispositivos Android de administrador de dispositivo para gestão de perfis de trabalho
 
@@ -65,15 +65,15 @@ Quando os utilizadores virem que estão fora de conformidade por esta razão, po
 
 
     No e-mail, pode incluir o URL abaixo nas suas mensagens para os utilizadores. O URL lançará o Portal da Empresa Android para a página de definições do **dispositivo Update.** Esta página começa o seu fluxo para passar para a gestão de perfis de trabalho.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx. ](https://portal.manage.microsoft.com/UpdateSettings.aspx)
-    - Para o governo dos EUA, pode utilizar este link: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - Para o governo dos EUA, pode utilizar este link: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Claro que pode utilizar hipertexto simesmo para os links na sua comunicação com os utilizadores. No entanto, não utilize os encurtadores de URL porque as ligações podem não funcionar se alteradas dessa forma.
     > - Se o Portal da Empresa Android estiver aberto e em segundo plano, quando um utilizador toca no link, pode ir para a última página que tinha aberto.
     > - Os utilizadores devem tocar no link num dispositivo Android. Se, em vez disso, o colarem num navegador, não lançará o Portal da Empresa Android. 
 
-    Escolha **Seguinte**.
+    Selecione **Next**.
 
 7. Na página de **tags Scope,** selecione quaisquer etiquetas de âmbito que pretenda incluir.
 8. Na página **de Atribuiçãos,** atribua a política a um grupo que tenha dispositivos matriculados com gestão de administrador de dispositivos > **Next**.

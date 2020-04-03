@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407902"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620543"
 ---
 # <a name="intune-app-installation-error-reference"></a>Referência de erro de instalação de aplicações intonizada
 
@@ -59,6 +59,7 @@ As seguintes mensagens de erro e descrições fornecem detalhes sobre erros de i
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Erro do Agente Apple MDM: O comando de instalação da aplicação falhou sem nenhuma razão de erro especificada. Instalação de aplicativos de retry. | O Agente MDM da Apple comunicou que o comando da instalação falhou. |
 | 0x87D1313C | -2016333508 | A ligação de rede do cliente foi perdida ou interrompida. As tentativas posteriores deverão ter êxito num melhor ambiente de rede. | A ligação de rede foi perdida durante o envio do URL do serviço de transferência atualizado para o dispositivo. Mais concretamente, não foi possível encontrar um servidor com o nome de anfitrião especificado. |
+| 0x87D1313D | -2016333507 | Não conseguiu recuperar a licença para a aplicação com iTunes Store ID | Sincronizar o token VPP associado e, em seguida, sincronizar o dispositivo com Intune. Se o problema persistir, remova a atribuição do grupo e redesigne a aplicação VPP como licenciada em dispositivos. Se o problema continuar a persistir, revogue a licença de aplicação do dispositivo navegando para **Apps** > **iOS** > *selecionar aplicações VPP* > licenças de **Aplicação** > *dispositivo selecionado*. Em seguida, revogar a licença e tentar reatribuir a app ao grupo de utilizadores ou grupo de dispositivos. Se o problema persistir, revogue todas as licenças VPP para o dispositivo, indo para **dispositivos** > **dispositivo** > *dispositivo selecionado* > **Visão Geral** > **Revogar licenças,** em seguida, retire o dispositivo e reinscreva-se na Intune.
 | 0x87D11388 | -2016341112 | O dispositivo iOS/iPadOS está atualmente ocupado.  | O dispositivo iOS/iPadOS estava ocupado, o que resultou num erro. O dispositivo estava bloqueado. O utilizador precisa de desbloquear o dispositivo para instalar a aplicação. |
 | 0x87D13B64 | -2016330908 | A instalação da aplicação falhou.  | Ocorreu uma falha ao instalar a aplicação. São necessários registos de consolas iOS/iPadOS para resolver este erro. |
 | 0x87D13B66 | -2016330906 | A aplicação é gerida, mas expirou ou foi removida pelo utilizador.  | Ou o utilizador desinstalou explicitamente a aplicação, ou a aplicação expirou, mas não descarregou, ou a deteção da aplicação não corresponde à resposta do dispositivo.   Além disso, este erro pode ocorrer com base num bug de plataforma iOS/iPadOS 9.2.2. |

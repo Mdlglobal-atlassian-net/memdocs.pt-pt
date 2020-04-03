@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407777"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620620"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Autónomo - Gestão de aplicações Win32
 
@@ -33,7 +33,7 @@ ms.locfileid: "80407777"
 > Esta capacidade de gestão de aplicações suporta a arquitetura do sistema operativo de 32 bits e 64 bits para aplicações Windows.
 
 > [!IMPORTANT]
-> Ao implementar aplicações Win32, considere utilizar a [Intune Management Extension](../apps/intune-management-extension.md) exclusivamente, especialmente quando tiver um instalador de aplicações Win32 multi-ficheiros. Se misturar a instalação de aplicações Win32 e aplicações de linha de negócio durante a inscrição no AutoPilot, a instalação da aplicação poderá falhar.  
+> Ao implementar aplicações Win32, considere utilizar exclusivamente a [abordagem de Extensão de Gestão Intune,](../apps/intune-management-extension.md) especialmente quando tiver um instalador de aplicações Win32 multi-ficheiros. Se misturar a instalação de aplicações Win32 e aplicações de linha de negócio durante a inscrição no AutoPilot, a instalação da aplicação poderá falhar. A extensão de gestão Intune é instalada automaticamente quando um script PowerShell ou uma aplicação Win32 são atribuídos ao utilizador ou dispositivo.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

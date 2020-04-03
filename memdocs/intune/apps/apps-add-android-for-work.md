@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325018"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624894"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -224,6 +224,8 @@ Quando necessário, pode eliminar as aplicações do Managed Google Play do Micr
 
 > [!NOTE]
 > Se uma aplicação não for aprovada ou eliminada da loja gerida do Google Play, esta não será removida da lista de aplicações do cliente Intune. Isto permite-lhe ainda direcionar uma política de desinstalação para os utilizadores mesmo que a aplicação não esteja aprovada.
+> 
+> Para desativar a inscrição e gestão do Android Enterprise, consulte [Disconnect your Android Enterprise account .](../enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account)
 
 ## <a name="android-enterprise-system-apps"></a>Aplicações do sistema Android Enterprise
 
