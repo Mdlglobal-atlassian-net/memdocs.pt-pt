@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323199"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696452"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurar políticas de acesso condicional baseadas em aplicativos com intune
 
@@ -32,7 +32,7 @@ Configurar políticas de acesso condicional baseadas em aplicativos para apps qu
 Antes de poder utilizar as políticas de Acesso Condicional baseadas em aplicações, é necessário que as políticas de [proteção de aplicações Intune](../apps/app-protection-policies.md) se apliquem às suas apps.
 
 > [!IMPORTANT]
-> Este artigo percorre os passos para adicionar uma política de Acesso Condicional baseada em aplicativos. Pode utilizar os mesmos passos quando adicionar aplicações, como o SharePoint Online, Microsoft Teams e Microsoft Exchange Online a partir da lista de aplicações aprovadas.
+> Este artigo percorre os passos para adicionar uma simples política de acesso condicional baseada em aplicações. Pode utilizar os mesmos passos para outras aplicações em nuvem. Para mais informações, consulte a [implementação](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) do Plano de Acesso Condicional
 
 ## <a name="create-app-based-conditional-access-policies"></a>Criar políticas de acesso condicional baseadas em aplicativos
 
@@ -48,7 +48,7 @@ Antes de poder criar políticas de Acesso Condicional a partir do centro de admi
 
 3. Introduza uma política **Nome**, e, em seguida, em *Atribuições,* selecione **Utilizadores e grupos**. Utilize as opções Incluir ou Excluir para adicionar os grupos à política e selecione **Concluído**.
 
-4. Selecione **aplicações ou ações cloud**, e escolha quais aplicações proteger. Por exemplo, escolha **Selecionar aplicações** e selecione **Office 365 SharePoint Online** e **Office 365 Exchange Online**.
+4. Selecione **aplicações ou ações cloud**, e escolha quais aplicações proteger. Por exemplo, escolha **as aplicações Select**, e selecione **Office 365 (pré-visualização)** .
 
    Selecione **Concluído** para guardar as alterações.
 
@@ -56,7 +56,7 @@ Antes de poder criar políticas de Acesso Condicional a partir do centro de admi
 
    Selecione **Concluído** para guardar as alterações.
 
-6. Sob *os controlos de Acesso,* selecione **Grant** para aplicar acesso condicional com base na conformidade do dispositivo. Por exemplo, selecione **Conceder acesso** > **Pedir que o dispositivo seja marcado como conforme**.
+6. Sob *os controlos de Acesso,* selecione **Grant** para aplicar acesso condicional com base na conformidade do dispositivo. Por exemplo, selecione **Grant access** > **Exigir aplicação de cliente aprovada** e exigir política de **proteção de aplicações (pré-visualização)** e, em seguida, selecione **Exigir um dos controlos selecionados**
 
    Escolha **Selecionar** para guardar as alterações.
 

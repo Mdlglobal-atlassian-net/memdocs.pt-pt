@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327244"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696561"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurar a inscrição de dispositivos iOS/iPadOS com o Apple School Manager
 
@@ -38,7 +38,6 @@ Não pode utilizar a inscrição do Apple School Manager com o [Programa de Regi
 **Pré-requisitos**
 - [Certificado Push de Gestão de Dispositivos Móveis (MDM) da Apple](apple-mdm-push-certificate-get.md)
 - [Autoridade MDM](../fundamentals/mdm-authority-set.md)
-- [Certificado Push de MDM da Apple](apple-mdm-push-certificate-get.md)
 - Se estiver a utilizar o Sistema de Ficheiros Distribuído do Azure, a afinidade de utilizador precisa de um [Nome de utilizador/Ponto final misto WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Saiba mais](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Dispositivos comprados a partir do programa [Apple School Manager](http://school.apple.com)
 
@@ -120,7 +119,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
 
 8. Pode permitir que múltiplos utilizadores iniciem sessão nos iPads inscritos com um ID Apple gerido. Para tal, escolha **Sim** sob **iPad partilhado** (esta opção requer **Inscrição sem Afinidade** do Utilizador e modo **supervisionado** definido para **Sim**.) Os IDs geridos da Apple são criados no portal Apple School Manager. Saiba mais sobre [iPad partilhado](../fundamentals/education-settings-configure-ios-shared.md) e [requisitos dos iPad partilhados da Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-9. Escolha se quer que os dispositivos com este perfil consigam **Sincronizar com computadores**. Se escolher **Permitir o Apple Configurator por certificado**, terá de escolher um certificado em **Certificados do Apple Configurator**.
+9. Escolha se quer que os dispositivos com este perfil consigam **Sincronizar com computadores**. **Negar todos os** meios significa que todos os dispositivos que usam este perfil não serão capazes de sincronizar com quaisquer dados em qualquer computador. Se escolher **Permitir o Apple Configurator por certificado**, terá de escolher um certificado em **Certificados do Apple Configurator**.
 
 10. Se tiver escolhido **Permitir o Apple Configurator por certificado** no passo anterior, escolha um Certificado do Apple Configurator a importar.
 

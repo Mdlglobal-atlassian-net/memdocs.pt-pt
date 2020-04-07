@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256458"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696532"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscreva dispositivos iOS/iPadOS em Intune
 
@@ -37,7 +37,7 @@ Antes de poder ativar os dispositivos iOS/iPadOS, complete os seguintes passos:
 
 - [Certifique-se de que o seu dispositivo é elegível para a inscrição do dispositivo Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Configurar o Intune](../fundamentals/setup-steps.md) – estes passos irão configurar a sua infraestrutura do Intune. Em particular, a inscrição de dispositivos requer que [defina a autoridade de MDM](../fundamentals/mdm-authority-set.md).
-- [Obtenha um certificado Apple MDM Push](apple-mdm-push-certificate-get.md) - a Apple necessita de um certificado para permitir a gestão de dispositivos iOiOS/iPadOS e macOS.
+- [Obtenha um certificado Apple MDM Push](apple-mdm-push-certificate-get.md) - a Apple necessita de um certificado para permitir a gestão de dispositivos iOS/iPadOS e macOS.
 
 ## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>Dispositivos iOS/iPadOS e iPadOS (BYOD)
 

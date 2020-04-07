@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083543"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696482"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Quadro de proteção de dados utilizando políticas de proteção de aplicações 
 
@@ -37,7 +37,7 @@ O quadro de configuração de proteção de dados da APP é organizado em três 
 
 - Proteção de dados melhorada pela empresa nível 2 – a Microsoft recomenda esta configuração para dispositivos onde os utilizadores acedem a informações confidenciais ou confidenciais. Esta configuração é aplicável à maioria dos utilizadores móveis que acedem a dados do trabalho ou da escola. Alguns dos controlos podem ter impacto na experiência do utilizador.
 
-- Nivete de alta proteção de dados da empresa de nível 3 – a Microsoft recomenda esta configuração para dispositivos geridos por uma organização com uma equipa de segurança maior ou mais sofisticada, ou para utilizadores ou grupos específicos que estão em risco único (como um exemplo, uma organização identificaram os utilizadores que lidam com dados cujo roubo teria impacto direto e grave no seu preço de stock). Uma organização suscetível de ser alvo de adversários bem financiados e sofisticados deve aspirar a esta configuração.
+- Proteção de dados de nível 3 empresa elevada – A Microsoft recomenda esta configuração para dispositivos geridos por uma organização com uma equipa de segurança maior ou mais sofisticada, ou para utilizadores ou grupos específicos que estão em risco único (como exemplo, uma organização identificou utilizadores que lidam com dados cujo roubo teria impacto direto e grave no seu preço de stock). Uma organização suscetível de ser alvo de adversários bem financiados e sofisticados deve aspirar a esta configuração.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Metodologia de implementação do quadro de proteção de dados da APP
 
@@ -62,6 +62,9 @@ As definições individuais de APP para cada aplicação podem ser validadas em 
 As seguintes definições de Política de Proteção de Aplicações devem ser ativadas para as aplicações aplicáveis e atribuídas a todos os utilizadores móveis. Para obter mais informações sobre cada definição de política, consulte as definições de políticas de proteção de [aplicações iOS](app-protection-policy-settings-ios.md) e as definições de políticas de proteção de [aplicações Android](app-protection-policy-settings-android.md).
 
 A Microsoft recomenda rever e categorizar cenários de utilização e, em seguida, configurar os utilizadores usando a orientação prescritiva para esse nível. Como em qualquer quadro, as configurações dentro de um nível correspondente podem ter de ser ajustadas com base nas necessidades da organização, uma vez que a proteção de dados deve avaliar o ambiente de ameaça, o apetite de risco e o impacto na usabilidade.  
+
+### <a name="conditional-access-policies"></a>Políticas de Acesso Condicional
+Para garantir que apenas as aplicações que suportam as Polícias de Proteção de Aplicações acedem a dados de trabalho ou de contas escolares, são necessárias políticas de Acesso Condicional do Diretório Ativo do Azure. Ver **Cenário 1: As aplicações do Office 365 requerem aplicações aprovadas com políticas de proteção de aplicações** em [requires políticas de proteção de aplicações para acesso](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) a aplicações na nuvem com Acesso Condicional para medidas para implementar as políticas específicas.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Apps a incluir nas Políticas de Proteção de Aplicações  
 

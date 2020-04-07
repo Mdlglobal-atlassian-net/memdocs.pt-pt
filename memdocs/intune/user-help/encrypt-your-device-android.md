@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328309"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696267"
 ---
 # <a name="encrypting-your-android-device"></a>Encriptar o seu dispositivo Android
 
-A encriptação do dispositivo protege os seus ficheiros e pastas do acesso não autorizado se o seu dispositivo for perdido ou roubado. Depois de ligar a encriptação do dispositivo, apenas indivíduos com a senha ou pin o correto poderão iniciar sessão no seu dispositivo. 
+A encriptação do dispositivo protege os seus ficheiros e pastas do acesso não autorizado se o seu dispositivo for perdido ou roubado. Torna os dados do seu dispositivo inacessíveis e ilegíveis a pessoas sem senha. 
 
-Antes de poder aceder aos recursos escolares ou de trabalho, a sua organização poderá exigir que criptografe o seu dispositivo Android. Alguns dispositivos Android mais recentes são encriptados por padrão, fora da caixa.  
+Antes de poder aceder aos recursos escolares ou de trabalho, a sua organização pode exigir que:
 
-## <a name="turn-on-encryption"></a>Ativar encriptação
-
-Se o Portal da Empresa ou a aplicação Microsoft Intune lhe pedirem para encriptar o seu dispositivo, complete os seguintes passos. 
+* [Encriptar o dispositivo](#encrypt-device)
+* [Ativar arranque seguro](#enable-secure-startup)
+* [Definir código de acesso inicial, PIN ou outro método de autenticação](#set-startup-passcode)  
 
 > [!Note]
-> Certos dispositivos Android da Huawei, Vivo e OPPO não podem ser encriptados. Saiba mais [aqui](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Certos dispositivos Android da Huawei, Vivo e OPPO não podem ser encriptados. Para mais informações, consulte [o Dispositivo encriptado, mas a aplicação diz o contrário.](your-device-appears-encrypted-but-cp-says-otherwise-android.md)  
 
-1. Detete uma fechadura de ecrã do dispositivo.  
-    a. Vá para **definições** > **bloquear o ecrã e > o** tipo de bloqueio do **ecrã** .  
-    b. Selecione **PIN,** **Password,** ou **Pattern**.  
-    c. Siga as instruções no ecrã para configurar o bloqueio do ecrã.  
+## <a name="encrypt-device"></a>Encriptar dispositivo
 
-2. Volte para **o ecrã e segurança lock** e selecione Secure **startup**.
-3. Escolha **Exigir PIN quando o dispositivo ligar** > **OK**.
-4. Introduza o seu PIN para confirmar e encriptar o seu dispositivo.
-5. Abra o Portal da Empresa ou a aplicação Microsoft Intune.
+Siga estes passos para encriptar o seu dispositivo. O seu dispositivo pode reiniciar várias vezes. 
+
+O nome e a localização da opção de encriptação variarão consoante o fabricante do seu dispositivo e a versão Android. 
+
+1. Abra a aplicação **Definições.**
+2. Digite **a segurança** ou **criptografe** na barra de pesquisa da aplicação para encontrar configurações relacionadas.
+3. Toque na opção de encriptar o seu dispositivo. Siga as instruções no ecrã.  
+4. Quando solicitado, detete uma palavra-passe de ecrã de bloqueio, PIN ou outro método de autenticação (se permitido pela sua organização). 
+5. Para voltar a verificar as definições, abra o Portal da Empresa ou a aplicação Microsoft Intune.
+    * Utilizadores do Portal da Empresa: Selecione o seu dispositivo e toque em **verificar as definições do dispositivo**. 
+    * Utilizadores do Microsoft Intune: Terá de esperar até que a página atualização, mas quando isso acontecer, o seu estado de encriptação deve mudar para o seu conforme. 
+
+## <a name="enable-secure-startup"></a>Ativar arranque seguro
+
+A sua organização pode exigir que você ative uma startup segura como parte da sua política de encriptação. Esta funcionalidade protege ainda mais o seu dispositivo, exigindo que seja introduzido uma palavra-passe ou PIN antes de o telefone arrancar. Muitos têm opções adicionais de autenticação, mas variarão dependendo do que a sua organização permite. 
+
+O nome e a localização da opção de arranque segura variarão consoante o fabricante do seu dispositivo e a versão Android. Em alguns dispositivos, esta definição pode ser chamada de **proteção forte**. 
+
+1. Abra a aplicação **Definições.**
+2. Digite **startup segura** na barra de pesquisa da aplicação.
+3. Toque **em secure arranque** > **Requerer PIN quando o dispositivo ligar**.
+4. Quando solicitado, introduza o PIN do seu dispositivo.   
+5. Para voltar a verificar as definições, abra o Portal da Empresa ou a aplicação Microsoft Intune.
     * Utilizadores do Portal da Empresa: Selecione o seu dispositivo e toque em **verificar as definições do dispositivo**. 
     * Utilizadores do Microsoft Intune: Terá de esperar até que a página atualização, mas quando isso acontecer, o seu estado de encriptação deve mudar para o seu conforme.  
 
-Os dispositivos que executam o Android 4.4 e anteriormente podem não ter a opção de **arranque Secure.** Nesse caso, preencha os seguintes passos para encriptar o seu dispositivo.
 
-1. Vá para **definições** > dispositivo de **encriptação**de > de **segurança** . As etiquetas no ecrã variam entre dispositivos Android. Se não vir a opção **Encrypt Device,** faça o check-in:
-    * **Encriptação** de armazenamento de armazenamento > **armazenamento**
-    * **Armazenamento** > **bloqueio e > de segurança** **Outras definições de segurança** 
+## <a name="set-startup-passcode"></a>Definir código de acesso de arranque   
+Quando [encriptar o seu dispositivo](#encrypt-device) e ativar o [arranque seguro,](#enable-secure-startup)será solicitado a definir o seu dispositivo PIN, palavra-passe ou outro método de autenticação (se permitido pela sua organização). Não são necessários mais passos. 
 
-2. Siga as instruções no ecrã. Durante a encriptação, o seu dispositivo pode reiniciar várias vezes.
-3. Abra o Portal da Empresa ou a aplicação Microsoft Intune.
-    * Utilizadores do Portal da Empresa: Selecione o seu dispositivo e toque em **verificar as definições do dispositivo**.  
-    * Utilizadores do Microsoft Intune: Terá de esperar até que a página atualização, mas quando isso acontecer, o seu estado de encriptação deve mudar para o seu conforme.
+Para escolher ou alterar o tipo de ecrã de bloqueio:
 
-## <a name="troubleshoot"></a>Resolver Problemas  
-**Problema**: Já criptografou o seu dispositivo e
+1. Abra a aplicação **Definições.**
+2. Digite **o bloqueio** do ecrã na barra de pesquisa da aplicação.
+3. Toque no tipo de bloqueio do ecrã de **toque**.
+4. Toque no tipo de bloqueio do ecrã que pretende utilizar e siga as instruções no ecrã para confirmar.  
 
-- O botão de encriptação está desativado.
-- Vê uma mensagem a indicar que ainda tem de encriptar.
-- Obtém erros ao tentar utilizar o Portal da Empresa ou a aplicação Microsoft Intune.
+## <a name="troubleshoot"></a>Resolver Problemas    
+**Problema**: O botão de encriptação está desativado.   
 
-**Coisas a experimentar**
+**Coisa a tentar:** 
+* Certifique-se de que o seu dispositivo está completamente carregado e ligado. A encriptação pode demorar um pouco e requer uma bateria completa.   
 
-- Certifique-se de que o seu dispositivo está carregado e ligado.  
-- Confirme se definiu uma palavra-passe ou um PIN no dispositivo.  
+**Problema**: Vê uma mensagem a dizer que ainda precisa de encriptar o seu dispositivo.  
+
+**Coisas a experimentar**:
+   *  [Coloque um ecrã de bloqueio](#set-startup-passcode) no seu dispositivo. 
+   * [Ativar arranque seguro](#enable-secure-startup).
 
 Ainda precisa de ajuda? Contacte o suporte da empresa (verifique as informações de contacto no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)) ou escreva para a <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">equipa Android da Microsoft</a>.  

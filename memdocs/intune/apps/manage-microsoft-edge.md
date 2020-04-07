@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407711"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696547"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gerir o acesso à web utilizando o Microsoft Edge com o Microsoft Intune
 
@@ -367,14 +367,14 @@ Se a sua organização operar numa indústria altamente regulada ou utilizar uma
 
 |    Chave    |    Valor    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** desativa a navegação inprivate.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** desativa a navegação inprivate.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Restringir o uso do Microsoft Edge apenas para contas permitidas
 
 Além de bloquear a navegação inPrivate e MSA, só pode permitir a utilização do Microsoft Edge quando o utilizador estiver a iniciar sessão com a sua conta AAD. Esta funcionalidade só está disponível para utilizadores inscritos no MDM. Pode saber mais sobre configurar esta configuração aqui:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` podem ser usados para desativar várias funcionalidades simultaneamente. Por exemplo, para desativar tanto o InPrivate como a password, utilize `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` podem ser usados para desativar várias funcionalidades simultaneamente. Por exemplo, para desativar tanto o InPrivate como a password, utilize `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Configure microsoft Edge como uma aplicação de quiosque em dispositivos Android
 

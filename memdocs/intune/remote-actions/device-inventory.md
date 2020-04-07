@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322508"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696293"
 ---
 # <a name="see-device-details-in-intune"></a>Consultar os detalhes do dispositivo no Intune
 
@@ -41,20 +41,26 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
       - [Eliminação](devices-wipe.md#wipe)
       - [Eliminar](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Bloqueio remoto](device-remote-lock.md)
-      - [Sincronia](device-sync.md)
+      - [Sincronização](device-sync.md)
       - [Repor código de acesso](device-passcode-reset.md)
       - [Reiniciar](device-restart.md) (apenas no Windows)
       - [Começar do Zero](device-fresh-start.md) (apenas no Windows)
       - [Reset do piloto automático](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (apenas para o Windows)
       - [Sondagem rápida](../configuration/device-restrictions-windows-10.md) (apenas windows 10)
       - [Digitalização completa](../configuration/device-restrictions-windows-10.md) (apenas windows 10)
-       - [Rename device (Mudar o nome de dispositivos)](device-rename.md)
-      - Iniciar uma sessão de assistência remota
+      - Atualizar a inteligência de segurança do Windows Defender
+      - [Rotação da chave BitLocker](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Mudar o nome de dispositivos](device-rename.md)
+      - [Nova Sessão de Assistência Remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Utilize as **Propriedades** para atribuir uma [categoria de dispositivo que tenha criado](../enrollment/device-group-mapping.md) e alterar a propriedade do dispositivo para um dispositivo pessoal ou um dispositivo da empresa.
    - **O hardware** inclui muitos detalhes sobre o dispositivo, como o ID do dispositivo, sistema operativo e versão, espaço de armazenamento e mais detalhes.
    - **Aplicações detetadas**: apresenta uma lista de todas as aplicações que o Intune encontrou instaladas no dispositivo e das versões das aplicações. Para mais informações, consulte [intune aplicações descobertas.](../apps/app-discovered-apps.md)
    - **Conformidade do dispositivo**: apresenta uma lista de todas as políticas de conformidade atribuídas e indica se o dispositivo está ou não em conformidade.
    - **Configuração do dispositivo**: mostra todas as políticas de configuração de dispositivos atribuídas ao dispositivo e indica se a política foi concluída com êxito ou falhou.
+   - **Configuração de aplicativos** 
+   - **Configuração de segurança de ponto final**
+   - **As chaves de recuperação** mostram as chaves BitLocker disponíveis encontradas para o dispositivo
+   - **As aplicações geridas** listam todas as aplicações geridas que intune configuraram e implementaram para o dispositivo. 
 
 ## <a name="hardware-device-details"></a>Detalhes de dispositivos de hardware
 Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes podem ser recolhidos

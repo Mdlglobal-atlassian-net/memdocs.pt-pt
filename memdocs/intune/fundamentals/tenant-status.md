@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330497"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696458"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Utilize a página Intune Tenant Status
 A página Microsoft Intune Tenant Status é um hub centralizado onde pode ver detalhes atuais e importantes sobre o seu inquilino. Os detalhes incluem disponibilidade e utilização da licença, estado do conector e comunicações importantes sobre o serviço Intune.  
 
-Para ver o painel de instrumentos, inscreva-se em [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e, em seguida, selecione **O Estatuto**do Inquilino .  *O Estatuto do Inquilino* aparece sob **ajuda e apoio.**  
+Para ver o dashboard, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para a **administração do Inquilino**, e, em seguida, selecione O Estatuto do **Inquilino**.
 
 A página é dividida em três separadores:
 
