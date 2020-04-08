@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327142"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808133"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscrever dispositivos no Intune ao utilizar uma conta de Gestor de inscrição de dispositivos
 
@@ -42,7 +42,7 @@ As contas de utilizador DEM e os dispositivos que estão inscritos com uma conta
 - Dispositivos estão bloqueados para o acesso condicional com a exceção do Windows 10 versão 1803 +
 - Todos os dispositivos matriculados nas contas DEM têm de ser devidamente licenciados para serem geridos pela Intune. A licença pode ser uma licença de utilizador Intune ou uma licença de dispositivo Intune.
 - Se estiver [a inscrever dispositivos](android-work-profile-enroll.md) de perfil de trabalho Android Enterprise utilizando uma conta DEM, existe um limite de 10 dispositivos que podem ser matriculados por conta.
-
+- [A inscrição de dispositivos geridos pela Android Enterprise com](android-fully-managed-enroll.md) contas DEM não é suportada.
 
 ## <a name="add-a-device-enrollment-manager"></a>Adicionar um gestor de inscrição de dispositivos
 

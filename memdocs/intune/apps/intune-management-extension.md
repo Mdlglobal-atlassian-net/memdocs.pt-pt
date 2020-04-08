@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cb71634194cee7b542ebe3c661c5a62d3d80ead
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620588"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808103"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utilize scripts PowerShell em dispositivos Windows 10 em Intune
 
@@ -124,7 +124,34 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 
 - Os utilizadores finais não são obrigados a iniciar sessão no dispositivo para executar scripts PowerShell.
 
-- A extensão de gestão Intune verifica o cliente com Intune uma vez a cada hora e após cada reboot para quaisquer novos scripts ou alterações. Depois de atribuir a política aos grupos do Azure AD, o script do PowerShell será executado e os resultados de execução serão comunicados. Uma vez que o script executa, não executa novamente a menos que haja uma mudança no script ou na política.
+- O agente de extensão de gestão Intune verifica com Intune uma vez a cada hora e após cada reboot para quaisquer novos scripts ou alterações. Depois de atribuir a política aos grupos do Azure AD, o script do PowerShell será executado e os resultados de execução serão comunicados. Uma vez que o script executa, não executa novamente a menos que haja uma mudança no script ou na política. Se o script falhar, o agente de extensão de gestão Intune tentará voltar a tentar o guião três vezes para os próximos 3 check-ins consecutivos de agente de extensão de gestão Intune.
+
+### <a name="failure-to-run-script-example"></a>Falha no exemplo do script
+8 DA MANHÃ
+  -  Fazer Check-in
+  -  Executar script **ConfigScript01**
+  -  Script falha
+
+9H
+  -  Fazer Check-in
+  -  Executar script **ConfigScript01**
+  -  O script falha (contagem de retry = 1)
+
+10 DA MANHÃ
+  -  Fazer Check-in
+  -  Executar script **ConfigScript01**
+  -  O script falha (contagem de retry = 2)
+  
+11 H
+  -  Fazer Check-in
+  -  Executar script **ConfigScript01**
+  -  O script falha (contagem de retry = 3)
+
+12:00
+  -  Fazer Check-in
+  - Não são feitas tentativas adicionais para executar o script **ConfigScript01.**
+  - Para a frente, se não forem feitas alterações adicionais no script, não serão feitas tentativas adicionais para executar o script.
+
 
 ## <a name="monitor-run-status"></a>Monitorizar o estado da execução
 

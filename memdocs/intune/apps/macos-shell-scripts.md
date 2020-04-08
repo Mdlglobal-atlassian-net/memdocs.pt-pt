@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401772"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808051"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Utilize scripts de concha em dispositivos macOS em Intune (Pré-visualização pública)
 
@@ -55,6 +55,9 @@ Certifique-se de que os seguintes pré-requisitos são cumpridos ao compor scrip
 4. Nas **definições do Script,** introduza as seguintes propriedades e selecione **Seguinte:**
    - **Upload script**: Navegue para o script da concha. O ficheiro do guião deve ter menos de 200 KB de tamanho.
    - **Executar o script como utilizador inscrito**: Selecione **Sim** para executar o script com as credenciais do utilizador no dispositivo. Escolha **Não** (predefinido) para executar o script como utilizador de raiz. 
+   - **Ocultar notificações de script em dispositivos:** Por padrão, as notificações do script são mostradas para cada script que é executado. Os utilizadores finais vêem que um *TI está a configurar a notificação* do seu computador a partir de Intune em dispositivos macOS.
+   - **Frequência do script:** Selecione quantas vezes o script deve ser executado. Escolha **Não configurado** (predefinido) para executar um script apenas uma vez.
+   - **Número máximo de vezes para voltar a tentar se o guião falhar:** Selecione quantas vezes o script deve ser executado se devolver um código de saída não zero (zero significando sucesso). Escolha **Não configurado** (predefinido) para não voltar a tentar quando um script falha.
 5. Nas **tags de Âmbito,** adicione opcionalmente etiquetas de âmbito para o script e selecione **Next**. Pode utilizar etiquetas de mira para determinar quem pode ver scripts em Intune. Para mais detalhes sobre etiquetas de âmbito, consulte [Use o controlo de acesso baseado em funções e as etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 6. Selecione **Atribuições** > **Selecione grupos para incluir**. É apresentada uma lista existente de grupos da AD Azure. Selecione um ou mais grupos de dispositivos que incluam os utilizadores cujos dispositivos macOS devem receber o script. Clique em **Selecionar**. Os grupos que escolher estão na lista e receberão a sua política de script.
    > [!NOTE]
@@ -103,9 +106,17 @@ A sua função de insintonização atribuída requer permissões de **configura�
  - O agente autentica silenciosamente os serviços Intune antes de fazer o check-in para receber scripts de concha atribuídos para o dispositivo macOS.
  - O agente recebe scripts de concha atribuídos e executa os scripts com base no horário configurado, tentativas de retry, definições de notificação e outras definições definidas pelo administrador.
  - O agente verifica scripts novos ou atualizados com serviços Intune geralmente a cada 8 horas. Este processo de check-in é independente do check-in do MDM. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Como posso iniciar o check-in de um agente de um Mac?
+Num Mac gerido que tenha o agente instalado, **terminal**aberto, execute o comando `sudo killall IntuneMdmAgent` para pôr termo ao processo `IntuneMdmAgent`. O processo `IntuneMdmAgent` recomeçará imediatamente, o que iniciará um check-in com intune.
 
- >[!NOTE]
- > A ação **de configurações** de verificação no Portal da Empresa apenas obriga a um check-in de MDM. Não há ação manual para o check-in do agente.
+Em alternativa, pode fazer o seguinte:
+1. Monitor de **atividade** aberta > **Ver** > *selecionar todos os **processos**.* 
+2. Procurar processos chamados `IntuneMdmAgent`. 
+3. Desista do processo que corre para o utilizador **de raiz.** 
+
+> [!NOTE]
+> A ação **de definições de Check** no Portal da Empresa e a ação **Sync** para dispositivos na Consola de Administrador do Microsoft Endpoint Manager inicia um check-in do MDM e não obriga um check-in de agente.
 
  ### <a name="when-is-the-agent-removed"></a>Quando é que o agente é removido?
  Existem várias condições que podem fazer com que o agente seja removido do dispositivo, tais como:

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438816"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808205"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -55,14 +55,29 @@ Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Semana de 6 de abril de 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Novas definições de script shell para dispositivos macOS<!-- 6884363 -->
+Ao configurar scripts de conchas para dispositivos macOS, pode agora configurar as seguintes novas definições: 
+- Ocultar notificações de script em dispositivos
+- Frequência do script
+- Número máximo de vezes para voltar a tentar se o guião falhar
+
+Para mais informações, consulte [Utilize scripts de concha em dispositivos macOS em Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Semana de 30 de março de 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Novo URL para o centro de administração do Microsoft Endpoint Manager<!-- 3704810 -->
 Para alinhar com o anúncio do Microsoft Endpoint Manager na Ignite no ano passado, mudamos o URL para o microsoft Endpoint Manager (anteriormente Microsoft 365 Device Management) para [https://endpoint.microsoft.com](https://endpoint.microsoft.com). O antigo URL do centro de administração ([https://devicemanagement.microsoft.com) ](https://devicemanagement.microsoft.com)continuará a funcionar, mas recomendamos que comece a aceder ao centro de administração do Microsoft Endpoint Manager utilizando o novo URL.
 
-Para obter mais informações, consulte as [tarefas de TI simplificadas utilizando o centro de administração do Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Para obter mais informações, consulte as [tarefas de TI simplificadas utilizando o centro de administração do Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>Gestão de aplicações
+
+### <a name="app-management"></a>Gestão de aplicações  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Portal da empresa para iOS suporta modo paisagístico<!--6048329 wnready -->   
+Os utilizadores podem agora inscrever os seus dispositivos, encontrar aplicações e obter suporte de TI utilizando a orientação do ecrã à sua escolha. A aplicação detetará e ajustará automaticamente os ecrãs para encaixar no retrato ou no modo de paisagem, a menos que os utilizadores bloqueiem o ecrã no modo retrato.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Suporte de script para dispositivos macOS (Pré-visualização pública)<!-- 4280361 wnready -->
 Pode adicionar e implementar scripts para dispositivos macOS. Este suporte alarga a sua capacidade de configurar dispositivos macOS para além do que é possível utilizando capacidades nativas de MDM em dispositivos macOS. Para mais informações, consulte [Utilize scripts de concha em dispositivos macOS em Intune](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ Pode adicionar e implementar scripts para dispositivos macOS. Este suporte alarg
 ## <a name="week-of-march-24-2020"></a>Semana de 24 de março de 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Melhoria da experiência de interface de utilizador ao criar perfis de restrições de dispositivos em dispositivos Android e Android Enterprise<!-- 5841361 -->
+
+> [!NOTE] 
+> A interface de utilizador Intune está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações.
 
 Quando cria um perfil para dispositivos Android ou Android Enterprise, a experiência no centro de administração endpoint Management é atualizada. Esta alteração impacta os seguintes perfis de configuração do dispositivo **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **administrador de dispositivos Android** ou Android **Enterprise** para plataforma):
 
@@ -82,6 +100,9 @@ Para obter mais informações sobre as restrições do dispositivo, pode configu
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Melhoria da experiência de interface do utilizador ao criar perfis de configuração em dispositivos iOS/iPadOS e macOS<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> A interface de utilizador Intune está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações.
+
 Quando cria um perfil para dispositivos iOS ou macOS, a experiência no centro de administração da Endpoint Management é atualizada. Esta alteração impacta os seguintes perfis de configuração do dispositivo **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **iOS/iPadOS** ou **macOS** para a plataforma):
 
 - Personalizado: iOS/iPadOS, macOS
@@ -92,6 +113,9 @@ Quando cria um perfil para dispositivos iOS ou macOS, a experiência no centro d
 - Ficheiro preferencial: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Ocultar da configuração da configuração do utilizador nas funcionalidades do dispositivo em dispositivos macOS<!-- 6524869 -->
+
+> [!NOTE]
+> Esta mudança será lançada para todos os clientes nas próximas semanas.
 
 Quando cria um dispositivo que possui um perfil de configuração nos dispositivos macOS, existe um novo **Hide a partir da configuração de configuração do utilizador** (**Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **macOS** para funcionalidades de plataforma > **Dispositivo** para itens de perfil > **Login).**
 
@@ -187,6 +211,10 @@ Para ver as definições que pode restringir, vá às definições do [dispositi
 O ícone de notificação de uma política de MAM pendente na lâmina de resolução de problemas foi alterado para um ícone informativo.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Atualização da UI ao configurar a política de conformidade<!-- 3961639    -->
+
+> [!NOTE]
+> A interface de utilizador Intune está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações.
+
 Atualizámos o UI para [criar políticas](../protect/create-compliance-policy.md#create-the-policy) de conformidade no gestor do Microsoft Endpoint (**Dispositivos** > **Compliance Policies** > **Policies** > **Create Policy).** Temos uma nova experiência de utilizador que inclui as mesmas definições e detalhes que utilizou anteriormente. A nova experiência segue um processo semelhante a um assistente para criar a política de conformidade e inclui uma página onde pode adicionar *Atribuições* para a apólice, e uma página *Review + Create* onde pode rever a sua configuração antes de criar a apólice.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Dispositivos não conformes de aposentadoria<!-- 1827291       -->

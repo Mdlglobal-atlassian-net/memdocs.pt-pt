@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438721"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808177"
 ---
 # <a name="in-development-for-microsoft-intune---april-2020"></a>Em desenvolvimento para microsoft Intune - abril 2020
 
@@ -87,16 +87,6 @@ Um novo perfil de configuração do dispositivo macOS estará disponível que co
 
 Aplica-se a:
 - macOS
-
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984----"></a>Melhoria da experiência de interface do utilizador ao criar perfis de configuração em dispositivos iOS/iPadOS e macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984  -->
-Quando criar um perfil para dispositivos iOS/iPadOS ou macOS, a experiência no Endpoint Management Admin Center será atualizada. Esta alteração impacta os seguintes perfis de configuração do dispositivo **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **iOS** ou **macOS** para a plataforma):
-
-- Personalizado: iOS/iPadOS, macOS
-- Funcionalidades do dispositivo: iOS/iPadOS, macOS
-- Restrições ao dispositivo: iOS/iPadOS, macOS
-- Proteção endpoint: macOS
-- Extensões: macOS
-- Ficheiro preferencial: macOS
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>As definições e valores do perfil de configuração do dispositivo serão atualizados para plataformas Windows<!-- 4091122 -->
 Quando cria perfis de configuração de dispositivos para plataformas Windows **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > qualquer opção **do Windows** para plataforma), algumas definições e os seus valores são diferentes do CSP, e podem ser confusos. Os nomes de definição e os seus valores serão atualizados para serem mais claros.

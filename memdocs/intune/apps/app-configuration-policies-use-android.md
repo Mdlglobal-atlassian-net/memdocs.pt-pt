@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233462"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808082"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos Android Enterprise geridos
 
@@ -47,7 +47,7 @@ As políticas de configuração de aplicações nas definições de fornecimento
 8. Clique em **Adicionar** para exibir o painel de **permissões Adicionar.**
 9. Clique nas permissões que pretende anular. As permissões concedidas anularão a política de "Permissões de aplicações padrão" para as aplicações selecionadas.
 10. Detete o estado de **permissão** para cada permissão. Pode escolher entre **Prompt**, **auto grant**ou **Auto negar**. Para obter mais informações sobre permissões, consulte [as definições do Android Enterprise para marcar os dispositivos como conformes ou não conformes usando o Intune](../protect/compliance-policy-create-android-for-work.md).
-11. Na caixa de dropdown, selecione o formato de definições de **configuração**. Selecione um dos seguintes métodos para adicionar informações de configuração:
+11. Se a aplicação gerida suportar as definições de configuração, na caixa de dropdown, selecione o formato de configuração de **configuração**. Selecione um dos seguintes métodos para adicionar informações de configuração:
     - **Utilizar estruturador de configuração**
     - **Insira os dados da JSON**<br><br>
     Para obter detalhes sobre a utilização do estruturador de configuração, veja [Utilizar estruturador de configuração](#use-the-configuration-designer). Para mais detalhes sobre a introdução de dados XML, consulte [os dados do Enter JSON](#enter-json-data).

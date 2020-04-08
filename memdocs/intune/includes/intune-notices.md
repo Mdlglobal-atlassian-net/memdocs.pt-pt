@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0b3af293ebc83c14f85abeb0dbaa38ca5187b267
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 7fe4f5241fe0cea70bd77fcdd559cfca909598a8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438733"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808170"
 ---
 Estes avisos fornecem informações importantes que podem ajudá-lo a preparar-se para futuras alterações e funcionalidades intune.
 
@@ -64,6 +64,29 @@ Visite os nossos médicos ao utilizar o Microsoft Edge com políticas de [prote�
 
 A gestão do LEGACY PC vai sair do apoio no dia 15 de outubro de 2020. Atualize os dispositivos para o Windows 10 e reinscreva-os como dispositivos de Gestão de Dispositivos Móveis (MDM) para mantê-los geridos pela Intune.
 
-[Mais informações](https://go.microsoft.com/fwlink/?linkid=2107122)
+[Saiba mais](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 
+### <a name="decreasing-support-for-android-device-administrator--5857738--"></a>Diminuição do suporte para administrador de dispositivos Android<!--5857738-->
+O administrador de dispositivos Android (por vezes referido para a gestão "legacy" android e lançado com o Android 2.2) é uma forma de gerir dispositivos Android. No entanto, a melhoria da funcionalidade de gestão já está disponível com [o Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (lançado com o Android 5.0). Num esforço para se mudar para uma gestão moderna, mais rica e segura de dispositivos, a Google está a diminuir o suporte do administrador de dispositivos em novas versões Android.
+
+#### <a name="how-does-this-affect-me"></a>Como é que isto me afeta?
+Devido a estas alterações por parte da Google, os utilizadores intune serão impactados das seguintes formas:  
+- A Intune só poderá fornecer suporte total para dispositivos Android geridos por administradorde dispositivos que executam o Android 10 e, posteriormente, através do Q2 CY2020. Os dispositivos geridos pelo administrador do dispositivo que estão a executar o Android 10 ou mais tarde depois desta altura não poderão ser totalmente geridos. Em particular, os dispositivos com impacto não receberão novos requisitos de senha.
+    - Os dispositivos Samsung Knox não serão impactados neste prazo porque o suporte alargado é fornecido através da integração de Intune com a plataforma Knox. Isto dá-lhe mais tempo para planear a transição para fora da gestão de administração do dispositivo.    
+- Os dispositivos Android geridos por administrador de dispositivos que permaneçam em versões Android abaixo do Android 10 não serão afetados e podem continuar a ser totalmente geridos com o administrador do dispositivo.    
+- Para todos os dispositivos que executam o Android 10 e posteriormente, a Google restringiu a capacidade de agentes de gestão de administradores de dispositivos como o Portal da Empresa acederem à informação de identificador de dispositivos. Esta restrição afeta as seguintes funcionalidades Intune depois de um dispositivo ser atualizado para o Android 10 ou posteriormente:  
+    - O controlo de acesso à rede para VPN deixará de funcionar.   
+    - Identificar dispositivos como propriedade corporativa com um IMEI ou um número de série não marcará automaticamente os dispositivos como propriedade corporativa.  
+    - O IMEI e o número de série deixarão de ser visíveis aos administradores de TI em Intune. 
+        > [!NOTE]
+        > Isto só afeta dispositivos geridos por administradores de dispositivos no Android 10 e posteriormente e não afeta dispositivos que estão a ser geridos como Android Enterprise. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>O que preciso de fazer para me preparar para esta alteração?
+Para evitar a redução da funcionalidade que chega no 3º trimestre CY2020, recomendamos o seguinte:
+- Não embarque em novos dispositivos na gestão de administrador de dispositivos.
+- Se se espera que um dispositivo receba uma atualização para o Android 10, emigra-o da gestão do administrador do dispositivo para as políticas de gestão e/ou proteção de aplicações do Android Enterprise.
+
+#### <a name="additional-information"></a>Informações adicionais
+- [Orientação da Google para a migração de administrador de dispositivos para Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
+- [Documentação da Google sobre o plano para depreciar o administrador do dispositivo API](https://developers.google.com/android/work/device-admin-deprecation)
