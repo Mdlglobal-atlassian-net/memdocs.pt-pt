@@ -1,6 +1,6 @@
 ---
 title: Definições de proteção para dispositivos Windows 10 no Microsoft Intune - Azure Microsoft Docs
-description: Nos dispositivos Windows 10, utilize ou configure as definições de proteção de pontos finais para ativar as funcionalidades do Microsoft Defender, incluindo O Guarda de Aplicações, Firewall, SmartScreen, encriptação e BitLocker, Exploit Guard, Control de Aplicações, Centro de Segurança e Segurança em dispositivos locais em Microsoft Intune.
+description: Nos dispositivos Windows 10, utilize ou configure as definições de proteção de pontos finais para ativar as funcionalidades do Microsoft Defender, incluindo o Guard de Aplicações, firewall, SmartScreen, encriptação e BitLocker, Exploit Guard, Control de Aplicações, Security Center e segurança em dispositivos locais no Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 08a9656328c6de29441a0d8b0b5e2526836cdb9b
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275072"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863201"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Definições do Windows 10 (e mais tarde) para proteger dispositivos que utilizem Intune
 
@@ -942,6 +942,9 @@ Bloqueie o seguinte para impedir ameaças de e-mail:
 > **Nas máquinas de clientes X86:**  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Para obter mais informações, consulte as recomendações de [verificação do Virus para computadores Enterprise que estão a executar versões suportadas atualmente do Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Acesso a pastas controladas  
 

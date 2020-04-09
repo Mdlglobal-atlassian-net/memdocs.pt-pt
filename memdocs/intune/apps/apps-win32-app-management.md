@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620620"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863184"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Autónomo - Gestão de aplicações Win32
 
@@ -405,6 +405,8 @@ Os registos de agente no computador cliente encontram-se normalmente em `C:\Prog
 > **Nas máquinas de clientes X86:**<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> Para obter mais informações, consulte as recomendações de [verificação do Virus para computadores Enterprise que estão a executar versões suportadas atualmente do Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Deteção da versão de ficheiro de aplicação Win32 usando powerShell
 

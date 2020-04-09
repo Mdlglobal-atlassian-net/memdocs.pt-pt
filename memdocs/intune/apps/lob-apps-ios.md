@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324083"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863099"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Adicionar aplicações de linha de negócio iOS ao Microsoft Intune
 
@@ -34,7 +34,7 @@ Utilize as informações neste artigo para o ajudar a adicionar aplicações de 
 > [!NOTE]
 > Os utilizadores de dispositivos iOS podem remover algumas aplicações iOS incorporadas, tal como Bolsa e Mapas. Não pode utilizar o Intune para implementar novamente essas aplicações. Se os utilizadores eliminarem essas aplicações, terão de aceder à loja de aplicações e reinstalá-las manualmente.
 >
-> As aplicações LOB iOS têm um limite de tamanho máximo de 4 GB por aplicação.
+> As aplicações iOS LOB têm um limite máximo de tamanho de 2 GB por app.
 
 > [!NOTE]
 > Os identificadores de pacote (por exemplo, *com.contoso.app)* destinam-se a identificar de forma única uma aplicação. Por exemplo, para instalar uma versão beta de uma aplicação LOB ao lado da versão de produção para fins de teste, a versão beta deve ter um identificador único diferente (por exemplo, *com.contoso.app-beta).* Caso contrário, a versão beta sobrepor-se-á à produção e será tratada como uma atualização. Renomear o ficheiro .ipa não tem qualquer efeito neste comportamento.
@@ -80,7 +80,7 @@ Pode utilizar etiquetas de âmbito para determinar quem pode ver informações s
 
 ## <a name="step-3---assignments"></a>Passo 3 - Atribuições
 
-1. Selecione o **Necessário**, **Disponível para dispositivos matriculados,** ou **desinstale** as atribuições do grupo para a aplicação. Para mais informações, consulte [grupos Add para organizar utilizadores e dispositivos](../fundamentals/groups-add.md) e [atribuir aplicações a grupos com](apps-deploy.md)o Microsoft Intune .
+1. Selecione o **Necessário**, **Disponível para dispositivos matriculados,** **disponível com ou sem inscrição,** ou **desinstale** as atribuições do grupo para a aplicação. Para mais informações, consulte [grupos Add para organizar utilizadores e dispositivos](../fundamentals/groups-add.md) e [atribuir aplicações a grupos com](apps-deploy.md)o Microsoft Intune .
 2. Clique em **Seguir** para exibir a página **Review + criar.**
 
 ## <a name="step-4---review--create"></a>Passo 4 - Rever + criar

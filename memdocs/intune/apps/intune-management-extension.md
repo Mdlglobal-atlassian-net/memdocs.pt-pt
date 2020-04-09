@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808103"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979227"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utilize scripts PowerShell em dispositivos Windows 10 em Intune
 
@@ -52,6 +52,9 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 - Dispositivos unidos ao Azure Ative Directory (AD), incluindo:  
   
   - Hybrid Azure AD-joined: Devices joined to Azure Ative Directory (AD), e também se juntou ao Ative Directory (AD) no local. Consulte [plana o seu diretório ativo híbrido Azure junte-se à implementação](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) para orientação.
+  
+  > [!TIP]
+  > Certifique-se de que os dispositivos [estão unidos](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) ao Azure AD. Os dispositivos que só estão [registados](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) em Azure AD não receberão os seus scripts.  
 
 - Dispositivos matriculados em Intune, incluindo:
 
@@ -71,8 +74,8 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
     - [Carga de trabalho de aplicativos de cliente](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Como mudar as cargas de trabalho do Gestor de Configuração para Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Certifique-se de que os dispositivos [estão unidos](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) ao Azure AD. Os dispositivos que só estão [registados](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) em Azure AD não receberão os seus scripts.
+> [!NOTE]
+> Para obter informações sobre a utilização de VMs da Janela 10, consulte [utilizar as máquinas virtuais do Windows 10 com Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Crie uma política de scripte atribuí-la
 
@@ -125,6 +128,8 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 - Os utilizadores finais não são obrigados a iniciar sessão no dispositivo para executar scripts PowerShell.
 
 - O agente de extensão de gestão Intune verifica com Intune uma vez a cada hora e após cada reboot para quaisquer novos scripts ou alterações. Depois de atribuir a política aos grupos do Azure AD, o script do PowerShell será executado e os resultados de execução serão comunicados. Uma vez que o script executa, não executa novamente a menos que haja uma mudança no script ou na política. Se o script falhar, o agente de extensão de gestão Intune tentará voltar a tentar o guião três vezes para os próximos 3 check-ins consecutivos de agente de extensão de gestão Intune.
+
+- Para dispositivos partilhados, o script PowerShell será executado para cada novo utilizador que se insere.
 
 ### <a name="failure-to-run-script-example"></a>Falha no exemplo do script
 8 DA MANHÃ

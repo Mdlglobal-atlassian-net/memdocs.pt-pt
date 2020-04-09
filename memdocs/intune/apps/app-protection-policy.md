@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611746"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863167"
 ---
 # <a name="app-protection-policies-overview"></a>Descrição geral das políticas de proteção de aplicações
 
@@ -34,7 +34,7 @@ As políticas de proteção de aplicações (APP) são regras que garantem que o
 As políticas de proteção de aplicações mobile Application Management (MAM) permitem-lhe gerir e proteger os dados da sua organização dentro de uma aplicação. Com a **MAM sem matrícula** (MAM-WE), uma aplicação relacionada com trabalho ou escola que contenha dados sensíveis pode ser gerida em quase todos os [dispositivos](app-management.md#app-management-capabilities-by-platform), incluindo dispositivos pessoais em cenários de **bring-your-own-device** (BYOD). Muitas aplicações de produtividade, como as aplicações do Microsoft Office, podem ser geridas pela MAM do Intune. Consulte a lista oficial de [aplicações protegidas](apps-supported-intune-apps.md) microsoft Intune disponíveis para uso público.
 
 ## <a name="how-you-can-protect-app-data"></a>Como pode proteger dados de aplicações
-Os seus funcionários utilizam dispositivos móveis para tarefas pessoais e profissionais. Se, por um lado, quer garantir que os seus funcionários são produtivos, por outro, quer evitar a perda de dados, intencional e não intencional. Também irá querer proteger os dados da empresa que são acedidos a partir de dispositivos que não são geridos por si.
+Os seus empregados utilizam dispositivos móveis para tarefas pessoais e profissionais. Se, por um lado, quer garantir que os seus funcionários são produtivos, por outro, quer evitar a perda de dados, intencional e não intencional. Também irá querer proteger os dados da empresa que são acedidos a partir de dispositivos que não são geridos por si.
 
 Pode utilizar as políticas de proteção de aplicações do Intune **independentemente de qualquer solução de gestão de dispositivos móveis (MDM)** . Esta independência ajuda-o a proteger dados da sua empresa com ou sem inscrição de dispositivos numa solução de gestão de dispositivos. Ao implementar **políticas ao nível da aplicação**, pode restringir o acesso aos recursos da empresa e manter os dados sob a alçada do seu departamento de TI.
 
@@ -194,7 +194,7 @@ Por predefinição, só pode existir uma política **Global** por inquilino. No 
 
 Embora a política **Global** se aplique a todos os utilizadores no seu inquilino, qualquer política de proteção de aplicações padrão do Intune substituirá estas definições.
 
-## <a name="app-protection-features"></a>Funcionalidades da proteção de aplicações
+## <a name="app-protection-features"></a>Funcionalidades de proteção de aplicações
 
 ### <a name="multi-identity"></a>Várias identidades
 
@@ -300,7 +300,7 @@ Se o utilizador estiver a utilizar a aplicação quando for iniciada uma limpeza
 A proteção de aplicações intonizada depende da identidade do utilizador para ser consistente entre a aplicação e o [Intune SDK](../developer/app-sdk.md). A única forma de o garantir é através da autenticação moderna. Existem cenários onde aplicações podem funcionar com uma configuração no local, mas não é garantido e nem consistente.
 
 **Forma segura de abrir links web a partir de aplicações geridas**<br>
-O administrador de TI pode implementar e definir a política de proteção de aplicações para a [aplicação Intune Managed Browser](app-configuration-managed-browser.md), um browser desenvolvido pelo Microsoft Intune que pode ser gerido facilmente com o Intune. O administrador de TI pode exigir que todas as ligações Web nas aplicações geridas pelo Intune sejam abertas através da aplicação Managed Browser.
+O administrador de TI pode implementar e definir a política de proteção de aplicações para o [Microsoft Edge](app-configuration-managed-browser.md), um navegador web que pode ser gerido facilmente com intune. O administrador de TI pode exigir que todas as ligações Web nas aplicações geridas pelo Intune sejam abertas através da aplicação Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Experiência de proteção de aplicativos para dispositivos iOS
 

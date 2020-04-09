@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 240e19d7e0665da44d58bf0b2d4d5f2dd47a319e
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327232"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979278"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscreva automaticamente dispositivos iOS/iPadOS com inscrição automática de dispositivos da Apple
 
@@ -148,7 +148,7 @@ Agora que instalou o seu símbolo, pode criar um perfil de inscrição para disp
 4. Selecione **Seguinte: Definições**de gestão do dispositivo .
 
 5. Na **Afinidade do Utilizador**, escolha se os dispositivos com este perfil têm de ser inscritos com ou sem um utilizador atribuído.
-    - **Inscrever com Afinidade de Utilizador**: selecione esta opção para os dispositivos que pertençam aos utilizadores e que queiram utilizar o Portal da Empresa para serviços como a instalação de aplicações. Se utilizar a ADFS e o perfil de inscrição tiver **Authenticate with Company Portal em vez de Configurar Assistente** definido para **Nº,** [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints) [Saiba mais.](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
+    - **Inscrever com Afinidade de Utilizador**: selecione esta opção para os dispositivos que pertençam aos utilizadores e que queiram utilizar o Portal da Empresa para serviços como a instalação de aplicações. Se estiver a utilizar a ADFS e estiver a utilizar o Assistente de Configuração para autenticar, o Nome de [Utilizador/Ponto final Misto WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Saiba mais.](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)
 
     - **Inscrever sem Afinidade do Utilizador** – escolha esta opção para dispositivos não associados a um único utilizador. Utilize esta opção para dispositivos que não acedam aos dados dos utilizadores locais. Aplicações como a aplicação Portal da Empresa não funcionam.
 

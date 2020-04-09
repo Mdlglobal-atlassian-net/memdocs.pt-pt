@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
+ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407829"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80900512"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para permitir ou restringir funcionalidades usando Intune
 
@@ -81,11 +81,13 @@ Estas definições utilizam a política de Gestão de [Aplicações CSP](https:/
 
   [Gestão de aplicações/permitirGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Aplicações apartir da loja apenas**: Esta definição determina a experiência do utilizador quando os utilizadores instalam aplicações de outros lugares que não a Microsoft Store. As opções são:
+- **Aplicações apartir da loja apenas**: Esta definição determina a experiência do utilizador quando os utilizadores instalam aplicações de outros lugares que não a Microsoft Store. Não impede a instalação de conteúdo de dispositivos USB, partilhas de rede ou outras fontes não internet. Utilize um navegador de confiança para ajudar a garantir que estas proteções funcionem como esperado.
+
+  As opções são:
 
   - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição. Por padrão, o OS poderá permitir que os utilizadores finais instalem aplicações de outros locais que não a Microsoft Store, incluindo aplicações definidas noutras definições de política.  
   - **Qualquer lugar**: Desliga as recomendações da aplicação e permite que os utilizadores instalem aplicações a partir de qualquer local.  
-  - **Loja Apenas**: Obriga os utilizadores finais a instalarem apenas aplicações a partir da Microsoft Store.
+  - **Armação Apenas**: A intenção é evitar que conteúdos maliciosos afetem os seus dispositivos de utilizador ao descarregar conteúdo executável a partir da internet. Quando os utilizadores tentam instalar aplicações a partir da internet, a instalação está bloqueada. Os utilizadores vêem uma mensagem recomendando que descarreguem aplicações a partir da Microsoft Store.
   - **Recomendações**: Ao instalar uma aplicação a partir da web que está disponível na Microsoft Store, os utilizadores vêem uma mensagem recomendando que a descarreguem da loja.  
   - **Prefer Store**: Avisa os utilizadores quando instalam aplicações em outros lugares que não a Microsoft Store.
 
@@ -890,7 +892,7 @@ Estas definições utilizam a [política de defensores CSP](https://docs.microso
   
   - **Limpar**
   - **Quarentena**
-  - **Remover**
+  - **Remove**
   - **Permitir**
   - **Definido pelo utilizador**
   - **Bloquear**

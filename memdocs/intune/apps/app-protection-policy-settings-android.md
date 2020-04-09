@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5dbe2abf7a23be9f9e0051a2ff26590e749f98c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0acd9edec84daaebdb8ed93b33c68ed8cebb4e47
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326201"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863048"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Definições de políticas de proteção de aplicações Android no Microsoft Intune
 Este artigo descreve as definições de políticas de proteção de aplicações para dispositivos Android. As definições de política descritas podem ser [configuradas](app-protection-policies.md) para uma política de proteção de aplicações no painel **Definições** no portal Azure.
@@ -31,6 +31,8 @@ Existem três categorias de definições de políticas: definições de proteç�
 
 > [!IMPORTANT]
 > O Portal da Empresa Intune é necessário no dispositivo para receber Políticas de Proteção de Aplicações para dispositivos Android. Para obter mais informações, veja os [Requisitos das aplicações de acesso ao Portal da Empresa do Intune](../fundamentals/end-user-mam-apps-android.md).
+>
+> O Intune Managed Browser foi retirado. Utilize o [Microsoft Edge](../apps/manage-microsoft-edge.md) para a sua experiência de navegador Intune protegida. 
 
 ## <a name="data-protection"></a>Proteção de dados 
 ### <a name="data-transfer"></a>Transferência de Dados
@@ -75,7 +77,7 @@ Existem algumas aplicações isentas e serviços de plataforma que as políticas
 
   Estas aplicações e serviços têm permissão total para transferir dados de e para aplicações geridas pelo Intune.
 
-  |Nome da aplicação/serviço | Descrição |
+  |Nome da aplicação/serviço | Description |
   | ------ | ---- |
   | com.android.phone | Aplicação de telefone nativa
   | com.android.vending | Google Play Store |
@@ -91,7 +93,7 @@ Existem algumas aplicações isentas e serviços de plataforma que as políticas
 ### <a name="conditional-exemptions"></a>Isenções condicionais
   Estas aplicações e serviços só têm permissão para transferir dados de e para aplicações geridas pelo Intune em determinadas condições.
 
-  |Nome da aplicação/serviço | Descrição | Condição de isenção|
+  |Nome da aplicação/serviço | Description | Condição de isenção|
   | ------ | ---- | --- |
   | com.android.chrome | Browser Google Chrome | O Chrome é utilizado para alguns componentes WebView no Android 7.0+ e nunca é ocultado da vista. No entanto, o fluxo de dados de e para a aplicação será sempre restringido.  |
   | com.skype.raider | Skype | A aplicação Skype é permitida apenas em determinadas ações que resultam numa chamada telefónica. |

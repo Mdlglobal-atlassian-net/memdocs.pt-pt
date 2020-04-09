@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 4c472011f0b46777d7beab0a425e0b5af78b610b
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696561"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979261"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurar a inscrição de dispositivos iOS/iPadOS com o Apple School Manager
 
@@ -105,7 +105,7 @@ Agora que instalou o seu token, pode criar um perfil de inscrição para disposi
     > Estas ações não são suportadas durante a autenticação com o Assistente de Configuração da Apple.
 
 6. Escolha **Definições de Gestão de Dispositivos** e selecione se quer que os dispositivos com este perfil sejam supervisionados.
-    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do ADE como mecanismo para ativar o modo supervisionado, especialmente para organizações que estão a implementar um grande número de dispositivos iOS/iPadOS.
+    Os dispositivos **supervisionados** proporcionam mais opções de gestão e desativam o Bloqueio de Ativação por predefinição. A Microsoft recomenda a utilização do ADE como mecanismo para ativar o modo supervisionado da Intune, especialmente para organizações que estão a implementar um grande número de dispositivos iOS/iPadOS.
 
     Os utilizadores são notificados de que os seus dispositivos são supervisionados de duas formas:
 

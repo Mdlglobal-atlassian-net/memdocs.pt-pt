@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 44cbde7eb7de9c50db488dabcb3bf5841b7248f7
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696547"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979244"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gerir o acesso à web utilizando o Microsoft Edge com o Microsoft Intune
 
@@ -39,8 +39,8 @@ As políticas de proteção do Microsoft Intune para o Microsoft Edge ajudam a p
 ## <a name="getting-started"></a>Introdução
 
 Você e os seus utilizadores finais podem descarregar o Microsoft Edge de lojas de aplicações públicas para serem utilizados nas suas organizações. Os requisitos do sistema operativo para as políticas do navegador são qualquer um dos seguintes requisitos:
-- Android 4 e posterior
-- iOS 8.0 e posterior
+- Android 5 e mais tarde
+- iOS 12.0 e mais tarde
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Políticas de proteção de aplicações para Microsoft Edge
 
@@ -129,7 +129,7 @@ Atribui as definições a grupos de utilizadores em Azure AD. Se esse utilizador
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Utilizadores diretos para o Microsoft Edge em vez do Navegador Gerido Intune 
 
-Tanto o Navegador Gerido Intune como o Microsoft Edge podem ser usados como navegadores protegidos por políticas. Para garantir que os seus utilizadores estão a ser direcionados para utilizar a aplicação correta do navegador, direcione todas as suas aplicações geridas por Intune (por exemplo, Outlook, OneDrive e SharePoint) com a seguinte definição de configuração:
+O Microsoft Edge pode ser usado como um navegador protegido por políticas. Para garantir que os seus utilizadores estão a ser direcionados para utilizar a aplicação correta do navegador, direcione todas as suas aplicações geridas por Intune (por exemplo, Outlook, OneDrive e SharePoint) com a seguinte definição de configuração:
 
 |    Chave    |    Valor    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -415,7 +415,7 @@ Para ver como visualizar registos em dispositivos Android, consulte [Enviar regi
 
 Seguem-se considerações adicionais de segurança e privacidade para o Microsoft Edge:
 
-- O Microsoft Edge não consome configurações que os utilizadores configuram para o navegador nativo https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps nos seus dispositivos, porque o Microsoft Edge não consegue aceder a estas definições.
+- O Microsoft Edge não consome configurações que os utilizadores configuram para o navegador nativo nos seus dispositivos, uma vez que o Microsoft Edge não consegue aceder a estas definições.
 - Pode configurar a opção **Exigir UM PIN simples para acesso** ou exigir **credenciais corporativas para acesso** numa política de proteção de aplicações associada ao Microsoft Edge. Se um utilizador selecionar o link de ajuda na página de autenticação, pode navegar em quaisquer sites de internet, independentemente de terem sido adicionados a uma lista bloqueada na política.
 - O Microsoft Edge só pode bloquear o acesso aos sites quando estes são acedidos diretamente. Não bloqueia o acesso quando os utilizadores utilizam serviços intermédios (como um serviço de tradução) para aceder ao site.
 - Para permitir a autenticação e acesso à documentação Intune, * **.microsoft.com** está isento das definições da lista de permitir ou bloquear. É sempre permitido.
