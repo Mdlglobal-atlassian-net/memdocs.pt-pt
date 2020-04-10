@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
-ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
+ms.openlocfilehash: 0e5726ec06ac5b315937bd30e9a2e2680c0030be
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900512"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007713"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para permitir ou restringir funcionalidades usando Intune
 
@@ -142,10 +142,15 @@ Estas definições utilizam a [cSP da política Bluetooth;](https://docs.microso
 
 Estas definições utilizam a política de [contas CSP;](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts) que também lista as edições suportadas do Windows.
 
-- **Conta Microsoft**: **O bloco** impede que os utilizadores finais associem uma conta Microsoft ao dispositivo. **Não configurado** (predefinido) permite adicionar e utilizar uma conta Microsoft.
+- **Conta Microsoft**: **O bloco** impede que os utilizadores finais associem uma conta Microsoft ao dispositivo. **O Bloco** também pode ter impacto em alguns cenários de inscrição que dependem dos utilizadores para completar o processo de inscrição.
+
+  **Não configurado** (predefinido) permite adicionar e utilizar uma conta Microsoft.
+
 - **Conta não Microsoft**: **O bloco** impede que os utilizadores finais adicionem contas não Microsoft utilizando a interface do utilizador. **Não configurado** (predefinido) permite que os utilizadores adicionem contas de e-mail que não estejam associadas a uma conta Microsoft.
 - **Definições de sincronização para a conta microsoft**: Não **configurado** (predefinido) permite que as definições de dispositivos e aplicações associadas a uma conta microsoft sincronizem entre dispositivos. **O bloco** impede esta sincronização.
-- **Assistente de sessão**da Conta Microsoft : Quando definido para **Não configurado** (predefinido), os utilizadores finais podem iniciar e parar o serviço de **Assistente de Início de Conta Microsoft** (wlidsvc). Este serviço de sistema operativo permite que os utilizadores insinuem na sua conta Microsoft. **Desativar** impede que os utilizadores finais controlem o serviço de assistente de acesso à Microsoft (wlidsvc).
+- **Assistente de sessão**da Conta Microsoft : Quando definido para **Não configurado** (predefinido), os utilizadores finais podem iniciar e parar o serviço de **Assistente de Início de Conta Microsoft** (wlidsvc). Este serviço de sistema operativo permite que os utilizadores insinuem na sua conta Microsoft. **Desative** o serviço de assistente de acesso da Microsoft (wlidsvc) para Desativado e impede que os utilizadores finais o iniciem manualmente.
+
+  **O desativação** também pode ter impacto em alguns cenários de inscrição que dependem dos utilizadores para completar a inscrição. Por exemplo, está a usar [luva branca AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Normalmente, os utilizadores são mostrados um sinal de Anúncio Azure na janela. Quando definido para **desativar,** o sinal de AD Azure pode não aparecer. Em vez disso, pede-se aos utilizadores que aceitem o EULA e criem uma conta local, que pode não ser o que deseja.
 
 ## <a name="cloud-printer"></a>Impressora em Cloud
 

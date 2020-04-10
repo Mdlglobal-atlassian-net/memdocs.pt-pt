@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 04d9856242336c4a8c1fbd9bef0afb539054c904
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327293"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007764"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurar a inscrição de dispositivos dedicados do Android Enterprise no Intune
 
@@ -39,7 +39,7 @@ Os dispositivos que gerir desta forma são inscritos no Intune sem uma conta de 
 
 Os dispositivos têm de cumprir estes requisitos para serem geridos como um dispositivo dedicado do Android Enterprise:
 
-- Versão do SO Android 5.1 e posterior.
+- Android OS versão 6.0 ou superior.
 - Os dispositivos têm de executar uma distribuição do Android com conectividade aos GMS (Serviços Google Mobile). Os dispositivos têm de ter os GMS disponíveis e têm de conseguir ligar-se aos mesmos.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Configurar a gestão dos dispositivos dedicados do Android Enterprise

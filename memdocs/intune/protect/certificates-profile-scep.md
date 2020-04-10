@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e8838606a6f36ccbbbdee2e081f242035f4f3b61
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323138"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007747"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Criar e atribuir perfis de certificado SCEP em Intune
 
@@ -95,7 +95,8 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
        - **Número de série**
        - **Personalizado**: ao selecionar esta opção, é também apresentada a caixa de texto **Personalizado**. Utilize este campo para introduzir um formato de nome de requerente personalizado, incluindo variáveis. O formato personalizado suporta duas variáveis: **Nome Comum (CN)** e **E-mail (E)** . O **Nome Comum (CN)** pode ser definido para qualquer uma das seguintes variáveis:
 
-         - **CN={{{UserName}}** : O nome principal do utilizador, tal como janedoe@contoso.com.
+         - **CN={{{UserName}}** : O nome de utilizador do utilizador, como o janedoe.
+         - **CN={{{{UserPrincipalName}}** : O nome principal do utilizador, como janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** : um ID atribuído ao registar um dispositivo no Azure Active Directory (AD). Este ID é normalmente utilizado na autenticação com o Azure AD.
          - **CN={{{SERIALNUMBER}}** : O número de série único (SN) normalmente utilizado pelo fabricante para identificar um dispositivo.
          - **CN={{{IMEINumber}}** : O número único de identidade de equipamento móvel internacional (IMEI) utilizado para identificar um telemóvel.
@@ -111,6 +112,8 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Este exemplo inclui um formato de nome de assunto que utiliza as variáveis CN e E, e cordas para valores da Unidade Organizacional, Organização, Localização, Estado e País. O artigo [função CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) descreve esta função e as cadeias suportadas da mesma.
+         
+         \* Para os perfis apenas do Proprietário do Dispositivo Android, a definição **CN={{{UserPrincipalName}}** não funcionará. Android Dispositivo Owner Apenas os perfis podem ser utilizados para dispositivos sem Utilizador, pelo que este perfil não será capaz de obter o nome principal do utilizador do utilizador. Se realmente precisa desta opção para dispositivos com utilizadores, pode utilizar uma suticultura como esta: **CN={{UserName}}@contoso.com** fornecerá o Nome de Utilizador e o domínio que adicionou manualmente, como janedoe@contoso.com
 
       - **Tipo de certificado Dispositivo**
 
@@ -259,7 +262,7 @@ Quando o seu nome de assunto incluir um dos caracteres especiais, utilize uma da
 
 **Por exemplo,** tem um Nome de Assunto que aparece como utilizador de *teste (TestCompany, LLC)* .  Uma RSE que inclui um CN que tem a vírem entre *a TestCompany* e a *LLC* apresenta um problema.  O problema pode ser evitado colocando cotações em todo o NC, ou removendo a vírem entre *a TestCompany* e *a LLC:*
 
-- **Adicionar cotações**: *CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Adicionar cotações**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Remova a vírcia:** *CN=Utilizador de teste (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  No entanto, as tentativas de escapar da vírem utilizando um personagem backslash falharão com um erro nos registos de CRP:

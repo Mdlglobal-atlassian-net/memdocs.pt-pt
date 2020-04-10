@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401375"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007628"
 ---
 # <a name="review-client-app-protection-logs"></a>Rever registos de proteção de aplicações cliente
 

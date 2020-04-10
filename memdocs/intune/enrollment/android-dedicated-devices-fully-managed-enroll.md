@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3b9497d80fad3a0abd7e7b14b1b8ac02b249c77
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73d8136ff1e03b00232a58c1b0687f9e193297e1
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325561"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007730"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Inscreva os seus dispositivos dedicados android Enterprise ou dispositivos totalmente geridos
 
@@ -31,7 +31,7 @@ Depois de configurar os seus [dispositivos dedicados ao Android Enterprise](andr
 
 | Método de inscrição | Versão mínima do Android OS para dispositivos dedicados e totalmente geridos |
 | ----- | ----- |
-| Comunicação de Proximidade | 5.1 |
+| Comunicação de Proximidade | 6.0 |
 | Entrada de token | 6.0 |
 | Código QR | 7.0 |
 | Zero Touch  | 8.0\* |
@@ -40,7 +40,7 @@ Depois de configurar os seus [dispositivos dedicados ao Android Enterprise](andr
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Inscrever com NFC (Comunicação de Proximidade)
 
-Para dispositivos que suportem o NFC, pode fornecer os seus dispositivos criando uma etiqueta NFC especialmente formatada. Pode utilizar a sua própria aplicação ou qualquer ferramenta de criação de etiquetas NFC. Para mais informações, consulte a [inscrição do dispositivo Android Enterprise com base](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) em C com a Microsoft Intune e a [documentação DaPI de Gestão Android da Google.](https://developers.google.com/android/management/provision-device#nfc_method)
+Para dispositivos 6 e posteriormente que suportem o NFC, pode fornecer os seus dispositivos criando uma etiqueta NFC especialmente formatada. Pode utilizar a sua própria aplicação ou qualquer ferramenta de criação de etiquetas NFC. Para mais informações, consulte a [inscrição do dispositivo Android Enterprise com base](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) em C com a Microsoft Intune e a [documentação DaPI de Gestão Android da Google.](https://developers.google.com/android/management/provision-device#nfc_method)
 
 ## <a name="enroll-by-using-a-token"></a>Inscrever com um token
 
