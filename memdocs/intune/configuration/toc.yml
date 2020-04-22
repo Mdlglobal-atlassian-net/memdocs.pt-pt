@@ -215,7 +215,7 @@
               href: kiosk-settings-holographic.md
             - name: Dispositivo multiutilizador partilhado
               href: shared-user-device-settings-windows-holographic.md
-        - name: Windows 8.1
+        - name: 'Windows 8,1'
           items:
             - name: Restrições de dispositivos
               href: device-restrictions-windows-8-1.md
