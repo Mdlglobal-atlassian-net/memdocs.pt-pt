@@ -20,7 +20,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
 ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 04/07/2020
 ms.locfileid: "80808205"
@@ -167,7 +167,7 @@ Estas alterações serão lançadas numa base faseada ao longo do mês de março
 ### <a name="device-configuration"></a>Configuração do dispositivo
 
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nova experiência do utilizador ao criar modelos administrativos em dispositivos Windows<!--5096036 -->
-Com base no feedback do cliente, e na nossa mudança para a nova experiência de ecrã completo do Azure, reconstruímos a experiência de perfil dos Modelos Administrativos com uma visão de pasta. Não fizemos alterações a nenhuma definição ou perfis existentes. Assim, os seus perfis existentes permanecerão os mesmos, e serão utilizáveis na nova visão. Ainda pode navegar em todas as opções de definições selecionando **Todas as Definições**e utilizando a procura. A vista para a árvore é dividida por configurações de computador e utilizador. Encontrará as definições de Windows, Office e Edge nas suas pastas associadas.  
+Com base no feedback do cliente, e na nossa mudança para a nova experiência de ecrã completo do Azure, reconstruímos a experiência de perfil dos Modelos Administrativos com uma visão de pasta. Não fizemos alterações a nenhuma definição ou perfis existentes. Assim, os seus perfis existentes permanecerão os mesmos, e serão utilizáveis na nova visão. Ainda pode navegar em todas as opções de definições selecionando **Todas as Definições**e utilizando a procura. A vista para a árvore é dividida por configurações de computador e utilizador. Encontrará as definições de Windows, Office e Microsoft Edge nas suas pastas associadas.  
 
 Aplica-se a:
 - Windows 10 e mais recente

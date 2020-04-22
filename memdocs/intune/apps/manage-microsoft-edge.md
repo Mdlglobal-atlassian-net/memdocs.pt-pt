@@ -423,7 +423,7 @@ Seguem-se considerações adicionais de segurança e privacidade para o Microsof
 
 ## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Restringir o uso do Microsoft Edge a uma conta de trabalho ou escolar
 
-Respeitar as políticas de segurança e conformidade de dados dos nossos maiores e altamente regulados clientes é um pilar fundamental para o valor da Microsoft 365. Algumas empresas têm a obrigação de capturar todas as informações de comunicações dentro do seu ambiente corporativo, bem como garantir que os dispositivos são usados apenas para comunicações corporativas. Para suportar estes requisitos, o Edge para iOS e Android em dispositivos matriculados pode ser configurado apenas para permitir que uma única conta corporativa seja aprovisionada dentro do Edge para iOS e Android.
+Respeitar as políticas de segurança e conformidade de dados dos nossos maiores e altamente regulados clientes é um pilar fundamental para o valor da Microsoft 365. Algumas empresas têm a obrigação de capturar todas as informações de comunicações dentro do seu ambiente corporativo, bem como garantir que os dispositivos são usados apenas para comunicações corporativas. Para suportar estes requisitos, o Microsoft Edge para iOS e Android em dispositivos matriculados pode ser configurado apenas para permitir que uma única conta corporativa seja aprovisionada dentro do Edge para iOS e Android.
 
 Pode saber mais sobre configurar a configuração do modo de definição de modo de contas permitida aqui:
 
