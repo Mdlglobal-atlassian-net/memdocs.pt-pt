@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Documentação da Análise de Computadores
+summary: A Análise de Computadores é um serviço cloud que está integrado no Configuration Manager. Este serviço fornece informações para ajudá-lo a atualizar os seus clientes Windows.
+metadata:
+  title: Documentação da Análise de Computadores
+  titleSuffix: Configuration Manager
+  description: A Análise de Computadores é um serviço cloud que está integrado no Configuration Manager. Este serviço fornece informações para ajudá-lo a atualizar os seus clientes Windows.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741413"
+landingContent:
+- title: Sobre a Análise de Computadores
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é a Análise de Computadores?
+      url: overview.md
+    - text: Novidades
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Windows 10 piloto
+      url: tutorial-windows10.md
+- title: Introdução
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurar a Análise de Computadores
+      url: set-up.md
+    - text: Ligar o Configuration Manager
+      url: connect-configmgr.md
+    - text: Inscrever dispositivos
+      url: enroll-devices.md
+- title: Recursos
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: FAQ da Análise de Computadores
+      url: faq.md
+    - text: Ativar a partilha de dados
+      url: enable-data-sharing.md
+    - text: Estado de funcionamento da ligação do monitor
+      url: monitor-connection-health.md
+    - text: Resolver problemas da Análise de Computadores
+      url: troubleshooting.md

@@ -12,7 +12,7 @@
           items:
             - name: Intune user help (Ajuda para utilizadores do Intune)
               tocHref: /intune/user-help/
-              topicHref: /intune/user-help/
+              topicHref: /intune/user-help/use-managed-devices-to-get-work-done
             - name: Aplicações
               tocHref: /intune/apps/
               topicHref: /intune/apps/

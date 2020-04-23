@@ -1,0 +1,95 @@
+- name: Documentação da gestão de atualizações de software
+  href: index.yml
+- name: Compreender e explorar
+  items:
+    - name: Introdução às atualizações de software
+      href: understand/software-updates-introduction.md
+    - name: Ícones utilizados para atualizações de software
+      href: understand/software-updates-icons.md
+- name: Planear e estruturar
+  items:
+    - name: Planear atualizações de software
+      href: plan-design/plan-for-software-updates.md
+    - name: Pré-requisitos para atualizações de software
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: Procedimentos recomendados para atualizações de software
+      href: plan-design/software-updates-best-practices.md
+    - name: Segurança e privacidade para atualizações de software
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: Introdução
+  items:
+    - name: Preparar a gestão de atualizações de software
+      href: get-started/prepare-for-software-updates-management.md
+    - name: Instalar um ponto de atualização de software
+      href: get-started/install-a-software-update-point.md
+    - name: Sincronizar atualizações de software
+      href: get-started/synchronize-software-updates.md
+    - name: Configurar classificações e produtos
+      href: get-started/configure-classifications-and-products.md
+    - name: Gerir as definições de atualizações de software
+      href: get-started/manage-settings-for-software-updates.md
+    - name: Sincronizar atualizações de software em ambientes desligados
+      items:
+        - name: Sincronizar atualizações de software a partir de um ponto de atualização de software desligado
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: Sincronizar atualizações do Office 365 a partir de um ponto de atualização de software desligado
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: Implementação e Utilização
+  items:
+    - name: Transferir atualizações de software
+      href: deploy-use/download-software-updates.md
+    - name: Adicionar atualizações de software a um grupo de atualizações
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: Implementar atualizações de software
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: Implementar manualmente atualizações de software
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: Implementar automaticamente atualizações de software
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: Criar uma implementação faseada
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Monitorizar atualizações de software
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: Gerir e monitorizar as implementações faseadas
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Manutenção das atualizações de software
+      href: deploy-use/software-updates-maintenance.md
+    - name: Grupos de orquestração
+      href: deploy-use/orchestration-groups.md
+    - name: Fazer manutenção a um grupo de servidores
+      href: deploy-use/service-a-server-group.md
+    - name: Dashboard de Gestão de Clientes do Office 365
+      href: deploy-use/office-365-dashboard.md
+    - name: Gerir as atualizações do Office 365 ProPlus
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: "Otimizar a entrega de atualizações do Windows\_10"
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: "Gerir Ficheiros de instalação rápida para as atualizações do Windows\_10"
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Integração com o Windows Update for Business no Windows 10
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: Atualizações de software de terceiros
+      href: deploy-use/third-party-software-updates.md
+    - name: Cenário de exemplo para implementar atualizações de segurança
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center Updates Publisher
+  href: tools/updates-publisher.md
+  items:
+    - name: Instalar
+      href: tools/install-updates-publisher.md
+    - name: Configurar opções
+      href: tools/updates-publisher-options.md
+    - name: Gerir catálogos
+      href: tools/updates-publisher-catalogs.md
+    - name: Gerir atualizações
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: Gerir publicações
+      href: tools/updates-publisher-publications.md
+    - name: Criar novas atualizações
+      href: tools/create-updates-with-updates-publisher.md
+    - name: Regras de aplicabilidade
+      href: tools/updates-publisher-applicability-rules.md
+    - name: Certificados e segurança
+      href: tools/updates-publisher-security.md

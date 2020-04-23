@@ -1,0 +1,126 @@
+- name: Documentação da gestão de aplicações
+  href: index.yml
+- name: Compreender e explorar
+  items:
+    - name: Introdução
+      href: understand/introduction-to-application-management.md
+- name: Introdução
+  items:
+    - name: Criar e implementar uma aplicação
+      href: get-started/create-and-deploy-an-application.md
+- name: Planear e estruturar
+  items:
+    - name: Planear e configurar a gestão de aplicações
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: Planear o Centro de Software
+      href: plan-design/plan-for-software-center.md
+    - name: Segurança e privacidade
+      href: plan-design/security-and-privacy-for-application-management.md
+- name: Implementação e Utilização
+  items:
+    - name: Criar aplicações
+      href: deploy-use/create-applications.md
+      items:
+        - name: Criar aplicações para computadores Mac
+          href: get-started/creating-mac-computer-applications.md
+        - name: Criar aplicações Windows
+          href: get-started/creating-windows-applications.md
+        - name: Criar aplicações de servidor Linux e UNIX
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: Criar aplicações Windows Embedded
+          href: get-started/creating-windows-embedded-applications.md
+        - name: Criar condições globais
+          href: deploy-use/create-global-conditions.md
+        - name: Criar grupos de aplicações
+          href: deploy-use/create-app-groups.md
+        - name: Pacotes e programas
+          href: deploy-use/packages-and-programs.md
+        - name: Ficheiros de definição de pacote
+          href: deploy-use/package-definition-files.md
+    - name: Implementar aplicações
+      items:
+        - name: Implementar aplicações
+          href: deploy-use/deploy-applications.md
+        - name: Criar uma implementação faseada
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Aprovar aplicações
+          href: deploy-use/app-approval.md
+        - name: Instalar aplicações para um dispositivo
+          href: deploy-use/install-app-for-device.md
+        - name: Partilhar uma aplicação
+          href: deploy-use/share-applications.md
+        - name: Simular implementações de aplicações
+          href: deploy-use/simulate-application-deployments.md
+        - name: 'Implementar o Microsoft Edge, versão 77 e posterior'
+          href: deploy-use/deploy-edge.md
+        - name: Implementar aplicações virtuais App-V
+          href: get-started/deploying-app-v-virtual-applications.md
+        - name: Sugestões de resolução de problemas para a implementação de aplicações
+          href: deploy-use/troubleshoot-application-deployment.md
+    - name: Monitorizar aplicações
+      items:
+        - name: Monitorizar aplicações a partir da consola
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: Gerir e monitorizar as implementações faseadas
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Monitorizar a utilização da aplicação com a medição de software
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: Gerir aplicações
+      items:
+        - name: Tarefas de gestão
+          href: deploy-use/management-tasks-applications.md
+        - name: Afinidade dispositivo/utilizador
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: Microsoft Store para Empresas e Educação
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: Ambientes virtuais App-V
+          href: deploy-use/create-app-v-virtual-environments.md
+        - name: Importar e exportar aplicações
+          href: deploy-use/import-export-applications.md
+    - name: Atualizar e extinguir aplicações
+      items:
+        - name: Atualizar e extinguir aplicações
+          href: deploy-use/update-and-retire-applications.md
+        - name: Rever e substituir aplicações
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: Desinstalar aplicações
+          href: deploy-use/uninstall-applications.md
+    - name: Executar e gerir scripts
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: Obter informações sobre a segurança dos scripts do PowerShell
+          href: deploy-use/learn-script-security.md
+    - name: Gestor de Conversão de Pacotes
+      items:
+        - name: Plano para o Gestor de Conversão de Pacotes
+          href: pcm/package-conversion-manager.md
+        - name: Como analisar e converter pacotes
+          href: pcm/how-to-analyze-and-convert.md
+- name: Resolver Problemas
+  items:
+    - name: Resolver problemas de implementação de aplicações
+      items:
+        - name: Antes de começar
+          href: understand/app-deployment-technical-reference.md
+        - name: Política de implementação de aplicações
+          href: understand/deployment-policy-technical-reference.md
+        - name: Implementação de aplicações para dispositivos
+          href: understand/device-deployment-technical-reference.md
+        - name: Implementação de aplicações para utilizadores
+          href: understand/user-deployment-technical-reference.md
+        - name: Componentes de cliente da implementação de aplicações
+          href: understand/client-components-technical-reference.md
+        - name: Avaliação de aplicações
+          href: understand/deployment-evaluation-technical-reference.md
+        - name: Transferência de aplicações
+          href: understand/deployment-download-technical-reference.md
+        - name: Instalação de aplicações
+          href: understand/deployment-install-technical-reference.md
+    - name: Resolver problemas de integração da Microsoft Store para Empresas e Educação
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    - name: Resolução de Problemas do Gestor de Conversão de Pacotes
+      items:
+        - name: Resolução de Problemas do Gestor de Conversão de Pacotes
+          href: pcm/troubleshoot-pcm.md
+        - name: Mensagens de erro do Gestor de Conversão de Pacotes
+          href: pcm/error-messages.md

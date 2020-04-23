@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: Documentação da infraestrutura principal
+summary: Informações fundamentais sobre o produto Configuration Manager, incluindo clientes e servidores do site.
+metadata:
+  title: Documentação da infraestrutura principal
+  titleSuffix: Configuration Manager
+  description: Informações fundamentais sobre o produto Configuration Manager, incluindo clientes e servidores do site.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741447"
+landingContent:
+- title: Sobre a infraestrutura principal
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é o Configuration Manager?
+      url: understand/introduction.md
+    - text: FAQs do Microsoft Endpoint Configuration Manager
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: Novidades
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: Pré-visualização técnica
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: Utilizar a consola
+      url: servers/manage/admin-console.md
+    - text: Utilizar o Centro de Software
+      url: understand/software-center.md
+    - text: Utilizar o Docs
+      url: understand/use-docs.md
+    - text: Encontrar ajuda
+      url: understand/find-help.md
+- title: Introdução
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Configurações suportadas
+      url: plan-design/configs/supported-configurations.md
+    - text: Suporte para o Windows 10
+      url: plan-design/configs/support-for-windows-10.md
+    - text: Pré-requisitos do site
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: Atualizações e manutenção
+      url: servers/manage/updates.md
+    - text: Instalar atualizações na consola
+      url: servers/manage/install-in-console-updates.md
+    - text: Implementar clientes
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: Migração entre hierarquias
+      url: migration/migrate-data-between-hierarchies.md
+- title: Principais tarefas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ativar o TLS 1.2
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: Planeamento de CMG
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: HTTP melhorado
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: Ficheiros de registo
+      url: plan-design/hierarchy/about-log-files.md
+    - text: Portas
+      url: plan-design/hierarchy/ports.md
+    - text: Definições do cliente
+      url: clients/deploy/about-client-settings.md
+    - text: Ferramentas
+      url: support/tools.md

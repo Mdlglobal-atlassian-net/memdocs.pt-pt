@@ -1,0 +1,54 @@
+- name: Documentação sobre cogestão
+  href: index.yml
+- name: Descrição geral
+  items:
+    - name: O que é a cogestão?
+      href: overview.md
+- name: Guias de Introdução
+  items:
+    - name: Descrição geral do Início Rápido
+      href: quickstarts.md
+    - name: Valor imediato
+      items:
+        - name: Acesso condicional
+          href: quickstart-conditional-access.md
+        - name: Ações remotas do Intune
+          href: quickstart-remote-actions.md
+        - name: Estado de funcionamento do cliente
+          href: quickstart-client-health.md
+        - name: Azure AD Híbrido
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Introdução
+      items:
+        - name: Caminhos para a cogestão
+          href: quickstart-paths.md
+        - name: Configurar o Azure AD híbrido
+          href: quickstart-setup-hybrid-aad.md
+        - name: Atualizar para o Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: Obter ajuda do FastTrack
+          href: quickstart-fasttrack.md
+- name: Tutorials (Tutoriais)
+  items:
+    - name: Permitir a cogestão para os clientes do Configuration Manager
+      href: tutorial-co-manage-clients.md
+    - name: Ativar a cogestão para dispositivos baseados na Internet
+      href: tutorial-co-manage-new-devices.md
+- name: Conceitos
+  items:
+    - name: Cargas de trabalho
+      href: workloads.md
+    - name: Coexistência de MDM de terceiros
+      href: coexistence.md
+- name: How-to guides (Guias de procedimentos)
+  items:
+    - name: Ativar a cogestão
+      href: how-to-enable.md
+    - name: Preparar dispositivos baseados na Internet
+      href: how-to-prepare-Win10.md
+    - name: Trocar as cargas de trabalho para o Intune
+      href: how-to-switch-workloads.md
+    - name: Monitorizar a cogestão
+      href: how-to-monitor.md

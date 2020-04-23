@@ -1,0 +1,48 @@
+- name: Documentação do MDM
+  href: index.yml
+- name: On-premises MDM (MDM no local)
+  items:
+    - name: What is on-premises MDM (O que é a MDM no local)
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Plano de MDM no local
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Configuração
+      items:
+        - name: Install on-premises roles (Instalar funções no local)
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Configurar certificados
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Configurar para a inscrição
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Inscrever dispositivos
+      items:
+        - name: Descrição geral de inscrição
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Inscrição do utilizador
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Inscrição em massa
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Manage devices and protect data (Gerir dispositivos e proteger dados)
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Gerir aplicações
+      href: deploy-use/management-tasks-applications.md
+    - name: Manage configuration settings (Gerir definições de configuração)
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Gerir o acesso a recursos
+      items:
+        - name: Criar perfis de certificado PFX
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: Importar perfis de certificado PFX
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Perfis de Wi-Fi
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: Perfis VPN
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: Conector do Exchange Server
+  items:
+    - name: Gestão de dispositivos com o Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Instalar o conector do Exchange
+      href: deploy-use/install-configure-exchange-connector.md
+- name: What happened to hybrid MDM? (O que aconteceu à MDM híbrida?)
+  href: understand/what-happened-to-hybrid.md

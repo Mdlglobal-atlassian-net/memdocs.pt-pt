@@ -1,0 +1,15 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Enterprise Mobility + Security
+      tocHref: /
+      topicHref: /enterprise-mobility-security
+      items:
+        - name: Gestor de configuração
+          tocHref: /configmgr/
+          topicHref: /configmgr/
+          items:
+            - name: Gestão de dispositivos móveis
+              tocHref: /configmgr/protect/deploy-use
+              topicHref: /configmgr/mdm/index

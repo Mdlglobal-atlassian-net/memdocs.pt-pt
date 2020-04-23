@@ -1,0 +1,148 @@
+- name: Documentação da implementação do SO
+  href: index.yml
+- name: Compreender
+  items:
+    - name: Introdução à implementação do SO
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Planear e estruturar
+  items:
+    - name: Requisitos de infraestrutura para a implementação do SO
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Considerações sobre planeamento para automatizar tarefas
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Cenários para implementar sistemas operativos empresariais
+      items:
+        - name: Descrição geral dos cenários de implementação do SO
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Atualizar o Windows para a versão mais recente
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot para dispositivos existentes
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Atualizar um computador existente com uma nova versão do Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Instalar uma nova versão do Windows num novo computador (bare-metal)
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Substituir um computador existente e transferir definições
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Métodos para implementar sistemas operativos empresariais
+      items:
+        - name: Métodos de implementação do SO
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Utilizar o PXE para implementar o Windows na rede
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Utilizar o Centro de Software para implementar o Windows através da rede
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Utilizar suportes de dados de arranque para implementar o Windows na rede
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Utilizar um suporte de dados autónomo para implementar o Windows sem utilizar a rede
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Utilizar multicast para implementar o Windows na rede
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Criar uma imagem de um OEM de fábrica ou um depósito local
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Segurança e privacidade para implementação do SO
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Planear a interoperabilidade da implementação do SO
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Introdução
+  items:
+    - name: Preparar funções do sistema de sites para implementações de SO
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Preparar a implementação do SO
+      items:
+        - name: Preparar a implementação do SO
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Imagens de arranque
+          items:
+            - name: Gerir imagens de arranque
+              href: get-started/manage-boot-images.md
+            - name: Personalizar imagens de arranque
+              href: get-started/customize-boot-images.md
+        - name: Imagens do SO
+          items:
+            - name: Gerir imagens do SO
+              href: get-started/manage-operating-system-images.md
+            - name: Personalizar imagens do SO
+              href: get-started/customize-operating-system-images.md
+        - name: Gerir pacotes de atualização do SO
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Gerir controladores
+          href: get-started/manage-drivers.md
+        - name: Gerir o estado do utilizador
+          href: get-started/manage-user-state.md
+        - name: Preparar implementações de computadores desconhecidos
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Associar utilizadores a um computador de destino
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Preparar a cache ponto a ponto do Windows PE para reduzir o tráfego WAN
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Implementação e Utilização
+  items:
+    - name: Gerir e criar sequências de tarefas
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Criar sequências de tarefas para automatizar tarefas
+      items:
+        - name: Criar uma sequência de tarefas para instalar um SO
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Criar uma sequência de tarefas para atualizar um SO
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Passos de sequência de tarefas para gerir a conversão de BIOS em UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Criar uma sequência de tarefas para capturar um SO
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Criar uma sequência de tarefas para capturar e restaurar o estado do utilizador
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Criar uma sequência de tarefas personalizada
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Criar uma sequência de tarefas para implementações não pertencentes ao SO
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Implementar uma sequência de tarefas
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Criar uma implementação faseada
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Gerir e monitorizar as implementações faseadas
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Gerir o Windows como um serviço
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Implementar o Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Monitorizar implementações de SO
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Depurar uma sequência de tarefas
+      href: deploy-use/debug-task-sequence.md
+    - name: Configurar conteúdo de pré-cache
+      href: deploy-use/configure-precache-content.md
+    - name: Criar um suporte de dados de sequência de tarefas
+      items:
+        - name: Descrição geral de suporte de dados de sequência de tarefas
+          href: deploy-use/create-task-sequence-media.md
+        - name: Criar suportes de dados autónomos
+          href: deploy-use/create-stand-alone-media.md
+        - name: Criar suportes de dados pré-configurados
+          href: deploy-use/create-prestaged-media.md
+        - name: Criar suportes de dados de arranque
+          href: deploy-use/create-bootable-media.md
+        - name: Criar suportes de dados de captura
+          href: deploy-use/create-capture-media.md
+- name: Referências técnicas
+  items:
+    - name: Utilizar o editor de sequência de tarefas
+      href: understand/task-sequence-editor.md
+    - name: Experiências de utilizador para a implementação de SO
+      href: understand/user-experience.md
+    - name: Passos de sequência de tarefas
+      items:
+        - name: Acerca dos passos de sequência de tarefas
+          href: understand/task-sequence-steps.md
+        - name: Instalar Atualizações de Software
+          href: understand/install-software-updates.md
+        - name: Aprovisionar antecipadamente o BitLocker no Windows PE
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Como utilizar variáveis de sequência de tarefas
+      href: understand/using-task-sequence-variables.md
+    - name: Variáveis de sequência de tarefas
+      href: understand/task-sequence-variables.md
+    - name: Comandos de pré-início para suporte de dados da sequência de tarefas
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Modo de aprovisionamento
+      href: understand/provisioning-mode.md

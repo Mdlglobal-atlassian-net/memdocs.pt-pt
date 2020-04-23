@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Documentação sobre cogestão
+summary: A cogestão permite-lhe fazer a gestão de dispositivos com o Windows 10 ao utilizar simultaneamente o Configuration Manager e o Microsoft Intune.
+metadata:
+  title: Documentação sobre cogestão
+  titleSuffix: Configuration Manager
+  description: A cogestão permite-lhe fazer a gestão de dispositivos com o Windows 10 ao utilizar simultaneamente o Configuration Manager e o Microsoft Intune.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741005"
+landingContent:
+- title: Sobe a cogestão
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: O que é a cogestão?
+      url: overview.md
+    - text: Caminhos para a cogestão
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Acesso condicional com cogestão
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Introdução
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Ativar a cogestão para os clientes do Configuration Manager existentes
+      url: tutorial-co-manage-clients.md
+    - text: Ativar a cogestão para novos dispositivos baseados na Internet
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Atualizar para o Windows 10 para utilizar a cogestão
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Principais tarefas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Mudar as cargas de trabalho do Configuration Manager para o Intune
+      url: how-to-switch-workloads.md
+    - text: Monitorizar a cogestão no Configuration Manager
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot com cogestão
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player
