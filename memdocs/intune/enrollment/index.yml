@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Inscrever dispositivos no Microsoft Intune
-summary: Existem vários métodos para inscrever os dispositivos da força de trabalho. Cada método depende da propriedade do dispositivo (pessoal ou empresarial), do tipo de dispositivo (iOS, Windows, Android) e dos requisitos de gestão (reposições, afinidade, bloqueio).
+summary: Existem vários métodos para inscrever os dispositivos da equipa de trabalhadores. Cada método depende da propriedade do dispositivo (pessoal ou empresarial), do tipo de dispositivo (iOS, Windows, Android) e dos requisitos de gestão (reposições, afinidade, bloqueio).
 metadata:
   title: Inscrição no Microsoft Intune
   description: Página de destino da inscrição no Microsoft Intune
@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333945"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077959"
 landingContent:
 - title: Mais informações sobre a inscrição
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: Configurar a inscrição do iOS/iPadOS
       url: ios-enroll.md
-    - text: Inscrever automaticamente dispositivos iOS/iPadOS com o Programa de registo de aparelho da Apple
+    - text: Inscrever automaticamente dispositivos iOS/iPadOS com o Registo Automatizado de Dispositivos da Apple
       url: device-enrollment-program-enroll-ios.md
     - text: Configurar a Inscrição de Utilizadores do iOS/iPadOS
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: Configurar a inscrição de macOS
       url: macos-enroll.md
-    - text: Inscrever automaticamente dispositivos macOS com o Programa de Registo de Aparelho ou o Apple School Manager
+    - text: Inscrever automaticamente dispositivos macOS com o Registo Automatizado de Dispositivos ou o Apple School Manager
       url: device-enrollment-program-enroll-macos.md
     - text: Configurar a inscrição de dispositivos iOS/iPadOS com o Apple Configurator
       url: apple-configurator-enroll-ios.md

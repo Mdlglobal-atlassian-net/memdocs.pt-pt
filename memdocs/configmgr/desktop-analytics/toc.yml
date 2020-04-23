@@ -1,0 +1,60 @@
+- name: Documentação da Análise de Computadores
+  href: index.yml
+- name: Descrição geral
+  items:
+    - name: O que é a Análise de Computadores?
+      href: overview.md
+    - name: Novidades
+      href: whats-new.md
+- name: Tutorials (Tutoriais)
+  items:
+    - name: "Windows\_10 piloto"
+      href: tutorial-windows10.md
+- name: Conceitos
+  items:
+    - name: Planos de implementação
+      href: about-deployment-plans.md
+    - name: Recursos
+      href: about-assets.md
+    - name: Atualizações de funcionalidades e qualidade
+      href: about-updates.md
+    - name: Avaliação de compatibilidade
+      href: compat-assessment.md
+    - name: Monitorização do estado de funcionamento
+      href: health-status-monitoring.md
+- name: How-to guides (Guias de procedimentos)
+  items:
+    - name: Configurar a Análise de Computadores
+      href: set-up.md
+    - name: Ligar o Configuration Manager
+      href: connect-configmgr.md
+    - name: Inscrever dispositivos
+      href: enroll-devices.md
+    - name: Criar planos de implementação
+      href: create-deployment-plans.md
+    - name: Implementar para piloto
+      href: deploy-pilot.md
+    - name: Implementar para produção
+      href: deploy-prod.md
+    - name: Repor a conta
+      href: account-reset.md
+    - name: Fechar a conta
+      href: account-close.md
+- name: Referência
+  items:
+    - name: Ativar a partilha de dados
+      href: enable-data-sharing.md
+    - name: Privacidade
+      href: privacy.md
+    - name: Resolver Problemas
+      href: troubleshooting.md
+    - name: Recoletor de registos
+      href: log-collector.md
+    - name: Estado de funcionamento da ligação do monitor
+      href: monitor-connection-health.md
+    - name: Group policy settings (Definições de política de grupo)
+      href: group-policy-settings.md
+    - name: Perguntas mais frequentes
+      href: faq.md
+    - name: Obter suporte
+      href: get-support.md
