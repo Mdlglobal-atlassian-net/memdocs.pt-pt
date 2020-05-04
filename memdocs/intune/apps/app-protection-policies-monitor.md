@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 831bc368553f4806c6bc734ac5697d2b81de38fe
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323723"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Como monitorizar políticas de proteção de aplicações
@@ -43,7 +43,7 @@ O período de retenção para dados de proteção de aplicações é de 90 dias.
 ## <a name="summary-view"></a>Vista de resumo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Apps** > **monitor** > estado de proteção da **aplicação**.
+3. Selecione o**estado de proteção**da aplicação**monitor de** >  **apps** > .
 
    ![Screenshot do azulejo resumo no painel de gestão de aplicações móveis Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -76,7 +76,7 @@ Os utilizadores com dispositivos sinalizados pela verificação de **ameaças De
 
 ## <a name="reporting-view"></a>Vista de relatórios
 
-Pode encontrar os mesmos relatórios no topo do painel de proteção da **App.** Para visualizar estes relatórios, selecione **Apps** > estado de proteção de **aplicações** > **Relatórios**. O painel **de relatórios** fornece vários relatórios baseados no utilizador e na app, incluindo o seguinte:
+Pode encontrar os mesmos relatórios no topo do painel de proteção da **App.** Para visualizar estes relatórios, selecione Relatórios de**proteção** > de apps**de** **aplicações** > . O painel **de relatórios** fornece vários relatórios baseados no utilizador e na app, incluindo o seguinte:
 
 ### <a name="user-report"></a>Relatório do utilizador
 
@@ -87,7 +87,7 @@ Pode procurar um único utilizador e ver o estado de conformidade do mesmo. O pa
 - **Nome**do dispositivo : Dispositivos associados à conta do utilizador.
 - **Tipo de dispositivo**: O tipo de dispositivo ou sistema operativo que o dispositivo está a funcionar.
 - **Políticas**: As políticas associadas à app.
-- **Estado**:
+- **Estado:**
   - **Com entrada dada:** a política foi implementada no utilizador e a aplicação foi utilizada no contexto profissional pelo menos uma vez.
   - **Não foi verificado**: A apólice foi implementada para o utilizador, mas a aplicação não foi utilizada no contexto de trabalho desde então.
 - **Last Sync**: Quando a aplicação foi sincronizada pela última vez com Intune.
@@ -173,9 +173,9 @@ Siga estes passos para gerar ficheiro App Protection .csv ou ficheiro App Config
     ![Captura de ecrã da caixa de confirmação Guardar relatório](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> A Intune fornece campos adicionais de reporte de dispositivos, incluindo id de registo de aplicações, fabricante android, modelo e versão de patch de segurança, bem como o modelo iOS/iPadOS. Intune, você acede a estes campos selecionando **Apps** > **estado de proteção** de aplicações > Relatório de Proteção de **Aplicações: iOS/iPadOS, Android**. Além disso, estes parâmetros ajudam a configurar a lista **de permitir** para o fabricante do dispositivo (Android), a lista **de permitir** o modelo do dispositivo (Android e iOS/iPadOS) e a definição mínima de patch de **segurança Android.**   
+> A Intune fornece campos adicionais de reporte de dispositivos, incluindo id de registo de aplicações, fabricante android, modelo e versão de patch de segurança, bem como o modelo iOS/iPadOS. Intune, acede a estes campos selecionando o > estado de**proteção**de **apps** > **App Protection Report: iOS/iPadOS, Android**. Além disso, estes parâmetros ajudam a configurar a lista **de permitir** para o fabricante do dispositivo (Android), a lista **de permitir** o modelo do dispositivo (Android e iOS/iPadOS) e a definição mínima de patch de **segurança Android.**   
  
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Gerir a transferência de dados entre aplicações iOS/iPadOS](data-transfer-between-apps-manage-ios.md)
 - [O que esperar quando a aplicação Android é gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-android.md)
 - [O que esperar quando a sua aplicação iOS/iPadOS for gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-ios.md)

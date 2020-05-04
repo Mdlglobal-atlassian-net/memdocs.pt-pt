@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327913"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Submeter os erros do seu dispositivo macOS gerido às pessoas certas
@@ -38,7 +38,7 @@ Para enviar detalhes sobre um erro na aplicação Portal da Empresa:
 
 - Clique no menu **Ajuda** > **Guardar Relatório de Diagnóstico**. Selecione uma localização para guardar o ficheiro. Em seguida, envie por e-mail ou carregue este ficheiro para o responsável pelo suporte da sua empresa.
 
-- Se a aplicação de e-mail estiver configurada, poderá enviar o relatório de diagnóstico ao aceder a **Ajuda** > **Enviar Relatório de Diagnóstico**. Depois de carregar os registos, clique em **Enviar detalhes por e-mail**.
+- Se a sua aplicação de e-mail estiver configurada, pode enviar o relatório de diagnóstico indo **para ajudar a** > **enviar relatório de diagnóstico**. Depois de carregar os registos, clique em **Enviar detalhes por e-mail**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Enviar erros para os programadores do Portal da Empresa para dispositivos macOS
 
@@ -50,4 +50,4 @@ Para enviar registos para a Microsoft:
 2. Clique no menu **Ajuda** > **Enviar Relatório de Diagnóstico**.  Depois de os registos serem carregados, receberá um ID do incidente. Copie e guarde o ID.
 3. Envie <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">este modelo</a> por e-mail para a Microsoft.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

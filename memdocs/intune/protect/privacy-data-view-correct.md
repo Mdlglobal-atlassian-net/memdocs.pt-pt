@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084781"
 ---
 # <a name="view-and-correct-personal-data"></a>View and correct personal data (Ver e corrigir dados pessoais)
@@ -52,6 +52,6 @@ Para saber mais sobre as práticas de dados da Microsoft, leia os Termos dos Ser
 Os administradores não podem atualizar informações específicas sobre dispositivos ou aplicações. Se o utilizador final quiser corrigir algum dado pessoal, por exemplo o nome do dispositivo, tem de o fazer diretamente no dispositivo. Essas alterações serão sincronizadas na próxima vez que o utilizador se ligar ao Intune.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba como [auditar, exportar ou eliminar](privacy-data-audit-export-delete.md) dados pessoais no Intune.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332197"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Questões e resoluções comuns com perfis de e-mail no Microsoft Intune
@@ -53,7 +53,7 @@ A Samsung KNOX não usa o nome de anfitrião para identificar o perfil. Recomend
 
 ## <a name="error-0x87d1fde8-for-knox-standard-device"></a>Erro 0x87D1FDE8 para dispositivo knox Standard
 
-**Problema**: Após a criação e implementação de um perfil de e-mail Exchange Ative Sync para o Samsung KNOX Standard para diferentes dispositivos Android, o erro falhado **0x87D1FDE8** ou **remediação falha** nos erros do dispositivo .
+**Problema**: Após a criação e implementação de um perfil de e-mail Exchange Ative Sync para o Samsung KNOX Standard para diferentes dispositivos Android, o erro falhado **0x87D1FDE8** ou **remediação falha** nos erros falhados do dispositivo > separador de política.
 
 Reveja a configuração do seu perfil EAS para Samsung KNOX e a política de origem. A opção de sincronização de Notas Samsung já não é suportada e essa opção não deve ser selecionada no seu perfil. Certifique-se de que os dispositivos têm tempo suficiente para processar a apólice, até 24 horas.
 
@@ -62,10 +62,10 @@ Reveja a configuração do seu perfil EAS para Samsung KNOX e a política de ori
 Os utilizadores que tenham contas de e-mail configuradas automaticamente não podem enviar imagens ou imagens dos seus dispositivos. Este cenário pode acontecer se permitir que o **e-mail seja enviado a partir de aplicações de terceiros** não está ativado.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > perfis de **configuração**.
-3. Selecione o seu perfil de e-mail > **Propriedades** > **Definições**.
+2. Selecione perfis de**configuração**de **dispositivos** > .
+3. Selecione o seu perfil de e-mail >**Definições** **de Propriedades** > .
 4. Defina o **e-mail permitir que o e-mail seja enviado a partir da** definição de aplicações de terceiros para **ativar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Obtenha [ajuda de suporte da Microsoft](../fundamentals/get-support.md), ou use os [fóruns comunitários](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

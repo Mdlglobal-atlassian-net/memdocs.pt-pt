@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323441"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Utilizar perfis de aprovisionamento de aplicações iOS para impedir as aplicações de expirar
@@ -45,7 +45,7 @@ Como administrador, pode incluir e excluir grupos de segurança para atribuir a 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Como criar um perfil de aprovisionamento de aplicação móvel de iOS
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > os perfis de **fornecimento de aplicações iOS** > **Criar o perfil**.
+2. Selecione **Apps** > **iOS fornecer perfis** > **Criar perfil**.
 3. Na página Basics, adicione os **seguintes valores:**
     - **Nome** – indique um nome para este perfil de aprovisionamento móvel.
     - **Descrição** - opcionalmente, indique uma descrição para a política.
@@ -62,6 +62,6 @@ Como administrador, pode incluir e excluir grupos de segurança para atribuir a 
 6. Clique **em Seguir: Rever + criar** para rever os valores introduzidos para o perfil.
 7. Quando terminar, clique em **Criar** o perfil de provisionamento de aplicações iOS/iPadOS em Intune. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Atribuir o perfil aos dispositivos iOS/iPadOS necessários. Para obter mais informações, siga os passos em [Como atribuir perfis de dispositivo](../configuration/device-profile-assign.md).

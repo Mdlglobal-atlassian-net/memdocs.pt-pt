@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326752"
 ---
 # <a name="intune-reports"></a>Relatórios do Intune
@@ -54,12 +54,12 @@ Os dispositivos não conformes reportam dados normalmente utilizados por funçõ
 Pode ver o relatório de **dispositivos não conformes** utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **dispositivos** > **monitor > ** **dispositivos não conformes**.
+2. Selecione **dispositivos** > **Monitor de** > **dispositivos não conformes**.
 
     ![Relatório de dispositivos não conformes](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Se já utilizou anteriormente intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando a **conformidade** do Dispositivo > **dispositivos não conformes.**
+    > Se já utilizou anteriormente intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando**dispositivos não conformes**com o **dispositivo.** > 
 
 ## <a name="device-compliance-report-organizational"></a>Relatório de conformidade com dispositivos (Organizacional)
 
@@ -113,7 +113,7 @@ Um relatório especializado de exemplo iria corelate dados de propriedade do dis
 Pode criar e ver relatórios personalizados utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Relatórios** > **Definições de diagnóstico** adicione uma [definição de diagnóstico](reports.md#diagnostic-settings).
+2. Selecione **Relatórios** > **As definições de** diagnóstico adicionam uma [definição de diagnóstico](reports.md#diagnostic-settings).
 
     ![Resumo dos Relatórios Intune](./media/intune-reports/intune-reports-04.png)
 
@@ -146,16 +146,16 @@ Para mais informações, sobre configurações de diagnóstico, consulte [Criar 
 ### <a name="log-analytics"></a>Log Analytics
 O Log Analytics é a principal ferramenta no portal Azure para escrever consultas de registo e analisar interativamente os resultados das consultas. Mesmo que uma consulta de log seja usada em outro lugar do Monitor Azure, você normalmente escreverá e testará a consulta usando log analytics. Para mais detalhes sobre a utilização do Log Analytics e a criação de consultas de registo, consulte a [visão geral das consultas de registo no Monitor Azure](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>livros de relomários
+### <a name="workbooks"></a>Livros
 Os livros de trabalho combinam texto, consultas de Análise, Métricas Azure e parâmetros em relatórios interativos ricos. Os livros de recção são editáveis por quaisquer outros membros da equipa que tenham acesso aos mesmos recursos Do Azure. Para obter mais informações sobre livros, consulte [os livros do Monitor Do Azure.](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks) Além disso, pode trabalhar e contribuir para modelos de livro. Para mais informações, consulte os modelos do [livro do Monitor Azure](https://go.microsoft.com/fwlink/?linkid=867045).
 
-## <a name="next-steps"></a>Próximos passos 
+## <a name="next-steps"></a>Passos seguintes 
 
 Saiba mais sobre as seguintes tecnologias:
 - [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
 - [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [O que é Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Consultas de registo](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
+- [O que é o Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Registar consultas](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
 - [Começar com Log Analytics no Monitor Azure](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
 - [Livros Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
 - [Ferramentas de informação de segurança e gestão de eventos (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)

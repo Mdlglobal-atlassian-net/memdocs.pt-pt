@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80220171"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Controlo de acesso baseado em funções (RBAC) com microsoft Intune
@@ -37,7 +37,7 @@ Para conselhos e sugestões sobre intune RBAC, você pode conferir esta série d
 ## <a name="roles"></a>Funções
 Uma função define o conjunto de permissões concedidas aos utilizadores atribuídos a essa função.
 Você pode usar tanto os papéis incorporados como personalizados. Os papéis incorporados cobrem alguns cenários intune comuns. Pode [criar os seus próprios papéis personalizados](create-custom-role.md) com o conjunto exato de permissões de que necessita. Várias funções de Diretório Ativo Azure têm permissões para Intune.
-Para ver um papel, escolha **Intune** > **Roles** > **Todos os papéis** > escolha um papel. Verá as seguintes páginas:
+Para ver um papel, escolha**Papéis** >  **Intune** > **Todos os papéis** > escolher um papel. Verá as seguintes páginas:
 
 - **Propriedades**: O nome, descrição, tipo, atribuições e etiquetas de âmbito para o papel. 
 - **Permissões**: Lista um longo conjunto de alternâncias que definem as permissões que o papel tem.
@@ -46,7 +46,7 @@ Para ver um papel, escolha **Intune** > **Roles** > **Todos os papéis** > escol
 ### <a name="built-in-roles"></a>Funções incorporadas
 Pode atribuir funções incorporadas a grupos sem configuração adicional. Não é possível excluir ou editar o nome, descrição, tipo ou permissões de um papel incorporado.
 
-- **Operador do Suporte Técnico**: executa tarefas remotas em utilizadores e dispositivos e pode atribuir políticas ou aplicações a utilizadores ou dispositivos.
+- **Operador de Secretária**de Ajuda : Executa tarefas remotas em utilizadores e dispositivos e pode atribuir aplicações ou políticas a utilizadores ou dispositivos.
 - **Policy and Profile Manager**: Gere a política de conformidade, perfis de configuração, inscrição da Apple, identificadores de dispositivos corporativos e linhas de base de segurança.
 - **Operador Só de Leitura**: vê as informações do utilizador, do dispositivo, da inscrição, da configuração e da aplicação. Não posso fazer alterações ao Intune.
 - **Gestor de Aplicações**: gere aplicações móveis e geridas, pode ler as informações do dispositivo e ver os perfis de configuração do dispositivo.
@@ -60,15 +60,15 @@ Pode criar os seus próprios papéis com permissões personalizadas. Para mais i
 ### <a name="azure-active-directory-roles-with-intune-access"></a>Funções de Diretório Ativo Azure com acesso Intune
 | Papel de Diretório Ativo Azure | Todos os dados intune | Dados de auditoria insintonizados |
 | --- | :---: | :---: |
-| Administrador Global | Ler/escrever | Ler/escrever |
-| Administrador de Serviços do Intune | Ler/escrever | Ler/escrever |
-| Administrador de Acesso Condicional | Nenhum | Nenhum |
-| Administrador de Segurança | Leia apenas (permissões administrativas completas para nó de segurança endpoint) | Ler apenas |
-| Operador de Segurança | Ler apenas | Ler apenas |
-| Leitor de Segurança | Ler apenas | Ler apenas |
-| Administrador de Conformidade | Nenhum | Ler apenas |
-| Administrador de Dados de Conformidade | Nenhum | Ler apenas |
-| Leitor Global | Ler Apenas | Ler Apenas |
+| Administrador Global | Leitura/escrita | Leitura/escrita |
+| Administrador de Serviços do Intune | Leitura/escrita | Leitura/escrita |
+| Administrador de Acesso Condicional | Nenhuma | Nenhuma |
+| Administrador de Segurança | Leia apenas (permissões administrativas completas para nó de segurança endpoint) | Só de leitura |
+| Operador de Segurança | Só de leitura | Só de leitura |
+| Leitor de Segurança | Só de leitura | Só de leitura |
+| Administrador de Conformidade | Nenhuma | Só de leitura |
+| Administrador de Dados de Conformidade | Nenhuma | Só de leitura |
+| Leitor Global | Só de Leitura | Só de Leitura |
 
 > [!TIP]
 > Intune também mostra três extensões Azure AD: **Utilizadores**, **Grupos**, e **Acesso Condicional**, que são controlados usando O Azure AD RBAC. Além disso, o **Administrador da Conta de Utilizador** só executa as atividades do utilizador/grupo do AAD e não tem permissões completas para executar todas as atividades no Intune. Para mais informações, consulte [RBAC com Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
@@ -81,12 +81,12 @@ Uma atribuição de funções define:
 - que recursos podem mudar.
 
 Pode atribuir aos seus utilizadores funções personalizadas e incorporadas. Para ser atribuída uma função Intune, o utilizador deve ter uma licença Intune.
-Para ver uma atribuição de papéis, escolha **Intune** > **Roles** > **Todas as funções** > escolha um papel > escolha uma atribuição. Verá as seguintes páginas:
+Para ver uma atribuição de papéis, escolha**Papéis** >  **Intune** > **Todos os papéis** > escolher um papel > escolher uma atribuição. Verá as seguintes páginas:
 
 - **Propriedades**: O nome, descrição, função, membros, âmbitos e etiquetas da atribuição.
 - **Membros**: Todos os utilizadores dos grupos de segurança Azure listados têm permissão para gerir os utilizadores/dispositivos listados no Scope (Grupos).
-- **Âmbito (Grupos)** : Todos os utilizadores/dispositivos destes grupos de segurança Azure podem ser geridos pelos utilizadores em Membros.
-- **[Âmbito (Etiquetas)](scope-tags.md)** : Os utilizadores dos Membros podem ver os recursos que têm as mesmas etiquetas de âmbito.
+- **Âmbito (Grupos)**: Todos os utilizadores/dispositivos destes grupos de segurança Azure podem ser geridos pelos utilizadores em Membros.
+- **[Âmbito (Etiquetas)](scope-tags.md)**: Os utilizadores dos Membros podem ver os recursos que têm as mesmas etiquetas de âmbito.
 
 ### <a name="multiple-role-assignments"></a>Atribuições de múltiplos papéis
 Se um utilizador tiver múltiplas atribuições de funções, permissões e etiquetas de âmbito, essas atribuições de funções estendem-se a diferentes objetos da seguinte forma:
@@ -95,6 +95,6 @@ Se um utilizador tiver múltiplas atribuições de funções, permissões e etiq
 - Outras permissões (como Criar, Ler, Atualizar, Excluir) e etiquetas de âmbito aplicam-se a todos os objetos do mesmo tipo (como todas as políticas ou todas as aplicações) em qualquer uma das atribuições do utilizador.
 - Permissões e etiquetas de âmbito para objetos de diferentes tipos (como políticas ou aplicações), não se aplicam entre si. A Read permission for a policy, por exemplo, não fornece uma permissão de Leitura para apps nas atribuições do utilizador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Atribuir uma função a um utilizador](assign-role.md)
-- [Criar um papel personalizado](create-custom-role.md)
+- [Criar uma função personalizada](create-custom-role.md)

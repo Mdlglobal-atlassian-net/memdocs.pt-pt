@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326943"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Problemas de resolução de problemas iOS/iPadOS problemas de inscrição no microsoft Intune
@@ -34,7 +34,7 @@ Antes de começar a resolver problemas, é importante recolher algumainformaçã
 
 Recolher as seguintes informações sobre o problema:
 
-- Qual é a mensagem exata de erro?
+- Qual é a mensagem de erro exata?
 - Onde vê a mensagem de erro?
 - Quando começou o problema? A inscrição já funcionou?
 - Que plataforma (Android, iOS/iPadOS, Windows) tem o problema?
@@ -52,7 +52,7 @@ Recolher as seguintes informações sobre o problema:
 #### <a name="resolution"></a>Resolução
 
 1. Para evitar a perda de dados nos seguintes passos (restaurar o iOS/iPadOS elimina todos os dados do dispositivo), certifique-se de que faz o backback dos seus dados.
-2. Coloque o dispositivo em modo de recuperação e, em seguida, restaure-o. Certifique-se de que o configura como um novo dispositivo. Para obter mais informações sobre como restaurar os dispositivos iOS/iPadOS, consulte [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+2. Coloque o dispositivo em modo de recuperação e, em seguida, restaure-o. Certifique-se de que o configura como um novo dispositivo. Para obter mais informações sobre como restaurar os [https://support.apple.com/HT201263](https://support.apple.com/HT201263)dispositivos iOS/iPadOS, consulte .
 3. Reinscreva o dispositivo.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Instalação de perfil falhou. A ligação ao servidor não pôde ser estabelecida.
@@ -60,10 +60,10 @@ Recolher as seguintes informações sobre o problema:
 **Causa:** O seu inquilino Intune está configurado para permitir apenas dispositivos corporativos. 
 
 #### <a name="resolution"></a>Resolução
-1. Inicie sessão no portal do Azure.
+1. Inicie sessão no Portal do Azure.
 2. Selecione **Mais Serviços,** procure Intune e, em seguida, selecione **Intune**.
-3. Selecione **Inscrição de dispositivos** > **Restrições de inscrição**.
-4. Sob restrições de **tipo de dispositivo,** selecione a restrição que pretende definir > **Propriedades** > **Selecione plataformas** > selecione **Permitir** **iOS,** e depois clique **EM OK**.
+3. Selecione**restrições**de **inscrição** > do dispositivo .
+4. Sob restrições de **tipo de dispositivo,** selecione a restrição que pretende definir > **Propriedades** > **Selecione as plataformas** > selecione **Permitir** **iOS**e, em seguida, clique em **OK**.
 5. **Selecione plataformas De Configuração,** selecione **Permitir** dispositivos iOS/iPadOS de propriedade pessoal e, em seguida, clique em **OK**.
 6. Reinscreva o dispositivo.
 
@@ -78,8 +78,8 @@ Se houver mais de um domínio verificado, crie um registo CNAME para cada domín
 
 |TIPO|Nome do anfitrião|Aponta para|TTL|
 |------|------|------|------|
-|CNAME|EnterpriseEnrollment.dominio_empresa.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.dominio_empresa.com|EnterpriseRegistration.windows.net|1 Hr|
+|CNAME|EnterpriseEnrollment.dominio_da_empresa.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
+|CNAME|EnterpriseRegistration.dominio_da_empresa.com|EnterpriseRegistration.windows.net|1 Hr|
 
 Se a sua empresa utilizar vários domínios para as credenciais do utilizador, crie os registos CNAME para cada domínio.
 
@@ -90,7 +90,7 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 
 #### <a name="resolution"></a>Resolução
 1. Cancele qualquer instalação de perfil atual.
-2. Abra [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) em Safari.
+2. Aberto [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) em Safari.
 3. Reinscreva o dispositivo.
 
 > [!NOTE]
@@ -99,15 +99,15 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 **Causa:** O dispositivo já está matriculado com outro fornecedor de MDM.
 
 #### <a name="resolution"></a>Resolução
-1. Abra **as Definições** no dispositivo iOS/iPadOS, vá para **a General > Gestão de Dispositivos**.
+1. Abra **as Definições** no dispositivo iOS/iPadOS, vá para a **Gestão geral de dispositivos >**.
 2. Remova qualquer perfil de gestão existente.
 3. Reinscreva o dispositivo.
 
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Microsoft Intune.
 
 #### <a name="resolution"></a>Resolução
-1. Vá ao [Office 365 Admin Center,](https://admin.microsoft.com)e depois escolha **Utilizadores > Utilizadores Ativos**.
-2. Selecione a conta de utilizador a que pretende atribuir uma licença de utilizador Intune e, em seguida, escolha as licenças do **Produto > Edit**.
+1. Vá ao [Office 365 Admin Center,](https://admin.microsoft.com)e depois escolha **utilizadores > Utilizadores Ativos**.
+2. Selecione a conta de utilizador a que pretende atribuir uma licença de utilizador Intune e, em seguida, escolha **as licenças do Produto > Editar**.
 3. Mude o alternância para a posição **On** para a licença que pretende atribuir a este utilizador e, em seguida, escolha **Guardar**.
 4. Reinscreva o dispositivo.
 
@@ -131,15 +131,15 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
  > [!NOTE]
     > Este erro também pode ocorrer se o utilizador estiver a tentar inscrever mais dispositivos do que a inscrição do dispositivo está configurada para permitir. Siga as medidas de resolução para a Tampa do **Dispositivo Alcançada** abaixo se estes passos não resolverem o problema.
 
-### <a name="device-cap-reached"></a>Tampa do dispositivo alcançada
+### <a name="device-cap-reached"></a>Limite de Dispositivos Atingido
 
 **Causa:** O utilizador tenta inscrever mais dispositivos do que o limite de inscrição do dispositivo.
 
 #### <a name="resolution"></a>Resolução
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os Dispositivos**, e verifique o número de dispositivos que o utilizador inscreveu.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **Todos os Dispositivos**, e verifique o número de dispositivos que o utilizador inscreveu.
     > [!NOTE]
     > Deve também ter o logon do utilizador afetado no portal do [utilizador Intune](https://portal.manage.microsoft.com/) e verificar os dispositivos que se inscreveram. Podem existir dispositivos que aparecem no portal do [utilizador intune,](https://portal.manage.microsoft.com/) mas não no [portal de administração Intune,](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)estes dispositivos também contam para o limite de inscrição do dispositivo.
-2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > restrições de **inscrição** > verifique o limite de inscrição do dispositivo. Por predefinição, o limite é fixado para 15. 
+2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**restrições** de inscrição de **dispositivos** > > verifique o limite de inscrição do dispositivo. Por predefinição, o limite é fixado para 15. 
 3. Se o número de dispositivos matriculados atingir o limite, remova dispositivos desnecessários ou aumente o limite de inscrição do dispositivo. Como cada dispositivo matriculado consome uma licença Intune, recomendamos que remova sempre os dispositivos desnecessários primeiro.
 4. Reinscreva o dispositivo.
 
@@ -157,8 +157,8 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Intune válida.
 
 #### <a name="resolution"></a>Resolução
-1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
-2. Selecione a conta de utilizador afetada > **Licenças** de produto > **Editar**.
+1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **ativos utilizadores**.
+2. Selecione a conta de utilizador afetada > **Licenças** > do Produto**Editar**.
 3. Verifique se uma licença Intune válida é atribuída a este utilizador.
 4. Reinscreva o dispositivo.
 
@@ -166,8 +166,8 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 
 **Causa:** O utilizador que está a tentar inscrever o dispositivo não tem uma licença Intune válida.
 
-1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **Utilizadores Ativos**.
-2. Selecione a conta de utilizador afetada e, em seguida, escolha **as licenças** do Produto > **Editar**.
+1. Vá ao centro de administração da [Microsoft 365](https://admin.microsoft.com)e, em seguida, escolha **utilizadores** > **ativos utilizadores**.
+2. Selecione a conta de utilizador afetada e, em seguida, escolha **as licenças** > do Produto**Editar**.
 3. Verifique se uma licença Intune válida é atribuída a este utilizador.
 4. Reinscreva o dispositivo.
 
@@ -177,7 +177,7 @@ Se a sua empresa utilizar vários domínios para as credenciais do utilizador, c
 
 #### <a name="resolution"></a>Resolução
 
-1. Abra **as Definições** no dispositivo iOS/iPadOS > **General** > Gestão de **Dispositivos**.
+1. Abrir **Definições** no dispositivo iOS/iPadOS > Gestão **Geral** > **de Dispositivos**.
 2. Toque no perfil de gestão existente e toque em **Remover Gestão.**
 3. Reinscreva o dispositivo.
 
@@ -219,7 +219,7 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 Corrija o problema de ligação ou utilize uma ligação de rede diferente para inscrever o dispositivo. Poderá também ter de contactar a Apple se o problema persistir.
 
 
-## <a name="other-issues"></a>Outras questões
+## <a name="other-issues"></a>Outros problemas
 
 ### <a name="ade-enrollment-doesnt-start"></a>A inscrição no ADE não começa
 Quando liga um dispositivo gerido pelo ADE que é atribuído a um perfil de inscrição, o processo de inscrição intune não é iniciado.
@@ -229,7 +229,7 @@ Quando liga um dispositivo gerido pelo ADE que é atribuído a um perfil de insc
 #### <a name="resolution"></a>Resolução
 
 1. Editar o perfil de inscrição. Pode fazer qualquer alteração no perfil. O objetivo é atualizar o tempo de modificação do perfil.
-2. Synchronize dispositivos geridos pelo ADE: No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **iOS matricula** do programa > **Inscrição tokens** > escolha agora um token > **Sync.** É enviado um pedido de sincronização para a Apple.
+2. Synchronize dispositivos geridos pelo ADE: No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS iOS** > programa de inscrição do programa de**inscrição** > **Enrollment program tokens** > escolha um token > **Sync agora**. É enviado um pedido de sincronização para a Apple.
 
 ### <a name="ade-enrollment-stuck-at-user-login"></a>Inscrição aDE presa no login do utilizador
 Quando liga um dispositivo gerido pelo ADE que lhe é atribuído um perfil de inscrição, a configuração inicial fica depois de introduzir credenciais.
@@ -240,9 +240,9 @@ Quando liga um dispositivo gerido pelo ADE que lhe é atribuído um perfil de in
 Desative o MFA e, em seguida, reinscreva o dispositivo.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Resolução de problemas de inscrição de dispositivos no Intune](troubleshoot-device-enrollment-in-intune.md)
+- [Resolver problemas de inscrição de dispositivos no Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Faça uma pergunta sobre o fórum Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Consulte o Blog da Equipa de Suporte Intune da Microsoft](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Consulte o Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

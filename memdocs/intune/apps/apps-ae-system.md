@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce2a685abc1997e0152fcc2cf087b8c54d2253c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324632"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Adicione aplicações do sistema Android Enterprise ao Microsoft Intune
@@ -39,7 +39,7 @@ Pode adicionar uma aplicação do sistema Android Enterprise ao Intune a partir 
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 Na página de informações da **App,** adicione os detalhes da aplicação:
     - Nome da **aplicação**: Introduza o nome da aplicação.
-    - **Publicador**: introduza o nome do publicador da aplicação.  
+    - **Editor**: Insira o nome do editor da app.  
     - **Nome do pacote**: Introduza um nome de pacote. Intune validará que o nome do pacote é válido.
 5. Clique em **Seguir** para exibir a página **de tags scope.**
 8. Clique em **Selecionar etiquetas** de âmbito para adicionar opcionalmente etiquetas de âmbito para a aplicação. Para mais informações, consulte [Utilize o controlo de acesso baseado em funções (RBAC) e as etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
@@ -58,6 +58,6 @@ A aplicação criada é apresentada na lista de aplicações, onde a pode atribu
 As aplicações do sistema Android Enterprise vão ativar ou desativar aplicações que já fazem parte da plataforma. Para ativar uma aplicação, atribua a aplicação do sistema conforme **necessário**. Para desativar uma aplicação, atribua a aplicação do sistema como **Desinstalar**. As aplicações do sistema não podem ser atribuídas como disponíveis para um utilizador.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Atribuir aplicações a grupos](apps-deploy.md)

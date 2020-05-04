@@ -17,10 +17,10 @@ ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086495"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Definições de dispositivos Holográficos windows 10 e Windows para adicionar ligações VPN usando Intune
@@ -56,7 +56,7 @@ Criar um perfil de configuração do [dispositivo VPN](vpn-settings-configure.md
 
   - **Pulse Secure**
   - **F5 Edge Client**
-  - **SonicWALL Mobile Connect**
+  - **Conexão Móvel SonicWALL**
   - **Check Point Capsule VPN**
   - **Citrix**
   - **Palo Alto Networks GlobalProtect**
@@ -119,7 +119,7 @@ Para obter mais informações sobre a criação de XML de EAP, veja [Configuraç
 
 - **Regras de tráfego de rede para esta ligação VPN**: selecione os protocolos, as portas locais e remotas e os intervalos de endereços que estão ativados para a ligação VPN. Se não criar uma regra de tráfego de rede, todos os protocolos, portas e intervalos de endereços estarão ativados. Depois de criar uma regra, a ligação VPN apenas utiliza os protocolos, portas e intervalos de endereços que introduzir nessa regra.
 
-## <a name="conditional-access"></a>Conditional Access
+## <a name="conditional-access"></a>Acesso Condicional
 
 - **Acesso Condicional para esta ligação VPN**: Permite o fluxo de conformidade do dispositivo do cliente. Quando estiver ativado, o cliente VPN comunica com o Azure Active Directory (AD) para obter um certificado para utilizar na autenticação. A VPN deve estar configurado para utilizar a autenticação de certificado e o servidor VPN tem de confiar no servidor devolvido pelo Azure AD.
 
@@ -150,7 +150,7 @@ Para obter mais informações sobre a criação de XML de EAP, veja [Configuraç
   - **Domínio**: Introduza o nome de domínio totalmente qualificado (FQDN) ou um sufixo DNS para aplicar a regra. Também pode entrar num período (.) no início para um sufixo DNS. Por exemplo, introduza: `contoso.com` ou `.allcontososubdomains.com`.
   - **Servidores DNS**: Introduza o endereço IP ou o servidor DNS que resolva o domínio. Por exemplo, introduza: `10.0.0.3` ou `vpn.contoso.com`.
   - **Proxy**: Introduza o servidor de procuração web que resolve o domínio. Por exemplo, introduza `http://proxy.com`.
-  - **Ligue-se automaticamente**: Quando **ativado,** o dispositivo liga-se automaticamente à VPN quando um dispositivo se liga a um domínio em que entra, como `contoso.com`. Quando **não está configurado** (predefinido), o dispositivo não se liga automaticamente à VPN
+  - **Ligue-se automaticamente**: Quando **ativado,** o dispositivo liga-se automaticamente à VPN quando `contoso.com`um dispositivo se liga a um domínio em que entra, como . Quando **não está configurado** (predefinido), o dispositivo não se liga automaticamente à VPN
   - **Persistente**: Quando programado para **ativado,** a regra permanece na tabela política de resolução de nomes (NRPT) até que a regra seja removida manualmente do dispositivo, mesmo depois de a VPN se desligar. Quando definido para **Não configurado** (predefinido), as regras de NRPT no perfil VPN são removidas do dispositivo quando a VPN se desliga.
 
 ## <a name="proxy-settings"></a>Definições de proxy
@@ -162,7 +162,7 @@ Para obter mais informações sobre a criação de XML de EAP, veja [Configuraç
 
 ## <a name="split-tunneling"></a>Dividir Túnel
 
-- **Dividir túnel**: **ative** ou **desative** esta opção para permitir que os dispositivos decidam qual a ligação a utilizar consoante o tráfego. Por exemplo, um utilizador num hotel utiliza a ligação VPN para aceder aos ficheiros de trabalho, mas utiliza a rede padrão do hotel para a navegação normal na Internet.
+- **Túnel dividido**: **Ativar** ou **desativar** para permitir que os dispositivos decidam qual a ligação a utilizar dependendo do tráfego. Por exemplo, um utilizador num hotel utiliza a ligação VPN para aceder aos ficheiros de trabalho, mas utiliza a rede padrão do hotel para a navegação normal na Internet.
 - **Dividir rotas de túnel para esta ligação VPN**: adicione rotas opcionais para fornecedores de VPN de terceiros. Introduza um prefixo de destino e um tamanho de prefixo para cada ligação.
 
 ## <a name="trusted-network-detection"></a>Deteção de Rede Fidedigna
@@ -179,7 +179,7 @@ Por exemplo, se o utilizador já estiver ligado a um sufixo DNS fidedigno, entã
 - Gatilho baseado em aplicativos
 - Gatilho automático DNS
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md)e [monitorize o seu estado](device-profile-monitor.md).
 

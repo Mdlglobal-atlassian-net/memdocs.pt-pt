@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324495"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorizar informações e atribuições da aplicação com o Microsoft Intune
@@ -49,8 +49,8 @@ A secção **Essentials** contém as seguintes informações sobre a aplicação
 
  | **Detalhes da aplicação**            | **Descrição**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **Publicador**          | O publicador da aplicação.                                            |
-| **Sistema operativo**   | O sistema operativo da aplicação (Windows, iOS/iPadOS, Android, e assim por diante). |
+| **Editora**          | O publicador da aplicação.                                            |
+| **Sistema Operativo**   | O sistema operativo da aplicação (Windows, iOS/iPadOS, Android, e assim por diante). |
 | **Criado**             | A data e hora em que esta revisão foi criada. <b>**Nota**: Este valor de data é atualizado quando um administrador de TI altera os metadados da aplicação, tais como alterar a categoria de aplicação ou descrição da aplicação.                        |
 | **Atribuído**           | Se a aplicação foi atribuída (**Sim** ou **Não**).                  |
 
@@ -60,10 +60,10 @@ Os gráficos mostram o número de aplicações para os seguintes estados:
 | **Estado do dispositivo**       | **Descrição**                                       |
 |-----------------------|-------------------------------------------------------|
 | **Instalada**         | O número de aplicações instaladas.                         |
-| **Não Instalado**     | O número de aplicações não instaladas.                     |
+| **Não instalado**     | O número de aplicações não instaladas.                     |
 | **Falhou**            | O número de instalações falhadas.                   |
 | **Instalação Pendente**   | O número de aplicações no processo de serem instaladas. |
-| **Não Aplicável**           | O número de aplicações em que o estado não é aplicável.            |
+| **Não aplicável**           | O número de aplicações em que o estado não é aplicável.            |
 
 > [!NOTE]
 > Esteja ciente de que as aplicações Android LOB (. APK) implementado como **disponível com ou sem inscrição** apenas reporte o estado de instalação da aplicação para dispositivos matriculados. O estado de instalação das aplicações não está disponível para dispositivos que não estão inscritos no Intune.
@@ -96,7 +96,7 @@ Uma lista de estados do utilizador é apresentada ao selecionar **Estado de inst
 | **Não instalado**   | O número de aplicações não instaladas pelo utilizador. |
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para obter mais informações sobre como trabalhar com os dados do seu Intune, veja [Utilizar o Armazém de Dados do Intune](../developer/reports-nav-create-intune-reports.md).
 - Para saber mais sobre as políticas de configuração de aplicações, veja [Políticas de configuração de aplicações do Intune](app-configuration-policies-overview.md).

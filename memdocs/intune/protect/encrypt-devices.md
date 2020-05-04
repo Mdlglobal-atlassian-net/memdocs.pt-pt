@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322477"
 ---
 # <a name="use-device-encryption-with-intune"></a>Utilizar encriptação do dispositivo com Intune
@@ -68,7 +68,7 @@ Seguem-se as permissões FileVault, que fazem parte da categoria de **tarefas Re
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Definir as seguintes opções:
 
@@ -97,7 +97,7 @@ Depois de a Intune encriptar um dispositivo macOS com fileVault, pode visualizar
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Recuperar a chave de recuperação pessoal dos dispositivos macOS encriptados mEM
 
-Os utilizadores finais podem recuperar a sua chave de recuperação pessoal (chave FileVault) utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android ou através da aplicação Android Intune. O dispositivo que tenha a chave de recuperação pessoal deve ser matriculado com Intune e encriptado com fileVault através de Intune. Utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android, a aplicação Android Intune ou o website Do Portal da Empresa, o utilizador final pode ver a chave de recuperação **do FileVault** necessária para aceder aos seus dispositivos Mac. Os utilizadores **finais** podem selecionar Dispositivos > *dispositivo macOS encriptado e inscrito* > Obter a chave de **recuperação**. O navegador mostrará o Portal da Empresa Web e exibirá a chave de recuperação. 
+Os utilizadores finais podem recuperar a sua chave de recuperação pessoal (chave FileVault) utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android ou através da aplicação Android Intune. O dispositivo que tenha a chave de recuperação pessoal deve ser matriculado com Intune e encriptado com fileVault através de Intune. Utilizando a aplicação portal da empresa iOS, a aplicação Portal da Empresa Android, a aplicação Android Intune ou o website Do Portal da Empresa, o utilizador final pode ver a chave de recuperação **do FileVault** necessária para aceder aos seus dispositivos Mac. Os utilizadores **finais** > podem selecionar dispositivos o dispositivo > *macOS encriptado e inscrito*Obtenha a chave de**recuperação**. O navegador mostrará o Portal da Empresa Web e exibirá a chave de recuperação. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Encriptação BitLocker para Windows 10
 
@@ -113,14 +113,14 @@ Configure o BitLocker quando criar um perfil de [configuração](endpoint-protec
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Definir as seguintes opções:
 
    - Plataforma: Windows 10 e mais tarde
    - Tipo de perfil: Proteção de ponto final
 
-4. Selecione **Definições** > **encriptação do Windows**.
+4. Selecione **Definições** > **de encriptação do Windows**.
 
 5. Configure as definições para o BitLocker para atender às necessidades do seu negócio e, em seguida, selecione **OK**.
 
@@ -141,8 +141,8 @@ Um dispositivo deve satisfazer as seguintes condições para ser elegível para 
 
 As seguintes duas definições para as definições de [base bitLocker](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) devem ser configuradas na política BitLocker:
 
-- **Aviso para outra encriptação do disco** = *Block*.
-- **Permitir que os utilizadores padrão permitam encriptação durante a adesão do Azure AD** = *permitir*
+- **Aviso para outro** = *bloco*de encriptação de disco .
+- **Permitir que os utilizadores padrão permitam a encriptação durante** = o*AD* Join Allow
 
 A política BitLocker **não deve exigir** a utilização de um PIN de arranque ou chave de arranque. Quando é *necessária*uma chave PIN ou chave de arranque de arranque TPM, o BitLocker não pode ativar silenciosamente e requer interação do utilizador final.  Este requisito é cumprido através das seguintes três definições de [unidade BitLocker OS](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) na mesma política:
 
@@ -180,7 +180,7 @@ Os dispositivos devem cumprir os seguintes pré-requisitos para suportar a rota�
 
 3. Na lista de dispositivos que gere, selecione um dispositivo, selecione **Mais,** e, em seguida, selecione a ação remota do dispositivo de rotação da **tecla BitLocker.**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Crie uma política de [conformidade com o dispositivo.](compliance-policy-create-windows.md)
 

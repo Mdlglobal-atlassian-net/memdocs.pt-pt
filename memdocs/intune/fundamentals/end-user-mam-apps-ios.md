@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cc804efad2cf8ef45bd046fb1234eef9895cbd97
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332605"
 ---
 # <a name="what-to-expect-when-your-iosipados-app-is-managed-by-app-protection-policies"></a>O que esperar quando a sua aplicação iOS/iPadOS for gerida por políticas de proteção de aplicações
@@ -36,7 +36,7 @@ Se o dispositivo **não estiver inscrito no Intune**, será pedido ao utilizador
 
 <!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
-Para dispositivos que estejam **inscritos para gestão no Intune**, o utilizador vê uma mensagem a indicar que a sua aplicação é agora gerida.
+Para dispositivos que estão **matriculados para gestão em Intune,** o utilizador vê uma mensagem de que a sua aplicação é agora gerida.
 
 ## <a name="use-apps-with-multi-identity-support"></a>Utilizar aplicações com suporte de identidades múltiplas
 
@@ -64,6 +64,6 @@ O seguinte exemplo descreve como várias contas de utilizador são tratadas:
 
 User A trabalha para duas empresas:**Empresa X** e **Empresa Y.** O utilizador A tem uma conta de trabalho para cada empresa, e ambos usam o Intune para implementar políticas de proteção de aplicações. **A Empresa X** implementa políticas de proteção de aplicações **antes** da **Empresa Y**. A conta que está associada à **Empresa X** recebe primeiro a política de proteção de aplicações. Se pretender que a conta de utilizador que está associada à Empresa Y seja gerida pelas políticas de proteção de aplicações, terá de remover a conta de utilizador que está associada à Empresa X e adicionar a conta de utilizador que está associada à Empresa Y.  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [O que esperar quando a aplicação Android é gerida por políticas de proteção de aplicações](end-user-mam-apps-android.md)

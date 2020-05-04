@@ -1,5 +1,5 @@
 ---
-title: Utilize autoridades de certificação de terceiros (CA) com SCEP no Microsoft Intune - Azure  Microsoft Docs
+title: Utilize autoridades de certificação de terceiros (CA) com SCEP no Microsoft Intune - Azure [ Microsoft Docs
 description: No Microsoft Intune, pode adicionar um fornecedor ou autoridade de certificados de terceiros (CA) para emitir certificados a dispositivos móveis utilizando o protocolo SCEP. Nesta descrição geral, uma aplicação do Azure Active Directory (Azure AD) fornece permissões ao Microsoft Intune para validar certificados. Em seguida, utilize o ID da aplicação, a chave de autenticação e o ID do inquilino da aplicação do AAD para configurar o servidor do SCEP para emitir certificados.
 keywords: ''
 author: brenduns
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329881"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Adicionar autoridades de certificação parceiras no Intune com o SCEP
@@ -58,7 +58,7 @@ Os seguintes passos fornecem uma visão geral da utilização do SCEP para certi
 O seguinte diagrama mostra um fluxo detalhado da integração do SCEP de terceiros com o Intune:
 
 > [!div class="mx-imgBorder"]
-> ![Como a autoridade de certificação de terceiros sCEP integra com a Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+> ![Como é que o SCEP da autoridade de certificação de terceiros se integra com o Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
 
 ## <a name="set-up-third-party-ca-integration"></a>Configurar a integração de autoridades de certificação de terceiros
 
@@ -72,9 +72,9 @@ Para permitir que um servidor do SCEP de terceiros execute a validação do desa
 
 Certifique-se de que tem as permissões obrigatórias para registar uma aplicação do Azure AD. Consulte [as permissões necessárias,](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)na documentação da AD Azure.
 
-#### <a name="create-an-application-in-azure-active-directory"></a>Criar uma aplicação no Diretório Ativo azure  
+#### <a name="create-an-application-in-azure-active-directory"></a>Criar uma Aplicação no Azure Active Directory  
 
-1. No [portal Azure,](https://portal.azure.com)vá ao **Azure Ative Directory** > Registos de **Aplicações,** e depois selecione **Nova inscrição.**  
+1. No [portal Azure,](https://portal.azure.com)vá ao **Azure Ative Directory** > **App Registrations,** e depois selecione **New Registration**.  
 
 2. No **Registo de uma** página de candidatura, especifique os seguintes detalhes:  
    - Na secção **Nome,** introduza um nome de aplicação significativo.  
@@ -85,11 +85,11 @@ Certifique-se de que tem as permissões obrigatórias para registar uma aplicaç
 
 4. Na página de **visão geral** da aplicação, copie o valor de ID **da Aplicação (cliente)** e grave-o para posterior utilização. Vai precisar deste valor mais tarde.  
 
-5. No painel de navegação para a app, vá a **Certificados e segredos** no **âmbito do Manage**. Selecione o botão secreto do **novo cliente.** Introduza um valor em Descrição, selecione qualquer opção para **Expirações,** e depois escolha **Adicionar** para gerar um *valor* para o segredo do cliente. 
+5. No painel de navegação para a app, vá a **Certificados & segredos** no **âmbito do Manage**. Selecione o botão secreto do **novo cliente.** Introduza um valor em Descrição, selecione qualquer opção para **Expirações,** e depois escolha **Adicionar** para gerar um *valor* para o segredo do cliente. 
    > [!IMPORTANT]  
    > Antes de sair desta página, copie o valor para o segredo do cliente e grave-o para posterior utilização com a sua implementação de AC de terceiros. Este valor não é mostrado novamente. Certifique-se de rever as orientações para o seu CA de terceiros sobre como eles querem o ID de aplicação, chave de autenticação e ID do inquilino configurado.  
 
-6. Grave a sua **identificação do inquilino.** O ID do Inquilino é o texto de domínio após o sinal de @na sua conta. Por exemplo, se a sua conta for *admin@name.onmicrosoft.com,* então a sua identificação do inquilino é **name.onmicrosoft.com**.  
+6. Grave a sua **identificação do inquilino.** O ID do Inquilino é o texto de domínio após o sinal @ na sua conta. Por exemplo, se *admin@name.onmicrosoft.com*a sua conta for, então a sua identificação do inquilino é **name.onmicrosoft.com**.  
 
 7. No painel de navegação da aplicação, vá a **permissões API** ao abrigo **do Manage**, e, em seguida, selecione Adicionar **uma permissão**.  
 
@@ -134,7 +134,7 @@ Se for uma autoridade de certificação de terceiros interessada em integrar o s
 - [Repositório do GitHub da API do SCEP no Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Documentação de orientação da API do SCEP no Intune para ACs de terceiros](scep-libraries-apis.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Configurar perfis de certificado](certificates-scep-configure.md)
 - [Repositório do GitHub da API do SCEP no Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324362"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Ativar aplicações Win32 em dispositivos de modo S
@@ -49,7 +49,7 @@ As etapas para permitir que as aplicações Win32 sejam executadas num dispositi
    - Intune aplica o catálogo de aplicações assinado para instalar a aplicação Win32 no dispositivo de modo S utilizando a extensão de [gestão Intune](intune-management-extension.md).
 
 > [!NOTE]
-> Os pacotes de `.appx` e `.appx` de  e  no modo Windows 10 S serão suportados através da assinatura da Microsoft Store for Business (MSFB).
+> A linha de negócios `.appx` `.appx` (LOB) e os pacotes no modo Windows 10 S serão suportados através da assinatura da Microsoft Store for Business (MSFB).
 >
 > **A política suplementar** do modo S para aplicações deve ser entregue através da Extensão de Gestão Intune.
 >
@@ -58,18 +58,18 @@ As etapas para permitir que as aplicações Win32 sejam executadas num dispositi
 Para criar uma política suplementar de modo Windows 10 S, utilize os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Políticas suplementares do modo S** > Criar a **política**.
+2. Selecione **Políticas** >  > **suplementares do modo Apps S**Criar**política**.
 3. Antes de adicionar o **ficheiro Política,** deve criá-lo e assiná-lo. Para obter mais informações, consulte:
     - [Crie uma política WDAC usando ferramentas PowerShell e converta-a num formato binário](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Assine usando o Serviço](https://go.microsoft.com/fwlink/?linkid=2095629) de Assinatura de Guarda de Dispositivo **(recomendado)**
 
 4. Na página Basics, adicione os **seguintes valores:**
 
-    | Valor | Description |
+    | Valor | Descrição |
     |--------------|------------------------------------------------|
     | Arquivo de política | O ficheiro que contém a política do WDAC. |
     | Nome | O nome desta apólice. |
-    | Description | [Opcional] A descrição desta política. |
+    | Descrição | [Opcional] A descrição desta política. |
 
 5. Clique **em Seguir: Etiquetas**de âmbito .<br>
    Na página **scope tags** pode configurar opcionalmente as etiquetas de âmbito para determinar quem pode ver a política da aplicação em Intune. Para obter mais informações sobre etiquetas de âmbito, consulte [Utilize o controlo de acesso baseado em papéis e as etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
@@ -96,7 +96,7 @@ Valores de reporte que são mostrados na consola Intune para s mode reporting po
 - **NotAuthorizedByToken**: O símbolo não autoriza esta política suplementar do modo S.
 - **PolicyNotFound**: A política suplementar do modo S não é encontrada.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para mais informações, consulte [as aplicações Win32 no modo s](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s).
 - Para obter mais informações sobre como adicionar aplicações ao Intune, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).

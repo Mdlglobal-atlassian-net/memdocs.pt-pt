@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696480"
 ---
 # <a name="device-management-overview"></a>Device management overview (Descrição geral da gestão de dispositivos)
@@ -29,7 +29,7 @@ Uma das principais tarefas dos administradores consiste na proteção dos recurs
 
 A gestão de dispositivos permite que as organizações protejam e protejam os seus recursos e dados, e de diferentes dispositivos.
 
-Utilizando um fornecedor de gestão de dispositivos, a organização pode certificar-se de que apenas pessoas e dispositivos autorizados têm acesso a informações próprias. Da mesma forma, os utilizadores de dispositivos podem sentir-se facilitados a aceder aos dados de trabalho a partir do seu telemóvel, uma vez que sabem que o seu dispositivo cumpre os requisitos de segurança da sua organização. Enquanto organização, poderá perguntar "**o que devemos utilizar para proteger nossos recursos?"** .
+Utilizando um fornecedor de gestão de dispositivos, a organização pode certificar-se de que apenas pessoas e dispositivos autorizados têm acesso a informações próprias. Da mesma forma, os utilizadores de dispositivos podem sentir-se facilitados a aceder aos dados de trabalho a partir do seu telemóvel, uma vez que sabem que o seu dispositivo cumpre os requisitos de segurança da sua organização. Enquanto organização, poderá perguntar "**o que devemos utilizar para proteger nossos recursos?"**.
 
 A resposta é [Microsoft Intune](what-is-intune.md). O Intune oferece gestão de dispositivos móveis (MDM) e gestão de aplicações móveis (MAM). Algumas das principais tarefas das soluções de MDM ou MAM consistem em:
 
@@ -74,9 +74,9 @@ Uma das principais tarefas das soluções de gestão de dispositivos consiste em
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Optar pela solução de gestão de dispositivos que mais se adequa à sua situação
 
-Existem duas formas de abordar a gestão de dispositivos. Em primeiro lugar, pode gerir diferentes aspetos dos dispositivos utilizando as funcionalidades incorporadas em Intune. Esta abordagem chama-se gestão de **dispositivos móveis (MDM)** . Os utilizadores "matriculam" os seus dispositivos e utilizam certificados para comunicar com o Intune. Como administrador de TI, pressiona aplicações em dispositivos, restringe os dispositivos a um sistema operativo específico, bloqueia dispositivos pessoais e muito mais. Na eventualidade de perda ou roubo de um dispositivo, também pode remover todos os dados do mesmo.
+Existem duas formas de abordar a gestão de dispositivos. Em primeiro lugar, pode gerir diferentes aspetos dos dispositivos utilizando as funcionalidades incorporadas em Intune. Esta abordagem chama-se gestão de **dispositivos móveis (MDM)**. Os utilizadores "matriculam" os seus dispositivos e utilizam certificados para comunicar com o Intune. Como administrador de TI, pressiona aplicações em dispositivos, restringe os dispositivos a um sistema operativo específico, bloqueia dispositivos pessoais e muito mais. Na eventualidade de perda ou roubo de um dispositivo, também pode remover todos os dados do mesmo.
 
-Na segunda abordagem, gere as aplicações em dispositivos. Esta abordagem chama-se gestão de **aplicações móveis (MAM)** . Os utilizadores podem utilizar os seus dispositivos pessoais para aceder a recursos organizacionais. Ao abrir uma aplicação, tal como o e-mail ou o SharePoint, é pedida autenticação adicional aos utilizadores. Se um dispositivo for alguma vez perdido ou roubado, pode remover todos os dados da organização das aplicações Intune Managed.
+Na segunda abordagem, gere as aplicações em dispositivos. Esta abordagem chama-se gestão de **aplicações móveis (MAM)**. Os utilizadores podem utilizar os seus dispositivos pessoais para aceder a recursos organizacionais. Ao abrir uma aplicação, tal como o e-mail ou o SharePoint, é pedida autenticação adicional aos utilizadores. Se um dispositivo for alguma vez perdido ou roubado, pode remover todos os dados da organização das aplicações Intune Managed.
 
 Também pode utilizar uma combinação de [MDM e MAM](byod-technology-decisions.md).
 
@@ -98,11 +98,11 @@ No centro de gestão de dispositivos, pode:
 - Gerir atualizações de software
   - [Gerir atualizações do Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Gerir atualizações iOS/iPadOS](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
+- [Diretório ativo Azure](https://docs.microsoft.com/azure/active-directory)  
 - [Gerir utilizadores](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Gerir grupos e membros](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Resolução de Problemas](help-desk-operators.md)
+- [Resolução de problemas](help-desk-operators.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Quando estiver pronto para começar com uma solução MDM ou MAM, caminhe pelos diferentes passos para configurar Intune, matricular dispositivos e começar a criar políticas. [A gestão de dispositivos móveis para o Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) também é um grande recurso.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e9b943ca03f54a976061c19f4ce60a94283640c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329441"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Dados que o Jamf Pro envia para o Intune
@@ -81,6 +81,6 @@ Jamf Pro reports the following information to Intune:
 You can remove a Jamf-managed device from the Intune console by selecting **Delete** in the **All devices** view. Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Obtenha informações sobre como remover um dispositivo gerido pelo [Jamf nos docs Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Também pode apresentar um bilhete de apoio com suporte ao [Jamf](https://www.jamf.com/support/) para obter ajuda adicional. 
 

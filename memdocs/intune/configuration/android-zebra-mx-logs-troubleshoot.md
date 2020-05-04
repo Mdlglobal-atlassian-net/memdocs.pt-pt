@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083833"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Problemas e ver potenciais problemas em dispositivos Android Zebra no Microsoft Intune
@@ -54,14 +54,14 @@ Quando testa um perfil utilizando diretamente o StageNow no seu computador, em v
 ### <a name="get-logs-using-android-debug-bridge"></a>Obtenha registos usando a Ponte Android Debug
 Para obter registos depois de o perfil já estar implementado com o Intune, ligue o dispositivo a um computador com [o Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) (abre o site do Android).
 
-No dispositivo, os registos são guardados em `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
+No dispositivo, os registos são guardados em`/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Obtenha registos de e-mail
 Para obter registos depois de o perfil já estar implementado com o Intune, os utilizadores finais podem enviar-lhe os registos através de uma aplicação de e-mail no dispositivo. No dispositivo Zebra, abra a aplicação Portal da Empresa e [envie os registos.](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) A utilização da função de registo de envio também cria um ID de incidente powerLift, que pode fazer referência se contactar o suporte da Microsoft.
 
 ## <a name="read-the-logs"></a>Leia os registos
 
-Ao olhar para os registos, há um erro sempre que vê a etiqueta `<characteristic-error>`. Os detalhes de erro são escritos para a `<parm-error>` tag > `desc` propriedade.
+Ao olhar para os registos, há um `<characteristic-error>` erro sempre que vê a etiqueta. Os detalhes de erro `<parm-error>` são `desc` escritos na etiqueta > propriedade.
 
 ## <a name="error-types"></a>Tipos de erro
 
@@ -113,7 +113,7 @@ Noutro exemplo, tem a seguinte entrada:
 </wap-provisioningdoc>
 ```
 
-O registo mostra um erro, uma vez que contém uma etiqueta `<characteristic-error>`. Neste cenário, o perfil tentou instalar um pacote Android (APK) que não existe no caminho dado:
+O registo mostra um erro, `<characteristic-error>` uma vez que contém uma etiqueta. Neste cenário, o perfil tentou instalar um pacote Android (APK) que não existe no caminho dado:
 
 ```xml
 <wap-provisioningdoc>
@@ -147,7 +147,7 @@ Este erro significa que intune suspeita que um dispositivo Android não-Zebra es
 
 A Intune poderá atualizar a versão mínima exigida da aplicação Portal da Empresa. Se o Google Play não estiver instalado no dispositivo, a aplicação Portal da Empresa não será atualizada automaticamente. Se a versão mínima necessária for mais recente do que a versão instalada, a aplicação Portal da Empresa deixa de funcionar. Atualização para a mais recente aplicação do Portal da Empresa utilizando [sideloading em dispositivos Zebra](android-zebra-mx-overview.md#sideload-the-company-portal-app).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Quadros de discussão](https://developer.zebra.com/community/home/discussions) de zebra (abre o site da Zebra)
 

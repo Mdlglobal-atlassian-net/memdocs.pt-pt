@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323694"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Prepare-se para proteção de informações do Windows no Windows 10 
@@ -35,7 +35,7 @@ Ative a gestão de aplicações móveis (MAM) para o Windows 10 ao definir o for
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Todos os serviços** e escolha o **M365 Azure Ative Directory** para trocar de dashboards.
-3. Selecione **Diretório Ativo Azure**.
+3. Selecione **Azure Active Directory**.
 4. Selecione **Mobilidade (MDM e MAM)** no grupo **Gerir**.
 5. Clique em **Microsoft Intune**.
 6. Configure as definições no grupo **Derisque MAM URLs** no painel **Configure.**
@@ -54,6 +54,6 @@ Ative a gestão de aplicações móveis (MAM) para o Windows 10 ao definir o for
 
 7. Clique em **Guardar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Criar uma política wip](windows-information-protection-policy-create.md)

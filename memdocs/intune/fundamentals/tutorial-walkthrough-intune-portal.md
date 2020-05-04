@@ -19,15 +19,15 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330301"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Tutorial: Walkthrough da Microsoft Intune no portal Azure
 
-[O Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contém mais de 100 serviços para o ajudar com uma variedade de cenários e possibilidades de computação em nuvem. O Microsoft Intune é um dos vários serviços disponíveis no Azure. Intune ajuda-o a garantir que os dispositivos, aplicações e dados da sua empresa cumprem os requisitos de segurança da sua empresa. Tem o controlo para definir quais os requisitos que precisam de ser verificados e o que acontece quando esses requisitos não são cumpridos. Pode encontrar o serviço Microsoft Intune no [portal do Azure](https://portal.azure.com). Compreender as funcionalidades disponíveis no Intune irá ajudá-lo a realizar várias tarefas de Gestão de Dispositivos Móveis (MDM) e Gestão de Aplicações Móveis (MAM).
+[O Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contém mais de 100 serviços para o ajudar com uma variedade de cenários e possibilidades de computação em nuvem. O Microsoft Intune é um dos vários serviços disponíveis no Azure. Intune ajuda-o a garantir que os dispositivos, aplicações e dados da sua empresa cumprem os requisitos de segurança da sua empresa. Tem o controlo para definir quais os requisitos que precisam de ser verificados e o que acontece quando esses requisitos não são cumpridos. O [portal Azure](https://portal.azure.com) é onde pode encontrar o serviço Microsoft Intune. Compreender as funcionalidades disponíveis no Intune irá ajudá-lo a realizar várias tarefas de Gestão de Dispositivos Móveis (MDM) e Gestão de Aplicações Móveis (MAM).
 
 Neste tutorial, irá:
 > [!div class="checklist"]
@@ -166,9 +166,9 @@ Também pode adicionar mosaicos diretamente ao seu dashboard a partir de qualque
 
 Esta funcionalidade ser-lhe-á mais relevante após adicionar mais conteúdos, tais como grupos e utilizadores, ao Intune.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para começar a correr rapidamente no Microsoft Intune, passe pelo Intune Quickstarts, criando primeiro uma conta Intune gratuita.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Experimente o Microsoft Intune gratuitamente](free-trial-sign-up.md)
+> [Início Rápido: experimentar gratuitamente o Microsoft Intune](free-trial-sign-up.md)

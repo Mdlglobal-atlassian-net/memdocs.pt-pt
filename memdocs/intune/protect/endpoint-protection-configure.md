@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
 ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551584"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Adicionar definições de proteção de ponto final no Intune
@@ -37,7 +37,7 @@ Por exemplo, pode criar um perfil de proteção de ponto final que apenas permit
 Antes de criar um perfil, reveja os seguintes artigos que detalham as definições de proteção de pontofinal Que intune pode gerir para cada plataforma suportada:
 
 - [Definições do macOS](endpoint-protection-macos.md)
-- [Definições do Windows 10](endpoint-protection-windows-10.md)
+- [Definições do Windows 10](endpoint-protection-windows-10.md)
 
 > [!NOTE]
 > A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
@@ -46,14 +46,14 @@ Antes de criar um perfil, reveja os seguintes artigos que detalham as definiçõ
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:
 
         - **macOS**
-        - **Windows 10 e posterior**
+        - **Windows 10 e posterior**
 
     - **Perfil**: Selecione **proteção do ponto final**.
 
@@ -68,10 +68,10 @@ Antes de criar um perfil, reveja os seguintes artigos que detalham as definiçõ
 7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Escolha a sua plataforma para configurações detalhadas:
 
    - [Definições do macOS](endpoint-protection-macos.md)
-   - [Definições do Windows 10](endpoint-protection-windows-10.md)
+   - [Definições do Windows 10](endpoint-protection-windows-10.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -99,7 +99,7 @@ As regras de Firewall que o Intune pode gerir são detalhadas no fornecedor de s
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **dispositivos** > perfis de **configuração** > **criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Para *a Plataforma*, selecione o Windows **10 e, posteriormente,** e, em seguida, para selecionar a **proteção de ponto final**do *Perfil* .
 
@@ -117,6 +117,6 @@ As regras de Firewall que o Intune pode gerir são detalhadas no fornecedor de s
 
 7. Selecione **Em seguida** até começar a **Rever + criar**. Quando selecionar **Criar,** as alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o estado](../configuration/device-profile-monitor.md).

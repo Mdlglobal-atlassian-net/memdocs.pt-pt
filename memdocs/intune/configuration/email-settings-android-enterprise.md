@@ -17,15 +17,15 @@ ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087034"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Configurações do dispositivo Android Enterprise para configurar e-mail, autenticação e sincronização em Intune
 
-Este artigo lista e descreve as diferentes definições de e-mail que pode controlar em dispositivos Android Enterprise. Como parte da sua solução de gestão (MDM) de dispositivos móveis, utilize estas definições para configurar um servidor de e-mail, utilize o SSL para encriptar mensagens de correio eletrónico e muito mais.
+Este artigo lista e descreve as diferentes definições de e-mail que pode controlar em dispositivos Android Enterprise. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para configurar um servidor de e-mail, use sSL para encriptar e-mails, e muito mais.
 
 Como administrador intune, pode criar e atribuir definições de e-mail aos dispositivos Android Enterprise no perfil de trabalho.
 
@@ -41,12 +41,12 @@ Crie um perfil de [configuração](email-settings-configure.md) do dispositivo (
 - **Servidor de e-mail**: introduza o nome de anfitrião do seu servidor Exchange. Por exemplo, introduza `outlook.office365.com`.
 - **Atributo de nome de utilizador do AAD**: este nome é o atributo que o Intune obtém do Azure Active Directory (Azure AD). O Intune gera de forma dinâmica o nome de utilizador utilizado por este perfil. As opções são:
 
-  - **Nome principal do utilizador**: Obtém o nome, como `user1` ou `user1@contoso.com`.
-  - **Nome do utilizador**: Obtém apenas o nome, como `user1`.
+  - **Nome principal do utilizador**: `user1` Obtém o nome, como ou `user1@contoso.com`.
+  - **Nome do utilizador**: Obtém `user1`apenas o nome, como .
 
 - **Atributo de endereço de e-mail da AAD**: Este nome é o atributo de e-mail que Intune recebe da AD Azure. Intune gera dinamicamente o endereço de e-mail que é usado por este perfil. As opções são:
-  - **Nome principal**do utilizador : Utiliza o nome principal completo, como `user1@contoso.com` ou `user1`, como o endereço de e-mail.
-  - **Endereço Principal SMTP**: Utiliza o endereço SMTP primário, como `user1@contoso.com`, para iniciar sessão no Exchange.
+  - **Nome principal**do utilizador : Utiliza `user1@contoso.com` o `user1`nome principal completo, como ou, como o endereço de e-mail.
+  - **Endereço Principal SMTP**: Utiliza o endereço SMTP primário, como, por `user1@contoso.com`exemplo, para iniciar sessão no Exchange.
 
 - **Método de autenticação**: Selecione **o nome de utilizador e a palavra-passe** ou **certificados** como método de autenticação utilizado pelo perfil de e-mail.
   - Se tiver selecionado **Certificado**, selecione um perfil de certificado SCEP ou PKCS de cliente criado anteriormente para autenticar a ligação ao Exchange.
@@ -57,7 +57,7 @@ Crie um perfil de [configuração](email-settings-configure.md) do dispositivo (
   - **Calendário**: Escolha **o Habilitar** para permitir que os utilizadores finais sincroniem o calendário dos seus dispositivos.
   - **Tarefas**: Escolha **o Enable** para permitir que os utilizadores finais sincronem quaisquer tarefas nos seus dispositivos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

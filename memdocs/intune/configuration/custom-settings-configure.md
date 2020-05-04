@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551368"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Criar um perfil com definições personalizadas no Intune
@@ -38,7 +38,7 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -47,7 +47,7 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows 10 e posterior**
+        - **Windows 10 e posterior**
         - **Windows Phone 8.1**
 
     - **Perfil**: Selecione **Personalizado**.
@@ -71,7 +71,7 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -86,8 +86,8 @@ Este artigo mostra-lhe como criar um perfil personalizado para administrador de 
 No seguinte exemplo, a definição **Conectividade/PermitirVPNAtravésDeRedeMóvel** está ativada. Esta definição permite que um dispositivo com o Windows 10 abra uma ligação VPN através de uma rede móvel.
 
 > [!div class="mx-imgBorder"]
-> ![Exemplo de uma política personalizada que contenha definições vpn em Intune e Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
+> ![Exemplo de uma política personalizada que contém definições VPN em Intune e Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).

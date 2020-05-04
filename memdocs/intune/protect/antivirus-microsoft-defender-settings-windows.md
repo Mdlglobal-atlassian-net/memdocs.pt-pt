@@ -1,5 +1,5 @@
 ---
-title: Definições de política antivírus do Windows 10 para o Antivírus Do Microsoft Defender para Intune  Microsoft Docs
+title: Definições de política antivírus do Windows 10 para o Antivírus Do Microsoft Defender para Intune [ Microsoft Docs
 description: Consulte uma lista das definições no perfil Antivírus Microsoft Defender para windows 10. Pode configurar estas definições como parte da política antivírus de segurança endpoint no Microsoft Intune.
 keywords: ''
 author: brenduns
@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
 ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086276"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Definições para a política antivírus do Microsoft Defender do Windows 10 no Microsoft Intune
@@ -77,7 +77,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   CSP: [Permitir monitorização em tempo real](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Exija que o Defender em dispositivos de ambiente de trabalho do Windows 10 utilize a funcionalidade de Monitorização em tempo real.
-  - **Não configurado** *(predefinido)* - A definição é restaurada à defeito do sistema
+  - **Não configurado** *(predefinido)*- A definição é restaurada à defeito do sistema
   - **Não** - A regulação está desativada. Os utilizadores do dispositivo não podem alterar esta definição.
   - **Sim** - Impor o uso da monitorização em tempo real. Os utilizadores do dispositivo não podem alterar esta definição.
 
@@ -86,7 +86,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
 
   Configure a proteção contra vírus que seja continuamente ativa, em oposição à procura.
 
-  - **Não configurado** *(predefinido)* - Esta política não altera o estado desta definição num dispositivo. O estado existente no dispositivo permanece inalterado.
+  - **Não configurado** *(predefinido)*- Esta política não altera o estado desta definição num dispositivo. O estado existente no dispositivo permanece inalterado.
   - **Não** - Bloquear a proteção de acesso nos dispositivos. Os utilizadores do dispositivo não podem alterar esta definição.
   - **Sim** - A Proteção de Acesso está ativa em dispositivos.
 
@@ -190,7 +190,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Utilizador definido** - O utilizador do dispositivo toma a decisão sobre que medidas tomar.
   - **Bloco** - Bloqueia a execução de ficheiros.
 
-## <a name="scan"></a>Digitalização
+## <a name="scan"></a>Digitalizar
 
 - **Analisar ficheiros de arquivo**  
   CSP: [Permitir a digitalização do Arquivo](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
@@ -255,7 +255,7 @@ Saiba mais
 
   - **Não configurado** *(predefinido)*
   - **Sondagem rápida**
-  - **Digitalização completa**
+  - **Análise completa**
 
 - **Dia da semana para fazer uma varredura programada**  
   - **Não configurado** *(predefinido)*
@@ -268,7 +268,7 @@ Saiba mais
   - **Não**
   - **Sim**
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>Atualizações
 
 - **Insira quantas vezes (0-24 horas) para verificar se há atualizações de inteligência de segurança**  
   CSP: [Intervalo de Atualização de Assinaturas](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
@@ -280,7 +280,7 @@ Saiba mais
 - **Permitir o acesso do utilizador à aplicação Microsoft Defender**  
   CSP: [Permitir o acesso userui](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
 
-  - **Não configurado** *(predefinido)* - A definição devolve ao padrão do cliente em que ui e notificações são permitidas.
+  - **Não configurado** *(predefinido)*- A definição devolve ao padrão do cliente em que ui e notificações são permitidas.
   - **Não** - A Interface de Utilizador do Defender (UI) é inacessível e os produtos de notificação suprimidos.
   - **Sim**
 

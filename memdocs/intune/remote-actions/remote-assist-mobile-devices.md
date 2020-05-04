@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 548f63dcbd1635c106573fda40f8cc7bf312866e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086268"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Assista remotamente a dispositivos móveis geridos pelo Microsoft Endpoint Manager
@@ -32,7 +32,7 @@ Existem quatro opções disponíveis para administrar remotamente dispositivos g
 - [TeamViewer](https://www.teamviewer.com/) é um programa de terceiros que compra separadamente. Fornece um conjunto abrangente de capacidades de acesso e suporte remotos. A integração Intune e [TeamViewer](teamviewer-support.md) permite suporte remoto utilizando teamViewer e o conector é gerido diretamente em Intune.
 - [O controlo remoto](https://docs.microsoft.com/configmgr/core/clients/manage/remote-control/introduction-to-remote-control) está incluído no Microsoft Endpoint Configuration Manager. É usado para administrar remotamente, fornecer assistência ou visualizar qualquer computador de grupo de trabalho e computador de domínio.
 
-| Funcionalidades, Plataformas, Licenciamento | **Equipas** | Assistência Rápida | TeamViewer (Intune) | Controlo remoto (ConfigMgr) |
+| Funcionalidades, Plataformas, Licenciamento | **Teams** | Assistência Rápida | TeamViewer (Intune) | Controlo remoto (ConfigMgr) |
 |:---:|:---:|:---:|:---:|:---:|
 | Vista e controlo remoto |![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Chat |![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)||![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)||
@@ -49,4 +49,4 @@ Existem quatro opções disponíveis para administrar remotamente dispositivos g
 | Requer que o dispositivo seja cogerido pelo Gestor de Configuração e pelo Intune ||||![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Requer licenciamento adicional\* |![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)||![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|![Marca de verificação](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\* Equipas requer licenciamento O365 ou M365. A utilização do TeamViewer e intune requer o licenciamento tanto do TeamViewer como do Intune. Controlo Remoto é uma funcionalidade do Gestor de Configuração e requer licenciamento do Gestor de Configuração.
+\*As equipas exigem o licenciamento O365 ou M365. A utilização do TeamViewer e intune requer o licenciamento tanto do TeamViewer como do Intune. Controlo Remoto é uma funcionalidade do Gestor de Configuração e requer licenciamento do Gestor de Configuração.

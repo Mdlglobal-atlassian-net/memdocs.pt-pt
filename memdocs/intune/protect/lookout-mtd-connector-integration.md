@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 54e81a7b9614e1633fe9061fd13d1b99810ce43c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329221"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Configurar a integração de segurança de ponto supérno móvel lookout com intune
@@ -34,14 +34,14 @@ Com um ambiente que satisfaça os [pré-requisitos,](lookout-mobile-threat-defen
 ## <a name="collect-azure-ad-information"></a>Recolher informações do Azure AD  
 Para integrar o Lookout com o Intune, associa o seu inquilino de Segurança de Ponto final de Mobilidade À Sua Assinatura Azure Ative Directory (AD).
 
-Para permitir a integração da subscrição de subscrição de Lookout Mobile Endpoint Security com a Intune, fornece as seguintes informações ao suporte de Vigia (enterprisesupport@lookout.com):  
+Para permitir a integração da subscrição de subscrição de Lookout Mobileenterprisesupport@lookout.comEndpoint Security com a Intune, fornece as seguintes informações ao suporte de Vigia ():  
 
 - **Id do diretório do inquilino da Azure AD**  
 
 - Id de objeto do **grupo Azure AD** para o grupo com acesso **completo** à consola Lookout Mobile Endpoint Security (MES).  
   Cria este grupo de utilizadores em Azure AD para conter os utilizadores que têm *acesso total* para iniciar sessão na **consola Lookout**. Os utilizadores devem ser membros deste grupo, ou do grupo de *acesso restrito* opcional, para iniciar sessão na Consola de Vigia. 
 
-- Id de objeto do **grupo Azure AD** para o grupo com acesso **restrito** à consola MES *(grupo opcional)* . 
+- Id de objeto do **grupo Azure AD** para o grupo com acesso **restrito** à consola MES *(grupo opcional)*. 
   Cria este grupo de utilizadores opcional no Azure AD para conter utilizadores que não devam ter acesso a várias configurações e módulos relacionados com as inscrições da consola Lookout. Em vez disso, estes utilizadores têm acesso apenas ao módulo de Política de **Segurança** da consola Lookout. Os utilizadores devem ser membros deste grupo opcional, ou do grupo de *acesso completo* necessário, para iniciar sessão na Consola de Vigia.
 
  > [!TIP] 
@@ -51,12 +51,12 @@ Para permitir a integração da subscrição de subscrição de Lookout Mobile E
 
 1. Inscreva-se no [portal Azure](https://portal.azure.com) com uma conta de Administrador Global.
 
-2. Vá ao **Diretório Ativo Azure** > **Propriedades** e localize o seu **ID de Diretório**. Utilize o botão *Copiar* para copiar o ID do Diretório e, em seguida, guarde-o num ficheiro de texto.
+2. Vá à **Azure Ative Directory** > **Properties** e localize o seu ID **de Diretório**. Utilize o botão *Copiar* para copiar o ID do Diretório e, em seguida, guarde-o num ficheiro de texto.
 
    ![Propriedades da AD Azure](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
 3. Em seguida, encontre o ID do Grupo Azure AD para as contas que utiliza para conceder aos utilizadores de AD Azure acesso à Consola de Vigia. Um grupo é para *acesso total*, e o segundo grupo, para *acesso restrito* é opcional. Para obter o ID do *Objeto,* para cada conta:  
-   1. Vá ao **Azure Ative Directory** > **Groups** para abrir o painel *de grupos - Todos os grupos.*  
+   1. Vá a **Azure Ative Directory** > **Groups** para abrir os *Grupos - Todos os grupos* painel.  
 
    2. Selecione o grupo que criou para *o acesso total* para abrir o seu painel de visão *geral.*  
 
@@ -72,22 +72,22 @@ Para permitir a integração da subscrição de subscrição de Lookout Mobile E
 
 Os seguintes passos serão concluídos na consola de administração da Lookout Enterprise e permitirão uma ligação ao serviço da Lookout para dispositivos matriculados intune (através da conformidade do dispositivo) **e** dispositivos não matriculados (através de políticas de proteção de aplicações).
 
-Depois de o suporte da Lookout criar a sua conta Lookout Enterprise, o suporte lookout envia um e-mail para o contacto principal da sua empresa com um link para o url de login: https://aad.lookout.com/les?action=consent. 
+Depois de o suporte da Lookout criar a sua conta Lookout Enterprise, o suporte lookout envia https://aad.lookout.com/les?action=consentum e-mail para o contacto principal da sua empresa com um link para o url de login: . 
 
 ### <a name="initial-sign-in"></a>Iniciação de inscrição  
-O primeiro sessão na Consola MES Lookout apresenta uma página de consentimento (https://aad.lookout.com/les?action=consent). Um Administrador Global da AD Azure apenas se inscreva e **aceite**. O subsequente início de inscrição não requer que o utilizador tenha este nível de privilégio da AD Azure. 
+O primeiro sessão na Consola MES Lookouthttps://aad.lookout.com/les?action=consent)apresenta uma página de consentimento ( . Um Administrador Global da AD Azure apenas se inscreva e **aceite**. O subsequente início de inscrição não requer que o utilizador tenha este nível de privilégio da AD Azure. 
 
- É apresentada uma página de consentimento. Selecione **Aceitar** para concluir o registo. 
-   ![imagem da primeira página de início de sessão da consola Lookout](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
+ É apresentada uma página de consentimento. Escolha **Aceitar** completar o registo. 
+   ![screenshot da primeira página de início de sessão da consola Lookout](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 Quando aceitas e consentidos, és redirecionado para a Consola de Vigia.
 
-Após o acesso inicial e consentimento, os utilizadores que iniciam sessão a partir de https://aad.lookout.com são redirecionados para a Consola MES. Se o consentimento ainda não foi concedido, todas as tentativas de inscrição resultam num erro de login grave.
+Após o acesso inicial e o consentimento estarem https://aad.lookout.com completos, os utilizadores que iniciarem sessão são redirecionados para a Consola MES. Se o consentimento ainda não foi concedido, todas as tentativas de inscrição resultam num erro de login grave.
 
 ### <a name="configure-the-intune-connector"></a>Configurar o Conector Intune  
 O seguinte procedimento pressupõe que criou anteriormente um grupo de utilizadores em Azure AD para testar a sua implementação de Lookout. A melhor prática é começar com um pequeno grupo de utilizadores para permitir que os seus administradores de Lookout e Intune se familiarizecom as integrações do produto. Depois de familiares, pode estender a inscrição a grupos adicionais de utilizadores.
 
-1. Inscreva-se na [Consola MES lookout](https://aad.lookout.com) e vá ao **Sistema** > **Conectores,** e, em seguida, selecione **Add Connector**.  Selecione **Intune**.
+1. Inscreva-se na [Consola MES lookout](https://aad.lookout.com) e vá para**os Conectores**do **Sistema,** > e, em seguida, selecione **Add Connector**.  Selecione **Intune**.
 
    ![Imagem da consola Lookout com a opção Intune no separador de conectores](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
@@ -119,7 +119,7 @@ Depois de configurar o Lookout MES, tem de estabelecer uma ligação com [o Look
 Seguem-se as definições adicionais que pode configurar na Consola MES Lookout.  
 
 ### <a name="configure-enrollment-settings"></a>Configurar as definições de inscrição
-Na consola MES Lookout, selecione **System** > Gerir **as definições**de inscrição > **Inscrição** .  
+Na consola MES Lookout, selecione **system** > **Manage De inscrição** > **definições**.  
 
 - Para o **Estado desligado,** especifique o número de dias antes de um dispositivo não ligado estar marcado como desligado.  
 
@@ -137,14 +137,14 @@ Para receber alertas de e-mail para ameaças, inscreva-se na [Consola MES Lookou
   ![screenshot da página de preferências com a conta de utilizador apresentada](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
 
 ## <a name="configure-threat-classifications"></a>Configurar classificações de ameaças  
-Lookout Mobile Endpoint Security classifica ameaças móveis de vários tipos. As classificações de ameaça de vigia têm níveis de risco padrão associados a eles. Os níveis de risco podem ser alterados a qualquer momento para atender aos requisitos da sua empresa.
+Lookout Mobile Endpoint Security classifica ameaças móveis de vários tipos. As classificações de ameaças do Lookout apresentam níveis de risco predefinidos inerentes às mesmas. Os níveis de risco podem ser alterados a qualquer momento para atender aos requisitos da sua empresa.
 
 Para obter informações sobre as classificações de nível de ameaça e como gerir os níveis de risco associados, consulte a Referência de [Ameaça de Vigia](https://enterprise.support.lookout.com/hc/articles/360011812974).
 
 >[!IMPORTANT]
 > Os níveis de risco são um aspeto importante da Segurança do Ponto Final Móvel porque a integração Intune calcula a conformidade do dispositivo de acordo com estes níveis de risco no tempo de execução.  
 > 
-> O administrador do Intune define uma regra na política para identificar se um dispositivo não estiver em conformidade, caso o mesmo apresente uma ameaça ativa com um nível mínimo de risco **Alto**, **Médio** ou **Baixo**. A política de classificação de ameaças na Lookout Mobile Endpoint Security impulsiona diretamente o cálculo da conformidade do dispositivo em Intune.  
+> O administrador intune estabelece uma regra na política para identificar um dispositivo como incompatível se o dispositivo tiver uma ameaça ativa com um nível mínimo de **Alto,** **Médio**ou **Baixo**. A política de classificação de ameaças na Lookout Mobile Endpoint Security impulsiona diretamente o cálculo da conformidade do dispositivo em Intune.  
 
 ## <a name="monitor-enrollment"></a>Monitorizar a inscrição
 Após a configuração estar concluída, a Lookout Mobile Endpoint Security começa a sondar o Azure AD para dispositivos que correspondam aos grupos de matrículaespecificados.  Pode encontrar informações sobre dispositivos matriculados indo para **Dispositivos** na Consola MES Lookout.  
@@ -153,7 +153,7 @@ Após a configuração estar concluída, a Lookout Mobile Endpoint Security come
 
 Para mais detalhes sobre como colocar a aplicação *Lookout for Work* implementada num dispositivo, consulte [Add Lookout para aplicações de trabalho com Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Configurar aplicativos de vigia para dispositivos matriculados](mtd-apps-ios-app-configuration-policy-add-assign.md)
 - [Configurar aplicativos de vigia para dispositivos não matriculados](mtd-add-apps-unenrolled-devices.md)

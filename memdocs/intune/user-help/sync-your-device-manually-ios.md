@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80274953"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronizar o seu dispositivo iOS manualmente
@@ -42,5 +42,5 @@ Por vezes, uma aplicação pode demorar demasiado tempo a ser transferida do Por
 
    ![Captura de ecrã de Detalhes do dispositivo a mostrar a barra de carregamento após o utilizador clicar em Verificar Definições.](./media/ios_sync_3_CP-after_1804.png)
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

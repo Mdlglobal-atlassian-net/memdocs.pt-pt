@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: c1e22f4d56ed5a48aaf3c8af633e9f73c195dfb1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327977"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Bloquear o dispositivo a partir da aplicação Portal da Empresa para Windows 10
@@ -56,4 +56,4 @@ Conclua os passos seguintes para bloquear o seu dispositivo a partir da aplicaç
 
 4. Quando encontrar o seu dispositivo, introduza o seu código de acesso para o desbloquear.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

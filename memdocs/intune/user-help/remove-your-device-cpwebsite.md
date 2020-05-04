@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1d8b05a5cd4398026d58c04199caf7f63567cc1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327965"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Remover o seu dispositivo do Portal da Empresa
@@ -38,7 +38,7 @@ Para remover o dispositivo:
 
     ![Uma captura de ecrã da página Dispositivos, com dois mosaicos que mostram dispositivos não identificados com um nome genérico. Uma faixa cinzenta está diretamente abaixo dos dispositivos e pede ao utilizador que identifique o dispositivo que está a utilizar ou adicione um novo.](./media/rename-reset-device-step2-1808.png) 
 
-3. Selecione **Remover**. Se a opção de remoção não estiver visível na parte superior da sua página, selecione **More (…)** (Mais)  > **Remove** (Remover).  
+3. Selecione **Remover**. Se a opção de remoção não for visível na parte superior da sua página, selecione **Mais (...)**  >  **Retire**.  
 
    ![A página de detalhes do dispositivo para um dispositivo selecionado no site do Portal da Empresa, com uma lista de ligações na parte superior que apresenta Mudar o Nome, Remover, Repor Dispositivo, Repor Código de Acesso e Bloqueio Remoto. ](./media/rename-reset-device-1808.png)  
   
@@ -47,4 +47,4 @@ Para remover o dispositivo:
 
 4. É apresentada uma mensagem a avisá-lo de que está prestes a remover o seu dispositivo. Selecione **Remove** (Remover) para confirmar.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

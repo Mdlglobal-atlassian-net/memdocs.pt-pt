@@ -18,15 +18,15 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086303"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Introdução ao SDK da Aplicação Microsoft Intune
 
-Este guia irá ajudá-lo a ativar rapidamente a sua aplicação móvel para suportar políticas de proteção de aplicações com o Microsoft Intune. Será útil compreender primeiro os benefícios do SDK da Aplicação do Intune, conforme explicado na [Descrição Geral do SDK da Aplicação do Intune](app-sdk.md).
+Este guia irá ajudá-lo a ativar rapidamente a sua aplicação móvel para suportar políticas de proteção de aplicações com o Microsoft Intune. Será útil compreender primeiro os benefícios do SDK da Aplicação Intune, conforme explicado na [Descrição Geral do SDK da Aplicação Intune](app-sdk.md).
 
 O SDK da Aplicação Intune suporta cenários semelhantes entre iOS e Android e destina-se a criar uma experiência consistente para os administradores de TI entre as plataformas. Mas há pequenas diferenças no suporte de certas funcionalidades, devido às diferenças e limitações da plataforma.
 
@@ -67,10 +67,10 @@ O link profundo é o link para a listagem da sua aplicação na loja de aplicaç
 
 ## <a name="download-the-sdk-files"></a>Transferir os ficheiros do SDK
 
-Os SDKs da Aplicação Intune para iOS e Android nativos estão alojados numa conta do Microsoft GitHub. Estes repositórios públicos contêm os ficheiros do SDK para iOS e Android nativo, respetivamente:
+Os SDKs da Aplicação do Intune para iOS e Android nativos estão alojados numa conta do Microsoft GitHub. Estes repositórios públicos contêm os ficheiros do SDK para iOS e Android nativo, respetivamente:
 
-* [SDK da Aplicação Intune para iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
-* [SDK da Aplicação do Intune para Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
+* [Intune App SDK para iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
+* [SDK da Aplicação Intune para Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
 Se a sua aplicação for uma aplicação Xamarin, utilize esta variante SDK:
 
@@ -82,11 +82,11 @@ Recomendamos que se inscreva numa conta do GitHub que pode utilizar para bifurca
 
 Irá precisar de um dos seguintes guias para programadores para o ajudar a integrar o SDK da Aplicação Intune na sua aplicação:
 
-* **[Guia para Programadores do SDK da Aplicação Intune para iOS](app-sdk-ios.md)** : este documento descreve os passos para ativar a aplicação iOS nativa com o SDK da Aplicação Intune.
+* **[Guia para Programadores do SDK da Aplicação Intune para iOS](app-sdk-ios.md)**: este documento descreve os passos para ativar a aplicação iOS nativa com o SDK da Aplicação Intune.
 
-* **[Guia para Programadores do SDK da Aplicação Intune para Android](app-sdk-android.md)** : este documento descreve os passos para a ativação da aplicação Android nativa com o SDK da Aplicação Intune.
+* **[Guia para Programadores do SDK da Aplicação Intune para Android](app-sdk-android.md)**: este documento descreve os passos para a ativação da aplicação Android nativa com o SDK da Aplicação Intune.
 
-* **[Guia de Enlaces Xamarin do SDK da Aplicação Intune](app-sdk-xamarin.md)** : este documento ajuda-o a criar aplicações iOS e Android com políticas de proteção de aplicações do Xamarin para Intune.
+* **[Guia de Enlaces Xamarin do SDK da Aplicação Intune](app-sdk-xamarin.md)**: este documento ajuda-o a criar aplicações iOS e Android com políticas de proteção de aplicações do Xamarin para Intune.
 
 
 
@@ -123,7 +123,7 @@ O número da versão completo tem dois componentes:
 - **Versão**  
   O número da versão é o número da versão legível por humanos da aplicação. Este número é utilizado pelos utilizadores finais para identificar diferentes versões da aplicação.
 
-- **Número de Compilação**  
+- **Número de construção**  
   O número de compilação é um número interno que pode ser utilizado para detetar aplicações e gerir a aplicação de forma programática. O número de compilação refere-se a uma iteração da aplicação que faz referência a alterações no código.
 
 ### <a name="version-and-build-number-in-android-and-ios"></a>Número da versão e de compilação em dispositivos Android e iOS
@@ -132,10 +132,10 @@ Os dispositivos Android e iOS utilizam números de versão e de compilação no 
 
 Quando estiver a desenvolver uma aplicação de linha de negócio para utilizar no Intune, lembre-se de utilizar o número da versão e da compilação. As funcionalidades de gestão da Aplicação Intune dependem de um **CFBundleVersion** (para iOS) e de um **PackageVersionCode** (para Android) relevantes. Estes números estão incluídos no manifesto da aplicação. 
 
-Intune|iOS|Android|Description|
+Intune|iOS|Android|Descrição|
 |---|---|---|---|
 Número da versão|CFBundleShortVersionString|PackageVersionName |Este número indica uma versão específica da aplicação para os utilizadores finais.|
-Número de compilação|CFBundleVersion|PackageVersionCode |Este número é utilizado para indicar uma iteração no código da aplicação.|
+Número de construção|CFBundleVersion|PackageVersionCode |Este número é utilizado para indicar uma iteração no código da aplicação.|
 
 #### <a name="ios"></a>iOS
 
@@ -153,7 +153,7 @@ Número de compilação|CFBundleVersion|PackageVersionCode |Este número é util
 
 ## <a name="next-steps-after-integration"></a>Passos seguintes após a integração
 
-### <a name="test-your-app"></a>Testar a sua aplicação
+### <a name="test-your-app"></a>Testar a aplicação
 Depois de terminar os passos necessários para integrar a sua aplicação iOS ou Android com o Intune App SDK, terá de garantir que todas as políticas de proteção de aplicações estão ativadas e a funcionar para o utilizador e para o administrador de TI. Para testar a sua aplicação integrada, necessitará do seguinte:
 
 * **Conta de teste do Microsoft Intune**: para testar a sua aplicação gerida pelo Intune com as funcionalidades de proteção de aplicações do Intune, precisa de ter uma conta do Microsoft Intune.
@@ -178,12 +178,12 @@ Uma vez registado a sua aplicação dentro de um inquilino Azure, e está a apar
 2. Nos **registos da App,** vá à listagem configurada para a aplicação.
 3. Clique **+ Adicione uma permissão**.
 4. Clique nas **APIs que a minha organização utiliza.** 
-5. Na caixa de pesquisa, introduza **Gestão de Aplicações Móveis da Microsoft**.
+5. Na caixa de pesquisa, introduza a **Microsoft Mobile Application Management**.
 6. Sob **permissões delegadas,** selecione o **DispositivoManagementManagedApps.ReadWrite: Read and Write the User's App Management Data*** checkbox.
 7. Clique em **Adicionar permissões**.
 
 > [!NOTE]
-> Se a sua aplicação o restringir à sua entrada devido a um erro de acesso a este recurso: https\://intunemam.microsoftonline.com, deve enviar uma nota para msintuneappsdk@microsoft.com com o ID do cliente da sua aplicação. Este é um processo de aprovação manual hoje.
+> Se a sua aplicação o restringir de iniciar sessão\:devido a um erro de msintuneappsdk@microsoft.com acesso a este recurso: https //intunemam.microsoftonline.com, deve enviar uma nota com o ID do Cliente da sua aplicação. Este é um processo de aprovação manual hoje.
 
 ### <a name="badge-your-app-optional"></a>Colocar um distintivo na aplicação (opcional)
 

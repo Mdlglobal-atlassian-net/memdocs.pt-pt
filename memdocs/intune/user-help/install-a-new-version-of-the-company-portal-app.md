@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d315a9597df482037480aab876505f440354861b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328065"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Como atualizar a aplicação Portal da Empresa
@@ -40,7 +40,7 @@ A Google Play Store alerta-o quando estiver disponível uma versão nova do Port
 
 Quando estiver disponível uma nova versão, é apresentada a opção **Atualizar** na sua lista de aplicações instaladas, junto à aplicação do Portal da Empresa.  
 
-1. Abra a App Store e procure **Intune**.  
+1. Abra a App Store e procure **intune**.  
 2. Quando encontrar a aplicação, toque em **Atualizar**.  
 
 ## <a name="update-the-company-portal-app-on-your-macos-device"></a>Atualize a aplicação Portal da Empresa no seu dispositivo macOS
@@ -48,7 +48,7 @@ Quando estiver disponível uma nova versão, é apresentada a opção **Atualiza
 Configurar o Portal da Empresa para instalar automaticamente as atualizações à medida que se tornarem disponíveis. 
 
 1. Abra o Portal da Empresa e vá para **a Ajuda.** 
-2. Selecione **Verificar se há atualizações**. 
+2. Selecione **Procurar atualizações**. 
 3. No ecrã Microsoft AutoUpdate, selecione **automaticamente descarregar e instalar**. 
 
 Para ver as atualizações disponíveis, selecione **Verificar se há atualizações**.  
@@ -62,4 +62,4 @@ Conclua os seguintes passos se preferir atualizar manualmente as aplicações ou
 3. Clique na aplicação para instalar a versão mais recente no seu dispositivo. 
 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

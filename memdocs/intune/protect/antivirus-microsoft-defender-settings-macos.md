@@ -1,5 +1,5 @@
 ---
-title: definições de política antivírus macOS para o Antivírus Do Microsoft Defender para Intune  Microsoft Docs
+title: definições de política antivírus macOS para o Antivírus Do Microsoft Defender para Intune [ Microsoft Docs
 description: Consulte uma lista das definições no perfil Antivírus Microsoft Defender para macOS. Este perfil faz parte da política antivírus de segurança endpoint para macOS no Microsoft Intune.
 keywords: ''
 author: brenduns
@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
 ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086280"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Definições para Microsoft Defender ATP para Mac no Microsoft Intune
@@ -32,7 +32,7 @@ Ver as definições de perfil *Antivírus* que pode configurar para o Microsoft 
 - **Proteção em tempo real**  
   Exija que o Defender nos dispositivos macOS utilize a funcionalidade de Monitorização em tempo real. A monitorização em tempo real localiza e impede que o malware instale ou execute no seu dispositivo. Pode desligar esta definição por um curto período de tempo antes de voltar a ligar automaticamente.
 
-  - **Não configurado** *(predefinido)* - A definição é restaurada à defeito do sistema
+  - **Não configurado** *(predefinido)*- A definição é restaurada à defeito do sistema
   - **Habilitado** - Impor a utilização da monitorização em tempo real. Os utilizadores do dispositivo não podem alterar esta definição.
   - **Desativado** - A regulação está desativada. Os utilizadores do dispositivo não podem alterar esta definição.
 

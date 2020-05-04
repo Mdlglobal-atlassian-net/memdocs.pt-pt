@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328885"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Resolver erros comuns para o Conector de Câmbio Intune
@@ -42,7 +42,7 @@ Quando tentar configurar o Conector de Troca Intune da Microsoft, recebe a segui
 
 Este problema pode ocorrer se as definições de procuração da Internet estiverem mal configuradas.
 
-**Resolução**:  
+**Resolução:**  
 Configure as definições de procuração:
 1. Contacte o administrador de rede local para se certificar de que as definições de procuração estão corretamente configuradas. 
 2. Utilize o comando **Winhttp netsh** para configurar o servidor proxy e adicionar a lista de exclusão necessária. Por exemplo:  
@@ -64,7 +64,7 @@ Quando tentar configurar o Conector de Troca Intune da Microsoft, recebe a segui
 ```
 Este problema pode ocorrer se a conta que usou para iniciar sintonização não for uma conta intune Global Administrator.
 
-**Resolução**:  
+**Resolução:**  
 Inscreva-se no Intune com uma conta que seja um Administrador Global, ou adicione a sua conta ao grupo Global Admin. Para mais informações, consulte o [controlo da administração baseado em Role (RBAC) com](../fundamentals/role-based-access-control.md)o Microsoft Intune .
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000006"></a>Configuração falhou e devolveu código de erro 0x00000006
@@ -77,9 +77,9 @@ Quando tentar configurar o Conector de Troca Intune da Microsoft, recebe a segui
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Este erro pode ocorrer se um servidor proxy for utilizado para ligar à Internet e estiver a bloquear o tráfego ao Serviço Intune. Para determinar se um proxy está a ser utilizado, vá ao Painel de **Controlo** > **Opções**de Internet, selecione o separador **De ligação** e, em seguida, clique em **Definições LAN**.
+Este erro pode ocorrer se um servidor proxy for utilizado para ligar à Internet e estiver a bloquear o tráfego ao Serviço Intune. Para determinar se um proxy está a ser utilizado, vá às > **opções**de Internet do **Painel de Controlo,** selecione o separador **De Ligação** e, em seguida, clique em **Definições LAN**.
 
-**Resolução**:  
+**Resolução:**  
 
 - **Opção 1** - Remova as definições de procuração para permitir que o computador se conectem à Internet sem passar pelo proxy.  
 
@@ -125,20 +125,20 @@ Um dispositivo iOS não se inscreve em Intune e gera uma das seguintes mensagens
 ```
 Este problema pode ocorrer se a conta **WIEC_User** não tiver o **Log on como** utilizador de serviço na política local.
 
-**Resolução**:  
+**Resolução:**  
 No computador que executa o Conector de Troca Intune, atribua o **Registo como** utilizador de serviço à conta de serviço **WIEC_User.** Se o computador for um nó num cluster, certifique-se de atribuir o Registo como utilizador *de serviço* direito à conta de serviço cluster em todos os nós do cluster.  
 
 Para atribuir o **Registo como** utilizador de serviço diretamente à conta de serviço **WIEC_User** no computador, siga estes passos:
 
 1. Inicie sessão no computador como administrador ou como membro do grupo Administradores.
 2. Executar **secpol.msc** para abrir a Política de Segurança Local.
-3. Vá às **definições** de Segurança > **políticas locais**e, em seguida, selecione **a Atribuição de Direitos de Utilizador**.
+3. Vá para **as definições de segurança As** > **políticas locais,** e, em seguida, selecione A atribuição **de direitos**de utilizador .
 4. No painel direito, clique duas vezes **em Log on como um serviço**.
 5. Selecione **Adicionar Utilizador ou Grupo,** adicione **WIEC_USER** à apólice e, em seguida, selecione **OK** duas vezes.
 
 Se o **Log on como** direito de utilizador de serviço foi atribuído a **WIEC_User** mas foi posteriormente removido, contacte o administrador de domínio para determinar se uma definição de Política de Grupo está a sobrepor-se.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
 O seguinte artigo pode ajudar a resolver erros específicos:
 - [Resolver problemas comuns para o Conector de Câmbio Intune](troubleshoot-exchange-connector-common-problems.md).git 

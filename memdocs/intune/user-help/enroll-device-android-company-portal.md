@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551658"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Inscreva o seu dispositivo com o Portal da Empresa  
@@ -32,9 +32,9 @@ Inscreva o seu dispositivo Android pessoal ou corporativo para obter acesso segu
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> A Samsung Knox é um tipo de segurança que certos dispositivos da Samsung usam para proteção adicional fora do que o Android nativo fornece. Para verificar se tem um dispositivo Samsung Knox,> vá a **Definições** > **sobre o dispositivo**. Se não vir a **versão Knox** listada lá, tem um dispositivo Android nativo.
+> A Samsung Knox é um tipo de segurança que certos dispositivos da Samsung usam para proteção adicional fora do que o Android nativo fornece. Para verificar se tem um dispositivo Samsung Knox, > ir para **Definições** > **Sobre o dispositivo**. Se não vir a **versão Knox** listada lá, tem um dispositivo Android nativo.
 
-## <a name="enroll-device"></a>Dispositivo de inscrição  
+## <a name="enroll-device"></a>Inscrever o dispositivo  
 Certifique-se de instalar a aplicação Intune Company Portal [a partir do Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Consulte a [aplicação Install Company Portal na China continental](install-company-portal-android-china.md) para obter uma lista de lojas que oferecem a app na China continental.    
 
 Durante a inscrição, pode ser-lhe pedido que escolha uma categoria que melhor descreva como utiliza o seu dispositivo. O suporte da sua empresa utiliza a sua resposta para verificar as aplicações a que tem acesso.  
@@ -61,7 +61,7 @@ Durante a inscrição, pode ser-lhe pedido que escolha uma categoria que melhor 
     * **Permitir que o Portal da Empresa efaça e gere chamadas telefónicas**: Esta permissão permite ao seu dispositivo partilhar o seu número de identidade de equipamento de estação móvel internacional (IMEI) com a Intune, fornecedora de gestão de dispositivos da sua organização. É seguro permitir esta permissão. A Microsoft nunca fará ou gerirá chamadas telefónicas.  
     * **Permitir que o Portal da Empresa aceda aos seus contactos**: Esta permissão permite que a aplicação Portal da Empresa crie, utilize e gere a sua conta de trabalho.  É seguro permitir esta permissão. A Microsoft nunca acederá aos seus contactos. 
 
-    Se negar permissão, será solicitado novamente da próxima vez que assinar no Portal da Empresa. Para desligar estas mensagens, selecione **Nunca mais pergunte**. Para gerir permissões de aplicações, vá à app Definições > **Apps** > Portal da **Empresa** > **Permissões** > **Telefone.**  
+    Se negar permissão, será solicitado novamente da próxima vez que assinar no Portal da Empresa. Para desligar estas mensagens, selecione **Nunca mais pergunte**. Para gerir permissões de aplicações, vá à aplicação Definições > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
 6. Ativar a aplicação de administração do dispositivo. 
 
@@ -89,13 +89,13 @@ Durante a inscrição, pode ser-lhe pedido que escolha uma categoria que melhor 
 
     ![Imagem de exemplo do Portal da Empresa, ecrã de configuração de acesso da empresa, mostrando configuração completa e realce botão Feito.](./media/android-enrollment-done-1911.png) 
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
-Antes de tentar instalar uma escola ou uma aplicação de trabalho, vá a **Definições** > **Segurança**, e ligue **fontes desconhecidas.** Se não ligar esta opção, verá a seguinte mensagem quando tentar instalar uma aplicação: "Instale bloqueado. Por motivos de segurança, o dispositivo está definido para bloquear as instalações de aplicações obtidas a partir de origens desconhecidas." Pode tocar em **Definições** na mensagem para ir diretamente a **fontes desconhecidas**.  
+Antes de tentar instalar uma escola ou uma aplicação de trabalho, vá à **Definições** > **de Segurança**e ligue **fontes desconhecidas.** Se não ligar esta opção, verá a seguinte mensagem quando tentar instalar uma aplicação: "Instale bloqueado. Por motivos de segurança, o dispositivo está definido para bloquear as instalações de aplicações obtidas a partir de origens desconhecidas." Pode tocar em **Definições** na mensagem para ir diretamente a **fontes desconhecidas**.  
 
 > [!Note]
 > Se a sua organização utilizar software de gestão de despesas de telecomunicações, terá de completar alguns passos adicionais antes de o dispositivo ficar totalmente inscrito. Saiba mais [aqui](enroll-your-device-with-telecom-expense-management-android.md).
 
 Se tiver um erro enquanto tenta inscrever o seu dispositivo em Intune, pode [enviar um e-mail](send-logs-to-your-it-admin-by-email-android.md)para o suporte da sua empresa.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

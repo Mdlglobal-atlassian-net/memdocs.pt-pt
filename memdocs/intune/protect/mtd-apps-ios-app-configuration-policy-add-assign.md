@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084851"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Adicionar e atribuir aplicações de MTD (Defesa Contra Ameaças para Dispositivos Móveis) com o Intune
@@ -82,7 +82,7 @@ Selecione a secção que corresponde ao seu fornecedor de MTD:
 
     3. Substitua o valor **com.lookout.enterprise.onomedasuaempresa** pelo ID de pacote de cliente que selecionou quando assinou o IPA.
 
-    4. Adicione o URI de redirecionamento adicional: **&lt;companyportal://code/>** seguido de uma versão com codificação URL do seu URI de redirecionamento original.
+    4. Adicione uri redirecionamento adicional: ** &lt;companyportal://code/>** seguido de uma versão codificada de URL do seu URI redireccionador original.
 
     5. Adicione **Permissões Delegadas** à sua aplicação.
 
@@ -96,7 +96,7 @@ Selecione a secção que corresponde ao seu fornecedor de MTD:
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Configurar as aplicações do Symantec Endpoint Protection Mobile
 
 - **Android**
-  - Veja as instruções para [adicionar aplicações da loja Android ao Microsoft Intune](../apps/store-apps-android.md). Utilize este URL de loja de [aplicações SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure) para o URL da **Appstore**.  Para o **Sistema operativo mínimo**, selecione **Android 4.0 (Ice Cream Sandwich)** .
+  - Veja as instruções para [adicionar aplicações da loja Android ao Microsoft Intune](../apps/store-apps-android.md). Utilize este URL de loja de [aplicações SEP Mobile](https://play.google.com/store/apps/details?id=com.skycure.skycure) para o URL da **Appstore**.  Para o **Sistema operativo mínimo**, selecione **Android 4.0 (Ice Cream Sandwich)**.
 
 - **iOS**
   - Veja as instruções para [adicionar aplicações da loja iOS ao Microsoft Intune](../apps/store-apps-ios.md). Utilize este URL de loja de [aplicações SEP Mobile](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) para o URL da **Appstore**.
@@ -164,11 +164,11 @@ Utilize a mesma conta Azure AD previamente configurada na [consola Symantec Endp
 
   - Aceda às **Definições** e, em **Integrações**, escolha **Intune**. Escolha **Seleção da Integração de EMM**. Escolha **Microsoft** e guarde a seleção.
 
-  - Clique na ligação **Ficheiros de configuração de integração** e guarde o ficheiro \*.zip gerado. O ficheiro .zip contém o ficheiro * **.plist** que servirá para criar a política de configuração de aplicações iOS no Intune.
+  - Clique na ligação **Ficheiros de configuração de integração** e guarde o ficheiro \*.zip gerado. O ficheiro .zip contém o ficheiro ***.plist** que servirá para criar a política de configuração de aplicações iOS no Intune.
 
   - Veja as instruções sobre como [utilizar políticas de configuração de aplicações do Microsoft Intune para iOS](../apps/app-configuration-policies-use-ios.md) para adicionar a política de configuração de aplicações do SEP Mobile para iOS.
 
-    - Para configurações de **configuração,** selecione **dados XML,** copie o conteúdo do ficheiro * **.plist** e cole o seu conteúdo no corpo da política de configuração.
+    - Para configurações de **configuração,** selecione **dados XML,** copie o conteúdo do ficheiro ***.plist** e cole o seu conteúdo no corpo da política de configuração.
 
 > [!NOTE]
 > Se não conseguir obter os ficheiros, contacte o [Suporte Empresarial do Symantec Endpoint Protection Mobile](https://support.symantec.com/en_US/contact-support.html).
@@ -232,7 +232,7 @@ Consulte as instruções para utilizar as políticas de configuração da [aplic
 
 - Para configurações de **configuração,** selecione **os dados Do XML**.
 
-Inscreva-se no portal RADAR Wandera e navegue em **Definições** > **Integração EMM** > Impulso de **Aplicação**. Selecione **Intune**, e, em seguida, copie o conteúdo abaixo e cole-o no corpo da política de configuração.  
+Inscreva-se no portal RADAR Wandera e navegue para **configurações** > **em configuração em inserção** > **app Push**. Selecione **Intune**, e, em seguida, copie o conteúdo abaixo e cole-o no corpo da política de configuração.  
 
   ```
   <dict><key>secretKey</key>
@@ -255,6 +255,6 @@ Inscreva-se no portal RADAR Wandera e navegue em **Definições** > **Integraç�
 
 Este passo aplica-se a todos os parceiros de MTD. Veja as instruções para [atribuir aplicações a grupos com o Intune](../apps/apps-deploy.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Configurar a política de conformidade de dispositivos da MTD](mtd-device-compliance-policy-create.md)

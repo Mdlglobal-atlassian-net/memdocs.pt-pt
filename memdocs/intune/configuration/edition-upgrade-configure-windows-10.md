@@ -1,5 +1,5 @@
 ---
-title: Atualizar ou utilizar o modo S nos dispositivos Windows 10 - Microsoft Intune - Azure  Microsoft Docs
+title: Atualizar ou utilizar o modo S nos dispositivos Windows 10 - Microsoft Intune - Azure [ Microsoft Docs
 description: Utilize o Microsoft Intune para atualizar os dispositivos do Windows 10 para uma edição diferente ou mudar o modo S. Os administradores podem utilizar um perfil de configuração do dispositivo para atualizar o Windows 10 Professional para o Windows 10 Enterprise e mudar o modo S. Consulte os caminhos de upgrade suportados para Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic e Mobile.
 keywords: ''
 author: MandiOhlinger
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333109"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Atualize as edições do Windows 10 ou desliga o modo S em dispositivos que utilizem o Microsoft Intune
@@ -61,15 +61,15 @@ A seguinte tabela indica os caminhos de atualização suportados para o perfil d
 
 | Atualizar a partir do | Atualizar para o |
 |---|---|
-| Windows 10 Pro | Educação Windows 10 <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
+| Windows 10 Pro | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
 | Edição Windows 10 Pro N | Edição Windows 10 Education N <br/>Edição Windows 10 Enterprise N <br/>Edição Windows 10 Pro Education N | 
-| Windows 10 Pro Education | Educação Windows 10 | 
+| Windows 10 Pro Education | Windows 10 Education | 
 | Edição Windows 10 Pro Education N | Edição Windows 10 Education N |
-| Windows 10 Cloud | Educação Windows 10 <br/>Windows 10 Enterprise <br/>Windows 10 Pro <br/>Windows 10 Pro Education | 
+| Windows 10 Cloud | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro <br/>Windows 10 Pro Education | 
 | Edição Windows 10 Cloud N | Edição Windows 10 Education N <br/>Edição Windows 10 Enterprise N <br/>Edição Windows 10 Pro N <br/>Edição Windows 10 Pro Education N | 
-| Windows 10 Enterprise | Educação Windows 10 | 
+| Windows 10 Enterprise | Windows 10 Education | 
 | Edição Windows 10 Enterprise N | Edição Windows 10 Education N | 
-| Windows 10 Core | Educação Windows 10 <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
+| Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Edição Windows 10 Core N | Edição Windows 10 Education N <br/>Edição Windows 10 Enterprise N <br/>Edição Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
 | Windows 10 Mobile | Windows 10 Mobile Enterprise |
@@ -97,11 +97,11 @@ A seguinte tabela indica os caminhos de atualização suportados para o perfil d
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: introduza um nome descritivo para o novo perfil. Por exemplo, introduza algo como `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode`.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Nome**: introduza um nome descritivo para o novo perfil. Por exemplo, insira algo como `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode`.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
     - **Tipo de perfil**: **Atualização Select Edition**.
     - **Definições**: Introduza as definições que pretende configurar. Para uma lista de todas as configurações, e o que fazem, veja:
@@ -109,11 +109,11 @@ A seguinte tabela indica os caminhos de atualização suportados para o perfil d
         - [Atualização do Windows 10 e modo S](edition-upgrade-windows-settings.md)
         - [Windows Holographic for Business](holographic-upgrade.md)
 
-4. Selecione **OK** > **Criar** para guardar as alterações.
+4. Selecione **OK** > **Criar** para guardar as suas alterações.
 
 O perfil é criado e mostrado na lista. Certifique-se de [atribuir o perfil](device-profile-assign.md) e monitorizar [o seu estado](device-profile-monitor.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

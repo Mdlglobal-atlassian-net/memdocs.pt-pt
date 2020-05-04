@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086811"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Configurações do dispositivo Android Enterprise para configurar VPN em Intune
@@ -50,7 +50,7 @@ Para saber mais sobre perfis VPN em Intune, consulte [perfis VPN](vpn-settings-c
 - **Tipo de ligação**: selecione o tipo de ligação VPN. As opções são:
 
   - **Cisco AnyConnect**
-  - **Acesso F5**
+  - **F5 Access**
   - **Pulse Secure**
 
 ## <a name="work-profile-only"></a>Apenas perfil de trabalho
@@ -66,12 +66,12 @@ Para saber mais sobre perfis VPN em Intune, consulte [perfis VPN](vpn-settings-c
 - **Tipo de ligação**: selecione o tipo de ligação VPN. As opções são:
 
   - **Cisco AnyConnect**
-  - **Acesso F5**
+  - **F5 Access**
   - **Pulse Secure**
   - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

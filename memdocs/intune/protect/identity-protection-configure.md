@@ -1,5 +1,5 @@
 ---
-title: Utilize um PIN para iniciar sessão nos dispositivos do Windows 10 utilizando o Microsoft Intune - Azure  Microsoft Docs
+title: Utilize um PIN para iniciar sessão nos dispositivos do Windows 10 utilizando o Microsoft Intune - Azure [ Microsoft Docs
 description: Utilize o Windows Hello for Business para permitir que os utilizadores instiem dispositivos com um PIN, uma impressão digital e muito mais. Crie um perfil de configuração de proteção de identidade em Intune para dispositivos Windows 10 com estas definições e atribua o perfil a grupos de utilizadores e grupos de dispositivos.
 keywords: ''
 author: brenduns
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ded5572d5b20ee1c9f59d3f4b253c71e34ef497f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322852"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Utilize o Windows Hello para negócios em dispositivos Windows 10 com microsoft Intune
@@ -44,12 +44,12 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
 
    - **Nome**: introduza um nome descritivo para o novo perfil.
-   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+   - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
    - **Plataforma**: Selecione **o Windows 10 e mais tarde**. O Windows Hello para Empresas só é suportado em dispositivos com o Windows 10 e versões posteriores.
    - **Tipo de perfil**: Selecione **a proteção de identidade**.
 
@@ -68,7 +68,7 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
      - **Ativar**
      - **Não configurado** (padrão)
 
-5. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
 
 O perfil é criado e aparece na lista de perfis. Em seguida, [atribua](../configuration/device-profile-assign.md) este perfil aos grupos de utilizadores e dispositivos para atender às suas necessidades.
 
@@ -85,7 +85,7 @@ In this high-level example, you'll create a device restriction policy that block
 
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Veja uma lista de todas [as definições e o que fazem.](identity-protection-windows-settings.md)
 - [Atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o respetivo estado](../configuration/device-profile-monitor.md).

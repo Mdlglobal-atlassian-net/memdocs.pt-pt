@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084938"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quais são as formas comuns de usar o Acesso Condicional com Intune?
@@ -34,7 +34,7 @@ Existem dois tipos de acesso condicional com o Intune: acesso condicional basead
 As informações deste artigo podem ajudá-lo a entender como usar as capacidades de conformidade do *dispositivo* móvel Intune e as capacidades de gestão de *aplicações* móveis Intune (MAM). 
 
 > [!NOTE]
-> O Acesso Condicional é uma capacidade de Diretório Ativo Azure que está incluída com uma licença Azure Ative Directory Premium. O Intune melhora esta funcionalidade ao adicionar à solução a conformidade de dispositivos móveis e a gestão de aplicações móveis. O nó de Acesso Condicional acedido a partir do *Intune* é o mesmo nó acedido a partir do *Azure AD*.  
+> O Acesso Condicional é uma capacidade de Diretório Ativo Azure que está incluída com uma licença Azure Ative Directory Premium. O Intune melhora esta funcionalidade ao adicionar à solução a conformidade de dispositivos móveis e a gestão de aplicações móveis. O nó de Acesso Condicional acessado a partir de *Intune* é o mesmo nó a que o Acesso a partir de *Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Acesso Condicional baseado em dispositivos
 
@@ -52,10 +52,10 @@ As políticas de acesso condicional baseadas em dispositivos para o Exchange onl
 
 > [!NOTE]
 > Nos dispositivos Android, quando ativar o acesso baseado no dispositivo para o SharePoint Online ou o acesso baseado no navegador ao Exchange Online, os utilizadores devem ativar a opção **enable Browser Access** no dispositivo inscrito da seguinte forma:
-> 1. Inicie a aplicação **Portal da Empresa**.
-> 2. Aceda à página **Definições** a partir das reticências (…) ou do botão do menu de hardware.
+> 1. Inicie a **aplicação Portal da Empresa**.
+> 2. Vá para a página **Definições** a partir dos pontos triplos (...) ou no botão do menu de hardware.
 > 3. Prima o botão **Ativar acesso ao browser** . 
-> 4. No browser Chrome, termine a sessão no Office 365 e reinicie o Chrome.
+> 4. No browser Chrome, termine sessão no Office 365 e reinicie o Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Acesso condicional com base no controlo de acesso de rede
 
@@ -81,7 +81,7 @@ A integração da defesa de ameaças insinatos e móveis desempenha um fator nas
 
 O acesso condicional para PCs fornece funcionalidades semelhantes às que se encontram disponíveis para dispositivos móveis. Vamos falar sobre as formas como podes usar o acesso condicional ao gerir computadores com o Intune.
 
-#### <a name="corporate-owned"></a>Pertencentes à empresa
+#### <a name="corporate-owned"></a>Pertencente à empresa
 
 - **A Hybrid Azure AD juntou-se:** Esta opção é comumente usada por organizações que são razoavelmente confortáveis com a forma como já estão a gerir os seus Computadores através de políticas de grupo aD ou De Configuração Manager.
 
@@ -153,11 +153,11 @@ O servidor de intercâmbio fornece API e infraestruturas para mover dispositivos
 > [!IMPORTANT]
 > Tenha em mente que o utilizador que está a utilizar o dispositivo deve ter um perfil de conformidade e licença Intune atribuída a eles para que o dispositivo possa ser avaliado para o cumprimento. Se não estiver implementada nenhuma política de conformidade para o utilizador, o dispositivo será tratado como compatível e não serão aplicadas restrições de acesso.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Como configurar o Acesso Condicional no Diretório Ativo Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-[Configurar políticas de acesso condicional baseadas em aplicativos](app-based-conditional-access-intune-create.md)
+[Configurar políticas de acesso condicional com base nas aplicações](app-based-conditional-access-intune-create.md)
 
 [Como instalar o conector do Exchange no local com o Intune](exchange-connector-install.md).
 

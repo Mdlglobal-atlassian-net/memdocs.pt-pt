@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,28 +18,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323096"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525683"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Impor a conformidade em Macs geridos com o Jamf Pro
 
-Quando integrar o Jamf Pro com o [Intune,](conditional-access-integrate-jamf.md)pode utilizar políticas de Acesso Condicional para impor o cumprimento dos seus dispositivos Mac com os seus requisitos organizacionais.  Este artigo irá ajudá-lo com as seguintes tarefas:  
+Quando integrar o Jamf Pro com o Intune, pode utilizar políticas de Acesso Condicional para impor o cumprimento dos seus dispositivos Mac com os seus requisitos organizacionais. Este artigo irá ajudá-lo com as seguintes tarefas:  
 
 - Criar políticas de acesso condicional.
 - Configure o Jamf Pro para implementar a aplicação Intune Company Portal para dispositivos que gere com o Jamf.
 - Configure os dispositivos para se registar em Azure AD quando o utilizador do dispositivo iniciar a sua entrada na aplicação Portal da Empresa que eles iniciam dentro da aplicação Jamf Self Service. O registo do dispositivo estabelece uma identidade em Azure AD que permite que o dispositivo seja avaliado pelas políticas de Acesso Condicional para acesso aos recursos da empresa.  
  
 Os procedimentos deste artigo requerem acesso às consolas Intune e Jamf Pro.
+Intune suporta dois métodos para integrar o Jamf Pro, que configura separadamente dos procedimentos deste artigo:
+
+- Recomendado: [Utilize o Conector de Nuvem Jamf para integrar o Jamf Pro com o Intune](conditional-access-jamf-cloud-connector.md)
+- [Configure manualmente a integração do Jamf Pro com intune](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Configurar políticas de conformidade de dispositivos no Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > políticas de **conformidade**. Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
+2. Selecione**as políticas**de conformidade dos **dispositivos** > . Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
 
 3. Sobre as políticas *Painel de visão geral,* selecione **Atribuições**. Utilize as opções disponíveis para configurar quais os utilizadores e grupos de segurança do Azure Ative Directory (Azure AD) que recebem esta política. **A integração do Jamf com a Intune não suporta a política de conformidade que visa grupos de dispositivos.**
 
@@ -63,11 +67,11 @@ Para completar o seguinte procedimento, precisa de acesso a um dispositivo macOS
 
 1. Num dispositivo macOS, descarregue mas não instale a versão atual da aplicação Portal da [Empresa para o macOS.](https://go.microsoft.com/fwlink/?linkid=862280) Só precisa de uma cópia da aplicação para que possa fazer o upload da aplicação para o Jamf Pro.  
 
-2. Abra o Jamf Pro e vá à **gestão de computadores** > **Pacotes.**
+2. Abra o Jamf Pro e vá a Pacotes de **Gestão** > de**Computadores.**
 
 3. Crie um novo pacote com a aplicação Portal da Empresa para o macOS e, em seguida, selecione **Save**.
 
-4. Abra **Computadores** > **Políticas** e, em seguida, selecione **Novo**.
+4. Abra**as políticas** **dos computadores** > e, em seguida, selecione **New**.
 
 5. Utilize o payload **Geral** para configurar as definições da política. Estas definições deverão ser:
    - Acionador: selecione **Inscrição Completa** e **Inscrição Periódica**
@@ -93,7 +97,7 @@ O registo do dispositivo requer que um utilizador do dispositivo selecione manua
 
 ### <a name="to-create-the-registration-policy"></a>Para criar a política de registo  
 
-1. No Jamf Pro, vá ao **Computers** > **Policies**, e depois crie uma nova política para o registo de dispositivos.
+1. No Jamf Pro, vá às**Políticas** **de Computadores** > e, em seguida, crie uma nova política para o registo de dispositivos.
 
 2. Configure o payload **Integração do Microsoft Intune**, incluindo o acionamento e a frequência de execução.
 
@@ -118,7 +122,7 @@ Para remover um dispositivo gerido pelo Jamf, abra o centro de administração d
 
 Obtenha informações sobre como remover um dispositivo gerido pelo [Jamf nos docs Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Também pode apresentar um bilhete de apoio com suporte ao [Jamf](https://www.jamf.com/support/) para obter ajuda adicional. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Acesso Condicional no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Acesso Condicional no Diretório Ativo Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [Começar com Acesso Condicional no Diretório Ativo Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

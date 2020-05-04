@@ -1,5 +1,5 @@
 ---
-title: Matricular o perfil de trabalho android com o Portal da Empresa Intune  Microsoft Docs
+title: Matricular o perfil de trabalho android com o Portal da Empresa Intune [ Microsoft Docs
 description: Como criar um perfil de trabalho e um dispositivo de inscrição com o Intune Company Portal.
 keywords: ''
 author: lenewsad
@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328249"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscreva dispositivo com perfil de trabalho Android
@@ -46,7 +46,7 @@ Saiba mais sobre [o que acontece quando cria um perfil de trabalho](what-happens
 
     ![Exemplo da imagem do Portal da Empresa, preocupamo-nos com o seu ecrã de privacidade, destacando o botão Continuar.](./media/android-privacy-screen-1911.png)  
 
-4. Reveja os termos do Google para criar um perfil de trabalho. Em seguida, toque em **ACCEPT & CONTINUE**. O aparecimento deste ecrã variará em função da versão Android do seu dispositivo. 
+4. Reveja os termos do Google para criar um perfil de trabalho. Em seguida, toque em **ACEITAR & CONTINUE**. O aparecimento deste ecrã variará em função da versão Android do seu dispositivo. 
 
     ![Screenshot dos termos do perfil de trabalho da Google](./media/android-wp-05-1908.png)  
 
@@ -76,8 +76,8 @@ Saiba mais sobre [o que acontece quando cria um perfil de trabalho](what-happens
     ![Imagem de exemplo do Portal da Empresa, ecrã de configuração de acesso da empresa, mostrando configuração completa e realce botão Feito.](./media/work-profile-done-1911.png)  
 
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
 Agora que o seu dispositivo está matriculado, pode instalar aplicações escolares ou de trabalho no seu dispositivo. Vá à loja gerida do Google Play para encontrar e instalar estas aplicações. 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

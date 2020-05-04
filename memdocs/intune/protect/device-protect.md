@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c9ee00d13b32e1f52937489b86d29f075e5f580a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329393"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Proteger dispositivos com o Microsoft Intune
@@ -30,10 +30,10 @@ ms.locfileid: "79329393"
 O Microsoft Intune ajuda-o a proteger os dispositivos que gere e os dados armazenados nesses dispositivos.
 
 ## <a name="device-configuration"></a>Configuração do dispositivo
-As [políticas de configuração](../configuration/device-profiles.md) do Intune ajudam a proteger e configurar dispositivos através do controlo de inúmeras definições e funcionalidades. Por exemplo:
+As políticas de [configuração](../configuration/device-profiles.md) insintonizam-no a proteger e configurar dispositivos controlando uma multiplicidade de configurações e funcionalidades. Por exemplo:
 
 - Pode restringir a utilização das funcionalidades de hardware do dispositivo, como a câmara ou o Bluetooth.
-- Pode configurar aplicações em conformidade e não conformes. O utilizador recebe um alerta se estiver instalada uma aplicação não conforme (e algumas plataformas podem realmente bloquear a instalação).
+- Pode configurar aplicações conformes e não conformes. O utilizador recebe um alerta se estiver instalada uma aplicação não conforme (e algumas plataformas podem realmente bloquear a instalação).
 
 ## <a name="reset-passcodes-when-users-are-locked-out-of-their-devices"></a>Repor códigos de acesso quando o acesso dos utilizadores aos respetivos dispositivos é bloqueado
 Uma vez que o primeiro passo para proteger os dados da empresa em dispositivos móveis consiste em exigir um código de acesso para utilizar o dispositivo, por vezes, precisa de [repor um código de acesso](../remote-actions/device-passcode-reset.md) ou ajudar um empregado a fazê-lo, seja através da remoção do código de acesso ou da definição de um código de acesso temporário em modo remoto. Também pode [bloquear um dispositivo remotamente](../remote-actions/device-remote-lock.md) se este for perdido ou roubado.
@@ -62,6 +62,6 @@ O Intune permite realizar a integração com o [Windows Hello para Empresas](win
 ## <a name="disable-activation-lock-on-ios-devices"></a>Desativar bloqueio de ativação em dispositivos iOS
 O Bloqueio de ativação é uma funcionalidade que ajuda a proteger os dispositivos dos utilizadores. A funcionalidade exige que os utilizadores introduzam o Apple ID e a palavra-passe antes de qualquer pessoa poder eliminar ou reativar o dispositivo. No entanto, esta funcionalidade pode originar problemas, por exemplo, se os utilizadores saírem da empresa sem remover o bloqueio. [Desativar o iOS/iPadOS Activation Lock](../remote-actions/device-activation-lock-disable.md) pode ajudar removendo o bloqueio de dispositivos iOS/iPadOS supervisionados que lhe permitem realocar ou apagá-los.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre a [defesa contra ameaças para dispositivos móveis](mobile-threat-defense.md)

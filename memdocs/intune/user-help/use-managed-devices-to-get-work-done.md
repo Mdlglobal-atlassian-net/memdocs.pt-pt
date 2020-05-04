@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233426"
 ---
 # <a name="what-is-device-enrollment"></a>O que é a inscrição de dispositivos?
@@ -62,9 +62,9 @@ Pode inscrever os seguintes dispositivos com o Portal da Empresa:
 
 - Dispositivos Windows
   - Windows 10 Mobile
-  - Computadores com o Windows 10
+  - Windows 10 Desktop
   - Windows Phone 8.1
-  - Windows 8,1
+  - Windows 8.1
 - Dispositivos Apple
     - iOS
     - macOS
@@ -75,7 +75,7 @@ Pode inscrever os seguintes dispositivos com o Portal da Empresa:
 Pode inscrever dispositivos Android corporativos que a sua organização criou para usar com a aplicação. A aplicação suporta o Android 6.0 e mais tarde. 
 
 ## <a name="can-you-remove-a-device-from-the-company-portal"></a>Pode remover um dispositivo do Portal da Empresa?
-Pode remover ou repor um dispositivo do Portal da Empresa. Existe uma diferença entre **remover** e **repor**.
+Pode remover ou repor um dispositivo do Portal da Empresa. Há uma diferença entre **remover** e **repor**.
 
 Durante a remoção do dispositivo, o Portal da Empresa desinscreve e desregista o dispositivo. Este dispositivo perde acesso ao Portal da Empresa. Os dados do trabalho ou da escola também podem ser removidos. 
 
@@ -99,7 +99,7 @@ Para resolver problemas comuns, confira estes médicos específicos da plataform
 
 Também pode contactar a pessoa de suporte de TI. O Portal da Empresa e a aplicação Microsoft Intune oferecem páginas de ajuda e suporte que listam informações de contacto e formas de reportar um problema. As informações de contacto também estão disponíveis no site do Portal da [Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)da org.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
 Se estiver pronto para aceder ao seu trabalho ou conta escolar, siga as instruções da sua organização para inscrever o seu dispositivo. Também pode encontrar orientação passo a passo de inscrição nos seguintes artigos.
 
@@ -110,4 +110,4 @@ Se estiver pronto para aceder ao seu trabalho ou conta escolar, siga as instruç
 * [Inscrever o seu dispositivo iOS](enroll-your-device-in-intune-ios.md)
 * [Inscrever o seu dispositivo iOS fornecido pela organização](enroll-your-device-dep-ios.md)
 * [Inscrever o seu dispositivo macOS](enroll-your-device-in-intune-macos-cp.md)
-* [Enroll your organization-provided macOS device](enroll-company-device-macos.md) (Inscrever o seu dispositivo macOS fornecido pela organização)
+* [Inscrever o seu dispositivo macOS fornecido pela organização](enroll-company-device-macos.md)

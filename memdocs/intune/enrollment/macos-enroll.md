@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327044"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configurar a inscrição para dispositivos macOS no Intune
@@ -43,7 +43,7 @@ Antes de configurar a inscrição de dispositivos macOS, tem de cumprir os segui
 - [Criar grupos](../fundamentals/groups-add.md)
 - [Configurar o Portal da Empresa](../apps/company-portal-app.md)
 - Atribuir licenças de utilizador no [Centro de administração do Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Obter um certificado push de MDM da Apple](../enrollment/apple-mdm-push-certificate-get.md)
+- [Obtenha um certificado de push Apple MDM](../enrollment/apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Dispositivos Mac OS propriedade do utilizador (BYOD)
 
@@ -73,21 +73,21 @@ Por predefinição, o Intune permite a inscrição de dispositivos macOS. Para i
 
 Pode inscrever máquinas virtuais macOS para teste com o Parallels Desktop ou a VMware Fusion. 
 
-Para o Parallels Desktop, precisa de definir o tipo de hardware e o número de série das máquinas virtuais, para que o Intune possa reorganizá-las. Siga as instruções do Parallels para definir o tipo de hardware e o [número de série](http://kb.parallels.com/123455) para configurar as definições necessárias para o teste. Recomendamos que faça corresponder o tipo de hardware do dispositivo a executar as máquinas virtuais ao tipo de hardware das máquinas virtuais que está a criar. Pode encontrar este tipo de hardware em **Menu Apple** > **Acerca deste Mac** > **Relatório do Sistema** > **Identificador de Modelo**. 
+Para o Parallels Desktop, precisa de definir o tipo de hardware e o número de série das máquinas virtuais, para que o Intune possa reorganizá-las. Siga as instruções do Parallels para definir o tipo de hardware e o [número de série](http://kb.parallels.com/123455) para configurar as definições necessárias para o teste. Recomendamos que faça corresponder o tipo de hardware do dispositivo a executar as máquinas virtuais ao tipo de hardware das máquinas virtuais que está a criar. Pode encontrar este tipo de hardware no **menu** > apple**sobre este** > **identificador**de modelo de**relatório** > mac system . 
 
-Para a VMware Fusion, precisa de [editar o ficheiro .vmx](https://kb.vmware.com/s/article/1014782) para definir o número de série e o modelo de hardware da máquina virtual. Recomendamos que faça corresponder o tipo de hardware do dispositivo a executar as máquinas virtuais ao tipo de hardware das máquinas virtuais que está a criar. Pode encontrar este tipo de hardware em **Menu Apple** > **Acerca deste Mac** > **Relatório do Sistema** > **Identificador de Modelo**. 
+Para a VMware Fusion, precisa de [editar o ficheiro .vmx](https://kb.vmware.com/s/article/1014782) para definir o número de série e o modelo de hardware da máquina virtual. Recomendamos que faça corresponder o tipo de hardware do dispositivo a executar as máquinas virtuais ao tipo de hardware das máquinas virtuais que está a criar. Pode encontrar este tipo de hardware no **menu** > apple**sobre este** > **identificador**de modelo de**relatório** > mac system . 
 
 ## <a name="user-approved-enrollment"></a>Inscrição do Utilizador Aprovado
 A inscrição na MDM do Utilizador Aprovado é um tipo de inscrição de macOS que pode utilizar para gerir determinadas definições relacionadas com a segurança. Para obter mais informações, veja a [documentação de suporte da Apple](https://support.apple.com/HT208019).  
  
-Durante o processo de inscrição BYOD, o utilizador será solicitado a aprovar manualmente o perfil de gestão da Apple. As instruções são fornecidas na aplicação Portal da Empresa para o macOS. Embora a aprovação do perfil de gestão não seja necessária para completar a inscrição, intune recomenda inscrições aprovadas pelo utilizador. Se o utilizador não aprovar o perfil durante a inscrição, o utilizador pode ir às **Preferências** do Sistema > **Perfis,** escolher o perfil de gestão e selecionar **Aprovar**.    
+Durante o processo de inscrição BYOD, o utilizador será solicitado a aprovar manualmente o perfil de gestão da Apple. As instruções são fornecidas na aplicação Portal da Empresa para o macOS. Embora a aprovação do perfil de gestão não seja necessária para completar a inscrição, intune recomenda inscrições aprovadas pelo utilizador. Se o utilizador não aprovar o perfil durante a inscrição, o utilizador pode ir aos Perfis de > **Preferências**do **Sistema,** escolher o perfil de gestão e selecionar **Aprovar**.    
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>Descubra se um dispositivo é Aprovado pelo Utilizador
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **Dispositivos** > **Todos os dispositivos**> escolha o dispositivo > **Hardware**.
+2. Escolha **dispositivos** > **Todos os dispositivos**> escolha mato do dispositivo > **Hardware**.
 3. Verifique o campo de **inscrição aprovado** pelo Utilizador.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Assim que os dispositivos macOS forem inscritos, pode [criar definições personalizadas para dispositivos macOS](../configuration/custom-settings-macos.md).

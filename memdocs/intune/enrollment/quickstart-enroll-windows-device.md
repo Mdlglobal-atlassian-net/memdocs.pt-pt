@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327060"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Guia de Início Rápido: inscrever o seu dispositivo com o Windows 10
@@ -37,7 +37,7 @@ Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Subscrição do Microsoft Intune – [inscreva-se numa conta de avaliação gratuita](../fundamentals/free-trial-sign-up.md).
+- Subscrição microsoft Intune - [inscreva-se para uma conta de teste gratuita](../fundamentals/free-trial-sign-up.md)
 - Para concluir este guia de início rápido, tem de concluir os passos para [configurar a inscrição automática no Intune](quickstart-setup-auto-enrollment.md).
 
 ## <a name="confirm-your-windows-10-desktop-version"></a>Confirmar a versão do Windows 10 Desktop
@@ -48,7 +48,7 @@ Antes de inscrever o seu dispositivo Windows 10 Desktop, tem de confirmar a vers
 
    ![Captura de ecrã a mostrar as Definições do Windows – Sistema](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-01.png)
 
-2. Selecione **Sistema** > **Acerca de**. 
+2. Selecione **sistema** > **sobre**. 
 
    ![Captura de ecrã a mostrar as suas definições de sistema](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-02.png)
 
@@ -68,7 +68,7 @@ Antes de inscrever o seu dispositivo Windows 10 Desktop, tem de confirmar a vers
 
    ![Captura de ecrã a mostrar as suas definições de sistema – Contas](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-03.png)
 
-2. Selecione **Aceder a profiss./escolar** > **Ligar**.
+2. Selecione Trabalho de **acesso ou ligação escolar** > **Connect**.
 
     ![Selecione Contas, Aceder a profiss./escolar](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
@@ -92,7 +92,7 @@ Antes de inscrever o seu dispositivo Windows 10 Desktop, tem de confirmar a vers
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Confirmar a inscrição do dispositivo no Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador global ou administrador de serviço intune.
-2. Selecione **Dispositivos** > **Todos os dispositivos** para visualizar os dispositivos matriculados no Intune.
+2. Selecione **Dispositivos** > **Todos os dispositivos** para visualizar os dispositivos matriculados em Intune.
 3. Verifique se tem um dispositivo adicional inscrito no Intune.
 
    ![Captura de ecrã a mostrar dispositivos inscritos no Intune](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
@@ -101,7 +101,7 @@ Antes de inscrever o seu dispositivo Windows 10 Desktop, tem de confirmar a vers
 
 Para anular a inscrição do seu dispositivo Windows, veja [Remover o seu dispositivo Windows da gestão](../user-help/unenroll-your-device-from-intune-windows.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste guia de início rápido, aprendeu como inscrever um dispositivo com o Windows 10 no Intune. Pode aprender outras formas de inscrição de dispositivos em todas as plataformas. Para obter mais informações sobre como utilizar dispositivos com o Intune, veja [Utilizar dispositivos geridos para trabalhar](../user-help/use-managed-devices-to-get-work-done.md).
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80862844"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gerir o acesso Web através de um browser protegido por políticas do Microsoft Intune
@@ -32,7 +32,7 @@ ms.locfileid: "80862844"
 Utilizando um navegador protegido com uma política Intune, como o Microsoft Edge, pode garantir que os websites corporativos são sempre acedidos com salvaguardas no lugar. Quando configurados com o Intune, os browsers protegidos podem tirar partido do seguinte:
 
 - Políticas de proteção de aplicações
-- Conditional Access
+- Acesso Condicional
 - Início de sessão único
 - Definições de configuração de aplicações
 - Integração do proxy de aplicações do Azure
@@ -95,10 +95,10 @@ O Managed Browser é agora uma aplicação aprovada do cliente para Acesso Condi
 Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Managed Browser em plataformas móveis, pode criar uma política de Acesso Condicional que exija aplicações cliente aprovadas. 
 
 > [!TIP]  
-> O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acedido a partir do *Intune* é o mesmo nó acedido a partir do *Azure AD*.  
+> O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acessado a partir de *Intune* é o mesmo nó a que o Acesso a partir de *Azure AD*.  
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **Acesso Condicional** > **Nova política**.
+2. Selecione **Dispositivos** > **Acesso** > Condicional**Nova política**.
 3. Adicione o **nome**da política . 
 4. Na secção **Atribuições**, selecione **Condições** > **Aplicações do cliente**. O painel de **aplicações do Cliente** é apresentado.
 5. Clique em **Sim** em **Configurar** para aplicar a política a aplicações do cliente específicas.
@@ -109,7 +109,7 @@ Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Manag
     > [!NOTE]
     > Se quiser restringir as aplicações nativas (aplicações não baseadas no browser) que podem aceder a estas aplicações na cloud, também pode selecionar **Aplicações móveis e clientes de ambiente de trabalho**.
 
-7. Clique **em Done** > **Done**.
+7. Clique **em** > **Feito**.
 8. Na secção **De Missões,** selecione **Utilizadores e grupos** e escolha os utilizadores ou grupos que pretende atribuir a esta política. Clique **em Fazer** para fechar o painel.
 9. Na secção **De Missões,** selecione **aplicações ou ações cloud** para escolher quais aplicações proteger com esta política. Clique **em Fazer** para fechar o painel.
 10. **Selecione Grant** da secção de **controlos** de acesso do painel. 
@@ -139,7 +139,7 @@ O SSO exige que o seu dispositivo seja registado pela aplicação Microsoft Auth
 >Para aplicar as configurações de aplicações, o browser protegido do utilizador ou outra aplicação no dispositivo já tem de ser gerido pela [política de proteção de aplicações do Intune](app-protection-policy.md).
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > políticas de **configuração** de apps > **adicionar** > **aplicações geridas.**
+2. Selecione políticas > de**configuração**de **apps** > **adicionar** > **aplicações geridas**.
 3. Na página **Basics** do painel de definição de **aplicações Create,** introduza um **Nome** e **uma Descrição** opcional para as definições de configuração da aplicação.
 4. Escolha **selecione a aplicação pública** e escolha o **Navegador Gerido** e/ou **Edge** para iOS/iPadOS, para Android, ou para ambos.
 5. Clique **em Selecionar** para voltar ao painel de configuração da **aplicação Criar.**
@@ -180,7 +180,7 @@ Utilizando o procedimento acima para criar uma configuração de aplicação Do 
 
 | Chave                              |  Valor   |
 |----------------------------------|----------|
-| **com.microsoft.intune.useEdge** | **verdadeiro** |
+| **com.microsoft.intune.useEdge** | **verdade** |
 
 > [!NOTE]
 > Na política de proteção de aplicações que gere o Microsoft Edge e aplicações associadas especificadas na configuração da aplicação, certifique-se de que as seguintes definições de política de proteção de dados são definidas:
@@ -248,7 +248,7 @@ Utilizando o procedimento para criar uma configuração de aplicação Do Micros
 
 |Chave|Valor|
 |-|-|
-|Escolha entre:<br><ul><li>Especificar URLs permitidos (apenas estes URLs são permitidos; não pode aceder a mais nenhum site):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Especificar URLs bloqueados (é possível aceder a todos os outros sites):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|O valor correspondente da chave é uma lista de URLs. Introduza todos os URLs que pretende permitir ou bloquear como um único valor, separado por um caráter de pipe **&#124;** .<br><br>Exemplos:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
+|Escolha entre:<br><ul><li>Especificar URLs permitidos (apenas estes URLs são permitidos; não pode aceder a mais nenhum site):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Especificar URLs bloqueados (é possível aceder a todos os outros sites):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|O valor correspondente da chave é uma lista de URLs. Introduza todos os URLs que pretende permitir ou bloquear como um único valor, separado por um caráter de pipe **&#124;**.<br><br>Exemplos:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
 
 >[!IMPORTANT]
 >Não especifique ambas as chaves. Se as duas chaves forem direcionadas para o mesmo utilizador, a chave de permissão é utilizada, uma vez que é a opção mais restritiva.
@@ -257,7 +257,7 @@ Utilizando o procedimento para criar uma configuração de aplicação Do Micros
 ### <a name="url-format-for-allowed-and-blocked-urls"></a>Formato do URL para URLs permitidos e bloqueados
 Utilize as informações seguinte para saber mais sobre os formatos permitidos e os carateres universais que pode utilizar ao especificar os URLs na lista de permissões e bloqueios:
 
-- Pode utilizar o símbolo de caráter universal ( **&#42;** ) de acordo com as regras na lista de padrões permitidos seguinte:
+- Pode utilizar o símbolo de caráter universal (**&#42;**) de acordo com as regras na lista de padrões permitidos seguinte:
 
 - Certifique-se de que adiciona o prefixo **http** ou **https** a todos os URLs quando os introduzir na lista.
 
@@ -271,7 +271,7 @@ Utilize as informações seguinte para saber mais sobre os formatos permitidos e
 
 - Utilize a tabela seguinte para saber mais sobre os padrões permitidos que pode utilizar ao especificar URLs:
 
-|                  URL                  |                     Detalhes                      |                                                Correspondências                                                |                                Não corresponde                                 |
+|                  do IdP                  |                     Detalhes                      |                                                Correspondências                                                |                                Não corresponde                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |        `http://www.contoso.com`         |              Corresponde a uma única página               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
 |          `http://contoso.com`           |              Corresponde a uma única página               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
@@ -323,7 +323,7 @@ Os utilizadores finais com o Navegador gerido instalado no seu dispositivo iOS/i
 1. Abra **as definições**do iOS/iPadOS.
 2. Selecione as definições da aplicação **Managed Browser**.
 3. Ative/Desative a opção **Ativar o Diagnóstico do Intune** para definir o browser para o modo de resolução de problemas.
-4. Abra o **Managed Browser**. Clique em **Ver Estado da Aplicação do Intune** para consultar as definições de política de aplicações individuais.
+4. Abra o **Navegador**gerido. Clique em **Ver Estado da Aplicação do Intune** para consultar as definições de política de aplicações individuais.
 5. Prima **Começar** e **Partilhar Registos** ou **Enviar Registos para a Microsoft** para enviar os registos de resolução de problemas para o seu administrador de TI ou para a Microsoft.
 
 Também pode abrir o Browser no modo de resolução de problemas a partir da aplicação.
@@ -349,6 +349,6 @@ A Microsoft recolhe automaticamente dados anónimos sobre o desempenho e a utili
 
 - Nos dispositivos iOS/iPadOS, os websites que os utilizadores visitam com um certificado expirado ou não fidedigno não podem ser abertos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [O que são as políticas de proteção de aplicações?](app-protection-policy.md) 

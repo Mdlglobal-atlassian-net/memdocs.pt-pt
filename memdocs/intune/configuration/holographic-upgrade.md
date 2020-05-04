@@ -1,5 +1,5 @@
 ---
-title: Atualizar para o Windows Holographic for Business
+title: Upgrade para Windows Holographic para Negócios
 titleSuffix: Microsoft Intune
 description: Saiba como atualizar os dispositivos com o Windows Holographic para o Windows Holographic for Business
 keywords: ''
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4e809a888fc2696e54540ee6baa2271d7340579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332085"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Atualizar os dispositivos com o Windows Holographic para o Windows Holographic for Business
@@ -42,7 +42,7 @@ Criar um perfil de [configuração do dispositivo](edition-upgrade-configure-win
 
   ![Introduza o nome de ficheiro XML que inclui o Holographic para informações de licença de negócios](./media/holographic-upgrade/Holographic-edition-upgrade.png)
  
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Certifique-se de [atribuir o perfil](device-profile-assign.md)e monitorizar [o seu estado](device-profile-monitor.md).
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326998"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397769"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Inscrição de dispositivo de resolução de problemas no Microsoft Intune
 
@@ -54,7 +54,7 @@ Os utilizadores de dispositivos geridos podem recolher registos de inscrição e
 ## <a name="general-enrollment-issues"></a>Problemas de inscrição gerais
 Estes problemas podem ocorrer em todas as plataformas de dispositivos.
 
-### <a name="device-cap-reached"></a>Máximo de dispositivos atingido
+### <a name="device-cap-reached"></a>Limite de dispositivos atingido
 **Emissão:** Um utilizador recebe um erro durante a inscrição (como **portal da empresa temporariamente indisponível).**
 
 **Resolução:**
@@ -63,9 +63,9 @@ Estes problemas podem ocorrer em todas as plataformas de dispositivos.
 
 Verifique se o utilizador não possui um número de dispositivos atribuídos superior ao máximo permitido ao seguir estes passos:
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > restrições de **inscrição** > **restrições de limite de dispositivos**. Observe o valor apresentado na coluna **Limite de dispositivos**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **restrições** > de**inscrição Dispositivos Restrições** > de**dispositivos Restrições**limite . Observe o valor apresentado na coluna **Limite de dispositivos**.
 
-2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **utilizadores** > **Todos os utilizadores** > selecione o utilizador > **Dispositivos**. Observe o número de dispositivos inscritos.
+2. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **utilizadores** > **Todos os utilizadores** > selecionem o utilizador > **Dispositivos**. Observe o número de dispositivos inscritos.
 
 3. Se o número de dispositivos inscritos do utilizador for igual à respetiva restrição de limite de dispositivos, o utilizador não poderá inscrever mais dispositivos até:
     - [Os dispositivos existentes serem removidos](../remote-actions/devices-wipe.md) ou
@@ -86,7 +86,7 @@ Para evitar atingir limites de dispositivos, certifique-se de que remove os regi
 
 1. Remova a aplicação Portal da Empresa do Intune do dispositivo.
 
-2. No dispositivo, abra o browser, navegue para [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) e experimente um início de sessão do utilizador.
+2. No dispositivo, abra o navegador, [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)navegue para, e experimente um login do utilizador.
 
 3. Se o utilizador não conseguir iniciar sessão, deverá experimentar outra rede.
 
@@ -106,7 +106,7 @@ Para evitar atingir limites de dispositivos, certifique-se de que remove os regi
 
     1. Desative o DirSync no servidor local.
 
-    2. Elimine o utilizador sem correspondência da lista de utilizadores **Portal de Contas do Intune** .
+    2. Elimine o utilizador sem correspondência da lista de utilizadores **Portal de Contas do Intune**.
 
     3. Aguarde cerca de uma hora para permitir que o serviço do Azure remova os dados incorretos.
 
@@ -126,7 +126,7 @@ Para evitar atingir limites de dispositivos, certifique-se de que remove os regi
 - tiverem vários domínios de nível superior para sufixos de UPN dos utilizadores dentro da respetiva organização (por exemplo, @contoso.com ou @fabrikam.com).
 
 
-Um [rollup para o AD FS 2.0](https://support.microsoft.com/kb/2607496) funciona em conjunto com o comutador <strong>SupportMultipleDomain</strong> para permitir que o servidor do AD FS suporte este cenário sem necessitar de servidores do AD FS 2.0 adicionais. Para obter mais informações, veja [este blogue](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+Um [rollup para o AD FS 2.0](https://support.microsoft.com/kb/2607496) funciona em conjunto com o comutador <strong>SupportMultipleDomain</strong> para permitir que o servidor do AD FS suporte este cenário sem necessitar de servidores do AD FS 2.0 adicionais. Para mais informações, consulte [este blog.](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/)
 
 
 ## <a name="android-issues"></a>Problemas do Android
@@ -150,18 +150,18 @@ A seguinte tabela indica os erros que os utilizadores finais poderão ver ao ins
 
 O software Samsung Smart Manager, incluído em determinados dispositivos Samsung, pode desativar o Portal da Empresa do Intune e os respetivos componentes. Quando o Portal da Empresa está num estado desativado, este não pode ser executado em segundo plano e não pode contactar o serviço do Intune.
 
-**Resolução n.º 1:**
+**Resolução #1:**
 
 Informe os utilizadores para iniciarem manualmente a aplicação Portal da Empresa. Depois de a aplicação reiniciar, o dispositivo faz o registo com o serviço do Intune.
 
 > [!IMPORTANT]
 > Abrir a aplicação Portal da Empresa manualmente é uma solução temporária, uma vez que o Samsung Smart Manager poderá desativar novamente a aplicação Portal da Empresa.
 
-**Resolução n.º 2:**
+**Resolução #2:**
 
-Informe os utilizadores para tentarem atualizar para Android 6.0. O problema da desativação não ocorre em dispositivos com Android 6.0. Para verificar se está disponível uma atualização, aceda a **Definições** > **Acerca do dispositivo** > **Transferir atualizações manualmente** e siga as instruções.
+Informe os utilizadores para tentarem atualizar para Android 6.0. O problema da desativação não ocorre em dispositivos com Android 6.0. Para verificar se existe uma atualização, vá a **Definições** > Sobre as atualizações do**dispositivo** > **Descarregue manualmente** > siga as indicações.
 
-**Resolução n.º 3:**
+**Resolução #3:**
 
 Se a Resolução n.º 2 não funcionar, solicite aos seus utilizadores que sigam estes passos para fazer com o que o Smart Manager exclua a aplicação Portal da Empresa:
 
@@ -207,11 +207,11 @@ Se a Resolução n.º 2 não funcionar, solicite aos seus utilizadores que sigam
 
 **Problema**: os utilizadores recebem a mensagem seguinte no dispositivo: *Não pode iniciar sessão porque está em falta um certificado obrigatório no seu dispositivo.*
 
-**Resolução 1**:
+**Resolução 1:**
 
 O utilizador poderá conseguir obter o certificado em falta ao seguir as instruções em [O dispositivo tem um certificado necessário em falta](../user-help/your-device-is-missing-an-IT-required-certificate-android.md). Se o erro persistir, tente a Resolução 2.
 
-**Resolução 2**:
+**Resolução 2:**
 
 Após introduzir as credenciais empresariais e ser redirecionado para o início de sessão federado, os utilizadores ainda poderão ver o erro de certificado em falta. Neste caso, o erro pode significar que um certificado intermédio está em falta no seu servidor de Serviços de Federação do Active Directory (AD FS)
 
@@ -219,25 +219,25 @@ O erro de certificado ocorre porque os dispositivos Android exigem que os certif
 
 Para corrigir o problema, importe os certificados para os Certificados dos Computadores Pessoais no servidor do AD FS ou nos proxies da seguinte forma:
 
-1. No ADFS e em servidores proxy, clique com o botão direito do rato em **Iniciar** > **Executar** > **certlm.msc** para iniciar a Consola de Gestão de Certificados de Computador Local.
+1. Nos servidores ADFS e proxy, clique à direita **Start** > **Run** > **certlm.msc** para lançar a Consola de Gestão de Certificados de Máquina Local.
 2. Expanda **Pessoal** e escolha **Certificados**.
 3. Localize o certificado para a comunicação de serviço do AD FS (um certificado assinado publicamente) e faça duplo clique para ver as respetivas propriedades.
 4. Escolha o separador Caminho de **Certificação** para ver o certificado/s-mãe do certificado.
 5. Em cada certificado principal, escolha **Ver Certificado**.
-6. Selecione **Detalhes** > **Copiar para o ficheiro…** .
+6. Escolha **Detalhes** > **Copiar para arquivar...**.
 7. Siga as instruções do assistente para exportar ou guardar a chave pública do certificado principal numa localização do ficheiro à sua escolha.
-8. Clique com botão direito do rato em **Certificados** > **Todas as Tarefas** > **Importar**.
+8. **Certificados** > de clique à direita**Todas as tarefas** > **importam**.
 9. Siga as instruções do assistente para importar os certificados principais para **Computador Local\Pessoal\Certificados**.
 10. Reinicie os servidores do AD FS.
 11. Repita os passos acima em todos os servidores do AD FS e do proxy.
 
-Para verificar se a instalação do certificado foi feita corretamente, pode utilizar a ferramenta de diagnóstico disponível em [https://www.digicert.com/help/](https://www.digicert.com/help/). Na caixa **de Endereços** do Servidor, introduza o FQDN do seu servidor ADFS (IE: sts.contso.com) e clique em **'Verificar Servidor**' .
+Para verificar uma instalação adequada do certificado, [https://www.digicert.com/help/](https://www.digicert.com/help/)pode utilizar a ferramenta de diagnóstico disponível em . Na caixa **de Endereços** do Servidor, introduza o FQDN do seu servidor ADFS (IE: sts.contso.com) e clique em **'Verificar Servidor**' .
 
 **Para validar que o certificado foi instalado corretamente**:
 
 Os passos seguintes descrevem apenas um dos vários métodos e ferramentas que pode utilizar para validar que o certificado está instalado corretamente.
 
-1. Aceda à [ferramenta gratuita Digicert](ttps://www.digicert.com/help/).
+1. Aceda à [ferramenta gratuita Digicert](https://www.digicert.com/help/).
 2. Introduza o nome de domínio totalmente qualificado do seu servidor AD FS (por exemplo, sts.contoso.com) e selecione **CHECK SERVER**.
 
 Se o certificado de Servidor estiver corretamente instalado, verá todas as marcas de verificação nos resultados. Se o problema acima existente, vê um X vermelho nas secções "Certificate Name Matches" e as secções "SSL Certificate is correctly Installed" do relatório.
@@ -310,7 +310,7 @@ Para obter mais informações, veja o artigo [Práticas recomendadas para proteg
 
 3. Confirme se o dispositivo já tem um perfil de gestão instalado.
 
-4. Navegue para [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) e tente instalar o perfil quando lhe for pedido.
+4. Navegue [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) para e tente instalar o perfil quando solicitado.
 
 5. Confirme que o Safari para iOS/iPadOS é o navegador padrão e que os cookies estão ativados.
 
@@ -326,7 +326,7 @@ Este problema pode acontecer se:
 
 | Definições de inscrição | Valor |
 | ---- | ---- |
-| Platform | iOS/iPadOS |
+| Plataforma | iOS/iPadOS |
 | Afinidade de Utilizador | Inscrever com a Afinidade de Utilizador |
 |Autenticar com o Portal da Empresa em vez do Assistente de Configuração da Apple | Sim |
 | Instalar o Portal da Empresa com VPP | Utilizar token: endereço do token |
@@ -339,7 +339,7 @@ Este problema pode acontecer se:
 4. Indicar ao utilizador que deve reiniciar o processo de inscrição.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Determinar se existe um problema com o token VPP
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS** > **iOS matriculado** > programa de inscrição de **tokens** > nome token > **Profiles** > nome de perfil > **Gerir** > **Propriedades**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS iOS** > **inscrição Programa de** **inscrição** > > nome simbólico > **Perfis** > nome de perfil > **Gerir** > **Propriedades**.
 2. Reveja as propriedades para ver se são apresentados erros semelhantes aos seguintes:
     - Este token expirou.
     - Este token está sem licenças do Portal da Empresa.
@@ -349,13 +349,13 @@ Este problema pode acontecer se:
 3. Corrija os problemas do token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identificar quais os dispositivos que estão bloqueados pelo token de VPP
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **iOS**k > **iOS matricula** do programa de inscrição > **Tokens** > tokenname > **Token**name > Devices .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS**k > programa de **inscrição** > iOS**tokens** > nome simbólico > **Dispositivos**.
 2. Filtre a coluna **Estado do perfil** por **Bloqueado**.
 3. Anote os números de série de todos os dispositivos que estão **Bloqueados**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Apagar remotamente os dispositivos bloqueados
 Depois de ter corrigido os problemas com o símbolo VPP, tem de limpar os dispositivos que estão bloqueados.
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Todos os dispositivos** > **Colunas** > **número de série** > **Aplicar**. 
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**dispositivos Todos os** >  **dispositivos** > **Série** > **de série** > **Aplicação**. 
 2. Para cada dispositivo bloqueado, selecione-o na lista **Todos os dispositivos** e, em seguida, selecione **Apagar** > **Sim**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Indique aos utilizadores que devem reiniciar o processo de inscrição
@@ -388,7 +388,7 @@ Depois de apagar os dispositivos bloqueados, pode indicar aos utilizadores que d
 
 |Mensagem de erro|Problema|Resolução|
 |---|---|---|
-|**O administrador de TI tem de lhe atribuir uma licença para obter acesso**<br>O seu administrador de TI ainda não lhe deu acesso para utilizar esta aplicação. Obtenha ajuda do seu administrador de TI ou tente novamente mais tarde.|Não é possível inscrever o dispositivo porque a conta do utilizador não tem a licença necessária.|Antes de os utilizadores poderem inscrever os respetivos dispositivos, é preciso que lhes tenha sido atribuída a licença necessária. Esta mensagem indica que têm o tipo de licença errado para a autoridade de gestão de dispositivos móveis. Por exemplo, verão este erro se as seguintes situações se verificarem: <ol><li>O Intune foi definido como a autoridade de gestão de dispositivos móveis</li><li>Estão a utilizar uma licença do System Center 2012 R2 Configuration Manager.</li></ol>Saiba mais sobre como [atribuir licenças do Intune às contas de utilizador](../fundamentals/licenses-assign.md).|
+|**O administrador de TI tem de lhe atribuir uma licença para obter acesso**<br>O seu administrador de TI ainda não lhe deu acesso para utilizar esta aplicação. Obtenha ajuda do seu administrador de TI ou tente novamente mais tarde.|Não é possível inscrever o dispositivo porque a conta do utilizador não tem a licença necessária.|Antes de os utilizadores poderem inscrever os respetivos dispositivos, é preciso que lhes tenha sido atribuída a licença necessária. Esta mensagem indica que têm o tipo de licença errado para a autoridade de gestão de dispositivos móveis. Por exemplo, verão este erro se as seguintes situações se verificarem: <ol><li>O Intune foi definido como a autoridade de gestão de dispositivos móveis</li><li>Estão a utilizar uma licença do System Center 2012 R2 Configuration Manager.</li></ol>Consulte informações sobre [como atribuir licenças Intune às suas contas de utilizador](../fundamentals/licenses-assign.md).|
 
 ### <a name="the-machine-is-already-enrolled---error-hr-0x8007064c"></a>O computador já está inscrito - Erro hr 0x8007064c
 
@@ -403,7 +403,7 @@ O certificado de conta da conta anterior ainda está presente no computador.
 **Resolução:**
 
 1. No menu **Início**, escreva **Executar** -> **MMC**.
-1. Selecione **Ficheiro** > **Adicionar/Remover Snap-ins**.
+1. Escolha adicionar **ficheiros/** > **remover snap-ins**.
 1. Faça duplo clique em **Certificados**, selecione **Conta de computador** > **Seguinte** e selecione **Computador Local**.
 1. Faça duplo clique em **Certificados (Computador local)** e selecione **Certificados Pessoais**.
 1. Procure o certificado do Intune emitido por Sc_Online_Issuing e elimine-o, se estiver presente.
@@ -413,7 +413,7 @@ O certificado de conta da conta anterior ainda está presente no computador.
 1. Tente voltar a inscrever.
 
     > [!IMPORTANT]
-    > Esta secção, método ou tarefa contém passos que indicam como modificar o registo. Poderão, no entanto, ocorrer problemas graves se modificar o registo incorretamente. Por isso, certifique-se de que segue estes passos cuidadosamente. Para proteção adicional, faça uma cópia de segurança do registo antes de o modificar. Em seguida, poderá restaurar o registo se ocorrer um problema.
+    > Esta secção, método ou tarefa contém passos que indicam como modificar o registo. Poderão, no entanto, ocorrer problemas graves se modificar o registo incorretamente. Por isso, certifique-se de que segue estes passos cuidadosamente. Para proteção adicional, faça uma cópia de segurança do registo antes de o modificar. Em seguida, pode restaurar o registo se ocorrer um problema.
     > Para obter mais informações sobre como criar cópias de segurança e restaurar o registo, leia o artigo [Como fazer cópias de segurança e restaurar o registo no Windows](https://support.microsoft.com/kb/322756)
 
 ## <a name="general-enrollment-error-codes"></a>Códigos de erros de inscrição gerais
@@ -434,9 +434,9 @@ O certificado de conta da conta anterior ainda está presente no computador.
 |0x80043008, 0x80CF3008|Falha ao iniciar o serviço Microsoft Online Management Update.|Contacte o Suporte da Microsoft, conforme descrito em [How to get support for Microsoft Intune (Como obter suporte para o Microsoft Intune)](../fundamentals/get-support.md).|
 |0x80043009, 0x80CF3009|O computador cliente já está inscrito no serviço.|Tem de extinguir o computador cliente para o poder inscrever novamente no serviço.|
 |0x8004300B, 0x80CF300B|Não é possível executar o pacote de instalação do software de cliente porque a versão do Windows que está a ser executada no cliente não é suportada.|O Intune não suporta a versão do Windows que está a ser executada no computador cliente.|
-|0xAB2|O Windows Installer não conseguiu aceder ao tempo de execução de VBScript de uma ação personalizada.|Este erro é causado por uma ação personalizada baseada em DLLs (Dynamic-Link Libraries). Ao resolver problemas com o DLL, pode ter de utilizar as ferramentas descritas em [KB198038 do Suporte da Microsoft: Ferramentas Úteis para Problemas de Empacotamento e Implementação](https://support.microsoft.com/kb/198038).|
+|0xAB2|O Windows Installer não conseguiu aceder ao tempo de execução de VBScript de uma ação personalizada.|Este erro é causado por uma ação personalizada baseada em DLLs (Dynamic-Link Libraries). Ao resolver problemas com o DLL, pode ter de utilizar as ferramentas descritas no artigo [KB198038 do Suporte da Microsoft: Ferramentas Úteis para Problemas de Empacotamento e Implementação](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|A ligação ao ponto final do serviço foi terminada.|A conta de avaliação ou paga está suspensa. Crie uma nova conta de avaliação ou paga e volte a inscrever.|
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-Se estas informações de resolução de problemas não o ajudaram, contacte o Suporte da Microsoft, conforme descrito em [Como obter suporte para o Microsoft Intune](../fundamentals/get-support.md).
+Se estas informações de resolução de problemas não o ajudarem, contacte o Microsoft Support conforme descrito em Como obter suporte para o [Microsoft Intune](../fundamentals/get-support.md).

@@ -1,5 +1,5 @@
 ---
-title: Restringir funcionalidades de dispositivos utilizando a política no Microsoft Intune - Azure  Microsoft Docs
+title: Restringir funcionalidades de dispositivos utilizando a política no Microsoft Intune - Azure [ Microsoft Docs
 description: Adicione um perfil de dispositivo para restringir funcionalidades no administrador de dispositivos Android, Android Enterprise, macOS, iOS, iPadOS, Windows Phone e Dispositivos Windows 10 no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551433"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurar definições de restrição de dispositivos no Microsoft Intune
@@ -42,7 +42,7 @@ Este artigo mostra-lhe como criar um perfil de restrições de dispositivos. Tam
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -51,13 +51,13 @@ Este artigo mostra-lhe como criar um perfil de restrições de dispositivos. Tam
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows 10 e posterior**
-        - **Windows 8.1 e posterior**
+        - **Windows 10 e posterior**
+        - **Windows 8.1 e posterior**
         - **Windows Phone 8.1**
 
     - **Perfil**: Selecione **restrições do dispositivo**.
 
-        Para criar um perfil de restrições de dispositivos para dispositivos da Equipa Windows 10, como o Surface Hub, escolha as restrições do **Dispositivo (Windows 10 Team)** .
+        Para criar um perfil de restrições de dispositivos para dispositivos da Equipa Windows 10, como o Surface Hub, escolha as restrições do **Dispositivo (Windows 10 Team)**.
 
 4. Selecione **Criar**.
 5. No Básico, insira as **seguintes**propriedades:
@@ -74,13 +74,13 @@ Este artigo mostra-lhe como criar um perfil de restrições de dispositivos. Tam
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
-    - [Windows 8.1](device-restrictions-windows-8-1.md)
+    - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 e mais recente](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -90,7 +90,7 @@ Este artigo mostra-lhe como criar um perfil de restrições de dispositivos. Tam
 
 11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

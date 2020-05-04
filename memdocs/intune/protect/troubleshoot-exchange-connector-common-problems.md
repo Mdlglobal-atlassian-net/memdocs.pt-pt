@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328877"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Resolver problemas comuns com o conector Intune Exchange
@@ -68,10 +68,10 @@ Reveja as seguintes secções para resolver problemas de notificação de e-mail
 
    1. Num pedido de comando, introduza o *NSLOOKUP*.
 
-   2. Insira *Autodiscover.SMTPdomain.com*. A saída deve ser semelhante à seguinte imagem: ![resultados da Nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+   2. Insira *Autodiscover.SMTPdomain.com*. A saída deve ser semelhante ![à seguinte imagem: Resultados de nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   Também pode testar o serviço Autodiscover a partir da internet em https://testconnectivity.microsoft.com. Ou testá-lo a partir de um domínio local utilizando a ferramenta Microsoft Connectivity Analyzer. Para mais informações, consulte a [ferramenta Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   Também pode testar o serviço Autodiscover https://testconnectivity.microsoft.coma partir da internet em . Ou testá-lo a partir de um domínio local utilizando a ferramenta Microsoft Connectivity Analyzer. Para mais informações, consulte a [ferramenta Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscovery"></a>Consulte a Autodescoberta
@@ -82,16 +82,16 @@ Se a Autodiscover falhar, experimente os seguintes passos:
 
 2. Código rígido o URL EWS no ficheiro de configuração do conector Intune Exchange:
 
-   1. Determine o URL EWS. O URL EWS padrão para troca é `https://<mailServerFQDN>/ews/exchange.asmx`, mas o seu URL pode diferir. Contacte o administrador da Exchange para verificar o URL correto para o seu ambiente.
+   1. Determine o URL EWS. O URL EWS padrão `https://<mailServerFQDN>/ews/exchange.asmx`para troca é, mas o seu URL pode diferir. Contacte o administrador da Exchange para verificar o URL correto para o seu ambiente.
 
-   2. Editar o ficheiro *OnPremisesExchangeConnectorServiceConfiguration.xml.* By default, the file is located in *%ProgramData%\Microsoft\Windows Intune Exchange Connector* on the computer that runs the Exchange connector. Abra o ficheiro num editor de texto e, em seguida, mude a seguinte linha para refletir o URL DoWS para o seu ambiente: `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Editar o ficheiro *OnPremisesExchangeConnectorServiceConfiguration.xml.* By default, the file is located in *%ProgramData%\Microsoft\Windows Intune Exchange Connector* on the computer that runs the Exchange connector. Abra o ficheiro num editor de texto e, em seguida, mude a seguinte linha para refletir o URL DoWS para o seu ambiente:`<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Guarde o ficheiro e, em seguida, reinicie o computador ou reinicie o serviço de conector Microsoft Intune Exchange.
 
 >[!NOTE]
 > Nesta configuração, o conector Intune Exchange para de utilizar o Autodiscover e, em vez disso, liga-se diretamente ao URL EWS.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter ajuda com erros específicos, tente [resolver erros comuns para o conector Intune Exchange](troubleshoot-exchange-connector-common-errors.md).
 

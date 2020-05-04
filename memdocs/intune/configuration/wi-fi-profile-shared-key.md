@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086455"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Utilize um perfil de dispositivo personalizado para criar um perfil Wi-Fi com uma chave pré-partilhada no Intune
@@ -49,11 +49,11 @@ Esta funcionalidade suporta:
 ## <a name="create-a-custom-profile"></a>Criar um perfil personalizado
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é definições de **perfil Wi-Fi Personalizado oMA-URI para dispositivos de administrador**de dispositivos Android .
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Escolha a sua plataforma.
     - **Tipo de perfil**: Selecione **Personalizado**.
 
@@ -63,19 +63,19 @@ Esta funcionalidade suporta:
     2. **Descrição**: Introduza uma descrição para a definição OMA-URI. Esta definição é opcional, mas recomendada.
     3. **OMA-URI**: Introduza uma das seguintes opções:
 
-        - **Para Android**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
-        - **Para Janelas**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
+        - **Para Android**:`./Vendor/MSFT/WiFi/Profile/SSID/Settings`
+        - **Para janelas:**`./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
         > Certifique-se de que inclui o caráter de ponto no início.
 
-        A SSID é a SSID para a qual estás a criar a apólice. Por exemplo, se o Wi-Fi for nomeado `Hotspot-1`, introduza `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        A SSID é a SSID para a qual estás a criar a apólice. Por exemplo, se o Wi-Fi for nomeado, `Hotspot-1`introduza `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
     4. **Tipo de dados**: Selecione **string**.
 
     5. **Valor**: Colar o seu código XML. Veja os [exemplos](#android-or-windows-wi-fi-profile-example) deste artigo. Atualize cada valor para corresponder às suas definições de rede. A secção de comentários do código inclui algumas indicações.
 
-5. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
 
 O seu perfil está na lista de perfis. Em seguida, [atribua este perfil](device-profile-assign.md) aos seus grupos de utilizadores. Esta política só pode ser atribuída a grupos de utilizadores.
 
@@ -89,7 +89,7 @@ O seguinte exemplo inclui o código XML de um perfil Android ou Wi-Fi do Windows
 
 - `<protected>false</protected>` tem de ser definido como **falso**. Se estiver definido como **verdadeiro**, poderá fazer com que o dispositivo espere uma palavra-passe encriptada e, em seguida, tente decifrá-la, o que poderá resultar numa falha de ligação.
 
-- `<hex>53534944</hex>` deve estar definido para o valor hexadecimal de `<name><SSID of wifi profile></name>`. Os dispositivos windows 10 podem devolver um erro `x87D1FDE8 Remediation failed` falso, mas o dispositivo ainda contém o perfil.
+- `<hex>53534944</hex>` deve estar definido para o valor hexadecimal de `<name><SSID of wifi profile></name>`. Os dispositivos do Windows `x87D1FDE8 Remediation failed` 10 podem devolver um erro falso, mas o dispositivo ainda contém o perfil.
 
 - XML tem caracteres especiais, como o `&` (ampersand). A utilização de caracteres especiais pode impedir que o XML funcione como esperado. 
 
@@ -228,20 +228,20 @@ O exemplo seguinte inclui o código XML de um perfil de Wi-Fi baseado em EAP: o 
 Também pode criar um ficheiro XML a partir de uma ligação Wi-Fi existente. Num computador Windows, utilize os seguintes passos:
 
 1. Crie uma pasta local para os perfis W-Fi exportados, como c:\WiFi.
-2. Abra um pedido de comando como administrador (clique à direita `cmd` > **Executar como administrador).**
-3. Corra `netsh wlan show profiles`. Os nomes de todos os perfis estão listados.
-4. Corra `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Este comando cria um ficheiro chamado `Wi-Fi-YourProfileName.xml` em c:\Wifi.
+2. Abra um pedido de comando como `cmd`  > administrador (clique direito **Executar como administrador**).
+3. Execute `netsh wlan show profiles`. Os nomes de todos os perfis estão listados.
+4. Execute `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Este comando cria `Wi-Fi-YourProfileName.xml` um ficheiro chamado c:\Wifi.
 
-    - Se estiver a exportar um perfil Wi-Fi que inclua uma chave pré-partilhada, adicione `key=clear` ao comando:
+    - Se estiver a exportar um perfil Wi-Fi que inclua `key=clear` uma chave pré-partilhada, adicione ao comando:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-        `key=clear` exporta a chave em texto simples, que é obrigado a utilizar com sucesso o perfil.
+        `key=clear`exporta a chave em texto simples, que é necessário para utilizar com sucesso o perfil.
 
-Depois de ter o ficheiro XML, copiar e colar a sintaxe XML nas definições OMA-URI > Tipo de **dados**. [Criar um perfil personalizado](#create-a-custom-profile) (neste artigo) lista os passos.
+Depois de ter o ficheiro XML, copie e cole a sintaxe XML nas definições OMA-URI > **tipo dados**. [Criar um perfil personalizado](#create-a-custom-profile) (neste artigo) lista os passos.
 
 > [!TIP]
-> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` também inclui todos os perfis em formato XML.
+> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`também inclui todos os perfis no formato XML.
 
 ## <a name="best-practices"></a>Melhores práticas
 
@@ -251,6 +251,6 @@ Depois de ter o ficheiro XML, copiar e colar a sintaxe XML nas definições OMA-
 
 - Para uma transição suave, certifique-se de que o dispositivo do utilizador final tem uma ligação alternativa à Internet. Por exemplo, o utilizador final pode mudar para WiFi convidado (ou qualquer outra rede Wi-Fi) ou ter conectividade celular para comunicar com intune. A ligação adicional permite ao utilizador receber atualizações da política quando o Perfil de Wi-Fi empresarial for atualizado no dispositivo.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Certifique-se de [atribuir o perfil](device-profile-assign.md)e [monitorizar](device-profile-monitor.md) o seu estado.

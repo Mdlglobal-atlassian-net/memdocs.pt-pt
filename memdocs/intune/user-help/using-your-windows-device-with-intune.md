@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084180"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Utilizar o seu dispositivo Windows com o Portal da Empresa do Intune
@@ -42,7 +42,7 @@ Atualmente, o Portal da Empresa suporta dispositivos com as seguintes versões d
 * Windows 10 (versões Home, Pro, Education, modo S e Enterprise)
 * Windows Phone 8.1 e posterior
 * Windows 8.1 RT
-* Windows 8,1
+* Windows 8.1
 
 Outras versões do Windows, como o [Windows 10 Holographic](https://www.microsoft.com/hololens), são suportadas no Portal da Empresa. No entanto, estas versões não estão abrangidas neste artigo por se destinarem a utilizações muito específicas.
 

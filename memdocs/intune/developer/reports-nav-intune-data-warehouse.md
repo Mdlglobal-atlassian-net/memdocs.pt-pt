@@ -2,7 +2,7 @@
 title: API do Armazém de Dados do Intune
 titleSuffix: Microsoft Intune
 description: Pode utilizar a API do Armazém de Dados do Intune para criar relatórios que forneçam informações sobre o ambiente móvel da sua empresa.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 576080bca172b25292954c7bfac592273cacb660
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331797"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Microsoft Intune Data Warehouse API
@@ -33,7 +33,7 @@ A API do Armazém de Dados do Intune permite-lhe aceder aos seus dados do Intune
 - Códigos de estado
 - Métodos HTTP
 - Convenções de URLs
-- Tipos de suporte de dados
+- Tipos de suporte
 - Formatos de payload
 - Opções de consulta
 
@@ -48,7 +48,7 @@ Esta secção de referência fornece uma descrição geral dos pontos finais, m�
 
 Pode aceder ao modelo de dados do Armazém de Dados do Intune através de ponto finais RESTful. Para obter acesso aos seus dados, o seu cliente tem de conceder autorização com o Azure Active Directory (Azure AD) com OAuth 2.0. Primeiro configura uma aplicação Web e uma aplicação cliente no Azure, e concede permissões ao cliente. O seu cliente local recebe autorização e pode, em seguida, comunicar com os pontos finais do Armazém de Dados.
 
-Para obter mais informações, veja [Get data from the Data Warehouse API with a REST client (Obter dados a partir da API do Armazém de Dados com um cliente REST)](reports-proc-data-rest.md)
+Para mais informações, consulte [Obter dados da Data Warehouse API com um cliente REST](reports-proc-data-rest.md)
 
 > [!Note]  
 > Pode aceder ao [repositório do Armazém de Dados do Intune no GitHub](https://github.com/Microsoft/Intune-Data-Warehouse) para obter exemplos de códigos.
@@ -64,7 +64,7 @@ A API necessita de autorização com o Azure AD. O Azure AD utiliza o OAuth 2.0.
 
 O OData define um modelo de dados abstrato e um protocolo que permite a qualquer cliente aceder às informações expostas por qualquer origem de dados. O tópico de documentação do modelo de dados contém uma explicação sobre os espaços de nomes, entidades e objetos devolvidos no modelo de dados do Armazém de Dados do Intune. Para obter mais informações, veja [Modelo de Dados do Armazém de Dados](reports-ref-data-model.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre como trabalhar com o Azure AD ao ler [Cenários de Autenticação do Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 

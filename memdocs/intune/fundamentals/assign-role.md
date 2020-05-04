@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326810"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Atribuir uma função a um utilizador intonizado
@@ -32,13 +32,13 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 - **Administrador Global**
 - **Administrador de Serviços do Intune**
 
-1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **todas as funções**.
+1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração** > do Inquilino Todas as**funções**.
 
-2. Nas **funções Intune - Todas as funções,** escolha o papel incorporado que pretende atribuir > **Atribuições** > **Atribuir**.
+2. Nas **funções Intune - Todas as funções,** escolha o papel incorporado que pretende atribuir >**Atribuição**de **Atribuições** > .
 
 5. Na página **Basics,** introduza um **nome de Atribuição** e descrição opcional de **Atribuição,** e depois escolha **A Seguinte**.
 
-6. Na página **dos Grupos De Administração,** selecione o grupo que contém o utilizador a que pretende dar as permissões. Escolha **Seguinte**
+6. Na página **dos Grupos De Administração,** selecione o grupo que contém o utilizador a que pretende dar as permissões. Escolha **A Seguir**
 
 7. Na página **Scope (Grupos),** escolha um grupo que contenha os utilizadores/dispositivos que o membro acima será autorizado a gerir. Escolha **Seguinte**.
 
@@ -46,8 +46,8 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 
 9. Na página **Review + Criar,** quando terminar, escolha **Criar**. A nova atribuição é apresentada na lista de atribuições.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Saiba mais sobre o controlo de acesso baseado em papéis em Intune](role-based-access-control.md)
-- [Criar um papel personalizado](create-custom-role.md)
+- [Criar uma função personalizada](create-custom-role.md)
 
 

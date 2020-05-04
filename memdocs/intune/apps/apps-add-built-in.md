@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324934"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Adicionar aplicações incorporadas ao Microsoft Intune
@@ -32,7 +32,7 @@ O tipo de aplicações *incorporadas* facilita a atribuição de aplicações ge
 Nas versões anteriores da consola do Intune, o Intune disponibilizava várias aplicações geridas do Office 365 predefinidas, como o Outlook e o OneDrive. Os tipos destas aplicações geridas eram identificados como *Aplicação da Loja iOS Gerida* ou *Aplicação Android Gerida*. Em vez de utilizar estes tipos de aplicação, recomendamos que utilize o tipo de aplicação incorporada. O tipo de aplicação incorporada proporciona uma maior flexibilidade para editar e eliminar aplicações do Office 365.
 
 >[!NOTE]
->As aplicações do Office 365 predefinidas que estejam identificadas como *Aplicação da Loja iOS Gerida* e *Aplicação Android Gerida* são removidas da lista de aplicações quando todas as tarefas forem eliminadas.
+>As aplicações do Default Office 365 que estão marcadas como *Managed iOS Store* e *Managed Android App* são removidas da lista de aplicações quando todas as atribuições são eliminadas.
 
 ## <a name="add-a-built-in-app"></a>Adicionar uma aplicação incorporada
 
@@ -63,13 +63,13 @@ Pode modificar as informações da aplicação incorporada. Estas informações 
 4. No painel **Informações da aplicação**, pode modificar as seguintes informações:
     - **Nome**: introduza o nome da aplicação incorporada tal como será apresentado no portal da empresa. Certifique-se de que todos os nomes que utiliza são exclusivos. Se existir o mesmo nome duas vezes, só é apresentada uma das aplicações aos utilizadores no portal da empresa.
     - **Descrição**: introduza uma descrição para a aplicação. 
-    - **Publicador**: introduza o nome do publicador da aplicação.
+    - **Editor**: Insira o nome do editor da app.
     - **Categoria**: opcionalmente, selecione uma ou mais das categorias de aplicações incorporadas. Esta opção permite que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
     - **Mostre isto como uma aplicação em destaque no portal da empresa**: Mostrar a app em destaque na página principal do portal da empresa quando os utilizadores navegam para apps.
     - **URL de Informações**: opcionalmente, introduza o URL de um site que contenha informações sobre esta aplicação. O URL é apresentado aos utilizadores no portal da empresa.
     - **URL de Privacidade**: opcionalmente, introduza um URL para um site que contenha informações sobre a privacidade desta aplicação. O URL é apresentado aos utilizadores no portal da empresa.
     - **Programador**: opcionalmente, introduza o nome do programador da aplicação.
-    - **Proprietário**: opcionalmente, introduza o nome do proprietário desta aplicação (por exemplo, *Departamento de RH*).
+    - **Proprietário**: Opcionalmente, insira um nome para o proprietário desta app (por exemplo, *departamento de RH).*
     - **Notas**: introduza quaisquer notas que queira associar a esta aplicação.
     - **Carregar Ícone**: carregue um ícone que será apresentado com a aplicação quando os utilizadores procurarem no portal da empresa.
 5. Clique em **Rever + guarde** para exibir a página **Review + criar.** Reveja os valores e configurações que inseriu para a aplicação.
@@ -77,6 +77,6 @@ Pode modificar as informações da aplicação incorporada. Estas informações 
 
     A lâmina **de visão geral** da aplicação que criou é exibida.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Agora pode atribuir as aplicações aos grupos que escolher. Para obter mais informações, veja [Atribuir aplicações a grupos](apps-deploy.md).

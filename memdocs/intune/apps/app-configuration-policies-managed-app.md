@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9729fa1fb89f31606c35d61773c224693e7da3c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323459"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Adicionar políticas de configuração da aplicação para aplicações geridas sem inscrição de dispositivos
@@ -32,7 +32,7 @@ ms.locfileid: "80323459"
 Pode utilizar políticas de configuração da aplicação com aplicações geridas que suportem o SDK da Aplicação do Intune, até em dispositivos que não estejam inscritos. 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha as **políticas** de **configuração** de Apps > Apps > **adicionar** > **aplicações geridas.**
+2. Escolha **Apps** > as políticas > de**configuração**de apps**adicionar** > **aplicações geridas**.
 3. Na página **Basics,** delineie os seguintes detalhes:
     - **Nome**: O nome do perfil que aparecerá no portal Azure.
     - **Descrição**: A descrição do perfil que aparecerá no portal Azure.
@@ -43,7 +43,7 @@ Pode utilizar políticas de configuração da aplicação com aplicações gerid
 
    As aplicações ativadas pelo SDK da Aplicação do Intune suportam configurações em pares chave-valor. Para saber mais sobre que configurações de chave-valor são suportadas, consulte a documentação de cada aplicação. Tenha em atenção que pode utilizar os tokens que serão dinamicamente preenchidos com dados gerados pela aplicação. Para mais informações, consulte os valores de [Configuração para utilização de fichas](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Para obter informações sobre o Outlook para as definições de definição de políticas de configuração de aplicações iOS/iPadOS, consulte Manage Outlook para a configuração da [aplicação iOS/iPadOS com](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx)o Microsoft Intune .
 
-    Para eliminar uma configuração, selecione as reticências ( **...** ) e selecione **Eliminar**.  
+    Para eliminar uma configuração, selecione as reticências (**...**) e selecione **Eliminar**.  
 
 7. Clique em **Seguir** para exibir a página **de Tarefas.**
 8. Clique em **Selecionar grupos para incluir**.
@@ -74,6 +74,6 @@ O Intune suporta os seguintes tipos de tokens nas definições de configuração
 > [!Note]  
 > Os carateres \{\{ e \}\} são utilizados apenas por tipos de token e não devem ser utilizados para outros fins.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Continue a [atribuir](apps-deploy.md) e [monitorizar](apps-monitor.md) a aplicação como é habitual.

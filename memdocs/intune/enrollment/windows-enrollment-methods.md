@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
 ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085697"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Métodos de inscrição do Intune para dispositivos Windows
@@ -54,6 +54,6 @@ Os administradores podem configurar os seguintes métodos de inscrição que nã
 - [A inscrição](windows-bulk-enroll.md) a granel permite que um utilizador autorizado se junte a um grande número de novos dispositivos corporativos para o Azure Ative Directory e intune. Cria um pacote de provisionamento com a aplicação Windows Configuration Designer (WCD). Em seguida, utilizando suportes USB durante a experiência inicial do Windows OOBE ou a partir do PC do Windows existente, instala o pacote de fornecimento para inscrever automaticamente os dispositivos no Intune. Este método não permite a utilização do Acesso Condicional.
 - [A inscrição de dispositivos Windows IoT Core](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) é realizada utilizando o Painel Core Windows IoT para preparar o dispositivo e, em seguida, utilizando o Windows Configuration Designer para criar um pacote de provisionamento. Em seguida, utilizando os meios de cartão SD durante o arranque inicial, instala o pacote de fornecimento para inscrever automaticamente os dispositivos em Intune.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Conheça as capacidades dos métodos de inscrição do Windows](enrollment-method-capab.md)

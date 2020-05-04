@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085744"
 ---
-# <a name="supported-operating-systems-and-browsers-in-intune"></a>Sistemas operativos e browsers no Intune
+# <a name="supported-operating-systems-and-browsers-in-intune"></a>Sistemas operativos e navegadores suportados em Intune
 
 Antes de configurar o Microsoft Intune, reveja os sistemas operativos e browsers suportados.
 
@@ -51,7 +51,7 @@ Para evitar erros de ativação do Knox que impedem a inscrição MDM, a aplica�
 
 Segue-se uma lista de modelos de dispositivos Samsung que não suportam o Knox. São inscritos como dispositivos Android nativos pela aplicação Portal da Empresa para Android:
 
-| **Nome do Dispositivo** | **Números de Modelo do Dispositivo** |
+| **Nome do dispositivo** | **Números de Modelo do Dispositivo** |
 | --- | --- |
 | Galaxy Avant | SM-G386T |
 | Galaxy Core 2/Core 2 Duos | SM-G355H<br>SM-G355M |
@@ -93,7 +93,7 @@ Segue-se uma lista de modelos de dispositivos Samsung que não suportam o Knox. 
 Um [software cliente do Intune](manage-windows-pcs-with-microsoft-intune.md) pode ser implementado e instalado em PCs com Windows como um método alternativo de inscrição. Esta funcionalidade está apenas disponível com o portal clássico do Intune. Pode utilizar o cliente de software Intune para gerir 10 e posteriores PCs, com exceção da edição Home do Windows 10.
 
 > [!Note]
-> A Microsoft anunciou que o suporte do Windows 7 termina a 14 de janeiro de 2020. Nesta data, o Intune também retira o suporte para dispositivos com o Windows 7.
+> A Microsoft anunciou que o suporte do Windows 7 termina a 14 de Janeiro de 2020. Nesta data, o Intune também retira o suporte para dispositivos com o Windows 7.
 >
 > Para mais informações, consulte o [plano Intune para a mudança: fim do suporte para o Windows 7](whats-new.md#windows-7-ends-extended-support).
 >
@@ -109,20 +109,20 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 As diferentes tarefas administrativas necessitam que utilize um dos seguintes sites administrativos.
 
-- [Centro de administração da Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Microsoft 365 admin center (Centro de administração do Microsoft 365)](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Portal do Azure](https://portal.azure.com/)
 
 Os seguintes browsers são suportados para estes portais:
 
 - Microsoft Edge (versão mais recente)
-- Microsoft Internet Explorer 11
+- Microsoft Internet Explorer 11
 - Safari (versão mais recente, apenas Mac)
 - Chrome (versão mais recente)
 - Firefox (versão mais recente)
 
 ### <a name="intune-classic-portal"></a>Portal clássico do Intune
 
-O portal clássico Intune é utilizado apenas para gerir dispositivos matriculados com o cliente de software Intune PC (https://manage.microsoft.com). O portal clássico do Intune necessita do suporte do browser Silverlight.
+O portal clássico Intune é utilizado apenas para gerir dispositivoshttps://manage.microsoft.com)matriculados com o cliente de software Intune PC ( . O portal clássico do Intune necessita do suporte do browser Silverlight.
 
 Os seguintes browsers Silverlight suportam a consola do Intune:
 

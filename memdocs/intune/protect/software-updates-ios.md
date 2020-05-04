@@ -14,10 +14,10 @@ ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328905"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Adicione políticas de atualização de software iOS/iPadOS em Intune
@@ -37,7 +37,7 @@ Por predefinição, os dispositivos check-in com Intune a cada 8 horas. Se uma a
 ## <a name="configure-the-policy"></a>Configurar a política
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **Atualizar as políticas para iOS/iPadOS** > Criar **perfil**.
+2. Selecione **Dispositivos** > **Atualização políticas para iOS/iPadOS** > **Criar perfil**.
 3. No separador **Basics,** especifique um nome para esta política, especifique uma descrição (opcional) e, em seguida, selecione **Next**.
 
    ![Separador básico](./media/software-updates-ios/basics-tab.png)
@@ -95,13 +95,13 @@ Para obter orientações da equipa de suporte Intune, consulte [A visibilidade d
 
 Pode editar uma política existente, incluindo alterar os tempos restritos:
 
-1. Selecione **Dispositivos** > **Atualizar as políticas para iOS**. Selecione a política que pretende editar.
+1. Selecione as políticas de atualização de **dispositivos** > **para iOS**. Selecione a política que pretende editar.
 
 2. Ao visualizar as políticas **Propriedades**, selecione **Editar** para a página de política que pretende modificar.
 
    ![Editar uma política](./media/software-updates-ios/edit-policy.png)
 
-3. Depois de introduzir uma alteração, selecione **Review + guarde** > **Guarde** para salvar as suas edificações e volte às políticas *Propriedades*.
+3. Depois de introduzir uma alteração, selecione **Review +** > **poupe** para guardar as suas edificações e volte às políticas *Propriedades*.
 
 > [!NOTE]
 > Se o tempo de **início** e **o tempo** de fim estiverem definidos para as 12 da manhã, o Intune não verifica as restrições sobre quando instalar atualizações. Isto significa que quaisquer configurações que tenha para **Tempos Select para evitar** que as instalações da atualização sejam ignoradas, e as atualizações podem ser instaladas a qualquer momento.
@@ -109,8 +109,8 @@ Pode editar uma política existente, incluindo alterar os tempos restritos:
 ## <a name="monitor-device-installation-failures"></a>Monitorizar as falhas de instalação em dispositivos
 
 <!-- 1352223 -->
-**As atualizações** de software > Falhas de **instalação para dispositivos iOS** mostram uma lista de dispositivos iOS/iPadOS supervisionados visados por uma política de atualização, tentaram uma atualização e não puderam ser atualizados. Pode ver o estado com o motivo pelo qual cada um dos dispositivos não foi atualizado automaticamente. Os dispositivos atualizados e em bom estado de funcionamento não são apresentados na lista. Os dispositivos atualizados incluem as atualizações mais recentes suportadas pelos mesmos.
+**Atualizações de** > software**Falhas de instalação para dispositivos iOS** mostram uma lista de dispositivos iOS/iPadOS supervisionados visados por uma política de atualização, tentaram uma atualização e não puderam ser atualizados. Pode ver o estado com o motivo pelo qual cada um dos dispositivos não foi atualizado automaticamente. Os dispositivos atualizados e em bom estado de funcionamento não são apresentados na lista. Os dispositivos atualizados incluem as atualizações mais recentes suportadas pelos mesmos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Monitorize o seu estado](../configuration/device-profile-monitor.md).

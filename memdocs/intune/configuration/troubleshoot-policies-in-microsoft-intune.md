@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333029"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Políticas e perfis de resolução de problemas e em Intune
@@ -41,7 +41,7 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
 
     ![Intune, vá para Ajuda e Suporte, e selecione Troubleshoot](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
-2. Escolha **Selecione Selecione Utilizador** > selecione o utilizador com um problema > **Selecione**.
+2. **Escolha selecionar** o utilizador > selecione o utilizador com um problema > **Selecione**.
 3. Confirme que a **Licença Intune** e **o Status da Conta** mostram ambos cheques verdes:
 
     ![Intune, selecione o utilizador e confirme o estado da conta e a licença Intune mostrar marcas de verificações verdes para o estado](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
@@ -76,10 +76,10 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
         - Se **o último check-in** for superior a 24 horas, pode haver um problema com o dispositivo. Um dispositivo que não pode fazer o check-in não pode receber as suas políticas de Intune.
 
         - Para forçar o check-in:
-            - No dispositivo Android, abra a app Portal da Empresa > **Dispositivos** > Escolha o dispositivo a partir da lista > **Verifique as definições**do dispositivo .
-            - No dispositivo iOS/iPadOS, abra a aplicação portal da Empresa > **Dispositivos** > Escolha o dispositivo a partir da lista > **Verifique as definições**.
+            - No dispositivo Android, abra a aplicação do Portal da Empresa > **Dispositivos** > Escolha o dispositivo da lista > **verificar as definições**do dispositivo .
+            - No dispositivo iOS/iPadOS, abra a aplicação portal da Empresa > **Dispositivos** > Escolha o dispositivo da lista > **Verificar Definições**.
 
-        - Num dispositivo Windows, abra **Definições** > **Contas** > Trabalho de **Acesso ou Escola** > Selecione a conta ou inscrição de MDM > **Info** > **Sync**.
+        - Num dispositivo Windows, abra **as** > **Contas** > de**Acesso a Trabalho ou > Escola** Selecione a conta ou inscrição do MDM > **Info** > **Sync**.
 
     - Selecione o dispositivo para ver informações específicas da política.
 
@@ -98,7 +98,7 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
 
         **Links úteis:** 
 
-        - [Formas de implementar políticas de conformidade de dispositivos](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Formas de implementar as políticas de conformidade de dispositivos](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
         - [Monitorizar as políticas de conformidade de dispositivos](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Não tem a certeza se um perfil é corretamente aplicado
@@ -142,7 +142,7 @@ Os dispositivos Windows 10 não podem remover as políticas de segurança quando
 
 Dependendo da plataforma do dispositivo, se quiser alterar a apólice para um valor menos seguro, poderá ter de redefinir as políticas de segurança.
 
-Por exemplo, no Windows 8.1, no ambiente de trabalho, passe pela direita para abrir a barra **de Charms.** Escolha **definições** > **Painel de Controlo** > Contas de **utilizador**. No lado esquerdo, selecione a ligação **Repor Políticas de Segurança** e escolha **Repor Políticas**.
+Por exemplo, no Windows 8.1, no ambiente de trabalho, passe pela direita para abrir a barra **de Charms.** Escolha as contas do utilizador**do Painel** > de Controlo de **Definições** > .**User Accounts** No lado esquerdo, selecione a ligação **Repor Políticas de Segurança** e escolha **Repor Políticas**.
 
 Outras plataformas, como o Android, iOS/iPadOS e Windows Phone 8.1, poderão ter de ser reformadas e reinscritas para aplicar uma política menos restritiva.
 
@@ -153,9 +153,9 @@ Outras plataformas, como o Android, iOS/iPadOS e Windows Phone 8.1, poderão ter
 > [!NOTE]
 > Esta secção aplica-se ao portal clássico. 
 
-### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Erros relacionados com a política do Microsoft Intune no policyplatform.log
+### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Erros relacionados com políticas do Microsoft Intune no policyplatform.log
 
-No caso dos PCs do Windows geridos com o cliente do software Intune, os erros de política no ficheiro `policyplatform.log` podem ser provenientes de definições não predefinidas no Controlo de Conta do Utilizador do Windows (UAC) no dispositivo. Algumas definições de UAC não predefinidas podem afetar as instalações de cliente do Microsoft Intune e a execução de políticas.
+No caso de PCs do Windows geridos com `policyplatform.log` o cliente de software Intune, os erros de política no ficheiro podem ser provenientes de definições não predefinidas no Controlo de Conta de Utilizador do Windows (UAC) no dispositivo. Algumas definições de UAC não predefinidas podem afetar as instalações de cliente do Microsoft Intune e a execução de políticas.
 
 #### <a name="resolve-uac-issues"></a>Resolver problemas de UAC
 
@@ -176,7 +176,7 @@ Ocorre se a hora no sistema local estiver dessincronizada em cinco minutos ou ma
 
 Para resolver esta questão, coloque o tempo do sistema local o mais próximo possível do tempo de Internet. Ou, definir para o tempo nos controladores de domínio na rede.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Questões e resoluções comuns com perfis de e-mail](../configuration/troubleshoot-email-profiles-in-microsoft-intune.md)
 

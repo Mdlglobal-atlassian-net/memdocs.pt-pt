@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 8fffba81b1da6b335346edd0c04bd0c9ea2e6c56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328317"
 ---
 # <a name="installing-the-company-portal-app-for-windows-10"></a>Instalação do aplicativo Portal da Empresa para o Windows 10  
@@ -55,4 +55,4 @@ Ao adicionar um computador:
 
 - O suporte da empresa poderá impor políticas no computador. Por exemplo, poderá ser necessário definir uma palavra-passe ou PIN no computador. O suporte da sua empresa também pode limitar quantas vezes pode introduzir uma senha incorreta, podendo bloqueá-lo fora do computador ou apagar todos os dados do disco rígido do seu computador se tentar demasiadas vezes.
 
-Se tiver dúvidas, contacte o suporte da sua empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Se tiver dúvidas, contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

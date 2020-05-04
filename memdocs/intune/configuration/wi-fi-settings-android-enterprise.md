@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086434"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Adicione as definições de Wi-Fi para dispositivos Android Enterprise dedicados e totalmente geridos no Microsoft Intune
@@ -37,7 +37,7 @@ Este artigo descreve estas definições. [Utilize Wi-Fi nos seus dispositivos,](
 
 Selecione esta opção se estiver a implementar para um dispositivo Android Enterprise dedicado ou totalmente gerido.  Os dispositivos android Enterprise dedicados e totalmente geridos suportam atualmente a implementação de certificados SCEP, mas não o PKCS.
 
-### <a name="basic"></a>Básica
+### <a name="basic"></a>Básico
 
 - **Tipo de Wi-Fi**: escolha **Básico**.
 - **Nome da rede**: introduza um nome para esta ligação Wi-Fi. Os utilizadores finais vêem este nome quando navegam no seu dispositivo para ligações Wi-FI disponíveis. Por exemplo, introduza **Contoso WiFi**.
@@ -45,11 +45,11 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 - **Rede oculta**: escolha **Ativar** para ocultar esta rede da lista de redes disponíveis no dispositivo. O SSID não é difundido. Escolha **Desativar** para mostrar esta rede na lista de redes disponíveis no dispositivo.
 - **Tipo de Wi-Fi**: selecione o protocolo de segurança para autenticar a rede Wi-Fi. As opções são:
 
-  - **Abrir (sem autenticação)** : utilize esta opção apenas se a rede não estiver protegida.
+  - **Abrir (sem autenticação)**: utilize esta opção apenas se a rede não estiver protegida.
   - **Chave WEP pré-partilhada**: introduza a palavra-passe na **Chave pré-partilhada**. Quando a rede da sua organização é configurada, uma chave de rede ou palavra-passe também é configurada. Introduza esta chave de rede ou palavra-passe para o valor PSK.
   - **Chave WPA pré-partilhada**: introduza a palavra-passe na **Chave pré-partilhada**. Quando a rede da sua organização é configurada, uma chave de rede ou palavra-passe também é configurada. Introduza esta chave de rede ou palavra-passe para o valor PSK.
 
-### <a name="enterprise"></a>Empresarial
+### <a name="enterprise"></a>Enterprise
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
@@ -58,20 +58,20 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 
   - **EAP-TLS**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
-    - **Autenticação do cliente** - **Certificado cliente para autenticação do cliente (Certificado de identidade)** : Escolha o perfil de certificado de cliente SCEP que também está implantado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
+    - **Certificado** - cliente de autenticação do**cliente para autenticação do cliente (Certificado**de identidade) : Escolha o perfil de certificado de cliente SCEP que também está implantado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-    - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+    - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
   - **EAP-TTLS**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
     - **Autenticação do Cliente**: Escolha um método de **autenticação**. As opções são:
 
       - **Nome de utilizador e Palavra-passe**: pedir ao utilizador um nome de utilizador e palavra-passe para autenticar a ligação. Introduza também:
-        - **Método não EAP (identidade interna)** : escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
+        - **Método não EAP (identidade interna)**: escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
 
           - **Palavra-passe não encriptada (PAP)**
           - **Microsoft CHAP (MS-CHAP)**
@@ -79,33 +79,33 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 
       - **Certificados**: Escolha o perfil de certificado de cliente SCEP que também está implantado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-      - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+      - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
   - **PEAP**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
     - **Autenticação do Cliente**: Escolha um método de **autenticação**. As opções são:
 
       - **Nome de utilizador e Palavra-passe**: pedir ao utilizador um nome de utilizador e palavra-passe para autenticar a ligação. Introduza também:
-        - **Método não EAP para autenticação (identidade interna)** : escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
+        - **Método não EAP para autenticação (identidade interna)**: escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
 
           - **Nenhum**
           - **Microsoft CHAP Versão 2 (MS-CHAP v2)**
 
       - **Certificados**: Escolha o perfil de certificado de cliente SCEP que também está implantado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-      - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+      - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
 ## <a name="work-profile-only"></a>Apenas perfil de trabalho
 
-### <a name="basic"></a>Básica
+### <a name="basic"></a>Básico
 
 - **Tipo de Wi-Fi**: escolha **Básico**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
 - **Rede oculta**: escolha **Ativar** para ocultar esta rede da lista de redes disponíveis no dispositivo. O SSID não é difundido. Escolha **Desativar** para mostrar esta rede na lista de redes disponíveis no dispositivo.
 
-### <a name="enterprise"></a>Empresarial
+### <a name="enterprise"></a>Enterprise
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
 - **SSID**: Introduza o **identificador**de conjunto de serviços, que é o nome real da rede sem fios a que os dispositivos se ligam. No entanto, os utilizadores apenas veem o **nome da rede** que configurou quando selecionam a ligação.
@@ -114,20 +114,20 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 
   - **EAP-TLS**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
-    - **Autenticação de Cliente** - **Certificado de cliente para autenticação de cliente (Certificado de identidade)** : escolha o perfil de certificado de cliente SCEP ou PKCS que também é implementado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
+    - **Certificado** - cliente de autenticação do cliente**para autenticação do cliente (Certificado de identidade)**: Escolha o perfil de certificado de cliente SCEP ou PKCS que também está implantado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-    - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+    - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
   - **EAP-TTLS**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
     - **Autenticação do Cliente**: Escolha um método de **autenticação**. As opções são:
 
       - **Nome de utilizador e Palavra-passe**: pedir ao utilizador um nome de utilizador e palavra-passe para autenticar a ligação. Introduza também:
-        - **Método não EAP (identidade interna)** : escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
+        - **Método não EAP (identidade interna)**: escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
 
           - **Palavra-passe não encriptada (PAP)**
           - **Microsoft CHAP (MS-CHAP)**
@@ -135,23 +135,23 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 
       - **Certificados**: escolha o perfil de certificado de cliente SCEP ou PKCS que também é implementado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-      - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+      - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
   - **PEAP**: introduza também:
 
-    - **Fidedignidade do Servidor** - **Certificado de raiz para a validação do servidor**: escolha um perfil de certificado de raiz fidedigna existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
+    - **Server Trust** - **Root certificado para validação**do servidor : Escolha um perfil de certificado de raiz fidedigno existente. Quando o cliente se conecta à rede, este certificado é apresentado ao servidor e autentica a ligação.
 
     - **Autenticação do Cliente**: Escolha um método de **autenticação**. As opções são:
 
       - **Nome de utilizador e Palavra-passe**: pedir ao utilizador um nome de utilizador e palavra-passe para autenticar a ligação. Introduza também:
-        - **Método não EAP para autenticação (identidade interna)** : escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
+        - **Método não EAP para autenticação (identidade interna)**: escolha a forma como autentica a ligação. Garanta que escolhe o mesmo protocolo que está configurado na sua rede Wi-Fi. As opções são:
 
           - **Nenhum**
           - **Microsoft CHAP Versão 2 (MS-CHAP v2)**
 
       - **Certificados**: escolha o perfil de certificado de cliente SCEP ou PKCS que também é implementado no dispositivo. Este certificado é a identidade apresentada pelo dispositivo ao servidor para autenticar a ligação.
 
-      - **Privacidade de identidade (identidade externa)** : introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
+      - **Privacidade de identidade (identidade externa)**: introduza o texto enviado em resposta a um pedido de identidade EAP. Este texto pode ser qualquer valor, como `anonymous`. Durante a autenticação, esta identidade anónima é inicialmente enviada, seguida pela identificação verdadeira enviada num túnel seguro.
 
 - **Definições de procuração**: Especifique a configuração de procuração utilizada pela sua organização. As opções são:
 
@@ -166,7 +166,7 @@ Selecione esta opção se estiver a implementar para um dispositivo Android Ente
 
   Para obter mais informações sobre ficheiros PAC, consulte o [ficheiro Proxy Auto-Configuration (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (abre um site não Microsoft).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil é criado, mas não faz nada. Em seguida, [atribua este perfil](device-profile-assign.md) e [monitorize o seu estado.](device-profile-monitor.md). .
 

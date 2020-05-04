@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084932"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 10 e posteriordefinições para marcar dispositivos como conformes ou não conformes usando Intune
@@ -37,7 +37,7 @@ Enquanto administrador do Intune, utilize estas definições de conformidade par
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-[Criar uma política de conformidade](create-compliance-policy.md#create-the-policy). Em **Plataforma**, selecione **Windows 10 e versões posteriores**.
+[Criar uma política](create-compliance-policy.md#create-the-policy)de conformidade. Em **Plataforma**, selecione **Windows 10 e versões posteriores**.
 
 ## <a name="device-health"></a>Estado de Funcionamento do Dispositivo
 
@@ -46,12 +46,12 @@ Enquanto administrador do Intune, utilize estas definições de conformidade par
 - **Requerer bitLocker**:  
    A Encriptação de Unidade BitLocker do Windows encripta todos os dados armazenados no volume do sistema operativo Windows. O BitLocker utiliza o Módulo de Plataforma Fidedigna (TPM) para ajudar a proteger o sistema operativo Windows e os dados do utilizador. Também ajuda a confirmar que um computador não é adulterado, mesmo que a sua esquerda não seja vigiada, perdida ou roubada. Se o computador estiver equipado com um TPM compatível, o BitLocker utiliza o TPM para bloquear as chaves de encriptação que protegem os dados. Como resultado, as chaves não podem ser acedidas até que o TPM verifique o estado do computador.  
 
-   - **Não configurado** *(predefinido)* - Esta definição não é avaliada para conformidade ou incumprimento.
+   - **Não configurado** *(predefinido)*- Esta definição não é avaliada para conformidade ou incumprimento.
    - **Require** - O dispositivo pode proteger os dados armazenados na unidade de acesso não autorizado quando o sistema está desligado, ou hiberna.  
 
 
 - **Exigir que a Bota Segura esteja ativada no dispositivo:**  
-    - **Não configurado** *(predefinido)* - Esta definição não é avaliada para conformidade ou incumprimento.
+    - **Não configurado** *(predefinido)*- Esta definição não é avaliada para conformidade ou incumprimento.
     - **Require** - O sistema é forçado a iniciar um estado de confiança na fábrica. Os componentes centrais utilizados para o arranque da máquina devem ter assinaturas criptográficas corretas que são fidedignas pela organização que fabricou o dispositivo. O firmware UEFI verifica a assinatura antes de permitir que o computador seja iniciado. Se algum ficheiro for adulterado, o que quebra a sua assinatura, o sistema não arranca.
 
   > [!NOTE]
@@ -59,7 +59,7 @@ Enquanto administrador do Intune, utilize estas definições de conformidade par
 
 - **Requerer a integridade do código:**  
   A integridade do código é uma funcionalidade que valida a integridade de um ficheiro de controlador ou sistema cada vez que é carregado na memória.
-  - **Não configurado** *(predefinido)* - Esta definição não é avaliada para conformidade ou incumprimento.
+  - **Não configurado** *(predefinido)*- Esta definição não é avaliada para conformidade ou incumprimento.
   -  **Require** - Exija a integridade do código, que deteta se um controlador ou ficheiro do sistema não assinado está a ser carregado no núcleo. Também deteta se um ficheiro de sistema é alterado por software malicioso ou executado por uma conta de utilizador com privilégios de administrador.
 
 Mais recursos:
@@ -71,14 +71,14 @@ Mais recursos:
 
 ### <a name="operating-system-version"></a>Versão do Sistema Operativo
 
-- **Versão mínima do SO**:  
+- **Versão mínima de Os:**  
   Introduza a versão mínima permitida no formato **número major.minor.build.CU.** Para obter o valor correto, abra uma linha de comandos e escreva `ver`. O comando `ver` devolve a versão no seguinte formato:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
   Quando um dispositivo tem uma versão anterior do que a versão S em que entra, é reportado como incompatível. É apresentada uma hiperligação com informações sobre como atualizar. O utilizador final pode optar por atualizar o dispositivo. Depois de atualizarem, podem aceder aos recursos da empresa.
 
-- **Versão máxima do SO**:  
+- **Versão máxima do SISTEMA:**  
   Introduza a versão máxima permitida, no formato **número major.minor.build.revision.** Para obter o valor correto, abra uma linha de comandos e escreva `ver`. O comando `ver` devolve a versão no seguinte formato:
 
   `Microsoft Windows [Version 10.0.17134.1]`
@@ -103,7 +103,7 @@ Mais recursos:
 Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriormente. Os dispositivos intune devolvem um estado não disponível.
 
 - Exigir a **conformidade do dispositivo com o Gestor de Configuração:**  
-  - **Não configurado** *(predefinido)* - Intune não verifica se há nenhuma das definições do Gestor de Configuração para a conformidade.
+  - **Não configurado** *(predefinido)*- Intune não verifica se há nenhuma das definições do Gestor de Configuração para a conformidade.
   - **Require** - Exija que todas as definições (itens de configuração) no Gestor de Configuração sejam conformes.  
 
     Por exemplo, pode exigir que todas as atualizações do software sejam instaladas nos dispositivos. No Gestor de Configuração, este requisito tem o estado "Instalado". Se algum programa no dispositivo estiver num estado desconhecido, então o dispositivo não está em conformidade no Intune.
@@ -112,15 +112,15 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 
 ### <a name="password"></a>Palavra-passe
 
-- **Exigir uma palavra-passe para desbloquear os dispositivos móveis**:  
-  - **Não configurado** *(predefinido)* - Esta definição não é avaliada para conformidade ou incumprimento.
+- **Requerer uma palavra-passe para desbloquear dispositivos móveis:**  
+  - **Não configurado** *(predefinido)*- Esta definição não é avaliada para conformidade ou incumprimento.
   - **Exigir** - Os utilizadores devem introduzir uma palavra-passe antes de poderem aceder ao seu dispositivo. 
 
 - **Palavras-passe simples**:  
-  - **Não configurado** *(predefinido)* - Os utilizadores podem criar senhas simples, tais como **1234** ou **1111**.
+  - **Não configurado** *(predefinido)*- Os utilizadores podem criar senhas simples, tais como **1234** ou **1111**.
   - **Bloco** - Os utilizadores não podem criar senhas simples, tais como **1234** ou **1111**.
 
-- **Tipo de palavra-passe**:  
+- **Tipo de palavra-passe:**  
   Escolha o tipo de senha ou PIN necessário. As opções são:
   - **Predefinição do dispositivo** *(predefinição*) - Requeira uma palavra-passe, PIN numérico ou PIN alfanumérico
   - **Numérico** - Exija uma palavra-passe ou PIN numérico
@@ -139,19 +139,19 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
     > - [DeviceLock/AlphanumericDevicePasswordSRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
     > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
-- **Comprimento mínimo da palavra-passe**:  
+- **Comprimento mínimo da palavra-passe:**  
   introduza o número mínimo de dígitos ou carateres que a palavra-passe tem de ter.
 
 - **Minutos de inatividade antes de a palavra-passe ser exigida**:  
   introduza o tempo de inatividade antes de o utilizador ter de reintroduzir a palavra-passe.
 
-- **Expiração da palavra-passe (dias)** :  
+- **Expiração da palavra-passe (dias)**:  
   Insira o número de dias antes de a palavra-passe expirar, e devem criar uma nova, de 1-730.
 
 - **Número de palavras-passe anteriores para impedir a reutilização**:  
   introduza o número de palavras-passe utilizadas anteriormente que não podem ser utilizadas.
 
-- **Exija uma palavra-passe quando o dispositivo regressar do estado inativo (Móvel e Holográfico)** :  
+- **Exija uma palavra-passe quando o dispositivo regressar do estado inativo (Móvel e Holográfico)**:  
   - **Não configurado** *(predefinido)*
   - **Require** - Exija que os utilizadores do dispositivo introduzam a palavra-passe sempre que o dispositivo retorna de um estado inativo.
 
@@ -171,7 +171,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 ### <a name="device-security"></a>Segurança do Dispositivo  
 
 - **Firewall**:  
-  - **Não configurado** *(predefinido)* - Intune não controla o Microsoft Defender Firewall, nem altera as definições existentes.
+  - **Não configurado** *(predefinido)*- Intune não controla o Microsoft Defender Firewall, nem altera as definições existentes.
   - **Require** - Ligue o Microsoft Defender Firewall e evite que os utilizadores o desliguem.  
 
   [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
@@ -179,18 +179,18 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
   > [!NOTE]
   > Se o dispositivo sincronizar imediatamente após um reboot, ou sincronizar imediatamente o sono, então esta definição pode reportar como um **Erro**. Este cenário pode não afetar o estado geral de conformidade do dispositivo. Para reavaliar o estado de conformidade, [sincronize](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows)manualmente o dispositivo .
 
-- **Módulo de Plataforma Fidedigna (TPM)** :  
-  - **Não configurado** *(predefinido)* - Intune não verifica o dispositivo para uma versão de chip TPM.
+- **Módulo de Plataforma Fidedigna (TPM)**:  
+  - **Não configurado** *(predefinido)*- Intune não verifica o dispositivo para uma versão de chip TPM.
   - **Require** - Intune verifica a versão do chip TPM para conformidade. O dispositivo está em conformidade se a versão do chip TPM for superior a **0** (zero). O dispositivo não é compatível se não houver uma versão TPM no dispositivo.  
 
   [DispositivoStatus CSP - DispositivoStatus/TPM/Caderno de versão de especificação](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
-- **Antivírus**:  
-  - **Não configurado** *(predefinido)* - Intune não verifica se existem soluções antivírus instaladas no dispositivo. 
+- **Antivírus:**  
+  - **Não configurado** *(predefinido)*- Intune não verifica se existem soluções antivírus instaladas no dispositivo. 
   - **Require** - Verifique a conformidade utilizando soluções antivírus que estejam registadas no [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como o Symantec e o Microsoft Defender.
 
 - **Antispyware:**  
-  - **Não configurado** *(predefinido)* - Intune não verifica se existem soluções antispyware instaladas no dispositivo.
+  - **Não configurado** *(predefinido)*- Intune não verifica se existem soluções antispyware instaladas no dispositivo.
   - **Require** - Verifique a conformidade utilizando soluções antispyware que estejam registadas no [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), como o Symantec e o Microsoft Defender.  
 
 ### <a name="defender"></a>Defender
@@ -198,7 +198,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 *As seguintes definições de conformidade são suportadas com o Windows 10 Desktop.*
 
 - **Microsoft Defender Antimalware**:  
-  - **Não configurado** *(predefinido)* - Intune não controla o serviço, nem altera as definições existentes.
+  - **Não configurado** *(predefinido)*- Intune não controla o serviço, nem altera as definições existentes.
   - **Require** - Ligue o serviço anti-malware Microsoft Defender e evite que os utilizadores o desliguem.
 
 - **Versão mínima do Microsoft Defender Antimalware:**  
@@ -208,7 +208,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 
 - Inteligência de **segurança Antimalware Microsoft Defender**atualizado:  
   Controla as atualizações de proteção contra vírus do Windows Security e de proteção contra ameaças nos dispositivos.
-  - **Não configurado** *(predefinido)* - Intune não impõe quaisquer requisitos.
+  - **Não configurado** *(predefinido)*- Intune não impõe quaisquer requisitos.
   - **Require** - Force a inteligência de segurança do Microsoft Defender a estar atualizada.
 
   [Defender/Saúde/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
@@ -216,7 +216,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
   Para mais informações, consulte [as atualizações de inteligência de Segurança para o Antivírus](https://www.microsoft.com/en-us/wdsi/defenderupdates)do Microsoft Defender e outros antimalware da Microsoft .
 
 - **Proteção em tempo real:**  
-  - **Não configurado** *(predefinido)* - Intune não controla esta funcionalidade, nem altera as definições existentes.
+  - **Não configurado** *(predefinido)*- Intune não controla esta funcionalidade, nem altera as definições existentes.
   - **Require** - Ligue a proteção em tempo real, que procura malware, spyware e outros softwares indesejados.  
 
   [Defender/Permitir Monitorização Real](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
@@ -240,7 +240,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
 
 O Windows Holographic for Business utiliza a plataforma **Windows 10 e posterior**. O Windows Holographic for Business suporta a seguinte definição:
 
-- **Segurança do Sistema** > **Encriptação** > **Encriptação do armazenamento de dados no dispositivo**.
+- **Encriptação** > de**encriptação** > de segurança do sistema**do armazenamento de dados no dispositivo**.
 
 Para verificar a encriptação de dispositivos no Microsoft HoloLens, veja [Verify device encryption (Verificar a encriptação de dispositivos)](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 
@@ -250,7 +250,7 @@ O Surface Hub utiliza a plataforma **Windows 10 e posterior**. Os Surface Hubs 
 
 Para obter orientação, consulte [a configuração da inscrição para dispositivos Windows](../enrollment/windows-enroll.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Adicionar ações para dispositivos não conformes](actions-for-noncompliance.md) e [utilizar etiquetas de âmbito para filtrar políticas](../fundamentals/scope-tags.md).
 - [Monitorizar as políticas de conformidade](compliance-policy-monitor.md).

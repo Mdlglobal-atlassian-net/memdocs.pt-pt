@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329429"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Impedir fugas de dados em dispositivos não geridos com o Microsoft Intune
@@ -37,7 +37,7 @@ As políticas de proteção de aplicações do Intune são independentes da gest
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-O seguinte plano de ação pode ser utilizado se cumprir estes requisitos:
+O plano de ação seguinte pode ser utilizado quando cumprir os seguintes requisitos:
 
 * A sua empresa está pronta para fazer a transição segura para a cloud.
 * A sua empresa utiliza o Office 365 Exchange Online, SharePoint Online, OneDrive para Empresas ou Yammer.
@@ -56,7 +56,7 @@ Para dispositivos iOS/iPadOS e Android:
 Para dispositivos Windows 10:
 
 1. Saiba [como o Windows Information Protection (WIP) funciona](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
-2. Prepare-se para configurar [políticas de proteção de aplicações para o Windows 10](../apps/app-protection-policies-configure-windows-10.md).
+2. Prepare-se para configurar as políticas de proteção de [aplicações para o Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Crie e implemente políticas de proteção de aplicações do WIP com o Intune](../apps/windows-information-protection-policy-create.md).
 
 ## <a name="what-to-tell-employees-and-students"></a>O que dizer aos funcionários e estudantes
@@ -66,6 +66,6 @@ Consoante aplicável, partilhe as seguintes ligações para fornecer informaçõ
 * [O que esperar quando a sua aplicação iOS/iPadOS for gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-ios.md)
 * [O que esperar quando a aplicação Android é gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-android.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Precisa de ajuda a ativar este ou outros cenários do Office 365 ou EMS? Se tiver pelo menos 150 licenças do Microsoft 365, Enterprise Mobility + Security ou Azure Active Directory Premium, utilize os seus [benefícios do FastTrack](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

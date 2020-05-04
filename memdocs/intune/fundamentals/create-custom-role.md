@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326802"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440582"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Criar um papel personalizado em Intune
 
@@ -34,13 +34,13 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 
 ## <a name="to-create-a-custom-role"></a>Para criar uma função personalizada
 
-1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **Todas as funções** > **Create**.
+1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração** > do Inquilino**Todas as funções** > **Criam**.
 
 2. Na página **Basics,** introduza um nome e descrição para o novo papel e, em seguida, escolha **Next**.
 
 3. Na página **Permissões,** escolha as permissões que pretende utilizar com esta função.
 
-4. Na página **Scope (Tags),** escolha as etiquetas para este papel. Este papel pode aceder a recursos que também têm estas tags. Escolha **Seguinte**.
+4. Na página **Scope (Tags),** escolha as etiquetas para este papel. Quando esta função é atribuída a um utilizador, esse utilizador pode aceder a recursos que também possuam estas etiquetas. Escolha **Seguinte**.
 
 5. Na página **Review + criar** página, quando terminar, escolha **Criar**. O novo papel é apresentado na lista nas **funções Intune - Todas as funções.**
 
@@ -48,7 +48,7 @@ Para criar, editar ou atribuir funções, a sua conta tem de ter uma das seguint
 
 Também pode copiar um papel existente.
 
-1. No [centro de administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > selecione a caixa de verificação para um papel na lista > **Duplicate**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração** > do Inquilino Todas as**funções** > selecionar a caixa de verificação para um papel na lista > **Duplicate**.
 
 2. Na página **Basics,** insira um nome. Certifique-se de usar um nome único.
 
@@ -56,7 +56,7 @@ Também pode copiar um papel existente.
 
 4. Depois de ter feito todas as alterações que deseja, escolha **Next** para chegar à página **Review + criar.** Selecione **Criar**. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Atribuir uma função a um utilizador](assign-role.md)
 - [Saiba mais sobre o controlo de acesso baseado em papéis em Intune](role-based-access-control.md)
 

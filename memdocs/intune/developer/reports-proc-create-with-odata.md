@@ -2,7 +2,7 @@
 title: Criar um relatório do Intune a partir do feed OData com o Power BI
 titleSuffix: Microsoft Intune
 description: Crie uma visualização de treemap com o Power BI Desktop com um filtro interativo da API do Armazém de Dados do Microsoft Intune.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331765"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Criar um relatório do Intune a partir do feed OData com o Power BI
@@ -45,7 +45,7 @@ Trabalha com tabelas no Power BI. Uma tabela contém campos de dados. Cada campo
 
 A utilização do termo *entidade* e *tabela* poderá ser confusa. O modelo de dados é acessível através de um feed OData (Open Data Protocol). No universo do OData, os contentores denominados tabelas no Power BI são designados entidades. Estes termos referem-se ao mesmo elemento que contém os seus dados. Para mais informações sobre o OData, consulte a visão geral do [OData](/odata/overview).
 
-## <a name="install-power-bi-desktop"></a>Instalar o Power BI Desktop
+## <a name="install-power-bi-desktop"></a>Install Power BI Desktop (Instalar o Power BI Desktop)
 
 Instale a versão mais recente do Power BI Desktop. Pode transferir o Power BI Desktop em: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
@@ -58,7 +58,7 @@ Instale a versão mais recente do Power BI Desktop. Pode transferir o Power BI D
 2. Abra o painel **Intune Data Warehouse** selecionando o link Data Warehouse em **outras tarefas** no lado direito da **microsoft Intune - lâmina de visão geral.**
 3. Copie o URL do feed personalizado. Por exemplo: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Abra o Power BI Desktop.
-5. A partir da barra de menus, selecione **File** > **Obter Dados** > **feed Odata**.
+5. A partir da barra de menus, selecione **File** > **Get Data** > **Odata feed**.
 6. Colhe o URL de alimentação personalizado, que copiou do passo anterior, para a caixa DEL Na janela de **alimentação OData.**
 7. Selecione **Básico**.
 
@@ -93,10 +93,10 @@ Um gráfico de mapa de árvores mostra dados hierárquicos como caixas dentro de
 ![Visualizações de mapa de árvores Power BI](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. No painel **de Visualizações,** encontre e selecione **Treemap**. O gráfico **do Treemap** será adicionado à tela do relatório.
-2. No painel **Fields,** encontre a mesa `devices`.
-3. Expanda a tabela `devices` e selecione o campo de dados `manufacturer`.
-4. Arraste o campo de dados `manufacturer` para a tela do relatório e deixe-o cair no gráfico do **Treemap.**
-5. Arraste o campo de dados `deviceKey` da tabela `devices` para o painel **de Visualizações** e deixe-o cair sob a secção **Valores** na caixa rotulada Adicionar campos de **dados aqui**.  
+2. No **painel** fields, encontre `devices` a mesa.
+3. Expanda `devices` a tabela `manufacturer` e selecione o campo de dados.
+4. Arraste `manufacturer` o campo de dados para a tela do relatório e deixe-o cair no gráfico do **Treemap.**
+5. Arraste `deviceKey` o campo `devices` de dados da tabela para o painel **de Visualizações** e deixe-o cair sob a secção **Valores** na caixa rotulada Adicionar campos de **dados aqui**.  
 
 Agora, tem um elemento visual que mostra a distribuição dos fabricantes de dispositivos na sua organização.
 
@@ -106,12 +106,12 @@ Agora, tem um elemento visual que mostra a distribuição dos fabricantes de dis
 
 Pode adicionar um filtro ao seu treemap para poder responder a perguntas adicionais com a sua aplicação.
 
-1. Para adicionar um filtro, selecione a tela do relatório e, em seguida, selecione o **ícone Slicer** (![Treemap com modelo de dados e relações apoiadas](./media/reports-proc-create-with-odata/reports-create-slicer.png)) no âmbito de **Visualizações**. A visualização vazia do **Slicer** aparecerá na tela.
-2. No painel **Fields,** encontre a mesa `ownerTypes`.
-3. Expanda a tabela `ownerTypes` e selecione o campo de dados `ownerTypeName`.
-4. Arraste o campo de dados `onwerTypeName` da tabela `ownerTypes` para o painel dos **Filtros** e deixe-o cair sob os **Filtros nesta** secção de página na caixa rotulada Adicionar campos de **dados aqui**.  
+1. Para adicionar um filtro, selecione a tela do![relatório e, em seguida, selecione o **ícone Slicer** (Treemap com modelo de dados e relações](./media/reports-proc-create-with-odata/reports-create-slicer.png)suportadas ) no âmbito de **Visualizações**. A visualização vazia do **Slicer** aparecerá na tela.
+2. No **painel** fields, encontre `ownerTypes` a mesa.
+3. Expanda `ownerTypes` a tabela `ownerTypeName` e selecione o campo de dados.
+4. Arraste `onwerTypeName` o campo `ownerTypes` de dados da tabela para o painel dos **Filtros** e deixe-o cair sob os **Filtros nesta** secção de página na caixa rotulada Adicionar campos de **dados aqui**.  
 
-   Sob a tabela `OwnerTypes`, há um campo de dados chamado `OwnerTypeKey`que contém dados sobre se um dispositivo é propriedade da empresa ou pessoal. Uma vez que gostaria de mostrar nomes amigáveis neste filtro, procure a tabela `ownerTypes` e arraste o **proprietárioTypeName** para o Slicer. Este exemplo mostra de que forma o modelo de dados suporta relações entre tabelas.
+   Sob `OwnerTypes` a tabela, há um `OwnerTypeKey`campo de dados chamado que contém um dado sobre se um dispositivo é propriedade da empresa ou pessoal. Uma vez que gostaria de mostrar nomes `ownerTypes` amigáveis neste filtro, procure a mesa e arraste o **proprietárioTypeName** para o Slicer. Este exemplo mostra de que forma o modelo de dados suporta relações entre tabelas.
 
 ![Treemap com filtro - Suporta relações entre mesas](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 
@@ -120,7 +120,7 @@ Agora tem um filtro interativo que pode utilizar para alternar entre dispositivo
 1. Selecione **Empresa** dentro do Slicer para ver se a empresa possui a distribuição de dispositivos.
 2. Selecione **Personal** dentro do Slicer para ver os dispositivos pessoais.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Saiba mais sobre como [criar e gerir relações](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) no Power BI Desktop na documentação do Power BI.
 - Consulte o [Modelo do Armazém de Dados do Intune](reports-ref-data-model.md).

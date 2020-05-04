@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f99a159a776e95c2f7ff8045a802b0c686672c9a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328293"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Verificar o acesso a partir da aplicação Portal da Empresa para Windows
@@ -68,7 +68,7 @@ Conclua os passos neste artigo para verificar o acesso da aplicação Portal da 
 
     ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows, home page, com destaque da secção My Devices (Os Meus Dispositivos).](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Clique com o botão direito do rato ou mantenha premido qualquer dispositivo para abrir o respetivo [menu de contexto](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Clique à direita ou pressione e segure um dispositivo para abrir o seu menu de [contexto](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows, home page. O menu de contexto do dispositivo está visível na secção **My Devices** (Os Meus Dispositivos) da página e mostra as ações "Rename" (Mudar o nome), "Remove" (Remover) e "Check access" (Verificar acesso).](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Selecione **Check access** (Verificar acesso). A aplicação sincroniza o seu dispositivo com os requisitos atuais da sua organização e verifica se o dispositivo os reúne. Esta verificação pode demorar alguns minutos.  

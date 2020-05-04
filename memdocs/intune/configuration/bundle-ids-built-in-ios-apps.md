@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084085"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Pacote iDs para aplicações incorporadas para iOS e iPadOS que pode utilizar no Intune
@@ -32,13 +32,13 @@ Quando configurar funcionalidades em dispositivos iOS/iPadOS, também pode adici
 | ID do Pacote                   | Nome da Aplicação     | Publicador |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
-| com.apple.store.Jolly       | Loja Apple  | Apple     |
+| com.apple.store.Jolly       | Apple Store  | Apple     |
 | com.apple.calculator        | Calculadora   | Apple     |
 | com.apple.mobilecal         | Calendário     | Apple     |
 | com.apple.camera            | Câmara       | Apple     |
-| com.apple.mobiletimer       | Relógio        | Apple     |
+| com.apple.mobiletimer       | Clock        | Apple     |
 | com.apple.clips             | Clips        | Apple     |
-| com.apple.compass           | Bússola      | Apple     |
+| com.apple.compass           | Compass      | Apple     |
 | com.apple.MobileAddressBook | Contactos     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
 | com.apple.DocumentsApp      | Ficheiros        | Apple     |
@@ -55,11 +55,11 @@ Quando configurar funcionalidades em dispositivos iOS/iPadOS, também pode adici
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Correio         | Apple     |
-| com.apple.Maps              | Mapas         | Apple     |
-| com.apple.measure           | Medida      | Apple     |
+| com.apple.Maps              | Maps         | Apple     |
+| com.apple.measure           | Medir      | Apple     |
 | com.apple.MobileSMS         | Mensagens     | Apple     |
 | com.apple.Music             | Música        | Apple     |
-| com.apple.news              | Notícias         | Apple     |
+| com.apple.news              | Novidades         | Apple     |
 | com.apple.mobilenotes       | Notas        | Apple     |
 | com.apple.Numbers           | Números      | Apple     |
 | com.apple.Pages             | Páginas        | Apple     |
@@ -78,9 +78,9 @@ Quando configurar funcionalidades em dispositivos iOS/iPadOS, também pode adici
 | com.apple.videos            | Vídeos       | Apple     |
 | com.apple.VoiceMemos        | VoiceMemos   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
-| com.apple.Bridge            | Watch        | Apple     |
+| com.apple.Bridge            | Ver        | Apple     |
 | com.apple.weather           | Meteorologia      | Apple     |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Utilize estes IDs de pacote para configurar [as funcionalidades](ios-device-features-settings.md) do dispositivo e [para permitir ou restringir algumas definições](device-restrictions-ios.md) em dispositivos iOS/iPadOS.

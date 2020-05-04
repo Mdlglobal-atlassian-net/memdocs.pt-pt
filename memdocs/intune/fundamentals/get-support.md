@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326946"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Como obter suporte para o Microsoft Intune
@@ -40,7 +40,7 @@ Enquanto administrador do Intune, pode utilizar a opção **Ajuda e Suporte** pa
 
 A experiência de Ajuda e suporte para intune está disponível no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e de todas as lâminas (ou páginas) em Intune no portal Azure.
 
-A experiência *de Ajuda e suporte* é semelhante à experiência vista no centro de administração da Microsoft [365](https://admin.microsoft.com/), e substitui o suporte anterior *da Ajuda +* , que permanece em vigor para outros serviços no Azure.
+A experiência *de Ajuda e suporte* é semelhante à experiência vista no centro de administração da Microsoft [365](https://admin.microsoft.com/), e substitui o suporte anterior *da Ajuda +*, que permanece em vigor para outros serviços no Azure.
 
 > [!TIP]
 > A partir de 18 de novembro de 2019, uma experiência atualizada e simplificada na consola para obter ajuda e apoio está a ser lançada aos inquilinos. Se esta nova experiência ainda não estiver disponível para si, será em breve.
@@ -53,7 +53,7 @@ Quando você usa um inquilino recém-criado para Intune, é possível que *a Aju
 
 Os detalhes do erro incluem um ID de *sessão,* detalhes de *extensão,* e muito mais.
 
-Este problema ocorre quando não autenticou a sua nova conta de inquilinos através do **Centro de Administração M365** em https://admin.microsoft.com, ou do **portal Office 365** em https://portal.office.com. Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou visite https://portal.office.com, e inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
+Este problema ocorre quando não autenticou a sua nova conta de https://admin.microsoft.cominquilino sem o Centro de **Administração M365** em , ou o **portal Office 365** em https://portal.office.com. Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou visite, https://portal.office.come inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
 
 **Ajuda de acesso e suporte:**
 
@@ -82,7 +82,7 @@ Este problema ocorre quando não autenticou a sua nova conta de inquilinos atrav
     > [!div class="mx-imgBorder"]
     > ![Confirme o seu tipo de gestão](./media/get-support/confirm-management-selection.png)
 
-  - Se abrir ajuda e suporte de **Troubleshooting + suporte** > **Ajuda e suporte,** não verá o tipo de gestão que selecionou listado abaixo *Ajuda e suporte*.
+  - Se abrir ajuda e suporte de **Troubleshooting + suporte** > **Ajuda e suporte,** não verá o tipo de gestão selecionado listado abaixo *Ajuda e suporte*.
 
   - Se perfurar qualquer outro nó como *Dispositivos,* *Apps,* ou *Utilizadores,* e depois selecionar *Ajuda e suporte,* não terá a oportunidade de selecionar um tipo de gestão nem o tipo abaixo do ecrã *de ajuda e suporte*. Neste caso, *Intune* é assumido. Se não quer que o contexto seja Intune, use **o?** opção para que possa selecionar um tipo de gestão diferente.
 
@@ -94,7 +94,7 @@ Este problema ocorre quando não autenticou a sua nova conta de inquilinos atrav
 
   No canto superior esquerdo existem três ícones que pode selecionar para abrir diferentes vidraças da janela *Need Help?* O painel da sua visualização é identificado pelo sublinhado.
 
-  Os clientes com um contrato de suporte **Premier** ou **Unificado** têm [opções adicionais](#premier-and-unified-support-customers) de apoio, e vêem um banner em Need help](./media/get-support/premier-banner.png) *![?*
+  Os clientes com um contrato de suporte **Premier** ou **Unificado** têm [opções adicionais](#premier-and-unified-support-customers) de ![apoio, e vêem um banner em Need *help?*](./media/get-support/premier-banner.png)
 
   *Precisa de ajuda?* abre para o painel *Find Solutions.* No entanto, se tiver um caso de suporte ativo, a janela abre-se para o painel de pedidos do *Serviço* onde pode ver detalhes sobre os seus casos de suporte ativos e fechados.
 
@@ -110,7 +110,7 @@ Por exemplo, pode introduzir erros de sincronização de **palavra-passe**. Os r
 
 ![Ver insights de resolução de problemas](./media/get-support/troubleshooting-insights.png)
 
-#### <a name="contact-support"></a>Contacte o suporte
+#### <a name="contact-support"></a>Contactar o suporte
 
 ![Selecione o painel de suporte de contacto](./media/get-support/contact-support.png)
 
@@ -225,6 +225,6 @@ Pode ver os seus pedidos de apoio dentro do portal Azure. No entanto, há inform
 
 ## <a name="additional-resources"></a>Recursos adicionais  
 
-- [Suporte de gestão de subscrição e faturação](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Licenciamento em Volume](https://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Suporte de gestão de faturação e subscrição](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
+- [Licenciamento de volume](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Resolver problemas do Intune](help-desk-operators.md)

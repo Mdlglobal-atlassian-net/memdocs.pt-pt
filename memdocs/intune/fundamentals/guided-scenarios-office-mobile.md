@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332533"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Cenário guiado - Aplicações móveis secure Microsoft Office
@@ -38,7 +38,7 @@ A proteção da aplicação que ativa irá impor as seguintes ações:
 - Bloqueie o acesso aos ficheiros de trabalho se o dispositivo estiver offline durante 720 minutos.
 - Remova os ficheiros de trabalho se o dispositivo estiver offline durante 90 dias.
 
-## <a name="background"></a>Fundo
+## <a name="background"></a>Segundo plano
 
 As aplicações móveis do Office, bem como o Microsoft Edge para Mobile, suportam dupla identidade. A dupla identidade permite que as aplicações gerem ficheiros de trabalho separadamente de ficheiros pessoais. 
 
@@ -111,11 +111,11 @@ Neste passo, deve configurar os requisitos para aceder e partilhar os ficheiros 
 
 | Definição | Descrição | Valor Predefinido |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Tipo PIN | Os PINs numéricos são compostos por todos os números. As códigos de acesso são compostas por caracteres alfanuméricos e caracteres especiais.  No iOS/iPadOS, para configurar o tipo "Passcode", é necessário que a aplicação tenha a versão Intune SDK 7.1.12 ou superior. O tipo numérico não tem uma restrição de versão do SDK do Intune. | Numérica |
-| Selecione comprimento pin mínimo | Especifique o número mínimo de dígitos numa sequência de PIN. | 6 |
-| Volte a verificar os requisitos de acesso após (minutos de inatividade) | Se a aplicação gerida por políticas estiver inativa por mais tempo do que o número de minutos de inatividade especificados, a aplicação irá solicitar os requisitos de acesso (isto é, PIN, definições de lançamento condicional) a ser novamente verificada após o lançamento da aplicação. | 30 |
-| Imprimir dados org | Se bloqueada, a aplicação não pode imprimir dados protegidos. | Bloqueio |
-| Links de aplicativos geridos por políticas abertas em navegadores não geridos | Se bloqueados, as ligações de aplicações geridas por políticas devem ser abertas a um navegador gerido. | Bloqueio |
+| Tipo de PIN | Os PINs numéricos são compostos por todos os números. As códigos de acesso são compostas por caracteres alfanuméricos e caracteres especiais.  No iOS/iPadOS, para configurar o tipo "Passcode", é necessário que a aplicação tenha a versão Intune SDK 7.1.12 ou superior. O tipo numérico não tem uma restrição de versão do SDK do Intune. | Numérico |
+| Selecionar comprimento mínimo do PIN | Especifique o número mínimo de dígitos numa sequência de PIN. | 6 |
+| Verificar novamente os requisitos de acesso após (minutos de inatividade) | Se a aplicação gerida por políticas estiver inativa por mais tempo do que o número de minutos de inatividade especificados, a aplicação irá solicitar os requisitos de acesso (isto é, PIN, definições de lançamento condicional) a ser novamente verificada após o lançamento da aplicação. | 30 |
+| Imprimir dados org | Se bloqueada, a aplicação não pode imprimir dados protegidos. | Bloquear |
+| Links de aplicativos geridos por políticas abertas em navegadores não geridos | Se bloqueados, as ligações de aplicações geridas por políticas devem ser abertas a um navegador gerido. | Bloquear |
 | Copiar dados para aplicações não geridas | Se bloqueados, os dados geridos permanecerão em aplicações geridas. | Permitir |
 
 ## <a name="step-5---assignments"></a>Passo 5 - Atribuições
@@ -131,6 +131,6 @@ O passo final permite-lhe rever um resumo das definições configuradas. Depois 
 > [!IMPORTANT]
 > Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estes recursos não será guardada.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Melhorar a segurança dos ficheiros de trabalho, atribuindo aos utilizadores uma política de acesso condicional baseada em Aplicações para proteger os serviços na nuvem do envio de ficheiros de trabalho para aplicações desprotegidas. Para mais informações, consulte [Configurar as políticas de acesso condicional baseadas em aplicativos com](../protect/app-based-conditional-access-intune-create.md)o Intune .

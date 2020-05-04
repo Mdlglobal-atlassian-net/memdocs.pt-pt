@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084012"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Utilizar e gerir dispositivos Zebra com as Extensões de Mobilidade Zebra no Microsoft Intune
@@ -71,8 +71,8 @@ Os passos seguintes permitem obter uma descrição geral. Para obter detalhes es
 4. Em **Transferir MDM**, selecione **Transferir/Copiar Ficheiro**. Adicione a origem e o destino do pacote Android do Portal da Empresa (APK).
 5. Em **Iniciar MDM**, deixe os valores predefinidos tal como estão. Adicione os seguintes detalhes:
 
-    - **Nome do Pacote**: `com.microsoft.windowsintune.companyportal`
-    - **Nome da Classe**: `com.microsoft.windowsintune.companyportal.views.SplashActivity`
+    - **Nome do pacote:**`com.microsoft.windowsintune.companyportal`
+    - **Nome da classe:**`com.microsoft.windowsintune.companyportal.views.SplashActivity`
 
 Avance para publicar o perfil e consuma-o com a aplicação StageNow no dispositivo. A aplicação do Portal da Empresa é instalada e aberta no dispositivo.
 
@@ -106,7 +106,7 @@ Veja [Inscrever dispositivos Android](../enrollment/android-enroll.md) para obte
 
 Utilize o StageNow para criar um perfil que configura as definições que quer gerir no dispositivo. Para obter detalhes específicos, veja a documentação da Zebra. O artigo [Profiles](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (Perfis) (abre o site da Zebra) pode ser uma boa opção.
 
-Quando cria o perfil no StageNow, no último passo, selecione **Exportar para MDM**. Este passo gera um ficheiro XML. Guarde este ficheiro, pois precisará dele num passo posterior.
+Quando cria o perfil no StageNow, no último passo, selecione **Exportar para MDM**. Este passo gera um ficheiro XML. Guarde este ficheiro. Irá precisar delas noutro passo.
 
 - É recomendado testar o perfil antes de o implementar nos dispositivos da sua organização. Para testar, no último passo da criação de perfis com o StageNow no computador, utilize as opções **Testar**. Em seguida, consuma o ficheiro gerado pelo StageNow com a aplicação StageNow no dispositivo.
 
@@ -134,23 +134,23 @@ Depois de testar o ficheiro, o próximo passo é implementar o perfil nos dispos
 No Intune, crie um perfil de configuração de dispositivos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Nome**: introduza um nome descritivo para o novo perfil.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **administrador de dispositivos Android**.
-    - **Tipo de perfil:** Selecione **o perfil MX (apenas zebra)** .
+    - **Tipo de perfil:** Selecione **o perfil MX (apenas zebra)**.
 
 4. Em **Perfil MX no formato .xml**, adicione o ficheiro XML do perfil que [exportou do StageNow](#step-4-create-a-device-management-profile-in-stagenow) (neste artigo).
-5. Selecione **OK** > **Criar** para guardar as alterações. A política é criada e apresentada na lista.
+5. Selecione **OK** > **Criar** para guardar as suas alterações. A política é criada e apresentada na lista.
 
     > [!TIP]
     > Por razões de segurança, não verá o texto xml de perfil depois de o guardar. O texto é encriptado e apenas verá asteriscos (`****`). Para sua referência, é recomendado guardar cópias dos perfis MX antes de os adicionar ao Intune.
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 
-Da próxima vez que o dispositivo verificar se existem atualizações de configuração, o perfil MX será implementado no dispositivo. Os dispositivos são sincronizados com o Intune quando são inscritos e, depois, aproximadamente a cada 8 horas. Também pode [forçar uma sincronização no Intune](../remote-actions/device-sync.md). Ou, no dispositivo, abra a aplicação **Portal da Empresa** > **Definições** > **Sincronizar**. 
+Da próxima vez que o dispositivo verificar se existem atualizações de configuração, o perfil MX será implementado no dispositivo. Os dispositivos são sincronizados com o Intune quando são inscritos e, depois, aproximadamente a cada 8 horas. Também pode [forçar uma sincronização no Intune](../remote-actions/device-sync.md). Ou, no dispositivo, abra a **aplicação** > Do Portal da Empresa**Definições** > **Sync**. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Atualizar uma configuração Zebra MX depois de ser atribuído
 
@@ -159,7 +159,7 @@ Para atualizar a configuração específica do MX de um dispositivo Zebra, pode:
 - Crie um ficheiro StageNow XML atualizado, edite o perfil Intune MX existente e carregue o novo ficheiro StageNow XML. Este novo ficheiro substitui a política anterior no perfil e substitui a configuração anterior.
 - Crie um novo ficheiro StageNow XML que conecte diferentes configurações, crie um novo perfil Intune MX, carregue o novo ficheiro StageNow XML e atribua-o ao mesmo grupo. Vários perfis estão implantados. Se o novo perfil configurar as definições que já existem nos perfis existentes, ocorrerão conflitos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 - [Utilizar registos do StageNow para resolver problemas de dispositivos Zebra](android-zebra-mx-logs-troubleshoot.md).

@@ -19,13 +19,13 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330389"
 ---
-# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Tutorial: Walkthrough Intune no Microsoft Endpoint Manager
+# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Tutorial: Walkthrough Intune in Microsoft Endpoint Manager (Instruções para o Intune no Microsoft Endpoint Manager)
 
 [O Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contém mais de 100 serviços para o ajudar com uma variedade de cenários e possibilidades de computação em nuvem. O Microsoft Intune é um dos vários serviços disponíveis no Azure. Intune ajuda-o a garantir que os dispositivos, aplicações e dados da sua empresa cumprem os requisitos de segurança da sua empresa. Tem o controlo para definir quais os requisitos que precisam de ser verificados e o que acontece quando esses requisitos não são cumpridos. O centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) é onde pode encontrar o serviço Microsoft Intune, bem como outras definições relacionadas com a gestão de dispositivos. Compreender as funcionalidades disponíveis no Intune irá ajudá-lo a realizar várias tarefas de Gestão de Dispositivos Móveis (MDM) e Gestão de Aplicações Móveis (MAM).
 
@@ -110,7 +110,7 @@ Siga os passos abaixo para entender melhor Intune no centro de administração d
 
     O Acesso Condicional refere-se a formas de controlar os dispositivos e aplicações que podem ligar-se aos seus e-mails e recursos da empresa. Para conhecer o Acesso Condicional baseado em dispositivos e aplicativos, e encontrar cenários comuns para usar o Acesso Condicional com Intune, consulte [o What's Conditional Access?](../protect/conditional-access.md)
 
-6. A partir do painel de navegação, selecione **Dispositivos** > Perfis de **Configuração** para mostrar detalhes sobre os perfis do dispositivo no Intune.
+6. A partir do painel de navegação, selecione perfis de**configuração** de **dispositivos** > para mostrar detalhes sobre os perfis do dispositivo no Intune.
 
     ![Screenshot do centro de administração do Microsoft Endpoint Manager - Perfis de configuração](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png)
     
@@ -121,14 +121,14 @@ Siga os passos abaixo para entender melhor Intune no centro de administração d
 
     Para obter mais informações sobre a configuração do dispositivo, consulte [as definições de funcionalidades de Aplicação nos seus dispositivos utilizando perfis de dispositivos no Microsoft Intune](../configuration/device-profiles.md).
 
-7. A partir do painel de navegação, selecione **Dispositivos** > **Todos os dispositivos** para mostrar detalhes sobre os dispositivos matriculados do seu inquilino Intune. Se estiver a começar com um novo alistamento Intune, ainda não terá nenhum dispositivo matriculado.
+7. A partir do painel de navegação, selecione **Dispositivos** > Todos**os dispositivos** para mostrar detalhes sobre os dispositivos matriculados do seu inquilino Intune. Se estiver a começar com um novo alistamento Intune, ainda não terá nenhum dispositivo matriculado.
 
     ![Screenshot do centro de administração do Microsoft Endpoint Manager - Todos os dispositivos](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-07.png)
 
     Esta lista de dispositivos mostra detalhes-chave sobre conformidade, versão S e última data de check-in.
 
     > [!TIP]
-    > Se já utilizou o Intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando **Dispositivos** > **Todos os dispositivos**.
+    > Se já utilizou o Intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando **Dispositivos** > Todos**os dispositivos**.
  
 8. A partir do painel de navegação, selecione **Apps** para mostrar uma visão geral do estado da aplicação. Este painel fornece o estado de instalação da aplicação com base nos seguintes separadores:
 
@@ -151,7 +151,7 @@ Siga os passos abaixo para entender melhor Intune no centro de administração d
 9. A partir das Apps - Painel de **visão geral,** selecione **Todas as aplicações** para ver uma lista de aplicações que foram adicionadas ao Intune.
 
     > [!TIP]
-    > Se já utilizou o Intune no portal Azure, encontrou os detalhes acima no portal Azure, assinando [intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando **aplicações de clientes** > **Apps.**
+    > Se já utilizou o Intune no portal Azure, encontrou os detalhes acima no portal Azure, assinando [intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando > **aplicações** **de aplicações de clientes.**
 
     Pode adicionar uma variedade de diferentes tipos de aplicativos com base na plataforma ao Intune. Uma vez adicionada uma aplicação, pode atribuí-la a grupos de utilizadores. 
 
@@ -188,7 +188,7 @@ Siga os passos abaixo para entender melhor Intune no centro de administração d
 
     Para mais informações, consulte [Intune Tenant Status](tenant-status.md).
 
-13. A partir do painel de navegação, selecione **Troubleshooting + suporte** > **Troubleshoot** para verificar os detalhes do estado num utilizador específico. 
+13. A partir do painel de navegação, selecione **Troubleshooting + suporte** > **Troubleshoot** para verificar detalhes do estado num utilizador específico. 
 
     > [!TIP]
     > Se já utilizou intune no portal Azure, encontrou os detalhes acima no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando **Troubleshoot**.
@@ -212,7 +212,7 @@ Siga os passos abaixo para entender melhor Intune no centro de administração d
 
     Para mais informações, consulte [Como obter suporte para o Microsoft Intune](get-support.md).
 
-15. A partir do painel de navegação, selecione **Troubleshooting + suporte** > **cenários guiados** para exibir cenários guiados intune disponíveis.
+15. A partir do painel de navegação, selecione**Cenários guiados** de resolução de **problemas + suporte** > para exibir cenários guiados intune disponíveis.
 
     Um cenário guiado é uma série personalizada de passos centrados em torno de um caso de uso de ponta a ponta. Os cenários comuns baseiam-se no papel que um administrador, utilizador ou dispositivo desempenha na sua organização. Estas funções normalmente requerem uma coleção de perfis cuidadosamente orquestrados, configurações, aplicações e controlos de segurança para fornecer a melhor experiência e segurança do utilizador.
 
@@ -240,9 +240,9 @@ Pode personalizar o centro de administração do Microsoft Endpoint Manager esco
 
    <img alt="Screenshot of the Microsoft Endpoint Manager admin center - Portal settings" src="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png" width="250">
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para começar a correr rapidamente no Microsoft Intune, passe pelo Intune Quickstarts, criando primeiro uma conta Intune gratuita.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Experimente o Microsoft Intune gratuitamente](free-trial-sign-up.md)
+> [Início Rápido: experimentar gratuitamente o Microsoft Intune](free-trial-sign-up.md)

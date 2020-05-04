@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328501"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Conector de Defesa de Ameaças Móveis Wandera com Intune  
@@ -116,7 +116,7 @@ Access is granted on remediation:
 ![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Integrar Wandera com Intune](wandera-mtd-connector-integration.md)
 - [Configurar aplicativos Wandera](mtd-apps-ios-app-configuration-policy-add-assign.md)

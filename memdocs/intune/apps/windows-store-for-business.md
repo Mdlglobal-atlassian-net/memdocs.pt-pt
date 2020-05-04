@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323384"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Como gerir as aplicações adquiridas em volume na Microsoft Store para Negócios com a Microsoft Intune
@@ -71,7 +71,7 @@ Agora, pode continuar e configurar a sincronização na consola do Intune.
 ## <a name="configure-synchronization"></a>Configurar a sincronização
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **a administração** do Inquilino > **Conectores e fichas** > **Microsoft Store para negócios.**
+2. Selecione**Conectores e fichas** > da **Microsoft** > **Store para negócios.**
 3. Clique em **Ativar**.
 4. Se ainda não o fez, clique na ligação para se inscrever na Loja Microsoft para Empresas e associe a sua conta conforme explicado anteriormente.
 5. Na lista pendente **Idioma**, selecione o idioma no qual as aplicações da Microsoft Store para Empresas são apresentadas no portal do Azure. Independentemente do idioma em que são apresentadas, serão instaladas no idioma do utilizador final, se estiver disponível.
@@ -79,7 +79,7 @@ Agora, pode continuar e configurar a sincronização na consola do Intune.
 
 ## <a name="synchronize-apps"></a>Sincronizar aplicações
 
-1. Selecione **a administração** do Inquilino > **Conectores e fichas** > **Microsoft Store para negócios.**
+1. Selecione**Conectores e fichas** > da **Microsoft** > **Store para negócios.**
 2. Clique em **Sincronização** para obter as aplicações que comprou na Loja Microsoft para o Intune.
 
 > [!NOTE]
@@ -107,6 +107,6 @@ Para remover uma aplicação sincronizada a partir da Microsoft Store para Empre
 > [!NOTE]
 > Remover a visibilidade de uma aplicação na loja privada não impedirá a Intune de sincronizar a aplicação. Tem de reembolsar a aplicação para remover totalmente a aplicação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 * [Gerir aplicações e livros comprados em grandes volumes com o Microsoft Intune](vpp-apps.md)

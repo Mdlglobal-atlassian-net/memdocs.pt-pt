@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04d9856242336c4a8c1fbd9bef0afb539054c904
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007764"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397701"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Configurar a inscrição de dispositivos dedicados do Android Enterprise no Intune
 
@@ -48,18 +48,18 @@ Para configurar a gestão dos dispositivos dedicados do Android Enterprise, siga
 
 1. Para se preparar para gerir dispositivos móveis, tem de [definir a autoridade de gestão de dispositivos móveis (MDM) para o **Microsoft Intune**](../fundamentals/mdm-authority-set.md) para obter instruções. Este item só é definido uma vez, quando está a configurar pela primeira vez o Intune para a gestão de dispositivos móveis.
 2. [Ligue a conta do inquilino do Intune à conta do Managed Google Play ](connect-intune-android-enterprise.md).
-3. [Crie um perfil de inscrição](#create-an-enrollment-profile).
-4. [Crie um grupo de dispositivos](#create-a-device-group).
+3. [Criar um perfil de inscrição.](#create-an-enrollment-profile)
+4. [Criar um grupo de dispositivos](#create-a-device-group).
 5. [Inscreva os dispositivos dedicados](#enroll-the-dedicated-devices).
 
 ### <a name="create-an-enrollment-profile"></a>Criar um perfil de inscrição
 
 > [!NOTE]
-> Se um token tiver expirado, o perfil associado ao mesmo não será exibido na **inscrição** do Dispositivo > **inscrição do Android** > **dispositivos dedicados corporativos.** Para ver todos os perfis associados a fichas ativas e inativas, clique em **Filter** e verifique as caixas para estados de política "Ativos" e "Inativos". 
+> Se um token tiver expirado, o perfil associado ao mesmo não será exibido na **inscrição do Dispositivo** > **Android inscrição** > **Dispositivos dedicados corporativos**. Para ver todos os perfis associados a fichas ativas e inativas, clique em **Filter** e verifique as caixas para estados de política "Ativos" e "Inativos". 
 
 Tem de criar um perfil de inscrição para poder inscrever os dispositivos dedicados. Depois de criar o perfil, o mesmo fornece-lhe um token de inscrição (cadeia aleatória) e um código QR. Consoante o SO Android e a versão do dispositivo, pode utilizar o token ou o código QR para [inscrever o dispositivo dedicado](#enroll-the-dedicated-devices).
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** > **inscrição android** > **Android** > **dispositivos dedicados corporativos.**
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** > **Android Android** > **matriculando** > **dispositivos dedicados corporativos.**
 2. Selecione **Criar** e preencha os campos obrigatórios.
     - **Nome**: escreva o nome que irá utilizar quando atribuir o perfil ao grupo de dispositivos dinâmico.
     - **Data de expiração do token**: a data em que o token expira. A Google impõe um máximo de 90 dias.
@@ -71,7 +71,7 @@ Pode direcionar aplicações e políticas para grupos de dispositivos dinâmicos
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **grupos** > **Todos os grupos** > **Novo grupo**.
 2. No painel **Grupo**, preencha os campos obrigatórios da seguinte forma:
-    - **Tipo de grupo**: segurança
+    - **Tipo de grupo**: Segurança
     - **Nome do grupo**: escreva um nome intuitivo (como Dispositivos da fábrica 1)
     - **Tipo de associação**: dispositivo dinâmico
 3. Selecione **Adicionar consulta dinâmica**.
@@ -81,7 +81,7 @@ Pode direcionar aplicações e políticas para grupos de dispositivos dinâmicos
     - Na caixa do meio, escolha **Iguais.**
     - No último campo, introduza o nome do perfil de inscrição que criou anteriormente.
     Para obter mais informações sobre regras de associação dinâmica, veja [Regras de associação dinâmica para grupos no AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
-5. Selecione **Adicionar consulta** > **Criar**.
+5. Escolha **Adicionar consulta** > **Criar**.
 
 ### <a name="replace-or-remove-tokens"></a>Substituir ou remover tokens
 
@@ -92,7 +92,7 @@ Pode direcionar aplicações e políticas para grupos de dispositivos dinâmicos
 
 Substituir ou revogar um token/código QR não terá efeito em dispositivos que já tenham sido inscritos.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** > **Android** > **Android > ** **dispositivos dedicados da Empresa Coporate.**
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** > **Android Android** > **matriculando** > **dispositivos dedicados corporativos.**
 2. Selecione o perfil com o qual pretende trabalhar.
 3. Selecione **Token**.
 4. Para substituir o token, selecione **Substituir token**.
@@ -115,6 +115,6 @@ Para remover uma aplicação dos dispositivos dedicados do Android Enterprise, p
 - Elimine a implementação da aplicação obrigatória.
 - Crie uma implementação de desinstalação para a aplicação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Implementar aplicações Android](../apps/apps-deploy.md)
 - [Adicionar políticas de configuração para Android](../configuration/device-profiles.md)

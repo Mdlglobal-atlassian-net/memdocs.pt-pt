@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327442"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Criar um perfil de dispositivo no Microsoft Intune
@@ -37,27 +37,27 @@ Este artigo:
 
 ## <a name="create-the-profile"></a>Criar o perfil
 
-Os perfis são criados no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Neste centro de administração, selecione **Dispositivos**. Tem as seguintes opções:
+Os perfis são criados no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Neste centro de administração, selecione **Dispositivos**. Existem as seguintes opções:
 
 - **Visão geral**: Lista o estado dos seus perfis e fornece detalhes adicionais sobre os perfis que atribuiu aos utilizadores e dispositivos.
 - **Monitor**: Verifique o estado dos seus perfis para obter sucesso ou falha e consulte também os registos nos seus perfis.
 - **Por plataforma**: Crie e veja políticas e perfis pela sua plataforma. Esta vista também pode mostrar funcionalidades específicas da plataforma. Por exemplo, selecione **Windows**. Verá funcionalidades específicas do Windows, tais como Os Anéis de **Atualização do Windows 10** e **os scripts PowerShell**.
 - **Política**: Criar perfis de dispositivos, carregar [scripts PowerShell personalizados](../apps/intune-management-extension.md) para executar em dispositivos e adicionar planos de dados aos dispositivos que utilizem [eSIM](esim-device-configuration.md).
 
-Quando criar um perfil **(Perfis** de configuração > **Criar perfil),** escolha a sua plataforma:
+Quando criar um perfil **(Perfis** > de configuração**Criar perfil),** escolha a sua plataforma:
 
 - **Administrador de dispositivos Android**
 - **Android Enterprise**
 - **iOS/iPadOS**
 - **macOS**
-- **Windows 10 e posterior**
-- **Windows 8.1 e posterior**
+- **Windows 10 e posterior**
+- **Windows 8.1 e posterior**
 - **Windows Phone 8.1**
 
 Em seguida, escolha o tipo de perfil. Consoante a plataforma que escolheu, as definições que pode configurar variam. Os seguintes artigos descrevem as definições para os diferentes tipos de perfil:
 
 - [Modelos administrativos (Janelas)](administrative-templates-windows.md)
-- [Personalizar](custom-settings-configure.md)
+- [Personalizado](custom-settings-configure.md)
 - [Otimização de entrega (Windows)](delivery-optimization-windows.md)
 - [Credencial derivada (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Funcionalidades do dispositivo (macOS, iOS, iPadOS)](device-features-configure.md)
@@ -75,7 +75,7 @@ Em seguida, escolha o tipo de perfil. Consoante a plataforma que escolheu, as de
 - [Perfil de Extensões de Mobilidade (MX) (administrador de dispositivoandroid)](android-zebra-mx-overview.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
 - [Certificado PKCS](../protect/certficates-pfx-configure.md)
-- [Certificado importado PKCS](../protect/certificates-imported-pfx-configure.md)
+- [Certificado PKCS importado](../protect/certificates-imported-pfx-configure.md)
 - [Ficheiro preferencial (macOS)](preference-file-settings-macos.md)
 - [Certificado SCEP](../protect/certificates-scep-configure.md)
 - [Avaliação segura (Educação) (Windows)](education-settings-configure.md)
@@ -92,7 +92,7 @@ Por exemplo, se selecionar **iOS/iPadOS** para a plataforma, as opções do tipo
 
 ## <a name="scope-tags"></a>Scope tags (Etiquetas de âmbito)
 
-Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito ao perfil. As etiquetas de âmbito filtram perfis para grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. E são usados em TI distribuídos.
+Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito ao perfil. As etiquetas de âmbito filtram perfis `US-NC IT Team` `JohnGlenn_ITDepartment`para grupos de TI específicos, tais como ou . E são usados em TI distribuídos.
 
 Para obter mais informações sobre etiquetas de âmbito e o que pode fazer, veja [Utilizar RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
 
@@ -111,7 +111,7 @@ Para fazer esta tarefa, crie uma regra de **aplicabilidade.** Estas regras são 
 
 Para abordar estes cenários, você:
 
-- Crie um grupo de dispositivos que inclua todos os dispositivos no Bellows College. No perfil, adicione uma regra de aplicabilidade para que se aplique se a versão mínima do SO for `16299` e a versão máxima for `17134`. Atribuir este perfil ao grupo de dispositivos da Escola Bellows.
+- Crie um grupo de dispositivos que inclua todos os dispositivos no Bellows College. No perfil, adicione uma regra de aplicabilidade para que se `16299` aplique se `17134`a versão mínima do SO for e a versão máxima for . Atribuir este perfil ao grupo de dispositivos da Escola Bellows.
 
   Quando é atribuído, o perfil aplica-se a dispositivos entre as versões mínima seleções mínimas e máximas que introduz. Para dispositivos que não estejam entre as versões mínima seleção e o máximo que introduz, o seu estado mostra **que não**é aplicável .
 
@@ -127,12 +127,12 @@ Para abordar estes cenários, você:
 
 Ao atribuir o perfil aos grupos, as regras de aplicabilidade funcionam como um filtro e apenas visam os dispositivos que cumprem os seus critérios.
 
-### <a name="add-a-rule"></a>Adicione uma regra
+### <a name="add-a-rule"></a>Adicionar uma regra
 
 1. Selecione Regras de **Aplicabilidade**. Pode escolher a **regra,** **propriedade**e **edição osso:**
 
     > [!div class="mx-imgBorder"]
-    > ![Adicionar uma regra de aplicabilidade a um perfil de configuração do dispositivo no Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > ![Adicione uma regra de aplicabilidade a um perfil de configuração do dispositivo no Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. Regra **Rule**, escolha se pretende incluir ou excluir utilizadores ou grupos. As opções são:
 
@@ -144,7 +144,7 @@ Ao atribuir o perfil aos grupos, as regras de aplicabilidade funcionam como um f
     - **Edição OS**: Na lista, consulte as edições do Windows 10 que pretende incluir (ou excluir) na sua regra.
     - **Versão OS**: Introduza os números da versão **min** e **max** Windows 10 que pretende incluir (ou excluir) na sua regra. Ambos os valores são necessários.
 
-      Por exemplo, pode introduzir `10.0.16299.0` (RS3 ou 1709) para versão mínima e `10.0.17134.0` (RS4 ou 1803) para versão máxima. Ou, pode ser mais granular e introduzir `10.0.16299.001` para versão mínima e `10.0.17134.319` para versão máxima.
+      Por exemplo, pode `10.0.16299.0` introduzir (RS3 ou 1709) para versão mínima e `10.0.17134.0` (RS4 ou 1803) para versão máxima. Ou, pode ser mais granular e `10.0.16299.001` `10.0.17134.319` entrar para versão mínima e para versão máxima.
 
 4. Selecione **Adicionar** para guardar as suas alterações.
 
@@ -163,10 +163,10 @@ Ao criar perfis, considere as seguintes recomendações:
   Alguns exemplos de perfil de configuração incluem:
 
   **Nome do perfil**: Modelo de administrador - perfil de configuração OneDrive para todos os utilizadores do Windows 10  
-  **Descrição do perfil**: Perfil de modelo de administrador OneDrive que inclui as definições mínimas e base para todos os utilizadores do Windows 10. Criado por user@contoso.com para impedir que os utilizadores partilhem dados organizacionais para contas pessoais do OneDrive.
+  **Descrição do perfil**: Perfil de modelo de administrador OneDrive que inclui as definições mínimas e base para todos os utilizadores do Windows 10. Criado user@contoso.com para impedir que os utilizadores partilhem dados organizacionais para contas pessoais do OneDrive.
 
   **Nome do perfil**: Perfil VPN para todos os utilizadores iOS/iPadOS  
-  **Descrição do perfil**: Perfil VPN que inclui as definições mínimas e base para todos os utilizadores iOS/iPadOS para ligar à VPN Contoso. Criado souser@contoso.com para que os utilizadores autentiquem automaticamente à VPN, em vez de pedirem aos utilizadores o seu nome de utilizador e palavra-passe.
+  **Descrição do perfil**: Perfil VPN que inclui as definições mínimas e base para todos os utilizadores iOS/iPadOS para ligar à VPN Contoso. Criado user@contoso.com si os utilizadores autenticam automaticamente a VPN, em vez de pedir em que os utilizadores se instem com o seu nome de utilizador e palavra-passe.
 
 - Crie o seu perfil através da sua tarefa, como configurar as definições do Microsoft Edge, ativar as definições antivírus do Microsoft Defender, bloquear dispositivos de jailbroken iOS/iPadOS, e assim por diante.
 
@@ -179,10 +179,10 @@ Ao criar perfis, considere as seguintes recomendações:
   A imagem que se segue mostra um exemplo de uma definição que pode aplicar-se aos utilizadores e/ou aplicar-se aos dispositivos:
 
   > [!div class="mx-imgBorder"]
-  > ![modelo de administração intune que se aplica ao utilizador e dispositivos](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > ![Modelo de administração intonizado que se aplica ao utilizador e dispositivos](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Sempre que criar uma política restritiva, comunique esta alteração aos seus utilizadores. Por exemplo, se estiver a alterar o requisito de código de acesso de 4 caracteres para 6 caracteres, informe os seus utilizadores antes de atribuir a apólice.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).

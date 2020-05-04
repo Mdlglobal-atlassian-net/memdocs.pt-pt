@@ -1,5 +1,5 @@
 ---
-title: Windows Hello for Business definições em Microsoft Intune - Azure  Microsoft Docs
+title: Windows Hello for Business definições em Microsoft Intune - Azure [ Microsoft Docs
 description: Consulte uma lista de todas as definições pin, biométrica e anti-falsificação num perfil de proteção de identidade para utilizar e configurar o Windows Hello for Business em dispositivos Windows 10 no Microsoft Intune.
 keywords: ''
 author: brenduns
@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329289"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Definições do dispositivo Windows 10 para ativar o Windows Hello for Business em Intune
@@ -36,7 +36,7 @@ Para saber mais sobre os perfis do Windows Hello for Business em Intune, consult
 
 Criar um perfil de [configuração.](identity-protection-configure.md#create-the-device-profile)
 
-## <a name="windows-hello-for-business"></a>Windows Hello para Empresas
+## <a name="windows-hello-for-business"></a>Windows Hello para empresas
 - **Configure o Windows Hello for Business**:
   - **Não configurado** - Selecione esta definição se não quiser utilizar insinopara controlar as definições do Windows Hello for Business. Nenhuma das definições do Windows Hello para Empresas existentes em dispositivos Windows 10 será alterada. Todas as outras definições no painel não estão disponíveis.
 
@@ -47,32 +47,32 @@ Criar um perfil de [configuração.](identity-protection-configure.md#create-the
 
   Quando programado para *ativar,* estão disponíveis as seguintes definições:
 
-  - **Comprimento mínimo pin**  
+  - **Comprimento mínimo do PIN**  
     Especifique um comprimento PIN mínimo para os dispositivos, para ajudar a fixar o sessão. As predefinições do dispositivo Windows são de seis caracteres, mas esta definição pode impor um mínimo de quatro a 127 caracteres. 
 
     **Predefinição**: *Não configurado*
 
-  - **Comprimento máximo pin**  
+  - **Comprimento máximo do PIN**  
   Especifique um comprimento PIN máximo para os dispositivos, para ajudar a fixar o sessão. As predefinições do dispositivo Windows são de seis caracteres, mas esta definição pode impor um mínimo de quatro a 127 caracteres.  
 
     **Predefinição**: *Não configurado*  
 
-  - **Letras minúsculas em PIN**  
+  - **Letras em minúsculas no PIN**  
     Pode impor um PIN mais forte, exigindo que os utilizadores finais incluam letras minúsculas. As opções são:
 
     - **Não é permitido** - Bloqueie os utilizadores de utilizarem letras minúsculas no PIN. Este comportamento também ocorre se a configuração não estiver configurada.
     - **Permitido** - Permitir que os utilizadores utilizem letras minúsculas no PIN, mas não é necessário.
     - **Obrigatório** - Os utilizadores devem incluir pelo menos uma letra minúscula no PIN. Por exemplo, é prática comum exigir pelo menos uma letra maiúscula e um caráter especial.
 
-  - **Letras maiúsculas em PIN**  
+  - **Letras em maiúsculas no PIN**  
     Pode impor um PIN mais forte, exigindo que os utilizadores finais incluam letras maiúsculas. As opções são:
 
     - **Não é permitido** - Bloqueie os utilizadores de utilizarem letras maiúsculas no PIN. Este comportamento também ocorre se a configuração não estiver configurada.
     - **Permitido** - Permitir que os utilizadores utilizem letras maiúsculas no PIN, mas não é necessário.
     - **Obrigatório** - Os utilizadores devem incluir pelo menos uma letra maiúscula no PIN. Por exemplo, é prática comum exigir pelo menos uma letra maiúscula e um caráter especial.
 
-  - **Caracteres especiais em PIN**  
-    Pode impor um PIN mais forte, exigindo que os utilizadores finais incluam caracteres especiais. Os caracteres especiais incluem: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
+  - **Carateres especiais no PIN**  
+    Pode impor um PIN mais forte, exigindo que os utilizadores finais incluam caracteres especiais. Os caracteres especiais incluem:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
     As opções são:
     - **Não é permitido** - Bloqueie os utilizadores de usar caracteres especiais no PIN. Este comportamento também ocorre se a configuração não estiver configurada.
@@ -91,7 +91,7 @@ Criar um perfil de [configuração.](identity-protection-configure.md#create-the
 
     **Predefinição**: Não configurado  
 
-  - Ativar  de **recuperação PIN**  
+  - **Ativar a recuperação pin**   
     Permite ao utilizador utilizar o serviço de recuperação Do Windows Hello para business PIN. 
     
     - **Ativado** - O segredo de recuperação PIN é armazenado no dispositivo e o utilizador pode alterar o PIN se necessário.  
@@ -99,7 +99,7 @@ Criar um perfil de [configuração.](identity-protection-configure.md#create-the
 
     **Predefinição**: Não configurado
 
-  - Utilize um módulo de **plataforma fidedigno (TPM)**    
+  - **Utilize um Módulo de Plataforma Fidedigna (TPM)**   
     Um chip TPM fornece uma camada adicional de segurança de dados.  
 
     - **Ativado** - Apenas dispositivos com um TPM acessível podem fornecer O Windows Hello para Negócios.
@@ -137,6 +137,6 @@ Criar um perfil de [configuração.](identity-protection-configure.md#create-the
 
   **Predefinição**: Não configurado
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o respetivo estado](../configuration/device-profile-monitor.md).

@@ -1,6 +1,6 @@
 ---
-title: Necessita de atualizar o seu dispositivo Android | Documentos da Microsoft
-description: Terá de atualizar o seu dispositivo Android.
+title: Tem de atualizar o seu dispositivo Android | Documentos da Microsoft
+description: Precisa atualizar o seu dispositivo Android.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -20,16 +20,16 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
 ms.openlocfilehash: 75ed8bbd216cbc0a58b1cafee925bb7b19f4db9f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79323953"
 ---
 # <a name="you-need-to-update-your-android-device"></a>Necessita de atualizar o seu dispositivo Android
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-Atualize o seu dispositivo Android ao tocar em **Definições** > **Acerca do telemóvel**. Na secção __Definições__, toque em __Procurar Atualizações__ e instale a atualização disponível.
+Atualize o seu dispositivo Android tocando **definições** > **sobre telefone**. Na secção __Definições__, toque em __Procurar Atualizações__ e instale a atualização disponível.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

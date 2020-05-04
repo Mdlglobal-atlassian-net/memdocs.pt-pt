@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696267"
 ---
 # <a name="encrypting-your-android-device"></a>Encriptar o seu dispositivo Android
@@ -45,7 +45,7 @@ Siga estes passos para encriptar o seu dispositivo. O seu dispositivo pode reini
 
 O nome e a localização da opção de encriptação variarão consoante o fabricante do seu dispositivo e a versão Android. 
 
-1. Abra a aplicação **Definições.**
+1. Abra a aplicação **Definições**.
 2. Digite **a segurança** ou **criptografe** na barra de pesquisa da aplicação para encontrar configurações relacionadas.
 3. Toque na opção de encriptar o seu dispositivo. Siga as instruções no ecrã.  
 4. Quando solicitado, detete uma palavra-passe de ecrã de bloqueio, PIN ou outro método de autenticação (se permitido pela sua organização). 
@@ -59,9 +59,9 @@ A sua organização pode exigir que você ative uma startup segura como parte da
 
 O nome e a localização da opção de arranque segura variarão consoante o fabricante do seu dispositivo e a versão Android. Em alguns dispositivos, esta definição pode ser chamada de **proteção forte**. 
 
-1. Abra a aplicação **Definições.**
+1. Abra a aplicação **Definições**.
 2. Digite **startup segura** na barra de pesquisa da aplicação.
-3. Toque **em secure arranque** > **Requerer PIN quando o dispositivo ligar**.
+3. Toque **no arranque** > **seguro, exija PIN quando o dispositivo ligar**.
 4. Quando solicitado, introduza o PIN do seu dispositivo.   
 5. Para voltar a verificar as definições, abra o Portal da Empresa ou a aplicação Microsoft Intune.
     * Utilizadores do Portal da Empresa: Selecione o seu dispositivo e toque em **verificar as definições do dispositivo**. 
@@ -73,12 +73,12 @@ Quando [encriptar o seu dispositivo](#encrypt-device) e ativar o [arranque segur
 
 Para escolher ou alterar o tipo de ecrã de bloqueio:
 
-1. Abra a aplicação **Definições.**
+1. Abra a aplicação **Definições**.
 2. Digite **o bloqueio** do ecrã na barra de pesquisa da aplicação.
 3. Toque no tipo de bloqueio do ecrã de **toque**.
 4. Toque no tipo de bloqueio do ecrã que pretende utilizar e siga as instruções no ecrã para confirmar.  
 
-## <a name="troubleshoot"></a>Resolver Problemas    
+## <a name="troubleshoot"></a>Resolução de problemas    
 **Problema**: O botão de encriptação está desativado.   
 
 **Coisa a tentar:** 
@@ -86,7 +86,7 @@ Para escolher ou alterar o tipo de ecrã de bloqueio:
 
 **Problema**: Vê uma mensagem a dizer que ainda precisa de encriptar o seu dispositivo.  
 
-**Coisas a experimentar**:
+**Coisas para tentar:**
    *  [Coloque um ecrã de bloqueio](#set-startup-passcode) no seu dispositivo. 
    * [Ativar arranque seguro](#enable-secure-startup).
 

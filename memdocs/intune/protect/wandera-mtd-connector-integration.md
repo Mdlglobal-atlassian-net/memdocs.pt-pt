@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 10a0c402c8cf8b39ec1b78606e051501f553ded9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328545"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrar a Wandera Mobile Threat Protection com Intune  
@@ -36,7 +36,7 @@ Antes de iniciar o processo de integração do Wandera com o Intune, certifique-
 - Credenciais de administrador do Azure Active Directory para conceder as seguintes permissões:  
   - Iniciar sessão e ler o perfil de utilizador  
   - Aceder ao diretório como o utilizador com sessão iniciada  
-  - Ler dados do diretório  
+  - Ler os dados do diretório  
   - Enviar informações do dispositivo para o Intune  
 
 - Assinatura Wandera:
@@ -58,10 +58,10 @@ A configuração do *EMM Connect* for Wandera requer um processo de configuraç�
 ### <a name="enable-support-for-wandera-in-intune"></a>Ativar suporte para Wandera em Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **Defesa de Ameaças Móveis** > **Adicionar**.
+2. Selecione > **Conectores de** >  **administração de inquilinos**e fichas**Mobile Threat Defense** > **Add**.
 3. Na página **Add Connector,** utilize o dropdown e selecione **Wandera**. E, em seguida, **selecione Criar**.  
 4. No painel de Defesa de Ameaças Móveis, selecione o Conector **Wandera** MTD da lista de conectores para abrir o painel de *conectores Editar.* **Selecione Abra a consola de administração Wandera** para abrir o [RADAR,](https://radar.wandera.com/login)a consola de administração Wandera e inscreva-se. 
-5. Na consola Wandera, vá a **Definições** > **Integração EMM**, e selecione o separador **EMM Connect.** Utilize a queda do *Fornecedor EMM* e selecione *Microsoft Intune*.
+5. Na consola Wandera, vá à**Integração EMM**de **Definições** > e selecione o separador **EMM Connect.** Utilize a queda do *Fornecedor EMM* e selecione *Microsoft Intune*.
 
    ![Selecione Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
 
@@ -88,7 +88,7 @@ Para implementar o Wandera, irá adicionar as aplicações móveis Wandera para 
 
 As seguintes secções e procedimentos irão guiá-lo através deste processo.
 
-Para mais informações sobre este processo a partir de Wandera, inscreva-se no Wandera [RADAR](https://radar.wandera.com/login). Vá a **Definições** > **Integração EMM,** selecione o separador Push da **aplicação** e, em seguida, selecione **Microsoft Intune**. O separador Push app atualiza com instruções específicas para Intune.  
+Para mais informações sobre este processo a partir de Wandera, inscreva-se no Wandera [RADAR](https://radar.wandera.com/login). Vá para **definições** > **Integração EMM,** selecione o separador Push da **aplicação** e, em seguida, selecione **Microsoft Intune**. O separador Push app atualiza com instruções específicas para Intune.  
 
 ### <a name="add-the-wandera-apps"></a>Adicione as aplicações Wandera  
 Crie aplicações para clientes em Intune para implementar a aplicação Wandera para dispositivos Android e iOS/iPadOS. Consulte [aplicativos MTD adicionais](mtd-apps-ios-app-configuration-policy-add-assign.md) para os procedimentos e detalhes personalizados específicos das aplicações Wandera.  

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327961"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Redefinir dispositivo do site do Portal da Empresa
@@ -43,7 +43,7 @@ O reset do dispositivo no Portal da Empresa não está disponível para todos os
 
     ![Uma imagem da página Dispositivos, com dois azulejos que mostram dispositivos não identificados e genericamente nomeados. Uma faixa cinzenta fica diretamente abaixo dos dispositivos e pede ao utilizador que identifique o dispositivo que está a usar ou adicione um novo.](./media/rename-reset-device-step2-1808.png)  
 
-3. Selecione **Repor**. Se a opção de reposição não estiver visível na parte superior da sua página, selecione **Mais (…)**  > **Repor**.  
+3. Selecione **Repor**. Se a opção de reset não estiver visível no topo da sua página, selecione **Mais (...)**  >  **Reset**.  
 
      ![A página de detalhes do dispositivo para um dispositivo selecionado no site do Portal da Empresa, com uma lista de ligações na parte superior que apresenta Mudar o Nome, Remover, Repor Dispositivo, Repor Código de Acesso e Bloqueio Remoto. ](./media/rename-reset-device-1808.png)  
 
@@ -51,4 +51,4 @@ O reset do dispositivo no Portal da Empresa não está disponível para todos os
 
 4. Uma mensagem avisa-o de que está prestes a apagar todos os conteúdos do seu dispositivo. Toque em **Repor** para confirmar.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 8830d0c18bb4ef257abcffd75d001b9d8af5f502
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808078"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81220588"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurar a inscrição intune de dispositivos geridos totalmente pela Android Enterprise 
 
-Os dispositivos geridos totalmente pelo Android Enterprise são dispositivos corporativos associados a um único utilizador e utilizados exclusivamente para trabalho e não para uso pessoal. Os administradores podem gerir todo o dispositivo e impor controlos políticos indisponíveis para perfis de trabalho, tais como:
+Os dispositivos totalmente geridos do Android Enterprise são dispositivos pertencentes à empresa associados a um único utilizador e utilizados exclusivamente para o trabalho e não para uso pessoal. Os administradores podem gerir todo o dispositivo e impor controlos políticos indisponíveis para perfis de trabalho, tais como:
 - Permita a instalação de aplicações apenas a partir do Managed Google Play.
 - Bloquear a desinstalação de aplicações geridas.
 - Evite que os utilizadores reacendam dispositivos de reposição de fábrica, e assim por diante.
 
-Intune ajuda-o a implementar aplicações e configurações para dispositivos Android Enterprise, incluindo dispositivos geridos pelo Android Enterprise. Para obter detalhes específicos sobre o Android Enterprise, veja [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) (Requisitos empresariais do Android).
+Intune ajuda-o a implementar aplicações e configurações para dispositivos Android Enterprise, incluindo dispositivos geridos pelo Android Enterprise. Para mais detalhes sobre o Android Enterprise, consulte [os requisitos do Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 ## <a name="technical-requirements"></a>Requisitos técnicos
 
@@ -56,18 +56,18 @@ Para configurar a gestão completa do dispositivo Android Enterprise, siga estes
 
 ### <a name="enable-corporate-owned-user-devices"></a>Ativar dispositivos de utilizador corporativos
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** ** > ** android > **android matricula**  > dispositivos de **utilizador totalmente geridos.**
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha **dispositivos** > android**android** > **de inscrição**  > **corporate, dispositivos de utilizador totalmente geridos**.
 2. Em **Permitir que os utilizadores matriculem dispositivos de utilizador corporativos,** escolha **Sim**.
 
 > [!NOTE]
-> Se tiver uma política de Acesso Condicional Azure AD definida que utiliza o *dispositivo necessário para ser marcado como* controlo conforme e se aplica a **aplicações All Cloud**, **Android** e **Browsers** – deve excluir desta política a aplicação cloud **Microsoft Intune.** Isto porque os processos de configuração do Android utilizam um separador Chrome para autenticar os seus utilizadores durante a inscrição. Para mais informações, consulte a Documentação de [Acesso Condicional da Azure AD.](https://docs.microsoft.com/azure/active-directory/conditional-access/)
+> Se tiver uma política de Acesso Condicional Azure AD definida que utilize o *dispositivo necessário para ser marcado como* controlo de Grant compatível ou uma política de Bloco e se aplica a **aplicações All Cloud**, **Android**e **Browsers**, deve excluir desta política a aplicação cloud **Microsoft Intune.** Isto porque o processo de configuração do Android utiliza um separador Chrome para autenticar os seus utilizadores durante a inscrição. Para mais informações, consulte [a documentação de Acesso Condicional azure AD.](https://docs.microsoft.com/azure/active-directory/conditional-access/)
 
 Quando esta definição está definida para **Sim,** ele fornece-lhe um token de inscrição (uma corda aleatória) e um código QR para o seu inquilino Intune. Este token de inscrição única é válido para todos os seus utilizadores e não expirará. Dependendo do Sistema Operativo Android e versão do dispositivo, pode utilizar o código token ou QR para inscrever o dispositivo.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Inscreva os dispositivos totalmente geridos
 Agora pode [inscrever os seus dispositivos totalmente geridos](android-dedicated-devices-fully-managed-enroll.md) (mas não quando utilizar contas DEM).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Adicione as políticas de configuração de dispositivos totalmente geridas pelo Android Enterprise](../configuration/device-restrictions-android-for-work.md#device-owner-only)
 - [Configure políticas de configuração de aplicativos para dispositivos geridos totalmente pelo Android Enterprise](../apps/app-configuration-policies-use-android.md)
 

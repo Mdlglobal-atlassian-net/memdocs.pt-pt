@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696293"
 ---
 # <a name="see-device-details-in-intune"></a>Consultar os detalhes do dispositivo no Intune
@@ -34,7 +34,7 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
 ## <a name="view-the-device-details"></a>Ver os detalhes do dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Dispositivos** > **Todos os dispositivos** e selecione um dos seus dispositivos apresentados para abrir os respetivos detalhes:
+3. Selecione **Dispositivos** > **Todos os dispositivos** > selecione um dos seus dispositivos listados para abrir os seus dados:
 
    - **A visão geral** mostra o nome do dispositivo e lista algumas propriedades chave do dispositivo, como se é um dispositivo pessoal ou corporativo, número de série, utilizador primário, e muito mais. Pode fazer o seguinte no dispositivo:
       - [Extinguir](devices-wipe.md#retire)
@@ -43,8 +43,8 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
       - [Bloqueio remoto](device-remote-lock.md)
       - [Sincronização](device-sync.md)
       - [Repor código de acesso](device-passcode-reset.md)
-      - [Reiniciar](device-restart.md) (apenas no Windows)
-      - [Começar do Zero](device-fresh-start.md) (apenas no Windows)
+      - [Reiniciar](device-restart.md) (apenas windows)
+      - [Início Fresco](device-fresh-start.md) (apenas janelas)
       - [Reset do piloto automático](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (apenas para o Windows)
       - [Sondagem rápida](../configuration/device-restrictions-windows-10.md) (apenas windows 10)
       - [Digitalização completa](../configuration/device-restrictions-windows-10.md) (apenas windows 10)
@@ -68,7 +68,7 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 > [!Note]  
 > O inventário de hardware e software é atualizado no serviço Intune a cada 7 dias.
 
-|Detalhe|Description|Platform| 
+|Detalhe|Descrição|Plataforma| 
 |--------------|----------------------|----|  
 |Nome|O nome do dispositivo.|Windows, iOS|
 |Nome da gestão|O nome do dispositivo utilizado apenas na consola. Alterar este nome não irá alterar o nome no dispositivo.|Windows, iOS|
@@ -78,16 +78,16 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 |Dispositivo partilhado|Se definido como **Sim**, o dispositivo é partilhado por mais do que um utilizador.|Windows, iOS|
 |Inscrição de utilizador aprovado|Se **Sim**, então o dispositivo tem o utilizador aprovado a inscrição que permite aos administradores gerir certas definições de segurança no dispositivo.|Windows, iOS|
 |Sistema operativo|O sistema operativo utilizado no dispositivo.|Windows, iOS|
-|Versão do sistema operativo|A versão do sistema operativo no dispositivo.|Windows, iOS|
+|Versão do sistema operativo|A versão do sistema operativo do dispositivo.|Windows, iOS|
 |Idioma do sistema operativo|O idioma definido para o sistema operativo no dispositivo.|Windows, iOS|
-|Número de compilação|O número de construção do sistema operativo.|Android|
+|Número de construção|O número de construção do sistema operativo.|Android|
 |Nível de patch de segurança|O nível de correção de segurança do dispositivo.|Android|
 |Espaço de armazenamento total|O espaço de armazenamento total no dispositivo (em gigabytes).|Windows, iOS|
 |Espaço de armazenamento livre|O espaço de armazenamento não utilizado no dispositivo (em gigabytes).|Windows, iOS|
 |IMEI|A Identidade Internacional do Equipamento Móvel do dispositivo.|Windows, iOS/iPadOS, Android|
 |MEID|O identificador de equipamento móvel do dispositivo.|Windows, iOS/iPadOS, Android|
 |Fabricante|O fabricante do dispositivo.|Windows, iOS/iPadOS, Android|
-|Model|O modelo do dispositivo.|Windows, iOS/iPadOS, Android|
+|Modelo|O modelo do dispositivo.|Windows, iOS/iPadOS, Android|
 |Número de telefone|O número de telemóvel atribuído ao dispositivo.|Windows, iOS/iPadOS, Android*|
 |Operadora subscrita|A operadora sem fios do dispositivo.|Windows, iOS/iPadOS, Android|
 |Tecnologia de rede móvel|O sistema de rádio utilizado pelo dispositivo.|Windows, iOS/iPadOS, Android|
@@ -102,10 +102,10 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 |EAS ativado|Se definido como **Sim**, o dispositivo é sincronizado com a caixa de correio do Exchange.|Windows, iOS/iPadOS, Android|
 |ID de ativação do EAS|O identificador do Exchange ActiveSync do dispositivo.|Windows, iOS/iPadOS, Android|
 |Supervisionado|Se definido como **Sim**, os administradores têm controlo avançado sobre o dispositivo.|Windows, iOS/iPadOS, Android|
-|Encriptado|Se definido como **Sim**, os dados armazenados no dispositivo são encriptados.|Windows, iOS/iPadOS, Android|
+|Encriptados|Se definido como **Sim**, os dados armazenados no dispositivo são encriptados.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
 > O número de telefone não é inventariado em dispositivos Android Enterprise Dedicados ou Totalmente Geridos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Veja o que mais pode fazer para [gerir os seus dispositivos](device-management.md) com o Intune.

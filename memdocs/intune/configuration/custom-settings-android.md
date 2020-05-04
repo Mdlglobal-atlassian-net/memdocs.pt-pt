@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333177"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Utilizar definições personalizadas para dispositivos Android no Microsoft Intune
@@ -33,7 +33,7 @@ Os perfis personalizados do Android utilizam as definições Open Mobile Allianc
 A utilização de um perfil personalizado permite configurar e atribuir as seguintes definições do Android. As seguintes definições não estão incorporadas no Intune:
 
 - [Criar um perfil Wi-Fi com uma chave pré-partilhada](/intune/wi-fi-profile-shared-key)
-- [Criar um perfil de VPN por aplicação](/intune/android-pulse-secure-per-app-vpn)
+- [Criar um perfil VPN por app](/intune/android-pulse-secure-per-app-vpn)
 - [Permitir e bloquear aplicações para dispositivos Samsung Knox Standard](/intune/samsung-knox-apps-allow-block)
 
 >[!IMPORTANT]
@@ -44,11 +44,11 @@ Este artigo mostra-lhe como criar um perfil personalizado para dispositivos Andr
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes definições:
 
     - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil personalizado Android**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **Android**.
     - **Tipo de perfil**: Selecione **Personalizado**.
 
@@ -59,9 +59,9 @@ Este artigo mostra-lhe como criar um perfil personalizado para dispositivos Andr
     - **OMA-URI**: introduza o OMA-URI que quer utilizar como uma definição.
     - Tipo de **dados:** Selecione o tipo de dados que utilizará para esta definição OMA-URI. As opções são:
 
-      - Cadeia
+      - String
       - Cadeia (ficheiro XML)
-      - Data e Hora
+      - Data e hora
       - Número inteiro
       - Vírgula flutuante
       - Booleano
@@ -74,7 +74,7 @@ Este artigo mostra-lhe como criar um perfil personalizado para dispositivos Andr
 5. Selecione **OK** para guardar as alterações. Continue a adicionar mais definições conforme necessário.
 6. Quando terminar, selecione **OK** > **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

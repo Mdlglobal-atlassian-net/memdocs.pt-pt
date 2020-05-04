@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7e9cf01f9ddf7d9d984a99a2d74e0d3294d05e95
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332709"
 ---
 # <a name="configure-a-custom-domain-name"></a>Configurar um nome de domínio personalizado
@@ -43,7 +43,7 @@ Não é possível mudar o nome ou remover a parte onmicrosoft.com do nome de dom
 
 1. Aceda ao [centro de administração do Microsoft 365](https://admin.microsoft.com/) e inicie sessão na sua conta de administrador.
 
-2. No painel de navegação, escolha **Configurar** &gt; **Domínios**.
+2. No painel de navegação, selecione **Configuração** &gt; **Domínios**.
 
 3. Selecione **Adicionar domínio** e escreva o seu nome de domínio personalizado. Selecione **Seguinte**.
    ![Captura de ecrã do centro de administração do Microsoft 365 com as opções Definições > Domínios selecionadas e um novo nome de domínio a ser adicionado](./media/custom-domain-name-configure/domain-custom-add.png)

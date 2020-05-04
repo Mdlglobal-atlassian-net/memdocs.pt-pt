@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808082"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397786"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos Android Enterprise geridos
 
@@ -35,7 +35,7 @@ As políticas de configuração de aplicações nas definições de fornecimento
 > Nem todas as aplicações suportam a configuração de aplicações. Consulte o desenvolvedor de aplicações para ver se a sua aplicação suporta as políticas de configuração de aplicações.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha as **aplicações** > políticas de **configuração** de apps > **adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Escolha **Apps** > as políticas > de**configuração**da app apps**Adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. Na página **Basics,** delineie os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -47,8 +47,8 @@ As políticas de configuração de aplicações nas definições de fornecimento
 8. Clique em **Adicionar** para exibir o painel de **permissões Adicionar.**
 9. Clique nas permissões que pretende anular. As permissões concedidas anularão a política de "Permissões de aplicações padrão" para as aplicações selecionadas.
 10. Detete o estado de **permissão** para cada permissão. Pode escolher entre **Prompt**, **auto grant**ou **Auto negar**. Para obter mais informações sobre permissões, consulte [as definições do Android Enterprise para marcar os dispositivos como conformes ou não conformes usando o Intune](../protect/compliance-policy-create-android-for-work.md).
-11. Se a aplicação gerida suportar as definições de configuração, na caixa de dropdown, selecione o formato de configuração de **configuração**. Selecione um dos seguintes métodos para adicionar informações de configuração:
-    - **Utilizar estruturador de configuração**
+11. Se a aplicação gerida suportar as definições de configuração, a caixa de definições de configuração de configuração de **configuração** é visível. Selecione um dos seguintes métodos para adicionar informações de configuração:
+    - **Utilizar o estruturador de configuração**
     - **Insira os dados da JSON**<br><br>
     Para obter detalhes sobre a utilização do estruturador de configuração, veja [Utilizar estruturador de configuração](#use-the-configuration-designer). Para mais detalhes sobre a introdução de dados XML, consulte [os dados do Enter JSON](#enter-json-data).
 12. Clique em **Seguir** para exibir a página **de Tarefas.**
@@ -92,14 +92,14 @@ Pode escolher as seguintes opções, se selecionar a variável como o tipo de va
 | Opção | Exemplo |
 |----|----|
 | Id do dispositivo AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
-| ID de conta | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| ID da Conta | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | ID de Dispositivo do Intune | b9841cd9-9843-405f-be28-b2265c59ef97 |
-| Domínio | contoso.com |
+| Domain | contoso.com |
 | Correio | john@contoso.com |
 | UPN Parcial | joão |
 | ID de Utilizador | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | Nome de utilizador | João Silva |
-| Nome Principal de utilizador | john@contoso.com |
+| Nome Principal de Utilizador | john@contoso.com |
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Permitir apenas contas de organização configuradas nas aplicações de várias identidades 
 
@@ -134,7 +134,7 @@ Também pode configurar permissões de aplicações para aceder às funcionalida
 
 Por exemplo, uma aplicação utiliza o microfone do dispositivo. O utilizador é solicitado a conceder a permissão da aplicação para usar o microfone.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > políticas de **configuração** de apps >  **adicionar** > **dispositivos geridos**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione políticas >  de**configuração**de **apps** > **Adicionar** > **dispositivos geridos**.
 2. Adicione as seguintes propriedades:
 
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **Android Enterprise prontament e permissões políticas de aplicações para toda**a empresa .
@@ -143,12 +143,12 @@ Por exemplo, uma aplicação utiliza o microfone do dispositivo. O utilizador é
     - **Plataforma**: Selecione **Android**.
 
 3. Selecione **App Associada**. Escolha a aplicação que pretende definir uma política de configuração. Selecione na lista de aplicações de perfil de trabalho do Android que aprovou e sincronizou com intune.
-4. Selecione **Permissões** > **Adicionar**. Na lista, selecione as permissões de aplicação disponíveis > **OK**.
+4. Selecione **Permissões** > **Adicionar**. Na lista, selecione as permissões disponíveis > **OK**.
 5. Selecione uma opção para cada permissão a conceder com esta política:
-    - **Pedido de confirmação**. Solicitar o utilizador a aceitar ou recusar.
+    - **Rápido.** Solicitar o utilizador a aceitar ou recusar.
     - **Conceder automaticamente**. Aprovar automaticamente sem notificar o utilizador.
     - **Negar automaticamente**. Negar automaticamente sem notificar o utilizador.
-6. Para atribuir a política de configuração da aplicação, selecione a política de configuração da aplicação > **Assignment** > **Select groups**. Escolha os grupos de utilizador para atribuir > **Selecione**.
+6. Para atribuir a política de configuração da aplicação, selecione a política de configuração da aplicação > grupos De **supor** > **tarefas**. Escolha os grupos de utilizador para atribuir > **Selecione**.
 7. Escolha **Guardar** para atribuir a política.
 
 ## <a name="additional-information"></a>Informações adicionais
@@ -156,6 +156,6 @@ Por exemplo, uma aplicação utiliza o microfone do dispositivo. O utilizador é
 - [Atribuir uma aplicação gerida do Google Play a dispositivos Android Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
 - [Implementação de Outlook para configurações de configurações de aplicações iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Continue a [atribuir](apps-deploy.md) e [monitorizar](apps-monitor.md) a aplicação.

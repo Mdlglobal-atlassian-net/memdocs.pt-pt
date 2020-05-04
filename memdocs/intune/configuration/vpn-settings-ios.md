@@ -1,6 +1,6 @@
 ---
 title: Configure as definições vpN para dispositivos iOS/iPadOS no Microsoft Intune - Azure Microsoft Docs
-description: Adicione ou crie um perfil de configuração VPN em dispositivos iOS/iPadOS utilizando configurações de configuração de rede privada virtual (VPN). Configure os detalhes de ligação, métodos de autenticação, túneis divididos, configurações VPN personalizadas com os pares de identificador, chave e valor, configurações VPN por app que incluam URLs de Safari e VPNs a pedido com SSIDs ou domínios de pesquisa DNS, configurações de procuração para incluir um script de configuração, endereço IP ou FQDN e porta TCP no Microsoft Intune.
+description: Adicione ou crie um perfil de configuração VPN em dispositivos iOS/iPadOS utilizando configurações de configuração de rede privada virtual (VPN). Configure os detalhes de ligação, métodos de autenticação, túneis divididos, configurações vpN personalizadas com os pares de identificador, chave e valor, configurações VPN por app que incluam URLs de Safari e VPNs a pedido com Domínios de pesquisa SSIDs ou DNS, configurações de proxy para incluir um script de configuração, endereço IP ou FQDN, e porta TCP no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086542"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Adicione as definições vpN em dispositivos iOS e iPadOS no Microsoft Intune
@@ -43,11 +43,11 @@ Selecione o tipo de ligação VPN na seguinte lista de fornecedores:
 - **SonicWall Mobile Connect**
 - **F5 Access Legacy**: aplicável a versão 2.1 e versões anteriores da aplicação F5 Access.
 - **F5 Access**: aplicável a versão 3.0 e versões posteriores da aplicação F5 Access.
-- **Palo Alto Networks GlobalProtect (Legacy)** : aplicável a versão 4.1 e versões anteriores da aplicação Palo Alto Networks GlobalProtect.
+- **Palo Alto Networks GlobalProtect (Legacy)**: aplicável a versão 4.1 e versões anteriores da aplicação Palo Alto Networks GlobalProtect.
 - **Palo Alto Networks GlobalProtect**: aplicável a versão 5.0 e versões posteriores da aplicação Palo Alto Networks GlobalProtect.
 - **Pulse Secure**
 - **Cisco (IPSec)**
-- **VPN do Citrix**
+- **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**: Para utilizar o Acesso Condicional, ou permitir que os utilizadores contornem o sinal de Zscaler no ecrã, então deve integrar o Acesso Privado zscaler (ZPA) com a sua conta Azure AD. Para obter passos detalhados, veja a [documentação do Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
 - **IKEv2**: [As definições IKEv2](#ikev2-settings) (neste artigo) descrevem as propriedades.
@@ -106,7 +106,7 @@ As definições apresentadas na seguinte lista são determinadas pelo tipo de li
 
 ## <a name="ikev2-settings"></a>Definições IKEv2
 
-Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**.
+Estas definições aplicam-se quando escolhe o **tipo** > de ligação**IKEv2**.
 
 - **VPN sempre ligado**: **Ativar** configura um cliente VPN para ligar e voltar a ligar-se automaticamente à VPN. As ligações VPN Sempre Ativada permanecem ativadas ou ativam-se imediatamente quando o utilizador bloqueia o dispositivo, quando o dispositivo é reiniciado ou quando a rede sem fios é alterada. Quando definido para **Desativar** (predefinido), vpN sempre ligado para todos os clientes VPN é desativado. Quando ativado, configure também:
 
@@ -133,7 +133,7 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
     - **Sim, aplicações específicas**: **Adicione** uma lista de aplicações CN cujo tráfego pode contornar a VPN. Introduza os identificadores de pacote da aplicação CN. Por exemplo, introduza `com.contoso.app.id.package`.
 
   - **Tráfego da aplicação Websheet Cativa para passar fora VPN**: WebSheet cativo é um navegador web incorporado que lida com o sinal cativo. **O Enable** permite que o tráfego de aplicações do navegador contorne a VPN. **Desativar** (predefinido) o tráfego webSheet para utilizar o VPN sempre ligado. O valor predefinido é a opção mais segura.
-  - **A tradução de endereços de rede (NAT) mantém o intervalo vivo (segundos)** : Para se manter ligado à VPN, o dispositivo envia pacotes de rede para se manter ativo. Introduza um valor em segundos sobre a frequência com que estes pacotes são enviados, de 20-1440. Por exemplo, insira um valor de `60` enviar os pacotes de rede para a VPN a cada 60 segundos. Por predefinição, este valor está definido para `110` segundos.
+  - **A tradução de endereços de rede (NAT) mantém o intervalo vivo (segundos)**: Para se manter ligado à VPN, o dispositivo envia pacotes de rede para se manter ativo. Introduza um valor em segundos sobre a frequência com que estes pacotes são enviados, de 20-1440. Por exemplo, insira um valor para enviar os pacotes de `60` rede para a VPN a cada 60 segundos. Por predefinição, este `110` valor é definido para segundos.
   - **Descarregue o NAT mantenha-se vivo no hardware quando**o dispositivo estiver a dormir : Quando um dispositivo está a dormir, **o Enable** (padrão) tem o NAT a enviar pacotes de keep-alive para que o dispositivo permaneça ligado à VPN. **Desativar** desativa esta funcionalidade.
 
 - **Identificador remoto**: Introduza o endereço IP da rede, FQDN, UserFQDN ou ASN1DN do servidor IKEv2. Por exemplo, introduza: `10.0.0.3` ou `vpn.contoso.com`. Normalmente, introduz-se no mesmo valor que o [**nome Ligação**](#base-vpn-settings) (neste artigo). Mas depende das definições do servidor IKEv2.
@@ -164,8 +164,8 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
   - **Médio** (padrão): Envia uma mensagem de manutenção a cada 10 minutos.
   - **Alta:** Envia uma mensagem de manutenção viva a cada 60 segundos.
 
-- Gama mínima da **versão TLS**: Introduza a versão TLS mínima para utilizar. Introduza `1.0`, `1.1`ou `1.2`. Se ficar em branco, o valor padrão da `1.0` é utilizado.
-- Gama máxima da **versão TLS**: Introduza a versão TLS máxima a utilizar. Introduza `1.0`, `1.1`ou `1.2`. Se ficar em branco, o valor padrão da `1.2` é utilizado.
+- Gama mínima da **versão TLS**: Introduza a versão TLS mínima para utilizar. Insira, `1.0` `1.1`ou `1.2`. Se ficar em branco, `1.0` o valor predefinido é utilizado.
+- Gama máxima da **versão TLS**: Introduza a versão TLS máxima a utilizar. Insira, `1.0` `1.1`ou `1.2`. Se ficar em branco, `1.2` o valor predefinido é utilizado.
 
 > [!NOTE]
 > A gama de versão TLS é mínima e máxima deve ser definida quando utilizar a autenticação do utilizador e os certificados.
@@ -187,8 +187,8 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
     - SHA2-256 (padrão)
     - SHA2-384
     - SHA2-512
-  - **Grupo Diffie-Hellman**: Selecione o grupo que deseja. Padrão é grupo `2`.
-  - **Duração da vida** (minutos): Escolha quanto tempo a associação de segurança permanece ativa até que as teclas sejam rodadas. Introduza um valor inteiro entre `10` e `1440` (1440 minutos são 24 horas). O padrão é `1440`.
+  - **Grupo Diffie-Hellman**: Selecione o grupo que deseja. Padrão é `2`grupo .
+  - **Duração da vida** (minutos): Escolha quanto tempo a associação de segurança permanece ativa até que as teclas sejam rodadas. Introduza um `10` valor `1440` inteiro entre e (1440 minutos são 24 horas). A predefinição é `1440`.
 
 - **Configure um conjunto separado de parâmetros para associações de segurança infantil**: iOS/iPadOS permite configurar parâmetros separados para a ligação IKE e quaisquer ligações infantis. 
 
@@ -206,8 +206,8 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
     - SHA2-256 (padrão)
     - SHA2-384
     - SHA2-512
-  - **Grupo Diffie-Hellman**: Selecione o grupo que deseja. Padrão é grupo `2`.
-  - **Duração da vida** (minutos): Escolha quanto tempo a associação de segurança permanece ativa até que as teclas sejam rodadas. Introduza um valor inteiro entre `10` e `1440` (1440 minutos são 24 horas). O padrão é `1440`.
+  - **Grupo Diffie-Hellman**: Selecione o grupo que deseja. Padrão é `2`grupo .
+  - **Duração da vida** (minutos): Escolha quanto tempo a associação de segurança permanece ativa até que as teclas sejam rodadas. Introduza um `10` valor `1440` inteiro entre e (1440 minutos são 24 horas). A predefinição é `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Definições Automáticas de VPN
 
@@ -218,7 +218,7 @@ Estas definições aplicam-se quando escolhe o tipo de **ligação** > **IKEv2**
 
 - **VPN a pedido**: configure regras condicionais que controlam quando a ligação VPN é iniciada. Por exemplo, crie uma condição na qual a ligação VPN só é utilizada quando um dispositivo não estiver ligado a uma rede Wi-Fi da sua empresa. Ou criar uma condição. Por exemplo, se um dispositivo não conseguir aceder a um domínio de pesquisa DNS em que entra, então a ligação VPN não foi iniciada.
 
-  - **SSIDs ou domínios de pesquisa DNS**: selecione se esta condição utiliza **SSIDs** de rede sem fios ou **domínios de pesquisa DNS**. Selecione **Adicionar** para configurar um ou mais SSIDs ou domínios de pesquisa.
+  - **SSIDs ou domínios de pesquisa DNS**: selecione se esta condição utiliza **SSIDs** de rede sem fios ou **domínios de pesquisa DNS**. Escolha **Adicionar** para configurar um ou mais SSIDs ou domínios de pesquisa.
   - **Pesquisa de cadeia de URL**: opcional. Introduza um URL para a regra utilizar como um teste. Se o dispositivo aceder a este URL sem reorientação, então a ligação VPN é iniciada. Além disso, o dispositivo será ligado ao URL de destino. O utilizador não vê o site de pesquisa de cadeia de URL.
 
     Por exemplo, uma sonda de cadeia de URL é um URL de servidor Web auditando que verifica a conformidade do dispositivo antes de ligar o VPN. Ou, o URL testa a capacidade da VPN de se ligar a um site antes de o dispositivo se ligar ao URL do alvo através da VPN.
@@ -238,9 +238,9 @@ Se estiver a utilizar um proxy, configure as definições seguintes. As definiç
 
 - **Script de configuração automática**: utilize um ficheiro para configurar o servidor proxy. Introduza o **URL do servidor proxy** (por exemplo, `http://proxy.contoso.com`) que inclui o ficheiro de configuração.
 - **Endereço**: introduza o endereço IP do nome do anfitrião totalmente qualificado do servidor proxy.
-- **Número de porta**: introduza o número de porta associado ao servidor proxy.
+- **Número**da porta : Introduza o número de porta associado ao servidor proxy.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

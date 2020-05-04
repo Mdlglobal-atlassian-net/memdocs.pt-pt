@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085818"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Utilizar o portal de resolução de problemas para ajudar os utilizadores na sua empresa
@@ -61,13 +61,13 @@ Pode utilizar o painel **Resolução de problemas** para analisar as informaçõ
 
 ![Painel de resolução de problemas, com áreas numeradas descritas pela tabela seguinte](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Área | Nome | Description |
+| Área | Nome | Descrição |
 | ---  | ---  | ---         |
 | 1.   | Estado da conta  | Mostra o estado do inquilino do Intune atual como **Ativo** ou **Inativo**.       |
 | 2.   | Seleção do utilizador  | O nome do utilizador atualmente selecionado. Clique em **Alterar utilizador** para selecionar um novo utilizador.       |
 | 3.   | Estado de utilizador  | Apresenta o estado da licença Intune do utilizador, número de dispositivos e conformidade de cada dispositivo.       |
-| 4.   | Informações do utilizador  | Utilize a lista para selecionar os detalhes a consultar no painel. <br>Pode selecionar: <ul><li>Aplicações do cliente<li>Compliance políticas<li> Políticas de configuração<li>Políticas de proteção de aplicações <li>Restrições de inscrição</ul>      |
-| 5.   | Associação a grupos  | Mostra os grupos atuais dos quais o utilizador selecionado é membro.       |
+| 4.   | Informações do utilizador  | Utilize a lista para selecionar os detalhes a consultar no painel. <br>Pode selecionar: <ul><li>Aplicações do cliente<li>Políticas de conformidade<li> Políticas de configuração<li>Políticas de proteção de aplicações <li>Restrições de inscrição</ul>      |
+| 5.   | Associação a um grupo  | Mostra os grupos atuais dos quais o utilizador selecionado é membro.       |
 
 <!-- this section needs to be updated
 
@@ -248,7 +248,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 A tabela Falhas de Inscrição lista as tentativas de inscrição que falharam. Um dispositivo listado na tabela abaixo pode ter sido inscrito posteriormente com êxito durante outra tentativa. É possível que algumas tentativas falhadas não sejam listadas. As informações de mitigação não estão disponíveis para todas as falhas.
 
-| Coluna de tabela | Description |
+| Coluna de tabela | Descrição |
 |-------------|----------|
 | Início da inscrição | A hora de início em que o utilizador começou a inscrição. |
 | SO | O sistema operativo do dispositivo. |
@@ -259,7 +259,7 @@ A tabela Falhas de Inscrição lista as tentativas de inscrição que falharam. 
 
 Ao selecionar uma linha de falha, são fornecidos mais detalhes.
 
-| Section | Description |
+| Section | Descrição |
 |-------------|----------|
 | Detalhes da falha | Uma explicação em maior detalhe sobre a falha. |
 | Potenciais remediações | Passos sugeridos para resolver o erro. Poderão não existir remediações para determinadas falhas. |
@@ -267,7 +267,7 @@ Ao selecionar uma linha de falha, são fornecidos mais detalhes.
 
 ### <a name="enrollment-errors"></a>Erros de inscrição
 
-| Error | Detalhes |
+| Erro | Detalhes |
 |-------------|----------|
 | iOS/iPadOS Timeout ou Falha | Exceder do tempo limite entre o dispositivo e o Intune devido ao utilizador demorar demasiado tempo a concluir a inscrição. |
 | Utilizador não encontrado ou licenciado | O utilizador não possui uma licença ou foi removido do serviço. |
@@ -285,7 +285,7 @@ Ao selecionar uma linha de falha, são fornecidos mais detalhes.
 | O perfil do Autopilot não foi encontrado ou não foi atribuído | O dispositivo não tem um perfil do Autopilot ativo. |
 | Método de inscrição do Autopilot inesperado | O dispositivo tentou inscrever-se através de um método não permitido. |
 | Dispositivo do Autopilot removido | O dispositivo que tentou inscrever-se foi removido do Autopilot para esta conta. |
-| Máximo de dispositivos atingido | A inscrição foi bloqueada devido a uma restrição de limite de dispositivos configurada pelo administrador. |
+| Limite de dispositivos atingido | A inscrição foi bloqueada devido a uma restrição de limite de dispositivos configurada pelo administrador. |
 | Inclusão da Apple | Todos os dispositivos iOS/iPadOS foram impedidos de se inscreverem neste momento devido a um certificado de push Apple MDM desaparecido ou expirado dentro de Intune. |
 | O dispositivo não foi pré-registado | O dispositivo não foi pré-registado como dispositivo empresarial e todas as inscrições pessoais foram bloqueadas por um administrador. |
 | Funcionalidade não suportada | O utilizador procedeu a uma provável tentativa de inscrição através de um método incompatível com a sua configuração do Intune. |
@@ -299,10 +299,10 @@ Utilize os seguintes recursos para ajudar a recolher dados de dispositivos ao re
 - [Enviar registos de dados de diagnóstico para o seu administrador de TI através de e-mail](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 - [Enviar erros de inscrição de dispositivos Android para o seu administrador de TI](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Pode saber mais sobre o Controlo de administração baseada em funções (RBAC) para definir funções no seu dispositivo organizacional, gestão de aplicações móveis e tarefas de proteção de dados. Para obter mais informações, veja [Controlo de administração baseada em funções (RBAC) com o Intune](role-based-access-control.md).
 
 Saiba mais sobre os problemas conhecidos no Microsoft Intune. Para obter mais informações, veja [Problemas conhecidos no Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Saiba como criar um pedido de suporte e obter ajuda quando precisar. [Obter suporte](get-support.md).
+Saiba como criar um pedido de suporte e obter ajuda quando precisar. [Obtenha apoio.](get-support.md)

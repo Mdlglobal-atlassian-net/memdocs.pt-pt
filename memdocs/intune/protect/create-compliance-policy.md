@@ -1,6 +1,6 @@
 ---
-title: Criar políticas de conformidade de dispositivos no Microsoft Intune - Azure  Microsoft Docs
-description: Criar políticas de conformidade com dispositivos, visão geral dos níveis de estado e gravidade, utilizando o estatuto InGracePeriod, trabalhando com acesso condicional, manuseamento de dispositivos sem uma política atribuída, e as diferenças de conformidade no portal Azure e portal clássico em Microsoft Intune
+title: Criar políticas de conformidade de dispositivos no Microsoft Intune - Azure [ Microsoft Docs
+description: Criar políticas de conformidade com dispositivos, visão geral dos níveis de estado e gravidade, utilizando o estatuto InGracePeriod, trabalhando com acesso condicional, manuseamento de dispositivos sem uma política atribuída, e as diferenças de conformidade no portal Azure e portal clássico no Microsoft Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551373"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Criar uma política de conformidade no Microsoft Intune
@@ -47,13 +47,13 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 - Utilize uma plataforma suportada:
 
-  - Android device administrator (Administrador de dispositivos Android)
+  - Administrador de dispositivos Android
   - Android Enterprise
   - iOS
   - macOS
   - Windows 10
-  - Windows 8,1
-  - Wnodows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - Inscreva os dispositivos no Intune (necessário para ver o estado de conformidade).
 
@@ -66,7 +66,7 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **políticas** de conformidade > **políticas** > **criar políticas**.
+2. Selecione Políticas de**conformidade** > **Policies** > de **dispositivos** > **Criar política**.
 
 3. Selecione uma **Plataforma** para esta política a partir das seguintes opções:
    - *Administrador de dispositivos Android*
@@ -74,8 +74,8 @@ Para utilizar as políticas de conformidade de dispositivos:
    - *iOS/iPadOS*
    - *macOS*
    - *Windows Phone 8.1*
-   - *Windows 8.1 e posterior*
-   - *Windows 10 e posterior*
+   - *Windows 8.1 e posterior*
+   - *Windows 10 e posterior*
 
     Para *Android Enterprise,* também selecione um tipo de **Política:**
      - *Política de conformidade do proprietário do dispositivo Android*
@@ -93,7 +93,7 @@ Para utilizar as políticas de conformidade de dispositivos:
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows Phone 8.1, Windows 8.1 e posterior](compliance-policy-create-windows-8-1.md)
-   - [Windows 10 e posterior](compliance-policy-create-windows.md)  
+   - [Windows 10 e posterior](compliance-policy-create-windows.md)  
 
 6. No separador **Localizações,** pode forçar a conformidade com base na localização do dispositivo. Escolha uma das localizações existentes. Se ainda não tiver uma localização disponível, consulte locais de [utilização (cerca de rede)](use-network-locations.md) para obter orientação.
    > [!TIP]
@@ -107,7 +107,7 @@ Para utilizar as políticas de conformidade de dispositivos:
 
    Outro exemplo inclui a utilização de Locais onde se adiciona pelo menos um local a uma política de conformidade. Neste caso, a ação por incumprimento aplica-se quando seleciona pelo menos um local. Se o dispositivo não estiver ligado a nenhum dos locais selecionados, considera-se que não está em conformidade. Pode configurar a programação para dar aos seus utilizadores um período de carência, como um dia.
 
-8. No separador **'Etiquetas Scope',** selecione etiquetas para ajudar a filtrar políticas para grupos específicos, como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito às políticas de conformidade. 
+8. No separador **'Etiquetas Scope',** selecione etiquetas `US-NC IT Team` para `JohnGlenn_ITDepartment`ajudar a filtrar políticas para grupos específicos, tais como ou . Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito às políticas de conformidade. 
 
    Para obter informações sobre a utilização de etiquetas de âmbito, consulte [Utilize etiquetas de mira para filtrar as políticas](../fundamentals/scope-tags.md).
 
@@ -169,12 +169,12 @@ Se um dispositivo tiver múltiplas políticas de conformidade e estados de confo
 |Compatível|3|
 |InGracePeriod|4|
 |NonCompliant|5|
-|Error|6|
+|Erro|6|
 
 Quando um dispositivo tem múltiplas políticas de conformidade, é atribuído o nível de gravidade mais elevado de todas as políticas a esse dispositivo.
 
 Por exemplo, um dispositivo tem três políticas de conformidade atribuídas: uma com o estado Desconhecido (gravidade = 1), outra com o estado Conforme (gravidade = 3) e uma com o estado Em Período de Tolerância (gravidade = 4). O estado Em Período de Tolerância tem o nível de gravidade mais elevado. Por isso, todas as três políticas têm o estado de conformidade Em Período de Tolerância.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Monitorizar as políticas](compliance-policy-monitor.md).

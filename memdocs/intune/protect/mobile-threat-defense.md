@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329169"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integração da Defesa Contra Ameaças a Dispositivos Móveis com o Intune
@@ -31,7 +31,7 @@ Intune pode integrar dados de um fornecedor de Defesa de Ameaças Móveis (MTD) 
 
 A Intune pode utilizar estes mesmos dados como fonte para dispositivos não matriculados utilizando políticas de proteção de aplicações Intune. Como tal, os administradores podem usar estas informações para ajudar a proteger os dados corporativos dentro de uma [aplicação protegida](../apps/apps-supported-intune-apps.md)microsoft Intune , e emitir um bloco ou limpeza seletiva.
 
-## <a name="protect-corporate-resources"></a>Proteger os recursos corporativos
+## <a name="protect-corporate-resources"></a>Proteger recursos empresariais
 
 A integração de informações dos fornecedores do MTD pode ajudá-lo a proteger os seus recursos corporativos de ameaças que afetam as plataformas móveis.  
 
@@ -74,10 +74,10 @@ O acesso será concedido quando o dispositivo for remediado:
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Cenários de amostragem para dispositivos não matriculados utilizando políticas de proteção de aplicações Intune
 
 Quando um dispositivo é considerado infetado pela solução de Defesa Contra Ameaças para Dispositivos Móveis:<br>
-imagem ![mostrando um dispositivo infetado de Defesa de Ameaças Móveis](./media/mobile-threat-defense/MTD-image-3.png)
+![Imagem a mostrar um dispositivo infetado com a Defesa Contra Ameaças para Dispositivos Móveis](./media/mobile-threat-defense/MTD-image-3.png)
 
 O acesso será concedido quando o dispositivo for remediado:<br>
-imagem ![mostrando um acesso de defesa de ameaça móvel concedido](./media/mobile-threat-defense/MTD-image-4.png)
+![Imagem mostrando um acesso de Defesa de Ameaça Móvel concedido](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
 > Você pode usar vários vendedores de Defesa Móvel com um único inquilino Intune. No entanto, quando dois ou mais fornecedores estiverem configurados para serem utilizados para a mesma plataforma, todos os dispositivos que executam essa plataforma devem instalar cada aplicação MTD e procurar ameaças. A não apresentação de uma varredura de qualquer aplicação configurada resulta na marcação do dispositivo como incompatível. 

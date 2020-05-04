@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2b645b41a721063ddfea6019d726a3c232c8dd78
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327018"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Exigir a autenticação multifator para inscrições de dispositivos no Intune
@@ -48,9 +48,9 @@ Para exigir MFA na inscrição de um dispositivo, siga estes passos:
 >Tem de ter a edição Azure Active Directory Premium P1 ou superior atribuída aos seus utilizadores para implementar esta política.
 
 >[!Important]
->Não configure **Regras de acesso com base no dispositivo** para a Inscrição no Microsoft Intune.
+>Não configure as regras de **acesso baseadas no Dispositivo** para a inscrição no Microsoft Intune.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Acesso Condicional**. O nó de Acesso Condicional acedido a partir do *Intune* é o mesmo nó acedido a partir do *Azure AD*.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha o**Acesso Condicional**dos **Dispositivos** > . O nó de Acesso Condicional acessado a partir de *Intune* é o mesmo nó a que o Acesso a partir de *Azure AD*.
 2. Selecione **Nova política**.
 3. Em **Nova política**, escreva um nome descritivo para a política.
 4. Na secção **Atribuições**, selecione **Utilizadores e grupos**. 
@@ -59,11 +59,11 @@ Para exigir MFA na inscrição de um dispositivo, siga estes passos:
 7. No separador **Incluir** das **Aplicações na cloud**, clique em **Selecionar aplicações** e, em seguida, **Selecionar** > **Inscrição do Microsoft Intune**. Em seguida, selecione **Concluído**. Ao escolher a **Microsoft Intune Registration**, o acesso condicional MFA é aplicado apenas à inscrição do dispositivo (solicitação mFA única).
 8. Na secção **Atribuições**, para **Condições**, não tem de configurar definições para a MFA.
 9. Na secção **Controlos de acesso**, selecione **Conceder**.
-10. Em **Conceder**, selecione **Conceder acesso** e, em seguida, **Exigir autenticação multifator**. Não selecione **Pedir que o dispositivo seja marcado como compatível** porque um dispositivo não pode ser avaliado pela conformidade até estar inscrito. Em seguida, selecione **Selecionar**.
+10. Em **Conceder**, selecione **Conceder acesso** e, em seguida, **Exigir autenticação multifator**. Não selecione **Pedir que o dispositivo seja marcado como compatível** porque um dispositivo não pode ser avaliado pela conformidade até estar inscrito. Em seguida, escolha **Selecionar**.
 11. Em **Nova política**, selecione **Ativar política** > **Ativada** e, em seguida, selecione **Criar**.
 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Quando os utilizadores finais inscreverem o respetivo dispositivo, têm de autenticar com uma segunda forma de identificação, como um PIN, telefone ou biometria.

@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086486"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Adicione as definições vpN nos dispositivos Do Windows Phone 8.1 no Microsoft Intune
@@ -45,8 +45,8 @@ Criar um perfil de configuração do [dispositivo VPN](vpn-settings-configure.md
 - **Servidores**: adicione um ou mais servidores VPN aos quais os dispositivos são ligados.
   - **Adicionar**: Abre a lâmina **Add Row** onde pode especificar as seguintes informações:
     - **Descrição**: Especificar um nome descritivo para o servidor como **o servidor Contoso VPN**.
-    - **Endereço IP ou FQDN**: Forneça o endereço IP ou o nome de domínio totalmente qualificado do servidor VPN a que os dispositivos se ligam. Exemplos: **192.168.1.1**, **vpn.contoso.com**.
-    - **Servidor predefinido**: define este servidor como o servidor predefinido que os dispositivos utilizam para estabelecer a ligação. Certifique-se de que predefine apenas um servidor.
+    - **Endereço IP ou FQDN**: Forneça o endereço IP ou o nome de domínio totalmente qualificado do servidor VPN a que os dispositivos se ligam. Exemplos: **192.168.1.1,** **vpn.contoso.com**.
+    - **Servidor predefinido**: define este servidor como o servidor predefinido que os dispositivos utilizam para estabelecer a ligação. Confirme que predefine apenas um servidor.
   - **Importação**: Navegue para um ficheiro separado de víramida com uma lista de servidores na descrição do formato, endereço IP ou FQDN, servidor Predefinido. Escolha **OK** para importar estes servidores para a lista **Servidores**.
   - **Exportação**: Exporta a lista de servidores para um ficheiro de valores separados em vírem (csv).
 
@@ -101,10 +101,10 @@ Criar um perfil de configuração do [dispositivo VPN](vpn-settings-configure.md
 - **Script de configuração automática**: utilize um ficheiro para configurar o servidor proxy. Introduza o **URL do servidor proxy** (por exemplo, `http://proxy.contoso.com`) que contém o ficheiro de configuração.
 - **Utilize o servidor proxy**: Ative esta opção se pretender introduzir manualmente as definições do servidor proxy.
   - **Endereço**: Introduza o endereço do servidor proxy (como endereço IP).
-  - **Número de porta**: introduza o número de porta associado ao servidor proxy.
+  - **Número**da porta : Introduza o número de porta associado ao servidor proxy.
 - **Procuração de bypass para endereços locais**: Se o seu servidor VPN necessitar de um servidor proxy para a ligação, e não quiser utilizar o servidor proxy para endereços locais que introduz, então selecione esta opção.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

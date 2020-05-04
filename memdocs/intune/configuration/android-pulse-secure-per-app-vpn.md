@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083876"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Utilizar um perfil personalizado do Microsoft Intune para criar um perfil VPN por aplicação para dispositivos Android
@@ -40,7 +40,7 @@ Depois de atribuir a política ao seu dispositivo Android ou grupos de utilizado
 ## <a name="step-1-create-a-vpn-profile"></a>Passo 1: criar um perfil de VPN
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **administrador de dispositivos Android**.
@@ -50,7 +50,7 @@ Depois de atribuir a política ao seu dispositivo Android ou grupos de utilizado
 5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é administrador de **dispositivo Android por perfil VPN para toda**a empresa .
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 7. Nas definições de **Configuração,** configure as definições que deseja no perfil:
@@ -64,21 +64,21 @@ Depois de atribuir a política ao seu dispositivo Android ou grupos de utilizado
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Passo 2: criar uma política de configuração personalizada
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Nome**: Introduza um nome descritivo para o perfil personalizado. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil VPN Android Personalizado OMA-URI para toda**a empresa .
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **administrador de dispositivos Android**.
     - **Tipo de perfil**: Selecione **Personalizado**.
 
-4. Escolha **Definições** > **Configurar**.
-5. No painel **Definições OMA-URI Personalizadas**, selecione **Adicionar**.
+4. Escolha**configurar** **definições** > .
+5. No painel **Definições OMA-URI personalizadas**, selecione **Adicionar**.
     - **Nome**: Introduza um nome para a sua definição.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **OMA-URI**: Introduza `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`, onde o *nome* é o nome de ligação que observou no passo 1. Neste exemplo, a corda é `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **OMA-URI**: `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`Introduza, onde o *nome* é o nome de ligação que observou no passo 1. Neste exemplo, a `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`corda é .
     - **Tipo de dados**: Enter **String**.
-    - **Valor**: Introduza uma lista de pacotes separados pelo ponto e vírgula para associar ao perfil. Por exemplo, se quiser que o Excel e o navegador Google Chrome utilizem a ligação VPN, introduza `com.microsoft.office.excel;com.android.chrome`.
+    - **Valor**: Introduza uma lista de pacotes separados pelo ponto e vírgula para associar ao perfil. Por exemplo, se quiser que o Excel e o navegador `com.microsoft.office.excel;com.android.chrome`Google Chrome utilizem a ligação VPN, introduza .
 
     > [!div class="mx-imgBorder"]
     >![Exemplo Android administrador de dispositivos por app VPN política personalizada](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
@@ -87,9 +87,9 @@ Depois de atribuir a política ao seu dispositivo Android ou grupos de utilizado
 
 Utilize o valor **BLACKLIST** para introduzir uma lista de aplicações que *não podem* utilizar a ligação VPN. Todas as outras aplicações são ligadas através da VPN. Ou, use o valor **WHITELIST** para introduzir uma lista de aplicações que *podem* usar a ligação VPN. As aplicações que não estão na lista não se ligam através da VPN.
 
-1. No painel **Definições OMA-URI Personalizadas**, selecione **Adicionar**.
+1. No painel **Definições OMA-URI personalizadas**, selecione **Adicionar**.
 2. Introduza um nome para a definição.
-3. Em **OMA-URI,** insira `./Vendor/MSFT/VPN/Profile/*Name*/Mode`, onde o *nome* é o nome de perfil VPN que observou no Passo 1. No nosso exemplo, a corda é `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`.
+3. Em **OMA-URI,** insira, `./Vendor/MSFT/VPN/Profile/*Name*/Mode`onde o *nome* é o nome de perfil VPN que observou no Passo 1. No nosso exemplo, `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`a corda é.
 4. No **tipo de Dados,** introduza **string**.
 5. Em **Valor**, introduza **BLACKLIST** ou **WHITELIST**.
 
@@ -97,7 +97,7 @@ Utilize o valor **BLACKLIST** para introduzir uma lista de aplicações que *nã
 
 [Atribuir os perfis do dispositivo](device-profile-assign.md) aos utilizadores ou dispositivos necessários.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para obter uma lista de todas as definições vpn do administrador do dispositivo Android, consulte as definições do [dispositivo Android para configurar VPN](vpn-settings-android.md).
 - Para saber mais sobre as definições de VPN e Intune, consulte [configurar as definições de VPN no Microsoft Intune](vpn-settings-configure.md).

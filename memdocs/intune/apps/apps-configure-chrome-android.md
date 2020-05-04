@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324834"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Configure o Google Chrome para dispositivos Android usando o Intune 
@@ -48,7 +48,7 @@ Para mais detalhes sobre a adição de uma aplicação gerida do Google Play ao 
 
 ## <a name="add-app-configuration-for-managed-ae-devices"></a>Adicione a configuração da aplicação para dispositivos AE geridos
 
-1. A partir do centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > políticas de **configuração** de apps > **adicionar** > **dispositivos geridos**.
+1. A partir do centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **políticas**de > **configuração** > de apps**Adicionar** > **dispositivos geridos**.
 2. Defina os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -66,16 +66,16 @@ Para mais detalhes sobre a adição de uma aplicação gerida do Google Play ao 
     ![Adicionar designer de configuração use](./media/apps-configure-chrome-android/configuration.png)
 
     Abaixo está o exemplo das definições comuns:
-    - **Bloquear o acesso a uma lista de URLs**: `["*"]`
-    - **Permitir o acesso a uma lista de URLs**: `["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
-    - **Marcadores geridos**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
-    - **Disponibilidade do modo incógnito**: `Incognito mode disabled`
+    - **Bloquear o acesso a uma lista de URLs:**`["*"]`
+    - **Permitir o acesso a uma lista de URLs:**`["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
+    - **Marcadores geridos:**`[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
+    - **Disponibilidade do modo incógnito:**`Incognito mode disabled`
 
     Uma vez adicionadas as definições de configuração utilizando o designer de configuração, serão listadas numa tabela. 
 
     ![Definições comuns](./media/apps-configure-chrome-android/common-settings.png)
 
-    As definições acima criam marcadores e bloqueiam o acesso a todos os URLs exceto `baidu.com`, `yahoo.com`, `chromium.org`e `chrome://`.
+    As definições acima criam marcadores e bloqueiam `chromium.org`o `chrome://`acesso a todos os URLs exceto, `baidu.com` `yahoo.com`e .
 
 5. Clique em **OK** e **Adicione** para adicionar a sua política de configuração ao Intune.
 6. Atribuir esta política de configuração a um grupo de utilizadores. Para obter mais informações, veja [Atribuir aplicações a grupos com o Microsoft Intune](apps-deploy.md).
@@ -100,7 +100,7 @@ Lance o Google Chrome e encontrará as definições aplicadas.
    Separador incógnito:<br>
    <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
-## <a name="troubleshooting"></a>Resolução de Problemas
+## <a name="troubleshooting"></a>Resolução de problemas
 
 1. Verifique o portal Intune para monitorizar o estado de implementação da política.
 
@@ -115,6 +115,6 @@ Lance o Google Chrome e encontrará as definições aplicadas.
 - [Adicione políticas de configuração de aplicativos para dispositivos Android Enterprise geridos](app-configuration-policies-use-android.md)
 - [Lista de políticas da Empresa Chrome](https://cloud.google.com/docs/chrome-enterprise/policies/)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para obter mais informações sobre dispositivos geridos pelo Android Enterprise, consulte [a inscrição intune do Android Enterprise na sua plena gestão de dispositivos.](../enrollment/android-fully-managed-enroll.md)

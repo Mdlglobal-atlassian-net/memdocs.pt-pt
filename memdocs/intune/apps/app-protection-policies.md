@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323597"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Como criar e atribuir políticas de proteção de aplicações
@@ -46,14 +46,14 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Criar uma política de proteção de aplicações iOS/iPadOS ou Android
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. No portal Intune, escolha **Apps** > políticas de proteção de **aplicações.** Esta seleção abre o painel **Políticas de proteção de aplicações**, onde pode criar novas políticas e editar as já existentes.
+2. No portal Intune, escolha políticas de**proteção**de **apps.** >  Esta seleção abre o painel **Políticas de proteção de aplicações**, onde pode criar novas políticas e editar as já existentes.
 3. Selecione **Criar a política** e selecione **iOS/iPadOS** ou **Android**. O painel **de política Create** é exibido.
 4. Na página Basics, adicione os **seguintes valores:**
 
-    | Valor | Description |
+    | Valor | Descrição |
     |--------------|------------------------------------------------|
     | Nome | O nome desta política de proteção de aplicações. |
-    | Description | [Opcional] A descrição desta política de proteção de aplicações. |
+    | Descrição | [Opcional] A descrição desta política de proteção de aplicações. |
 
 
     O valor da **Plataforma** é definido com base na sua escolha acima.
@@ -63,11 +63,11 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 5. Clique em **Seguir** para exibir a página **apps.**<br>
     A página **Apps** permite-lhe escolher como pretende aplicar esta política a aplicações em diferentes dispositivos. Deve adicionar pelo menos uma aplicação.<p>
 
-    | Valor/Opção | Description |
+    | Valor/Opção | Descrição |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Alvo para aplicações em todos os tipos de dispositivos | Utilize esta opção para direcionar a sua política para aplicações em dispositivos de qualquer estado de gestão. Escolha **não** para direcionar aplicações em tipos de dispositivos específicos. Para obter informações, consulte as políticas de [proteção de aplicações Target com base no estado de gestão](#target-app-protection-policies-based-on-device-management-state) de dispositivos |
     |     Tipos de dispositivos | Utilize esta opção para especificar se esta política se aplica a dispositivos geridos pelo MDM ou a dispositivos não geridos. Para as políticas de APLICAÇÃO iOS/iPadOS, selecione a partir de dispositivos **não geridos** e **geridos.** Para as políticas de APLICAÇÃO Android, selecione entre **Não gerido,** **administrador de dispositivos Android**e Android **Enterprise.**  |
-    | Aplicações públicas | Clique em **Selecionar aplicações públicas** para escolher as aplicações para o alvo. |
+    | Aplicativos públicos | Clique em **Selecionar aplicações públicas** para escolher as aplicações para o alvo. |
     | Aplicativos personalizados | Clique em **Selecionar aplicações personalizadas** para selecionar aplicações personalizadas para direcionar com base num ID do Bundle. |
 
     As aplicações que selecionou aparecerão na lista de aplicações públicas e personalizadas.
@@ -121,11 +121,11 @@ Para ver o efeito das alterações imediatamente, o utilizador final tem de term
 
 4. A página **Apps** permite-lhe escolher como pretende aplicar esta política a aplicações em diferentes dispositivos. Deve adicionar pelo menos uma aplicação.<p>
     
-    | Valor/Opção | Description |
+    | Valor/Opção | Descrição |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Alvo para aplicações em todos os tipos de dispositivos | Utilize esta opção para direcionar a sua política para aplicações em dispositivos de qualquer estado de gestão. Escolha **não** para direcionar aplicações em tipos de dispositivos específicos. Pode ser necessária uma configuração adicional da aplicação para esta definição. Para obter mais informações, veja [Direcionar políticas de proteção de aplicações com base no estado de gestão do dispositivo](#target-app-protection-policies-based-on-device-management-state). |
     |     Tipos de dispositivos | Utilize esta opção para especificar se esta política se aplica a dispositivos geridos pelo MDM ou a dispositivos não geridos. Para as políticas de APLICAÇÃO iOS/iPadOS, selecione a partir de dispositivos **não geridos** e **geridos.** Para as políticas de APLICAÇÃO Android, selecione entre **Não gerido,** **administrador de dispositivos Android**e Android **Enterprise.**  |
-    | Aplicações públicas | Clique em **Selecionar aplicações públicas** para escolher as aplicações para o alvo. |
+    | Aplicativos públicos | Clique em **Selecionar aplicações públicas** para escolher as aplicações para o alvo. |
     | Aplicativos personalizados | Clique em **Selecionar aplicações personalizadas** para selecionar aplicações personalizadas para direcionar com base num ID do Bundle. |
 
     As aplicações que selecionou aparecerão na lista de aplicações públicas e personalizadas.
@@ -169,7 +169,7 @@ Em muitas organizações, é comum permitir que os utilizadores finais utilizem 
 
 Uma vez que as políticas de proteção de aplicações Intune visam a identidade de um utilizador, as definições de proteção para um utilizador podem aplicar-se tanto a dispositivos matriculados (geridos pelo MDM) como a dispositivos não inscritos (sem MDM). Por isso, pode direcionar uma política de proteção de aplicações Intune para dispositivos intune ou iOS/iPadOS e Android. Pode ter uma política de proteção para dispositivos não geridos em que existem controlos rigorosos de prevenção da perda de dados (DLP) e uma política de proteção separada para dispositivos geridos pelo MDM, onde os controlos DLP podem ser um pouco mais relaxados. Para obter mais informações sobre como isto funciona em dispositivos pessoais do Android Enterprise, consulte políticas de proteção de [aplicações e perfis de trabalho.](android-deployment-scenarios-app-protection-work-profiles.md)
 
-Para criar estas políticas, navegue para **apps** > políticas de **proteção** de aplicações na consola Intune e, em seguida, selecione **a política Create**. Também pode editar uma política de proteção de aplicações existente. Para que a política de proteção de aplicações se aplique tanto a dispositivos geridos como não geridos, navegue na página **apps** e confirme que **o Target para aplicações em todos os tipos de dispositivos** está definido para **Sim**, o valor padrão. Se quiser atribuir granularly com base no estado de gestão, detete **o Target para aplicações em todos os tipos de dispositivos** para **No**. 
+Para criar estas políticas, navegue nas políticas de**proteção** de **Apps** > App na consola Intune e, em seguida, selecione **a política Create**. Também pode editar uma política de proteção de aplicações existente. Para que a política de proteção de aplicações se aplique tanto a dispositivos geridos como não geridos, navegue na página **apps** e confirme que **o Target para aplicações em todos os tipos de dispositivos** está definido para **Sim**, o valor padrão. Se quiser atribuir granularly com base no estado de gestão, detete **o Target para aplicações em todos os tipos de dispositivos** para **No**. 
 
 ### <a name="device-types"></a>Tipos de dispositivos
 
@@ -195,9 +195,9 @@ Para ver uma lista completa das definições de política para iOS/iPadOS e Andr
 - [políticas iOS/iPadOS](app-protection-policy-settings-ios.md)
 - [Políticas para Android](app-protection-policy-settings-android.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Monitorizar o estado do utilizador e de conformidade](app-protection-policies-monitor.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 * [O que esperar quando a aplicação Android é gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-android.md)
 * [O que esperar quando a sua aplicação iOS/iPadOS for gerida por políticas de proteção de aplicações](../fundamentals/end-user-mam-apps-ios.md)

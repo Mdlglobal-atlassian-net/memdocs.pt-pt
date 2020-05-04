@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324609"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Atribuir aplicações a grupos com o Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Depois de [adicionar uma aplicação](apps-add.md) ao Microsoft Intune, pode atribuí-la a utilizadores e dispositivos. É importante que tenha em atenção que pode atribuir uma aplicação a um dispositivo quer este seja ou não gerido pelo Intune.
+Depois de [ter adicionado uma aplicação](apps-add.md) ao Microsoft Intune, pode atribuir a app a utilizadores e dispositivos. É importante que tenha em atenção que pode atribuir uma aplicação a um dispositivo quer este seja ou não gerido pelo Intune.
 
 > [!NOTE]
 > A intenção Implementação disponível não é suportada para grupos de dispositivos, apenas os grupos de utilizadores são suportados.
@@ -38,7 +38,7 @@ A seguinte tabela indica as várias opções para atribuir as aplicações a uti
 
 |   | Dispositivos inscritos com o Intune | Dispositivos não inscritos com o Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
-| Atribuir a utilizadores | Sim | Sim |
+| Atribuir aos utilizadores | Sim | Sim |
 | Atribuir a dispositivos | Sim | Não |
 | Atribuir aplicações encapsuladas ou aplicações que incorporem o SDK do Intune (para políticas de proteção de aplicações) | Sim | Sim |
 | Atribuir aplicações como Disponíveis | Sim | Sim |
@@ -123,7 +123,7 @@ Para dispositivos Android num cenário de implementação de Política de Prote�
 Passos para atribuir uma aplicação do Managed Google Play a dispositivos não geridos:
 
 1. Ligue o inquilino do Intune ao Managed Google Play. Se já o tiver feito para gerir o perfil de trabalho do Android Enterprise, os dispositivos dedicados ou totalmente geridos, não será necessário fazê-lo novamente.
-2. Adicione aplicações a partir do Managed Google Play{1}{2}à consola do Intune.
+2. Adicione aplicações a partir do Managed Google Playà consola do Intune.
 3. Vise aplicações do Managed Google Play como **Disponíveis com ou sem inscrição** para o grupo de utilizadores pretendido. As opções **Obrigatório** e **Desinstalar** para aplicações visadas não são suportada para dispositivos não inscritos.
 4. Atribua uma Política de Proteção de Aplicações ao grupo de utilizadores.
 5. Da próxima vez que o utilizador final abrir a aplicação do Portal da Empresa, verá uma mensagem a indicar que existem aplicações disponíveis na aplicação Play Store.  O utilizador pode tocar nesta notificação para ser ir diretamente para a aplicação Play para ver as aplicações empresariais ou pode navegar para a aplicação Play Store separadamente.
@@ -148,6 +148,6 @@ Os valores predefinidos para a definição são pré-povoados para novas atribui
 >
 >**Atribuições pré-existentes:** As atribuições que existiam antes da introdução desta definição não são modificadas e todas as aplicações geridas serão removidas na remoção do dispositivo da gestão.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para saber mais sobre a monitorização de atribuições de aplicações, veja [Como monitorizar aplicações](apps-monitor.md).

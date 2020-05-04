@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084815"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditar, exportar ou eliminar dados pessoais no Intune
@@ -75,6 +75,6 @@ A ação **Extinguir** remove dados aprovisionados do Intune, tais como aplicaç
 
 Se um cliente inquilino do Intune cancelar a respetiva conta do Intune, todos os dados do inquilino são eliminados no prazo de 180 dias após o cliente fechar a conta do Intune. Se o inquilino do AAD estiver associado a outras subscrições do Microsoft Enterprise (Azure, Office 365), são eliminados apenas os Dados de Cliente do Intune. Mantém-se o recurso de inquilino do AAD para ser utilizado pelas outras subscrições. Se a conta do Intune for a única subscrição associada ao inquilino do AAD, o inquilino será eliminado, bem como todos os recursos e Dados do Cliente.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba como [auditar, exportar ou eliminar](privacy-data-audit-export-delete.md) dados pessoais no Intune.

@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333049"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Adicione as definições de e-mail para dispositivos iOS e iPadOS no Microsoft Intune
@@ -40,19 +40,19 @@ Criar um perfil de [configuração do dispositivo](email-settings-configure.md).
 - **Servidor de e-mail**: introduza o nome de anfitrião do seu servidor Exchange.
 - **Nome da conta**: introduza o nome a apresentar da conta de e-mail. Este nome será apresentado nos dispositivos dos utilizadores.
 - **Atributo de nome de utilizador do AAD**: este nome é o atributo que o Intune obtém do Azure Active Directory (AAD). O Intune gera de forma dinâmica o nome de utilizador utilizado por este perfil. As opções são:
-  - **Nome Principal de Utilizador**: obtém o nome, como `user1` ou `user1@contoso.com`
+  - **Nome Principal de Utilizador**: obtém o nome, como `user1` ou `user1@contoso.com`.
   - **Endereço SMTP primário**: obtém o nome no formato de endereço de e-mail, como `user1@contoso.com`
   - **Nome da Conta SAM**: precisa do domínio, como `domain\user1`. Introduza também:  
     - **Origem de nome de domínio do utilizador**: selecione **AAD** (Azure Active Directory) ou **Personalizado**.
       - **AAD:** Obtenha os atributos da Azure AD. Introduza também:
-        - **Atributo de nome de domínio do utilizador a partir de AAD**: Escolha obter o nome de **domínio completo** (`contoso.com`) ou o **nome NetBIOS** (`contoso`) do utilizador.
+        - **Atributo de nome de domínio do utilizador a partir de AAD:**`contoso`Escolha obter o nome de domínio **completo** ()`contoso.com`ou o nome **NetBIOS** ( ) atribuído do utilizador.
 
       - **Personalizado**: Obtenha os atributos a partir de um nome de domínio personalizado. Introduza também:
-        - **Nome de domínio personalizado a utilizar**: Introduza um valor que Intune utiliza para o nome de domínio, como `contoso.com` ou `contoso`.
+        - **Nome de domínio personalizado a utilizar**: Introduza um valor `contoso.com` `contoso`que Intune utiliza para o nome de domínio, como ou .
 
 - **Atributo de endereço de e-mail do AAD**: selecione como é gerado o endereço de e-mail do utilizador. As opções são:
-  - **Nome principal**do utilizador : Utilize o nome principal completo como endereço de e-mail, como `user1@contoso.com` ou `user1`.
-  - **Endereço Principal SMTP**: Utilize o endereço SMTP primário para iniciar sessão no Exchange, como `user1@contoso.com`.
+  - **Nome principal**do utilizador : Utilize o nome `user1@contoso.com` principal `user1`completo como endereço de e-mail, como ou .
+  - **Endereço Principal SMTP**: Utilize o endereço SMTP primário para `user1@contoso.com`iniciar sessão no Exchange, tais como .
 - Método de **autenticação**: Escolha como os utilizadores autenticam o servidor de e-mail. As opções são:
   - **Certificado**: Selecione um perfil de certificado SCEP ou PKCS do cliente que criou anteriormente para autenticar a ligação De troca. Esta opção proporciona a experiência mais segura e perfeita para os seus utilizadores.
   - **Nome de utilizador e palavra-passe**: Os utilizadores são solicitados a introduzir o seu nome de utilizador e palavra-passe.
@@ -72,7 +72,7 @@ Criar um perfil de [configuração do dispositivo](email-settings-configure.md).
 
   - Algumas organizações desativam a capacidade do utilizador final de fazer acesso a [aplicações self-service](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). Neste cenário, o signo de Autenticação Moderna pode falhar até que um Administrador crie a aplicação empresarial "iOS Accounts", e conceda aos utilizadores o acesso à app em Azure AD.
 
-    A ação padrão é adicionar uma aplicação utilizando a funcionalidade de adição de **app** do Painel de Acesso à [Aplicação](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **sem aprovação de negócios.** Para obter mais informações, veja [Atribuir utilizadores a Aplicações](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    A ação predefinida é a adição de uma aplicação através da funcionalidade do [Painel de Acesso da Aplicação](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Adicionar Aplicação****sem a aprovação empresarial**. Para obter mais informações, veja [Atribuir utilizadores a Aplicações](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > Quando ativar o OAuth, ocorrerá o seguinte:  
@@ -158,7 +158,7 @@ Criar um perfil de [configuração do dispositivo](email-settings-configure.md).
 - **Permitir que o e-mail seja enviado a partir de aplicações de terceiros**: **Ativar** (predefinido) permite que os utilizadores selecionem este perfil como a conta predefinida para envio de e-mail. que as aplicações de terceiros abram o e-mail na aplicação de e-mail nativa, por exemplo, para anexar ficheiros ao e-mail.
 - **Sincronizar endereços de e-mail recentemente utilizados**: **Ativar** (predefinido) permite que os utilizadores sincronizem a lista de endereços de e-mail que foram recentemente utilizados no dispositivo com o servidor.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

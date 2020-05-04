@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332785"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Problemas problemas com dispositivos Android Enterprise na Microsoft Intune
@@ -59,7 +59,7 @@ Sim. Para mais informações, consulte [Links web geridos do Google Play](../app
 
   Para recolher registos do Portal da Empresa, siga estes passos:
 
-  1. Na aplicação Portal da Empresa com o crachá, toque no **Menu** > **Ajude** > Suporte de **E-mail,** e depois toque em enviar registos de **e-mail e upload**. 
+  1. Na aplicação Portal da Empresa com o crachá, toque no **Menu** > **Help Suporte** > de**E-mail**, e depois toque em **Enviar email & upload de registos**. 
   2. Quando for solicitado **Envie um pedido**de ajuda com , selecione uma das aplicações de e-mail.
   3. Um e-mail é gerado para o seu administrador de TI com um ID incidente que pode ser fornecido para o suporte do produto da Microsoft.
 
@@ -85,9 +85,9 @@ Para dispositivos matriculados no perfil de trabalho, só é possível redefinir
 Para dispositivos dedicados (COSU) e Totalmente Geridos, é suportado o reset da código de acesso do dispositivo.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Resolução de problemas de inscrição de dispositivos no Intune](troubleshoot-device-enrollment-in-intune.md)
+- [Resolver problemas de inscrição de dispositivos no Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Faça uma pergunta sobre o fórum Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Consulte o Blog da Equipa de Suporte Intune da Microsoft](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Consulte o Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

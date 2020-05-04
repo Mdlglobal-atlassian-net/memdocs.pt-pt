@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323575"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Como gerir os iOS/iPadOS eBooks que adquiriu através de um programa de compra de volume com o Microsoft Intune
@@ -58,13 +58,13 @@ Antes de começar, obtenha um token VPP da Apple e carregue o mesmo para a sua c
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Para obter e carregar um token Apple VPP
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **a administração do Tenant** > **Conectores e fichas** > **fichas Apple VPP.**
+2. Selecione > **Conectores e fichas** > apple**VPP**da **administração do inquilino.**
 3. No painel da lista de tokens VPP, clique em **Criar**.
 5. No painel **Novo Token VPP**, especifique as seguintes informações:
     - **Ficheiro de token VPP** – verifique se se inscreveu no Volume Purchase Program for Business ou no Volume Purchase Program for Education. Em seguida, transfira o token VPP da Apple para a sua conta e selecione-o aqui.
     - **ID Apple** – Introduza o ID Apple da conta associada ao programa de compra em volume.
     - **Tipo de conta VPP** – Escolha entre **Empresas** ou **Educação**.
-5. Quando terminar, clique em **Criar**.
+5. Quando tiver concluído, clique em **Criar**.
 
 O token é apresentado no painel da lista de tokens.
 
@@ -73,14 +73,14 @@ Pode sincronizar os dados retidos pela Apple com o Intune em qualquer altura, se
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Para atribuir uma aplicação comprada em volume
 
-1. Selecione **Apps** > **eBooks** > **Todos os livros eletrónicos.**
-2. No painel da lista de livros, selecione o livro que pretende atribuir e, em seguida, selecione " **...** " > **Atribuir Grupos**.
+1. Selecione **Apps** > **eBooks** > **Todos os livros eletrónicos**.
+2. No painel da lista de livros, selecione o livro que pretende atribuir e, em seguida, selecione "**...**" > **Atribuir Grupos**.
 3. No painel <*nome do livro*> - **Grupos Atribuídos**, selecione **Gerir** > **Grupos Atribuídos**.
 4. Selecione **Atribuir Grupos** e, no painel **Selecionar grupos**, selecione os grupos de utilizadores do Azure AD aos quais quer atribuir o livro. Os grupos de dispositivos não são atualmente suportados.
 Selecione a ação de atribuição **Disponível** ou **Obrigatório**. 
 5. Assim que tiver terminado, escolha **Guardar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Veja [Como monitorizar aplicações](apps-monitor.md) para obter informações que o ajudam a monitorizar as atribuições de livros.
 

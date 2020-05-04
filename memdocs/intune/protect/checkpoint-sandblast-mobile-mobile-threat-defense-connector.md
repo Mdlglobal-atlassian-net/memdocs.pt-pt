@@ -1,5 +1,5 @@
 ---
-title: Configurar a MTD do Check Point SandBlast
+title: Configurar o ponto de verificação SandBlast MTD
 titleSuffix: Microsoft Intune
 description: Saiba como integrar o Intune com a solução de Defesa Contra Ameaças Check Point SandBlast Mobile para controlar o acesso aos seus recursos empresariais a partir de dispositivos móveis.
 keywords: ''
@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: afd3f7a7c92fba23fc28903b328bc95f8555ba3d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329757"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Conector de Defesa Contra Ameaças do Check Point SandBlast Mobile no Intune
 
 Pode controlar o acesso de dispositivos móveis a recursos corporativos utilizando o Acesso Condicional com base na avaliação de risco realizada pelo Check Point SandBlast Mobile, uma solução de defesa de ameaças móveis que se integra com a Microsoft Intune. O risco é avaliado com base na telemetria recolhida dos dispositivos que executam a aplicação Check Point SandBlast Mobile.
 
-Pode configurar políticas de acesso condicional com base na avaliação de risco móvel Check Point SandBlast Mobile ativada através de políticas de conformidade do dispositivo Intune, que pode utilizar para permitir ou bloquear dispositivos não conformes para aceder a recursos corporativos com base em detetados ameaças.
+Pode configurar políticas de acesso condicional com base na avaliação de risco móvel Check Point SandBlast, ativada através de políticas de conformidade do dispositivo Intune, que pode utilizar para permitir ou bloquear dispositivos não conformes para aceder a recursos corporativos com base em ameaças detetadas.
 
 > [!NOTE]
 > Este fornecedor de Defesa de Ameaças Móveis não é suportado para dispositivos não matriculados.
@@ -70,40 +70,40 @@ Quando forem detetadas aplicações maliciosas, como software maligno, nos dispo
 *Bloquear quando as aplicações maliciosas forem detetadas:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD bloco quando forem detetadas aplicações maliciosas](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
+> ![MTD do Check Point – bloqueio quando as aplicações maliciosas são detetadas](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
 *Acesso concedido na remediação:*
 
 > [!div class="mx-imgBorder"]
-> ![check point MTD acesso concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
+> ![MTD do Check Point – acesso concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Controlar o acesso com base em ameaças à rede
 
 Detete ameaças como **Man-in-the-middle** na rede e proteja o acesso às redes Wi-Fi com base no risco do dispositivo.
 
-*Bloquear o acesso à rede através de Wi-Fi:*
+*Bloquear o acesso à rede através do Wi-Fi:*
 
 > [!div class="mx-imgBorder"]
-> ![check Point MTD acesso à rede através de](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG) Wi-Fi
+> ![MTD do Check Point – bloqueio do acesso à rede através de Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
 *Acesso concedido na remediação:*
 
 > [!div class="mx-imgBorder"]
-> ![check Point MTD Acesso wi-fi concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
+> ![MTD do Check Point – acesso Wi-Fi concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar o acesso ao SharePoint Online com base em ameaças à rede
 
 Detete ameaças na rede, tais como ataques **Man-in-the-middle**, e impeça a sincronização de ficheiros empresariais com base no risco do dispositivo.
 
-*Bloquear o SharePoint Online quando forem detetadas ameaças à rede:*
+*Block SharePoint Online quando são detetadas ameaças de rede:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD bloco SharePoint Online acesso](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
+> ![MTD do Check Point – bloqueio do acesso ao SharePoint Online](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
 *Acesso concedido na remediação:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD SharePoint Acesso online concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
+> ![MTD do Check Point – acesso ao SharePoint Online concedido](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
 
 <!-- ### Control access on unenrolled devices based on threats from malicious apps
 
@@ -117,7 +117,7 @@ Access is granted on remediation:
 > ![Access is granted on remediation for App protection policy](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/sandblast-app-policy-remediated.png)
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Integrar o Check Point SandBlast com o Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
 

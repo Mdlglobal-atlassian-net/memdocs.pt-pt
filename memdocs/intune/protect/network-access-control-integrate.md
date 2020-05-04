@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084829"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integração de controlo de acesso à rede (NAC) com o Intune
@@ -41,7 +41,7 @@ Se o dispositivo estiver inscrito e em conformidade com o Intune, a solução de
 
 ## <a name="feature-behaviors"></a>Comportamentos da funcionalidade
 
-Os dispositivos que estão a ser ativamente sincronizados com o Intune não podem ser movidos de **Compatível** / **Não Compatível** para **Não Sincronizado** (ou **Desconhecido**). O estado **Desconhecido** está reservado para dispositivos inscritos recentemente que ainda não tenham sido avaliados quanto à conformidade.
+Os dispositivos que estão a sincronizar ativamente a Intune não podem passar de **Conforme** / **incompatível** com **não sincronizado** (ou **Desconhecido).** O estado **Desconhecido** está reservado para dispositivos inscritos recentemente que ainda não tenham sido avaliados quanto à conformidade.
 
 Para os dispositivos cujo acesso aos recursos está bloqueado, o serviço de bloqueio deve redirecionar todos os utilizadores para o [portal de gestão](https://portal.manage.microsoft.com) para determinar o motivo pelo qual está bloqueado.  Se os utilizadores visitarem esta página, os seus dispositivos serão reavaliados de forma síncrona quanto à conformidade.
 
@@ -85,22 +85,22 @@ O NAC também é suportado para Cisco AnyConnect, Citrix SSO e F5 Access.
 - Utilize citrix Gateway 12.0.59 ou superior.  
 - Os utilizadores devem ter Citrix SSO 1.1.6 ou posteriormente instalados.
 - [Integrar o NetScaler com intune para O NAC,](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) conforme descrito na documentação do produto Citrix.
-- No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
+- No perfil VPN, selecione **Definições** > de Base Ativar o Controlo de Acesso à**Rede (NAC)** > selecione **concordo**.
 
 ### <a name="to-enable-nac-for-f5-access"></a>Para permitir o NAC para o Acesso F5
 
 - Utilize F5 BIG-IP 13.1.1.5 ou posteriormente.
 - Integrar big-IP com Intune para NAC. A [visão geral: Configurar a APM para verificação](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) da postura do dispositivo com sistemas de gestão de pontos finais O guia F5 lista as etapas.
-- No perfil VPN, selecione **definições** de Base > ativar o Controlo de Acesso à **Rede (NAC)** > selecione **Concordo**.
+- No perfil VPN, selecione **Definições** > de Base Ativar o Controlo de Acesso à**Rede (NAC)** > selecione **concordo**.
 
 A ligação VPN é desligada a cada 24 horas por razões de segurança. A VPN pode ser imediatamente reconectada.
 
 Estamos a trabalhar com os nossos parceiros para lançar uma solução NAC para estes clientes mais novos. Quando as soluções estiverem prontas, este artigo será atualizado com informações adicionais.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Integrar o Cisco ISE com o Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
-- [Integrar o Citrix NetScaler com o Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integrar o Cisco ISE com o Intune (Integrate Cisco ISE with Intune)](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
+- [Integrar o Citrix NetScaler com o Intune (Integrate Citrix NetScaler with Intune)](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrar f5 BIG-IP Access Policy Manager com Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrar o HP Aruba ClearPass com o Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Integrar o secRMM (Gestor de Suportes de Dados Amovíveis de Segurança) da Squadra com o Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

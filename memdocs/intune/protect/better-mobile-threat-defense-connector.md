@@ -16,17 +16,17 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 05dec05cdc5a16078328d736d2f622cea1b2aa00
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329909"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Conector Better Mobile Threat Defense com o Intune
 
 Pode controlar o acesso de dispositivos móveis a recursos corporativos utilizando o Acesso Condicional com base na avaliação de risco realizada pela Better Mobile, uma solução de Defesa de Ameaças Móveis (MTD) que se integra com a Microsoft Intune. O risco é avaliado com base na telemetria recolhida dos dispositivos a executar a aplicação Better Mobile.
 
-Pode configurar políticas de acesso condicional com base na avaliação de risco melhor móvel ativada através de políticas de conformidade de dispositivos intune para dispositivos matriculados, que pode utilizar para permitir ou bloquear dispositivos não conformes para aceder a recursos corporativos com base em detetados ameaças. Para dispositivos não matriculados, pode utilizar políticas de proteção de aplicações para impor um bloco ou limpeza seletiva com base em ameaças detetadas.
+Pode configurar políticas de acesso condicional com base na avaliação de risco melhor móvel ativada através de políticas de conformidade de dispositivos intune para dispositivos matriculados, que pode utilizar para permitir ou bloquear dispositivos não conformes para aceder a recursos corporativos com base em ameaças detetadas. Para dispositivos não matriculados, pode utilizar políticas de proteção de aplicações para impor um bloco ou limpeza seletiva com base em ameaças detetadas.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Como é que o Intune e o Better Mobile ajudam a proteger os recursos da empresa?
 
@@ -35,7 +35,7 @@ A aplicação Better Mobile está instalada e em execução nos dispositivos mó
 - **Suporte para dispositivos matriculados** - A política de conformidade do dispositivo Intune inclui uma regra para a Defesa de Ameaças Móveis (MTD), que pode utilizar informações de avaliação de risco da Better Mobile. Quando a regra MTD está ativada, intune avalia o cumprimento do dispositivo com a política que ativou. Caso se verifique que o dispositivo não está em conformidade, será bloqueado o acesso dos utilizadores aos recursos empresariais como o Exchange Online e o SharePoint Online. Os utilizadores também recebem orientações da aplicação Better Mobile instalada nos respetivos dispositivos para resolver o problema e recuperar o acesso a recursos empresariais. Para apoiar a utilização de Better Mobile com dispositivos matriculados:
   - [Adicione aplicativos MTD aos dispositivos](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [Criar uma política de conformidade de dispositivos que suporte o MTD](../protect/mtd-device-compliance-policy-create.md)
-  - [Ativar o conector MTD em Intune](../protect/mtd-connector-enable.md)
+  - [Ativar o conector de MTD no Intune](../protect/mtd-connector-enable.md)
 
 - **Suporte para dispositivos não matriculados** - Intune pode utilizar os dados de avaliação de risco da aplicação Better Mobile em dispositivos não matriculados quando utilizar as políticas de proteção de aplicações Intune. Os administradores podem usar esta combinação para ajudar a proteger os dados corporativos dentro de uma [aplicação protegida](../apps/apps-supported-intune-apps.md)microsoft Intune , os Administradores também podem emitir um bloco ou uma limpeza seletiva para dados corporativos nesses dispositivos não matriculados. Para apoiar a utilização de Better Mobile com dispositivos não matriculados:
   - [Adicione a aplicação MTD a dispositivos não matriculados](../protect/mtd-add-apps-unenrolled-devices.md)
@@ -46,7 +46,7 @@ A aplicação Better Mobile está instalada e em execução nos dispositivos mó
 
 - **Android 4.1 e posterior**
 
-- **iOS 8.0 e posterior**
+- **iOS 8.0 e mais tarde**
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -72,7 +72,7 @@ Quando forem detetadas aplicações maliciosas, como software maligno, nos dispo
 
 - Aceder às aplicações da empresa
 
-Bloqueie quando forem detetadas aplicações maliciosas:
+Bloquear quando as aplicações maliciosas forem detetadas:
 
 ![Imagem que mostra aplicações maliciosas detetadas](./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-blocked.png)
 
@@ -106,13 +106,13 @@ Acesso concedido na remediação:
 
 ### <a name="control--access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Controlar o acesso a dispositivos não matriculados com base em ameaças de aplicações maliciosas
 
-Quando a solução BETTER Mobile Threat Defense considera um dispositivo infetado: ![blocos de política de proteção de aplicações devido a malware detetado](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
+Quando a solução BETTER Mobile Threat Defense ![considera um dispositivo infetado: Blocos de política de proteção de aplicações devido a malware detetado](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
 
 O acesso é concedido na reparação:
 
 ![Acesso à reparação da política de proteção de aplicações](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-remediated.png)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Integrar o Better Mobile com o Intune](better-mobile-mtd-connector-integration.md)
 

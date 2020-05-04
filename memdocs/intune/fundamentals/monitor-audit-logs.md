@@ -15,10 +15,10 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326738"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Utilize registos de auditoria para monitorizar e monitorizar eventos no Microsoft Intune
@@ -34,14 +34,14 @@ Os utilizadores com as seguintes permissões podem rever os registos de auditori
 
 - Administrador Global
 - Administrador de Serviços do Intune
-- Administradores atribuídos a uma função do Intune com as permissões **Dados de auditoria** - **Leitura**
+- Administradores designados para um papel intune com **dados** - de auditoria**Ler** permissões
 
 ## <a name="audit-logs-for-intune-workloads"></a>Registos de auditoria das cargas de trabalho do Intune
 
 Pode rever os registos de auditoria no grupo de monitorização para cada carga horária intune:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **a administração do Inquilino** > **Registos de Auditoria.**
+2. Selecione > **registos**de auditoria **da administração do arrendatário**.
 3. Para filtrar os resultados, selecione **Filter** e refine os resultados utilizando as seguintes opções.
     - **Categoria**: tais como **Conformidade,** **Dispositivo**e **Função**.
     - **Atividade**: as opções aqui enumeradas são restritas pela opção escolhida na **categoria**.
@@ -67,7 +67,7 @@ Os registos de auditoria e os registos operacionais também podem ser encaminhad
 
 Para mais detalhes sobre a utilização do gráfico API para chegar a um ano de eventos de auditoria, consulte a [auditoria da ListaEventos](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Envie dados de registo para armazenamento, centros de eventos ou análise de registo.](review-logs-using-azure-monitor.md)
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233452"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos geridos iOS/iPadOS
@@ -51,7 +51,7 @@ Depois de selecionar os grupos a incluir na sua política de configuração da a
 ## <a name="create-an-app-configuration-policy"></a>Criar uma política de configuração de aplicação
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha as **aplicações** > políticas de **configuração** de apps > **adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Escolha **Apps** > as políticas > de**configuração**da app apps**Adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. Na página **Basics,** delineie os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -61,7 +61,7 @@ Depois de selecionar os grupos a incluir na sua política de configuração da a
 6. No painel de **aplicações direcionado,** escolha a aplicação gerida para associar à política de configuração e clique EM **OK**.
 7. Clique em **Seguir** para visualizar a página **Definições.**
 8. Na caixa de dropdown, selecione o formato de definições de **configuração**. Selecione um dos seguintes métodos para adicionar informações de configuração:
-    - **Utilizar estruturador de configuração**
+    - **Utilizar o estruturador de configuração**
     - **Introduzir dados XML**<br><br>
     Para obter detalhes sobre a utilização do estruturador de configuração, veja [Utilizar estruturador de configuração](#use-configuration-designer). Para obter detalhes sobre a introdução de dados XML, veja [Introduzir dados XML](#enter-xml-data). 
 9. Clique em **Seguir** para exibir a página **de Tarefas.**
@@ -99,7 +99,7 @@ O Microsoft Intune disponibiliza definições de configuração exclusivas para 
 
 ### <a name="delete-a-setting"></a>Eliminar uma definição
 
-1. Selecione as reticências ( **...** ) junto à definição.
+1. Selecione as reticências (**...**) junto à definição.
 2. Selecione **Eliminar**.
 
 Os carateres \{\{ e \}\} são utilizados apenas por tipos de token e não devem ser utilizados para outros fins.
@@ -164,7 +164,7 @@ Quando criar um ficheiro de configuração de aplicação, pode especificar um o
 
 O Intune suporta os seguintes tipos de dados numa lista de propriedades:
 
-- &lt;número inteiro&gt;
+- &lt;inteiro&gt;
 - &lt;real&gt;
 - &lt;cadeia&gt;
 - &lt;matriz&gt;
@@ -174,23 +174,23 @@ O Intune suporta os seguintes tipos de dados numa lista de propriedades:
 ### <a name="tokens-used-in-the-property-list"></a>Tokens utilizados na lista de propriedades
 
 Além disso, o Intune suporta os seguintes tipos de tokens na lista de propriedades:
-- \{\{nome principal de utilizador\}\}— por exemplo, **John\@contoso.com**
-- \{\{\}de\}correio - por exemplo, **John\@contoso.com**
+- \{\{userprincipalname\}\}— por exemplo, **John\@contoso.com**
+- \{\{correio\}\}— por exemplo, **John\@contoso.com**
 - \{\{partialupn\}\} – por exemplo, **João**
-- \{\{accountid\}\} – por exemplo, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{accountid\}\}— por exemplo, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\} – por exemplo, **b9841cd9-9843-405f-be28-b2265c59ef97**
-- \{\{userid\}\} – por exemplo, **3ec2c00f-b125-4519-acf0-302ac3761822**
-- \{\{username\}\} – por exemplo, **John Doe**
-- \{\{número de série\}\}— por exemplo, **F4KN99ZUG5V2** (para dispositivos iOS/iPadOS)
-- \{\{número de sérielast4dígitos\}\}— por exemplo, **G5V2** (para dispositivos iOS/iPadOS)
+- \{\{userid\}\}— por exemplo, **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{nome\}\}de utilizador — por exemplo, **John Doe**
+- \{\{número\}\}de série — por exemplo, **F4KN99ZUG5V2** (para dispositivos iOS/iPadOS)
+- \{\{serialnumberlast4digits\}\}— por exemplo, **G5V2** (para dispositivos iOS/iPadOS)
 - \{\{aaddeviceid\}\} – por exemplo, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Configure a app Portal da Empresa para apoiar dispositivos iOS e iPadOS DEP
 
 As inscrições do DEP (Programa de Inscrição de Dispositivos da Apple) não são compatíveis com a versão da app store da aplicação Portal da Empresa. No entanto, pode configurar a aplicação Portal da Empresa para suportar dispositivos iOS/iPadOS DEP utilizando os seguintes passos.
 
-1. Intune, adicione a aplicação Intune Company Portal, se necessário, indo para **Intune** > **Apps** > Todas **as aplicações** > **Add.**
-2. Vá a **Apps** > políticas de configuração de **Apps,** para criar uma política de configuração de aplicações para a aplicação Portal da Empresa.
+1. Intune, adicione a aplicação Intune Company Portal, se necessário, indo para **Intune** > **Apps** > **Todas as aplicações** > **Add**.
+2. Vá às políticas de configuração de **Apps** > **App,** para criar uma política de configuração de apps para a aplicação Portal da Empresa.
 3. Crie uma política de configuração de aplicativos com o XML abaixo. Mais informações sobre como criar uma política de configuração de apps e introduzir dados XML podem ser encontradas em Políticas de configuração de [aplicações Add para dispositivos iOS/iPadOS geridos](app-configuration-policies-use-ios.md).
 
     ``` xml
@@ -215,6 +215,6 @@ Uma vez atribuída uma política de configuração, pode monitorizar o estado de
 
 - [Implementação de Outlook para configurações de configurações de aplicações iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Continue a [atribuir](apps-deploy.md) e [monitorizar](apps-monitor.md) a aplicação.

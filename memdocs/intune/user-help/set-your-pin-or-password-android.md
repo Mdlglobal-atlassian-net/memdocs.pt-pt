@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233440"
 ---
 # <a name="set-your-pin-or-password"></a>Definir o PIN ou palavra-passe
@@ -32,10 +32,10 @@ O suporte da empresa poderá exigir que defina um PIN ou palavra-passe no seu di
 
 Pode utilizar os seguintes passos para definir um PIN ou uma palavra-passe.
 
-1. Toque em **Definições** > **Segurança** > **Bloqueio de Ecrã** > **Palavra-passe**.
+1. Toque em **definições** > **de imagem de bloqueio** > de**ecrã** > **de**segurança .
 
 2. Escolha e confirme a palavra-passe nova.
 
-Para determinados dispositivos, além da palavra-passe de ecrã, pode ter de definir um PIN de arranque. Pode tentar corrigir este problema ao encontrar um local na aplicação de definições para ativar esta opção. Por exemplo, no Galaxy S7 da Samsung, ativa o Arranque Seguro ao aceder a **Definições** > **Ecrã de Bloqueio e Segurança** > **Início Seguro**. Saiba mais [aqui](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
+Para determinados dispositivos, além da palavra-passe de ecrã, pode ter de definir um PIN de arranque. Pode tentar corrigir este problema ao encontrar um local na aplicação de definições para ativar esta opção. Por exemplo, no Samsung Galaxy S7, activao Secure Startup indo para **configurações** > **de ecrã de bloqueio e** > **arranque seguro**de segurança . Saiba mais [aqui](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526449"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Conector de Defesa de Ameaças Móveis Sophos com Intune
@@ -65,21 +65,21 @@ Quando forem detetadas aplicações maliciosas, como software maligno, nos dispo
 ![Imagem conceptual de aplicações maliciosas detetada](./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png)  
 
 *Acesso concedido à reparação:*  
-![imagem conceptual de acesso concedida após remediação](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
+![Imagem conceptual de acesso concedida após remediação](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Controlar o acesso com base em ameaças à rede
 
-Detete ameaças à sua rede como ataques Man-in-the-middle e proteja o acesso a redes Wi-Fi com base no risco do dispositivo.  
+Detete ameaças à rede, tal como ataques Man-in-the-middle, e proteja o acesso a redes Wi-Fi com base no risco do dispositivo.  
 
 *Bloquear o acesso à rede através do Wi-Fi:*  
-acesso à rede ![Block através de](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png) Wi-Fi
+![Bloquear o acesso à rede através do Wi-Fi](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
 
 *Acesso concedido à reparação:*   
-acesso ![concedido no](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png) de reparação  
+![Acesso concedido na reparação](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controlar o acesso ao SharePoint Online com base em ameaças à rede
 
-Detete ameaças à sua rede como ataques Man-in-the-middle, e evite a sincronização de ficheiros corporativos com base no risco do dispositivo.  
+Detete ameaças à sua rede, tal como ataques Man-in-the-middle, e impeça a sincronização de ficheiros empresariais com base no risco do dispositivo.  
 
 *Block SharePoint Online quando as ameaças de rede são detetadas:*
 
@@ -101,7 +101,7 @@ Access is granted on remediation:
 ![Access is granted on remediation for App protection policy](./media/sophos-mtd-connector/sophos-mobile-app-policy-remediated.png)
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Integrar Sofos com Intune](sophos-mtd-connector-integration.md)
 - [Configurar aplicativos Sophos](mtd-apps-ios-app-configuration-policy-add-assign.md)

@@ -1,6 +1,6 @@
 ---
-title: Configure as definições de VPN para dispositivos macOS no Microsoft Intune - Azure  Microsoft Docs
-description: Adicione ou crie um perfil de configuração de rede privada virtual (VPN), incluindo os detalhes de ligação, túnel dividido, configurações VPN personalizadas com os pares de identificador, chave e valor, configurações de procuração com um script de configuração, endereço IP ou FQDN, e porta TCP em Microsoft Intune em dispositivos que executam o macOS.
+title: Configure as definições de VPN para dispositivos macOS no Microsoft Intune - Azure [ Microsoft Docs
+description: Adicione ou crie um perfil de configuração de rede privada virtual (VPN), incluindo os detalhes de ligação, túnel dividido, configurações VPN personalizadas com os pares de identificador, chave e valor, configurações de proxy com um script de configuração, endereço IP ou FQDN, e porta TCP no Microsoft Intune em dispositivos que executam macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 10bea151002673b36600d4d9deaa36bb8fc3ff79
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086521"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Adicione as definições vpN em dispositivos macOS no Microsoft Intune
@@ -38,7 +38,7 @@ Criar um perfil de [configuração do dispositivo](vpn-settings-configure.md).
 ## <a name="base-vpn-settings"></a>Definições de VPN Base
 
 **Nome da ligação**: introduza um nome para esta ligação. Os utilizadores finais verão este nome quando procurarem no dispositivo a lista de ligações VPN disponíveis.
-- **Endereço IP ou FQDN**: Forneça o endereço IP ou o nome de domínio totalmente qualificado do servidor VPN a que os dispositivos se ligam. Exemplos: **192.168.1.1**, **vpn.contoso.com**.
+- **Endereço IP ou FQDN**: Forneça o endereço IP ou o nome de domínio totalmente qualificado do servidor VPN a que os dispositivos se ligam. Exemplos: **192.168.1.1,** **vpn.contoso.com**.
 - **Método de autenticação**: escolha como os dispositivos serão autenticados no servidor VPN em:
   - **Certificados**: Sob **certificado de autenticação,** escolha um perfil de certificado SCEP ou PKCS que criou anteriormente para autenticar a ligação. Para obter mais informações sobre os perfis de certificado, veja [Como configurar certificados](../protect/certificates-configure.md).
   - **Nome de utilizador e palavra-passe**: Os utilizadores finais devem fornecer um nome de utilizador e uma senha para iniciar sessão no servidor VPN.
@@ -58,15 +58,15 @@ Criar um perfil de [configuração do dispositivo](vpn-settings-configure.md).
 Se tiver selecionado **VPN Personalizada**, configure estas definições adicionais:
 
 - **Identificador VPN**: Introduza um identificador para a aplicação VPN que está a utilizar. Este identificador é fornecido pelo seu fornecedor VPN.
-- **Introduzir pares de chave e valor para os atributos de VPN personalizados**: adicione ou importe **Chaves** e **Valores** para personalizar a sua ligação VPN. Estes valores são normalmente fornecidos pelo seu fornecedor VPN.
+- **Introduza os pares de chaves e valor para os atributos VPN personalizados**: Adicione ou importe **Chaves** e **Valores** que personalizem a sua ligação VPN. Estes valores são normalmente fornecidos pelo seu fornecedor VPN.
 
 ## <a name="proxy-settings"></a>Definições de proxy
 
 - **Script de configuração automática**: utilize um ficheiro para configurar o servidor proxy. Introduza o **URL do servidor proxy**, que contém o ficheiro de configuração. Por exemplo, introduza `http://proxy.contoso.com`.
 - **Endereço**: Introduza o endereço do servidor proxy (como endereço IP).
-- **Número de porta**: introduza o número de porta associado ao servidor proxy.
+- **Número**da porta : Introduza o número de porta associado ao servidor proxy.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

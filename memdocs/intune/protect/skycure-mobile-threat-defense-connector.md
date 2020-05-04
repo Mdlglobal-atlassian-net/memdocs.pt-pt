@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275089"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Conector do Symantec Endpoint Protection Mobile
@@ -98,7 +98,7 @@ Quando forem detetadas aplicações maliciosas, como software maligno, nos dispo
 
 Detete ameaças como **Man-in-the-middle** na rede e proteja o acesso às redes Wi-Fi com base no risco do dispositivo.
 
-*Bloquear o acesso à rede através de Wi-Fi:*
+*Bloquear o acesso à rede através do Wi-Fi:*
 
 ![Bloquear o acesso à rede através de Wi-Fi](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
@@ -110,7 +110,7 @@ Detete ameaças como **Man-in-the-middle** na rede e proteja o acesso às redes 
 
 Detete ameaças na rede, tais como ataques **Man-in-the-middle**, e impeça a sincronização de ficheiros empresariais com base no risco do dispositivo.
 
-*Bloquear o SharePoint Online quando forem detetadas ameaças à rede:*
+*Block SharePoint Online quando são detetadas ameaças de rede:*
 
 ![Bloquear o SharePoint Online quando forem detetadas ameaças à rede](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
@@ -129,7 +129,7 @@ Access is granted on remediation:
 ![Access is granted on remediation for App protection policy](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png)
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Veja a seguir os passos necessários para integrar o Intune com o SEP Mobile:
 
