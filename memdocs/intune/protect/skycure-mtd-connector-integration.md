@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80525224"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Configurar a integração do Symantec Endpoint Protection Mobile com o Intune
@@ -105,7 +105,7 @@ O SEP Mobile sincroniza os dispositivos que executam o serviço Defesa Contra Am
 
 2. Escreva “Active Directory” na caixa de pesquisa e, em seguida, selecione **Azure Active Directory**.
 
-3. Selecione **Propriedades**.
+3. Escolha **Propriedades**.
 
 4. Junto a **ID do Diretório**, escolha o ícone de copiar e, em seguida, cole-o numa localização segura. Vai precisar deste identificador num passo posterior.
 
@@ -126,13 +126,13 @@ O SEP Mobile sincroniza os dispositivos que executam o serviço Defesa Contra Am
 
 2. Introduza as **credenciais de administrador do SEP Mobile** e, em seguida, escolha **Continuar**.
 
-3. Aceda à secção **Definições** > **Integrações** > **Intune** > **Seleção da Integração de EMM**.
+3. Vá à **Settings** > secção de**Seleção** > de**Integração em EMM** **intune.** > 
 
 4. No caixa **ID do Diretório**, cole o ID do Diretório que copiou do Azure Active Directory na secção anterior e guarde as definições.
 
     ![Imagem que mostra o ID do Diretório no portal do SEP Mobile](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
 
-5. Aceda à secção **Definições** > **Integrações** > **Intune** > **Configuração Básica**.
+5. Vá à **Settings** > secção de**Configurações Integrações** > **Intune** > **Basic Setup.**
 
 6. Junto a **Aplicação iOS**, escolha o botão **Adicionar ao Active Directory**.
 
@@ -150,9 +150,9 @@ O SEP Mobile sincroniza os dispositivos que executam o serviço Defesa Contra Am
 
     ![Imagem que mostra os grupos de utilizadores para aplicações do SEP Mobile](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
 
-11. O SEP Mobile sincroniza os dispositivos nos grupos selecionados e começa a comunicar informações ao Intune. Pode ver estes dados na secção Integração Total. Aceda à secção **Definições** > **Integrações** > **Intune** > **Integração Total**.
+11. O SEP Mobile sincroniza os dispositivos nos grupos selecionados e começa a comunicar informações ao Intune. Pode ver estes dados na secção Integração Total. Vá à secção**integrações** > de **definições** > **Intune** > **Full Integration.**
 
      ![Imagem que mostra a integração total do SEP Mobile concluída](./media/skycure-mtd-connector-integration/symantec-portal-basic-status.PNG)
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Configurar as aplicações do SEP Mobile](mtd-apps-ios-app-configuration-policy-add-assign.md)

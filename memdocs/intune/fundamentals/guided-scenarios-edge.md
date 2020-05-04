@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331473"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Cenário guiado - Implementar Microsoft Edge para Mobile
@@ -88,7 +88,7 @@ O passo final permite-lhe rever um resumo das definições configuradas. Depois 
 > [!IMPORTANT]
 > Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estas resouces não será guardada.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Aumente a segurança da utilização do Microsoft Edge, criando a integração da política de proteção de aplicações Intune. Para mais informações, consulte as políticas de [proteção de aplicações para o Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
 - Se tiver sites intranet para incluir, explore a proteção do acesso com a integração do Proxy de Aplicação Azure. Para mais informações, consulte as definições de Proxy de [Aplicação Configurada para o Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).

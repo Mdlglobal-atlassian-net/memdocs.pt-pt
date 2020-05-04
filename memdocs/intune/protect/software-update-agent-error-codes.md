@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325269"
 ---
-# <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Códigos de erro do agente de atualização de software e descrições no Microsoft Intune
+# <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Descrições e códigos de erro do agente de atualização de software no Microsoft Intune
 
 A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se não encontrar um código de erro específico nesta tabela, consulte a lista de [códigos](https://support.microsoft.com/help/938205/windows-update-error-code-list)de erro do Windows Update .
 
@@ -136,7 +136,7 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cf3FFD**|OM_E_NON_UI_MODE|Não é possível mostrar a IU no modo não IU. Os módulos de IU do cliente do Windows Update poderão não estar instalados.|
 |**0x80cf3FFE**|OM_E_WUCLTUI_UNSUPPORTED_VERSION|Esta versão das funções de IU exportadas do cliente WU não é suportada.|
 |**0x80cf3FFF**|OM_E_AUCLIENT_UNEXPECTED|Ocorreu um erro de interface de utilizador que não é abrangido por outro código de erro OM_E_AUCLIENT_&#42;.|
-|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|O mesmo que **SOAPCLIENT_SOAPFAULT**. O cliente SOAP falhou porque ocorreu uma falha SOAP do tipo de código de erro **OM_E_PT_SOAP_&#42;** .|
+|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|O mesmo que **SOAPCLIENT_SOAPFAULT**. O cliente SOAP falhou porque ocorreu uma falha SOAP do tipo de código de erro **OM_E_PT_SOAP_&#42;**.|
 |**0x80cf4008**|OM_E_PT_SOAPCLIENT_PARSEFAULT|O mesmo que **SOAPCLIENT_PARSEFAULT_ERROR**.  O cliente SOAP não analisou um erro de falha SOAP.|
 |**0x80cf400A**|OM_E_PT_SOAPCLIENT_PARSE|O mesmo que **SOAPCLIENT_PARSE_ERROR**.  O cliente SOAP não analisou a resposta do servidor.|
 |**0x80cf400B**|OM_E_PT_SOAP_VERSION|O mesmo que **SOAP_E_VERSION_MISMATCH**. O cliente SOAP detetou um espaço de nomes irreconhecível no envelope SOAP.|
@@ -167,7 +167,7 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cf4028**|OM_E_PT_NO_AUTH_COOKIES_CREATED|O agente não conseguiu criar nenhum cookie de autenticação válido.|
 |**0x80cf4029**|OM_E_PT_INVALID_CONFIG_PROP|Um valor de propriedade de configuração estava incorreto.|
 |**0x80cf402A**|OM_E_PT_CONFIG_PROP_MISSING|Um valor de propriedade de configuração estava em falta.|
-|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Não foi possível concluir o pedido HTTP e o motivo não correspondeu a nenhum dos códigos de erro **OM_E_PT_HTTP_&#42;** .|
+|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Não foi possível concluir o pedido HTTP e o motivo não correspondeu a nenhum dos códigos de erro **OM_E_PT_HTTP_&#42;**.|
 |**0x80cf402C**|OM_E_PT_WINHTTP_NAME_NOT_RESOLVED|O mesmo que **ERROR_WINHTTP_NAME_NOT_RESOLVED**. Não é possível resolver o servidor proxy ou o nome do servidor de destino.|
 |**0x80cf402F**|OM_E_PT_ECP_SUCCEEDED_WITH_ERRORS|O processamento do ficheiro .cab externo foi concluído com alguns erros.|
 |**0x80cf4030**|OM_E_PT_ECP_INIT_FAILED|A inicialização do processador de ficheiros .cab externos não foi concluída.|
@@ -176,7 +176,7 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cf4033**|OM_E_PT_ECP_FAILURE_TO_EXTRACT_DIGEST|Não foi possível extrair o resumo de ficheiro de um ficheiro .cab externo.|
 |**0x80cf4034**|OM_E_PT_ECP_FAILURE_TO_DECOMPRESS_CAB_FILE|Não foi possível descomprimir um ficheiro .cab externo.|
 |**0x80cf4035**|OM_E_PT_ECP_FILE_LOCATION_ERROR|O processador de ficheiros .cab externos não conseguiu obter a localização dos ficheiros.|
-|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Ocorreu um erro de comunicação que não é abrangido por outro código de erro **OM_E_PT_&#42;** .|
+|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Ocorreu um erro de comunicação que não é abrangido por outro código de erro **OM_E_PT_&#42;**.|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Não foi possível concluir uma operação do gestor de transferências porque o ficheiro pedido não tem um URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Não foi possível concluir uma operação do gestor de transferências porque o resumo do ficheiro não foi reconhecido.|
 |**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Não foi possível concluir uma operação do gestor de transferências porque os metadados do ficheiro pediram um algoritmo hash não reconhecido.|
@@ -186,7 +186,7 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cf6009**|OM_E_DM_BITSTRANSFERERROR|Uma operação do gestor de transferências falhou porque ocorreu um erro não especificado numa transferência do Serviço de Transferência Inteligente em Segundo Plano (BITS).|
 |**0x80cf600a**|OM_E_DM_DOWNLOADLOCATIONCHANGED|É necessário reiniciar uma transferência porque a localização da origem da transferência foi alterada.|
 |**0x80cf600B**|OM_E_DM_CONTENTCHANGED|É necessário reiniciar uma transferência porque o conteúdo da atualização foi alterado numa nova revisão.|
-|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Ocorreu um erro do gestor de transferências que não é abrangido por outro código de erro **OM_E_DM_&#42;** .|
+|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Ocorreu um erro do gestor de transferências que não é abrangido por outro código de erro **OM_E_DM_&#42;**.|
 |**0x80cf7003**|OM_E_INVALID_EVENT_PAYLOAD|Foi especificada uma payload do evento que não é válida.|
 |**0x80cf7004**|OM_E_INVALID_EVENT_PAYLOADSIZE|O tamanho da payload do evento submetido não é válido.|
 |**0x80cf7005**|OM_E_SERVICE_NOT_REGISTERED|O serviço não está registado.|
@@ -218,13 +218,13 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cf801B**|OM_E_DS_SCHEMAMISMATCH|O esquema do arquivo de dados atual e o esquema de uma tabela num documento XML de cópia de segurança não correspondem.|
 |**0x80cf801C**|OM_E_DS_RESETREQUIRED|É necessário repor a sessão do arquivo de dados. Liberte a sessão e tente novamente com uma nova sessão.|
 |**0x80cf801D**|OM_E_DS_IMPERSONATED|Não foi possível concluir uma operação do arquivo de dados porque foi pedida com uma identidade representada.|
-|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Ocorreu um erro do arquivo de dados que não é abrangido por outro código **OM_E_DS_&#42;** .|
+|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Ocorreu um erro do arquivo de dados que não é abrangido por outro código **OM_E_DS_&#42;**.|
 |**0x80cfA000**|OM_E_AU_NOSERVICE|As Atualizações Automáticas não conseguiram dar resposta aos pedidos recebidos.|
 |**0x80cfA004**|OM_E_AU_PAUSED|As Atualizações Automáticas não conseguiram processar os pedidos recebidos porque estavam em pausa.|
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|Não está registado nenhum serviço não gerido nas Atualizações Automáticas.|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|O serviço predefinido registado nas Atualizações Automáticas foi alterado durante a pesquisa.|
 |**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|As Atualizações Automáticas já estão a pedir ao utilizador para reiniciar.|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Ocorreu um erro das Atualizações Automáticas que não é abrangido por outro código **OM_E_AU &#42;** .|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Ocorreu um erro das Atualizações Automáticas que não é abrangido por outro código **OM_E_AU &#42;**.|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|Não foi possível concluir uma operação do avaliador de expressões porque uma expressão não foi reconhecida.|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|Não foi possível concluir uma operação do avaliador de expressões porque uma expressão não era válida.|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|Não foi possível concluir uma operação do avaliador de expressões porque uma expressão contém um número incorreto de nós de metadados.|
@@ -232,7 +232,7 @@ A seguinte tabela indica os códigos de erro do **Update Agent** do Intune. Se n
 |**0x80cfE005**|OM_E_EE_NOT_INITIALIZED|Não foi possível inicializar o avaliador de expressões.|
 |**0x80cfE006**|OM_E_EE_INVALID_ATTRIBUTEDATA|Não foi possível concluir uma operação do avaliador de expressões porque um atributo não é válido.|
 |**0x80cfE007**|OM_E_EE_CLUSTER_ERROR|Não foi possível concluir uma operação do avaliador de expressões porque não foi possível determinar o estado cluster do computador.|
-|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Ocorreu um erro do avaliador de expressões que não é abrangido por outro código de erro **OM_E_EE_&#42;** .|
+|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Ocorreu um erro do avaliador de expressões que não é abrangido por outro código de erro **OM_E_EE_&#42;**.|
 |**0x80cfF001**|OM_E_REPORTER_EVENTCACHECORRUPT|O ficheiro de cache de eventos estava danificado.|
 |**0x80cfF002**|OM_E_REPORTER_EVENTNAMESPACEPARSEFAILED|Não foi possível analisar o XML no descritor do espaço de nomes do evento.|
 |**0x80cfF003**|OM_E_INVALID_EVENT|O XML no descritor do espaço de nomes do evento não é válido.|

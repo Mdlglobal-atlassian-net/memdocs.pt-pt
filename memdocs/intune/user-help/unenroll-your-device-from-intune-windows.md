@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327797"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Remover o seu dispositivo Windows da gestão
@@ -33,7 +33,7 @@ Remova um dispositivo Windows registado da gestão quando já não quiser ou nã
 * Aceder ao e-mail, aplicações e outros recursos escolares ou profissionais.
 
 Depois de anular o registo do dispositivo, vai perder o acesso do dispositivo aos recursos da escola ou do trabalho. Pode remover os seguintes dispositivos Windows da gestão.  
-* Dispositivos com o Windows 10 
+* Dispositivos Windows 10 
 * Computadores com o Windows 8.1
 * Telemóvel com o Windows 8.1
  
@@ -57,7 +57,7 @@ Conclua os seguintes passos para remover um dispositivo com o Windows 10 da gest
 
     ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows, home page, com destaque da secção My Devices (Os Meus Dispositivos).](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Clique com o botão direito do rato ou mantenha premido qualquer dispositivo para abrir o respetivo [menu de contexto](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Clique à direita ou pressione e segure um dispositivo para abrir o seu menu de [contexto](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
 
 3. Selecione **Remover**.  
 
@@ -70,14 +70,14 @@ Conclua os seguintes passos para remover um dispositivo com o Windows 10 da gest
 
 ### <a name="remove-in-device-settings-app"></a>Remover na aplicação Definições do dispositivo
 1. Abra a aplicação Definições. 
-2. Vá para **Contas** > **Acesso profissional ou escolar**.
+2. Ir ao trabalho de acesso às **Contas** > **ou à escola.**
 3. Selecione a conta ligada que pretende remover e, em seguida, selecione **Desligar**.
 4. Para confirmar a remoção do dispositivo, selecione **Sim**.
 
 ## <a name="remove-your-windows-81-computer"></a>Remover o seu computador com o Windows 8.1
 Conclua os seguintes passos para remover um computador com o Windows 8.1 do Intune.
 
-1. Aceda a **Definições do PC** > **Rede** > **Área de Trabalho**.
+1. Vá ao**local de trabalho**da**rede** >  **de definições** > do PC .
 2. Em **Associação à Área de Trabalho**, selecione **Sair**.
 3. Em **Ativar gestão de dispositivos**, selecione **Desativar**.
 4. Na janela de pop-up que é aberta, selecione **Desativar**.
@@ -85,7 +85,7 @@ Conclua os seguintes passos para remover um computador com o Windows 8.1 do Intu
 ## <a name="remove-your-windows-81-phone"></a>Remover o seu telemóvel com o Windows 8.1
 Conclua os seguintes passos para remover um telemóvel com o Windows 8.1 do Intune.
 
-1. Aceda a **Definições** > **Área de trabalho**.
+1. Ir ao**Local de Trabalho** **definições** > .
 2. Toque na conta da área de trabalho cuja inscrição quer anular.
 3. Toque em **Eliminar**, na parte inferior do ecrã.
 4. Na caixa de diálogo **Eliminar conta**, toque em **Eliminar**.  
@@ -100,6 +100,6 @@ Para eliminar a cache e os registos armazenados, siga um dos seguintes passos:
 
 * [Desinstalar a aplicação Portal da Empresa](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
 
-* Repor a aplicação Portal da Empresa. Abra a aplicação **Definições** e selecione **Aplicações** > **Portal da Empresa** > **Opções avançadas** > **Repor**. 
+* Repor a aplicação Portal da Empresa. Abra a aplicação **Definições** e selecione >**Portal** > de **Aplicações** > **Opções Avançadas** > **Reset**. 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

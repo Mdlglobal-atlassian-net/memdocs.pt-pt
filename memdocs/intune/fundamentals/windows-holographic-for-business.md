@@ -17,13 +17,13 @@ search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326629"
 ---
-# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gerir e utilizar funcionalidades de gestão de dispositivos diferentes no Windows Holographic e dispositivos HoloLens com o Intune
+# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gerir e utilizar diferentes funcionalidades de gestão de dispositivos em dispositivos Holográficos e HoloLens do Windows com Intune
 
 O Microsoft Intune inclui muitos recursos para ajudar a gerir dispositivos que executam o Windows Holographic for Business, tais como o [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Ao utilizar o Intune, pode confirmar que os dispositivos estão em conformidade com as regras da sua organização e pode personalizar o dispositivo ao adicionar uma VPN ou um perfil Wi-Fi. Outra funcionalidade importante é utilizar o dispositivo como um quiosque e executar uma aplicação específica ou um conjunto específico de aplicações.
 
@@ -35,15 +35,15 @@ Para utilizar dispositivos Windows Holographic com o Intune, crie um perfil de A
 
 O Azure Active Directory (AD) é um ótimo recurso para o ajudar a gerir e controlar os seus dispositivos com o Windows Holographic for Business. Com o Intune e o Azure AD, pode: 
 
-- **[Junte-se a dispositivos ao Azure Ative Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** : In Azure Ative Directory (AD), pode adicionar os seus dispositivos Windows 10, incluindo dispositivos que executam o Windows Holographic para o Negócios. Esta funcionalidade permite que o Azure AD controle o dispositivo. Ajuda a confirmar que os seus utilizadores estão a aceder aos recursos da empresa a partir de dispositivos que cumprem as normas de segurança e conformidade que estabeleceu.
+- **[Junte-se a dispositivos ao Azure Ative Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: In Azure Ative Directory (AD), pode adicionar os seus dispositivos Windows 10, incluindo dispositivos que executam o Windows Holographic para o Negócios. Esta funcionalidade permite que o Azure AD controle o dispositivo. Ajuda a confirmar que os seus utilizadores estão a aceder aos recursos da empresa a partir de dispositivos que cumprem as normas de segurança e conformidade que estabeleceu.
 
   [A gestão de dispositivos em Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) fornece mais detalhes.
 
-- **[Inscrever dispositivos Windows em massa](../enrollment/windows-bulk-enroll.md)** : pode associar inúmeros dispositivos Windows novos ao Azure Active Directory e ao Intune. Esta funcionalidade chama-se inscrição em massa e utiliza pacotes de aprovisionamento. Estes pacotes associam os dispositivos com o Windows Holographic for Business ao seu inquilino do Azure AD e inscrevem-nos no Intune.
+- **[Inscrever dispositivos Windows em massa](../enrollment/windows-bulk-enroll.md)**: pode associar inúmeros dispositivos Windows novos ao Azure Active Directory e ao Intune. Esta funcionalidade chama-se inscrição em massa e utiliza pacotes de aprovisionamento. Estes pacotes associam os dispositivos com o Windows Holographic for Business ao seu inquilino do Azure AD e inscrevem-nos no Intune.
 
-## <a name="company-portal"></a>Company Portal
+## <a name="company-portal"></a>Portal da Empresa
 
-**[Configurar a aplicação Portal da Empresa](../apps/company-portal-app.md)**
+**[Configure a aplicação Portal da Empresa](../apps/company-portal-app.md)**
 
 O Intune inclui a aplicação Portal da Empresa para que os utilizadores acedam aos dados da empresa, inscrevam dispositivos, instalem aplicações, contactem o respetivo departamento de TI, entre outros. Pode personalizar a aplicação Portal da Empresa para os seus dispositivos com o Windows Holographic for Business.
 
@@ -56,11 +56,11 @@ Com a aplicação Portal da Empresa, também pode realizar as seguintes ações:
 
 ## <a name="compliance-policy"></a>Política de conformidade
 
-**[Criar uma política de conformidade de dispositivo](../protect/compliance-policy-create-windows.md)**
+**[Criar uma política de conformidade com dispositivos](../protect/compliance-policy-create-windows.md)**
 
 As políticas de conformidade são regras e definições que os dispositivos têm de cumprir para estarem em conformidade. Utilize estas políticas com Acesso Condicional para bloquear o acesso aos recursos da empresa para dispositivos que não estejam em conformidade. No Intune, crie políticas de conformidade para permitir ou bloquear o acesso a dispositivos com o Windows Holographic for Business. Por exemplo, pode criar uma política que exija ativação do BitLocker.
 
-Veja também **[Introdução às políticas de conformidade](../protect/device-compliance-get-started.md)** .
+Veja também **[Introdução às políticas de conformidade](../protect/device-compliance-get-started.md)**.
 
 ## <a name="deploy-and-manage-apps"></a>Implementar e gerir aplicações
 
@@ -91,11 +91,11 @@ O Intune tem algumas ações incorporadas que permitem que os administradores de
 
 Ao utilizar dispositivos com o Windows Holographic for Business, pode realizar as seguintes ações: 
 
-- **[Limpar](../remote-actions/devices-wipe.md#wipe)** : a ação **Limpar** remove o dispositivo do Intune e restaura as predefinições de fábrica do dispositivo. Utilize esta ação antes de dar o dispositivo a um novo utilizador ou se o dispositivo for perdido ou roubado.
+- **[Limpar](../remote-actions/devices-wipe.md#wipe)**: a ação **Limpar** remove o dispositivo do Intune e restaura as predefinições de fábrica do dispositivo. Utilize esta ação antes de dar o dispositivo a um novo utilizador ou se o dispositivo for perdido ou roubado.
 
-- **[Extinguir](../remote-actions/devices-wipe.md#retire)** : a ação **Extinguir** remove o dispositivo do Intune. Também remove os dados da aplicação gerida, as definições e os perfis de e-mail atribuídos pelo Intune. Os dados pessoais do utilizador permanecem no dispositivo.
+- **[Extinguir](../remote-actions/devices-wipe.md#retire)**: a ação **Extinguir** remove o dispositivo do Intune. Também remove os dados da aplicação gerida, as definições e os perfis de e-mail atribuídos pelo Intune. Os dados pessoais do utilizador permanecem no dispositivo.
 
-- **[Sincronizar dispositivos para obter as políticas e ações mais recentes](../remote-actions/device-sync.md)** : a ação **Sincronizar** força o dispositivo a comunicar imediatamente com o Intune. Quando um dispositivo comunica com o Intune, recebe imediatamente todas as ações ou políticas pendentes que tenham sido atribuídas ao mesmo. Esta funcionalidade ajuda-o a validar e a resolver as políticas que atribuiu, sem esperar pelo próximo check-in agendado.
+- **[Sincronizar dispositivos para obter as políticas e ações mais recentes](../remote-actions/device-sync.md)**: a ação **Sincronizar** força o dispositivo a comunicar imediatamente com o Intune. Quando um dispositivo comunica com o Intune, recebe imediatamente todas as ações ou políticas pendentes que tenham sido atribuídas ao mesmo. Esta funcionalidade ajuda-o a validar e a resolver as políticas que atribuiu, sem esperar pelo próximo check-in agendado.
 
 O tópico **[O que é a gestão de dispositivos do Microsoft Intune?](../remote-actions/device-management.md)** é um bom recurso para saber mais sobre como gerir dispositivos com o portal do Azure. 
 
@@ -151,12 +151,12 @@ O Intune inclui uma funcionalidade denominada cadência de atualizações para d
 
 Antes de os utilizadores inscreverem dispositivos e acederem às aplicações da sua empresa, incluindo ao e-mail, pode exigir que os utilizadores aceitem os termos e condições da sua empresa. No Intune, defina a forma como os termos e condições são apresentados no Portal da Empresa e atribua estes termos e condições a dispositivos com o Windows Holographic for Business.
 
-## <a name="windows-hello-for-business"></a>Windows Hello para Empresas
+## <a name="windows-hello-for-business"></a>Windows Hello para empresas
 
-**[Utilizar o Windows Hello para Empresas](../protect/windows-hello.md)**
+**[Use o Windows Hello para negócios](../protect/windows-hello.md)**
 
 O Hello para Empresas é um método de início de sessão alternativo que utiliza uma conta do Azure Active Directory para substituir uma palavra-passe, um smart card ou um smart card virtual. Com o Hello para Empresas, os seus dispositivos com o Windows Holographic for Business podem iniciar sessão com um PIN com um comprimento mínimo definido por si.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Configurar Intune](setup-steps.md).

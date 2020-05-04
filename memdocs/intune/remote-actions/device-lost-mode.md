@@ -1,5 +1,5 @@
 ---
-title: Ativar o iOS/iPadOS perdeu o modo com o Microsoft Intune - Azure  Microsoft Docs
+title: Ativar o iOS/iPadOS perdeu o modo com o Microsoft Intune - Azure [ Microsoft Docs
 description: Ligue ou comece a perder o modo para personalizar uma mensagem que aparece no ecrã de bloqueio de um dispositivo iOS/iPadOS perdido ou roubado utilizando o Microsoft Intune. Além disso, obtenha detalhes sobre as informações de segurança e privacidade quando utilizar a ação Modo perdido.
 keywords: ''
 author: ErikjeMS
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326519"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Ativar o modo perdido nos dispositivos iOS/iPadOS com Intune
@@ -44,7 +44,7 @@ Esta funcionalidade não é suportada para os seguintes sistemas:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selecione **Dispositivos** e, em seguida, selecione **Todos os dispositivos**.
-4. A partir da lista de dispositivos que gere, escolha um dispositivo iOS/iPadOS e, em seguida, escolha o **modo Perdido (apenas supervisionado)** .
+4. A partir da lista de dispositivos que gere, escolha um dispositivo iOS/iPadOS e, em seguida, escolha o **modo Perdido (apenas supervisionado)**.
 5. No **modo Perdido,** selecione **Ativar**.
 6. Na **Mensagem para visualizar no ecrã de bloqueio,** escreva uma mensagem para visualizar no ecrã de bloqueio do dispositivo.
 7. Opcionalmente, introduza um número de telefone no número de telefone para a caixa **de visualização.**
@@ -59,6 +59,6 @@ Ao ativar o modo perdido, bloqueia qualquer utilização do dispositivo. O utili
 - Os dados de localização são encriptados quando são armazenados e, igualmente, quando estão a ser transmitidos.
 - Na mensagem que introduzir para apresentar no ecrã de bloqueio, não se esqueça de incluir detalhes específicos para devolver o dispositivo perdido.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para ver o estado de ativação da funcionalidade Modo perdido, aceda a **Dispositivos** e selecione **Ações do dispositivo**.

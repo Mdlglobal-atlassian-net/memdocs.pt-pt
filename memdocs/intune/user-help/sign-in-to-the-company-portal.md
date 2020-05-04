@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4088185da2c01cfa7fd343203f7452d2796c4466
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324321"
 ---
 # <a name="sign-in-to-company-portal"></a>Inscreva-se no Portal da Empresa  
@@ -60,7 +60,7 @@ Só verá esta opção de início de sessão se a sua organização permitir a a
 
 1. Abra a aplicação Portal da Empresa no dispositivo.  
 
-2. Introduza a sua **Conta escolar ou profissional**.  
+2. Insira a sua **conta de Trabalho ou escola.**  
 
 3. Toque na ligação **Iniciar sessão com um certificado**.  
 
@@ -80,7 +80,7 @@ Se a sua empresa utilizar smartcards para aceder aos seus computadores, é prov�
 
    ![As instruções indicam para ir para a página https://microsoft.com/devicelogin com um código de acesso exclusivo a partir do computador de trabalho e, em seguida, para utilizar o código para iniciar sessão.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. No outro dispositivo (o que está a usar para autenticar), abra o seu navegador e vá para [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Insira ou colhe o código.  
+3. No outro dispositivo (o que está a usar para autenticar), [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)abra o seu navegador e vá para . Insira ou colhe o código.  
 
    ![Uma imagem do browser do utilizador no computador de trabalho em vez da aplicação Portal da Empresa. A página “Início de sessão do dispositivo” apresentada solicita ao utilizador o código que recebeu na aplicação Portal da Empresa.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -96,4 +96,4 @@ Se a sua empresa utilizar smartcards para aceder aos seus computadores, é prov�
 
    ![Depois do processo de autenticação, a aplicação Portal da Empresa inicia sessão, apresentando o respetivo processo com uma barra de carregamento.](./media/cp_ios_aad_signin_after_1804_007.png)
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

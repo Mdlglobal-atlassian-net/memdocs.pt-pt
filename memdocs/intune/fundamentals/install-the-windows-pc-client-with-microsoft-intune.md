@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331441"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalar o software de cliente do Intune em PCs Windows
@@ -46,18 +46,18 @@ Uma licença do Intune permite a instalação do software de cliente do Intune e
 
 Todos os métodos mencionados, com exceção daqueles em que os utilizadores instalam o software de cliente do Intune manualmente, exigem que os administradores de TI transfiram primeiro o software, de modo a que este possa ser implementado posteriormente para os utilizadores finais.
 
-1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)clique **em Admin** &gt; **Descarregamento**de Software cliente .
+1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)clique **em Admin** &gt; **Client Software Download**.
 
    ![Transferir o cliente de PC do Intune](./media/install-the-windows-pc-client-with-microsoft-intune/pc-sa-client-download.png)
 
-2. Na página **Client Software Download (Transferência de Software de Cliente)** , clique em **Client Software Download (Transferir Software de Cliente)** . Em seguida, guarde o pacote **Microsoft_Intune_Setup.zip** que contém o software numa localização segura na sua rede.
+2. Na página **Client Software Download (Transferência de Software de Cliente)**, clique em **Client Software Download (Transferir Software de Cliente)**. Em seguida, guarde o pacote **Microsoft_Intune_Setup.zip** que contém o software numa localização segura na sua rede.
 
    O pacote de instalação do software de cliente do Intune contém informações exclusivas e específicas sobre a sua conta, disponíveis num certificado incorporado. Se existirem utilizadores não autorizados que consigam obter acesso ao pacote de instalação, estes poderão inscrever PCs na conta representada pelo certificado incorporado e poderão obter acesso a recursos da empresa.
 
 3. Extraia os conteúdos do pacote de instalação para uma localização segura na sua rede.
 
     > [!IMPORTANT]
-    > Não mude o nome ou remova o ficheiro **ACCOUNTCERT** que é extraído ou a instalação de software de cliente falhará.
+    > Não mude o nome ou remova o ficheiro **ACCOUNTCERT** que é extraído, ou a instalação do software do cliente falhará.
 
 ## <a name="deploy-the-client-software-manually"></a>Implementar o software de cliente manualmente
 
@@ -86,7 +86,7 @@ Nos computadores onde pretende instalar o software de cliente, aceda à pasta on
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Implementar o software de cliente como parte de uma imagem
 Pode implementar o software de cliente do Intune em computadores como parte de uma imagem de sistema operativo, ao utilizar o seguinte procedimento como guia:
 
-1. Copie os ficheiros de instalação do cliente, **Microsoft_Intune_Setup.exe** e **MicrosoftIntune.accountcert**, para a pasta **%Systemdrive%\Temp\Microsoft_Intune_Setup** no computador de referência.
+1. Copie os ficheiros de instalação do cliente, **Microsoft_Intune_Setup.exe** e **MicrosoftIntune.accountcert,** para a pasta **%Systemdrive%\Temp\Microsoft_Intune_Setup** no computador de referência.
 
 2. Crie a entrada de registo **WindowsIntuneEnrollPending** ao adicionar o seguinte comando ao script **SetupComplete.cmd** :
 
@@ -108,7 +108,7 @@ Pode implementar o software de cliente do Intune em computadores como parte de u
 
 5. Capture uma imagem do computador de referência e, em seguida, efetue a implementação nos computadores visados.
 
-    Quando o computador de destino reiniciar no final da Configuração do Windows, é criada a chave de registo **WindowsIntuneEnrollPending**. O pacote de inscrição verifica se o computador está inscrito. Se o computador estiver inscrito, não é necessária mais nenhuma ação. Se o computador não estiver inscrito, o pacote de inscrição cria uma Tarefa de Inscrição Automática do Microsoft Intune.
+    Quando o computador de destino reiniciar no final da Configuração do Windows, é criada a chave de registo **WindowsIntuneEnrollPending** . O pacote de inscrição verifica se o computador está inscrito. Se o computador estiver inscrito, não é necessária mais nenhuma ação. Se o computador não estiver inscrito, o pacote de inscrição cria uma Tarefa de Inscrição Automática do Microsoft Intune.
 
     Quando a tarefa de inscrição automática for executada na próxima hora agendada, verifica a existência do valor de registo **WindowsIntuneEnrollPending** e tenta inscrever o PC de destino no Intune. Se a inscrição falhar por alguma razão, é repetida da próxima vez que a tarefa for executada. As repetições serão efetuadas durante um mês.
 
@@ -143,7 +143,7 @@ Para que os seus utilizadores possam instalar o software de cliente do PC, terá
 
   ![selecione a ligação Clique aqui para transferir](./media/install-the-windows-pc-client-with-microsoft-intune/enroll-your-windows-device.png)
 
-Quando os utilizadores clicam na ligação é-lhes apresentado o botão **Download Software (Transferir Software)** , o qual devem selecionar para iniciar a instalação do software de cliente do PC.
+Quando os utilizadores clicam na ligação é-lhes apresentado o botão **Download Software (Transferir Software)**, o qual devem selecionar para iniciar a instalação do software de cliente do PC.
 
   ![selecione o botão Download Software (Transferir Software)](./media/install-the-windows-pc-client-with-microsoft-intune/download-pc-client-software.png)
 
@@ -172,17 +172,17 @@ Utilize um dos seguintes procedimentos para ajudá-lo a monitorizar e a validar 
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Para verificar a instalação do software de cliente a partir da consola do administrador do Microsoft Intune
 
-1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)clique **em Grupos** &gt; **Todos os Dispositivos** &gt; **Todos os Computadores**.
+1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)clique em **Grupos** &gt; **Todos os Dispositivos** &gt; Todos os **Computadores**.
 
-2. Na lista, localize os computadores que estão a comunicar com o Intune ou procure um computador gerido específico ao escrever o nome do computador (ou qualquer parte do nome) na caixa **Search devices (Procurar dispositivos)** .
+2. Na lista, localize os computadores que estão a comunicar com o Intune ou procure um computador gerido específico ao escrever o nome do computador (ou qualquer parte do nome) na caixa **Search devices (Procurar dispositivos)**.
 
 3. Analise o estado do computador no painel inferior da consola. Resolva os erros existentes.
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Para criar um relatório de inventário de computadores para apresentar todos os computadores inscritos
 
-1. Na consola da [administração Microsoft Intune,](https://manage.microsoft.com/)clique em **Relatórios** &gt; Relatórios de **Inventário de Computadores**.
+1. Na consola da [administração Microsoft Intune,](https://manage.microsoft.com/)clique em **Relatórios** &gt; de **Inventário de Computadores**.
 
-2. Na página **Create New Report (Criar Novo Relatório)** , deixe os valores predefinidos em todos os campos (exceto se quiser aplicar filtros) e, em seguida, clique em **View Report (Ver Relatório)** .
+2. Na página **Create New Report (Criar Novo Relatório)**, deixe os valores predefinidos em todos os campos (exceto se quiser aplicar filtros) e, em seguida, clique em **View Report (Ver Relatório)**.
 
 3. A página **Relatório de Inventário de Computadores** é aberta numa nova janela que apresenta todos os computadores inscritos com êxito no Intune.
 
@@ -198,13 +198,13 @@ Existem duas formas de anular a inscrição do software de cliente do Windows:
 
 ### <a name="unenroll-by-using-the-intune-admin-console"></a>Anular a inscrição através da consola de administração do Intune
 
-Para anular a inscrição do software de cliente através da consola de administração do Intune, aceda a **Grupos** > **Todos os Computadores** > **Dispositivos**. Clique com o botão direito do rato no cliente e selecione **Extinguir/Limpar**.
+Para desinscrever o cliente do software utilizando a consola de administração Intune, vá a **Grupos** > Todos os**Dispositivos**de**Computadores** > . Clique com o botão direito do rato no cliente e selecione **Extinguir/Limpar**.
 
 ### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>Anular a inscrição através de uma linha de comandos no cliente
 
 Numa linha de comandos elevada, execute um dos seguintes comandos.
 
-**Método 1**:
+**Método 1:**
 
     "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
 
@@ -251,8 +251,8 @@ Numa linha de comandos elevada, execute um dos seguintes comandos.
 Verifique o caminho "%ProgramFiles%\Microsoft\OnlineManagement" e certifique-se de que são apresentados apenas os seguintes diretórios à esquerda:
 
 - AgentInstaller
-- Logs
-- Updates
+- Registos
+- Atualizações
 - Common
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Remover a pasta OnlineManagement
@@ -261,5 +261,5 @@ O processo de anulação da inscrição não remove a pasta OnlineManagement. Ag
 
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Tarefas de gestão comuns de PCs Windows com o cliente de software do Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

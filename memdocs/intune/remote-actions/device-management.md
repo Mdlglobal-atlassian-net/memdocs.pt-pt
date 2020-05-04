@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325273"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>O que é a gestão de dispositivos do Microsoft Intune?
@@ -61,16 +61,16 @@ As ações disponíveis dependem da plataforma do dispositivo e da configuraçã
   - [Rotação da tecla BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (apenas windows)
   - [Eliminar](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Bloqueio de ativação de desativação](device-activation-lock-disable.md) (apenas iOS)
-  - [Começar do Zero](device-fresh-start.md) (apenas no Windows)
+  - [Início Fresco](device-fresh-start.md) (apenas janelas)
   - [Digitalização completa](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (apenas windows 10)
-  - [Localizar dispositivo](device-locate.md) (apenas em iOS)
-  - [Modo perdido](device-lost-mode.md) (apenas em iOS)
+  - [Localizar dispositivo](device-locate.md) (apenas iOS)
+  - [Modo perdido](device-lost-mode.md) (apenas iOS)
   - [Sondagem rápida](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (apenas windows 10)
   - [Controlo remoto do Android](teamviewer-support.md)
   - [Bloqueio remoto](device-remote-lock.md)
-  - [Rename device (Mudar o nome de dispositivos)](device-rename.md)
+  - [Mudar o nome de dispositivos](device-rename.md)
   - [Repor código de acesso](device-passcode-reset.md)
-  - [Reiniciar](device-restart.md) (apenas no Windows)
+  - [Reiniciar](device-restart.md) (apenas windows)
   - [Extinguir](devices-wipe.md#retire)
   - [Atualizar a Inteligência de Segurança do Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Reposição do PIN do Windows 10](device-windows-pin-reset.md)
@@ -79,7 +79,7 @@ As ações disponíveis dependem da plataforma do dispositivo e da configuraçã
   - [Sincronizar o dispositivo](device-sync.md)
 - [Ações de dispositivos a granel](bulk-device-actions.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Em **Todos os dispositivos**, selecione um dispositivo para ver mais detalhes sobre esse dispositivo específico.
 - Selecione **Ações do dispositivo** para ver o estado das ações efetuadas nos dispositivos que gere.

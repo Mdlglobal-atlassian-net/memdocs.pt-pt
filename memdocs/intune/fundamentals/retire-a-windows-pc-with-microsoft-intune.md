@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7d88b5ba8f5071821d1a9901a26bfb4a5a6fbd3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330677"
 ---
 # <a name="retire-a-windows-pc"></a>Extinguir um PC Windows
@@ -31,7 +31,7 @@ ms.locfileid: "79330677"
 
 Siga os seguintes passos para extinguir computadores que está a gerir como PCs através da execução do cliente de software do Intune nos mesmos. Quando extingue um PC, este é removido da gestão do Intune. Não é possível apagar um PC a partir do Intune para restaurar as respetivas definições de fábrica originais.
 
-1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)escolha **Grupos** &gt; **Todos os Dispositivos** (ou outro grupo que contenha o PC que pretende reformar).
+1. Na [consola de administração do Microsoft Intune](https://manage.microsoft.com/), selecione **Grupos** &gt; **Todos os Dispositivos** (ou outro grupo que contenha o PC que quer extinguir).
 
 2. Selecione os dispositivos que pretende extinguir e, em seguida, escolha **Extinguir/Limpar**.
 
@@ -60,6 +60,6 @@ Quando extingue um PC:
 
     Se o cliente do Endpoint Protection não for desinstalado, leia [Resolução de problemas do Endpoint Protection](/intune/troubleshoot-endpoint-protection-in-microsoft-intune) para obter mais ajuda.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Tarefas de gestão comuns de PCs Windows com o cliente de software do Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

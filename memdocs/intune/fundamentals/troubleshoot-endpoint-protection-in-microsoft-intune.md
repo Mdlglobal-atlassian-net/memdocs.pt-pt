@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330437"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemas de proteção de endpoint e possíveis soluções no Microsoft Intune
@@ -43,7 +43,7 @@ Reveja os registos de eventos e códigos de erro para [resolver problemas com](h
 
 - Se a proteção de pontofinal for corrupta ou não atualizar, em seguida, atualize ou reinstale o programa.
 - Forçar uma atualização imediata. No programa de cliente de proteção de pontofinal (possivelmente na barra de tarefas), escolha **Atualização**.
-- Em Control Panel > Programs, selecione **Microsoft Intune Endpoint Protection Agent**. Desinstale a aplicação.
+- Nos programas > painel de controlo, selecione **Microsoft Intune Endpoint Protection Agent**. Desinstale a aplicação.
 - Durante a próxima sincronização de atualizações, o Gestor de Atualizações do Microsoft Online Management deteta o programa em falta e reinstala-o na hora de instalação agendada.
 
 ### <a name="features-are-disabled"></a>As funcionalidades são desativadas
@@ -82,6 +82,6 @@ Outra aplicação de proteção de ponto final está em execução, e o disposit
 
 **Soluções possíveis**: Se for instalada outra aplicação de proteção de pontofinal e o Intune detetar essa aplicação, o dispositivo pode tornar-se instável.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Obtenha [ajuda de suporte da Microsoft](get-support.md), ou use os [fóruns comunitários](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

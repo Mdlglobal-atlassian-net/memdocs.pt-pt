@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: bdf7df00b167ac50b9827326e963eb904836e171
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327565"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Resolver uma ameaça encontrada pelo Lookout for Work  
+# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Resolver uma ameaça detetada pelo Lookout for Work  
 
 A aplicação Lookout for Work é um serviço do Mobile Threat Defender que identifica potenciais ameaças no seu dispositivo iOS. Estas ameaças são comunicadas à aplicação Portal da Empresa e são apresentadas nessa aplicação como problemas de não conformidade por resolver. Enquanto estas ameaças estiverem presentes, poderá não ser possível:
 

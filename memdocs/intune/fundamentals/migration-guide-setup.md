@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331193"
 ---
 # <a name="basic-setup"></a>Configuração básica
@@ -35,9 +35,9 @@ O Intune precisa do Azure Active Directory (AAD) como o fornecedor de identidade
 
 - [Requisitos de identidade](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [Requisitos da sincronização de diretórios](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Requisitos de sincronização do diretório](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [Autenticação de vários fatores (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [Planear os grupos de utilizadores e de dispositivos](users-add.md)
 
@@ -51,7 +51,7 @@ Se estiver a planear utilizar a autenticação baseada em certificados para perf
 
 - [Como configurar a infraestrutura de certificados para o SCEP](/intune/certificates-scep-configure)
 
-- [Como configurar a infraestrutura de certificados para o PFX](/intune/certficates-pfx-configure).
+- [Como configurar a infraestrutura de certificados para PFX](/intune/certficates-pfx-configure).
 
 ## <a name="task-list-for-an-intune-setup"></a>Lista de tarefas para uma configuração do Intune
 
@@ -78,4 +78,4 @@ Saiba [como definir a autoridade de gestão móvel](mdm-authority-set.md).
 
 ## <a name="next-step"></a>Passo seguinte
 
-Configurar [políticas de gestão de aplicações e dispositivos](migration-guide-configure-policies.md).
+Configure as políticas de gestão de [dispositivos e aplicações.](migration-guide-configure-policies.md)

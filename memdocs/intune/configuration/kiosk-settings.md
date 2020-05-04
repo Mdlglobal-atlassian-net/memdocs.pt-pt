@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359162"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Windows 10 e Windows Holographic para configurações de dispositivos empresariais funcionam como um quiosque dedicado usando Intune
@@ -42,11 +42,11 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
    - **Nome**: introduza um nome descritivo para o novo perfil.
-   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+   - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
    - **Plataforma**: selecione **Windows 10 e posterior**
    - **Tipo de perfil**: Selecione **Quiosque**
 
@@ -62,11 +62,11 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
       - [Definições de quiosque do Windows 10](kiosk-settings-windows.md)
       - [Windows Holographic para configurações de quiosque de negócios](kiosk-settings-holographic.md)
 
-5. Assim que terminar, selecione **OK** > **Criar** para guardar as alterações.
+5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
 
 O perfil é criado e mostrado na lista de perfis. Em seguida, [atribua](device-profile-assign.md) o perfil.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 
@@ -74,5 +74,5 @@ Pode criar perfis de quiosque para dispositivos que executem as seguintes plataf
 
 - [Administrador de dispositivos Android](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
-- [Windows 10 e posterior](kiosk-settings-windows.md)
+- [Windows 10 e posterior](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

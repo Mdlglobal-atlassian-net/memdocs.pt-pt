@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4e2c16a4002d807ba7665e53eea7347d498f8981
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327789"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Precisa de atualizar o seu dispositivo iOS para instalar o Outlook
@@ -36,6 +36,6 @@ A aplicação Outlook ajuda milhões de utilizadores a ligarem-se às respetivas
 
 Por vezes, o processo de instalação de uma aplicação pode falhar se o dispositivo não estiver atualizado. 
 
-Para atualizar, toque em **Definições** > **Geral** > **Atualização de Software**.
+Para atualizar, toque em **Definições** > **Geral** > **de Atualização**de Software .
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

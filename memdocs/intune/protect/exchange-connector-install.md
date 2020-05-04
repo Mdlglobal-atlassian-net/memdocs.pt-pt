@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327488"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Configurar o conector Intune Exchange no local
@@ -60,7 +60,7 @@ A tabela seguinte enumera os requisitos para o computador no qual instala o cone
 | Hardware              | O computador onde irá instalar o conector requer uma CPU de 1,6 GHz com 2 GB de RAM e, pelo menos, 10 GB de espaço livre no disco. |
 |  Sincronização do Active Directory             | Antes de utilizar o conector para ligar o Intune ao seu servidor De troca, instale a [sincronização do Diretório Ativo](../fundamentals/users-add.md). Os seus utilizadores locais e grupos de segurança devem ser sincronizados com a sua instância de Diretório Ativo Azure. |
 | Software adicional         | O computador que acolhe o conector deve ter uma instalação completa da Microsoft .NET Framework 4.5 e do Windows PowerShell 2.0. |
-| Rede               | O computador no qual instala o conector deve estar num domínio que tenha uma relação de confiança com o domínio que acolhe o seu servidor De troca.<br /><br />Configure o computador para permitir o acesso ao serviço Intune através de firewalls e servidores proxy através das portas 80 e 443. Intune usa estes domínios: <br> - manage.microsoft.com <br> -  \*  manage.microsoft.com<br> - \*.manage.microsoft.com <br><br> O conector Intune Exchange comunica com os seguintes serviços: <br> - Serviço insinado: porta HTTPS 443 <br> - Servidor de acesso a clientes de troca (CAS): porta de serviço WinRM 443<br> - Trocar Autodiscover 443<br> - Serviços Web de Intercâmbio (EWS) 443  |
+| Rede               | O computador no qual instala o conector deve estar num domínio que tenha uma relação de confiança com o domínio que acolhe o seu servidor De troca.<br /><br />Configure o computador para permitir o acesso ao serviço Intune através de firewalls e servidores proxy através das portas 80 e 443. Intune usa estes domínios: <br> - manage.microsoft.com <br> - \*manage.microsoft.com<br> - \*.manage.microsoft.com <br><br> O conector Intune Exchange comunica com os seguintes serviços: <br> - Serviço insinado: porta HTTPS 443 <br> - Servidor de acesso a clientes de troca (CAS): porta de serviço WinRM 443<br> - Trocar Autodiscover 443<br> - Serviços Web de Intercâmbio (EWS) 443  |
 
 ### <a name="exchange-cmdlet-requirements"></a>Requisitos de cmdlets do Exchange
 
@@ -85,12 +85,12 @@ Num servidor Windows que pode suportar o conector Intune Exchange:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Use uma conta que é um administrador no servidor de troca no local e que tem uma licença para usar o Exchange Server.
 
-2. Selecione **a administração do Inquilino** > Exchange **access**.
+2. Selecione **Administração** > de**InquilinoS Acesso de troca**.
 
 3. Em **Configuração,** escolha **o conector Exchange ActiveSync no local** e, em seguida, selecione **Adicionar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Adicionar um conector On-Preserção De Intercâmbio ActiveSync no local](./media/exchange-connector-install/add-connector.png)
+   > ![Adicione um conector Exchange ActiveSync no local](./media/exchange-connector-install/add-connector.png)
 
 4. Na página **Add Connector,** selecione **Descarregue o conector no local**. O conector Intune Exchange encontra-se numa pasta comprimido (.zip) que pode ser aberta ou guardada. Na caixa de diálogo **de descarregamento** de ficheiros, escolha **guardar** para armazenar a pasta comprimido num local seguro.
 
@@ -117,13 +117,13 @@ Siga estes passos para instalar o conector Intune Exchange. Se tiver várias org
 
    1. Open Outlook para o Office 365.
 
-   2. Escolha o ícone **?** ícone no canto superior esquerdo e, em seguida, selecione **Cerca**de .
+   2. Escolha **o.** ícone no canto superior esquerdo e, em seguida, selecione **Cerca**de .
 
-   3. Localize o valor do **Servidor POP Externo** .
+   3. Localize o valor do **Servidor POP Externo**.
 
    4. Escolha o **Servidor Proxy** para especificar as definições do servidor proxy do seu servidor do Exchange alojado.
 
-       1. Selecione **Utilizar um servidor proxy ao sincronizar informações de dispositivos móveis**.
+       1. Selecione **Utilize um servidor proxy ao sincronizar informações sobre dispositivos móveis**.
 
        1. Introduza o **nome do servidor proxy** e o **número de porta** a utilizar para aceder ao servidor.
 
@@ -142,7 +142,7 @@ Siga estes passos para instalar o conector Intune Exchange. Se tiver várias org
    > [!NOTE]
    > A conta que usa para assinar com o inquilino precisa de ser pelo menos um administrador de serviço intune. Sem esta conta de administrador, obterá uma ligação falhada com o erro "O servidor remoto devolveu um erro: (400) Pedido Mau".
 
-7. Escolha **Ligar**.
+7. Escolha **Connect** (Ligar).
 
    > [!NOTE]
    > Pode levar alguns minutos para configurar a ligação.
@@ -170,11 +170,11 @@ Para falhar, o conector utiliza o CAS especificado para criar uma ligação bem 
 
 Por padrão, a descoberta de CASs adicionais está ativada. Se precisar desligar o failover:
 
-1. No servidor onde o conector Exchange está instalado, vá a **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**.
+1. No servidor onde o conector Exchange está instalado, vá ao ** % *ProgramData*%\Microsoft\Windows Intune Exchange Connector**.
 
 2. Através de um editor de texto, abra **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 
-3. Change **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** to **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .
+3. Change ** \<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** to ** \<IsCasFailoverEnabled>*falso*\</IsCasFailoverEnabled>**.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Melodia de desempenho do conector De troca (opcional)
 
@@ -192,7 +192,7 @@ Para melhorar o desempenho do conector De troca:
 
 3. Localizar suporte de **comando sem paralelo** e definir o valor para **verdadeiro:**
 
-   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+   \<Suporte de comando\<paralelo>verdadeiro /EnableParallelCommandSupport>
 
 4. Guarde o ficheiro e, em seguida, reinicie o serviço de conector Microsoft Intune Exchange.
 
@@ -203,12 +203,12 @@ Pode ser necessário reinstalar um conector Intune Exchange. Uma vez que apenas 
 1. Para instalar o novo conector, siga os passos na secção de instalação e configure a secção de [conector De Troca.](#install-and-configure-the-intune-exchange-connector)
 
 2. Quando for solicitado, **selecione Substitua** para instalar o novo conector.
-   ![aviso de configuração para substituir um](./media/exchange-connector-install/prompt-to-replace.png) de conector
+   ![Aviso de configuração para substituir um conector](./media/exchange-connector-install/prompt-to-replace.png)
 
 3. Continue os passos da [secção de conector Intune Exchange e](#install-and-configure-the-intune-exchange-connector) volte a iniciar o intune.
 
 4. Na janela final, selecione **Feche** para completar a instalação.
-   ![completo](./media/exchange-connector-install/successful-reinstall.png) de configuração
+   ![Configuração completa](./media/exchange-connector-install/successful-reinstall.png)
 
 ## <a name="monitor-an-exchange-connector"></a>Monitorize um conector de intercâmbio
 
@@ -216,7 +216,7 @@ Depois de configurar com sucesso o conector Exchange, pode visualizar o estado d
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **a administração do Inquilino** > Exchange **access**.
+2. Selecione **Administração** > de**InquilinoS Acesso de troca**.
 
 3. Selecione **o conector**no local do Exchange ActiveSync e, em seguida, selecione o conector que pretende ver.
 
@@ -236,13 +236,13 @@ Pode forçar um conector a executar uma sincronização utilizando as opções *
 
    1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   2. Selecione **a administração do Inquilino** > trocar **acesso** >  trocar o **conector ActiveSync no local**.
+   2. Selecione **Administração** > de**InquilinoS Exchange Access** >  **Exchange ActiveSync on-premises conector**.
 
-   3. Selecione o conector que pretende sincronizar e, em seguida, escolha Quick Sync ou Full Sync.
+   3. Selecione o conector que pretende sincronizar e, em seguida, selecione Sincronização Rápida ou Sincronização Completa.
 
    > [!div class="mx-imgBorder"]
-   > ![Exemplo de imagens dos detalhes do conector](./media/exchange-connector-install/connector-details.png)
+   > ![Screenshot de exemplo dos detalhes do conector](./media/exchange-connector-install/connector-details.png)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Criar uma [política de acesso condicional para servidores de intercâmbio no local](conditional-access-exchange-create.md).

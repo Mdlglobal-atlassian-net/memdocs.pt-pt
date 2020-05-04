@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325444"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615676"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Criar a política de conformidade de dispositivos da Defesa Contra Ameaças para Dispositivos Móveis (MTD) com o Intune
 
@@ -44,7 +44,7 @@ Pré-requisitos da política de conformidade de dispositivos com a MTD:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **as políticas** de conformidade do **dispositivo** >  > Criar **a política**.
+2. Selecione**políticas de** > conformidade de **dispositivos** > **Criar a política**.
 
 3. Especifique uma política de conformidade do dispositivo **Nome**, **Descrição,** selecione a **Plataforma**e, em seguida, selecione **Configurar** sob a secção **Definições.**
 
@@ -60,6 +60,11 @@ Pré-requisitos da política de conformidade de dispositivos com a MTD:
 
    - **Elevado**: este é o nível menos seguro. Este nível permite que todos os níveis de ameaça estejam presentes e utiliza a Defesa Contra Ameaças para Dispositivos Móveis apenas para a criação de relatórios. É necessário que os dispositivos tenham a aplicação de MTD ativada com esta definição.
 
+   > [!IMPORTANT]
+   > Para android Enterprise Device Owner, depois de criar e guardar uma apólice, não pode mais tarde editar a política para modificar o nível de ameaça. As edificações para alterar o nível de ameaça do dispositivo para a definição de Saúde do Dispositivo **Exigir que o dispositivo esteja no nível de ameaça** do dispositivo não produzir efeito. Para alterar o valor do nível de ameaça, deve eliminar a política atual e criar uma nova política que estabeleça o nível de ameaça desejado.
+   >
+   > Esta é uma questão conhecida que será resolvida numa futura atualização para Intune.
+
 6. Selecione **OK** duas vezes e, em seguida, selecione **Criar** para criar a apólice.
 
 > [!IMPORTANT]
@@ -71,12 +76,12 @@ Para atribuir uma política de conformidade do dispositivo aos utilizadores:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **as políticas**de conformidade do **dispositivo** > .
+2. Selecione as políticas de**conformidade do** **dispositivo** > .
 
 3. Selecione a política que pretende atribuir aos utilizadores e, em seguida, selecione **Atribuições**. Utilize as opções disponíveis para *incluir* e *excluir* grupos para receber esta política.  
 
 4. Selecione Guardar para completar a atribuição. Quando guarda a atribuição, a política é implementada para os seus utilizadores selecionados e os seus dispositivos são avaliados para o cumprimento.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Ativar a Defesa Contra Ameaças para Dispositivos Móveis no Intune](mtd-connector-enable.md)

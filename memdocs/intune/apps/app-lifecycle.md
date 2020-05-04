@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326333"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Descrição geral do ciclo de vida das aplicações no Microsoft Intune
@@ -34,7 +34,7 @@ O ciclo de vida das aplicações do Microsoft Intune começa quando uma aplicaç
 
 O primeiro passo na implementação de aplicações consiste em adicionar as aplicações que pretende gerir e atribuir no Intune. Apesar de poder utilizar muitos tipos de aplicações diferentes, os procedimentos básicos são iguais. Com a Intune pode adicionar diferentes tipos de aplicações, incluindo aplicações escritas internamente (linha de negócio), aplicações da loja, apps que estão incorporadas e aplicações na web. Para obter mais informações sobre cada um destes tipos de aplicações, veja [Como adicionar uma aplicação ao Microsoft Intune](apps-add.md).
 
-## <a name="deploy"></a>Implementar
+## <a name="deploy"></a>Implementação
 
 Depois de adicionar a aplicação ao Intune, pode [atribuí-la aos utilizadores e dispositivos que gere](apps-deploy.md). Intune facilita este processo e, após a implementação da aplicação, poderá [monitorizar o sucesso](apps-monitor.md) da implementação a partir do Intune dentro do portal Azure. Além disso, em algumas lojas de aplicações, como a da [Apple](vpp-apps-ios.md) e do [Windows](windows-store-for-business.md), pode comprar licenças de aplicações em volume para a sua empresa. O Intune pode sincronizar os dados com estas lojas para poder implementar e monitorizar a utilização de licenças para estes tipos de aplicações diretamente a partir da consola de administração do Intune.
 
@@ -54,8 +54,8 @@ O Intune fornece várias formas para ajudar a proteger os dados nas suas aplica�
 
 ## <a name="retire"></a>Extinguir
 
-Eventualmente, é provável que as aplicações implementadas fiquem desatualizadas e tenham de ser removidas. O Intune facilita a [extinção de aplicações no serviço](../remote-actions/device-management.md).
+Eventualmente, é provável que as aplicações implementadas fiquem desatualizadas e tenham de ser removidas. Intune facilita a [retirada de aplicações do serviço.](../remote-actions/device-management.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Saiba mais sobre a [gestão de aplicações no Microsoft Intune](app-management.md)

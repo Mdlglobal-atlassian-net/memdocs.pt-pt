@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325125"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Bloquear remotamente dispositivos com o Intune
@@ -31,7 +31,7 @@ A ação **Bloqueio remoto** bloqueia o dispositivo. Para desbloquear o disposit
 
 ## <a name="supported-platforms"></a>Plataformas suportadas
 
-O **Bloqueio remoto** é suportado pelas seguintes plataformas:
+**O bloqueio remoto** é suportado para as seguintes plataformas:
 
 - Android
 - Dispositivos de quiosque Android Enterprise
@@ -42,7 +42,7 @@ O **Bloqueio remoto** é suportado pelas seguintes plataformas:
 - Windows Phone 8.1 e posterior
 
 O **Bloqueio remoto** não é suportado para:
-- Computadores com o Windows 10
+- Windows 10 Desktop
 
 > [!NOTE]
 > Para dispositivos macOS, defina um PIN de recuperação de 6 dígitos. Se o dispositivo estiver bloqueado, a **Descrição geral do dispositivo** apresenta o PIN até que seja enviada outra ação de dispositivo.
@@ -53,7 +53,7 @@ O **Bloqueio remoto** não é suportado para:
 3. Selecione **Dispositivos** > **Todos os dispositivos**.
 4. Na lista de dispositivos, selecione um dispositivo e, em seguida, selecione a ação **Bloqueio remoto**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- Para ver o estado desta ação, selecione **Microsoft Intune** > **Dispositivos** > **Ações do dispositivo**. 
+- Para ver o estado desta ação, selecione as ações do**Devices** > **Dispositivo** **Intune** > microsoft . 
 - Para obter mais ações que podem ajudá-lo a gerir os seus dispositivos, veja [Ações disponíveis](device-management.md).

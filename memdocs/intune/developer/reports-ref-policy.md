@@ -1,8 +1,8 @@
 ---
-title: Referência para as entidades de políticas
+title: Referência para entidades políticas
 titleSuffix: Microsoft Intune
 description: Tópico de referência para a categoria Policy das coleções de entidades na API do Armazém de Dados do Intune.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -18,13 +18,13 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325581"
 ---
-# <a name="reference-for-policy-entities"></a>Referência para as entidades de políticas
+# <a name="reference-for-policy-entities"></a>Referência para entidades políticas
 
 A categoria **de políticas** contém entidades para dispositivos móveis que acompanham informações como:
 
@@ -43,7 +43,7 @@ A entidade **política** lista perfis de configuração do dispositivo, perfis d
 | políticaId |Identificador exclusivo da Política no armazém de dados. |b66bc706-ffff-7437-0340-032819502773 |
 | nome político |Nome da Política. |"Linha de Base do Windows 10" |
 | políticaVersão |Versão da Política. Quando a política é editada ou alterada, é criada uma versão mais recente. |1, 2, 3 |
-| isDeleted |Indica se o registo da Política foi atualizado.  <br>True – a política tem um novo registo com campos atualizados. <br>False – o registo mais recente da política. |True/False |
+| isDeleted |Indica se o registo da Política foi atualizado.  <br>True – a política tem um novo registo com campos atualizados. <br>False – o registo mais recente da política. |Verdadeiro/Falso |
 | startDateInclusiveUTC |Data e hora em UTC em que a política foi criada no armazém de dados. |11/23/2016 12:00:00 AM |
 | eliminadoDateUTC |Data e hora em UTC em que a propriedade IsDeleted foi alterada para True. |11/23/2016 12:00:00 AM |
 | rowLastModificadoDateTimeUTC |Data e hora em UTC em que a política foi modificada pela última vez no armazém de dados. |11/23/2016 12:00:00 AM |
@@ -68,7 +68,7 @@ A entidade **deviceConfigurationProfileDeviceActivity** lista o número de **dis
 | pendente |Número de Dispositivos exclusivos no estado pendente. |123 |
 | com êxito |Número de Dispositivos exclusivos no estado com êxito. |12 |
 | erro |Número de Dispositivos exclusivos no estado com erros. |10 |
-| sem êxito |Número de Dispositivos exclusivos no estado com falhas. |2 |
+| falhou |Número de Dispositivos exclusivos no estado com falhas. |2 |
 
 A entidade **do dispositivoConfigurationProfileUserActivity** lista o número de **utilizadores** no estado de erro bem sucedido, pendente, falhado ou erro por dia. O número reflete os Perfis de configuração de dispositivos atribuídos à entidade. Por exemplo, se um **utilizador** estiver no estado de sucesso para todas as suas políticas atribuídas, ele sobe o contador sucedido por um para esse dia. Se um utilizador tiver dois perfis atribuídos, um no estado com êxito e outro no estado com erros, é contado o utilizador no estado com erros.  A entidade **do dispositivoConfigurationProfileUserActivity** lista quantos utilizadores estão em que o estado num determinado dia ao longo dos últimos 30 dias.
 
@@ -78,7 +78,7 @@ A entidade **do dispositivoConfigurationProfileUserActivity** lista o número de
 | pendente |Número de Utilizadores exclusivos no estado pendente. |123 |
 | com êxito |Número de Utilizadores exclusivos no estado com êxito. |12 |
 | erro |Número de Utilizadores exclusivos no estado com erros. |10 |
-| sem êxito |Número de Utilizadores exclusivos no estado com falhas. |2 |
+| falhou |Número de Utilizadores exclusivos no estado com falhas. |2 |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 
@@ -92,7 +92,7 @@ A entidade **policyTypeActivity** lista o número acumulado de dispositivos no e
 | pendente |Número de dispositivos exclusivos no estado pendente. |123 |
 | com êxito |Número de dispositivos exclusivos no estado com êxito. |12 |
 | erro |Número de dispositivos exclusivos no estado com erros. |10 |
-| sem êxito |Número de dispositivos exclusivos no estado com falhas. |2 |
+| falhou |Número de dispositivos exclusivos no estado com falhas. |2 |
 
 ## <a name="compliance-policy"></a>Política de Conformidade
 
@@ -144,16 +144,16 @@ A tabela seguinte contém os tipos de plataforma de todas as políticas atribuí
 
 ### <a name="policydeviceactivities"></a>policyDeviceActivities
 
-A tabela seguinte mostra o número de dispositivos no estado com êxito, pendente, com falhas ou com erros por dia. O número apresentado reflete os perfis de dados por Tipo de Política. Por exemplo, se um dispositivo estiver no estado com êxito em todas as políticas atribuídas, o contador de casos com êxito tem um incremento de um para esse dia. Se um dispositivo tiver dois perfis atribuídos, um no estado com êxito e outro num estado com erros, a entidade incrementa o contador do estado com êxito (Succeeded) e coloca o dispositivo no estado com erros. A entidade policyDeviceActivity lista quantos dispositivos estão em que estado num determinado dia ao longo dos últimos 30 dias.
+A tabela seguinte mostra o número de dispositivos no estado com êxito, pendente, com falhas ou com erros por dia. O número apresentado reflete os perfis de dados por Tipo de Política. Por exemplo, se um dispositivo estiver no estado com êxito em todas as políticas atribuídas, o contador de casos com êxito tem um incremento de um para esse dia. Se um dispositivo tiver dois perfis atribuídos, um no estado com êxito e outro num estado com erros, a entidade incrementa o contador do estado com êxito (Succeeded) e coloca o dispositivo no estado com erros. A entidade policyDeviceActivity apresenta uma lista de quantos dispositivos estão em cada um dos estados num determinado dia nos últimos 30 dias.
 
 |Propriedade  |Descrição  |Exemplo  |
 |---------|---------|---------|
 |dateKey|Data-chave de quando a entrada do Perfil de Configuração do Dispositivo foi registada no armazém de dados.|20160703|
 |pendente|Número de Dispositivos exclusivos no estado pendente.|123|
-|Succeeded|Número de Dispositivos exclusivos no estado com êxito.|12|
+|Bem-sucedido|Número de Dispositivos exclusivos no estado com êxito.|12|
 |políticaChave|policyKey, pode ser associado com a política para obter o nome de política.|Linha de base do Windows 10|
 |erro|Número de Dispositivos exclusivos no estado com erros.|10|
-|sem êxito|Número de Dispositivos exclusivos no estado com falhas.|2|
+|falhou|Número de Dispositivos exclusivos no estado com falhas.|2|
 
 ### <a name="policyuseractivities"></a>policyUserActivities
 

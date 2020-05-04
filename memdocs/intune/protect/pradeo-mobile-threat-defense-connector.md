@@ -16,10 +16,10 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a23155c31586992c82781998bb664bf2ce6a0889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325353"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Conector da Defesa Contra Ameaças para Dispositivos Móveis do Pradeo com o Intune
@@ -79,7 +79,7 @@ Quando forem detetadas aplicações maliciosas, como software maligno, nos dispo
 
 Detete ameaças à rede, tal como ataques **Man-in-the-middle**, e proteja o acesso a redes Wi-Fi com base no risco do dispositivo.
 
-*Bloquear o acesso à rede através de Wi-Fi:*
+*Bloquear o acesso à rede através do Wi-Fi:*
 
 ![Bloquear o acesso à rede através de Wi-Fi](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
 
@@ -91,7 +91,7 @@ Detete ameaças à rede, tal como ataques **Man-in-the-middle**, e proteja o ace
 
 Detete ameaças à sua rede, tal como ataques **Man-in-the-middle**, e impeça a sincronização de ficheiros empresariais com base no risco do dispositivo.
 
-*Bloquear o SharePoint Online quando forem detetadas ameaças à rede:*
+*Block SharePoint Online quando são detetadas ameaças de rede:*
 
 ![Bloquear o SharePoint Online quando forem detetadas ameaças à rede](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
 
@@ -111,7 +111,7 @@ Access is granted on remediation:
 ![Access is granted on remediation for App protection policy](./media/pradeo-mobile-threat-defense-connector/pradeo-app-policy-remediated.png)
 -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Integrar o Pradeo com o Intune](pradeo-mtd-connector-integration.md)
 

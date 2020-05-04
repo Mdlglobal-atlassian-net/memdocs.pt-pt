@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407857"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições dos dispositivos macOS para permitir ou restringir funcionalidades com o Intune
@@ -89,12 +89,12 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
     Esta funcionalidade aplica-se a:  
     - macOS 10.10.3 e mais recente
 
-  - **Número de caracteres não alfanuméricos na palavra-passe**: Introduza o número de caracteres complexos exigidos na palavra-passe, de 0-4. Um caráter complexo é um símbolo, como `?`
+  - **Número de caracteres não alfanuméricos na palavra-passe**: Introduza o número de caracteres complexos exigidos na palavra-passe, de 0-4. Um personagem complexo é um símbolo, como`?`
   - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, de 4 a 16 caracteres.
-  - **Palavras-passe simples**: Permitir a utilização de senhas simples, tais como `0000` ou `1234`.
+  - **Palavras-passe simples**: Permitir a `0000` `1234`utilização de senhas simples, tais como ou .
   - **Minutos máximos após**o bloqueio do ecrã antes da necessidade da palavra-passe : Introduza o comprimento do tempo que os dispositivos devem estar inativos antes de ser necessária uma palavra-passe para desbloqueá-la. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
   - **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o comprimento do tempo que os dispositivos devem ficar inativos antes de o ecrã estar automaticamente bloqueado. Por exemplo, introduza 5 dispositivos de bloqueio após 5 minutos de inativo. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
-  - **Expiração da palavra-passe (dias)** : Introduza o número de dias até que a palavra-passe do dispositivo seja alterada, de 1-65535. Por exemplo, insira `90` para expirar a senha após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+  - **Expiração da palavra-passe (dias)**: Introduza o número de dias até que a palavra-passe do dispositivo seja alterada, de 1-65535. Por exemplo, `90` introduza para expirar a palavra-passe após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
   - **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, insira 5 para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 
 - **Bloquear o utilizador de modificar a senha**: O **bloco** impede que a senha seja alterada, adicionada ou removida. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode permitir que as códigos de acesso sejam adicionadas, alteradas ou removidas.
@@ -177,7 +177,7 @@ Para adicionar aplicações a estas listas, pode:
 
 - URL de domínio de **e-mail**: **Adicione** um ou mais URLs na lista. Quando os utilizadores recebem um e-mail de um domínio diferente daquele configurado, o e-mail é marcado como não confiável na aplicação macOS Mail.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

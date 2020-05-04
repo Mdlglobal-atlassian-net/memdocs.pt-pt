@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bf01b680bce047ec3db64c6d9d59a0e6e44918b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327269"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Autenticação apenas com a aplicação do Armazém de Dados do Intune
@@ -38,7 +38,7 @@ O Azure Active Directory (Azure AD) utiliza o OAuth 2.0 para lhe permitir autori
 
 O seguinte processo utiliza um método privado para processar e converter uma chave da aplicação. Este método privado tem o nome SecureString. Em alternativa, pode utilizar o Azure KeyVault para armazenar a chave da aplicação. Para obter mais informações, veja [Key Vault](https://azure.microsoft.com/services/key-vault/).
 
-## <a name="create-a-web-app"></a>Criar uma Aplicação Web
+## <a name="create-a-web-app"></a>Criar uma aplicação Web
 
 Nesta secção, proporcione os detalhes da aplicação Web que gostaria de apontar para o Intune. Uma aplicação Web é uma aplicação de servidor de cliente. O servidor proporciona a aplicação Web, que inclui a IU, conteúdos e funcionalidades. A manutenção deste tipo de aplicação é feita separadamente na Web. Utilize o Intune para conceder acesso à aplicação Web ao Intune. O fluxo de dados é iniciado através da aplicação Web. 
 
@@ -89,13 +89,13 @@ Nesta secção, pode conceder permissões às aplicações.
 
 Com o Visual Studio, crie um projeto de Aplicação de Consola (.NET Framework) que suporte o .NET Framework e utilize C# como a linguagem de programação.
 
-1. Selecione **Ficheiro** > **Novo** > **Projeto** para apresentar a caixa de diálogo **Novo Projeto**.
+1. Selecione **File** > **New** > **Project** para exibir a caixa de diálogo **New Project.**
 2. No lado esquerdo, selecione **Visual c#** para apresentar todos os projetos de .NET Framework.
-3. Selecione **Aplicação de Consola (.Net Framework)** , adicione um nome da aplicação e, em seguida, clique em **OK** para criar a aplicação.
+3. Selecione **Aplicação de Consola (.Net Framework)**, adicione um nome da aplicação e, em seguida, clique em **OK** para criar a aplicação.
 4. No **Explorador de Soluções**, selecione **Program.cs** para apresentar o código.
-5. No Solution Explorer, adicione uma referência ao conjunto `System.Configuration`.
-6. No menu de pop-up, selecione **Adicionar** > **Novo item**. É apresentada a caixa de diálogo **Adicionar Novo Item**.
-7. No lado esquerdo, em **Visual C#** , selecione **Código**.
+5. No Solution Explorer, adicione uma `System.Configuration`referência ao conjunto .
+6. No menu pop-up, selecione **Adicionar** > **Novo item**. É apresentada a caixa de diálogo **Adicionar Novo Item**.
+7. No lado esquerdo, em **Visual C#**, selecione **Código**.
 8. Selecione **Classe**, altere o nome da classe para *IntuneDataWarehouseClass.cs* e clique em **Adicionar**.
 9. Adicione o seguinte código dentro do método <code>Main</code>:
 

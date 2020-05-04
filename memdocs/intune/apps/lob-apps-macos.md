@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80536824"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Como adicionar aplicações de linha de negócio (LOB) macOS ao Microsoft Intune
@@ -52,7 +52,7 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 
 2. Marque a ferramenta descarregada como executável:
    - Inicie a aplicação de terminais.
-   - Mude o diretório para o local onde `IntuneAppUtil` está localizado.
+   - Mude o diretório para `IntuneAppUtil` o local onde está localizado.
    - Execute o seguinte comando para tornar a ferramenta executada:<br> 
        `chmod +x IntuneAppUtil`
 
@@ -60,13 +60,13 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 
     Comandos de exemplo a utilizar para a Ferramenta de Encapsulamento de Aplicações do Intune para Mac:
     > [!IMPORTANT]
-    > Certifique-se de que o argumento `<source_file>` não contém espaços antes de executar os comandos `IntuneAppUtil`.
+    > Certifique-se `<source_file>` de que o argumento `IntuneAppUtil` não contém espaços antes de executar os comandos.
 
     - `IntuneAppUtil -h`<br>
     Este comando mostra informações de utilização da ferramenta.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Este comando irá embrulhar o ficheiro de aplicação *.pkg* LOB fornecido em `<source_file>` a um ficheiro *.intunemac* com o mesmo nome e colocá-lo na pasta apontada por `<output_directory_path>`.
+    Este comando irá embrulhar o ficheiro de `<source_file>` aplicação *.pkg* LOB fornecido num ficheiro *.intunemac* com o mesmo nome e colocá-lo na pasta apontada por `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Este comando extrai os parâmetros detetados e a versão do ficheiro *.intunemac* criado.
@@ -92,9 +92,9 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 1. Na página de informações da **App,** adicione os detalhes para a sua aplicação. Consoante a aplicação que tenha escolhido, alguns dos valores neste painel podem ser preenchidos automaticamente.
     - **Nome**: introduza o nome da aplicação tal como aparece no portal da empresa. Certifique-se de que todos os nomes de aplicações que utiliza são exclusivos. Se existir o mesmo nome duas vezes, só aparece uma das aplicações no portal da empresa.
     - **Descrição**: introduza a descrição da aplicação. A descrição aparece no portal da empresa.
-    - **Publicador**: introduza o nome do publicador da aplicação.
+    - **Editor**: Insira o nome do editor da app.
     - **Sistema Operativo Mínimo**: na lista, escolha a versão mínima do sistema operativo no qual a aplicação pode ser instalada. Se atribuir a aplicação a um dispositivo com um sistema operativo anterior, não será instalada.
-    - **Categoria**: selecione uma ou mais categorias das aplicações incorporadas ou, em alternativa, uma categoria criada por si. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
+    - **Categoria**: Selecione uma ou mais categorias de aplicações incorporadas ou selecione uma categoria que criou. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
     - **Mostre isto como uma aplicação em destaque no Portal da Empresa**: Mostrar a aplicação em destaque na página principal do portal da empresa quando os utilizadores navegam para apps.
     - **URL de Informações**: opcionalmente, introduza o URL de um site que contenha informações sobre esta aplicação. O URL aparece no portal da empresa.
     - **URL de Privacidade**: opcionalmente, introduza um URL para um site que contenha informações sobre a privacidade desta aplicação. O URL aparece no portal da empresa.
@@ -135,7 +135,7 @@ A aplicação que criou é apresentada na lista de aplicações, onde pode atrib
 > [!NOTE]
 > Para o serviço do Intune implementar com êxito um novo ficheiro *.pkg* no dispositivo, tem de incrementar o pacote `version` e a cadeia `CFBundleVersion` no ficheiro *packageinfo* do pacote *.pkg*.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - A aplicação que criou é apresentada na lista de aplicações. Agora pode atribuí-la aos grupos que escolher. Para obter ajuda, veja [Como atribuir aplicações a grupos](apps-deploy.md).
 

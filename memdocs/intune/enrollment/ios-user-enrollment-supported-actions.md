@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aa78178f6649e0199aa2de96bac2725ba55208ae
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331533"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Intune ações e opções suportadas com a Inscrição do Utilizador da Apple
@@ -38,7 +38,7 @@ Nos dispositivos de inscrição do utilizador, se configurar qualquer definiçã
 
 Por exemplo, configura a definição de validade da **Palavra-passe** e empurra esta política para dispositivos inscritos pelo utilizador. Nos dispositivos, acontece o seguinte:
 - A definição de expiração da **palavra-passe** é ignorada.
-- Não são permitidas senhas simples, como `111111` ou `123456`.
+- Não são permitidas `111111` `123456`senhas simples, tais como ou, não são permitidas.
 - Um pino de 6 dígitos é imposto.
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Ações e opções de dispositivos remotos administrador
@@ -46,7 +46,7 @@ Os administradores podem executar as seguintes ações e opções em dispositivo
 - Extinguir
 - Eliminar
 - Bloqueio Remoto
-- Sincronizar
+- Sync
 
 Todas as outras ações não são apoiadas.
 
@@ -61,13 +61,13 @@ Nos dispositivos de inscrição do utilizador, os utilizadores finais podem exec
 Os seguintes tipos de aplicações podem ser implementados em dispositivos de inscrição do utilizador:
 - Aplicativos do Plano de Compra de Volume (VPP) licenciados pelo utilizador, incluindo aplicações personalizadas
 - Aplicações de linha de negócio (LOB)
-- Aplicações Web
+- Web Apps
 
 ## <a name="other-supported-options"></a>Outras opções apoiadas
 
 As seguintes opções são suportadas em Intune para dispositivos matriculados utilizando a inscrição do Utilizador da Apple:
 - VPN por app. Este suporte exclui os Domínios do Safari, uma vez que a inscrição do utilizador não suporta configurar as definições do Safari.
-- Wi-Fi 
+- WiFi 
 - Remoção de aplicativos corporativos após não inscrição
 - Deteção de Jailbreak
 
@@ -110,12 +110,12 @@ As seguintes opções não são suportadas em dispositivos matriculados com insc
 
 ## <a name="known-issues-in-preview"></a>Questões conhecidas na pré-visualização
 - Revogação da licença VPP: Não aparece uma notificação de que a licença foi revogada. O comportamento atual é que a revogação é bem sucedida, mas o utilizador final não é notificado. 
-- Relatório de aplicações VPP: No relatório localizado nas Aplicações clientes > Apps > [Nome da Aplicação] > Estado de Instalação de Dispositivos, as aplicações VPP implementadas para dispositivos Inscritos no Utilizador estão a reportar como "falhadas", mesmo quando a aplicação se implementa com sucesso no dispositivo. 
+- Relatório de aplicações VPP: No relatório localizado nas Aplicações de Clientes > Apps > [Nome de Aplicação] > Estado de Instalação do Dispositivo, as aplicações VPP implementadas para dispositivos Inscritos no Utilizador estão a reportar como "falhadas", mesmo quando a aplicação se implementa com sucesso no dispositivo. 
 - Relatório de aplicação: Para tipos de aplicações não suportados com inscrição de utilizador, os relatórios podem fornecer mensagens de erro irrelevantes. 
 - Experiência de aplicação do Portal da Empresa: Os utilizadores vêem todas as aplicações direcionadas para os mesmos, independentemente de esses tipos de aplicações serem suportados para dispositivos Inscritos no Utilizador. 
 - Experiência de aplicação do Portal da Empresa: Os utilizadores vêem o mesmo texto indicando o que as organizações podem ver para a Inscrição de Utilizadores e Dispositivos se o administrador personalizar o texto indicando o que as organizações não podem ver.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Configurar iOS/iPadOS e iPadOS User Enrollment](ios-user-enrollment.md)

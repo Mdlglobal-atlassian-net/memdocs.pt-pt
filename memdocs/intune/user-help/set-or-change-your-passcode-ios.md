@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 790aa9e73d990ec3996d4357cbda0e1ddcbf9de9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324357"
 ---
 # <a name="set-or-change-your-passcode"></a>Definir ou alterar o código de acesso
@@ -35,15 +35,15 @@ Se tiver problemas em criar ou alterar a sua senha, contacte a pessoa de suporte
 
 ## <a name="set-your-passcode"></a>Definir o código de acesso
 
-1. Toque em **Definições** > **Touch ID e Código de Acesso**.
-2. No menu **Touch ID e Código de Acesso**, toque em **Ativar Código de Acesso**.
+1. Toque em **definições** > **De ID toque & código de acesso**.
+2. No menu **Touch ID & Passcode,** toque em **ligar a senha**.
 3. Introduza um novo código de acesso que cumpra os requisitos do suporte da empresa e, em seguida, introduza-o novamente para o confirmar.
 
 ## <a name="change-your-passcode"></a>Alterar o código de acesso
 
-1. Toque em **Definições** > **Touch ID e Código de Acesso**.
+1. Toque em **definições** > **De ID toque & código de acesso**.
 2. Introduza o código de acesso. É aberto o menu **Touch ID e Código de Acesso**.
 2. Toque em **Alterar Código de Acesso** e introduza a palavra-passe antiga.
 3. Introduza um novo código de acesso que cumpra os requisitos do suporte da empresa e, em seguida, introduza-o novamente para o confirmar.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

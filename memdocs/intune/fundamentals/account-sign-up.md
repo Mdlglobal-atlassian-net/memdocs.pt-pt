@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401447"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Inscrever-se ou iniciar sessão no Microsoft Intune
@@ -62,20 +62,20 @@ Para conceder acesso à administração do serviço para utilizadores com outras
 
 ### <a name="intune-admin-portal-url"></a>URL do portal de administração intune
 
-Centro de administração do Microsoft Endpoint Manager: https://endpoint.microsoft.com
+Centro de administração do Microsoft Endpoint Manager:https://endpoint.microsoft.com
 
-Portal Intune Azure: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
+Portal Intune Azure:https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
-Intune for Education: https://intuneeducation.portal.azure.com
+Insintonpara a Educação:https://intuneeducation.portal.azure.com
 
-Intune classic portal: https://manage.microsoft.com O portal clássico Intune é usado apenas para gerir dispositivos matriculados com o cliente de software Intune PC
+Intune classic https://manage.microsoft.com portal: O portal clássico Intune é usado apenas para gerir dispositivos matriculados com o cliente de software Intune PC
 
 ### <a name="urls-for-intune-services-provided-by-office-365"></a>URLs para serviços Intune prestados pelo Office 365
 
-Microsoft 365 Business: https://portal.microsoft.com/adminportal
+Microsoft 365 Business:https://portal.microsoft.com/adminportal
 
-Office 365 Mobile Device Management: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Office 365 Mobile Device Management:https://admin.microsoft.com/adminportal/home#/MifoDevices
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-[Não pode entrar no Office 365, Azure ou Intune](https://support.microsoft.com/help/2412085)
+[Não é possível iniciar sessão no Office 365, no Azure ou no Intune](https://support.microsoft.com/help/2412085)

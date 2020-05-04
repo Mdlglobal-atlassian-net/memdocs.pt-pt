@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 46ad7a5d34e6d006794b13cd5eae9c533e047ec3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324257"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Ativar o Windows Defender para aceder aos recursos da empresa
@@ -35,8 +35,8 @@ Existem algumas definições que talvez tenha de alterar no seu Windows Defender
 ## <a name="turn-on-windows-defender"></a>Ativar o Windows Defender
 
 1. Em **Iniciar**, abra o **Painel de Controlo**.
-2. Abra as **Ferramentas Administrativas** > **Editar política de grupo**. Esta ação abre o **Editor de Políticas de Grupo Local** numa nova janela.
-3. Abra a **Configuração do Computador** > **Modelos Administrativos** > **Componentes do Windows** > **Antivírus do Windows Defender**. A definição **Desativar o Antivírus do Windows Defender** está sob as pastas de outras definições. 
+2. Ferramentas **Administrativas Abertas** > Editar a política do**grupo.** Esta ação abre o **Editor de Políticas de Grupo Local** numa nova janela.
+3. Configuração de **computador configuração** > **de modelos administrativos** > **Windows Components** > **Windows Defender Antivírus**. A definição **Desativar o Antivírus do Windows Defender** está sob as pastas de outras definições. 
 4. Abra **Desativar o Antivírus do Windows Defender** e certifique-se de que este está definido como **Desativado** ou **Não configurado**.
 
 ## <a name="turn-on-real-time-protection"></a>Ativar a Proteção em Tempo Real
@@ -44,12 +44,12 @@ Existem algumas definições que talvez tenha de alterar no seu Windows Defender
 Certifique-se de que a Proteção em Tempo Real está ativada ao aceder a **Iniciar** e ao procurar por **Centro de Segurança do Windows Defender**. Selecione **Definições de proteção contra vírus e ameaças** e confirme que tanto a **Proteção em tempo real** como a **Proteção fornecida pela cloud** estão no modo **Ativado**. Se estas opções não forem apresentadas, faça o seguinte para ativá-las:
 
 1. Em **Iniciar**, abra o **Painel de Controlo**.
-2. Abra as **Ferramentas Administrativas** > **Editar política de grupo**. Esta ação abre o **Editor de Políticas de Grupo Local** numa nova janela.
-3. Abra a **Configuração do Computador** > **Modelos Administrativos** > **Componentes do Windows** > **Centro de Segurança do Windows Defender** > **Proteção contra vírus e ameaças**.
+2. Ferramentas **Administrativas Abertas** > Editar a política do**grupo.** Esta ação abre o **Editor de Políticas de Grupo Local** numa nova janela.
+3. Configuração de **computador configuração** > **de modelos administrativos** > **Windows Componentes** > **Windows Defender Security Center** > **Virus e proteção contra ameaças**.
 4. Abra a definição **Área da proteção contra vírus e ameaças** e defina-a como **Desativado**.
 
 ## <a name="update-your-antivirus-definitions"></a>Atualizar as definições do antivírus
 
 Certifique-se de que as definições do antivírus estão atualizadas ao aceder a **Iniciar** e ao procurar por **Centro de Segurança do Windows Defender**. Selecione **Atualizações de proteção** e **Procurar atualizações** para se certificar de que a proteção contra vírus do seu dispositivo está atualizada. Se esta opção não for apresentada, siga os passos em [Ativar a Proteção em Tempo Real](turn-on-defender-windows.md#turn-on-real-time-protection)
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

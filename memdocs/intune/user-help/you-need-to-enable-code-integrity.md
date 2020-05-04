@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b6fc5fbc3a657eeabd8771e02e20aa168987ea5e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327589"
 ---
 # <a name="enable-code-integrity"></a>Ativar a integridade do código
@@ -38,6 +38,6 @@ Se se identificar como um utilizador avançado do dispositivo e quiser experimen
 
 Se é administrador intune e pretende saber mais sobre as definições de conformidade com a saúde do dispositivo da Intune, consulte Adicionar uma política de conformidade de [dispositivos para dispositivos Windows 10 no Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows). Para uma análise detalhada das ações de conformidade que pode tomar em Intune, consulte o [HealthAtatstation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

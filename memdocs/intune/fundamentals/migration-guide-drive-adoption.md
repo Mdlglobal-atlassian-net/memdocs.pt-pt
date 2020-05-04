@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: da332528854af2b53879d30d6de90c927b49a889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331209"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Drive end-user adoção com acesso condicional no Microsoft Intune
@@ -53,7 +53,7 @@ Aqui está uma abordagem típica para melhorar uma campanha de migração com Ac
 
 Esta é uma abordagem entre muitas. Pode escolher um processo mais simples que adiem todo o Acesso Condicional até que todas as fases tenham sido instruídas a inscrever-se, ou um processo mais rigoroso que impeque o Acesso Condicional desde o início e exija o pleno cumprimento de todos os acessos.
 
-- Saiba mais sobre o [Acesso Condicional](../protect/conditional-access.md).
+- Saiba mais sobre [acesso condicional.](../protect/conditional-access.md)
 
 ## <a name="task-list-for-conditional-access"></a>Lista de tarefas para acesso condicional
 
@@ -63,7 +63,7 @@ Esta é uma abordagem entre muitas. Pode escolher um processo mais simples que a
 
 ### <a name="task-2-set-up-intune-conditional-access"></a>Tarefa 2: Configurar o acesso condicional intune
 
-Escolha uma das seguintes opções:
+Selecione uma das seguintes opções:
 
 - [Configure acesso condicional no Diretório Ativo Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
@@ -75,6 +75,6 @@ Escolha uma das seguintes opções:
 
 - [Bloquear aplicações que não utilizam autenticação moderna (ADAL)](../protect/app-modern-authentication-block.md)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre o [ciclo de migração típico](migration-guide-cycle.md).

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 7d3c81e8f7ed8dd8d1571efe87eb59614d79a5e8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324189"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Utilizar aplicações geridas no seu dispositivo iOS
@@ -57,7 +57,7 @@ Por vezes, o suporte da empresa poderá adquirir múltiplas licenças para uma a
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>O que pode gerir o suporte da minha empresa numa aplicação?  
 Eis alguns exemplos das opções que o suporte da empresa pode gerir numa aplicação e que podem afetar as suas interações com os dados da empresa no seu dispositivo:
 
-- Acesso a Web sites específicos
+- Acesso a sites específicos
 
 - Transferências de dados entre aplicações
 
@@ -69,10 +69,10 @@ Eis alguns exemplos das opções que o suporte da empresa pode gerir numa aplica
 
 - O seu início de sessão com as credenciais da empresa
 
-- Capacidade de cópia de segurança para a nuvem
+- Capacidade de cópia de segurança para a cloud
 
 - Capacidade para tirar capturas de ecrã
 
 - Requisitos de encriptação de dados
 
-Contacte o suporte da empresa para obter mais informações sobre as aplicações geridas no seu dispositivo. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Contacte o suporte da empresa para obter mais informações sobre as aplicações geridas no seu dispositivo. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

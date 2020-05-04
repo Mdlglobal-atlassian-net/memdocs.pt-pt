@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326264"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Repor o código de acesso nos dispositivos Windows com o Intune
@@ -53,7 +53,7 @@ Para repor o código de acesso nos dispositivos Windows, carregue o serviço de 
 
 Para configurar a reposição do PIN nos dispositivos Windows geridos por si, utilize uma [política de dispositivo personalizada do Windows 10 do Intune](../configuration/custom-settings-windows-10.md). Configure a política através do seguinte fornecedor do serviço de configuração de política do Windows (CSP):
 
-**Utilizar a política de dispositivo** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
+**Utilize a política do dispositivo** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
 Substitua o *ID de inquilino* pelo seu ID de Diretório do Azure AD, que está listado nas **Propriedades** do Azure Active Directory no [portal do Azure](https://portal.azure.com).
 

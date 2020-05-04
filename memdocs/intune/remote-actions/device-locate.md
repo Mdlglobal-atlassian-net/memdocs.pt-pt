@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327487"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Localizar dispositivos iOS/iPadOS perdidos ou roubados com Intune
@@ -52,7 +52,7 @@ Esta funcionalidade não é suportada para os seguintes sistemas:
 
 Se alguém tiver perdido o seu dispositivo iOS/iPadOS 9.3 ou posterior, pode acionar remotamente o dispositivo para reproduzir um som de alerta para que o utilizador o encontre. O dispositivo tem de estar no [modo perdido](device-lost-mode.md).
 
-No [Intune in the Azure portal,](https://aka.ms/intuneportal)escolha **Dispositivos** > **Todos os dispositivos** > selecione um dispositivo iOS/iPadOS > **Visão geral** > som do modo **Mais** > Play **Lost (apenas supervisionar)** .
+No [Intune no portal Azure,](https://aka.ms/intuneportal)escolha **Dispositivos** > Todos**os dispositivos** > selecione um dispositivo iOS/iPadOS > som do modo **Overview** > **More** > **Play Lost (apenas supervisionar)**.
 
 O som continuará a reproduzir até que o utilizador desative o som no dispositivo ou o dispositivo seja removido do modo perdido.
 
@@ -64,6 +64,6 @@ O som continuará a reproduzir até que o utilizador desative o som no dispositi
 - Os dados de localização são encriptados quando são armazenados e, igualmente, quando estão a ser transmitidos.
 - Ao configurar o modo perdido, pode personalizar uma mensagem que é apresentada no ecrã de bloqueio. Nesta mensagem, para ajudar a pessoa que encontrar o dispositivo, certifique-se de que inclui detalhes específicos sobre como devolver o dispositivo perdido.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para ver o estado de ativação da ação Localizar Dispositivo, aceda a **Dispositivos** e selecione **Ações do dispositivo**.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325463"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Guia de Início Rápido: criar uma política de conformidade de palavra-passe para dispositivos Android
@@ -40,19 +40,19 @@ Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita
 
 Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como administrador [global](../fundamentals/users-add.md#types-of-administrators) ou administrador de [serviço](../fundamentals/users-add.md#types-of-administrators)intune .
 
-## <a name="create-a-device-compliance-policy"></a>Criar uma política de conformidade do dispositivo
+## <a name="create-a-device-compliance-policy"></a>Criar uma política de conformidade de dispositivo
 
 Crie uma política de conformidade com o dispositivo para exigir que os utilizadores Android da sua força de trabalho introduzam uma palavra-passe de um comprimento específico antes de o acesso ser concedido a informações nos seus dispositivos Android.
 
-1. Em Intune, selecione **Dispositivos** > Políticas de **Conformidade** > **Criar Política**.
+1. Em Intune, selecione **Devices** > **Compliance Policies** > **Create Policy**.
 
 2. Adicione **Conformidade do Android** como o **Nome**. Adicione também uma **Descrição**.
 
-3. Em **Plataforma**, selecione **Android Enterprise**.
+3. Para **plataforma**, selecione **Android Enterprise**.
 
 4. Para **o tipo de perfil,** selecione Perfil de **trabalho**.
 
-5. Selecione **Definições** > **Segurança do Sistema** para apresentar o painel **Segurança do Sistema** Android.
+5. Selecione **Definições** > **De Segurança do Sistema** para exibir a lâmina de segurança do **sistema** Android.
 
 6. Para **Palavra-passe obrigatória para desbloquear os dispositivos móveis**, selecione **Exigir**.
 
@@ -70,7 +70,7 @@ Quando se cria com sucesso a política, aparece na sua lista de políticas de co
 
 Quando já não for necessária, elimine a política. Para tal, selecione a política de conformidade e clique em **Eliminar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste início rápido, utilizou o Intune para criar uma política de conformidade para os dispositivos Android da sua força de trabalho para exigir uma palavra-passe de, pelo menos, seis carateres de comprimento. Para obter mais informações sobre a criação de políticas de conformidade, veja [Introdução às políticas de conformidade de dispositivos no Intune](device-compliance-get-started.md).
 

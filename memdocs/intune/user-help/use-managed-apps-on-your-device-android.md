@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f891d88f929a8e4e297ec8bc58f5fe6d37228cf4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327785"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Utilizar aplicações geridas no seu dispositivo Android
@@ -67,7 +67,7 @@ Existem três formas de obter aplicações geridas.
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>O que pode gerir o suporte da minha empresa numa aplicação?  
 A lista seguinte descreve as definições que o suporte da sua empresa pode gerir numa aplicação. Estas definições afetam a forma como visualiza, acede a e utiliza dados escolares ou profissionais no seu dispositivo:
 
-* Acesso a Web sites específicos  
+* Acesso a sites específicos  
 
 * Acesso a websites internos da empresa utilizando o Microsoft Edge e o representante do Diretório Ativo Do Azure  
 
@@ -89,4 +89,4 @@ A lista seguinte descreve as definições que o suporte da sua empresa pode geri
 
 * Requisitos de encriptação de dados  
 
-Contacte o suporte da empresa para obter mais informações sobre as aplicações geridas no seu dispositivo. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Contacte o suporte da empresa para obter mais informações sobre as aplicações geridas no seu dispositivo. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

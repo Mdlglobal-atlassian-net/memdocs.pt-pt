@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b0df9499d79ff7773266326d5b0e1347413f88dd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327889"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Envie um e-mail ao suporte da sua empresa sobre o problema do Portal da Empresa para Windows
@@ -45,10 +45,10 @@ Os eventos e erros que ocorrem na aplicação Portal da Empresa são guardados n
 
 ## <a name="steps-to-get-help"></a>Passos para obter ajuda  
 
-1. Abra a aplicação **Portal da Empresa**.
-2. Selecione **Ajuda e suporte** > Obter **ajuda**.  
+1. Abra a aplicação Portal da **Empresa.**
+2. Selecione **Ajuda & suporte** > **Obter ajuda**.  
 
-   ![Screenshot da página de ajuda e suporte, destacando a barra de navegação esquerda e a secção Obter Ajuda.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
+   ![Screenshot da página de suporte da Ajuda &, destacando a barra de navegação esquerda e a secção Obter Ajuda.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 
 3. Quando o ecrã **Partilhar** aparecer, selecione **Mail**. A aplicação **Mail** irá criar uma mensagem de correio eletrónico para si. Digite uma descrição do problema que experimentou para que a equipa de apoio tenha uma ideia do que procurar.  
 
@@ -59,4 +59,4 @@ Os eventos e erros que ocorrem na aplicação Portal da Empresa são guardados n
 
 Se a sua empresa precisar de informações adicionais sobre a atividade da app ou do dispositivo, poderá ter de enviar [registos da aplicação Definições](send-logs-to-your-it-admin-settings-windows.md).  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

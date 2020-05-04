@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3752ec0cf872e0a42113586cb9faa068643eb2dc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324461"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Como repor o código de acesso do dispositivo a partir do site do Portal da Empresa
@@ -36,13 +36,13 @@ O reset da código de acesso não está disponível para dispositivos com andeno
 
 ## <a name="reset-your-passcode"></a>Repor o código de acesso
 
-1. Abra o [site do Portal da Empresa](https://portal.manage.microsoft.com) e selecione o botão __Menu__ > __Dispositivos__.  
+1. Abra o site do Portal da [Empresa](https://portal.manage.microsoft.com) e selecione o botão __Menu__ > __Dispositivos.__  
 
 2. Selecione o dispositivo que necessita de uma reposição do código de acesso.  
 
     ![Uma imagem da página Dispositivos, com dois azulejos que mostram dispositivos não identificados e genericamente nomeados. Uma faixa cinzenta fica diretamente abaixo dos dispositivos e pede ao utilizador que identifique o dispositivo que está a usar ou adicione um novo.](./media/rename-reset-device-step2-1808.png) 
 
-3. Selecione **Repor Código de Acesso**. Se a opção de código de acesso não estiver visível na parte superior da sua página, selecione **Mais (…)**  > **Repor Código de Acesso**.   
+3. Selecione **Repor Código de Acesso**. Se a opção de código de acesso não estiver visível no topo da sua página, selecione **Mais (...)**  >  **Redefinir a senha**.   
 
    ![A página de detalhes do dispositivo para um dispositivo selecionado no site do Portal da Empresa, com uma lista de ligações na parte superior que apresenta Mudar o Nome, Remover, Repor Dispositivo, Repor Código de Acesso e Bloqueio Remoto. ](./media/rename-reset-device-1808.png)   
 
@@ -82,4 +82,4 @@ Esta secção descreve a reposição do código de acesso e o comportamento da p
 
 **Windows Phone 8.1**: remove o código de acesso existente e cria um código de acesso numérico temporário.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

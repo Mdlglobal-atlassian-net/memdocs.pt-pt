@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 957c63c760dcc576ab30bb85440d52833307818d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326865"
 ---
 # <a name="how-your-iosipados-users-get-their-apps"></a>Como os seus utilizadores iOS/iPadOS obtêm as suas aplicações
@@ -54,7 +54,7 @@ Se uma aplicação já estiver instalada no dispositivo de um utilizador final, 
 
 ![Imagem do alerta de Mudança de Gestão de Aplicações, mostrando opções de Cancelamento e Gestão.](./media/end-user-apps-ios/intune-app-management-confirmation-2002.png)
 
-## <a name="see-also"></a>Veja também  
+## <a name="see-also"></a>Consulte também  
 
 [Como os utilizadores de dispositivos Android obtêm as aplicações](end-user-apps-android.md)
 

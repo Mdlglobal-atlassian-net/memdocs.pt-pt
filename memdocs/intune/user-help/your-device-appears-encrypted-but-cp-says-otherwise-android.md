@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327481"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Dispositivo encriptado mas aplicações dizem o contrário
@@ -32,7 +32,7 @@ Se o Portal da Empresa ou a aplicação Microsoft Intune disserem que o seu disp
 
 ## <a name="add-a-startup-pin"></a>Adicionar um PIN de arranque
 
-Determinados dispositivos Android exigem que crie um PIN de arranque para garantir que o dispositivo está seguro. A localização desta definição estará na aplicação **Definições** do seu dispositivo. O nome e a localização da definição podem variar. Por exemplo, no Samsung Galaxy S7, a definição é referida como **Secure Startup**. Para o ativar e criar uma senha, aceda a **Definições** > **Lock Screen e Security** > Secure **Startup**.  
+Determinados dispositivos Android exigem que crie um PIN de arranque para garantir que o dispositivo está seguro. A localização desta definição estará na aplicação **Definições** do seu dispositivo. O nome e a localização da definição podem variar. Por exemplo, no Samsung Galaxy S7, a definição é referida como **Secure Startup**. Para o ativar e criar uma senha, aceda ao 'Bloqueio de >  **definições'** > e ao**Arranque seguro**de**segurança**.  
 
 ## <a name="encrypt-the-entire-device"></a>Encriptar todo o dispositivo
 
@@ -60,6 +60,6 @@ Para obter uma lista não exaustiva de dispositivos Android suportados, consulte
 
 Se ainda não atualizou o seu dispositivo para a versão mais recente do Android, vá à aplicação **Definições** do seu dispositivo e selecione **Update**.  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Ainda precisa de ajuda? Contacte o suporte da empresa (verifique as informações de contacto no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)) ou escreva para a <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">equipa Android da Microsoft</a>.  

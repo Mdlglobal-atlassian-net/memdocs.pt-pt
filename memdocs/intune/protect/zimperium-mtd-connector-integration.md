@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bb106e482beb7894c84f11d0994b43ba43eb302
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325109"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrar o Zimperium com o Intune
@@ -43,7 +43,7 @@ Antes de iniciar o processo de integração do Zimperium com o Intune, certifiqu
 
   - Aceder ao diretório como o utilizador com sessão iniciada
 
-  - Ler dados do diretório
+  - Ler os dados do diretório
 
   - Enviar informações do dispositivo para o Intune
 
@@ -87,7 +87,7 @@ Para obter mais informações sobre o consentimento e as aplicações do Diretó
 
 9. Assine a consola Zimperium MTD.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Configurar aplicativos Zimperium para dispositivos matriculados](mtd-apps-ios-app-configuration-policy-add-assign.md)
 - [Configurar aplicativos Zimperium para dispositivos não matriculados](mtd-add-apps-unenrolled-devices.md)

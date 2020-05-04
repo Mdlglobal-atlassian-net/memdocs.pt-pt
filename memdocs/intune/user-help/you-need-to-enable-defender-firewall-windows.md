@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: c4871e8b9130c32cddfe6d7329b16f142ab0ebf7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327585"
 ---
 # <a name="turn-on-your-windows-defender-firewall"></a>Ativar a Firewall do Windows Defender
@@ -31,7 +31,7 @@ ms.locfileid: "79327585"
 A sua empresa ou escola querem garantir que os dispositivos que acedem aos respetivos recursos estão protegidos. Uma das formas que escolheram para se certificarem de que o seu dispositivo está configurado para aceder a esses recursos consiste em ativar a Firewall do Windows Defender. Eis como pode ativá-la:
 
 1. Aceda a **Iniciar** e abra o **Painel de Controlo**.
-2. Abra **Sistema e Segurança** > **Firewall do Windows Defender**.
-3. Selecione **Personalizar Definições** > **Ativar ou desativar a Firewall do Windows** para redes de domínio, privadas e públicas.
+2. **Open System and Security** > **Windows Defender Firewall**.
+3. Escolha **Configurações personalizadas** > **Ligue ou desligue** o Windows Firewall para redes de domínio, privadas e públicas.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

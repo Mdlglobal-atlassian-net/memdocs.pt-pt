@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401489"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Início Rápido: experimentar gratuitamente o Microsoft Intune
@@ -64,8 +64,8 @@ Pode experimentar o Intune de forma gratuita durante 30 dias. Se já tiver uma c
 
 Se ainda não se inscreveu no portal, complete os seguintes passos:
 
-1. Abra uma nova janela do browser e introduza **https://endpoint.microsoft.com** na barra de endereço. 
-2. Utilize o ID do utilizador que lhe foi dado nos passos acima para iniciar sessão *(yourID@yourdomain* .onmicrosoft.com).
+1. Abra uma nova janela **https://endpoint.microsoft.com** do navegador e entre na barra de endereços. 
+2. Utilize o ID do utilizador que lhe foi*yourID@yourdomain*dado nos passos acima para iniciar sessão (.onmicrosoft.com).
 
     ![Imagem da página de inscrição do portal](./media/free-trial-sign-up/azure-portal-signin.png)
 
@@ -86,8 +86,8 @@ Se depois de iniciar sessão no Microsoft Endpoint Manager, vir um banner laranj
 
 ### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>Para definir a autoridade do MDM para Intune, siga estes passos:
 
-1. Abra uma nova janela do browser e introduza **https://portal.azure.com** na barra de endereço. 
-2. Selecione **Todos os serviços** > **Microsoft Intune**.
+1. Abra uma nova janela **https://portal.azure.com** do navegador e entre na barra de endereços. 
+2. Escolha **todos os serviços** > **Microsoft Intune**.
 3. Selecione a faixa que indica que não ativou a gestão de dispositivos ou, se não vir imediatamente a faixa, selecione **Inscrição de dispositivos**. O painel **Escolher Autoridade de MDM** será apresentado, se ainda não tiver ativado a gestão de dispositivos.
 
     > [!NOTE]
@@ -108,9 +108,9 @@ Como mencionado acima, se a sua organização tiver o seu próprio domínio pers
 
 1. Vá ao centro de [administração da Microsoft 365](https://admin.microsoft.com) e inscreva-se na sua conta de administrador.
 
-2. No painel de navegação, selecione **Configuração** > **Domínios** > **Adicionar domínio**.
+2. No painel de navegação, escolha**Domínios** >  **de configuração** > **Adicionar domínio**.
 
-3. Escreva o seu nome de domínio personalizado. Depois, selecione **Seguinte**.
+3. Escreva o seu nome de domínio personalizado. Em seguida, selecione **Next**.
 
    ![Screenshot do centro de administração da Microsoft 365 - Adicionar domínio](./media/free-trial-sign-up/domain-custom-add.png)
 
@@ -126,10 +126,10 @@ Como mencionado acima, se a sua organização tiver o seu próprio domínio pers
 ## <a name="admin-experiences"></a>Experiências de administrador
 
 Existem dois portais que irá utilizar com mais frequência:
-- O centro de administração do Microsoft Endpoint Manager[ (https://endpoint.microsoft.com/) ](https://endpoint.microsoft.com/)é onde pode explorar as [capacidades de Intune](what-is-intune.md). É aqui que um administrador trabalharia com intune.
-- O centro de administração do Microsoft 365[ (https://admin.microsoft.com) ](https://admin.microsoft.com)é onde pode adicionar e gerir os utilizadores, caso não esteja a utilizar o Azure Ative Directory para o fazer. Também pode gerir outros aspetos da sua conta, incluindo faturação e suporte.
+- O centro de administração[https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)do Microsoft Endpoint Manager () é onde pode explorar as [capacidades de Intune](what-is-intune.md). É aqui que um administrador trabalharia com intune.
+- O centro de administração[https://admin.microsoft.com](https://admin.microsoft.com)microsoft 365 é onde pode adicionar e gerir os utilizadores, se não estiver a utilizar o Azure Ative Directory para o fazer. Também pode gerir outros aspetos da sua conta, incluindo faturação e suporte.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste guia de início rápido, criou uma subscrição gratuita para experimentar o Intune num ambiente de teste. Para obter mais informações sobre como configurar o Intune, veja [Configurar o Intune](setup-steps.md).
 

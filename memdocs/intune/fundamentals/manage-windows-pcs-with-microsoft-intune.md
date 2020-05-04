@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326501"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Gerir PCs Windows como computadores através do cliente de software do Intune
@@ -60,7 +60,7 @@ Seguem-se os requisitos de software para a instalação do software cliente:
 
 |Requisito|Mais informações|
 |---------------|--------------------|
-|Sistema Operativo | Dispositivo Windows com Windows 7 SP1 e Windows 8.1 ou posterior. </br></br>**As versões Home Edition não são suportadas.**|
+|Sistema operativo | Dispositivo Windows com Windows 7 SP1 e Windows 8.1 ou posterior. </br></br>**As versões Home Edition não são suportadas.**|
 |Permissões administrativas|A conta que instala o software de cliente tem de ter permissões de administrador local no dispositivo.|
 |Windows Installer 3.1|O computador tem de ter instalado, no mínimo, o Windows Installer 3.1.<br /><br />Para ver a versão existente do Windows Installer num computador:<br /><br />  No PC, clique com o botão direito do rato em **%windir%\System32\msiexec.exe** e, em seguida, clique em **Propriedades**.<br /><br />Pode transferir a versão mais recente do Windows Installer em [Redistribuíveis do Windows Installer](https://go.microsoft.com/fwlink/?LinkID=234258) no site da Microsoft Developer Network.|
 |Remover software de cliente incompatível|Antes de instalar o software de cliente do Intune, desinstale todo o software de cliente do Configuration Manager, Operations Manager e Service Manager desse PC.|
@@ -73,14 +73,14 @@ Na maioria dos cenários, irá inscrever os dispositivos no Microsoft Intune, o 
 
 - **[Gestão de atualizações de software](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** pode manter os PCs atualizados e decidir quando as atualizações são aplicadas.
 
-- **[Política de Firewall do Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** ajuda a garantir que nenhum PC utilizado na sua empresa tem uma Firewall do Windows configurada incorretamente ou inativa.
+- **[Política do Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** - Isto ajuda a garantir que nenhum PC que seja utilizado na sua empresa tem uma Firewall do Windows inativa ou configurada indevidamente.
 
-- **[Proteção antimalware](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** o Intune inclui o Endpoint Protection, que ajuda a proteger os seus PCs de software malicioso.
+- **[Proteção anti-malware](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** - Intune inclui Endpoint Protection, que ajuda a proteger os seus Computadores contra malware.
 
-- **[Assistência remota](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** o Intune permite que os utilizadores contactem os técnicos de suporte de TI, que podem fornecer assistência através de uma funcionalidade de ambiente de trabalho remoto incluída no Intune (requer o software TeamViewer).
+- **[Assistência remota](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** - Intune permite que os utilizadores contactem o pessoal de suporte de TI, que pode então prestar assistência utilizando uma funcionalidade remota de ambiente de trabalho que está incluída com intune (requer software TeamViewer).
 
-- **[Gestão de licenças de software](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** controle quantas licenças de software estão disponíveis e quantas licenças disponíveis estão a ser utilizadas.
-- **[Implementação de aplicações](add-apps-for-windows-pcs-in-microsoft-intune.md)** implemente software em PCs geridos por si. Algumas funcionalidades de gestão de aplicações não estão disponíveis ao gerir PCs com o cliente de software.
+- **[Gestão de licenças](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** de software - Acompanhe quantas licenças de software estão disponíveis e quantas licenças disponíveis estão a ser usadas.
+- **[Implementação de aplicativos](add-apps-for-windows-pcs-in-microsoft-intune.md)** - Implemente software para Computadores que gere. Algumas funcionalidades de gestão de aplicações não estão disponíveis ao gerir PCs com o cliente de software.
 
 <!-- - **Compliance settings reporting** -->
 

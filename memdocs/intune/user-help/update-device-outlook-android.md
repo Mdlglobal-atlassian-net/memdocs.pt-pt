@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b751b3f52c1a0cd0f0a1f259e79e6917a0438d9b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327793"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Tem de atualizar o seu dispositivo Android para instalar o Outlook
@@ -38,4 +38,4 @@ Por vezes, o processo de instalação de uma aplicação pode falhar se o dispos
 
 Aceda a **Definições**, e, em seguida, utilize a opção **atualizar** ou **atualização do sistema**.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

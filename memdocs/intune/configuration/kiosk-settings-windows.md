@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359241"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 e posteriores configurações do dispositivo para funcionar como um quiosque em Intune
@@ -36,7 +36,7 @@ Para saber mais sobre a funcionalidade do quiosque Windows em Intune, consulte a
 
 - [Criar o perfil.](kiosk-settings.md#create-the-profile)
 
-- Este perfil de quiosque está diretamente relacionado com o perfil de restrições do dispositivo que cria utilizando as [definições](device-restrictions-windows-10.md#microsoft-edge-browser)do quiosque do Microsoft Edge . Resumindo:
+- Este perfil de quiosque está diretamente relacionado com o perfil de restrições do dispositivo que cria utilizando as [definições](device-restrictions-windows-10.md#microsoft-edge-browser)do quiosque do Microsoft Edge . Em resumo:
 
   1. Crie este perfil de quiosque para executar o dispositivo no modo quiosque.
   2. Crie o perfil de restrições do dispositivo e configure [funcionalidades](device-restrictions-windows-10.md#microsoft-edge-browser)e definições específicas permitidas no Microsoft Edge.
@@ -54,7 +54,7 @@ Executa apenas uma aplicação no dispositivo.
 
 - **Tipo de início de sessão do utilizador**: as aplicações que adicionar são executadas como a conta de utilizador que introduzir. As opções são:
 
-  - **Auto logon (Windows 10 versão 1803 e mais tarde)** : Utilização em quiosques em ambientes virados para o público que não exijam que o utilizador inicie sessão, semelhante a uma conta de hóspedes. Esta definição utiliza o [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Auto logon (Windows 10 versão 1803 e mais tarde)**: Utilização em quiosques em ambientes virados para o público que não exijam que o utilizador inicie sessão, semelhante a uma conta de hóspedes. Esta definição utiliza o [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
   - **Conta de utilizador local**: introduza a conta de utilizador local (para o dispositivo). A conta que introduz entra entra no quiosque.
 
 - Tipo de **aplicação:** Selecione o tipo de aplicação. As opções são:
@@ -62,12 +62,12 @@ Executa apenas uma aplicação no dispositivo.
   - **Adicione**o navegador Microsoft Edge : Selecione o **navegador Microsoft Edge**e escolha o tipo de modo de quiosque **Edge:**
 
     - **Sinalização digital/interativa**: Abre um ecrã completo URL e só mostra o conteúdo nesse website. [Configurar sinais digitais](https://docs.microsoft.com/windows/configuration/setup-digital-signage) fornece mais informações sobre esta funcionalidade.
-    - **Navegação pública (InPrivate)** : Executa uma versão limitada de vários separadores do Microsoft Edge. Os utilizadores podem navegar publicamente ou terminar a sua sessão de navegação.
+    - **Navegação pública (InPrivate)**: Executa uma versão limitada de vários separadores do Microsoft Edge. Os utilizadores podem navegar publicamente ou terminar a sua sessão de navegação.
 
     Para obter mais informações sobre estas opções, consulte [o modo de quiosque do Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Esta definição permite o navegador Microsoft Edge no dispositivo. Para configurar as definições específicas do Microsoft Edge, crie um perfil de configuração do dispositivo (**Configuração** do dispositivo > **Perfis** > **Criar perfil** > **Windows 10** para restrições de plataforma e **dispositivos** >  **Microsoft Edge Browser).** [O Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) lista os navegadores e descreve as definições disponíveis.
+    > Esta definição permite o navegador Microsoft Edge no dispositivo. Para configurar as definições específicas do Microsoft Edge, crie um perfil de configuração do dispositivo **(os perfis** > de**configuração** > do dispositivo**criam o perfil** > **Windows 10** para **restrições** >  de dispositivo sinuosos de plataforma **> Microsoft Edge Browser).** [O Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) lista os navegadores e descreve as definições disponíveis.
 
   - **Adicionar navegador quiosque**: Selecione **as definições do navegador kiosk**. Estas definições controlam uma aplicação de browser no quiosque. Certifique-se de obter a [aplicação](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) do navegador Kiosk da Loja, adicione-a ao Intune como uma [App de Clientes](../apps/apps-add.md). Em seguida, atribua a aplicação aos dispositivos do quiosque.
 
@@ -85,7 +85,7 @@ Executa apenas uma aplicação no dispositivo.
 
     - **Sites permitidos**: utilize esta definição para permitir que determinados sites sejam abertos. Por outras palavras, utilize esta funcionalidade para restringir ou impedir determinados sites no dispositivo. Por exemplo, pode permitir que todos os sites em `http://contoso.com` sejam abertos. Por predefinição, todos os sites são permitidos.
 
-      Para permitir sites específicos, carregue um ficheiro que inclua uma lista dos sites permitidos em linhas separadas. Se não adicionar um ficheiro, todos os sites serão permitidos. Por defeito, Intune suporta wild card. Assim, quando entrar no domínio, como `sharepoint.com`, permita que subdomínios sejam automaticamente permitidos, como `contoso.sharepoint.com`, `my.sharepoint.com`, e assim por diante.
+      Para permitir sites específicos, carregue um ficheiro que inclua uma lista dos sites permitidos em linhas separadas. Se não adicionar um ficheiro, todos os sites serão permitidos. Por defeito, Intune suporta wild card. Assim, quando entrar no domínio, `sharepoint.com`tais como, permitir que subdomínios `my.sharepoint.com`sejam automaticamente permitidos, tais como, `contoso.sharepoint.com`e assim por diante.
 
       O seu ficheiro de exemplo deve ser semelhante à seguinte lista:
 
@@ -125,9 +125,9 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
 - **Tipo de início de sessão do utilizador**: as aplicações que adicionar são executadas como a conta de utilizador que introduzir. As opções são:
 
-  - **Auto logon (Windows 10 versão 1803 e mais tarde)** : Utilização em quiosques em ambientes virados para o público que não exijam que o utilizador inicie sessão, semelhante a uma conta de hóspedes. Esta definição utiliza o [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Auto logon (Windows 10 versão 1803 e mais tarde)**: Utilização em quiosques em ambientes virados para o público que não exijam que o utilizador inicie sessão, semelhante a uma conta de hóspedes. Esta definição utiliza o [CSP AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
   - **Conta de utilizador local**: **adicione** a conta de utilizador local (para o dispositivo). A conta que introduz entra entra no quiosque.
-  - Utilizador ou grupo da **AD Azure (versão 1803 do Windows 10 e posterior)** : Selecione **Adicionar**, e escolha utilizadores ou grupos De AD Azure da lista. Pode selecionar vários utilizadores e grupos. Escolha **Selecionar** para guardar as alterações.
+  - Utilizador ou grupo da **AD Azure (versão 1803 do Windows 10 e posterior)**: Selecione **Adicionar**, e escolha utilizadores ou grupos De AD Azure da lista. Pode selecionar vários utilizadores e grupos. Escolha **Selecionar** para guardar as alterações.
   - **Visitante do HoloLens**: A conta de visitante é uma conta de convidado que não necessita de credenciais ou de autenticação do utilizador, como está descrito em [Shared PC mode concepts (Conceitos de modo de PC partilhado)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Navegador e Aplicações**: Adicione as aplicações para executar no dispositivo do quiosque. Lembre-se de que pode adicionar várias aplicações.
@@ -136,13 +136,13 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
     - **Adicione o Microsoft Edge**: O Microsoft Edge é adicionado à grelha de aplicações e todas as aplicações podem ser executadas neste quiosque. Escolha o tipo de **modo de quiosque Microsoft Edge:**
 
-      - **Modo normal (versão completa do Microsoft Edge)** : Executa uma versão completa do Microsoft Edge com todas as funcionalidades de navegação. Os dados e o estado do utilizador são guardados entre sessões.
-      - **Navegação pública (InPrivate)** : Executa uma versão multi-tab do Microsoft Edge InPrivate com uma experiência personalizada para quiosques que funcionam em modo de ecrã completo.
+      - **Modo normal (versão completa do Microsoft Edge)**: Executa uma versão completa do Microsoft Edge com todas as funcionalidades de navegação. Os dados e o estado do utilizador são guardados entre sessões.
+      - **Navegação pública (InPrivate)**: Executa uma versão multi-tab do Microsoft Edge InPrivate com uma experiência personalizada para quiosques que funcionam em modo de ecrã completo.
 
       Para obter mais informações sobre estas opções, consulte [o modo de quiosque do Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Esta definição permite o navegador Microsoft Edge no dispositivo. Para configurar as definições específicas do Microsoft Edge, crie um perfil de configuração do dispositivo (**Configuração** do dispositivo > **Perfis** > **Criar perfil** > **Windows 10** para restrições de plataforma e **dispositivos** >  **Microsoft Edge Browser).** [O Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) lista os navegadores e descreve as definições disponíveis.
+      > Esta definição permite o navegador Microsoft Edge no dispositivo. Para configurar as definições específicas do Microsoft Edge, crie um perfil de configuração do dispositivo **(os perfis** > de**configuração** > do dispositivo**criam o perfil** > **Windows 10** para **restrições** >  de dispositivo sinuosos de plataforma **> Microsoft Edge Browser).** [O Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) lista os navegadores e descreve as definições disponíveis.
 
     - **Adicionar navegador quiosque**: Estas configurações controlam uma aplicação de navegador web no quiosque. Garanta que implementa uma aplicação de browser para os dispositivos de quiosque com as [Aplicações de Cliente](../apps/apps-add.md).
 
@@ -173,12 +173,12 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
       - **Nome da aplicação**: obrigatório. Introduza um nome para a aplicação.
       - **Caminho local**: obrigatório. Introduza o caminho para o executável, tal como `C:\Program Files (x86)\Microsoft VS Code\Code.exe` ou `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **ID do modelo de utilizador da aplicação (AUMID)** : introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Win32. Esta definição determina o esquema de início do mosaico na área de trabalho. Para obter este ID, consulte [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **ID do modelo de utilizador da aplicação (AUMID)**: introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Win32. Esta definição determina o esquema de início do mosaico na área de trabalho. Para obter este ID, consulte [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **Adicionar por AUMID**: utilize esta opção para adicionar aplicações do Windows de caixa de entrada, como o Bloco de notas ou a Calculadora. Introduza as seguintes propriedades:
 
       - **Nome da aplicação**: obrigatório. Introduza um nome para a aplicação.
-      - **ID do modelo de utilizador da aplicação (AUMID)** : obrigatório. Introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Windows. Para obter este ID, veja [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Localizar o ID do Modelo de Utilizador da Aplicação de uma aplicação instalada).
+      - **ID do modelo de utilizador da aplicação (AUMID)**: obrigatório. Introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Windows. Para obter este ID, veja [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Localizar o ID do Modelo de Utilizador da Aplicação de uma aplicação instalada).
 
     - **Lançamento automático**: Opcional. Escolha uma aplicação para AutoLaunch quando o utilizador iniciar sintetiza. Apenas uma única aplicação pode ser AutoLançada.
     - **Tamanho do mosaico**: obrigatório. Escolha um tamanho de mosaico da aplicação: Pequeno, Médio, Largo ou Grande.
@@ -192,7 +192,7 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
 - **Permitir o acesso à pasta de downloads**: Escolha **Sim** para permitir que os utilizadores acedam à pasta Downloads no Windows Explorer. Por predefinição, o acesso à pasta Downloads é desativado. Esta funcionalidade é comumente utilizada para os utilizadores finais acederem a itens descarregados a partir de um navegador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

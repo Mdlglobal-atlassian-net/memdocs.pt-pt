@@ -2,7 +2,7 @@
 title: Modelo de dados do Armazém de Dados
 titleSuffix: Microsoft Intune
 description: O Armazém de Dados do Microsoft Intune copia dados diariamente para fornecer uma apresentação do histórico do seu ambiente móvel em contínua mudança.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331713"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune Data Warehouse modelo de dados
@@ -40,13 +40,13 @@ O armazém expõe dados nas seguintes áreas de nível superior:
 
 Estas áreas contêm as entidades com significado para o ambiente do Intune. Encontrará detalhes sobre os conjuntos de entidades nos seguintes tópicos:
 
-- [Application](reports-ref-application.md)
-- [Data](reports-ref-date.md)
+- [Aplicação](reports-ref-application.md)
+- [Date](reports-ref-date.md)
 - [Dispositivos](reports-ref-devices.md)
 - [Extensão de Gestão do Intune](reports-ref-intunemanagementextension.md)
-- [Política](reports-ref-policy.md)
+- [Policy](reports-ref-policy.md)
 - [Mobile App Management (MAM)](../apps/app-management.md)
-- [User](reports-ref-user.md)
+- [Utilizador](reports-ref-user.md)
 - [Associações de Dispositivos do Utilizador](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relações: modelo de esquema de estrela
@@ -61,7 +61,7 @@ Um modelo de esquema de estrela é otimizado para flexibilidade e análise de da
 
 O armazém fica a jusante dos dados do Intune. O Intune cria um instantâneo diário à meia-noite (UTC) e guarda-o no armazém. A duração da retenção dos instantâneos varia conforme as tabelas de factos. Algumas podem reter os dados durante sete dias, outras 30 dias e algumas durante períodos mais longos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para saber mais sobre como o armazém de dados controla a duração de um utilizador no Intune, veja [Representação da duração do utilizador no Armazém de Dados do Intune](reports-ref-user-timeline.md).
 - Para saber mais sobre trabalhar com armazéns de dados, veja [Create First Data WareHouse](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) (Criar Primeiro Armazém de Dados).

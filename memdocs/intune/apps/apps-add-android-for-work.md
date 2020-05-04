@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624894"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615511"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -129,19 +129,17 @@ Existem duas formas de adicionar aplicações LOB ao Managed Google Play:
     > [!NOTE]
     > As aplicações privadas podem demorar vários minutos a ficar disponíveis para sincronizar. Se a aplicação não aparecer na primeira vez que executa uma sincronização, aguarde alguns minutos e inicie uma nova sincronização.
 
-Para obter mais informações sobre aplicações privadas geridas do Google Play, incluindo uma FAQ, consulte o artigo de suporte da Google: https://support.google.com/googleplay/work/answer/9146439
+Para obter mais informações sobre aplicações privadas geridas do Google Play, incluindo uma FAQ, consulte o artigo de suporte da Google:https://support.google.com/googleplay/work/answer/9146439
 
 >[!IMPORTANT]
 >As aplicações privadas adicionadas usando este método nunca podem ser tornadas públicas. Utilize apenas esta opção de publicação se tiver a certeza de que esta aplicação será sempre privada da sua organização.
 
 ### <a name="managed-google-play-private-lob-app-publishing-using-the-google-developer-console"></a>Aplicação gerida do Google Play privada (LOB) publicada usando a Consola de Desenvolvimento do Google
 
-1. Inicie sessão na [Consola do Programador do Google Play](https://play.google.com/apps/publish) com a mesma conta que utilizou para configurar a ligação entre o Intune e o Android Enterprise.  
+1. Inscreva-se na Consola de Desenvolvimento da [Google Play](https://play.google.com/apps/publish) com a mesma conta que utilizou para configurar a ligação entre Intune e Android Enterprise.  
     Se estiver a iniciar sessão pela primeira vez, terá de se registar e pagar uma taxa para se tornar um membro do programa Google Developer.
 2. Na consola, selecione **Adicionar nova aplicação**.
-3. Deve carregar e fornecer informações sobre a sua aplicação da mesma forma que publica qualquer aplicação na Google Play Store. No entanto, tem de selecionar a definição **Apenas disponibilizar esta aplicação para a minha organização (<*nome da organização*>)** .
-
-    ![Apenas disponibilizar a aplicação para a sua organização](./media/apps-add-android-for-work/restrict.png)
+3. Deve carregar e fornecer informações sobre a sua aplicação da mesma forma que publica qualquer aplicação na Google Play Store. No entanto, tem de selecionar a definição **Apenas disponibilizar esta aplicação para a minha organização (<*nome da organização*>)**.
 
     Esta operação disponibiliza a aplicação apenas para a sua organização. Não ficará disponível na Google Play Store pública.
 
@@ -175,7 +173,7 @@ As ligações web serão abertas com o Microsoft Edge ou qualquer outra aplicaç
 Se aprovou uma aplicação da loja e não a vê na carga de trabalho das **Apps,** force uma sincronização imediata da seguinte forma:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Apps** > **administração** de inquilinos > **Conectores e fichas** > **Managed Google Play**.
+3. Selecione **Apps** > **Administração** > de**inquilinos Conectores e fichas Geridos** > **Google Play**.
 5. No painel **Google Play Gerido**, selecione **Atualizar**.  
     A página atualizará a hora e o estado da última sincronização.
 6. No centro de administração do Microsoft Endpoint Manager selecione **Apps** > **Todas as aplicações**.  
@@ -219,8 +217,12 @@ Em alternativa, pode configurar o Google Play para reaprovar automaticamente as 
 
 Para aplicações geridas do Google Play implementadas para dispositivos de perfil de trabalho Android Enterprise, pode ver o estado e o número de versão da aplicação instalada num dispositivo utilizando o Intune. 
 
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Trabalhar com pistas de testes fechadas do Google Play
+
+Pode distribuir uma versão não-produção de uma aplicação gerida do Google Play para dispositivos matriculados num cenário Android Enterprise (**Android Enterprise Work Profile**, Full **Managed**, e **Dedicado**) para realizar testes. Em Intune, você pode ver se uma aplicação tem uma pista de teste de construção pré-produção publicada para ela, bem como ser capaz de atribuir essa faixa a grupos de utilizadores aAD ou grupos de dispositivos. O fluxo de trabalho para atribuir uma versão de produção a um grupo que existe atualmente é o mesmo que atribuir um canal de não produção. Após a implementação, o estado de instalação de cada faixa corresponderá ao número da versão da faixa no Managed Google Play. Para mais informações, consulte [as faixas de teste fechadas do Google Play para testes de pré-lançamento de aplicações](https://support.google.com/googleplay/android-developer/answer/3131213).
+
 ## <a name="delete-managed-google-play-apps"></a>Eliminar aplicações do Managed Google Play
-Quando necessário, pode eliminar as aplicações do Managed Google Play do Microsoft Intune. Para eliminar uma aplicação gerida pelo Google Play, abra o Microsoft Intune no portal Azure e selecione **Apps** > **Todas as aplicações.** Na lista de aplicações, selecione as reticências (...) à direita da aplicação do Managed Google Play e, em seguida, selecione **Eliminar** na lista apresentada. Quando elimina uma aplicação do Managed Google Play da lista de aplicações, essa aplicação passa automaticamente a não aprovada.
+Quando necessário, pode eliminar as aplicações do Managed Google Play do Microsoft Intune. Para eliminar uma aplicação gerida pelo Google Play, abra o Microsoft Intune no portal Azure e selecione **Apps** > **Todas as aplicações**. Na lista de aplicações, selecione as reticências (...) à direita da aplicação do Managed Google Play e, em seguida, selecione **Eliminar** na lista apresentada. Quando elimina uma aplicação do Managed Google Play da lista de aplicações, essa aplicação passa automaticamente a não aprovada.
 
 > [!NOTE]
 > Se uma aplicação não for aprovada ou eliminada da loja gerida do Google Play, esta não será removida da lista de aplicações do cliente Intune. Isto permite-lhe ainda direcionar uma política de desinstalação para os utilizadores mesmo que a aplicação não esteja aprovada.
@@ -231,6 +233,6 @@ Quando necessário, pode eliminar as aplicações do Managed Google Play do Micr
 
 Pode ativar um aplicativo de sistema Android Enterprise para [dispositivos dedicados](../enrollment/android-kiosk-enroll.md) ao Android Enterprise ou [dispositivos totalmente geridos.](../enrollment/android-fully-managed-enroll.md) Para obter mais informações sobre a adição de uma aplicação do sistema Android Enterprise, consulte adicionar aplicações do [sistema Android Enterprise ao Microsoft Intune](apps-ae-system.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Atribuir aplicações a grupos](apps-deploy.md)

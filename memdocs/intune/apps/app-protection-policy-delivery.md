@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8318e6dc364d0dfbf38ac278938018b80f703b58
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326233"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Compreender o timing de entrega da política de proteção de aplicações
@@ -33,7 +33,7 @@ Aprenda as diferentes janelas de implementação para que as políticas de prote
 
 A entrega da política de proteção de aplicações depende do estado de licença e do registo do serviço Intune para os seus utilizadores.  
 
-|    Estado de Utilizador    |    Comportamento de Proteção de Aplicativos     |    Intervalo de repetição (ver nota)    |    Por que isso acontece?    |
+|    Estado utilizador    |    Comportamento de Proteção de Aplicativos     |    Intervalo de repetição (ver nota)    |    Porque é que isto acontece?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    Inquilino Não Abordo    |    Aguarde o próximo intervalo de repetição.  A Proteção de Aplicações não está ativa para o utilizador.    |    24 horas    |    Ocorre quando não instalou o seu inquilino para o Intune.    |
 |    Utilizador não licenciado     |    Aguarde o próximo intervalo de repetição.  A Proteção de Aplicações não está ativa para o utilizador.     |    12 horas - No entanto, em dispositivos Android este intervalo requer a versão 5.6.0 da APP SDK intune. Caso contrário, para os dispositivos Andriod, o intervalo é de 24 horas.   |    Ocorre quando não licenciou o utilizador para o Intune.    |
@@ -48,7 +48,7 @@ A entrega da política de proteção de aplicações depende do estado de licen�
 
 Quando o registo do utilizador falha devido a problemas de conectividade de rede, é utilizado um intervalo de repetição acelerado.  O cliente de Proteção de Aplicações irá voltar a tentar em intervalos cada vez mais longos até que o intervalo atinja 60 minutos ou seja feita uma ligação bem sucedida.  O cliente continuará então a tentar novamente em intervalos de 60 minutos até que seja feita uma ligação bem sucedida. Em seguida, o cliente voltará ao intervalo padrão de repetição com base no estado do utilizador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribuir licenças aos utilizadores para que estes possam inscrever dispositivos no Intune](../fundamentals/licenses-assign.md)
 

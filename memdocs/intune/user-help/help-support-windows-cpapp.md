@@ -1,6 +1,6 @@
 ---
 title: Obtenha ajuda e suporte no Portal da Empresa para o Windows 10 / Microsoft Docs
-description: Envie registos, contacte o helpdesk e leia as FAQs na página de Ajuda e Suporte do Portal da Empresa.
+description: Envie registos, contacte o helpdesk e leia as FAQs na página de suporte do Portal da Empresa &.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,28 +19,28 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1fcf4d98504f23f5fa19a099d61e7534e4df4571
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324605"
 ---
 # <a name="get-help-and-support-in-company-portal-for-windows-10"></a>Obtenha ajuda e suporte no Portal da Empresa para o Windows 10
 
-Visite a página de **Ajuda e Suporte** do Portal da Empresa para começar a resolver problemas na sua aplicação e problemas de acesso.   
+Visite a página **de suporte &** Portal da Empresa para começar a resolver problemas na sua aplicação e problemas de acesso.   
 
-De **Ajuda e suporte** pode:  
+De **Ajuda & suporte** pode:  
 
 * Obtenha ajuda com problemas de aplicativos
 * Ver detalhes de contato do helpdesk
 * Encontre respostas às suas perguntas frequentes (PERGUNTAS) 
 * Reportar problemas de aplicações à Microsoft
 
-![Exemplo de screenshot do aplicativo Portal da Empresa para windows 10, página de ajuda e suporte, destacando cada título de secção.](./media/1812_UCP_Help_Support_sections.png)  
+![Exemplo de screenshot do aplicativo Portal da Empresa para windows 10, ajuda & página de suporte, destacando cada título de secção.](./media/1812_UCP_Help_Support_sections.png)  
 
 ## <a name="get-help-with-app-problems"></a>Obtenha ajuda com problemas de aplicativos
 
-Envie um e-mail à sua organização sobre quaisquer problemas que tenha no Portal da Empresa. Selecione **Obter Ajuda** para começar a descrever o problema. A sua organização usará a informação que fornece para resolver o problema. Se for necessária mais ajuda para determinar o problema, a sua organização utilizará o ID de diagnóstico&ndash;automaticamente incluído no e-mail&ndash;para contactar a equipa de suporte da Microsoft.  
+Envie um e-mail à sua organização sobre quaisquer problemas que tenha no Portal da Empresa. Selecione **Obter Ajuda** para começar a descrever o problema. A sua organização usará a informação que fornece para resolver o problema. Se for necessária mais ajuda para determinar o problema, a sua organização utilizará o ID&ndash;de diagnóstico automaticamente incluído no e-mail&ndash;para contactar a equipa de suporte da Microsoft.  
 
 Para o procedimento passo a passo, consulte [Enviar registos para o suporte da empresa a partir da aplicação Portal da Empresa para o Windows 10](send-logs-to-your-it-admin-cp-windows.md).  
 
@@ -58,4 +58,4 @@ Quando selecionar **o problema do Relatório para a Microsoft,** irá à página
 * Deixe uma análise para a aplicação na Microsoft Store   
 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

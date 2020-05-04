@@ -1,5 +1,5 @@
 ---
-title: Criar a sua estrutura do Microsoft Intune
+title: Crie o seu design Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Este artigo ajuda-o a criar uma estrutura para uma estruturação e implementação apenas na cloud do Microsoft Intune.
 keywords: ''
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331061"
 ---
 # <a name="create-a-design"></a>Criar uma estrutura
@@ -138,7 +138,7 @@ A identidade é a forma como identificamos os utilizadores que pertencem à sua 
 
 Saiba mais sobre os seguintes requisitos de identidade do Intune:
 
-- [Requisitos de identidade](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
+- [Requisitos de identidade.](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions)
 
 - [Requisitos da sincronização de diretórios](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -155,7 +155,7 @@ Recomendamos que crie todos os grupos no Active Directory no local e, em seguida
 - [Criar grupos de utilizadores e de dispositivos](groups-add.md).
 
 ### <a name="public-key-infrastructure-pki"></a>Infraestrutura de chaves públicas (PKI)
-A infraestrutura de chaves públicas fornece certificados para dispositivos ou utilizadores de forma a autenticar a um serviço com segurança. O Intune suporta uma infraestrutura PKI da Microsoft. Os certificados de dispositivos e utilizadores podem ser emitidos para um dispositivo móvel para cumprir requisitos de autenticação baseados em certificados. Antes de utilizar certificados, tem de determinar se precisa dos mesmos, se a infraestrutura de rede suporta a autenticação baseada em certificados e se os certificados estão a ser utilizados no ambiente existente.
+A infraestrutura de chaves públicas fornece certificados para dispositivos ou utilizadores de forma a autenticar a um serviço com segurança. O Intune suporta uma infraestrutura PKI do Microsoft. Os certificados de dispositivos e utilizadores podem ser emitidos para um dispositivo móvel para cumprir requisitos de autenticação baseados em certificados. Antes de utilizar certificados, tem de determinar se precisa dos mesmos, se a infraestrutura de rede suporta a autenticação baseada em certificados e se os certificados estão a ser utilizados no ambiente existente.
 
 Se estiver a planear utilizar certificados com VPN, Wi-Fi ou perfis de e-mail com o Intune, certifique-se de que tem uma [infraestrutura PKI suportada no local](../protect/certificates-configure.md), pronta para criar e implementar perfis de certificado.
 
@@ -196,12 +196,12 @@ Vamos rever estas áreas mais detalhadamente.
 
 O Intune gere dispositivos móveis para proteger dados empresariais e permite que os utilizadores finais trabalhem em mais locais. O Intune suporta muitas plataformas de dispositivos, pelo que recomendamos que documente os dispositivos e as plataformas de SO e as versões que serão suportadas no design da sua organização. Por exemplo:
 
-| **Plataforma de dispositivo** | **Versões do SO** |
+| **Plataforma de dispositivos** | **Versões do SO** |
 |:---:|:---:|
 | iOS – iPhone | 10.0+ |                
 | iOS – iPad | 10.0+ |               
 | Android – Samsung Knox Standard | 4.0+ |
-| Tablet Windows 10 | 10+ |
+| Tablet Windows 10 | Mais de 10 |
 
 
 Pode [transferir um modelo da tabela acima](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para desenvolver a sua lista de dispositivos.
@@ -253,7 +253,7 @@ Utilize políticas de configuração para gerir as funcionalidades e as definiç
 
 Deve criar pelo menos uma política de configuração por plataforma. Se for necessário, pode criar várias políticas de configuração por plataforma. Segue-se um exemplo da estruturação de quatro políticas de configuração diferentes para diversas plataformas e cenários de casos de utilização.
 
-| **Nome da política** | **Plataforma de dispositivo** | **Definições** | **Grupo de destino** |   
+| **Nome da política** | **Plataforma de dispositivos** | **Definições** | **Grupo de destino** |   
 |:---:|:---:|:---:|:---:|
 | Empresarial – iOS | iOS | O PIN é obrigatório, Comprimento: 6, Cópia de Segurança na Cloud Restrita | Dispositivos Empresariais |                                                           
 | Empresarial – Android | Android | O PIN é obrigatório, Comprimento: 6, Cópia de Segurança na Cloud Restrita | Dispositivos Empresariais |                                                           
@@ -267,7 +267,7 @@ Pode [transferir um modelo da tabela acima](https://gallery.technet.microsoft.co
 
 Utilize perfis para ajudar o utilizador final a ligar-se a dados da empresa. O Intune suporta muitos tipos de perfis. Veja os requisitos e casos de utilização para determinar quando os perfis serão configurados. Todos os perfis de dispositivos são categorizados por tipo de plataforma e devem ser incluídos na documentação da estrutura.
 
-- Perfis de certificados
+- Perfis de certificado
 
 - Perfil Wi-Fi
 
@@ -277,7 +277,7 @@ Utilize perfis para ajudar o utilizador final a ligar-se a dados da empresa. O I
 
 Vamos rever cada tipo de perfil com mais detalhes.
 
-#### <a name="certificate-profiles"></a>Perfis de certificados
+#### <a name="certificate-profiles"></a>Perfis de certificado
 
 Os perfis de certificados permitem ao Intune emitir um certificado para um utilizador ou dispositivo. O Intune suporta o seguinte:
 
@@ -294,7 +294,7 @@ Recomendamos que documente que grupos de utilizadores precisam de um certificado
 
 Aqui está um exemplo de como pode documentar os certificados durante o projeto:
 
-| **Tipo** | **Nome do perfil** | **Plataforma de dispositivo** | **Casos de utilização** |   
+| **Tipo** | **Nome de perfil** | **Plataforma de dispositivos** | **Casos de utilização** |   
 |:---:|:---:|:---:|:---:|
 | AC de Raiz | AC de Raiz Empresarial | Android, iOS/iPadOS, Windows mobile | Empresarial, BYOD  |                                                           
 | SCEP | Certificado de Utilizadores | Android, iOS/iPadOS, Windows mobile | Empresarial, BYOD |                                                           
@@ -308,7 +308,7 @@ Os perfis de Wi-Fi são utilizados para ligar automaticamente um dispositivo mó
 
 Segue-se um exemplo de uma estrutura de um perfil de Wi-Fi:
 
-| **Tipo** | **Nome do perfil** | **Plataforma de dispositivo** | **Casos de utilização** |
+| **Tipo** | **Nome de perfil** | **Plataforma de dispositivos** | **Casos de utilização** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Perfil de Wi-Fi na Ásia | Android | Empresarial, BYOD na região da Ásia|
 | Wi-Fi | Perfil de Wi-Fi da América do Norte | Android, iOS/iPadOS, Windows 10 Mobile | Empresarial, BYOD na região da América do Norte |
@@ -321,7 +321,7 @@ Os perfis VPN permitem aos utilizadores aceder seguramente à sua rede a partir 
 
 Segue-se um exemplo de como documentar a estrutura de um perfil VPN.
 
-| **Tipo** | **Nome do perfil** | **Plataforma de dispositivo** | **Casos de utilização** |
+| **Tipo** | **Nome de perfil** | **Plataforma de dispositivos** | **Casos de utilização** |
 |:---:|:---:|:---:|:---:|
 | VPN | Perfil VPN Cisco qualquer ligação | Android, iOS/iPadOS, Windows 10 Mobile | Empresarial, BYOD na América do Norte e Alemanha|
 | VPN | Pulse Secure | Android | Empresarial, BYOD na região da Ásia |
@@ -334,7 +334,7 @@ Os perfis de e-mail permitem a um cliente de e-mail ser automaticamente configur
 
 Segue-se um exemplo de como documentar a estrutura de perfis de e-mail:
 
-| **Tipo** | **Nome do perfil** | **Plataforma de dispositivo** | **Casos de utilização** |
+| **Tipo** | **Nome de perfil** | **Plataforma de dispositivos** | **Casos de utilização** |
 |:---:|:---:|:---:|:---:|
 | Perfil de e-mail | Perfil de e-mail iOS | iOS | Empresarial – Técnico de informação BYOD |
 | Perfil de e-mail | Perfil de e-mail Android Knox | Android Knox | BYOD |
@@ -354,7 +354,7 @@ Pode utilizar o Intune para disponibilizar aplicações aos utilizadores ou disp
 
 Uma vez que as aplicações podem ser implementadas para utilizadores e dispositivos, recomendamos que decida que aplicações serão geridas pelo Intune. Ao compilar a lista, tente responder às seguintes questões:
 
-- As aplicações requerem integração com os serviços da cloud?
+- As aplicações requerem integração com os serviços da nuvem?
 
 - Todas as aplicações estarão disponíveis para utilizadores BYOD?
 
@@ -371,7 +371,7 @@ Uma vez que as aplicações podem ser implementadas para utilizadores e disposit
 
 As políticas de proteção de aplicações minimizam a perda de dados ao definir como a aplicação gere os dados empresariais. O Intune suporta políticas de proteção de aplicações para qualquer aplicação criada para funcionar com a gestão de aplicações móveis. Ao estruturar a política de proteção de aplicações, tem de decidir que restrições pretende atribuir aos dados empresariais numa determinada aplicação. Recomendamos que reveja como funcionam as [políticas de proteção de aplicações](../apps/app-protection-policy.md). Segue-se um exemplo de como documentar as aplicações existentes e que proteção é necessária.
 
-| **Application** | **Objetivo** | **Plataformas** | **Caso de utilização** | **Política de proteção de aplicações** |
+| **Aplicação** | **Objetivo** | **Plataformas** | **Caso de utilização** | **Política de proteção de aplicações** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Disponível | iOS | Empresarial – Executivos | Não pode ser desbloqueado por jailbreak, encriptar ficheiros |                                                         
 | Word | Disponível | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | Empresarial, BYOD | Não pode ser desbloqueado por jailbreak, encriptar ficheiros |                                                         
@@ -386,7 +386,7 @@ Veja os requisitos e casos de utilização para determinar quantas políticas de
 
 Segue-se um exemplo de como estruturar uma política de conformidade:
 
-| **Nome da política** | **Plataforma de dispositivo** | **Definições** | **Grupo de destino** |
+| **Nome da política** | **Plataforma de dispositivos** | **Definições** | **Grupo de destino** |
 |:---:|:---:|:---:|:---:|
 | Política de conformidade | iOS/iPadOS, Android - Samsung Knox, non-Knox, Windows 10 mobile | PIN – obrigatório, não pode ser desbloqueado por jailbreak | Empresarial, BYOD |
 
@@ -394,11 +394,11 @@ Segue-se um exemplo de como estruturar uma política de conformidade:
 Pode [transferir um modelo da tabela acima](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar as suas necessidade de políticas de conformidade.
 #### <a name="conditional-access-policies"></a>Políticas de Acesso Condicional
 
-O Acesso Condicional é utilizado para permitir que apenas dispositivos conformes acedam a emails e outros recursos da empresa. O Intune funciona com o Enterprise Mobility + Security (EMS) para controlar o acesso aos recursos da empresa. Decida se necessita de Acesso Condicional e o que deve ser garantido. Saiba mais sobre o [Acesso Condicional](../protect/conditional-access.md).
+O Acesso Condicional é utilizado para permitir que apenas dispositivos conformes acedam a emails e outros recursos da empresa. O Intune funciona com o Enterprise Mobility + Security (EMS) para controlar o acesso aos recursos da empresa. Decida se necessita de Acesso Condicional e o que deve ser garantido. Saiba mais sobre [acesso condicional.](../protect/conditional-access.md)
 
 Para acesso online, decida quais as plataformas e grupos de utilizadores que irá direcionar através de políticas de Acesso Condicional. Além disso, determine se precisa de instalar ou configurar o conector Intune para troca no local: 
 
-- [Exchange no local](../protect/exchange-connector-install.md)
+- [Intercâmbio no local](../protect/exchange-connector-install.md)
 
 Aqui está um exemplo de como documentar as políticas de Acesso Condicional:
 
@@ -409,6 +409,6 @@ Aqui está um exemplo de como documentar as políticas de Acesso Condicional:
 
 Pode [descarregar um modelo da tabela acima](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para identificar as suas necessidades de política de Acesso Condicional.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 A próxima secção fornece orientações sobre o [processo de implementação do Intune](planning-guide-onboarding.md).

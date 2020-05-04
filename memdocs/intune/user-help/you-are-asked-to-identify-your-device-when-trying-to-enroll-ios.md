@@ -20,18 +20,18 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 83e77f56f4d68e0f196e6ef13ad538c82c1fd578
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324077"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Tem de identificar o seu dispositivo quando está a tentar inscrever-se
 
 Se estiver a tentar inscrever o seu dispositivo iOS no Intune e vir um ecrã que lhe pede para identificá-lo, significa que pelo menos um dos seus dispositivos já foi inscrito e atribuído à sua conta através de um método que não a aplicação Portal da Empresa. Para que a aplicação Portal da Empresa funcione corretamente, tem de identificar se o dispositivo que está a utilizar já foi inscrito no Intune.
 
-1. Se vir o seu dispositivo na lista, toque no mesmo. Se não o vir, toque em **novo dispositivo**.
+1. Se vir o seu dispositivo na lista, toque no mesmo. Se não o vir, toque em **novo dispositivo.**
 2. Toque em **continuar.**
-3. Introduza os últimos quatro carateres do número de série do seu dispositivo para ajudar o Intune a confirmar que está inscrito. Para encontrar o número de série, veja [How do I find the serial number on my device? (Como encontrar o número de série do meu dispositivo?)](how-do-i-find-the-serial-number-on-my-device-ios.md).
+3. Introduza os últimos quatro carateres do número de série do seu dispositivo para ajudar o Intune a confirmar que está inscrito. Para encontrar o seu número de série, veja [como encontro o número de série no meu dispositivo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3ff737d99a5d57e8e4a1f090e65e787f9b57c5e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324037"
 ---
 # <a name="how-to-enable-user-access-control"></a>Como ativar o Controlo de Acesso de Utilizadores
@@ -33,7 +33,7 @@ A sua empresa ou escola querem garantir que os dispositivos que acedem aos respe
 Eis como pode alterar as definições do Controlo de Acesso de Utilizadores:
 
 1. Aceda a **Iniciar** e abra o **Painel de Controlo**.
-2. Abra **Segurança e Manutenção** > **Alterar definições do Controlo de Conta de Utilizador**.
+2. Abrir as**definições**de controlo da conta do utilizador e de segurança de **segurança e manutenção.** > 
 3. Na página **Escolha quando pretende ser notificado de alterações ao seu computador**, mova o controlo de deslize para um dos dois entalhes superiores mais juntos a **Notificar-me sempre**.
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto, consulte o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

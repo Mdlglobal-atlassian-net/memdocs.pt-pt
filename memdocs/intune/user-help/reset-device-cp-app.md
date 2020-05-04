@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser; intune-azure
 ms.collection: ''
 ms.openlocfilehash: f7d009703e61cf717a2084557ab662351f879cb1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324473"
 ---
 # <a name="reset-device-from-the-company-portal-app"></a>Reset dispositivo a partir da aplicação Portal da Empresa  
@@ -50,4 +50,4 @@ Depois de redefinir um dispositivo, deixará de aparecer no Portal da Empresa. A
 
      ![Exemplo de screenshot da aplicação Portal da Empresa, Reset mensagem de confirmação, realçando o botão Reset. ](./media/1802-cp-app-windows-reset-confirm.png)  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

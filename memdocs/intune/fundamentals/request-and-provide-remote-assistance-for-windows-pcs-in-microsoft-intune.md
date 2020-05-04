@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 901064b4902ad9a0de490596d10f99a7507fa5e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330701"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Pedir e fornecer assistência remota para PCs Windows
@@ -80,14 +80,14 @@ A partir do menu **Ações** da janela **TeamViewer**, escolha **Terminar Sessã
 ## <a name="remotely-restart-a-windows-pc"></a>Reiniciar um PC Windows remotamente
 Quando ajudar os seus utilizadores com problemas, poderá ter de ocasionalmente reiniciar remotamente os seus PCs. Utilize os seguintes passos para reiniciar remotamente um PC Windows.
 
-1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)escolha **Grupos** &gt; **Todos os Dispositivos** (ou outro grupo que contenha o PC que pretende reiniciar).
+1. Na [consola de administração do Microsoft Intune](https://manage.microsoft.com/), selecione **Grupos** &gt; **Todos os Dispositivos** (ou outro grupo que contenha o PC que pretende reiniciar).
 
-2. Selecione um ou mais Computadores e, em seguida, escolha **tarefas remotas** &gt; **reiniciar o computador**.
+2. Selecione um ou mais PCs e, em seguida, selecione **Tarefas Remotas** &gt; **Reiniciar o Computador**.
 
 3. Para ver o estado da tarefa, escolha **Tarefas Remotas** no canto inferior direito da página.
 
 4. Na caixa de diálogo **Estado da Tarefa**, reveja as tarefas remotas atuais, os estados de tarefas, o nome do dispositivo e todos os erros comunicados.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Tarefas de gestão comuns de PCs Windows com o cliente de software do Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

@@ -1,5 +1,5 @@
 ---
-title: Corrigir problemas comuns com dispositivos geridos da Samsung Knox  Microsoft Docs
+title: Corrigir problemas comuns com dispositivos geridos da Samsung Knox [ Microsoft Docs
 description: Problemas atiram o seu dispositivo Samsung Knox.
 keywords: ''
 author: lenewsad
@@ -19,10 +19,10 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.collection: ''
 ms.openlocfilehash: 398720e2f491fa8b69d80cbc2f2783123b965723
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324401"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Corrigir problemas comuns no dispositivo Samsung Knox
@@ -53,4 +53,4 @@ A mensagem apresentada poderá ter o seguinte aspeto:
 |---|---|
 |**Erro de ativação do Samsung Knox** – Não foi possível ativar a licença do Samsung Knox. Pode ser porque o modo de poupança de energia está ligado. Desligue o modo de poupança de energia nas definições do dispositivo e tente novamente. |O dispositivo poderá não ter as definições de energia corretas para funcionar com os recursos da empresa. Para saber mais sobre esta definição consulte o modo de poupança de [energia](https://go.microsoft.com/fwlink/?linkid=2077422&clcid=0x409).|  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

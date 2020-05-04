@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330909"
 ---
 # <a name="intune-testing-and-validation"></a>Teste e validação do Intune
@@ -54,7 +54,7 @@ Podem ocorrer problemas que necessitem de orientação técnica ou resolução d
 
 - [Como obter suporte do Intune](get-support.md)
 
-- [Contactar o suporte assistido por telefone do Microsoft Intune](get-support.md)
+- [Contacte o suporte telefónico assistido para o Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Teste de validação funcional
 
@@ -78,7 +78,7 @@ Efetue testes de validação do utilizador final para verificar se a experiênci
 
 ![Tabela 3, secção 9](./media/planning-guide-test-validation/section-9-image-3-table.PNG)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Agora que testou e validou os cenários funcionais e de casos de utilização do Intune, está pronto para a [implementação de produção do Intune](planning-guide-rollout-plan.md).
 

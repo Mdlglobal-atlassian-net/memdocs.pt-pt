@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 06747035f2d04be01dad12a9c89b712a4baae6b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325241"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Integrar o Sophos Mobile com Intune  
@@ -36,7 +36,7 @@ Antes de iniciar o processo de integração do Sophos Mobile com o Intune, certi
 - Credenciais de administrador do Azure Active Directory para conceder as seguintes permissões:  
   - Iniciar sessão e ler o perfil de utilizador  
   - Aceder ao diretório como o utilizador com sessão iniciada  
-  - Ler dados do diretório  
+  - Ler os dados do diretório  
   - Enviar informações do dispositivo para o Intune  
 - Credenciais de administrador para aceder à consola de administração Sophos Mobile.  
 
@@ -52,20 +52,20 @@ Segue-se o processo de autorização da aplicação Sophos Mobile:
 
 ## <a name="to-set-up-sophos-mobile-integration"></a>Para criar a integração sophos Mobile  
 
-1. Inscreva-se no [portal Azure,]( https://portal.azure.com/)vá **Intune** > **Conformidade do Dispositivo** > Mobile Threat **Defense** > e selecione **Add**.  
+1. Inscreva-se no [portal Azure]( https://portal.azure.com/), vá **Intune** > **Device compliance** > **Mobile Threat Defense** > e selecione **Add**.  
 2. Na página **Add Connector,** utilize o dropdown e selecione **Sofos**. E, em seguida, **selecione Criar**.  
 3. Selecione o link *Abra a consola de administração Sophos*.  
 4. Inscreva-se na [consola de administração Sophos](https://central.sophos.com/) com as suas credenciais Sophos.  
-5. Vá para **mobile** > **Definições** > **configuração** > **sofos**.  
+5. Vá para**configurações** >  **móveis** > **Configuração** > **de sofos configuração**.  
 6. Na página de **configuração Sophos,** selecione o separador **Intune MTD.**  
-   ![sophos](./media/sophos-mtd-connector-integration/sophos-setup.png) 
+   ![Configuração de sophos](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
 7. Selecione **Ligar,** e, em seguida, **selecione Sim**. Sophos conecta-se a Intune e requer que você assine a sua subscrição Intune. 
 8. Na janela de autenticação Intune da Microsoft, introduza as suas credenciais Intune e **aceite** o pedido de permissões para a *Defesa de Fios Móveis Sophos*.  
-   ![](./media/sophos-mtd-connector-integration/intune-authentication.png) de autenticação intune
+   ![Autenticação inoportuna](./media/sophos-mtd-connector-integration/intune-authentication.png)
 
 9. Na página de **configuração sophos,** selecione **Guardar** para completar a configuração para Intune:  
-   ![Salvar](./media/sophos-mtd-connector-integration/save-sophos-configuration.png) de configuração de Sophos  
+   ![Salvar a configuração de Sophos](./media/sophos-mtd-connector-integration/save-sophos-configuration.png)  
 
 1. Quando a mensagem **Integração Bem-sucedida** for apresentada, significa que a integração foi concluída.  
 1. Na consola Intune, a Sophos já está disponível.  

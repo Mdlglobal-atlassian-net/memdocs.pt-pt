@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: ea67d432f3f418b4ecc592462d93e7d4da3676f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327409"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Políticas de proteção de aplicações e perfis de trabalho em dispositivos Android Enterprise em Intune
@@ -55,7 +55,7 @@ As aplicações individuais do Android estão ativadas para APP de várias forma
 
 Para ver uma lista de aplicações ativadas com APP, consulte [aplicações geridas com um conjunto rico de políticas de proteção de aplicações móveis.](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
 
-## <a name="deployment-scenarios"></a>Cenários de implantação
+## <a name="deployment-scenarios"></a>Cenários de implementação
 
 Esta secção descreve as características importantes dos cenários de implementação do perfil de trabalho APP-WE e Android Enterprise.
 
@@ -102,7 +102,7 @@ Por exemplo, é necessário que os utilizadores finais introduzam um PIN ao abri
 
 ### <a name="control-multi-identity-behavior-in-work-profiles"></a>Controlar o comportamento multi-identidade nos perfis de trabalho
 
-As aplicações de escritório, como o Outlook e o OneDrive, têm um comportamento "multi-identidade". Dentro de um caso da aplicação, o utilizador final pode adicionar ligações a múltiplas contas distintas ou locais de armazenamento em nuvem. Dentro da aplicação, os dados recolhidos destes locais podem ser separados ou fundidos. E, o utilizador pode contextualizar o alterndar entre identidades pessoais (user@outlook.com) e identidades de organização (user@contoso.com).
+As aplicações de escritório, como o Outlook e o OneDrive, têm um comportamento "multi-identidade". Dentro de um caso da aplicação, o utilizador final pode adicionar ligações a múltiplas contas distintas ou locais de armazenamento em nuvem. Dentro da aplicação, os dados recolhidos destes locais podem ser separados ou fundidos. E, o utilizador pode contextualizar o alternésimo entre identidades pessoais euser@outlook.comidentidades de organização .user@contoso.com
 
 Ao utilizar perfis de trabalho, pode querer desativar este comportamento multi-identidade. Quando a desativa, as instâncias insígnias da app no perfil de trabalho só podem ser configuradas com uma identidade de organização. Utilize a configuração de configuração de aplicativos Contas Permitidas para apoiar aplicações Android do Office.
 
@@ -133,5 +133,5 @@ Por exemplo, os clientes em ou com utilizadores na China não podem usar a gest�
 
 Utilizando o Intune, tanto os perfis de trabalho APP-WE como Android Enterprise estão disponíveis para o seu programa Android BYOD. Para escolher APP-WE ou perfis de trabalho depende dos seus requisitos de negócio e de utilização. Em resumo, utilize perfis de trabalho se precisar de atividades de MDM em dispositivos geridos, tais como implementação de certificados, impulso de aplicação, e assim por diante. Utilize APP-WE se não quiser ou não consegue gerir dispositivos, e estiver a utilizar apenas aplicações ativadas por APP.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Comece a utilizar políticas de proteção de aplicações,](app-protection-policy.md)ou [inscreva os seus dispositivos.](../enrollment/android-enroll.md)

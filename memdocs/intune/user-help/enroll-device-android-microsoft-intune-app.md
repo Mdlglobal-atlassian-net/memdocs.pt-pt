@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 700a06fd876705a14f661a71d6d97419f13a13c6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324833"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Inscreva o seu dispositivo corporativo com a aplicação Microsoft Intune
@@ -33,11 +33,11 @@ Inscreva o seu dispositivo Android corporativo para obter acesso seguro a e-mail
 Há quatro maneiras de se inscrever. A sua organização deve informá-lo sobre qual a opção a usar.
  
 * Comunicação de Campo Próximo (NFC)  
-* Token  
+* Certificado de  
 * Código QR   
 * Google Zero Touch  
 
-## <a name="enroll-device"></a>Dispositivo de inscrição 
+## <a name="enroll-device"></a>Inscrever o dispositivo 
 Complete estes passos para configurar e inscrever o seu dispositivo.  
 
 > [!NOTE]
@@ -56,15 +56,15 @@ Complete estes passos para configurar e inscrever o seu dispositivo.
     * Token: Quando chegar ao ecrã de sessão do Google, complete os passos na inscrição de [Token](#token-enrollment).  
     * Google Zero Touch: Depois de ligar ao Wi-Fi, o seu dispositivo será reconhecido pela sua organização. Continue a passo 4 e siga as instruções no ecrã até que a configuração esteja completa.    
  
-       ![Exemplo da imagem do ecrã de termos do Google que vê se está a usar o Google Zero Touch, destacando o botão Accept & Continue.](./media/google-zero-touch-intune-app-01.png)   
+       ![Exemplo da imagem do ecrã de termos do Google que vê se está a usar o Google Zero Touch, destacando o botão Accept & Continuar.](./media/google-zero-touch-intune-app-01.png)   
    
-4. Reveja os termos do Google. Em seguida, toque em **ACCEPT & CONTINUE**.  
+4. Reveja os termos do Google. Em seguida, toque em **ACEITAR & CONTINUE**.  
 
-      ![Exemplo da imagem do ecrã de termos do Google, realçando o botão Accept & Continue.](./media/fully-managed-intune-app-04.png)   
+      ![Exemplo da imagem do ecrã de termos do Google, realçando o botão Aceitar & Continuar.](./media/fully-managed-intune-app-04.png)   
 
-6. Reveja os Termos de Serviço do Chrome. Em seguida, toque em **ACCEPT & CONTINUE**.  
+6. Reveja os Termos de Serviço do Chrome. Em seguida, toque em **ACEITAR & CONTINUE**.  
 
-   ![Imagem de exemplo do ecrã chrome Termos de Serviço, realçando o botão Aceitar e Continuar.](./media/fully-managed-intune-app-06.png)   
+   ![Exemplo da imagem do ecrã Chrome Terms of Service, realçando o botão Aceitar & Continuar.](./media/fully-managed-intune-app-06.png)   
 
 7. No sinal nos ecrãs, inscreva-se com o seu trabalho ou conta escolar.   
 
@@ -109,7 +109,7 @@ Nesta secção, você vai digitalizar o seu código QR fornecido pela empresa.  
 ## <a name="token-enrollment"></a>Inscrição em Token  
 Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando terminar, vamos redirecioná-lo de volta para as etapas de inscrição do dispositivo.  
 
-1. No ecrã de entrada do Google, no Email ou na cabine **telefónica,** **digite afw#setup**. Toque em **Seguinte**. 
+1. No ecrã de entrada do Google, no Email ou na cabine **telefónica,** **digite afw#setup**. Toque **em Seguida**. 
 
    ![Exemplo da imagem do ecrã de entrada do Google, mostrando que "afw#setup" é dactilografado no campo.](./media/token-intune-app-01.png)   
 
@@ -127,5 +127,5 @@ Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando 
 
 
 
-## <a name="next-steps"></a>Próximos passos   
+## <a name="next-steps"></a>Passos seguintes   
 Ainda precisa de ajuda? Contacte o suporte da empresa (verifique as informações de contacto no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)) ou escreva para a <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">equipa Android da Microsoft</a>.  

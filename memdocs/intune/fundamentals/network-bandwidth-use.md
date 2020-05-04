@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331113"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Largura de banda e requisitos de configuração de rede do Intune
@@ -36,18 +36,18 @@ A tabela lista o tamanho e frequência aproximados dos conteúdos comuns que cir
 > [!NOTE]
 > Para garantir que os dispositivos recebem as atualizações e conteúdos do Intune, estes têm de ser regularmente ligados à Internet. O tempo necessário para receber as atualizações ou conteúdos pode variar, mas deverão manter uma ligação ininterrupta à Internet durante, pelo menos, uma hora por dia.
 
-|Tipo de conteúdo|Tamanho aproximado|Frequência e detalhes|
+|Tipo do conteúdo|Tamanho aproximado|Frequência e detalhes|
 |----------------|--------------------|-------------------------|
-|Instalação do cliente Intune<br /><br />**São aplicáveis os seguintes requisitos, para além da instalação do cliente do Intune**|125 MB|**Uma vez**<br /><br />O tamanho da transferência do cliente varia consoante o sistema operativo do computador cliente.|
-|Pacote de inscrição de clientes|15 MB|**Uma vez**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
-|Agente do Endpoint Protection|65 MB|**Uma vez**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
-|Agente do Operations Manager|11 MB|**Uma vez**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
-|Agente de políticas|3 MB|**Uma vez**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
-|Assistência Remota através do agente Microsoft Easy Assist|6 MB|**Uma vez**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
-|Operações diárias de clientes|6 MB|**Diariamente**<br /><br />O cliente Intune comunica regularmente com o serviço Intune para verificar se há atualizações e políticas, e para reportar o estado do cliente ao serviço.|
-|Atualizações de definições de software maligno do Endpoint Protection|Varia<br /><br />Normalmente, entre 40 KB a 2 MB|**Diariamente**<br /><br />Até três vezes por dia.|
-|Atualização do motor do Endpoint Protection|5 MB|**Mensalmente**|
-|Atualizações de software|Varia<br /><br />O tamanho depende das atualizações que implementar.|**Mensalmente**<br /><br />Normalmente, as atualizações de software são lançadas na segunda terça-feira de cada mês.<br /><br />Um computador inscrito ou implementado recentemente pode utilizar mais largura de banda de rede ao transferir todas as atualizações lançadas anteriormente.|
+|Instalação do cliente Intune<br /><br />**São aplicáveis os seguintes requisitos, para além da instalação do cliente do Intune**|125 MB|**Problema isolado**<br /><br />O tamanho da transferência do cliente varia consoante o sistema operativo do computador cliente.|
+|Pacote de inscrição de clientes|15 MB|**Problema isolado**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
+|Agente do Endpoint Protection|65 MB|**Problema isolado**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
+|Agente do Operations Manager|11 MB|**Problema isolado**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
+|Agente de políticas|3 MB|**Problema isolado**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
+|Assistência Remota através do agente Microsoft Easy Assist|6 MB|**Problema isolado**<br /><br />São possíveis transferências adicionais quando existirem atualizações para este tipo de conteúdo.|
+|Operações diárias de clientes|6 MB|**Diárias**<br /><br />O cliente Intune comunica regularmente com o serviço Intune para verificar se há atualizações e políticas, e para reportar o estado do cliente ao serviço.|
+|Atualizações de definições de software maligno do Endpoint Protection|Varia<br /><br />Normalmente, entre 40 KB a 2 MB|**Diárias**<br /><br />Até três vezes por dia.|
+|Atualização do motor do Endpoint Protection|5 MB|**Mensal**|
+|Atualizações de software|Varia<br /><br />O tamanho depende das atualizações que implementar.|**Mensal**<br /><br />Normalmente, as atualizações de software são lançadas na segunda terça-feira de cada mês.<br /><br />Um computador inscrito ou implementado recentemente pode utilizar mais largura de banda de rede ao transferir todas as atualizações lançadas anteriormente.|
 |Service packs|Varia<br /><br />O tamanho varia consoante o service pack que implementar.|**Varia**<br /><br />Depende da altura em que implementar os service packs.|
 |Distribuição de software|Varia<br /><br />O tamanho depende do software que implementar.|**Varia**<br /><br />Depende da altura em que implementar o software.|
 
@@ -97,7 +97,7 @@ Os clientes Intune podem utilizar o BranchCache para reduzir o tráfego da rede 
 
 - Windows 7
 - Windows 8.0
-- Windows 8,1
+- Windows 8.1
 - Windows 10
 
 Para utilizar o BranchCache, o computador cliente tem de ter o BranchCache ativado e, em seguida, ser configurado para o **modo de cache distribuída**.
@@ -109,6 +109,6 @@ Se utiliza o BranchCache, trabalhe em conjunto com outros administradores na sua
 > [!NOTE]
 > Pode utilizar o Microsoft Intune para gerir os PCs do Windows, quer [como dispositivos móveis com gestão de dispositivos móveis (MDM)](../enrollment/windows-enroll.md) quer como computadores com o cliente do software Intune. A Microsoft recomenda que os clientes utilizem a solução de [gestão do MDM](../enrollment/windows-enroll.md) sempre que possível. Quando gerido desta forma, a BranchCache não é apoiada. Para obter mais informações, consulte [Compare gerindo computadores windows como computadores ou dispositivos móveis](pc-management-comparison.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Pontos finais de revisão para Intune](intune-endpoints.md)

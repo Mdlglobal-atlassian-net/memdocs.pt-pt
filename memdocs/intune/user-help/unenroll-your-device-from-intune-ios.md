@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6b5fe7c97b42c4863fbad8e7341b64fa847b8563
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324193"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Remover o seu dispositivo iOS do Intune
@@ -71,9 +71,9 @@ Existem três locais onde o Portal da Empresa armazena dados locais no seu dispo
 
 - **Registos de informações**: os dados de atividade de aplicações padrão que a Microsoft recolhe, tal como durante quanto tempo a aplicação esteve aberta ou se falhou, são apagados automaticamente quando remove o dispositivo do Portal da Empresa.
 
-- **Análise da Apple**: dados de atividade de falhas de aplicações padrão que a Apple recolhe. Estas informações só podem ser removidas ao repor o seu dispositivo para as definições de fábrica. Esta ação irá apagar todas as informações pessoais no seu dispositivo. Para o fazer, abra **Definições** > **Geral** > **Repor** > **Apagar Todos os Conteúdos e Definições**.
+- **Análise da Apple**: dados de atividade de falhas de aplicações padrão que a Apple recolhe. Estas informações só podem ser removidas ao repor o seu dispositivo para as definições de fábrica. Esta ação irá apagar todas as informações pessoais no seu dispositivo. Para tal, abra **as definições** > **Gerais** > **Redefinir** > **todos os conteúdos e definições**.
 
-- **Keychain**: o seu dispositivo armazena as suas palavras-passe e outras informações utilizadas para inícios de sessão no Keychain. As aplicações da Microsoft partilham as suas informações de início de sessão em aplicações desenvolvidas pela Microsoft que tem no seu dispositivo, incluindo o Microsoft Outlook e o Microsoft Authenticator. Tal como a Análise da Apple, estas informações só podem ser removidas ao repor o seu dispositivo para as definições de fábrica. Esta ação irá apagar todas as informações pessoais no seu dispositivo. Para o fazer, abra **Definições** > **Geral** > **Repor** > **Apagar Todos os Conteúdos e Definições**.
+- **Keychain**: o seu dispositivo armazena as suas palavras-passe e outras informações utilizadas para inícios de sessão no Keychain. As aplicações da Microsoft partilham as suas informações de início de sessão em aplicações desenvolvidas pela Microsoft que tem no seu dispositivo, incluindo o Microsoft Outlook e o Microsoft Authenticator. Tal como a Análise da Apple, estas informações só podem ser removidas ao repor o seu dispositivo para as definições de fábrica. Esta ação irá apagar todas as informações pessoais no seu dispositivo. Para tal, abra **as definições** > **Gerais** > **Redefinir** > **todos os conteúdos e definições**.
 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

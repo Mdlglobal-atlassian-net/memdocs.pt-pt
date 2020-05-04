@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488007"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Como validar a configuração das políticas de proteção de aplicações no Microsoft Intune
@@ -44,7 +44,7 @@ Se os testes mostrarem que o comportamento da política de proteção de aplica�
 
 ### <a name="user-app-protection-status"></a>Estado da proteção de aplicações do utilizador
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Apps** > **Monitor** >  estado de **proteção**da aplicação , e, em seguida, selecione o azulejo dos **utilizadores atribuídos.** 
+3. Selecione **o** > estado de proteção da**aplicação****monitor** >  de apps e, em seguida, selecione o azulejo dos **utilizadores atribuídos.** 
 4. Na página **Relatório da aplicação**, selecione **Selecionar utilizador** para abrir uma lista de utilizadores e grupos. 
 5. Procure e selecione um utilizador na lista e, em seguida, escolha **Selecionar utilizador**. No parte superior do painel **Relatório da aplicação**, pode ver se o utilizador tem uma licença a proteção de aplicações. Também pode ver se o utilizador tem uma licença do Office 365 e o estado da aplicação de todos os dispositivos do utilizador.
 
@@ -56,9 +56,9 @@ Eis as ações a efetuar com base no estado de utilizador:
 - Se a aplicação de um utilizador estiver listada com o estado **Sem verificação**, verifique se configurou corretamente uma [política de proteção de aplicações](app-protection-policies-validate.md) para a mesma.
 - Confirme que estas condições se aplicam a todos os utilizadores aos quais quer aplicar as [políticas de proteção de aplicações](app-protection-policies-monitor.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [O que é uma política de proteção de aplicações do Intune?](app-protection-policies.md)
+- [O que é a política de proteção de aplicações Intune?](app-protection-policies.md)
 - [Licenças que incluem o Intune](../fundamentals/licenses.md)
 - [Atribuir licenças aos utilizadores para que estes possam inscrever dispositivos no Intune](../fundamentals/licenses-assign.md)
 - [Como validar a configuração das políticas de proteção de aplicações](app-protection-policies-validate.md)

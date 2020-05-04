@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aa18316ad1b4473ac70399e1370bfececadbfaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330973"
 ---
 # <a name="develop-a-rollout-plan"></a>Desenvolver um plano de implementação
@@ -95,18 +95,18 @@ Aqui está um exemplo atualizado do plano de lançamento de Intune acima para in
 | **Fase de implementação** | **Julho** | **Agosto** | **Setembro** | **Outubro** |
 |:---:|:---:|:---:|:---:|:---:|
 | Piloto Limitado |  |  |  |  |
-| Self-service | TI |  |  |  |
+| Gestão personalizada | TI |  |  |  |
 | Piloto Expandido |  |  |  |  |
-| Self-service | TI |  |  |  |
+| Gestão personalizada | TI |  |  |  |
 | Abordagem meticulosa | Executivos de TI |  |  |  |
 | Primeira fase de implementação de produção |  | Departamento de Vendas e Marketing |  |  |
-| Self-service |  | Departamento de Vendas e Marketing |  |  |
-| Segunda fase de implementação de produção |  |  | Revenda |  |
-| Self-service |  |  | Revenda |  |
+| Gestão personalizada |  | Vendas e Marketing |  |  |
+| Segunda fase de implementação de produção |  |  | Retalho |  |
+| Gestão personalizada |  |  | Retalho |  |
 | Terceira fase de implementação de produção |  |  |  | Executivos, RH, Finanças |
-| Self-service |  |  |  | RH, Finanças |
+| Gestão personalizada |  |  |  | RH, Finanças |
 | Abordagem meticulosa |  |  |  | Executivos |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 A secção seguinte fornece orientações relativas ao [desenvolvimento de um plano de comunicação de implementação do Intune](planning-guide-communication-plan.md).

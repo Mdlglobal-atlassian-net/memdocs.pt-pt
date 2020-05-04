@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327193"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Como utilizar o Azure AD para aceder às APIs do Intune no Microsoft Graph
@@ -51,11 +51,11 @@ Este artigo:
 
 - Descreve como suportar vários inquilinos.
 
-Para saber mais, veja:
+Para saber mais, consulte:
 
-- [Authorize access to web applications using OAuth 2.0 and Azure Active Directory (Autorizar o acesso a aplicações Web com o OAuth 2.0 e o Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Authorize access to web applications using OAuth 2.0 and Azure Active Directory (Autorizar o acesso a aplicações Web com OAuth 2.0 e o Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Introdução à autenticação do Azure AD](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrating applications with Azure Active Directory (Integrar aplicações com o Azure Active Directory)](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrar aplicações com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Compreender o OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registar aplicações para utilizar a API do Microsoft Graph
@@ -68,7 +68,7 @@ Para registar uma aplicação para utilizar a API do Microsoft Graph:
     - A conta de administrador de inquilino.
     - Uma conta de utilizador inquilino com a definição **Os utilizadores podem registar aplicações** ativada.
 
-2. No menu, escolha **O Diretório Ativo Azure** &gt; Registos de **Aplicações.**
+2. No menu, escolha **Azure Active Directory** &gt; **Registos de Aplicações**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ Para registar uma aplicação para utilizar a API do Microsoft Graph:
 
     1. Tenha em conta o valor **ID da Aplicação**.
 
-    2. Escolha **Definições** &gt; **acesso a API** &gt; **permissões necessárias**.
+    2. Escolha **Definições** &gt; **Acesso à API** &gt; **Permissões necessárias**.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. A partir da lâmina de **permissões necessárias,** escolha **adicionar** &gt; **adicionar acesso API** &gt; **Selecione um API**.
+6. No painel **Permissões Necessárias**, escolha **Adicionar** &gt; **Adicionar acesso à API** &gt; **Selecionar uma API**.
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. A partir da lâmina **Select a API,** escolha o **Microsoft Graph** &gt; **Select**.  O painel **Ativar acesso** é apresentado e indica os âmbitos de permissão disponíveis para a sua aplicação.
+7. No painel **Selecionar uma API**, escolha **Microsoft Graph** &gt; **Selecionar**.  O painel **Ativar acesso** é apresentado e indica os âmbitos de permissão disponíveis para a sua aplicação.
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -128,7 +128,7 @@ Neste ponto, também poderá:
 
   2. Altere o valor da definição `availableToOtherTenants` para `true`.
 
-  3. Guarde as suas alterações.
+  3. Guarde as alterações.
 
 ## <a name="intune-permission-scopes"></a>Âmbitos de permissão do Intune
 
@@ -137,22 +137,22 @@ O Azure AD e o Microsoft Graph utilizam âmbitos de permissão para controlarem 
 Os âmbitos de permissão (também chamados _âmbitos do OAuth_) controlam o acesso a entidades específicas do Intune e às respetivas propriedades. Esta secção resume os âmbitos de permissão das funcionalidades da API do Intune.
 
 Para saber mais:
-- [Azure AD authentication (Autenticação do Azure AD)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Autenticação do Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Âmbitos de permissão de aplicações](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
 Quando concede permissão ao Microsoft Graph, pode especificar os seguintes âmbitos para controlar o acesso às funcionalidades do Intune: a tabela seguinte resume os âmbitos de permissão da API do Intune.  A primeira coluna mostra o nome da funcionalidade, conforme apresentado no portal do Azure, e a segunda coluna fornece o nome do âmbito de permissão.
 
 Definição _Ativar Acesso_ | Nome do âmbito
 :--|:--
-__Executar ações remotas que afetam o utilizador em dispositivos do Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
-__Leitura e escrita de dispositivos do Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
+__Executar ações remotas que afetam o utilizador em dispositivos do Microsoft Intune__ | [DispositivoGeManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
+__Leitura e escrita de dispositivos do Microsoft Intune__ | [DispositivoGeGeManagedDevices.ReadWrite.All](#mgd-rw)
 __Leitura de dispositivos do Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Leitura e escrita de definições de RBAC do Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
 __Leitura de definições de RBAC do Microsoft Intune__ | DeviceManagementRBAC.Read.All
 __Leitura e escrita de aplicações do Microsoft Intune__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Leitura de aplicações do Microsoft Intune__ | [DeviceManagementApps.Read.All](#app-ro)
 __Leitura e escrita da Configuração e Políticas de Dispositivos do Microsoft Intune__ | DeviceManagementConfiguration.ReadWrite.All
-__Leitura da Configuração e Políticas de Dispositivos do Microsoft Intune__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
+__Leitura da Configuração e Políticas de Dispositivos do Microsoft Intune__ | [Configuração de gestão de dispositivos.read.all](#cfg-ro)
 __Leitura e escrita da configuração do Microsoft Intune__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
 __Leitura da configuração do Microsoft Intune__ | DeviceManagementServiceConfig.Read.All
 
@@ -160,7 +160,7 @@ A tabela lista as definições tal como são apresentadas no portal do Azure. As
 
 Neste momento, todos os âmbitos de permissão do Intune exigem acesso de administrador.  Isto significa que precisa de ter credenciais correspondentes ao executar aplicações ou scripts que acedam aos recursos da API do Intune.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - Definição **Ativar Acesso**: __leitura de aplicações do Microsoft Intune__
 
@@ -170,7 +170,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Políticas de Proteção de Aplicações
   - Configurações de Aplicações
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - Definição **Ativar Acesso**: __leitura e escrita de aplicações do Microsoft Intune__
 
@@ -183,7 +183,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Políticas de Proteção de Aplicações
   - Configurações de Aplicações
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Definição **Ativar Acesso**: __leitura da configuração e políticas de dispositivos do Microsoft Intune__
 
@@ -192,7 +192,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Política de Conformidade de Dispositivos
   - Mensagens de Notificação
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - Definição **Ativar Acesso**: __leitura e escrita da configuração e políticas de dispositivos do Microsoft Intune__
 
@@ -203,7 +203,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Política de Conformidade de Dispositivos
   - Mensagens de Notificação
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Definição **Ativar Acesso**: __Executar ações remotas que afetam o utilizador em dispositivos do Microsoft Intune__
 
@@ -217,7 +217,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Reiniciar
   - Eliminar o Utilizador do Dispositivo Partilhado
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Definição **Ativar Acesso**: __leitura de dispositivos do Microsoft Intune__
 
@@ -228,7 +228,7 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Ações remotas
   - Informações de malware
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - Definição **Ativar Acesso**: __leitura e escrita de dispositivos do Microsoft Intune__
 
@@ -240,19 +240,19 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
 
 - As seguintes ações remotas também são permitidas:
   - Localizar dispositivos
-  - Disable Activation Lock (Desativar o Bloqueio de Ativação)
+  - Desativar o Bloqueio de Ativação
   - Pedir assistência remota
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Definição **Ativar Acesso**: __leitura de definições de RBAC do Microsoft Intune__
 
 - Permite o acesso de leitura às seguintes propriedades e estado da entidade:
   - Atribuições de Funções
-  - Definições de Funções
+  - Definições de Função
   - Operações de Recursos
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - Definição **Ativar Acesso**: __leitura e escrita de definições de RBAC do Microsoft Intune__
 
@@ -260,9 +260,9 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
 
 - As aplicações também podem criar, atribuir, eliminar e alterar as entidades a seguir:
   - Atribuições de Funções
-  - Definições de Funções
+  - Definições de Função
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Definição **Ativar Acesso**: __leitura da configuração do Microsoft Intune__
 
@@ -272,13 +272,13 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Programa de Inscrição de Dispositivos Apple
   - Apple Volume Purchase Program
   - Exchange Connector
-  - Termos e Condições
+  - Terms and Conditions
   - Gestão de Despesas de Telecomunicações
   - PKI na Cloud
-  - Imagem Corporativa
+  - Imagem corporativa
   - Defesa Contra Ameaças para Dispositivos Móveis
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - Definição **Ativar Acesso**: __leitura e escrita da configuração do Microsoft Intune__
 
@@ -290,10 +290,10 @@ Neste momento, todos os âmbitos de permissão do Intune exigem acesso de admini
   - Programa de Inscrição de Dispositivos Apple
   - Apple Volume Purchase Program
   - Exchange Connector
-  - Termos e Condições
+  - Terms and Conditions
   - Gestão de Despesas de Telecomunicações
   - PKI na Cloud
-  - Imagem Corporativa
+  - Imagem corporativa
   - Defesa Contra Ameaças para Dispositivos Móveis
 
 ## <a name="azure-ad-authentication-examples"></a>Exemplos de autenticação do Azure AD
@@ -344,7 +344,7 @@ Este exemplo mostra como utilizar o C# para recuperar uma lista de dispositivos 
 3. Utilize o Explorador de Soluções para adicionar o pacote Microsoft ADAL NuGet ao projeto.
 
     1. Clique com o botão direito do rato no Explorador de Soluções.
-    2. Escolha **Gerir Pacotes NuGet...** &gt; **Navegar.**
+    2. Escolha **Gerir Pacotes NuGet...** &gt;**Navegar**.
     3. Selecione `Microsoft.IdentityModel.Clients.ActiveDirectory` e, em seguida, **Instalar**.
 
     <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />

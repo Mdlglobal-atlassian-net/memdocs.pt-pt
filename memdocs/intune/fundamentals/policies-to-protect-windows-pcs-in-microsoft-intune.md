@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 100df6e3e6be4a08e96529b472b766fa424b4a30
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330897"
 ---
 # <a name="use-policies-to-help-protect-windows-pcs-that-run-the-intune-client-software"></a>Utilizar políticas para ajudar a proteger PCs Windows que executem o software de cliente do Intune
@@ -41,8 +41,8 @@ A Firewall do Windows ajuda a proteger os PCs Windows contra hackers, software m
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
 
-Como administrador de TI, uma das suas principais prioridades é [manter os PCs Windows que gere sem software maligno e vírus](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md). O Intune integra-se no Endpoint Protection para proporcionar proteção em tempo real contra ameaças de software maligno, manter as definições de software maligno atualizadas e fazer análises automáticas aos computadores. O Endpoint Protection também proporciona ferramentas que o ajudam a gerir e monitorizar ataques de software maligno.
+Como administrador de TI, uma das suas principais prioridades é [manter os PCs Windows que gere sem software maligno e vírus](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md). O Intune integra-se no Endpoint Protection para proporcionar proteção em tempo real contra ameaças de software maligno, manter as definições de software maligno atualizadas e fazer análises automáticas aos computadores. O Endpoint Protection também fornece ferramentas que o ajudam a gerir e monitorizar ataques de software maligno.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Questões, questões e resoluções comuns com políticas e perfis de dispositivos](../configuration/device-profile-troubleshoot.md)

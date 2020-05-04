@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 48e0274cc9288e8f9266f3b7fd3c35969abd0c5e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327869"
 ---
 # <a name="upload-and-email-logs-using-a-usb-cable"></a>Upload e registos de e-mail usando um cabo USB
@@ -37,8 +37,8 @@ Suporte da empresa de e-mail sobre um problema que experimentou na aplicação P
 
 2. Ligue o seu dispositivo ao seu computador com um cabo USB. 
 
-3. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, localize <strong>Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong>.
+3. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, encontre o <strong>Dispositivo Android\Phone\Android\data\com.microsoft.windowsintune.companyportal\files\\</strong>.
 
 4. Selecione os ficheiros e anexe-os a um e-mail. Envie este e-mail ao suporte da empresa.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

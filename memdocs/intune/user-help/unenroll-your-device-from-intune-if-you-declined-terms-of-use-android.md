@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1c3b448726d52a838299e7be7a68611f460c4929
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324209"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Remover o seu dispositivo da gestão caso tenha recusado os "Termos de Utilização"
 
 Se recusou os termos de utilização ao tentar iniciar sessão na aplicação Portal da Empresa, será impedido de iniciar sessão na mesma em tentativas futuras, por isso terá de utilizar estas instruções de "solução" para remover o seu dispositivo do Intune.
 
-Ao desinstalar a aplicação Portal da Empresa, também removerá o seu dispositivo do Intune. O seu dispositivo já não poderá aceder aos recursos da empresa. Para obter mais informações sobre o que acontece quando remove o seu dispositivo da gestão, veja [O que acontece se anular a inscrição do seu dispositivo no Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md).
+Ao desinstalar a aplicação Portal da Empresa, também removerá o seu dispositivo do Intune. O seu dispositivo já não poderá aceder aos recursos da empresa. Para saber mais sobre o que acontece quando retira o seu dispositivo da gestão, veja [o que acontece se desinscreveu o seu dispositivo a partir de Intune?](what-happens-if-you-unenroll-your-device-from-intune-android.md)
 
 Antes de poder desinstalar a aplicação do Portal da Empresa, terá de aceder à definição **Administradores de dispositivos** e desativar o **Portal da Empresa**. Os passos poderão variar um pouco, consoante o seu dispositivo Android.
 
@@ -38,7 +38,7 @@ Antes de poder desinstalar a aplicação do Portal da Empresa, terá de aceder �
 
 Para remover o seu dispositivo do Intune e desinstalar a aplicação Portal da Empresa:
 
-1. Vá para **definições** &gt; de **segurança &amp; sistema** de bloqueio de ecrã &gt; administradores do **dispositivo**.
+1. Aceda a **Definições** &gt; **Segurança &amp; Bloqueio de Ecrã** &gt; **Administradores de dispositivos**.
 
     A conclusão deste passo anula imediatamente a inscrição do seu dispositivo.
 

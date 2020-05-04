@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326185"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Encontre o utilizador principal de um dispositivo Intune
@@ -31,7 +31,7 @@ O utilizador principal, também conhecido como User Device Affinity, é uma prop
 ## <a name="find-a-devices-primary-user"></a>Encontre o principal utilizador de um dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **Dispositivos** > escolha um dispositivo.
+2. Escolha **os Dispositivos** > escolher um dispositivo.
 3. Na página **'Visão Geral',** pode ver o utilizador principal listado.
 
 ## <a name="change-a-devices-primary-user"></a>Alterar o utilizador principal de um dispositivo
@@ -39,7 +39,7 @@ O utilizador principal, também conhecido como User Device Affinity, é uma prop
 O utilizador principal de um dispositivo pode ser atualizado para dispositivos Windows 10 dispositivos que sejam Azure AD Joined ou Hybrid Azure AD Joined.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **dispositivos** > **Todos os dispositivos** > escolha um dispositivo > **Propriedades** > Alterar o **utilizador primário**.
+2. Escolha **dispositivos** > **Todos os dispositivos** > escolha um dispositivo > **Propriedades** > **Alterem**o utilizador primário .
 3. Selecione um novo utilizador e escolha **Selecionar**.
 
 Após a atualização do utilizador principal, será também atualizado nas lâminas do dispositivo Intune e Azure AD.
@@ -69,7 +69,7 @@ Para aparecer no Portal da Empresa em dispositivos partilhados, as aplicações 
 ## <a name="who-is-assigned-as-the-primary-user"></a>Quem é designado como o utilizador principal?
 Intone automaticamente o utilizador primário aos dispositivos durante ou logo após a inscrição. O método de inscrição determina quando o utilizador primário é adicionado a um dispositivo.
 
-| Platform | Método de inscrição | Utilizador primário atribuído | Utilizador primário é atribuído |
+| Plataforma | Método de inscrição | Utilizador primário atribuído | Utilizador primário é atribuído |
 | ---- | ---- | ---- | ---- |
 | Windows | Adicionar trabalho ou escola (orientado pelo utilizador) | Utilizador inscrito | Durante a inscrição |   
 | Windows | Inscrição na Aplicação Moderna (orientada pelo utilizador) | Utilizador inscrito | Durante a inscrição | 
@@ -79,16 +79,16 @@ Intone automaticamente o utilizador primário aos dispositivos durante ou logo a
 | Windows | Matricule-se apenas no MDM | Utilizador inscrito | Durante a inscrição | 
 | Windows | Híbrido AADJ + GPO de inscrição automática | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows| 
 | Windows | Cogestão | Primeiro utilizador a iniciar sessão no Windows | Quando o primeiro utilizador entra no Windows | 
-| Windows | Azure AD junta-se (símbolo de inscrição a granel) | Nenhum | Não aplicável | 
-| Windows | AD Azure (modo de auto-implantação autopiloto) | Nenhum | Não aplicável | 
-| Plataforma cruzada | Inscrição orientada pelo utilizador com App Portal da Empresa | Utilizador inscrito | Durante a inscrição |
-| Plataforma cruzada | Gestor de Inscrição de Dispositivos (DEM) | Inscrição do utilizador DEM | Durante a inscrição |
+| Windows | Azure AD junta-se (símbolo de inscrição a granel) | Nenhuma | Não aplicável | 
+| Windows | AD Azure (modo de auto-implantação autopiloto) | Nenhuma | Não aplicável | 
+| Várias plataformas | Inscrição orientada pelo utilizador com App Portal da Empresa | Utilizador inscrito | Durante a inscrição |
+| Várias plataformas | Gestor de Inscrição de Dispositivos (DEM) | Inscrição do utilizador DEM | Durante a inscrição |
 | iOS/iPadOS, macOS | Apple Automated Device Matricula (DEP com afinidade do utilizador | Utilizador inscrito | Durante a inscrição |
-| iOS/iPadOS, macOS | Apple Automated Device Registration (DEP sem afinidade do utilizador) | Nenhum | Não aplicável |
-| Android | Dispositivos Android Corporate-Owned, dedicados | Nenhum | Não aplicável |
+| iOS/iPadOS, macOS | Apple Automated Device Registration (DEP sem afinidade do utilizador) | Nenhuma | Não aplicável |
+| Android | Dispositivos Android Corporate-Owned, dedicados | Nenhuma | Não aplicável |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Utilizador primário e proprietário de dispositivo saqueado do Azure
-Em alguns casos, o utilizador primário intune pode ser diferente da propriedade do **Dispositivo** AD Azure (visível em **dispositivos** > **Dispositivos AD Azure).** O proprietário do Dispositivo AD Azure é adicionado durante a inscrição de um dispositivo no Diretório Ativo Azure.
+Em alguns casos, o utilizador primário intune pode ser diferente da propriedade do **Dispositivo** AD Azure (visível em **dispositivos** > **AD Devices Azure**). O proprietário do Dispositivo AD Azure é adicionado durante a inscrição de um dispositivo no Diretório Ativo Azure.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Gerencie os seus dispositivos Intune.](device-management.md)

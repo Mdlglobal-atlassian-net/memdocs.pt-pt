@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551517"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615712"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>funcionalidade do dispositivo macOS em Intune
 
@@ -43,7 +43,7 @@ Criar um perfil de configuração do [dispositivo macOS](device-features-configu
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Definições aplicam-se a: Inscrição do dispositivo e inscrição automática de dispositivos
 
 - **Endereço IP**: Introduza o endereço IPv4 ou IPv6 da impressora. Se utilizar os nomes do anfitrião para identificar impressoras, pode obter o endereço IP através do pingping da impressora na aplicação Terminal. [Obtenha o endereço IP e o caminho](#get-the-ip-address-and-path) (neste artigo) fornece mais detalhes.
-- **Caminho**: Entre no caminho da impressora. O caminho é tipicamente `ipp/print` para impressoras na sua rede. [Obtenha o endereço IP e o caminho](#get-the-ip-address-and-path) (neste artigo) fornece mais detalhes.
+- **Caminho**: Entre no caminho da impressora. O caminho é `ipp/print` normalmente para impressoras na sua rede. [Obtenha o endereço IP e o caminho](#get-the-ip-address-and-path) (neste artigo) fornece mais detalhes.
 - **Porta** (iOS 11.0+, iPadOS 13.0+): Introduza a porta de escuta do destino AirPrint. Se deixar esta propriedade em branco, o AirPrint utiliza a porta predefinida.
 - **TLS** (iOS 11.0+, iPadOS 13.0+): Select **Enable** para assegurar ligações AirPrint com Segurança da Camada de Transporte (TLS).
 
@@ -56,35 +56,32 @@ Também pode **importar** um ficheiro separado de vírvias (.csv) que inclui uma
 Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do caminho dos recursos e da porta. Os seguintes passos mostram-lhe como obter esta informação.
 
 1. Num Mac que esteja ligado à mesma rede local (subnet) que as impressoras AirPrint, **terminal** aberto (de **/Aplicações/Utilitários).**
-2. Na aplicação Terminal, escreva `ippfind`, e selecione entrar.
+2. Na aplicação Terminal, digite `ippfind`e selecione entrar.
 
-    Repare na informação da impressora. Por exemplo, pode devolver algo semelhante ao `ipp://myprinter.local.:631/ipp/port1`. A primeira parte é o nome da impressora. A última parte (`ipp/port1`) é a via de recursos.
+    Repare na informação da impressora. Por exemplo, pode devolver `ipp://myprinter.local.:631/ipp/port1`algo semelhante a . A primeira parte é o nome da impressora. A última`ipp/port1`parte () é o caminho dos recursos.
 
-3. No Terminal, digite `ping myprinter.local`, e selecione entrar.
+3. No Terminal, `ping myprinter.local`digite e selecione entrar.
 
-   Note o endereço IP. Por exemplo, pode devolver algo semelhante ao `PING myprinter.local (10.50.25.21)`.
+   Note o endereço IP. Por exemplo, pode devolver `PING myprinter.local (10.50.25.21)`algo semelhante a .
 
-4. Utilize os valores do endereço IP e do caminho dos recursos. Neste exemplo, o endereço IP é `10.50.25.21`, e o caminho dos recursos é `/ipp/port1`.
+4. Utilize os valores do endereço IP e do caminho dos recursos. Neste exemplo, o endereço `10.50.25.21`IP é , `/ipp/port1`e o caminho dos recursos é .
 
 ## <a name="login-items"></a>Itens de login
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Definições aplicam-se a: Todos os tipos de inscrição
 
-- **Ficheiros, pastas e aplicações personalizadas**: **Adicione** o caminho de um ficheiro, pasta, aplicação personalizada ou aplicação do sistema que pretende abrir quando os utilizadores iniciarem o insto nos seus dispositivos. Aplicações do sistema, ou aplicações construídas ou personalizadas para a sua organização estão tipicamente na pasta `Applications`, com um caminho semelhante ao `/Applications/AppName.app`. 
+- **Ficheiros, pastas e aplicações personalizadas**: **Adicione** o caminho de um ficheiro, pasta, aplicação personalizada ou aplicação do sistema que pretende abrir quando os utilizadores iniciarem o insto nos seus dispositivos. Aplicações do sistema, ou aplicações construídas ou `Applications` personalizadas para a `/Applications/AppName.app`sua organização estão tipicamente na pasta, com um caminho semelhante a . 
 
-  Pode adicionar muitos ficheiros, pastas e aplicações. Por exemplo, introduza:  
+  Pode adicionar muitos ficheiros, pastas e aplicações. Por exemplo, introduza:   
   
   - `/Applications/Calculator.app`
   - `/Applications`
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Ao adicionar qualquer aplicação, pasta ou ficheiro, certifique-se de que introduza o caminho correto. Nem todos os itens estão na pasta `Applications`. Se os utilizadores moverem um item de um local para outro, então o caminho muda. Este item movido não será aberto quando o utilizador entrar.
+  Ao adicionar qualquer aplicação, pasta ou ficheiro, certifique-se de que introduza o caminho correto. Nem todos os itens `Applications` estão na pasta. Se os utilizadores moverem um item de um local para outro, então o caminho muda. Este item movido não será aberto quando o utilizador entrar.
 
-- **Ocultar a configuração do utilizador**: **O Hide** não mostra a aplicação na lista de itens de login dos Utilizadores e Grupos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA mostra o item que começa a iniciar o login na lista de itens de login dos Utilizadores e Grupos com a opção de ocultação desmarcada.
-
-  > [!NOTE]
-  > Esta configuração está a ser lançada para todos os clientes nas próximas semanas.
+- **Ocultar a configuração do utilizador**: **O Hide** não mostra a aplicação na lista de itens de login dos Grupos & Utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA mostra o item que começa a iniciar o login na lista de itens de login dos Grupos de Utilizadores & com a opção de ocultação desmarcada.
 
 ## <a name="login-window"></a>Janela de login
 
@@ -112,7 +109,7 @@ Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do 
 
 #### <a name="other"></a>Outros
 
-- **Desative o login do utilizador a partir da Consola:** **Desative** a linha de comando macOS utilizada para iniciar sessão. Para utilizadores típicos, **desative** esta definição. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores avançados assinem a utilização da linha de comando macOS. Para entrar no modo consola, os utilizadores introduzem `>console` no campo Username e devem autenticar na janela da consola.
+- **Desative o login do utilizador a partir da Consola:** **Desative** a linha de comando macOS utilizada para iniciar sessão. Para utilizadores típicos, **desative** esta definição. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores avançados assinem a utilização da linha de comando macOS. Para entrar no modo `>console` consola, os utilizadores entram no campo Username e devem autenticar na janela da consola.
 
 #### <a name="apple-menu"></a>Apple Menu
 
@@ -142,14 +139,14 @@ Esta funcionalidade aplica-se a:
   > [!TIP]
   > Com os tipos **Redirecionamento** e **Credenciais,** adicione os seus próprios valores de configuração para passar pela extensão. Se estiver a utilizar o **Credential,** considere utilizar as configurações de configuração incorporadas fornecidas pela Apple no tipo **Kerberos.**
 
-- **ID de extensão** (Redirecionamento e Credencial): Introduza o identificador de pacote que identifica a extensão da sua aplicação SSO, como `com.apple.ssoexample`.
-- **ID da equipa** (Redirecionamento e Credencial): Introduza o identificador de equipa da extensão da sua aplicação SSO. Um identificador de equipa é uma cadeia alfanumérica de 10 caracteres (números e letras) gerada pela Apple, como `ABCDE12345`. 
+- **ID de extensão** (Redirecionamento e Credencial): Introduza o identificador `com.apple.ssoexample`de pacote que identifica a extensão da sua aplicação SSO, como .
+- **ID da equipa** (Redirecionamento e Credencial): Introduza o identificador de equipa da extensão da sua aplicação SSO. Um identificador de equipa é uma cadeia alfanumérica de 10 caracteres `ABCDE12345`(números e letras) gerada pela Apple, como . 
 
   [Localizar o seu Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (abre o site da Apple) tem mais informações.
 
-- **Reino** (Credencial e Kerberos): Introduza o nome do seu reino de autenticação. O nome do reino deve ser capitalizado, como `CONTOSO.COM`. Tipicamente, o seu nome de reino é o mesmo que o seu nome de domínio DNS, mas em todas as maiúsculas.
+- **Reino** (Credencial e Kerberos): Introduza o nome do seu reino de autenticação. O nome do reino deve ser `CONTOSO.COM`capitalizado, como. Tipicamente, o seu nome de reino é o mesmo que o seu nome de domínio DNS, mas em todas as maiúsculas.
 
-- **Domínios** (Credential e Kerberos): Introduza o domínio ou nomes de anfitriões dos sites que podem autenticar através do SSO. Por exemplo, se o seu website for `mysite.contoso.com`, então `mysite` é o nome do anfitrião, e `contoso.com` é o nome de domínio. Quando os utilizadores se ligam a qualquer um destes sites, a extensão da aplicação trata do desafio de autenticação. Esta autenticação permite que os utilizadores utilizem o Face ID, touch ID ou Apple pincode/código de acesso para iniciar sessão.
+- **Domínios** (Credential e Kerberos): Introduza o domínio ou nomes de anfitriões dos sites que podem autenticar através do SSO. Por exemplo, se `mysite.contoso.com`o `mysite` seu website é `contoso.com` , então é o nome do anfitrião, e é o nome de domínio. Quando os utilizadores se ligam a qualquer um destes sites, a extensão da aplicação trata do desafio de autenticação. Esta autenticação permite que os utilizadores utilizem o Face ID, touch ID ou Apple pincode/código de acesso para iniciar sessão.
 
   - Todos os domínios da sua única extensão de aplicação de início de sessão Os perfis Intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações de início de sessão, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Estes domínios não são sensíveis a casos.
@@ -160,11 +157,11 @@ Esta funcionalidade aplica-se a:
   - Os URLs devem começar com http:// ou https://.
 
 - **Configuração adicional** (Redirecionamento e Credencial): Introduza dados adicionais específicos de extensão para passar para a extensão da aplicação SSO:
-  - **Chave**: Introduza o nome do item que pretende adicionar, como `user name`.
+  - **Chave**: Introduza o nome do item `user name`que pretende adicionar, como .
   - **Tipo**: Introduza o tipo de dados. As opções são:
 
-    - Cadeia
-    - Boolean: No valor de **configuração,** introduza `True` ou `False`.
+    - String
+    - Boolean: No valor `True` de `False` **configuração,** insira ou .
     - Integer: No valor de **configuração,** introduza um número.
     
   - **Valor**: Introduza os dados.
@@ -187,13 +184,13 @@ Esta funcionalidade aplica-se a:
 - **Comprimento mínimo da palavra-passe** (apenas Kerberos): Introduza o número mínimo de caracteres que podem compor as palavras-passe dos utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não impor um comprimento mínimo de senha aos utilizadores.
 - Limite de **reutilização de palavra-passe** (apenas Kerberos): Introduza o número de novas senhas, de 1 a 24, que devem ser utilizadas até que uma palavra-passe anterior possa ser reutilizada no domínio. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não impor um limite de reutilização de palavra-passe.
 - Idade mínima da **palavra-passe** (apenas Kerberos): Introduza o número de dias em que uma palavra-passe deve ser utilizada no domínio antes que os utilizadores possam alterá-la. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode não impor uma idade mínima de senhas antes de poderem ser alteradas.
-- Notificação de expiração de **palavra-passe** (apenas Kerberos): Insira o número de dias antes de expirar uma palavra-passe para que os utilizadores sejam notificados de que a sua palavra-passe expirará. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode utilizar `15` dias.
+- Notificação de expiração de **palavra-passe** (apenas Kerberos): Insira o número de dias antes de expirar uma palavra-passe para que os utilizadores sejam notificados de que a sua palavra-passe expirará. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o `15` Sistema operativo pode utilizar dias.
 - **Expiração da palavra-passe** (apenas Kerberos): Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode nunca expirar senhas.
 - URL de **alteração de palavra-passe** (apenas Kerberos): Introduza o URL que se abre quando os utilizadores iniciarem uma alteração de senha kerberos.
-- **Nome principal** (apenas Kerberos): Introduza o nome de utilizador do diretor kerberos. Não precisas de incluir o nome do reino. Por exemplo, em `user@contoso.com`, `user` é o nome principal, e `contoso.com` é o nome do reino.
+- **Nome principal** (apenas Kerberos): Introduza o nome de utilizador do diretor kerberos. Não precisas de incluir o nome do reino. Por exemplo, `user@contoso.com` `user` em , é `contoso.com` o nome principal, e é o nome do reino.
 
   > [!TIP]
-  > - Também pode utilizar variáveis no nome principal, entrando em suportes encaracolados `{{ }}`. Por exemplo, para mostrar o nome de utilizador, insira `Username: {{username}}`. 
+  > - Também pode utilizar variáveis no nome principal, entrando em suportes `{{ }}`encaracolados . Por exemplo, para mostrar o `Username: {{username}}`nome de utilizador, introduza . 
   > - No entanto, tenha cuidado com a substituição variável porque as variáveis não são validadas na UI e são sensíveis ao caso. Certifique-se de introduzir a informação correta.
   
 - Código de **site de Diretório Ativo** (apenas Kerberos): Introduza o nome do site Ative Directory que a extensão Kerberos deve utilizar. Pode não precisar de alterar este valor, uma vez que a extensão Kerberos pode automaticamente encontrar o código do site do Ative Directory.
@@ -216,17 +213,17 @@ Esta funcionalidade aplica-se a:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Definições aplicam-se a: Todos os tipos de inscrição
 
-- Id da **aplicação**: Introduza o identificador de aplicações da app para se associar a um website. O identificador de aplicações inclui o ID da equipa e um pacote de identificação: `TeamID.BundleID`.
+- Id da **aplicação**: Introduza o identificador de aplicações da app para se associar a um website. O identificador de aplicações inclui o `TeamID.BundleID`ID da equipa e um id de pacote: .
 
-  O ID da equipa é uma cadeia alfanumérica de 10 caracteres (letras e números) gerada pela Apple para os desenvolvedores de aplicações, como `ABCDE12345`. [Localize o seu](https://help.apple.com/developer-account/#/dev55c3c710c) de ID da equipa (abre o site da Apple) tem mais informações.
+  O ID da equipa é uma cadeia alfanumérica de 10 caracteres (letras e `ABCDE12345`números) gerada pela Apple para os desenvolvedores de aplicações, tais como . [Localizar o seu ID](https://help.apple.com/developer-account/#/dev55c3c710c) de equipa (abre o site da Apple) tem mais informações.
 
-  O id do pacote identifica exclusivamente a app, e tipicamente é formatado em notação de nome de domínio invertido. Por exemplo, o id de pacote do Finder é `com.apple.finder`. Para encontrar o ID do pacote, utilize o AppleScript no Terminal:
+  O id do pacote identifica exclusivamente a app, e tipicamente é formatado em notação de nome de domínio invertido. Por exemplo, o id `com.apple.finder`de pacote do Finder é . Para encontrar o ID do pacote, utilize o AppleScript no Terminal:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Domínio**: Insira o domínio do site para se associar a uma aplicação. O domínio inclui um tipo de serviço e um nome de anfitrião totalmente qualificado, como `webcredentials: www.contoso.com`.
+- **Domínio**: Insira o domínio do site para se associar a uma aplicação. O domínio inclui um tipo de serviço `webcredentials:www.contoso.com`e um nome de anfitrião totalmente qualificado, como .
 
-  Pode combinar todos os subdomínios de um domínio associado introduzindo `*.` (um wildcard asterisco e um período) antes do início do domínio. O período é necessário. Os domínios exatos têm uma prioridade maior do que os domínios wildcard. Assim, os padrões dos domínios dos pais são combinados *se* uma correspondência não for encontrada no subdomínio totalmente qualificado.
+  Pode combinar todos os subdomínios de um `*.` domínio associado introduzindo (um wildcard asterisco e um período) antes do início do domínio. O período é necessário. Os domínios exatos têm uma prioridade maior do que os domínios wildcard. Assim, os padrões dos domínios dos pais são combinados *se* uma correspondência não for encontrada no subdomínio totalmente qualificado.
 
   O tipo de serviço pode ser:
 
@@ -237,9 +234,9 @@ Esta funcionalidade aplica-se a:
 - **Adicione:** Selecione para adicionar as suas aplicações e domínios associados.
 
 > [!TIP]
-> Para resolver problemas, no seu dispositivo macOS, abra **as Preferências do Sistema** > **Perfis**. Confirme que o perfil que criou está na lista de perfis do dispositivo. Se estiver listado, certifique-se de que a Configuração de **Domínios Associados** está no perfil, e inclui o ID e domínios corretos da aplicação.
+> Para resolver problemas, no seu dispositivo macOS, abra perfis de > **preferências**do **sistema**. Confirme que o perfil que criou está na lista de perfis do dispositivo. Se estiver listado, certifique-se de que a Configuração de **Domínios Associados** está no perfil, e inclui o ID e domínios corretos da aplicação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326553"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Microsoft Intune App SDK para guia de testes Android
@@ -55,7 +55,7 @@ Pode exigir um PIN para aceder aos recursos corporativos. Além disso, pode impo
 2. Confirme as seguintes condições:
     - O lançamento da aplicação deve apresentar um aviso para a entrada de PIN, ou para o utilizador de produção que foi utilizado durante a inscrição no Portal da Empresa.
     - A não apresentação de um pedido de entrada válido pode dever-se a um manifesto Android configurado incorretamente, especificamente os valores para a integração da Azure Ative Directory Authentication Library (ADAL) (SkipBroker, ClientID e Authority).
-    - A não apresentação de qualquer pedido pode dever-se a um valor `MAMActivity` incorretamente integrado. Para mais informações sobre `MAMActivity`, consulte [microsoft Intune App SDK para guia](app-sdk-android.md)de desenvolvedores Android .
+    - A não apresentação de qualquer pedido pode `MAMActivity` dever-se a um valor incorretamente integrado. Para mais `MAMActivity`informações sobre , consulte [Microsoft Intune App SDK para guia](app-sdk-android.md)de desenvolvedores Android .
 
 > [!NOTE] 
 > Se o teste anterior não estiver a funcionar, os seguintes testes provavelmente também falharão. Rever a integração [de SDK](app-sdk-android.md#sdk-integration) e [ADAL.](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal)
@@ -104,11 +104,11 @@ Pode limpar remotamente as aplicações geridas de conter e-mails e documentos c
 1. Do portal Azure, [emita uma limpeza.](../apps/apps-selective-wipe.md)
 2. Se a sua aplicação não se registar para quaisquer manipuladores de limpeza, confirme as seguintes condições:
     - Ocorre uma limpeza completa da aplicação.
-3. Se a sua aplicação tiver registado para `WIPE_USER_DATA` ou `WIPE_USER_AUXILARY_DATA`, confirme as seguintes condições:
+3. Se a sua `WIPE_USER_DATA` aplicação tiver registado ou `WIPE_USER_AUXILARY_DATA`, confirme as seguintes condições:
     - O conteúdo gerido é removido da aplicação. Para mais informações, consulte [Intune App SDK para guia](app-sdk-android.md#selective-wipe)de desenvolvedores Android - limpeza seletiva .
 
 ### <a name="multi-identity-support"></a>Suporte de identidades múltiplas
-Integrar o [apoio multi-identidade](app-sdk-android.md#multi-identity-optional) é uma mudança de alto risco que precisa de ser testada de forma completa. As questões mais comuns ocorrem devido à definição indevida da identidade (contexto vs. nível de ameaça) e de ficheiros de rastreio (`MAMFileProtectionManager`).
+Integrar o [apoio multi-identidade](app-sdk-android.md#multi-identity-optional) é uma mudança de alto risco que precisa de ser testada de forma completa. As questões mais comuns ocorrem devido à definição indevida da`MAMFileProtectionManager`identidade (contexto vs. nível de ameaça) e ficheiros de rastreio ().
 
 Minimamente, confirme que:
 
@@ -121,6 +121,6 @@ Minimamente, confirme que:
 ### <a name="app-configuration-optional"></a>Configuração de aplicativos (opcional)
 Pode configurar o comportamento de aplicações geridas. Se a sua aplicação consumir quaisquer configurações de configuração da aplicação, deve testar que a sua aplicação lida corretamente com todos os valores que você (como administrador) pode definir. Pode criar e atribuir políticas de configuração de [aplicações](../apps/app-configuration-policies-overview.md) no Intune.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Adicione uma aplicação de linha de negócios Android ao Microsoft Intune](../apps/lob-apps-android.md)
+- [Adicionar aplicações de linha de negócio Android ao Microsoft Intune](../apps/lob-apps-android.md)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330949"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identificar cenários de casos de utilização da gestão de dispositivos móveis
@@ -48,7 +48,7 @@ Determine se cada cenário de casos de utilização também inclui casos de subu
 
 - Executivo
 
-- Local Público
+- Kiosk
 
 Veja a seguir alguns exemplos de cenários de casos de utilização e casos de subutilização:
 
@@ -56,7 +56,7 @@ Veja a seguir alguns exemplos de cenários de casos de utilização e casos de s
 |:---:|:---:|
 | Empresarial | Técnico de informação |              
 | Empresarial | Executivos |           
-| Empresarial | Local Público |
+| Empresarial | Kiosk |
 | BYOD | Técnico de informação |           
 | BYOD | Executivos |
 
@@ -70,7 +70,7 @@ Agora precisa de identificar os grupos organizacionais associados a cada cenári
 |:---:|:---:|:---:|
 | Empresarial | Técnico de informação | RH, Finanças |               
 | Empresarial | Executivo | RH, Finanças |            
-| Empresarial | Local Público | Revenda |
+| Empresarial | Kiosk | Retalho |
 | BYOD | Técnico de informação | Marketing, Vendas |            
 | BYOD | Executivo | Marketing, Vendas |
 
@@ -85,10 +85,10 @@ Por exemplo, o seu cenário de utilização corporativa pode suportar plataforma
 |:---:|:---:|:---:|:---:|
 | Empresarial | Técnico de informação | RH, Finanças | iOS/iPadOS |                                                           
 | Empresarial | Executivos | RH, Finanças | iOS/iPadOS |                                                           
-| Empresarial | Local Público | Revenda | Android |
+| Empresarial | Kiosk | Retalho | Android |
 | BYOD | Técnico de informação | Marketing, Vendas | iOS/iPadOS |                                                           
 | BYOD | Executivos | Marketing, Vendas | iOS/iPadOS |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 A secção seguinte fornece orientações sobre como [identificar os requisitos do Intune para cada cenário de caso de utilização](planning-guide-requirements.md).

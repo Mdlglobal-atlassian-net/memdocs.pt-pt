@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324101"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inscrição de dispositivos Windows no Portal da Empresa Intune  
@@ -39,7 +39,7 @@ Pode já ter a aplicação Portal da Empresa instalada no seu dispositivo. Consu
 
 2. No campo **de Pesquisa,** digite **portal da empresa.**
 
-3. Na lista de resultados, selecione **Portal da Empresa** > **Instalar**.
+3. Na lista de resultados, selecione **Instalado rportal** > da empresa **.**
 
 4. Selecione **Instalar** ou **Gratuito**. Não há diferença entre estas duas opções; as palavras aparecem com base na forma como a sua organização criou a aplicação.  
 
@@ -62,18 +62,18 @@ Os passos de inscrição diferem para diferentes versões dos dispositivos Windo
 
 4. Se a sua versão é  
 
-    * __1607 ou mais tarde:__ Inscreva o seu dispositivo através das [ **Definições** > **Conta** > **Trabalho** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)de acesso ou rota escolar .   
-    * __1511 ou mais cedo:__ Inscreva o seu dispositivo através da [ **Definição** > **Conta** > a sua rota **das suas contas** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 ou mais tarde:__ Inscreva o seu dispositivo através do trabalho de acesso à [**conta** >  **de definições** > ou à rota**escolar** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou mais cedo:__ Inscreva o seu dispositivo através da Conta de [ **Definições** > **A sua** rota de**contas** > ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Dispositivos com o Windows 10 Mobile
 
 1. Vá a __Todas as aplicações__ e selecione a aplicação __Definições.__
-2. Selecione __Sistema__ > __Acerca de__.
+2. Selecione __sistema__ > __sobre__.
 3. Em __informações do Dispositivo,__ encontre a __versão__.  
 4. Se a sua versão é  
 
-    * __1607 ou mais tarde:__ Inscreva o seu dispositivo utilizando as [ **Definições** > **Trabalho** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)de Acesso ou rota escolar .   
-    * __1511 ou mais cedo:__ Inscreva o seu dispositivo utilizando a rota [ **Definições** > **Contas** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 ou mais tarde:__ Inscreva o seu dispositivo utilizando o trabalho de acesso [ **definições** > ou rota**escolar** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou mais cedo:__ Inscreva o seu dispositivo utilizando a rota [ **'Contas Definições'.** > **Accounts** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)  
 
 ## <a name="enroll-non-windows-10-devices"></a>Inscreva dispositivos não Windows 10  
 Utilize os seguintes artigos para inscrever outros dispositivos Windows suportados através do site do Portal da Empresa:   
@@ -83,12 +83,12 @@ Utilize os seguintes artigos para inscrever outros dispositivos Windows suportad
 ## <a name="it-administrator-support"></a>Suporte do administrador de TI  
 Se for um administrador de TI e tiver problemas durante a inscrição de dispositivos, consulte problemas de [inscrição de dispositivos do Windows em Microsoft Intune](https://support.microsoft.com/help/4469913). Este artigo enumera erros comuns, as suas causas e passos para os resolver.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 Agora que conhece os dispositivos suportados e o número da versão do Windows 10, proceda ao artigo de inscrição recomendado.  
  
 Para obter mais informações sobre a gestão de dispositivos, portal da empresa, e como ambos são utilizados nas escolas e no trabalho, consulte os seguintes artigos:  
 * [Utilize dispositivos geridos para aceder ao trabalho ou ao recurso escolar](use-managed-devices-to-get-work-done.md)  
 * [O que acontece quando se matricula o seu dispositivo em Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
-* [Que informação pode a minha organização ver quando matriculo o meu dispositivo?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+* [Que informações é que a minha organização pode ver quando inscrevo o meu dispositivo?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
 Precisa de ajuda? Contacte o suporte da empresa. [Vá ao site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para encontrar as informações de contacto de TI da sua organização.  

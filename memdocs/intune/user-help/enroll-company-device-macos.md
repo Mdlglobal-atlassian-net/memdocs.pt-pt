@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324909"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrever um dispositivo macOS fornecido pela organização para gestão
@@ -49,14 +49,14 @@ Conclua os seguintes passos para inscrever o seu dispositivo macOS para gestão.
 3. Selecione um esquema de teclado. A lista mostra uma ou mais opções baseadas no seu país/região selecionados. Para ver todas as opções de layout, independentemente do seu país/região selecionado, clique em **Mostrar Tudo**. Quando tiver terminado, clique em **Continue** (Continuar).  
 
    ![Captura do ecrã do Assistente de Configuração de dispositivos macOS "Setup Assistant Keyboard" (Teclado do Assistente de Configuração), a mostrar uma lista de idiomas de teclado para seleção, a opção Show All (Mostrar Todos) desselecionada e os botões Back (Retroceder) e Continue (Continuar).](./media/macos-dep-keyboard-1808.png)  
-4. Selecione a sua rede Wi-Fi. Tem de ter uma ligação à Internet para prosseguir com a configuração. Se não vir a sua rede ou tiver de estabelecer ligação através de uma rede com fios, clique em **Other Network Options** (Outras Opções de Rede). Quando tiver terminado, clique em **Continue** (Continuar).  
+4. Selecione a sua rede Wi-Fi. Tem de ter uma ligação à Internet para prosseguir com a configuração. Se não vir a sua rede ou tiver de estabelecer ligação através de uma rede com fios, clique em **Other Network Options** (Outras Opções de Rede). Quando terminar, clique em **Continuar**.  
 
    ![Captura do ecrã do Assistente de Configuração de dispositivos macOS "Select Your Wi-Fi Network screen" (Selecione a Sua Rede Wi-Fi), a mostrar uma lista das redes disponíveis. Também mostra os botões Other Network Options (Outras Opções de Rede), Back (Retroceder) e Continue (Continuar).](./media/macos-dep-wifi-1808.png)  
-5. Assim que estiver ligado ao Wi-Fi, o ecrã **Remote Management** (Gestão Remota) será apresentado. A gestão remota permite que o administrador da sua organização configure remotamente o seu dispositivo com as contas, definições, aplicações e redes exigidas pela empresa. Leia a explicação da gestão remota para o ajudar a compreender a forma como o seu dispositivo é gerido. Em seguida, clique em **Continue** (Continuar).  
+5. Assim que estiver ligado ao Wi-Fi, o ecrã **Remote Management** (Gestão Remota) será apresentado. A gestão remota permite que o administrador da sua organização configure remotamente o seu dispositivo com as contas, definições, aplicações e redes exigidas pela empresa. Leia a explicação da gestão remota para o ajudar a compreender a forma como o seu dispositivo é gerido. Em seguida, clique em **Continuar**.  
 
    ![Captura do ecrã do Assistente de Configuração de dispositivos macOS "Remote Management" (Gestão Remota), com uma explicação sobre a gestão remota e uma ligação para documentação com informações adicionais. Também mostrar os botões Back (Retroceder) e Continue (Continuar).](./media/macos-dep-remote-management-1-1808.png)  
 6. Quando lhe for pedido, inicie sessão com a sua conta escolar ou profissional. Após a sua autenticação, o dispositivo irá instalar um perfil de gestão. O perfil configura e permite o seu acesso aos recursos da sua organização.  
-7. Leia mais sobre o ícone de dados e privacidade da Apple, para que possa identificar mais tarde quando as suas informações pessoais estiverem a ser recolhidas. Em seguida, clique em **Continue** (Continuar).  
+7. Leia mais sobre o ícone de dados e privacidade da Apple, para que possa identificar mais tarde quando as suas informações pessoais estiverem a ser recolhidas. Em seguida, clique em **Continuar**.  
 
    ![Captura do ecrã do Assistente de Configuração de dispositivos macOS "Data & Privacy" (Dados e Privacidade), a mostrar uma imagem de duas pessoas a darem um aperto de mãos e a descrever a utilização informações pessoais por parte da Apple. Também mostra os botões Back (Retroceder) e Continue (Continuar).](./media/macos-dep-apple-data-privacy-1808.png)  
 8. Assim que o dispositivo estiver inscrito, poderá ter de concluir alguns passos adicionais. Os passos que lhe são apresentados dependem da forma como a sua organização personalizou a experiência de configuração. Estes passos podem pedir-lhe que:
@@ -76,6 +76,6 @@ Transfira a aplicação Portal da Empresa do Intune para macOS no seu dispositiv
 4. Quando lhe for pedido, abra o ficheiro .pkg e conclua os passos de instalação.
 5. Abra a aplicação Portal da Empresa e inicie sessão com a sua conta escolar ou profissional.
 6. Localize o seu dispositivo e clique em **Register** (Registar).
-7. Clique em **Continue** (Continuar) > **Done** (Concluído). O seu dispositivo deverá agora aparecer na aplicação Portal da Empresa como um dispositivo empresarial e em conformidade.
+7. Clique em **Continuar** > **Feito**. O seu dispositivo deverá agora aparecer na aplicação Portal da Empresa como um dispositivo empresarial e em conformidade.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

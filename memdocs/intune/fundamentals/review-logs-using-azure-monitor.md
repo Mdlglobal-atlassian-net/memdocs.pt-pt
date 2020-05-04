@@ -1,5 +1,5 @@
 ---
-title: Rota logs para O Monitor Azure usando Microsoft Intune - Azure  Microsoft Docs
+title: Rota logs para O Monitor Azure usando Microsoft Intune - Azure [ Microsoft Docs
 description: Utilize definições de diagnóstico para enviar registos de auditoria e registos operacionais na Microsoft Intune para a conta de armazenamento Do Azure, centros de eventos ou análise de registo. Escolha quanto tempo pretende manter os dados e veja alguns custos estimados para inquilinos de diferentes tamanhos.
 keywords: ''
 author: MandiOhlinger
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2e8045ac53369a471ce232f0eca3e185be2e3e85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330665"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envie dados de registo para armazenamento, centros de eventos ou análise de registo em Intune (pré-visualização)
@@ -53,35 +53,35 @@ Para utilizar esta funcionalidade, precisa de:
 
 Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa de um dos seguintes serviços:
 
-* Uma [conta de armazenamento Azure](https://docs.microsoft.com/azure/storage/common/storage-account-overview) com permissões *ListKeys.* Recomendamos que utilize uma conta de armazenamento geral, e não uma conta de armazenamento de bolhas. Para obter informações sobre preços de armazenamento, consulte a calculadora de preços do [Armazenamento Azure](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* Uma [conta de armazenamento Azure](https://docs.microsoft.com/azure/storage/common/storage-account-overview) com permissões *ListKeys.* Recomendamos que utilize uma conta de armazenamento geral, e não uma conta de armazenamento de bolhas. Para obter informações sobre os preços de armazenamento, veja a [Calculadora de preços do Armazenamento do Azure](https://azure.microsoft.com/pricing/calculator/?service=storage). 
 * Um [evento Azure hubs namespace](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) para integrar com soluções de terceiros.
 * Um espaço de trabalho de análise de [registo Azure](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) para enviar registos para Log Analytics.
 
 ## <a name="send-logs-to-azure-monitor"></a>Enviar registos para o monitor Azure
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **relatórios** > **definições de diagnóstico**. A primeira vez que o abrires, liga-o. Caso contrário, adicione uma definição.
+2. Selecione definições de diagnóstico **de relatórios** > **Diagnostics settings**. A primeira vez que o abrires, liga-o. Caso contrário, adicione uma definição.
 
     > [!div class="mx-imgBorder"]
-    > ![ligue as definições de Diagnóstico em Intune para enviar registos para o Monitor Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
+    > ![Ligue as definições de Diagnóstico em Intune para enviar registos para o Monitor Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
 
 3. Introduza as seguintes propriedades:
 
     - **Nome**: Introduza um nome para as definições de diagnóstico. Esta definição inclui todas as propriedades em que entra. Por exemplo, introduza `Route audit logs to storage account`.
     - **Arquivar numa conta**de armazenamento: Guarde os dados de registo para uma conta de armazenamento Azure. Utilize esta opção se pretender guardar ou arquivar os dados.
 
-        1. Selecione esta opção > **Configure**. 
+        1. Selecione esta opção > **Configurar**. 
         2. Escolha uma conta de armazenamento existente na lista > **OK**.
 
     - **Stream para um centro de eventos**: Transmite os troncos para um centro de eventos Azure. Se pretender análises nos seus dados de registo utilizando ferramentas SIEM, como splunk e QRadar, escolha esta opção.
 
-        1. Selecione esta opção > **Configure**. 
-        2. Escolha um espaço de nome e política existentes do hub de eventos da lista > **OK**.
+        1. Selecione esta opção > **Configurar**. 
+        2. Escolha um espaço de nome e política existentes no centro de eventos da lista > **OK**.
 
     - **Enviar para Log Analytics**: Envia os dados para a análise de registo do Azure. Se pretender utilizar visualizações, monitorização e alerta para os seus registos, escolha esta opção.
 
-        1. Selecione esta opção > **Configure**. 
-        2. Crie um novo espaço de trabalho e insira os detalhes do espaço de trabalho. Ou, escolha um espaço de trabalho existente na lista > **OK**.
+        1. Selecione esta opção > **Configurar**. 
+        2. Crie um novo espaço de trabalho e insira os detalhes do espaço de trabalho. Ou, escolha um espaço de trabalho existente da lista > **OK**.
 
             [O espaço de trabalho](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) de análise de registo azure fornece mais detalhes sobre estas configurações.
 
@@ -89,14 +89,14 @@ Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
 
-    - **LOG** > **OperacionaIsLogs**: Os registos operacionais (pré-visualização) mostram o sucesso ou falha dos utilizadores e dispositivos que se inscrevem no Intune, bem como detalhes sobre dispositivos não conformes. Escolha esta opção para enviar os registos de inscrição para a sua conta de armazenamento, centro de eventos ou análise de registo.
+    - **Log** > **OperationalLogs**: Os registos operacionais (pré-visualização) mostram o sucesso ou falha dos utilizadores e dispositivos que se inscrevem no Intune, bem como detalhes sobre dispositivos não conformes. Escolha esta opção para enviar os registos de inscrição para a sua conta de armazenamento, centro de eventos ou análise de registo.
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
 
       > [!NOTE]
       > Os registos operacionais estão em pré-visualização. Para fornecer feedback, incluindo informações nos registos operacionais, aceda ao [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
-    - **LOG** > **DeviceComplianceOrg**: Registos organizacionais de conformidade do dispositivo (pré-visualização) mostram o relatório organizacional de conformidade do dispositivo em Intune e detalhes de dispositivos não conformes. Escolha esta opção para enviar os registos de conformidade para a sua conta de armazenamento, centro de eventos ou análise de registo.
+    - **LOG** > **DeviceComplianceOrg**: Registos organizacionais de conformidade do dispositivo (pré-visualização) mostram o relatório organizacional de conformidade do dispositivo em Intune, e detalhes de dispositivos não conformes. Escolha esta opção para enviar os registos de conformidade para a sua conta de armazenamento, centro de eventos ou análise de registo.
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
  
@@ -106,9 +106,9 @@ Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa
     Quando terminadas, as definições parecem semelhantes às seguintes definições: 
 
     > [!div class="mx-imgBorder"]
-    > ![Imagem de amostra que envia registos de auditoria Intune para uma conta de armazenamento Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
+    > ![Imagem de amostra que envia registos de auditoria intune para uma conta de armazenamento Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
-4. **Guarde** as suas alterações. A sua configuração está na lista. Uma vez criado, pode alterar as definições selecionando a **definição de Editar** > **Guardar**.
+4. **Guarde** as suas alterações. A sua configuração está na lista. Uma vez criado, pode alterar as definições selecionando a **definição** > de Editar**Guardar**.
 
 ## <a name="use-audit-logs-throughout-intune"></a>Utilize registos de auditoria em toda a Intune
 
@@ -120,20 +120,20 @@ Para mais informações, consulte Utilize registos de [auditoria para acompanhar
 
 No registo de auditoria, pode encontrar propriedades que tenham valores específicos. A tabela seguinte fornece estes detalhes.
 
-| Propriedade | Descrição de propriedade | Valores |
+| Propriedade | Descrição do imóvel | Valores |
 |----------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ActivityType  | A ação que o administrador toma. | Criar, eliminar, patch, ação, setreference, remover referência, obter, pesquisar |
+| Tipo de Atividade  | A ação que o administrador toma. | Criar, eliminar, patch, ação, setreference, remover referência, obter, pesquisar |
 | ActorType  | Pessoa a tomar a ação. | Desconhecido = 0, ItPro, IW, Sistema, Parceiro, Aplicação, Guestuser |
-| Category  | O painel em que a ação teve lugar. | Outros = 0, Inscrição = 1, Compliance = 2, Configuração do Dispositivo = 3, Dispositivo = 4, Aplicação = 5, EBookManagement = 6, ConditionalAccess= 7, OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration = 11, DeviceIntent = 12, DeviceIntentSetting = 13, Segurança do Dispositivo = 14, GroupPolicyAnalytics = 15 |
+| Categoria  | O painel em que a ação teve lugar. | Outros = 0, Inscrição = 1, Compliance = 2, Configuração do Dispositivo = 3, Dispositivo = 4, Aplicação = 5, EBookManagement = 6, ConditionalAccess= 7, OnPremiseAccess= 8, Role = 9, SoftwareUpdates =10, DeviceSetupConfiguration = 11, DeviceIntent = 12, DeviceIntentSetting = 13, DeviceSecurity = 14, GroupPolicyAnalytics = 15 |
 | AtividadeResultado | Se a ação foi bem sucedida ou não. | Sucesso = 1 |
 
 ## <a name="cost-considerations"></a>Considerações de custos
 
 Se já tem uma licença Microsoft Intune, precisa de uma subscrição Azure para configurar a conta de armazenamento e o centro de eventos. A subscrição azure é normalmente gratuita. Mas paga-se para utilizar os recursos do Azure, incluindo a conta de armazenamento para arquivo e o centro de eventos para streaming. A quantidade de dados e os custos variam consoante o tamanho do arrendatário.
 
-### <a name="storage-size-for-activity-logs"></a>Tamanho do armazenamento para registos de atividade
+### <a name="storage-size-for-activity-logs"></a>Tamanho de armazenamento para registos de atividades
 
-Todos os eventos de registo de auditoria utilizam cerca de 2 KB de armazenamento de dados. Para um inquilino com 100.000 utilizadores, pode ter cerca de 1,5 milhões de eventos por dia. Pode necessitar de cerca de 3 GB de armazenamento de dados por dia. Como os escritos costumam acontecer em lotes de cinco minutos, pode esperar aproximadamente 9.000 operações de escrita por mês.
+Cada evento de registo de auditoria consome cerca de 2 KB de armazenamento de dados. Para um inquilino com 100.000 utilizadores, pode ter cerca de 1,5 milhões de eventos por dia. Pode necessitar de cerca de 3 GB de armazenamento de dados por dia. Como os escritos costumam acontecer em lotes de cinco minutos, pode esperar aproximadamente 9.000 operações de escrita por mês.
 
 As tabelas seguintes mostram uma estimativa de custos dependendo do tamanho do inquilino. Inclui também uma conta de armazenamento v2 de uso geral nos EUA ocidentais durante pelo menos um ano de retenção de dados. Para obter uma estimativa do volume de dados que espera para os seus registos, utilize a calculadora de preços de [armazenamento Azure](https://azure.microsoft.com/pricing/details/storage/blobs/).
 
@@ -144,35 +144,35 @@ As tabelas seguintes mostram uma estimativa de custos dependendo do tamanho do i
 |Eventos por dia| 1,5 milhões|
 |Volume estimado de dados por mês| 90 GB|
 |Custo estimado por mês (USD)| $1,93|
-|Custo estimado por ano (USD)| $23.12|
+|Custo estimado por ano (USD)| $23,12|
 
 **Registo de auditoria com 1.000 utilizadores**
 
 | | |
 |---|---|
-|Eventos por dia| 15,000|
+|Eventos por dia| 15 000|
 |Volume estimado de dados por mês| 900 MB|
 |Custo estimado por mês (USD)| $0,02|
 |Custo estimado por ano (USD)| $0,24|
 
-### <a name="event-hub-messages-for-activity-logs"></a>Mensagens de hub de eventos para registos de atividade
+### <a name="event-hub-messages-for-activity-logs"></a>Mensagens do hub de eventos para os registos de atividades
 
 Os eventos são normalmente loteados em intervalos de cinco minutos, e enviados como uma única mensagem com todos os eventos dentro desse prazo. Uma mensagem no centro do evento tem um tamanho máximo de 256 KB. Se o tamanho total de todas as mensagens dentro do prazo exceder esse volume, então são enviadas várias mensagens.
 
 Por exemplo, cerca de 18 eventos por segundo costumam acontecer para um grande inquilino de mais de 100.000 utilizadores. Isto equivale a 5.400 eventos a cada cinco minutos (300 segundos x 18 eventos). Os registos de auditoria são de cerca de 2 KB por evento. Isto equivale a 10,8 MB de dados. Então, 43 mensagens são enviadas para o centro do evento nesse intervalo de cinco minutos.
 
-A tabela seguinte contém custos estimados por mês para um centro de eventos básicos no Oeste dos EUA, dependendo do volume de dados do evento. Para obter uma estimativa do volume de dados que espera para os seus registos, utilize a calculadora de preços do [Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
+A tabela seguinte contém os custos estimados por mês para um hub de eventos básico nos E.U.A. Oeste, consoante o volume de dados de eventos. Para obter uma estimativa do volume de dados que espera para os seus registos, utilize a calculadora de preços do [Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
 
 **Registo de auditoria com 100.000 utilizadores**
 
 | | |
 |---|---|
 |Eventos por segundo| 18|
-|Eventos por intervalo de cinco minutos| 5,400|
+|Eventos por intervalo de cinco minutos| 5400|
 |Volume por intervalo| 10,8 MB|
 |Mensagens por intervalo| 43|
-|Mensagens por mês| 371,520|
-|Custo estimado por mês (USD)| $10.83|
+|Mensagens por mês| 371 520|
+|Custo estimado por mês (USD)| $10,83|
 
 **Registo de auditoria com 1.000 utilizadores**
 
@@ -180,10 +180,10 @@ A tabela seguinte contém custos estimados por mês para um centro de eventos b�
 |---|---|
 |Eventos por segundo|0.1 |
 |Eventos por intervalo de cinco minutos| 52|
-|Volume por intervalo|104 KB |
+|Volume por intervalo|104 KB |
 |Mensagens por intervalo|1 |
-|Mensagens por mês|8,640 |
-|Custo estimado por mês (USD)|$10,80 |
+|Mensagens por mês|8640 |
+|Custo estimado por mês (USD)|10,80 $ |
 
 ### <a name="log-analytics-cost-considerations"></a>Considerações de custos de Log Analytics
 
@@ -219,22 +219,22 @@ Os custos de streaming dependem do número de mensagens que recebe por minuto. P
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Como integrar registos de auditoria intune com o meu sistema SIEM?
 
-Utilize o Monitor Azure com Centros de Eventos para transmitir registos para o seu sistema SIEM. Primeiro, [transmita os troncos para um centro de eventos.](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub) Em seguida, [configure a sua ferramenta SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) com o centro de eventos configurado. 
+Utilize o Azure Monitor com os Hubs de Eventos para transmitir os registos para o seu sistema SIEM. Primeiro, [transmita os troncos para um centro de eventos.](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub) Em seguida, [configure a sua ferramenta SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) com o centro de eventos configurado. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Quais as ferramentas SIEM que são atualmente suportadas?
 
-Atualmente, o Azure Monitor é apoiado pela [Splunk,](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (abre um novo website). Para obter mais informações sobre o funcionamento dos conectores, consulte o [Stream Azure monitorizando os dados para um centro](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)de eventos para consumo por uma ferramenta externa .
+Atualmente, o Azure Monitor é apoiado pela [Splunk,](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (abre um novo website). Para obter mais informações sobre como funcionam os conectores, veja [Stream Azure monitoring data to an event hub for consumption by an external tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) (Transmitir em fluxo dados de monitorização do Azure para um hub de eventos, para consumo por uma ferramenta externa).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Posso aceder aos dados a partir de um centro de eventos sem usar uma ferramenta SIEM externa?
 
-Sim. Para aceder aos registos da sua aplicação personalizada, pode utilizar a API dos Hubs de [Eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Sim. Pode utilizar a [API dos Hub de Eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) para aceder aos registos da sua aplicação personalizada.
 
 ### <a name="what-data-is-stored"></a>Que dados são armazenados?
 
 Intune não armazena nenhum dado enviado através do oleoduto. Instonize os dados para o oleoduto Azure Monitor, à autoridade do arrendatário. Para mais informações, consulte a [visão geral do Monitor Azure](https://docs.microsoft.com/azure/azure-monitor/overview).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-* [Registos de atividade de arquivo numa conta de armazenamento](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Rota logs para um centro de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integrar registos de atividade com Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Arquivar registos de atividades numa conta de armazenamento](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Encaminhar registos de atividades para um hub de eventos](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integrar registos de atividade com o Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

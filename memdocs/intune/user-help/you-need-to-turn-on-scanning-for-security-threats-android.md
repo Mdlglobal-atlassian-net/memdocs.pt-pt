@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 664384a03839b85be3ff01731a988315b61342c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79323965"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Ativar a análise de ameaças de segurança no seu dispositivo 
@@ -30,8 +30,8 @@ Se instalar uma aplicação não segura inadvertidamente, os dados do seu dispos
 * Transfira aplicações apenas a partir de origens verificadas, tais como a Google Play Store.  
 * Ative as análises de ameaças de segurança no seu dispositivo. Estas análises são realizadas pela Google e verificam se é seguro instalar as aplicações.  
 
-Para ativar as análises no seu dispositivo, aceda a **Definições** > **Google** > **Segurança**. Ative a opção **Procurar ameaças à segurança no dispositivo**.  
+Para ativar as verificações no seu dispositivo, vá para **definições** > **de Segurança do Google** > **Security**. Ative a opção **Procurar ameaças à segurança no dispositivo**.  
 
-Em alguns dispositivos Samsung, poderá encontrar a definição em **Definições** > **Google** > **Segurança** > **Google Play Protect**.
+Em alguns dispositivos da Samsung, poderá encontrar a definição em **Definições** > **google** > **Security** > **Google Play Protect**.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980). 

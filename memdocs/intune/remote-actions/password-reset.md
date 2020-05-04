@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d491fba013df10b6576f49b1e00ab9a1ea18f482
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324977"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Reduzir os custos do suporte técnico com a reposição de palavra-passe self-service
@@ -35,9 +35,9 @@ Pode permitir que os funcionários reponham as palavras-passe das contas escolar
 1. Compreenda a [reposição de palavra-passe self-service do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-overview). 
 2. Peça aos funcionários e estudantes que se [registem na reposição de palavra-passe self-service](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-reset-register).
 3. Para referência futura, forneça instruções sobre [como repor ou alterar a palavra-passe](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-update-your-own-password) aos funcionários e estudantes.
-4. [Ative a reposição de palavra-passe self-service](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-getting-started).
+4. [Ativar o reset da palavra-passe de autosserviço](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-getting-started).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre os seguintes artigos:
 

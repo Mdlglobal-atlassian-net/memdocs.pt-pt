@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91a0f717a8ed3d5574b731fe2f20a40c5494a160
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330461"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Códigos e descrições comuns de erro no Microsoft Intune
@@ -62,7 +62,7 @@ Se precisar de ajuda de suporte, consulte [o suporte para o Microsoft Intune](ge
 |-2016281107|0x87D1FDED|Definição de origem de deteção não suportada|
 |-2016281108|0x87D1FDEC|Definição referenciada não localizada no CI|
 |-2016281109|0x87D1FDEB|Falha ao concluir a conversão do tipo de dados|
-|-2016281110|0x87D1FDEA|Parâmetro inválido na definição de CIM|
+|-2016281110|0x87D1FDEA|  Parâmetro inválido na definição de CIM|
 |-2016281111|0x87D1FDE9|Não aplicável a este dispositivo|
 |-2016281112|0x87D1FDE8|Falha na remediação|
 |-2016330905|0x87D13B67|O estado da aplicação é desconhecido|
@@ -82,7 +82,7 @@ Se precisar de ajuda de suporte, consulte [o suporte para o Microsoft Intune](ge
 
 ### <a name="company-portal-errors"></a>Erros do Portal da Empresa
 
-|Texto de erro no Portal da Empresa|Código de estado HTTP|Informações adicionais do erro|
+|Texto de erro no Portal da Empresa|Código de estado de HTTP|Informações adicionais do erro|
 |---|---|---|
 |__Problema do servidor interno__ <br>Parece que não conseguiu contactar-nos devido a um erro interno no nosso servidor. Tente novamente e, em seguida, contacte o seu administrador de TI se o problema persistir.|Erro 500|Este erro é causado provavelmente por um problema no serviço do Intune. O problema deve ser resolvido no lado do serviço do Intune e é provável que não seja devido a problemas do lado do cliente.|
 |__Temporariamente indisponível__ <br>Parece que não conseguiu contactar-nos porque o nosso serviço está temporariamente indisponível. Tente novamente e, em seguida, contacte o seu administrador de TI se o problema persistir.|Erro 503|Este erro deve-se provavelmente a um problema temporário do serviço do Intune, tal como o serviço encontrar-se em manutenção. O problema deve ser resolvido no lado do serviço do Intune e é provável que não seja devido a problemas do lado do cliente.|
@@ -170,7 +170,7 @@ Se precisar de ajuda de suporte, consulte [o suporte para o Microsoft Intune](ge
 |-2016321110|0x87D161AA|15002: não é possível bloquear configuração de rede|
 |-2016321111|0x87D161A9|15001: não é possível remover VPN|
 |-2016321112|0x87D161A8|15000: não é possível instalar VPN|
-|-2016322110|0x87D15DC2|14002: a configuração de nuvem já existe|
+|-2016322110|0x87D15DC2|14002: a configuração de cloud já existe|
 |-2016322111|0x87D15DC1|14001: dispositivo bloqueado|
 |-2016322112|0x87D15DC0|14000: campo inválido|
 |-2016323107|0x87D159DD|13005: não é possível configurar proxy|
@@ -385,6 +385,6 @@ Se precisar de ajuda de suporte, consulte [o suporte para o Microsoft Intune](ge
 |-2016345912|0x87D100C8|O comando SyncML foi concluído com êxito.|
 |-2016346011|0x87D10065|O comando SyncML especificado está a ser executado, mas ainda não foi concluído.|
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Contacte o Microsoft Support para [obter suporte para o Microsoft Intune](get-support.md).

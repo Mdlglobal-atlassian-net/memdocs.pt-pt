@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359145"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows Holographic para configurações de dispositivos empresariais para funcionar como um quiosque em Intune
@@ -60,7 +60,7 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
   - **Início de sessão automático**: não suportado no Windows Holographic for Business.
   - **Contas de utilizador local**: **adicione** a conta de utilizador local (para o dispositivo). A conta que introduzir serve para iniciar sessão no quiosque.
-  - **Utilizador ou grupo do Microsoft Azure AD (Windows 10, versão 1803 e posterior)** : requer credenciais de utilizador para iniciar sessão no dispositivo. Selecione **Adicionar** para escolher os utilizadores ou grupos do Microsoft Azure AD na lista. Pode selecionar vários utilizadores e grupos. Escolha **Selecionar** para guardar as alterações.
+  - **Utilizador ou grupo do Microsoft Azure AD (Windows 10, versão 1803 e posterior)**: requer credenciais de utilizador para iniciar sessão no dispositivo. Selecione **Adicionar** para escolher os utilizadores ou grupos do Microsoft Azure AD na lista. Pode selecionar vários utilizadores e grupos. Escolha **Selecionar** para guardar as alterações.
   - **Visitante do HoloLens**: A conta de visitante é uma conta de convidado que não necessita de credenciais ou de autenticação do utilizador, como está descrito em [Shared PC mode concepts (Conceitos de modo de PC partilhado)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Aplicações**: adicione as aplicações que quer executar no dispositivo de quiosque. Lembre-se de que pode adicionar várias aplicações.
@@ -70,7 +70,7 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
   - **Adicionar por AUMID**: utilize esta opção para adicionar aplicações do Windows de caixa de entrada. Introduza as seguintes propriedades: 
 
     - **Nome da aplicação**: obrigatório. Introduza um nome para a aplicação.
-    - **ID do modelo de utilizador da aplicação (AUMID)** : obrigatório. Introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Windows. Para obter este ID, veja [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Localizar o ID do Modelo de Utilizador da Aplicação de uma aplicação instalada).
+    - **ID do modelo de utilizador da aplicação (AUMID)**: obrigatório. Introduza o ID do modelo de utilizador da aplicação (AUMID) da aplicação Windows. Para obter este ID, veja [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Localizar o ID do Modelo de Utilizador da Aplicação de uma aplicação instalada).
     - **Tamanho do mosaico**: obrigatório. Escolha um tamanho de mosaico da aplicação: Pequeno, Médio, Largo ou Grande.
 
 - **Definições do browser do quiosque**: não suportado no Windows Holographic for Business.
@@ -79,7 +79,7 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
 - **Barra de tarefas do Windows**: não suportada no Windows Holographic for Business.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

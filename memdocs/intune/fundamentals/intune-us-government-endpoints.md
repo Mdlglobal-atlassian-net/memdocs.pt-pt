@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80438775"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Pontos finais do governo dos EUA para a Microsoft Intune
@@ -31,7 +31,7 @@ Esta página lista os pontos finais do governo dos EUA necessários para configu
 
 Para gerir dispositivos protegidos por firewalls e servidores proxy, tem de ativar as comunicações para o Intune.
 
-- O servidor proxy tem de suportar **HTTP (80)** e **HTTPS(443)** , porque os clientes do Intune utilizam ambos os protocolos
+- O servidor proxy tem de suportar **HTTP (80)** e **HTTPS(443)**, porque os clientes do Intune utilizam ambos os protocolos
 - Para certas tarefas (como transferir atualizações de software), o Intune necessita de acesso não autenticado do servidor proxy ao site manage.microsoft.com
 
 Pode modificar as definições do servidor proxy em computadores cliente individuais. Também pode utilizar as definições da Política de Grupo para alterar as definições para todos os computadores cliente localizados atrás de um servidor proxy especificado.
@@ -42,23 +42,23 @@ Para obter mais informações sobre a inscrição automática do Windows 10 e o 
 
 As tabelas que se seguem listam as portas e os serviços a que o cliente do Intune acede:
 
-|**Ponto final**|**Endereço IP**|
+|**Ponto Final**|**Endereço IP**|
 |---------------------|-----------|
 |*.manage.microsoft.us | 52.243.26.209 <br> 52.247.173.11 <br> 52.227.183.12 <br>52.227.180.205 <br> 52.227.178.107 <br> 13.72.185.168 <br> 52.227.173.179 <br> 52.227.175.242 <br> 13.72.39.209 <br> 52.243.26.209 <br> 52.247.173.11 |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## <a name="us-government-customer-designated-endpoints"></a>Cliente do Governo dos EUA designado pontos finais:
-- Portal Azure: https:\//portal.azure.us/ 
-- Escritório 365: https:\//portal.office365.us/ 
-- Intune Company Portal: https:\//portal.manage.microsoft.us/ 
-- Centro de administração do Microsoft Endpoint Manager: https:\//endpoint.microsoft.us/
+- Portal Azure:\/https: /portal.azure.us/ 
+- Escritório 365:\/https: /portal.office365.us/ 
+- Intune Company Portal:\/https: /portal.manage.microsoft.us/ 
+- Microsoft Endpoint Manager centro de\/administração: https: /endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Pontos finais do serviço parceiro que Intune depende:
-- Serviço AAD Sync: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
-- Evo STS: https:\//login.microsoftonline.us
-- Procuração do diretório: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https:\//directory.microsoftazure.us e https:\//graph.microsoftazure.us
-- MS Graph: https:\//graph.microsoft.us
+- Serviço AAD Sync:\/https: /syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Evo STS:\/https: /login.microsoftonline.us
+- Procuração de diretório: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
+- AAD Graph:\/https: /directory.microsoftazure.us\/e https: /graph.microsoftazure.us
+- Gráfico mS:\/https: /graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Serviços de Notificação push do Windows
@@ -66,7 +66,7 @@ Em dispositivos geridos pela Intune geridos através da utilização de Mobile D
 
 ## <a name="apple-device-network-information"></a>Informações da rede de dispositivos Apple
 
-|**Usado para**|**Nome de anfitrião (endereço IP/sub-rede)**|**Protocolo**|**Porto**|
+|**Utilizado para**|**Nome do anfitrião (endereço IP/sub-rede)**|**Protocolo**|**Porto**|
 |------------|-----------|------------|-----------|
 |Obter e apresentar o conteúdo de servidores da Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
 |Comunicação com servidores APNS|#-courier.push.apple.com<br>'#' é um número aleatório de 0 a 50.|TCP|5223 e 443|
@@ -78,6 +78,6 @@ Para obter mais informações, consulte:
 - [Sobre macOS, iOS/iPadOS e ligações de servidoriTunes e processos de fundo do iTunes](https://support.apple.com/HT201999)
 - [Se os seus clientes macOS e iOS/iPadOS não estiverem a receber notificações push da Apple](https://support.apple.com/HT203609)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Pontos finais da rede para Microsoft Intune](intune-endpoints.md)
 

@@ -5,5 +5,5 @@
 4. Selecione **Propriedades** sob **Gestão** a partir do painel de aplicações.
 5. **Selecione Editar** ao lado de **informações**da App .  
 6. Clique no ficheiro listado ao lado do **ficheiro Select para atualizar**. O painel de **ficheiros** do pacote app é apresentado.
-7. Selecione no ícone da pasta e procure a localização do seu ficheiro de aplicação atualizado. Selecione **Abrir**. As informações da aplicação são atualizadas com as informações do pacote.  
+7. Selecione no ícone da pasta e procure a localização do seu ficheiro de aplicação atualizado. Selecione **Open** (Abrir). As informações da aplicação são atualizadas com as informações do pacote.  
 8. Verifique se a **Versão da aplicação** reflete o pacote de aplicação atualizado.

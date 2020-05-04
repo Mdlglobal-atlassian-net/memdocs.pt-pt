@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 68bc48461f6bac9fc7a220642e8867178ee3999c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324017"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Resolver uma ameaça detetada pela aplicação Defesa Contra Ameaças para Dispositivos Móveis
@@ -43,6 +43,6 @@ Abaixo, encontram-se os serviços de Defesa Contra Ameaças para Dispositivos M�
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)  
 
-  Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+  Ainda precisa de ajuda? Contacte o suporte da empresa. Para obter informações de contacto, consulte o site do [Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)  
 
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 88c9b6789f4475a95201e975d3492acecde3927e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324505"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Mudar o nome do dispositivo a partir da aplicação Portal da Empresa para Windows
@@ -55,10 +55,10 @@ Conclua o passo seguinte para remover um dispositivo através das ações do [me
 2. Clique com o botão direito do rato ou mantenha premido qualquer dispositivo para abrir o respetivo menu de contexto.  
 
     ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows, home page. O menu de contexto do dispositivo está visível na secção **My Devices** (Os Meus Dispositivos) da página e mostra as ações "Rename" (Mudar o nome), "Remove" (Remover) e "Check access" (Verificar acesso).](./media/1809_DeviceContextMenu_Windows_CP.png)    
-3. Selecione **Mudar o nome**.  
+3. Selecione **Rename**.  
 4. Escreva um novo nome e selecione **Rename** (Mudar o nome). O nome do dispositivo é atualizado imediatamente na aplicação.  
 
      ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows, home page. O campo de pop-up Rename (Mudar o nome) aparece sobre o dispositivo onde o utilizador pode escrever um novo nome e clicar em Rename (Mudar o nome) ou Cancel (Cancelar).](./media/1808_RenameApp_Popup.png)  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

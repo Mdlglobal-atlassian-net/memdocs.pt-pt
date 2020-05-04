@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c85816c36427727416f531effa695e7d2eec66aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325377"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Adicione aplicativos de defesa de ameaças móveis a dispositivos não matriculados
@@ -118,6 +118,6 @@ No entanto, caso deseje disponibilizar a app aos utilizadores finais através do
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Ativar o conector de defesa de ameaças móveis em Intune para dispositivos não matriculados](mtd-enable-unenrolled-devices.md)

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 00f3b217140b1d5f46b68409b38ca2db76c45406
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324633"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Como inscrever o dispositivo Windows 8.1 ou Windows RT 8.1 no Intune  
@@ -33,18 +33,18 @@ Se a sua empresa ou escola utiliza o Microsoft Intune, pode inscrever os seus di
 
 Inscrever o dispositivo Windows 8.1 ou Windows RT 8.1  
 
-1. No aparelho, toque em **definições** &gt; **definições** do PC &gt; **rede** &gt; **Local de Trabalho**.  
+1. No dispositivo, toque em **definições** &gt; **pc Definições** &gt; **Pc Local** &gt; **de trabalho**.  
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
-2. Introduza o seu e-mail escolar ou profissional do ID de Utilizador, se necessário, e toque em **Participar**. Se o SEU ID do utilizador não for necessário, o endereço de e-mail que inseriu quando inseriu neste dispositivo é utilizado.  
+2. Insira o seu trabalho ou e-mail escolar para o ID do utilizador, se necessário, e depois toque **em Join**. Se o SEU ID do utilizador não for necessário, o endereço de e-mail que inseriu quando inseriu neste dispositivo é utilizado.  
 
 3. Introduza a palavra-passe para o seu e-mail escolar ou profissional.  
 
 
     ![type-password](./media/W81-2-workplacesettings_signin.png)  
 
-4. Em **Ativar gestão de dispositivos**, toque em **Ativar**.  
+4. Sob **a gestão do dispositivo,** toque **em ligar**.  
 
 
     ![turn-on-device-management](./media/W81-3-dev-mgt-turn-on.png)  
@@ -61,12 +61,12 @@ Inscrever o dispositivo Windows 8.1 ou Windows RT 8.1
 
 Também recomendamos a instalação da aplicação do Portal da Empresa, que lhe permite identificar e obter facilmente as aplicações da empresa relevantes para si e a sua função. Consoante o modo como a empresa configurou o Intune, a aplicação Portal da Empresa pode ter sido instalada como parte do seu processo de inscrição. Para verificar se tem a aplicação, procure **Portal da Empresa** na lista de aplicações. Se não vir o Portal da Empresa na lista de aplicações, siga estes passos para instalá-lo.
 
-1. **Toque &gt;** **Loja**.  
+1. Toque na **loja** **start** &gt; .  
 
 2. Toque em **Pesquisar** e, em seguida, escreva **portal da empresa**.  
 
-3. Na lista de resultados, toque em **Portal da Empresa**.  
+3. Na lista de resultados, toque no Portal da **Empresa.**  
 
-4. Toque em **Instalar** ou em **Gratuito**. A opção apresentada depende da forma como a sua empresa configurou a aplicação.  
+4. Toque em **instalar** ou **grátis.** A opção apresentada depende da forma como a sua empresa configurou a aplicação.  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

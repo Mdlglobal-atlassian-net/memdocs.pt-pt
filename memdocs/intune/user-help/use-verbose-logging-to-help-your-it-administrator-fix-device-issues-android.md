@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 2792ecf9af2a881b083b4bd13d3cd98952b3f62e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324181"
 ---
 # <a name="configure-logging-settings"></a>Configurar as definições de exploração madeireira
@@ -36,7 +36,7 @@ Configure as definições de registo para permitir que a aplicação Portal da E
 ## <a name="configure-company-portal-logging"></a>Configure Registo do Portal da Empresa
 A verbose regista todas as ações que toma na aplicação Portal da Empresa. Está ativado no seu dispositivo por defeito. Para desligar a verbosa no Portal da Empresa:  
 
-1. Iniciar sessão na aplicação do Portal da Empresa.
+1. Iniciar sessão na aplicação Portal da Empresa.
 2. Toque **em Definições**.
 3. Ao lado da **Verbose Logging,** desligue o interruptor para **desligar**.
 
@@ -47,6 +47,6 @@ Na aplicação Microsoft Intune, pode configurar o nível de dados de registo. O
 2. Toque **em Definições**.  
 3. Sob o detalhe do **nível de registo,** selecione **Verbose** para aumentar o nível de detalhes registados ou selecione **Off** para desligar a exploração.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

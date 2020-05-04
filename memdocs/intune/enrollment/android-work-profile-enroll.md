@@ -19,24 +19,24 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 25ccf224b2ed9371ad5795b8f5c91ea725ea8c84
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331665"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-work-profile-devices"></a>Configurar a inscrição de dispositivos com perfil de trabalho do Android Enterprise
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune ajuda-o a implementar aplicações e configurações para dispositivos de perfil de trabalho Android Enterprise para garantir que o trabalho e as informações pessoais são separados. Para obter detalhes específicos sobre o Android Enterprise, veja [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) (Requisitos empresariais do Android).
+Intune ajuda-o a implementar aplicações e configurações para dispositivos de perfil de trabalho Android Enterprise para garantir que o trabalho e as informações pessoais são separados. Para mais detalhes sobre o Android Enterprise, consulte [os requisitos do Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 Para configurar a gestão de perfis de trabalho do Android Enterprise, siga estes passos:
 
 1. [Ligue a sua conta do inquilino do Intune à sua conta do Android Enterprise](connect-intune-android-enterprise.md).
 2. Especifique as definições de inscrição dos perfis de trabalho do Android Enterprise. Os perfis de trabalho do Android Enterprise [só são suportados em determinados dispositivos Android](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Qualquer dispositivo que suporte os perfis de trabalho do Android Enterprise também suporta a gestão de administrador de dispositivos Android. O Intune permite-lhe especificar a forma como os dispositivos que suportam os perfis de trabalho do Android Enterprise devem ser geridos a partir das [Restrições de Inscrição](enrollment-restrictions-set.md).
     - **Bloco**: Todos os dispositivos Android, incluindo dispositivos que suportam perfis de trabalho Android Enterprise, serão matriculados como dispositivos de administrador de dispositivos Android, a menos que a inscrição do administrador de dispositivos Android também esteja bloqueada. 
-    - **Permitir (definido por padrão)** : Todos os dispositivos que suportam perfis de trabalho Android Enterprise estão matriculados como dispositivos de perfil de trabalho Android Enterprise. Qualquer dispositivo Android que não suporte os perfis de trabalho do Android Enterprise está inscrito como um dispositivo de administrador de dispositivos Android, a menos que a inscrição do administrador do dispositivo Android esteja bloqueada. 
+    - **Permitir (definido por padrão)**: Todos os dispositivos que suportam perfis de trabalho Android Enterprise estão matriculados como dispositivos de perfil de trabalho Android Enterprise. Qualquer dispositivo Android que não suporte os perfis de trabalho do Android Enterprise está inscrito como um dispositivo de administrador de dispositivos Android, a menos que a inscrição do administrador do dispositivo Android esteja bloqueada. 
 > [!NOTE]
 > O incumprimento definido para **permitir** é válido para novos inquilinos a partir de julho de 2019. Todos os inquilinos anteriores não sentirão qualquer alteração às suas Restrições de Inscrição, e verão quaisquer políticas que tenham estabelecido nas Restrições de Inscrição. Para inquilinos anteriores que nunca tiveram alterações nas Restrições de Inscrição, o **Block** continuará a ser o padrão para os perfis de trabalho do Android Enterprise.
 
@@ -54,6 +54,6 @@ Para obter mais informações, veja [Dados que o Intune envia para a Google](../
 - [Implementar aplicações do perfil de trabalho do Android Enterprise](../apps/apps-add-android-for-work.md)
 - [Adicionar políticas de configuração de perfis de trabalho do Android Enterprise](../configuration/device-profiles.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Configuração e resolução de problemas dispositivos Android Enterprise no Microsoft Intune](https://support.microsoft.com/help/4476974)

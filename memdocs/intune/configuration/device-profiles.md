@@ -1,6 +1,6 @@
 ---
 title: Funcionalidades e definições do dispositivo no Microsoft Intune – Azure | Microsoft Docs
-description: Descrição geral dos diferentes perfis de dispositivo do Microsoft Intune. Obtenha informações sobre funcionalidades, restrições, e-mail, wifi, VPN, educação, certificados, upgrade Windows 10, BitLocker e Microsoft Defender, Proteção de Informações do Windows, modelos administrativos e configurações de configuração de dispositivos personalizados na Microsoft Centro de administração do Endpoint Manager. Utilize estes perfis para gerir e proteger os dados e os dispositivos na sua empresa.
+description: Descrição geral dos diferentes perfis de dispositivo do Microsoft Intune. Obtenha informações sobre funcionalidades, restrições, e-mail, wifi, VPN, educação, certificados, upgrade Do Windows 10, BitLocker e Microsoft Defender, Proteção de Informação do Windows, modelos administrativos e configurações de configuração de dispositivos personalizados no centro de administração do Microsoft Endpoint Manager. Utilize estes perfis para gerir e proteger os dados e os dispositivos na sua empresa.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359315"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
@@ -60,7 +60,7 @@ Esta funcionalidade suporta:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8,1
+- Windows 8.1
 - Windows 10 e posterior
 
 ## <a name="custom-profile"></a>Perfil personalizado
@@ -77,7 +77,7 @@ Esta funcionalidade suporta:
 
 ## <a name="delivery-optimization"></a>Otimização da entrega
 
-A [otimização da entrega](delivery-optimization-windows.md) oferece uma melhor experiência na entrega de atualizações de software. Estas definições estão a substituir as definições **Atualizações de Software** > **Cadência de atualizações do Windows 10**.
+A [otimização da entrega](delivery-optimization-windows.md) oferece uma melhor experiência na entrega de atualizações de software. Estas definições estão **a** > substituir as definições de anel de**atualização do Windows 10.**
 
 Utilize estas definições para controlar a forma como as atualizações de software são transferidas para os dispositivos na sua organização. Por exemplo, pode permitir que os utilizadores obtenham as suas próprias atualizações ou obtenham as atualizações através dos serviços cloud de otimização de entrega num perfil de dispositivo.
 
@@ -124,7 +124,7 @@ Esta funcionalidade suporta:
 - Windows 10 e posterior
 - Windows 10 Team
 
-## <a name="domain-join"></a>Adesão ao domínio
+## <a name="domain-join"></a>Associação a um domínio
 
 [O domínio junta-se a](domain-join-configure.md) configures no local Informações de domínio de diretório ativo. Esta informação é implementada para dispositivos híbridos Azure AD quando aprovisionados utilizando o Windows Autopilot e O Intune. Este perfil diz aos dispositivos que domínio e U aderir.
 
@@ -140,13 +140,13 @@ Esta funcionalidade suporta:
 
 - Windows 10 e posterior
 
-## <a name="education"></a>Educação
+## <a name="education"></a>Education
 
 As [definições de educação para Windows 10](education-settings-configure.md) configuram as opções da [aplicação Fazer um Teste do Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Quando configurar estas opções, não pode executar qualquer outra aplicação no dispositivo até o teste estar concluído.
 
 [Definições de educação - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) utiliza a aplicação iOS/iPadOS Classroom para orientar a aprendizagem e controlar os dispositivos estudantis na sala de aula. Pode configurar dispositivos iPad para que vários estudantes possam partilhar um único dispositivo.
 
-## <a name="email"></a>E-mail
+## <a name="email"></a>Email
 
 As [definições de e-mail](email-settings-configure.md) criam, atribuem e monitorizam as definições de e-mail do Exchange ActiveSync nos dispositivos. Os perfis de e-mail ajudam na consistência, reduzem as chamadas de suporte e permitem que os utilizadores finais acedam ao e-mail da empresa nos seus dispositivos pessoais sem precisarem de efetuar qualquer configuração. 
 
@@ -158,7 +158,7 @@ Esta funcionalidade suporta:
 - Windows Phone 8.1
 - Windows 10 e posterior
 
-## <a name="endpoint-protection"></a>Proteção de ponto final
+## <a name="endpoint-protection"></a>Endpoint protection
 
 [A proteção endpoint](../protect/endpoint-protection-configure.md) configura as definições bitLocker e Microsoft Defender para dispositivos Windows 10. E, configure a firewall, gateway e outros recursos em dispositivos macOS.
 
@@ -194,7 +194,7 @@ Esta funcionalidade suporta:
 - Windows 10 e posterior
 - Windows Holographic for Business  
 
-## <a name="kiosk"></a>Modo de Local Público
+## <a name="kiosk"></a>Kiosk
 
 O perfil [Definições de quiosque](kiosk-settings.md) configura um dispositivo para que execute uma aplicação ou execute várias aplicações. Também pode personalizar outras funcionalidades no modo de quiosque, incluindo o menu Iniciar e um browser.
 
@@ -271,7 +271,7 @@ Esta funcionalidade suporta:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8,1
+- Windows 8.1
 - Windows 10 e posterior
 
 ## <a name="wi-fi"></a>Wi-Fi
@@ -295,10 +295,10 @@ Esta funcionalidade suporta:
 
 - Administrador de dispositivos Android (Extensões de Mobilidade)
 
-## <a name="manage-and-troubleshoot"></a>Gestão e resolução de problemas
+## <a name="manage-and-troubleshoot"></a>Gerir e resolver problemas
 
 [Faça a gestão dos seus perfis](device-profile-monitor.md) para verificar o estado dos dispositivos e os perfis atribuídos. Ver as definições que causam um conflito e os perfis que incluem essas definições também poderá ajudá-lo a resolver conflitos. [Problemas comuns e resoluções](device-profile-troubleshoot.md) ajuda os administradores a trabalhar com perfis. Descreve o que acontece quando se elimina um perfil, o que faz com que sejam enviadas notificações para os dispositivos e muito mais.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Escolher a plataforma e começar.

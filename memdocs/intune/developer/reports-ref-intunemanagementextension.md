@@ -2,7 +2,7 @@
 title: Entidade IntuneManagementExtension
 titleSuffix: Microsoft Intune
 description: Tópico de referência para a categoria da Entidade IntuneManagementExtension das coleções de entidades na API do Armazém de Dados do Intune.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8152eb12779376e1885d0a2b2898cd602aa825d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331689"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Referência para extensões de gestão intune
@@ -48,7 +48,7 @@ O **intuneManagementExtensionHealthState** lista todos os possíveis estados de 
 | Propriedade  | Descrição | Exemplo |
 |---------|------------|--------|
 | extensãoStateKey |Identificador exclusivo do estado de funcionamento. | 2 |
-| extensãoEstado |Estado de funcionamento de uma IntuneManagementExtension. | Healthy |
+| extensãoEstado |Estado de funcionamento de uma IntuneManagementExtension. | Bom estado de funcionamento |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331041"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementar o plano do Microsoft Intune
@@ -84,7 +84,7 @@ Todos os utilizadores que visar para a implementação do Office 365 e do EMS/In
 
 Para poder configurar, gerir e inscrever dispositivos através do Intune, tem de definir o Intune como a autoridade de gestão de dispositivos.
 
-- Saiba mais sobre [como definir a autoridade de gestão de dispositivos](mdm-authority-set.md).
+- Saiba mais sobre como definir a autoridade de [gestão do dispositivo.](mdm-authority-set.md)
 
 ### <a name="task-6-enable-device-platforms"></a>Tarefa 6: ativar as plataformas de dispositivos
 
@@ -124,9 +124,9 @@ O Intune suporta políticas de conformidade. Adicione políticas de conformidade
 
 ### <a name="task-12-enable-conditional-access-policies"></a>Tarefa 12: Ativar políticas de acesso condicional
 
-Intune suporta acesso condicional para troca online, troca no local, SharePoint Online, Skype para Negócios Online e Dynamics CRM Online. Ative e configure o Acesso Condicional conforme apropriado com base nos casos e requisitos de utilização da sua intune.
+Intune suporta acesso condicional para troca online, troca no local, SharePoint Online, Skype para Negócios Online e Dynamics CRM Online. Ative e configure o Acesso Condicional conforme adequado com base nos seus requisitos e casos de utilização de implementação do Intune.
 
-- Saiba mais sobre o [Acesso Condicional](../protect/conditional-access.md).
+- Saiba mais sobre [acesso condicional.](../protect/conditional-access.md)
 
 ### <a name="task-13-enroll-devices"></a>Tarefa 13: inscrever dispositivos
 
@@ -135,5 +135,5 @@ O Intune suporta as plataformas de dispositivos móveis iOS/iPadOS, Mac OS, Andr
 - Saiba mais sobre [como inscrever dispositivos](../enrollment/device-enrollment.md).
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Veja as orientações para [testar e validar a sua implementação do Intune](planning-guide-test-validation.md).

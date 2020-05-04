@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330809"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Início Rápido: criar um grupo para gerir utilizadores
@@ -41,7 +41,7 @@ Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Inscreva-se no Intune no Microsoft Endpoint Manager
 
-Inscreva-se no [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como [administrador global ou administrador de serviço intune](users-add.md#types-of-administrators). Se criou uma Subscrição de avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
+Inscreva-se no [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) como [administrador global ou administrador de serviço intune](users-add.md#types-of-administrators). Se criou uma Subscrição de Avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
 
 ## <a name="create-a-group"></a>Criar um grupo
 
@@ -56,11 +56,11 @@ Irá criar um grupo que será utilizado mais tarde nesta série de início rápi
 
     ![Captura de ecrã da criação de um grupo no Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. Clique em **Selecionar** > **Criar**.
+7. Clique em **Criar** > **Criar**.
 
 Assim que tiver criado o grupo com êxito, este será apresentado na lista **Todos os grupos**. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste início rápido, utilizou o Intune para criar um grupo com base num utilizador existente. Para obter mais informações sobre como adicionar grupos ao Intune, veja [Adicionar grupos para organizar utilizadores e dispositivos](groups-add.md).
 

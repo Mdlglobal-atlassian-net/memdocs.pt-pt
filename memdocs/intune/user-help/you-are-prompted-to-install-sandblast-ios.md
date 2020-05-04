@@ -18,15 +18,15 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1f34b49efdc81660550b99a38269fb0041a4c998
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324089"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-ios-device"></a>Tem de instalar o SandBlast Mobile Protect no seu dispositivo iOS
 
-Antes de poder aceder ao seu trabalho, o suporte da sua empresa precisa que instale a aplicação SandBlast Mobile Protect, que ajuda a proteger o seu dispositivo ao detetar potenciais ameaças de segurança. Poderá ver pedidos diferentes no seu dispositivo, consoante a forma como a sua empresa configurar o SandBlast Mobile Protect.
+Antes de poder aceder ao seu trabalho, o suporte da empresa precisa que instale a aplicação SandBlast Mobile Protect, que ajuda a proteger o seu dispositivo ao detetar potenciais ameaças de segurança. Poderá ver pedidos diferentes no seu dispositivo, consoante a forma como a sua empresa configurar o SandBlast Mobile Protect.
 
 **O que tem de fazer:**
 
@@ -48,4 +48,4 @@ Se o SandBlast Mobile Protect encontrar uma ameaça à segurança no dispositivo
 
 Por vezes, as instalações podem falhar devido a problemas técnicos fora do seu controlo. Se tal acontecer, experimente instalar o SandBlast Mobile Protect [manualmente a partir da App Store](https://itunes.apple.com/app/sandblast-mobile-protect/id1006390797).
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80536935"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Configurar a Rede Privada Virtual (VPN) por aplicação para dispositivos iOS/iPadOS em Intune
@@ -71,7 +71,7 @@ Crie ou escolha um grupo existente no Azure Ative Directory (Azure AD) para os u
 Importe o certificado de raiz do servidor VPN emitido pela AC para um perfil criado no Intune. O perfil de certificado fidedigno instrui o dispositivo iOS/iPadOS a confiar automaticamente no CA que o servidor VPN apresenta.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **iOS/iPadOS**.
@@ -81,14 +81,14 @@ Importe o certificado de raiz do servidor VPN emitido pela AC para um perfil cri
 5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **iOS/iPadOS perfil VPN fidedigno para toda**a empresa .
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 7. Nas definições de **Configuração,** selecione o ícone da pasta e navegue para o seu certificado VPN (ficheiro.cer) que exportou da sua consola de administração VPN.
 8. Selecione **Next**, e continue a criar o seu perfil. Para mais informações, consulte [Criar um perfil VPN](vpn-settings-configure.md#create-the-profile).
 
     > [!div class="mx-imgBorder"]
-    > ![Criar um perfil de certificado fidedigno para dispositivos iOS/iPadOS na Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+    > ![Criar um perfil de certificado fidedigno para dispositivos iOS/iPadOS no Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Criar um perfil de certificado SCEP ou PKCS
 
@@ -99,17 +99,17 @@ Para configurar e atribuir o certificado de autenticação do cliente, consulte 
 - [Configure infraestruturas para apoiar o SCEP com Intune](../protect/certificates-scep-configure.md)
 - [Configurar e gerir certificados PKCS com o Intune](../protect/certficates-pfx-configure.md)
 
-Certifique-se de configurar o certificado para autenticação do cliente. Pode definir a autenticação do cliente diretamente nos perfis de certificadoS SCEP (Lista**de utilização alargada** > **autenticação do cliente).** Para pKCS, detete tese de autenticação do cliente no modelo de certificado na autoridade do certificado (CA).
+Certifique-se de configurar o certificado para autenticação do cliente. Pode definir a autenticação do cliente diretamente nos perfis de certificadoS SCEP (lista**de utilização de chaves alargadas** > **autenticação do Cliente).** Para pKCS, detete tese de autenticação do cliente no modelo de certificado na autoridade do certificado (CA).
 
 > [!div class="mx-imgBorder"]
-> ![Criar um perfil de certificado SCEP no Microsoft Intune, incluindo o formato de nome de assunto, utilização de chaves, utilização alargada de chaves e mais](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
+> ![Criar um perfil de certificado SCEP no Microsoft Intune, incluindo formato de nome de assunto, utilização de chaves, utilização alargada de chaves e muito mais](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Criar um perfil de VPN por aplicação
 
 O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do cliente, as informações de ligação VPN e a bandeira VPN por app que permite a VPN por app utilizada pela aplicação iOS/iPadOS.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > perfis de **configuração** > **Criar o perfil**.
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **iOS/iPadOS**.
@@ -119,7 +119,7 @@ O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do clie
 5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para o perfil personalizado. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **o perfil VPN iOS/iPadOS por app para toda**a empresa .
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Nas definições de **Configuração,** configure as seguintes definições:
 
@@ -135,10 +135,10 @@ O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do clie
 
     Para obter informações sobre as outras definições, consulte [as definições de VPN iOS/iPadOS](vpn-settings-ios.md).
 
-    - **VPN automática** > **Tipo de VPN automática** > **VPN por app VPN**
+    - **Automatic VPN** > **VPN automática tipo de VPN automática VPN** > **Por app VPN**
 
       > [!div class="mx-imgBorder"]
-      > ![Intune, defina o VPN automático para VPN por aplicação em dispositivos iOS/iPadOS](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+      > ![Intune, defina vpn automática para VPN por app em dispositivos iOS/iPadOS](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
 7. Selecione **Next**, e continue a criar o seu perfil. Para mais informações, consulte [Criar um perfil VPN](vpn-settings-configure.md#create-the-profile).
 
@@ -146,10 +146,10 @@ O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do clie
 
 Depois de adicionar o perfil VPN, associe a aplicação e o grupo do Azure AD ao perfil.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > Todas **as aplicações.**
-2. Selecione uma aplicação da lista > **Propriedades** > **Atribuições** > **Adicionar grupo**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > **Todas as aplicações**.
+2. Selecione uma aplicação da lista > **Properties** > **Assignments** > **Add grupo**.
 3. No **tipo de Atribuição,** selecione **Necessário** ou **Disponível para dispositivos matriculados**.
-4. Selecione **Grupos Incluídos** > **Selecione grupos para incluir** > Selecione o grupo [que criou](#create-a-group-for-your-vpn-users) (neste artigo) > **Selecione**.
+4. Selecione **Grupos Incluídos** > **Selecione grupos para incluir** > Selecione o grupo que [criou](#create-a-group-for-your-vpn-users) (neste artigo) > **Selecione**.
 5. Em **VPNs,** selecione o perfil VPN por app [que criou](#create-a-per-app-vpn-profile) (neste artigo).
 
     > [!div class="mx-imgBorder"]
@@ -187,7 +187,7 @@ Verifique a experiência sem contacto ao estabelecer ligação sem ter de seleci
 - O utilizador não tem de escrever credenciais.
 - O dispositivo do utilizador está ligado à VPN quando o utilizador abre uma das aplicações associadas.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para rever as definições do iOS/iPadOS, consulte [as definições vpN para dispositivos iOS/iPadOS no Microsoft Intune](vpn-settings-ios.md).
 - Para saber mais sobre a definição de VPN e Intune, consulte [configurar as definições de VPN no Microsoft Intune](vpn-settings-configure.md).

@@ -1,5 +1,5 @@
 ---
-title: Definições de dispositivos partilhados do Windows Holographic Business - Microsoft Intune - Azure  Microsoft Docs
+title: Definições de dispositivos partilhados do Windows Holographic Business - Microsoft Intune - Azure [ Microsoft Docs
 description: Adicione e utilize o Windows Holographic para o Negócio sintetizar dispositivos partilhados ou utilizados por vários utilizadores no Microsoft Intune. Consulte uma lista das definições de Gestão de Conta e o que fazem nos dispositivos, incluindo o Microsoft HoloLens.
 keywords: ''
 author: MandiOhlinger
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326637"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Windows Holographic para configurações de Negócios para gerir dispositivos partilhados usando Intune
@@ -45,15 +45,15 @@ Para obter mais informações sobre esta funcionalidade em Intune, consulte o ac
 
 - **Gestão de conta**: Definir para **permitir** a eliminação automática de contas locais criadas pelos hóspedes e contas em AD e Azure AD. Quando um utilizador assina fora do dispositivo, ou quando a manutenção do sistema é executado, estas contas são eliminadas. Quando ativado, também definido:
   - **Eliminação da conta**: Escolha quando as contas são eliminadas: **No limiar**do espaço de armazenamento , no limiar do espaço de armazenamento e no **limiar inativo,** ou imediatamente após o **log-out**. Também insira:
-    - **Comece a eliminar o limiar(%)** : Introduza uma percentagem (0-100) de espaço em disco. Quando o espaço total de disco/armazenamento cai abaixo do valor que introduz, as contas em cache são eliminadas. Elimina continuamente as contas para recuperar o espaço do disco. As contas que estão inativas há mais tempo são eliminadas primeiro.
-    - **Parar de eliminar limiar(%)** : Insira uma percentagem (0-100) do espaço do disco. Quando o espaço total de disco/armazenamento corresponde ao valor que introduz, a apagar para.
+    - **Comece a eliminar o limiar(%)**: Introduza uma percentagem (0-100) de espaço em disco. Quando o espaço total de disco/armazenamento cai abaixo do valor que introduz, as contas em cache são eliminadas. Elimina continuamente as contas para recuperar o espaço do disco. As contas que estão inativas há mais tempo são eliminadas primeiro.
+    - **Parar de eliminar limiar(%)**: Insira uma percentagem (0-100) do espaço do disco. Quando o espaço total de disco/armazenamento corresponde ao valor que introduz, a apagar para.
 
   Configurado para **Desativar** para manter as contas ad locais, AD e Azure criadas pelos hóspedes.
 
   > [!NOTE]
   > Os dispositivos Microsoft HoloLens apenas suportam as definições de gestão da **Conta.**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 - Consulte as definições para [o Windows 10 e mais recente](shared-user-device-settings-windows.md).

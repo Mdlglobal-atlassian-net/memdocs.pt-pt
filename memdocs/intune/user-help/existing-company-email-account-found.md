@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5a96618d31dc2a6961882856d3404acb4a576939
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324661"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Uma conta de e-mail da empresa existente foi encontrada
@@ -35,7 +35,7 @@ Pode ter tido acesso a dispositivomóvel à sua conta de e-mail de trabalho ou e
 
 Estas etapas garantirão que o seu dispositivo satisfaz os requisitos de segurança da sua empresa e que os seus e-mails permanecem seguros.
 
-1. No seu dispositivo, vá a **Definições** e encontre as suas contas conectadas. Num dispositivo iOS 11+, por exemplo, selecione **Password & Accounts**.
+1. No seu dispositivo, vá a **Definições** e encontre as suas contas conectadas. Num dispositivo iOS 11+, por exemplo, selecione **Password & Contas**.
  
 2. Selecione e remova a sua conta de e-mail de trabalho.
 
@@ -47,4 +47,4 @@ Estas etapas garantirão que o seu dispositivo satisfaz os requisitos de seguran
 
 6. Inscreva-se na sua conta de e-mail de trabalho ou escola.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -2,7 +2,7 @@
 title: Estabelecer uma ligação ao Armazém de Dados com o Power BI
 titleSuffix: Microsoft Intune
 description: Pode transferir um ficheiro para utilizar com o Microsoft Power BI que lhe permite carregar relatórios interativos gerados automaticamente para o seu inquilino do Microsoft Intune.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331725"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Estabelecer uma ligação ao Armazém de Dados com o Power BI
@@ -66,7 +66,7 @@ A aplicação Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intun
 
 Em alternativa, pode instalar a aplicação a partir do portal do Intune:
 
-1. Inicie sessão no portal do Azure e selecione **Monitorização + Gestão** > **Intune**. Também pode procurar recursos para o Intune.
+1. Inscreva-se no portal Azure e escolha **Monitorização + Intune** > **de**Gestão . Também pode procurar recursos para o Intune.
 2. Abra o painel **Configurar Data Warehouse do Intune**.
 3. Selecione **Obter Aplicação do Power BI** para aceder e partilhar relatórios do Power BI previamente criados para o seu inquilino no browser.
 4. Siga os passos 2-10 acima.
@@ -79,19 +79,19 @@ Com um cliente autenticado no Azure AD, o URL de OData liga-se ao ponto final RE
 2. Clique em **Configurar O Armazém** de Dados Intune sob a secção **Outras tarefas** no lado direito da lâmina de visão geral. A lâmina **intune Data Warehouse** será exibida.
 3. Recupere o URL de alimentação personalizado da lâmina de reporte, por exemplo:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. Abra o **Power BI Desktop**.
-5. Escolha **o ficheiro** > obter **dados**. Selecione **Feed OData**.
+4. Open **Power BI Desktop**.
+5. Escolha **ficheiro** > **Obter Dados**. Selecione **Feed OData**.
 6. Selecione **Básico**.
 7. Escreva ou cole o **URL de OData** na caixa URL.
 8. Selecione **OK**.
 9. Se não tiver sido autenticado no Azure AD para o seu inquilino do cliente de ambiente de trabalho do Power BI, escreva as suas credenciais. Para obter acesso aos seus dados, tem de conceder autorização com o Azure Active Directory (Azure AD) com OAuth 2.0.  
     1. Selecione **Conta organizacional**.  
     2. Escreva o nome de utilizador e a palavra-passe.  
-    3. Selecione **Iniciar Sessão**.  
+    3. Selecione **Iniciar sessão.**  
     4. Selecione **Ligar**.  
 10. Selecione **Carregar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Pode encontrar respostas a perguntas sobre o seu ambiente, como o número de dispositivos inscritos por dia durante a última semana. Pode obter informações sobre o seu inquilino do Intune e população de clientes através dos relatórios do Power BI do Data Warehouse do Intune obtido no painel do Azure. No entanto, o Intune proporciona muitas outras formas de expandir ou reutilizar os dados. O Power BI e a API do Data Warehouse do Intune fornecem funcionalidades adicionais, por exemplo:
 

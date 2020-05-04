@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326672"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utilizar o controlo de acesso baseado em funções (RBAC) e etiquetas de âmbito para TI distribuídos
@@ -43,14 +43,14 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 ## <a name="to-create-a-scope-tag"></a>Para criar uma etiqueta de âmbito
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Funções** > **Scope (Tags)**  > **Criar**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração do Arrendatário** > **Scope (Tags)** > **Criar**.
 2. Na página **Basics,** forneça um **Nome** e **uma Descrição**opcional. Escolha **Seguinte**.
 3. Na página **de Atribuição,** escolha os grupos que contêm os dispositivos que pretende atribuir esta etiqueta de âmbito. Escolha **Seguinte**.
 4. Na **página Review + criar,** escolha **Criar**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Para atribuir uma etiqueta de âmbito a uma função
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha a **administração do Inquilino** > **Papéis** > **Todas as funções** > escolha um papel > **Atribuições** > **Atribuição**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração** > do Inquilino Todas as**funções** > escolher um papel >**Atribuição**de **Atribuições** > .
 2. Na página **Basics,** forneça um nome de **atribuição** e **descrição.** Escolha **Seguinte**.
 3. Na página dos **Grupos De Administração,** escolha **grupos Select para incluir**, e selecione os grupos que deseja como parte desta atribuição. Os utilizadores deste grupo terão permissões para gerir utilizadores/dispositivos no Âmbito (Grupos). Escolha **Seguinte**.
 
@@ -62,7 +62,7 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
     - **Todos os dispositivos**: Todos os dispositivos podem ser geridos pelos utilizadores nos Grupos De Administração.
     - **Todos os utilizadores e todos os dispositivos**: Todos os utilizadores e dispositivos podem ser geridos pelos utilizadores nos Grupos Admin.
 
-5. Escolha **Seguinte**
+5. Escolha **A Seguir**
 6. Na página **de tags Scope,** selecione as etiquetas que pretende adicionar a esta função. Os utilizadores dos Grupos Admin terão acesso a objetos Intune que também tenham a mesma etiqueta de âmbito. Pode atribuir um máximo de 100 etiquetas de âmbito a um papel.
 7. Escolha **O Próximo** para ir à página Review + **criar** e, em seguida, escolher **Criar**.
 
@@ -70,10 +70,10 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 Para objetos que suportam etiquetas de mira, as etiquetas de âmbito geralmente aparecem em **Propriedades**. Por exemplo, para atribuir uma etiqueta de âmbito a um perfil de configuração, siga estes passos:
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > perfis de **configuração** > escolha um perfil.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os perfis de**configuração** de **dispositivos** > > escolha um perfil.
 
-2. Escolha **Propriedades** > **Scope (Tags)**  > **Editar** > **Selecione etiquetas** de âmbito > escolha as etiquetas que pretende adicionar ao perfil. Pode atribuir um máximo de 100 etiquetas de mira a um objeto.
-4. Escolha **Selecione** > **Rever + guardar**.
+2. Escolha **Propriedades** > **Scope (Tags)** > **Editar Selecione** > **as etiquetas** de âmbito > escolha as etiquetas que pretende adicionar ao perfil. Pode atribuir um máximo de 100 etiquetas de mira a um objeto.
+4. Escolha **Selecionar** > **Rever + guardar**.
 
 ## <a name="scope-tag-details"></a>Detalhes da etiqueta de âmbito
 Ao trabalhar com etiquetas de âmbito, lembre-se destes detalhes: 
@@ -96,7 +96,7 @@ Ao trabalhar com etiquetas de âmbito, lembre-se destes detalhes:
 - Só pode visar grupos listados no Scope (Grupos) da sua atribuição de funções.
 - Se tiver uma etiqueta de âmbito atribuída ao seu papel, não pode eliminar todas as etiquetas de âmbito num objeto Intune. Pelo menos uma etiqueta de mira é necessária.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba como as etiquetas de alcance se comportam quando existem [várias atribuições de papéis.](role-based-access-control.md#multiple-role-assignments)
 Efetue a gestão das suas [funções](role-based-access-control.md) e [perfis](../configuration/device-profile-assign.md).

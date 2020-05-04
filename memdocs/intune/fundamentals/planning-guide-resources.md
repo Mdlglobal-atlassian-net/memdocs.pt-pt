@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331009"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Recursos adicionais para planear a sua implementação do Intune
@@ -36,7 +36,7 @@ Segue-se uma lista dos modelos de tabela para cada secção.
 |-----|----- |------|
 | Metas da Implementação |Ambiente atual|Teste de validação funcional|
 | Objetivos da Implementação |Dispositivos|Testes de validação de cenários de administrador de TI|
-| Obstáculos à Implementação |Termos e condições|Testes de validação de cenários de utilizador de TI|
+| Obstáculos à Implementação |Termos e Condições|Testes de validação de cenários de utilizador de TI|
 | Cenários de casos de utilização |Política de configuração| |
 | Requisitos de cenários de casos de utilização |Perfil de certificado| |
 | Plano de implementação |Perfil Wi-Fi| |
@@ -46,7 +46,7 @@ Segue-se uma lista dos modelos de tabela para cada secção.
 | | Política de conformidade | |
 | | Política de Acesso Condicional|-|
 
-## <a name="further-reading"></a>Ler mais
+## <a name="further-reading"></a>Mais recursos
 
 Consulte estes recursos para obter informações adicionais que podem ser úteis durante o processo de planeamento da implementação, estrutura e implementação do Intune.
 
