@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332557"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023202"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Cenário guiado - Desktop Moderno gerido pela Nuvem
 
-O ambiente de trabalho moderno é a plataforma de produtividade de última geração para o Trabalhador da Informação. O Office 365 ProPlus e o Windows 10 são os componentes centrais do ambiente de trabalho moderno, juntamente com as mais recentes linhas de segurança para o Windows 10 e microsoft Defender Advanced Threat Protection.
+O ambiente de trabalho moderno é a plataforma de produtividade de última geração para o Trabalhador da Informação. As Aplicações Microsoft 365 e o Windows 10 são os componentes centrais do ambiente de trabalho moderno, juntamente com as mais recentes linhas de segurança para o Windows 10 e microsoft Defender Advanced Threat Protection.
 
 Gerir o ambiente de trabalho moderno a partir da nuvem traz o benefício adicional de ações remotas em toda a Internet. A gestão da nuvem utiliza as políticas incorporadas de Gestão de Dispositivos Móveis windows e remove dependências da política local do grupo Ative Directory.
 
@@ -46,7 +46,7 @@ Se quiser avaliar um ambiente de trabalho moderno gerido pela nuvem na sua próp
 
 ## <a name="step-1---introduction"></a>Passo 1 - Introdução
 
-Utilizando este cenário guiado, irá configurar um utilizador de teste, inscrever um dispositivo em Intune e implementar o dispositivo com configurações recomendadas por Intune, bem como o Windows 10 e o Office ProPlus. O seu dispositivo também será configurado para a Proteção de Ameaças Avançadas do Microsoft Defender, se optar por [ativar esta proteção em Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). O utilizador que configurar e o dispositivo que se inscreveu serão adicionados a um novo grupo de segurança e serão configurados com as definições recomendadas para segurança e produtividade.
+Utilizando este cenário guiado, irá configurar um utilizador de teste, inscrever um dispositivo em Intune e implementar o dispositivo com configurações recomendadas por Intune, bem como aplicações do Windows 10 e Microsoft 365. O seu dispositivo também será configurado para a Proteção de Ameaças Avançadas do Microsoft Defender, se optar por [ativar esta proteção em Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). O utilizador que configurar e o dispositivo que se inscreveu serão adicionados a um novo grupo de segurança e serão configurados com as definições recomendadas para segurança e produtividade.
 
 ### <a name="what-you-will-need-to-continue"></a>O que precisa para continuar
 
@@ -121,10 +121,10 @@ O cenário guiado também atribuirá o utilizador ao dispositivo Autopilot selec
 
 Uma vez que o utilizador se junte ao Diretório Ativo Azure, serão aplicadas as seguintes configurações no dispositivo:
 
-1. O Office 365 ProPlus será automaticamente instalado no PC gerido pela Cloud. Inclui as aplicações que conhece, incluindo Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business e Word. Pode utilizar estas aplicações para se conectar com os serviços do Office 365, tais como SharePoint Online, Exchange Online e Skype para Business Online. O Office 365 ProPlus é atualizado regularmente com novas funcionalidades, ao contrário das versões não subscritas do Office. Para uma lista de novas funcionalidades, veja o que há de novo no Office 365.
+1. As Aplicações Microsoft 365 serão automaticamente instaladas no PC gerido pela Cloud. Inclui as aplicações que conhece, incluindo Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business e Word. Pode utilizar estas aplicações para se conectar com os serviços do Office 365, tais como SharePoint Online, Exchange Online e Skype para Business Online. As Aplicações Microsoft 365 são atualizadas regularmente com novas funcionalidades, ao contrário das versões não subscritas do Office. Para uma lista de novas funcionalidades, veja o que há de novo no Office 365.
 2. As linhas de base de segurança do Windows serão instaladas no PC gerido pela Cloud. Se tiver configurado a Microsoft Defender Advanced Threat Protection, o cenário guiado também configurará as definições de base para o Defender. A Defender Advanced Threat Protection fornece uma nova camada de proteção pós-violação para a pilha de segurança do Windows 10. Com uma combinação de tecnologia cliente incorporada no Windows 10 e um robusto serviço na nuvem, ajudará a detetar ameaças que passaram por outras defesas. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Se estiver a utilizar a Deteção avançada de ameaças do Microsoft Defender, crie uma política de [conformidade intune](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) para exigir que a análise de ameaças do Defender cumpra o cumprimento.
 - Crie uma [política de acesso condicional baseada no Dispositivo](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) para bloquear o acesso se o dispositivo não cumprir a conformidade com o Intune.

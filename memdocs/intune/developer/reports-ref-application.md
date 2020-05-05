@@ -1,8 +1,8 @@
 ---
-title: Referência para as entidades de aplicações
+title: Referência para entidades de aplicação
 titleSuffix: Microsoft Intune
 description: Tópico de referência para a categoria Application das coleções de entidades na API do Armazém de Dados do Intune.
-keywords: Armazém de Dados do Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023321"
 ---
 # <a name="reference-for-application-entities"></a>Referência para as entidades de aplicações
 
@@ -43,7 +43,7 @@ A entidade **appRevision** apresenta uma lista de todas as versões das aplicaç
 |---------|------------|--------|
 | appChave |Identificador exclusivo da Aplicação. |123 |
 | applicationId |Identificador exclusivo da Aplicação – semelhante à AppKey, mas esta é uma chave natural. |b66bc706-ffff-7437-0340-032819502773 |
-| revisão |A versão como mencionada pelo administrador durante o carregamento do binário. |2 |
+| revision |A versão como mencionada pelo administrador durante o carregamento do binário. |2 |
 | título |Nome da aplicação. |Excel |
 | publicador |Publicador da aplicação. |Microsoft |
 | uploadEstado |Estado de carregamento da aplicação. |1 |
@@ -51,10 +51,10 @@ A entidade **appRevision** apresenta uma lista de todas as versões das aplicaç
 | vppProgramTypeKey |Referência ao VppProgramType descrito abaixo. | |
 | criaçãoTempo de tempo |A hora em que esta revisão foi criada. |11/23/2016 12:00:00 AM |
 | tempo modificado |A última vez em que algo relacionado com esta revisão foi alterado. |11/23/2016 12:00:00 AM |
-| tamanho |Tamanho do binário. | |
+| size |Tamanho do binário. | |
 | startDateInclusiveUTC |Data e hora em UTC em que a revisão da Aplicação foi criada no armazém de dados. |11/23/2016 12:00:00 AM |
 | finalDateExclusiveUTC |Data e hora em UTC em que a revisão desta aplicação se tornou obsoleta. |11/23/2016 12:00:00 AM |
-| isCurrent |Indica se a versão desta Aplicação é atual ou não no armazém de dados. |True/False |
+| isCurrent |Indica se a versão desta Aplicação é atual ou não no armazém de dados. |Verdadeiro/Falso |
 | rowLastModificadoDateTimeUTC |Data e hora em UTC em que esta versão da aplicação foi modificada pela última vez no armazém de dados. |11/23/2016 12:00:00 AM |
 
 ## <a name="apptypes"></a>appTypes
@@ -77,7 +77,7 @@ A entidade **appType** apresenta uma lista da origem da instalação de uma apli
 | 3 |Aplicação da loja iOS | Uma aplicação da loja iOS. |
 | 4 |Aplicação LOB iOS | Uma aplicação de linha de negócios iOS. |
 | 5 |Aplicação da loja iOS gerida (MAM?) | Uma aplicação da loja iOS com gestão ativada. |
-| 6 |O365 Pro Plus Suite | O Office 365 Pro Plus Suite para Windows 10. |
+| 6 |O365 Pro Plus Suite | As Aplicações Microsoft 365 para windows 10. |
 | 7 |Aplicação Web | Uma aplicação Web. |
 | 8 |Aplicação da loja Windows Phone 8.1 | Uma aplicação da loja Windows Phone 8.1. |
 | 9 |Aplicação da loja Windows | Uma aplicação da loja Windows. |
@@ -115,7 +115,7 @@ Aplicação **Entidade Inventário** lista as aplicações encontradas no dispos
 | dispositivoChave | Esta é uma referência à tabela de Dispositivos que contém o ID de dispositivo do Intune. |
 | dateKey | Referência à tabela de data que indica o dia do inventário. |
 | applicationName | O nome da aplicação. |
-| applicationVersion | Versão da aplicação. |
+| aplicaçãoVersãoVersão | Versão da aplicação. |
 | bundleSize | O tamanho da aplicação em bytes. |
 
 ## <a name="mobileappinstallstates"></a>mobileAppInstallStates

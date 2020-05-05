@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022726"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Impedir o acesso não autorizado a dados da empresa com o Microsoft Intune
 
@@ -31,12 +31,12 @@ Pode classificar, identificar e proteger os documentos e e-mails do Office 365 p
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-O seguinte plano de ação pode ser utilizado se cumprir estes requisitos:
+O plano de ação seguinte pode ser utilizado quando cumprir os seguintes requisitos:
 * A sua empresa está pronta para fazer a transição segura para a cloud.
 * A sua empresa utiliza o Office 365 Exchange Online, SharePoint Online, OneDrive para Empresas ou Yammer.
 * A sua empresa tem licenças do Microsoft 365, Enterprise Mobility + Security (EMS) ou Azure Information Protection.
 * A sua empresa trabalha com dispositivos com o Windows 7 Service Pack 1 ou posterior.
-* A sua empresa utiliza o Office 365 ProPlus com aplicações de 2016 ou 2013, Office Professional Plus 2016, Office Professional Plus 2013 com o Service Pack 1 ou o Office Professional Plus 2010.
+* A sua empresa utiliza aplicações Microsoft 365 com aplicações de 2016 ou aplicações de 2013, Office Professional Plus 2016, Office Professional Plus 2013 com Service Pack 1, ou Office Professional Plus 2010.
 
 ## <a name="action-plan"></a>Plano de ação
 
@@ -46,7 +46,7 @@ Conclua o [tutorial de início rápido do Azure Information Protection](https://
 
 Pode partilhar detalhes [sobre como e quando proteger documentos e e-mails que contêm informações confidenciais](https://docs.microsoft.com/information-protection/deploy-use/help-users).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Como parte dos passos seguintes, pode saber mais sobre outras formas de aumentar a proteção dos dados da sua empresa, incluindo: 
 

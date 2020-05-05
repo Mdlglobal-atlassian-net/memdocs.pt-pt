@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407757"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771421"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Como personalizar as aplicações intune Company Portal, site do Portal da Empresa e app Intune
 
@@ -31,9 +31,9 @@ As aplicações do Portal da Empresa, o website do Portal da Empresa e a aplica�
 
 ## <a name="customizing-the-user-experience"></a>Personalizando a experiência do utilizador
 
-Ao personalizar a experiência do utilizador final, irá ajudar a fornecer uma experiência familiar e útil para os seus utilizadores finais. Para isso, navegue para o centro de [administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Tenant Administration** > **Customization**, e, em seguida, configure as definições necessárias. Estas configurações aplicar-se-ão às aplicações do Portal da Empresa, ao website do Portal da Empresa e à aplicação Intune no Android.
+Ao personalizar a experiência do utilizador final, irá ajudar a fornecer uma experiência familiar e útil para os seus utilizadores finais. Para isso, navegue para o centro de [administração do Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), e selecione A**Personalização**da **Administração** > de Inquilinos, onde pode editar a política predefinida ou criar até 10 políticas direcionadas para o grupo. Estas configurações aplicar-se-ão às aplicações do Portal da Empresa, ao website do Portal da Empresa e à aplicação Intune no Android.
 
-## <a name="branding"></a>Imagem Corporativa
+## <a name="branding"></a>Imagem corporativa
 
 A tabela seguinte fornece os detalhes de personalização da marca para a experiência do utilizador final:
 
@@ -73,15 +73,15 @@ O seguinte mostra um exemplo da imagem da marca na aplicação Intune para Andro
 
 ## <a name="support-information"></a>Informações de suporte
 
-Insira as informações de apoio da sua organização, para que os colaboradores possam chegar a perguntas. Estas informações de suporte serão exibidas nas páginas de **Suporte,** **Ajuda e Suporte**e **Helpdesk** através da experiência do utilizador final.
+Insira as informações de apoio da sua organização, para que os colaboradores possam chegar a perguntas. Estas informações de suporte serão exibidas nas páginas de **Suporte**& **Ajuda**e Suporte de **Ajuda** em toda a experiência do utilizador final.
 
 | Nome do campo | Comprimento máximo | Mais informações |
 |------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nome de contato | 40 | Este nome é a quem os utilizadores irão contactar quando contactarem o suporte. |
+| Nome do contacto | 40 | Este nome é a quem os utilizadores irão contactar quando contactarem o suporte. |
 | Número de telefone | 20 | Este número permite que os utilizadores requisiem o suporte. |
 | Endereço de e-mail | 40 | Este endereço de e-mail é onde os utilizadores podem enviar e-mails para suporte. Tem de inserir um endereço de e-mail válido no formato `alias@domainname.com`. |
 | Nome do site | 40 | Este é o nome amigável que é exibido em alguns locais para o URL para o site de suporte. Se especificar um URL do site de suporte e nenhum nome amigável, então o URL em si é apresentado nas experiências do utilizador final.  |
-| URL do site | 150 | O site de suporte que os utilizadores devem utilizar. O URL deve estar no formato `https://www.contoso.com`.  |
+| URL do Site | 150 | O site de suporte que os utilizadores devem utilizar. O URL deve estar `https://www.contoso.com`no formato .  |
 | Informações adicionais | 120 | Inclua quaisquer mensagens adicionais relacionadas com o suporte para os utilizadores aqui. |
 
 ## <a name="configuration"></a>Configuração
@@ -93,6 +93,7 @@ A tabela seguinte fornece detalhes adicionais de configuração:
 | URL de declaração de privacidade | 79 | Detete a declaração de privacidade da sua organização para aparecer quando os utilizadores clicarem em links de privacidade. Tem de introduzir um URL válido no formato `https://www.contoso.com`. |
 | Mensagem de privacidade no Portal da Empresa para iOS/iPadOS | 520 | Mantenha o Padrão ou detetete uma mensagem Personalizada para listar os itens que a sua organização pode ou não ver em dispositivos geridos para iOS/iPadOS. Pode usar o markdown para adicionar balas, arrojados, itálicos e ligações. |
 | Inscrição de dispositivos | N/D | Especifique se e como os utilizadores devem ser solicitados a inscreverem-se na gestão de dispositivos móveis. Detalhes abaixo. |
+| Notificação de propriedade do dispositivo | N/D | Envie uma notificação push aos utilizadores do Portal do Portal do Android e iOS quando o seu tipo de propriedade do dispositivo tiver sido alterado de pessoal para corporativo. Por predefinição, esta notificação push está programada para ser cancelada. Quando a propriedade do dispositivo é definida para a propriedade corporativa, intune tem um maior acesso ao dispositivo, que inclui o inventário completo da aplicação, rotação de chave FileVault, recuperação de númerode telefone e algumas ações remotas selecionadas. Para mais informações, consulte alterar a [propriedade do dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Opções de definição de inscrição do dispositivo
 
@@ -101,7 +102,7 @@ A tabela seguinte fornece detalhes adicionais de configuração:
 > - Portal da empresa sobre iOS/iPadOS: versão 4.4 ou posterior
 > - Portal da empresa no Android: versão 5.0.4715.0 ou posterior 
 
-|    Opções de inscrição de dispositivos    |    Description    |    Solicitações da lista de verificação    |    Notificação    |    Estado dos detalhes do dispositivo    |    Estado dos detalhes da aplicação (de uma app que requer inscrição)    |
+|    Opções de inscrição de dispositivos    |    Descrição    |    Solicitações da lista de verificação    |    Notificação    |    Estado dos detalhes do dispositivo    |    Estado dos detalhes da aplicação (de uma app que requer inscrição)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponível, com solicitações    |    A experiência padrão com solicitações para se inscrever em todos os locais possíveis.    |    Sim    |    Sim    |    Sim    |    Sim    |
 |    Disponível, sem solicitações    |    O utilizador pode inscrever-se através do estado dos detalhes do dispositivo para o seu dispositivo atual ou de aplicações que necessitem de inscrição.    |    Não    |    Não    |    Sim    |    Sim    |
@@ -134,21 +135,21 @@ Os utilizadores finais podem ativar ações de navegação, de aplicação e de 
 
 Os atalhos de teclado seguintes estão disponíveis na aplicação Portal da Empresa do Windows.
 
-| Área | Description | Atalho de teclado |
+| Área | Descrição | Atalho de teclado |
 |:------------------:|:--------------:|:-----------------:|
 | Menu de navegação | Navegação | Alt+M |
 |  | Casa | Alt+H |
 |  | Todas as aplicações | Alt+A |
 |  | Aplicações instaladas | Alt+I |
-|  | Enviar feedback | Alt+F |
+|  | Enviar comentários | Alt+F |
 |  | O meu perfil | Alt+U |
 |  | Definições | Alt+T |
-| Base – Mosaico Dispositivo | Mudar o nome | F2 |
-|  | Remove | Ctrl+D ou Delete |
-|  | Verificar o acesso | Ctrl+M ou F9 |
-| Detalhes do dispositivo | Mudar o nome | F2 |
-|  | Remove | Ctrl+D ou Delete |
-|  | Verificar o acesso | Ctrl+M ou F9 |
+| Base – Mosaico Dispositivo | Mudar o Nome | F2 |
+|  | Remover | Ctrl+D ou Delete |
+|  | Verificar acesso | Ctrl+M ou F9 |
+| Detalhes do dispositivo | Mudar o Nome | F2 |
+|  | Remover | Ctrl+D ou Delete |
+|  | Verificar acesso | Ctrl+M ou F9 |
 | Detalhes da aplicação | Instalar | Ctrl+I |
 | Dispositivos | Disponível | Ctrl+D |
 
@@ -177,10 +178,10 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 | Extinguir | Disponível<sup>(1)</sup> | Disponível | Disponível | Disponível<sup>(7)</sup> |
 | Eliminação | Disponível | Disponível<sup>(5)</sup> | ND | Disponível<sup>(7)</sup> |
 | Renome<sup>(4)</sup> | Disponível | Disponível | Disponível | Disponível |
-| Sincronizar | Disponível | Disponível | Disponível | Disponível |
+| Sync | Disponível | Disponível | Disponível | Disponível |
 | Bloqueio Remoto | Apenas windows Phone | Disponível | Disponível | Disponível |
-| Repor Código de Acesso | Apenas windows Phone | Disponível<sup>(8)</sup> | ND | Disponível<sup>(6)</sup> |
-| Recuperação da chave | ND | ND | Disponível<sup>(2)</sup> | ND |
+| Redefinir código de acesso | Apenas windows Phone | Disponível<sup>(8)</sup> | ND | Disponível<sup>(6)</sup> |
+| Recuperação de Chaves | ND | ND | Disponível<sup>(2)</sup> | ND |
 
 <sup>(1)</sup> **A reforma** está sempre bloqueada nos dispositivos Azure AD Joined Windows.<br>
 <sup>(2)</sup> **A recuperação da chave** para o MacOS só está disponível através do Portal Web.<br>
@@ -188,9 +189,9 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 <sup>(4)</sup> **O nome de novo** altera apenas o nome do dispositivo na aplicação portal da empresa ou no Portal web, não no dispositivo.<br>
 <sup>(5)</sup> **A limpeza** não está disponível nos dispositivos iOS/iPadOS inscritos pelo utilizador.<br>
 <sup>(6)</sup> **O Reset Passcode** não é suportado em algumas configurações do Android e Android Enterprise. Para mais informações, consulte [Reset ou remova uma senha do dispositivo no Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> **A reforma** e a **limpeza** não estão disponíveis nos cenários do Proprietário do Dispositivo Empresarial Android (COPE, COBO, COSU).<br> 
-(8) O código de acesso de **reset** <sup>(8)</sup> não é suportado nos dispositivos iOS/iPadOS inscritos no utilizador.
+<sup>(7)</sup> **A reforma** e a **limpeza** não estão disponíveis nos cenários do Proprietário do Dispositivo Empresarial Android (COPE, COBO, COSU).<br>
+<sup>(8)</sup> O código de acesso de **reset** não é suportado nos dispositivos iOS/iPadOS inscritos pelo utilizador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Adicionar aplicações](apps-add.md)
+- [Adicionar aplicativos](apps-add.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083676"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023015"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Políticas de configuração de aplicações para o Microsoft Intune
 
@@ -49,7 +49,7 @@ Os parâmetros de configuração disponíveis são, em última análise, decidid
 >
 > Só irá ver aplicações da [loja Managed Google Play](https://play.google.com/work), não da loja Google [Play](https://play.google.com/store/apps), quando utilizar dispositivos geridos como o Tipo de Inscrição para dispositivos Android. Gerido si mesmo google Play Store, que também pode conhecer como Android for Work (AfW) e Android Enterprise, são as aplicações no Perfil de Trabalho que contêm as versões da aplicação que suportam a configuração da aplicação.
 
-Pode atribuir uma política de configuração de aplicações a um grupo de utilizadores finais e dispositivos, utilizando uma combinação de [atribuições de incluir e excluir](apps-inc-exl-assignments.md). Depois de adicionar uma política de configuração da aplicação, pode definir as atribuições dessa política. Ao definir as atribuições para a apólice, pode optar por incluir e excluir os [grupos](../fundamentals/groups-add.md) de utilizadores finais para os quais a apólice se aplica. Quando escolher incluir um ou mais grupos, poderá optar por selecionar grupos específicos para incluir ou selecionar grupos incorporados. Os grupos incorporados incluem **Todos os Utilizadores**, **Todos os Dispositivos** e **Todos os Utilizadores + Todos os Dispositivos**.
+Pode atribuir uma política de configuração de aplicações a um grupo de utilizadores finais e dispositivos, utilizando uma combinação de [atribuições de incluir e excluir](apps-inc-exl-assignments.md). Depois de adicionar uma política de configuração da aplicação, pode definir as atribuições dessa política. Ao definir as atribuições para a apólice, pode optar por incluir e excluir os [grupos](../fundamentals/groups-add.md) de utilizadores finais para os quais a apólice se aplica. Quando escolher incluir um ou mais grupos, poderá optar por selecionar grupos específicos para incluir ou selecionar grupos incorporados. Os grupos incorporados incluem **Todos os Utilizadores,** **Todos os Dispositivos**e **Todos os Utilizadores + Todos os Dispositivos**.
 
 Tem duas opções para utilizar políticas de configuração de aplicações com intune:
 - **Dispositivos geridos** – o dispositivo é gerido pelo Intune como o fornecedor de gestão de dispositivos móveis (MDM). A aplicação deve ser concebida para suportar a configuração da aplicação.
@@ -73,6 +73,20 @@ Selecionar **aplicações geridas** como o Tipo de Inscrição de **Dispositivos
 > [!NOTE]
 > Para aplicações multi-identidade, como o Microsoft Outlook, as preferências dos utilizadores podem ser consideradas. A Caixa de Entrada Focada, por exemplo, respeitará a definição do utilizador e não alterará a configuração. Outros parâmetros permitem controlar se um utilizador pode ou não alterar a definição. Para mais informações, consulte [o Outlook de Implementação para as definições de configuração de aplicações iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
+## <a name="android-app-configuration-policies"></a>Políticas de configuração de aplicações Android
+
+Para as políticas de configuração de aplicativos Android, pode selecionar o tipo de inscrição do dispositivo antes de criar um perfil de configuração de aplicações. Pode contabilizar perfis de certificado baseados no tipo de inscrição (Perfil de trabalho ou Proprietário do Dispositivo). Esta atualização fornece o seguinte:
+
+1. Se for criado um novo perfil e se selecionar o Perfil de Trabalho e o Perfil do Proprietário do Dispositivo para o tipo de inscrição do dispositivo, não poderá associar um perfil de certificado à política de config da aplicação.
+2. Se for criado um novo perfil e se selecionar apenas o Perfil de Trabalho, as políticas de certificados de perfil de trabalho criadas no âmbito da Configuração do Dispositivo podem ser utilizadas.
+3. Se for criado um novo perfil e o Proprietário do Dispositivo apenas for selecionado, as políticas de certificados do Proprietário do Dispositivo criadas no âmbito da Configuração do Dispositivo podem ser utilizadas. 
+4. Se implementar um perfil de configuração do Gmail ou Nove para um dispositivo dedicado ao Android Enterprise que não envolva um utilizador, falhará porque o Intune não consegue resolver o utilizador.
+
+> [!IMPORTANT]
+> As políticas existentes criadas antes do lançamento desta funcionalidade (versão abril de 2020 - 2004) que não possuam quaisquer perfis de certificado associados à política serão indefinidas para o Perfil de Trabalho e Perfil do Proprietário do Dispositivo para o tipo de inscrição do dispositivo. Além disso, as políticas existentes criadas antes do lançamento desta funcionalidade que têm perfis de certificados associados apenas serão padrão para o Perfil de Trabalho.
+> 
+> As políticas existentes não remediarão nem emitirão novos certificados.
+
 ## <a name="validate-the-applied-app-configuration-policy"></a>Validar a política de configuração de aplicações aplicadas
 
 Pode validar a política de configuração da aplicação utilizando os seguintes três métodos:
@@ -85,7 +99,7 @@ Pode validar a política de configuração da aplicação utilizando os seguinte
 
       ![Segunda imagem do estado de instalação do dispositivo](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Além disso, em **Intune** -> **Dispositivos** -> **Todos os Dispositivos** do lado esquerdo do ecrã, a opção configuração da **aplicação** apresentará todas as políticas atribuídas e o seu estado:
+      Além disso, em**dispositivos** ->  **Intune** -> **Todos os dispositivos** do lado esquerdo do ecrã, a opção **de configuração** da aplicação apresentará todas as políticas atribuídas e o seu estado:
 
       ![Screenshot da configuração da aplicação](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -96,12 +110,12 @@ Pode validar a política de configuração da aplicação utilizando os seguinte
 Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos não geridos para configuração de aplicações geridas. Além dos passos abaixo, pode aceder a registos de aplicações geridos através do Microsoft Edge. Para mais informações, consulte [Use Microsoft Edge no iOS/iPadOS para aceder a registos de aplicações geridos](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 1. Caso ainda não estivesse instalado no dispositivo, descarregue e instale o **Microsoft Edge** a partir da App Store. Para mais informações, consulte [as aplicações protegidas microsoft Intune](apps-supported-intune-apps.md).
-2. Lance o **Microsoft Edge** e selecione **cerca** de > **insonize a** partir da barra de navegação.
+2. Lance o **Microsoft Edge** e selecione **sobre** > **insinserção** a partir da barra de navegação.
 3. Clique em **Começar**.
 4. Clique em **Registos de Partilha**.
 5. Utilize a aplicação de correio à sua escolha para enviar o registo para si mesmo para que possam ser vistos no seu PC. 
 6. Reveja **IntuneMAMDiagnostics.txt** no seu visualizador de ficheiros de texto.
-7. Procure as `ApplicationConfiguration`. Os resultados serão os seguintes:
+7. Procurar `ApplicationConfiguration`. Os resultados serão os seguintes:
 
     ``` JSON
         {
@@ -140,22 +154,22 @@ Os detalhes de configuração da sua aplicação devem corresponder às polític
 Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos geridos para a configuração da aplicação gerida.
 
 1. Caso ainda não estivesse instalado no dispositivo, descarregue e instale o **Microsoft Edge** a partir da App Store. Para mais informações, consulte [as aplicações protegidas microsoft Intune](apps-supported-intune-apps.md).
-2. Lance **o Microsoft Edge** e selecione **cerca** de > **insintonização** da barra de navegação.
+2. Lance **o Microsoft Edge** e selecione **sobre** > **insinserção** a partir da barra de navegação.
 3. Clique em **Começar**.
 4. Clique em **Registos de Partilha**.
 5. Utilize a aplicação de correio à sua escolha para enviar o registo para si mesmo para que possam ser vistos no seu PC. 
 6. Reveja **IntuneMAMDiagnostics.txt** no seu visualizador de ficheiros de texto.
-7. Procure as `AppConfig`. Os seus resultados devem corresponder às políticas de configuração da aplicação configuradas para o seu inquilino.
+7. Procurar `AppConfig`. Os seus resultados devem corresponder às políticas de configuração da aplicação configuradas para o seu inquilino.
 
 ### <a name="android-configuration-on-managed-devices"></a>Configuração do Android em dispositivos geridos
 
-Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos geridos para a configuração da aplicação gerida.
+Pode validar a configuração do Android com o **Intune Diagnostic Log** em dispositivos geridos para configuração de aplicações geridas.
 
 Para recolher registos de um dispositivo Android, você ou o utilizador final devem descarregar os registos do dispositivo através de uma ligação USB (ou o equivalente do **File Explorer** no dispositivo). Eis os passos:
 
 1. Ligue o dispositivo Android ao seu computador com o cabo USB.
-2. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, encontre `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
-3. Na pasta `com.microsoft.windowsintune.companyportal`, abra a pasta Ficheiros e abra `OMADMLog_0`.
+2. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`encontre.
+3. Na `com.microsoft.windowsintune.companyportal` pasta, abra a pasta `OMADMLog_0`Ficheiros e abra .
 3. Procure `AppConfigHelper` para encontrar mensagens relacionadas com a configuração da aplicação. Os resultados serão semelhantes ao seguinte bloco de dados:
 
     `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
@@ -164,12 +178,12 @@ Para recolher registos de um dispositivo Android, você ou o utilizador final de
 
 Pode utilizar a API do Graph para realizar tarefas de configuração de aplicações. Para mais detalhes, consulte [Graph API Reference MAM Targeted Config](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Para obter mais informações sobre Intune e Graph, consulte [Trabalhar com Intune no Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
-## <a name="troubleshooting"></a>Resolução de Problemas
+## <a name="troubleshooting"></a>Resolução de problemas
 
 ### <a name="using-logs-to-show-a-configuration-parameter"></a>Usando registos para mostrar um parâmetro de configuração
 Quando os registos mostram um parâmetro de configuração que se confirma estar a ser aplicado mas que não parece funcionar, pode haver um problema com a implementação da configuração pelo desenvolvedor da aplicação. Chegar primeiro a esse desenvolvedor de aplicações, ou verificar a sua base de conhecimentos, pode poupar-lhe uma chamada de suporte com a Microsoft. Se for um problema com a forma como a configuração está a ser tratada dentro de uma aplicação, teria de ser abordada numa futura versão atualizada dessa aplicação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 ### <a name="managed-devices"></a>Dispositivos geridos
 

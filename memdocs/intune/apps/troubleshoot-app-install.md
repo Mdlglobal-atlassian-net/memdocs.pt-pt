@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325816"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023372"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Resolver problemas com a instalação de aplicações
 
@@ -113,12 +113,12 @@ Existem requisitos específicos que devem ser seguidos para recolher ficheiros d
 As informações presentes no tópico [Resolução de problemas de empacotamento, implementação e consulta de aplicações da Loja Microsoft](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) ajudam-no a resolver problemas comuns que poderá encontrar ao instalar aplicações da Loja Microsoft, quer seja através do Intune ou de outros meios.
 
 ## <a name="app-troubleshooting-resources"></a>Recursos de resolução de problemas de aplicativos
-- [Implantação da Visio e do Projeto como parte do seu Office Pro Plus Deployment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [Implementação da Visio e do Projeto como parte da implementação das aplicações da Microsoft 365](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
 - [Tome medidas para garantir aplicações MSfB implementadas através da instalação Intune no Windows 10 1903](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
 - [Implementações de aplicações MSI em Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
 - [As melhores práticas para distribuição de software para intune agente clássico do WINDOWS PC](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para obter informações adicionais de resolução de problemas, veja [Utilizar o portal de resolução de problemas para ajudar os utilizadores na sua empresa](../fundamentals/help-desk-operators.md). 
 - Saiba mais sobre os problemas conhecidos no Microsoft Intune. Para mais informações, consulte [Intune Customer Success](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).

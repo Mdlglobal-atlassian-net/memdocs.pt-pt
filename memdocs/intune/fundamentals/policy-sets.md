@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551624"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023168"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Use conjuntos de políticas para agrupar coleções de objetos de gestão
 
@@ -41,11 +41,11 @@ Pode utilizar conjuntos de políticas para:
 
 Pode incluir os seguintes objetos de gestão num conjunto de políticas:
 
-- Apps
+- Aplicações
 - Políticas de configuração de aplicações
 - Políticas de proteção de aplicações
 - Perfis de configuração de dispositivos
-- Políticas de conformidade do dispositivo
+- Políticas de conformidade de dispositivo
 - Restrições ao tipo de dispositivo
 - Perfis de implementação do piloto automático do Windows
 - Enrollment status page (Página do estado de inscrição)
@@ -58,7 +58,7 @@ Quando se cria um conjunto de políticas, cria-se uma única unidade de atribui�
 ## <a name="how-to-create-a-policy-set"></a>Como criar um conjunto de políticas
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **dispositivos** > **definições** de política > **conjuntos** de políticas > **criar**.
+2. Selecione **conjuntos de** > **definições**de política de > **dispositivos** > **Criar**.
 3. Na página Basics, adicione os **seguintes valores:**
     - **Nome definido pela política** - Forneça um nome para este conjunto de políticas.
     - **Descrição** - Opcionalmente, forneça uma descrição para o conjunto de políticas.
@@ -89,7 +89,7 @@ Os conjuntos políticos, novos para 1910, têm as seguintes questões conhecidas
   - Aplicação da loja Android
   - Aplicativo android line-of-business
   - Aplicativo de linha de negócios gerido android
-  - Office 365 ProPlus Suite (Windows 10)
+  - Microsoft 365 Apps (Windows 10)
   - Ligação web
   - Aplicativo iOS/iPadOS incorporado
   - Aplicação Android incorporada
@@ -121,7 +121,8 @@ Os conjuntos políticos, novos para 1910, têm as seguintes questões conhecidas
     Se uma política for adicionada a um conjunto de políticas que é implementado para um grupo, o grupo mostrar-se-ia diretamente atribuído na carga de trabalho, e não "atribuído através do conjunto de políticas". Como resultado disso, a MAM não processa as supressões de atribuição de grupos provenientes de conjuntos de políticas.
 
 - A MAM não suporta a implementação de **todos os** grupos virtuais de Utilizadores e Todos os **Dispositivos** para quaisquer tipos de políticas.
+- O perfil de configuração do dispositivo do tipo "Modelos Administrativos" não pode ser selecionado como parte de um conjunto de políticas.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Inscreva dispositivos no Microsoft Intune](../enrollment/index.yml)
+- [Inscrever dispositivos no Microsoft Intune](../enrollment/index.yml)

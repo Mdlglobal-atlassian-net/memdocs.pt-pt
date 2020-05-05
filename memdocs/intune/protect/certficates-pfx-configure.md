@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322790"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771477"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurar e utilizar certificados PKCS com o Intune
 
@@ -57,7 +57,7 @@ Para utilizar certificados PKCS com Intune, necessitará da seguinte infraestrut
   Uma cópia exportada do certificado de raiz da AC Empresarial.
 
 - **Conector** de certificado intune da Microsoft (também chamado *conector de certificado NDES):*  
-  No portal Intune, vá à **configuração** do dispositivo > **Conectores** de Certificado > **Adicionar**, e siga os *Passos para instalar o conector para #12 PKCS*. Utilize o link de descarregamento no portal para iniciar o download do instalador de conector de certificado **NDESConnectorSetup.exe**.  
+  No portal Intune, vá ao Dispositivo **Configurar** > **Conectores** > **adicionar**, e siga os *Passos para instalar o conector para pKCS #12*. Utilize o link de descarregamento no portal para iniciar o download do instalador de conector de certificado **NDESConnectorSetup.exe**.  
 
   Intune suporta até 100 instâncias deste conector por inquilino. Cada instância do conector deve estar num servidor Windows separado. Pode instalar uma instância deste conector no mesmo servidor que uma instância do Conector de Certificado PFX para o Microsoft Intune. Quando utiliza vários conectores, a infraestrutura do conector suporta alta disponibilidade e equilíbrio de carga, uma vez que qualquer instância de conector disponível pode processar os pedidos do certificado PKCS. 
 
@@ -66,7 +66,7 @@ Para utilizar certificados PKCS com Intune, necessitará da seguinte infraestrut
   O Conector de Certificado Intune da Microsoft também suporta o modo Federal de Processamento de Informações (FIPS). O FIPS não é obrigatório, mas pode emitir e revogar certificados quando está ativado.
 
 - **Conector de certificado PFX para Microsoft Intune**:  
-  Se planeia utilizar encriptação de e-mail S/MIME, utilize o portal Intune para descarregar o *Conector* de Certificado PFX que suporta a importação de certificados PFX.  Vá à **configuração** do dispositivo > **Conectores** de certificados > **Adicionar,** e siga os *Passos para instalar o conector para certificados PFX importados*. Utilize o link de descarregamento no portal para iniciar o download do instalador **PfxCertificateConnectorBootstrapper.exe**.
+  Se planeia utilizar encriptação de e-mail S/MIME, utilize o portal Intune para descarregar o *Conector* de Certificado PFX que suporta a importação de certificados PFX.  Vá ao Certificado de **configuração** > do dispositivo > **Adicionar,** e siga os *Passos para instalar o conector para certificados PFX importados*.**Certificate Connectors** Utilize o link de descarregamento no portal para iniciar o download do instalador **PfxCertificateConnectorBootstrapper.exe**.
 
   Cada inquilino intune suporta uma única instância deste conector. Pode instalar este conector no mesmo servidor que uma instância do conector Microsoft Intune Certificate.
 
@@ -95,7 +95,7 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 **Utilize uma linha de comando:**  
 1. Inicie sessão no servidor da Autoridade de Certificação de Raiz com Conta administradora.
  
-2. Vá **iniciar** > **Executar**e, em seguida, entre **cmd** para abrir o pedido de comando. 
+2. Vá para **iniciar** > **a corrida**e, em seguida, entre **cmd** para abrir o pedido de comando. 
     
 3. Especifique **certutil -ca.cert ca_name.cer** para exportar o certificado Raiz como um ficheiro chamado *ca_name.cer*.
 
@@ -129,7 +129,7 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
     > Para os modelos de certificados iOS/iPadOS, vá ao separador **Extensões,** atualize o **Uso da Chave,** e confirme que a **Assinatura é prova de origem.**
 
 10. Em **Segurança**, adicione a Conta de Computador do servidor no local onde irá instalar o Microsoft Intune Certificate Connector. Conceda a esta conta as permissões **Ler** e **Inscrever**.
-11. Selecione **Aplicar** > **OK** para guardar o modelo de certificado. Feche a **Consola de Modelos de Certificado**.
+11. Selecione **Aplicar** > **OK** para guardar o modelo de certificado. Feche a consola de modelos de **certificado.**
 12. Na consola **Autoridade de Certificação**, clique com o botão direito do rato em **Modelos de Certificado** > **Novo** > **Modelo de Certificado a Emitir**. Selecione o modelo criado nos passos anteriores. Selecione **OK**.
 13. Para que o servidor gere os certificados para dispositivos e utilizadores matriculados, utilize os seguintes passos:
 
@@ -146,12 +146,12 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **Conectores** de Certificado >  **+ Adicionar**.
+2. Selecione > **Conectores e** > **conectores** > de certificados de **administração do arrendatário****+ Adicionar**.
 
 3. Clique em *Baixar o software de conector* do certificado para o conector para pKCS #12 e guarde o ficheiro para um local a que possa aceder a partir do servidor onde vai instalar o conector.
 
    ![Microsoft Intune Certificate Connector download](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. Após a transferência ser concluída, inicie sessão no servidor. Em seguida:
 
     1. Certifique-se de que o .NET 4.5 Framework ou superior está instalado, pois é necessário para o Certificate Connector do NDES. O .NET 4.5 Framework vem incluído automaticamente com o Windows Server 2012 R2 e versões mais recentes.
@@ -160,8 +160,8 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 5. O Conector de Certificado Intune da Microsoft abre o separador **De Inscrição.** Para permitir a ligação ao Intune, **Sign In**, e insira uma conta com permissões administrativas globais.
 6. No separador **Avançadas**, recomendamos que deixe a opção **Utilizar a conta SYSTEM deste computador (predefinição)** selecionada.
-7. **Aplicar** > **Fechar**
-8. Volte ao portal Intune (**Intune** > Configuração de **dispositivos** > **Conectores de Certificação).** Após alguns momentos, é mostrada uma marca de verificação verde e o estado de **Ligação** está **Ativo**. Agora o servidor do conector pode comunicar com o Intune.
+7. **Aplicar** > **Perto**
+8. Volte ao portal Intune (**Conectores**de certificação de**configuração** > de**dispositivos intune).** >  Após alguns momentos, é mostrada uma marca de verificação verde e o estado de **Ligação** está **Ativo**. Agora o servidor do conector pode comunicar com o Intune.
 9. Se tiver um proxy web no seu ambiente de rede, poderá necessitar de configurações adicionais para permitir que o conector funcione. Para mais informações, consulte [O Trabalho com os servidores proxy existentes no local](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) na documentação do Diretório Ativo Azure.
     - Android Enterprise *(Perfil de Trabalho)*
     - iOS
@@ -175,7 +175,7 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
+2. Selecione e vá aos perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
    - **Plataforma**: Escolha a plataforma dos dispositivos que receberão este perfil.
@@ -185,7 +185,7 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 5. No Básico, insira as **seguintes**propriedades:
    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é *perfil de certificado fidedigno para toda a empresa*.
-   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+   - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 
@@ -198,11 +198,11 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 8. Selecione **Seguinte**.
 
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
    Selecione **Seguinte**.
 
-10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
+10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Planeie implementar este perfil de certificado para os mesmos grupos que recebem o perfil de certificado PKCS. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
 
     Selecione **Seguinte**.
 
@@ -216,13 +216,13 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
+2. Selecione e vá aos perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
    - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:
      - Administrador de dispositivos Android
-     - Android Enterprise > proprietário de dispositivos apenas
-     - Android Enterprise > Perfil de trabalho apenas
+     - Android Enterprise > Dispositivo apenas proprietário
+     - Android Enterprise > Work apenas perfil
      - iOS/iPadOS
      - macOS
      - Windows 10 e posterior
@@ -234,33 +234,33 @@ Para autenticar um dispositivo com VPN, WiFi ou outros recursos, um dispositivo 
 
 5. No Básico, insira as **seguintes**propriedades:
    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é *perfil PKCS para toda a empresa*.
-   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+   - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Selecione a sua plataforma para configurações detalhadas: -Administrador de dispositivos Android -Android Enterprise -iOS/iPadOS -Windows 10
    
-   |Definição     | Platform     | Detalhes   |
+   |Definição     | Plataforma     | Detalhes   |
    |------------|------------|------------|
-   |**Limiar de renovação (%)**        |<ul><li>Todas         |Recomendado é 20%  | 
-   |**Período de validade do certificado**  |<ul><li>Todas         |Se não alterar o modelo de certificado, esta opção pode ser definida para um ano. |
+   |**Limiar de renovação (%)**        |<ul><li>Todos         |Recomendado é 20%  | 
+   |**Período de validade do certificado**  |<ul><li>Todos         |Se não alterar o modelo de certificado, esta opção pode ser definida para um ano. |
    |**Fornecedor de armazenamento chave (KSP)**   |<ul><li>Windows 10  |Para windows, selecione onde guardar as chaves do dispositivo. |
-   |**Autoridade de certificação**      |<ul><li>Todas         |Exibe o nome de domínio interno totalmente qualificado (FQDN) da sua Enterprise CA.  |
-   |**Nome da autoridade de certificação** |<ul><li>Todas         |Lista o nome da sua Enterprise CA, como "Autoridade de Certificação Contoso". |
-   |**Nome do modelo do certificado**    |<ul><li>Todas         |Lista o nome do seu modelo de certificado. |
+   |**Autoridade de certificação**      |<ul><li>Todos         |Exibe o nome de domínio interno totalmente qualificado (FQDN) da sua Enterprise CA.  |
+   |**Nome da autoridade de certificação** |<ul><li>Todos         |Lista o nome da sua Enterprise CA, como "Autoridade de Certificação Contoso". |
+   |**Nome do modelo de certificado**    |<ul><li>Todos         |Lista o nome do seu modelo de certificado. |
    |**Tipo de certificado**             |<ul><li>Android Enterprise *(Perfil de Trabalho)*</li><li>iOS</li><li>macOS</li><li>Windows 10 e posterior|Selecione um tipo: <ul><li> **Os** certificados de utilizador podem conter atributos de utilizador e dispositivo no assunto e san do certificado. </il><li>**Os** certificados do dispositivo só podem conter atributos de dispositivo no sujeito e san do certificado. Utilize o Dispositivo para cenários como dispositivos sem uso, como quiosques ou outros dispositivos partilhados.  <br><br> Esta seleção afeta o formato de nome do Assunto. |
-   |**Formato de nome de assunto**          |<ul><li>Todas         |Para mais detalhes sobre como configurar o formato de nome do assunto, consulte o [formato](#subject-name-format) de nome do assunto mais tarde neste artigo.  <br><br> Para a maioria das plataformas, utilize a opção nome **comum,** salvo indicação em contrário. <br><br>Para as seguintes plataformas, o formato de nome sujeito é determinado pelo tipo de certificado: <ul><li>Android Enterprise *(Perfil de Trabalho)*</li><li>iOS</li><li>macOS</li><li>Windows 10 e posterior</li></ul>  <p>  |
-   |**Nome alternativo do sujeito**     |<ul><li>Todas         |Para atribuir , *selecione* **o nome principal do utilizador (UPN)** salvo necessidade em contrário, configure um *valor*correspondente , e, em seguida, clique em **Adicionar**. <br><br>Para mais informações, consulte o [formato de nome do Assunto](#subject-name-format) mais tarde neste artigo.|
+   |**Formato do nome do requerente**          |<ul><li>Todos         |Para mais detalhes sobre como configurar o formato de nome do assunto, consulte o [formato](#subject-name-format) de nome do assunto mais tarde neste artigo.  <br><br> Para a maioria das plataformas, utilize a opção nome **comum,** salvo indicação em contrário. <br><br>Para as seguintes plataformas, o formato de nome sujeito é determinado pelo tipo de certificado: <ul><li>Android Enterprise *(Perfil de Trabalho)*</li><li>iOS</li><li>macOS</li><li>Windows 10 e posterior</li></ul>  <p>  |
+   |**Nome alternativo do sujeito**     |<ul><li>Todos         |Para atribuir , *selecione* **o nome principal do utilizador (UPN)** salvo necessidade em contrário, configure um *valor*correspondente , e, em seguida, clique em **Adicionar**. <br><br>Para mais informações, consulte o [formato de nome do Assunto](#subject-name-format) mais tarde neste artigo.|
    |**Utilização alargada da chave**           |<ul><li> Administrador de dispositivos Android </li><li>Android Enterprise (*Proprietário de Dispositivos,* *Perfil de Trabalho)* </li><li>Windows 10 |Os certificados geralmente requerem *autenticação do cliente* para que o utilizador ou dispositivo possa autenticar um servidor. |
    |**Permitir que todas as aplicações tenham acesso à chave privada** |<ul><li>macOS  |Configurar para **permitir** dar aplicações configuradas para o acesso do dispositivo mac associado à chave privada dos certificados PKCS. <br><br> Para obter mais informações sobre esta definição, consulte *AllowAllAppsAccess* the Certificate Payload section of [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) in the Apple developer documentation. |
    |**Certificado raiz**             |<ul><li>Administrador de dispositivos Android </li><li>Android Enterprise (*Proprietário de Dispositivos,* *Perfil de Trabalho)* |Selecione um perfil de certificado CA raiz que tenha sido previamente atribuído. |
 
 8. Selecione **Seguinte**.
 
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
    Selecione **Seguinte**.
 
-10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
+10. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Planeie implementar este perfil de certificado para os mesmos grupos que recebem o perfil de certificado fidedigno. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
 
     Selecione **Seguinte**.
 
@@ -279,24 +279,24 @@ Plataformas:
 - Windows 10 e posterior
 
 > [!NOTE]
-> Existe uma questão conhecida para a utilização do PKCS para obter certificados [que é a mesma questão que se vê para](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) o SCEP quando o nome do assunto no pedido de assinatura de certificado (CSR) resultante inclui um dos seguintes caracteres como um personagem escapado (prosseguido por um \\de backslash ):
+> Existe uma questão conhecida para a utilização do PKCS para obter certificados [que é a mesma questão que se vê para](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) o SCEP quando o \\nome do assunto no pedido de assinatura de certificado (CSR) resultante inclui um dos seguintes caracteres como um personagem escapado (procededo por um backslash ):
 > - \+
 > - ;
 > - ,
 > - =
 
 - **Tipo de certificado Utilizador**  
-  As opções de formato para o *formato de nome sujeito* incluem duas variáveis: Nome **Comum (CN)** e **E-mail (E)** . O **Nome Comum (CN)** pode ser definido para qualquer uma das seguintes variáveis:
+  As opções de formato para o *formato de nome sujeito* incluem duas variáveis: Nome **Comum (CN)** e **E-mail (E)**. O **Nome Comum (CN)** pode ser definido para qualquer uma das seguintes variáveis:
 
-  - **CN={{{UserName}}** : O nome principal do utilizador, tal como janedoe@contoso.com.
-  - **CN={{AAD_Device_ID}}** : um ID atribuído ao registar um dispositivo no Azure Active Directory (AD). Este ID é normalmente utilizado na autenticação com o Azure AD.
-  - **CN={{{SERIALNUMBER}}** : O número de série único (SN) normalmente utilizado pelo fabricante para identificar um dispositivo.
-  - **CN={{{IMEINumber}}** : O número único de identidade de equipamento móvel internacional (IMEI) utilizado para identificar um telemóvel.
-  - **CN={{{OnPrem_Distinguished_Name}}** : Uma sequência de nomes relativos distintos separados por vírem, tais como *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
+  - **CN={{{UserName}}**: O nome principal do janedoe@contoso.comutilizador, tais como .
+  - **CN={{AAD_Device_ID}}**: um ID atribuído ao registar um dispositivo no Azure Active Directory (AD). Este ID é normalmente utilizado na autenticação com o Azure AD.
+  - **CN={{{SERIALNUMBER}}**: O número de série único (SN) normalmente utilizado pelo fabricante para identificar um dispositivo.
+  - **CN={{{IMEINumber}}**: O número único de identidade de equipamento móvel internacional (IMEI) utilizado para identificar um telemóvel.
+  - **CN={{{OnPrem_Distinguished_Name}}**: Uma sequência de nomes relativos distintos separados por vírem, tais como *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
     Para utilizar a variável *{{OnPrem_Distinguished_Name}}* certifique-se de sincronizar o atributo do utilizador de nome no *local* utilizando o [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) para o seu AD Azure.
 
-  - **CN={{noPremisesSamAccountName}}** : Os administradores podem sincronizar o atributo samAccountName do Diretório Ativo para a AD Azure utilizando a ligação Azure AD a um atributo chamado *noPremisesSamAccountName*. Intune pode substituir essa variável como parte de um pedido de emissão de certificado em matéria de certificado. O atributo samAccountName é o nome de entrada do utilizador utilizado para suportar clientes e servidores a partir de uma versão anterior do Windows (pré-Windows 2000). O formato de nome de início de sessão do utilizador é: *DomainName\testUser*, ou apenas *testUser*.
+  - **CN={{noPremisesSamAccountName}}**: Os administradores podem sincronizar o atributo samAccountName do Diretório Ativo para a AD Azure utilizando a ligação Azure AD a um atributo chamado *noPremisesSamAccountName*. Intune pode substituir essa variável como parte de um pedido de emissão de certificado em matéria de certificado. O atributo samAccountName é o nome de entrada do utilizador utilizado para suportar clientes e servidores a partir de uma versão anterior do Windows (pré-Windows 2000). O formato de nome de início de sessão do utilizador é: *DomainName\testUser*, ou apenas *testUser*.
 
     Para utilizar a variável *{{onPremisesSamAccountName}}* certifique-se de sincronizar o atributo do utilizador *no LocalsSamAccountName* utilizando o [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) para o seu Azure AD.
 
@@ -360,7 +360,7 @@ O *Conector de CertificadoPFX para microsoft Intune* [suporta atualizações aut
   - Corrigiu um problema em que o conector pode não se inscrever na Intune depois de iniciar a sessão no conector com uma conta de administrador global.  
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o estado](../configuration/device-profile-monitor.md).
 

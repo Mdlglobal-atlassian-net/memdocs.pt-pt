@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326841"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075409"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Adicionar grupos para organizar utilizadores e dispositivos
 
@@ -41,9 +41,9 @@ Pode adicionar os seguintes tipos de grupos:
 Utilize os seguintes passos para criar um novo grupo.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Grupos** > **Novo grupo:**
+2. Selecione **Grupos** > **Novo grupo**:
 
-   ![Screenshot do portal Azure com novo grupo selecionado](./media/groups-add/groups-add-new.png)
+   ![Captura de ecrã do portal do Azure com a opção Novo Grupo selecionada](./media/groups-add/groups-add-new.png)
 
 3. No **tipo de Grupo,** escolha uma das seguintes opções:
 
@@ -103,7 +103,7 @@ Para criar os requisitos básicos de conformidade da sua organização, pode cri
 
 Para recomendações e orientações de perfil de configuração, consulte [as políticas de atribuição a grupos de utilizadores ou grupos](../configuration/device-profile-assign.md#user-groups-vs-device-groups) de dispositivos e [recomendações](../configuration/device-profile-create.md#recommendations)de perfil .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controlo de acesso baseado em funções (RBAC) com microsoft Intune](role-based-access-control.md)
-- [Gerir o acesso a recursos com grupos DaD Azure](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Gerir o acesso a recursos com grupos do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

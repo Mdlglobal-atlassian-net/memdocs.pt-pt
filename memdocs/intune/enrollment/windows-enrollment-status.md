@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326854"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022709"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurar uma página de estado de inscrição
  
@@ -41,7 +41,7 @@ A Página de Estado de Inscrição ajuda os utilizadores a compreender o estado 
 Também pode definir a ordem prioritária para que cada perfil tenha a responsabilidade de atribuições de perfil conflituosas ao mesmo utilizador.
 
 > [!NOTE]
-> A Página de Estado de Inscrição só pode ser direcionada a um utilizador que pertença a um grupo designado e a política é definida no dispositivo no momento da inscrição para todos os utilizadores que utilizem o dispositivo.  
+> A Página de Estado de Inscrição só pode ser direcionada a um utilizador que pertença a um grupo designado e a política é definida no dispositivo no momento da inscrição para todos os utilizadores que utilizem o dispositivo.  O dispositivo direcionado para os perfis da Página de Estado de Inscrição não é suportado atualmente.
 
 ## <a name="available-settings"></a>Definições disponíveis
 
@@ -55,7 +55,7 @@ Também pode definir a ordem prioritária para que cada perfil tenha a responsab
 <tr><td>Permitir que os utilizadores reporem o dispositivo se ocorrer erro de instalação<td>É apresentado um botão de <b>reset</b> do dispositivo se houver uma falha de instalação.<td>O botão do <b>dispositivo Reset</b> não é apresentado se houver uma falha de instalação.
 <tr><td>Permitir que os utilizadores utilizem o dispositivo se ocorrer erro de instalação<td>Um botão <b>Continue de qualquer forma</b> é exibido se houver uma falha de instalação.<td>O botão Continue de <b>qualquer forma</b> não é exibido se houver uma falha de instalação.
 <tr><td>Mostre o erro de tempo quando a instalação demorar mais tempo do que o número especificado de minutos<td colspan="2">Especifique o número de minutos para esperar que a instalação esteja concluída. Um valor padrão de 60 minutos é introduzido.
-<tr><td>Mostre mensagem personalizada quando ocorrer um erro<td>É fornecida uma caixa de texto onde pode especificar uma mensagem personalizada para visualizar se ocorrer um erro de instalação.<td>A mensagem predefinida é apresentada: <br><b>A Instalação excedeu o prazo fixado pela sua organização. Tente novamente ou contacte a pessoa de suporte de TI para obter ajuda.<b>
+<tr><td>Mostre mensagem personalizada quando ocorrer um erro<td>É fornecida uma caixa de texto onde pode especificar uma mensagem personalizada para visualizar se ocorrer um erro de instalação.<td>A mensagem predefinida é apresentada: <br><b>A instalação excedeu o prazo fixado pela sua organização. Tente novamente ou contacte a pessoa de suporte de TI para obter ajuda.<b>
 <tr><td>Permitir que os utilizadores recolham registos sobre erros de instalação<td>Se houver um erro de instalação, é apresentado um botão <b>de registos Collect.</b> <br>Se o utilizador clicar neste botão, é-lhes pedido que escolham um local para guardar o ficheiro de registo <b>MDMDiagReport.cab</b><td>O botão <b>de registos Collect</b> não é apresentado se houver um erro de instalação.
 <tr><td>Bloqueie a utilização do dispositivo até que estas aplicações necessárias sejam instaladas se forem atribuídas ao utilizador/dispositivo<td colspan="2">Escolha <b>Todos</b> ou <b>Selecionados.</b> <br><br>Se <b>o Selected</b> for escolhido, aparece um botão de <b>aplicações Select</b> que lhe permite escolher quais as aplicações que devem ser instaladas antes de ativar o dispositivo.
 </table>
@@ -64,25 +64,25 @@ Também pode definir a ordem prioritária para que cada perfil tenha a responsab
 
 Para ligar a Página de Estado de Inscrição, siga os passos abaixo.
  
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
 2. No painel **Página de Estado de Inscrição**, selecione **Predefinição** > **Definições**.
 3. Para **Mostrar progresso de instalação de aplicações e perfis**, selecione **Sim**.
 4. Selecione as outras definições que pretende ativar e, em seguida, selecione **Guardar**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Criar perfil de página de estado de inscrição e atribuir a um grupo
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **os dispositivos** > **Windows** > windows > página de estado de **inscrição** > Criar o **perfil**. **Enrollment Status Page**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows página de**inscrição** > **Enrollment Status Page** > **Criar perfil**.
 2. Forneça um **Nome** e uma **Descrição**.
-3. Selecione **Criar**.
+3. Escolha **Criar**.
 4. Selecione o novo perfil na lista **Página de Estado de Inscrição**.
-5. Selecione **Atribuições** > **Selecionar grupos** > selecione os grupos que pretende que adotem este perfil > **Selecionar** > **Guardar**.
+5. Escolha **Tarefas** > **Selecione grupos** > escolha os grupos que pretende adotar este perfil > **Selecione** > **Guardar**.
 6. Selecione **Definições** > selecione as definições que pretende aplicar a este perfil > **Guardar**.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Definir a prioridade de página de estado de inscrição
 
 Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Estado de Inscrição. Para lidar com tais conflitos, pode definir as prioridades para cada perfil. Durante a inscrição, se alguém tiver mais do que um perfil de Página de Estado de Inscrição, apenas o perfil de prioridade mais elevado é aplicado ao dispositivo de inscrição.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
 2. Paire o cursor sobre o perfil na lista.
 3. Utilize os três pontos verticais para arrastar o perfil para a posição pretendida na lista.
 
@@ -90,12 +90,16 @@ Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Esta
 
 Pode especificar que aplicações têm de ser instaladas para o utilizador poder aceder à área de trabalho.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows a inscrever > Página de Estado de **Inscrição** . **Enrollment Status Page**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
 2. Escolha um perfil > **Definições**.
 3. Escolha **Sim** para **Mostrar progresso de instalação de aplicações e perfis**.
 4. Escolha **Sim** para **Bloquear a utilização de dispositivos até que todas as aplicações e perfis sejam instalados**.
 5. Escolha **selecionado** para utilização do dispositivo Block até que **estas aplicações necessárias sejam instaladas se forem atribuídas ao utilizador/dispositivo**.
 6. Escolha **Selecionar aplicações** > escolha as aplicações > **Selecionar** > **Guardar**.
+
+As aplicações que estão incluídas nesta lista são usadas pela Intune para filtrar a lista que deve ser considerada bloqueada.  Não especifica quais as aplicações que devem ser instaladas.  Por exemplo, se configurar esta lista para incluir "App 1", "App 2" e "App 3" e "App 3" e "App 4" são direcionados para o dispositivo ou utilizador, a Página de Estado de Inscrição irá rastrear apenas "App 3".  A "App 4" ainda estará instalada, mas a Página de Estado de Inscrição não aguarda rá a sua conclusão.
+
+Pode especificar-se um máximo de 25 aplicações.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informação de rastreio da página de estado de inscrição
 
@@ -133,8 +137,8 @@ Para a configuração da conta, a Página de Estado de Inscrição rastreia os s
   - Aplicações MSI de linha de negócio por utilizador atribuídas a Todos os Dispositivos, Todos os Utilizadores ou a um grupo de utilizadores de que seja membro o utilizador que inscreve o dispositivo.
   - Aplicações MSI de linha de negócio por computador atribuídas a Todos os Utilizadores ou a um grupo de utilizadores de que seja membro o utilizador que inscreve o dispositivo.
   - Aplicações de loja LoB, aplicativos de loja online e aplicações de loja offline que são atribuídas a qualquer um dos seguintes objetos:
-    - Todos os Dispositivos
-    - Todos os Utilizadores
+    - All Devices
+    - All Users
     - Um grupo de utilizadores em que o utilizador que está a inscrever o dispositivo é um membro com o contexto de instalação definido para o Utilizador.
   - Aplicações Win32 (versão 10 do Windows 10 e apenas mais recentes) 
 - Perfis de conectividade
@@ -142,13 +146,14 @@ Para a configuração da conta, a Página de Estado de Inscrição rastreia os s
 - Certificados
   - Perfis de certificados atribuídos a Todos os Utilizadores ou a um grupo de utilizadores de que seja membro o utilizador que inscreve o dispositivo.
 
-### <a name="troubleshooting"></a>Resolução de Problemas
+### <a name="troubleshooting"></a>Resolução de problemas
 Perguntas de topo para resolução de problemas.
 
-- Porque é que as minhas aplicações não foram instaladas durante a fase de configuração do Dispositivo durante a implementação do Autopilot que está a utilizar a Página de Estado de Inscrição?
-  - Para garantir que as aplicações são instaladas durante uma fase de configuração do Dispositivo Autopilot, certifique-se de que 
-        1. A aplicação é selecionada para bloquear o acesso na lista de aplicações selecionadas
-        2. Está a direcionar as aplicações para o mesmo grupo de dispositivos Azure AD a que o seu perfil autopiloto está atribuído. 
+- Porque é que as minhas aplicações não foram instaladas e rastreadas utilizando a Página do Estado de Inscrição?
+  - Para garantir que as aplicações são instaladas e rastreadas utilizando a Página de Estado de Inscrição, certifique-se de que:
+      - As aplicações são atribuídas a um grupo De AD Azure que contém o dispositivo (para aplicações direcionadas para dispositivos) ou ao utilizador (para aplicações direcionadas ao utilizador), utilizando uma atribuição "necessária".  (As aplicações direcionadas para o dispositivo são rastreadas durante a fase do dispositivo da ESP, enquanto as aplicações direcionadas para o utilizador são rastreadas durante a fase de utilização da ESP.)
+      - Ou especifica a utilização do dispositivo Block até que **todas as aplicações e perfis estejam instalados** ou inclua a aplicação na utilização do **dispositivo Block até que estas aplicações necessárias sejam instaladas.**
+      - As aplicações instalam-se no contexto do dispositivo e não têm regras de aplicabilidade de contexto de utilizador.
 
 - Porque é que a Página de Estado de Inscrição está a mostrar para implementações não autopilotos, por exemplo quando um utilizador faz login pela primeira vez num dispositivo matriculado de cogestão do Gestor de Configuração?  
   - A Página de Estado de Inscrição lista o estado de instalação de todos os métodos de inscrição, incluindo
@@ -190,7 +195,6 @@ Perguntas de topo para resolução de problemas.
 ### <a name="known-issues"></a>Problemas conhecidos
 Abaixo estão as questões conhecidas. 
 - Desativar o perfil esp não remove a política de ESP dos dispositivos e os utilizadores ainda recebem ESP quando iniciam sessão no dispositivo pela primeira vez. A política não é removida quando o perfil da ESP é desativado. Tem de implantar o OMA-URI para desativar o ESP. Consulte acima as instruções sobre como desativar a ESP utilizando o OMA-URI. 
-- Um reboot pendente irá sempre causar um intervalo. O tempo de tempo ocorre porque o dispositivo precisa de ser reiniciado. O reboot é necessário para permitir que o item rastreado na Página de Estado de Inscrição seja concluído. Um reboot fará com que a Página de Estado de Inscrição saia e depois de reiniciar o dispositivo não entrará durante a configuração da Conta após o reboot.  Considere não necessitar de um reboot com instalação de aplicação. 
 - Um reboot durante a configuração do Dispositivo obrigará o utilizador a introduzir as suas credenciais antes da transição para a fase de configuração da Conta. As credenciais do utilizador não são preservadas durante o reboot. Para que o utilizador introduza as suas credenciais e a Página de Estado de Inscrição pode continuar. 
 - A Página de Estado de Inscrição irá sempre descontar durante uma inscrição de conta de adicionar e conta escolar nas versões do Windows 10 menos de 1903. A Página de Estado de Inscrição aguarda que o registo da AD Azure esteja concluído. O problema encontra-se corrigido na versão 1903 do Windows 10 e mais recente.  
 - A implantação do Autopilot Hybrid Azure AD com ESP demora mais tempo do que a duração do tempo definido no perfil ESP. Nas implementações híbridas azure ad autopiloto, o ESP demorará 40 minutos mais longo do que o valor estabelecido no perfil ESP. Este atraso dá tempo ao conector AD on-prem para criar o novo registo do dispositivo para a AD Azure. 
@@ -199,9 +203,9 @@ Abaixo estão as questões conhecidas.
     - o utilizador deve voltar a introduzir as credenciais antes de proceder da fase de configuração do dispositivo para a fase de configuração da Conta
 - A ESP está presa durante muito tempo ou nunca completa a fase de "Identificação". Intune calcula as políticas do ESP durante a fase de identificação. Um dispositivo pode nunca completar as políticas de ESP de computação se o utilizador atual não tiver um Intune licenciado atribuído.  
 - Configurar o Controlo de Aplicações do Microsoft Defender provoca uma rápida reinicialização durante o Autopilot. Configurar a aplicação Microsoft Defender (AppLocker CSP) requer um reboot. Quando esta política estiver configurada, pode fazer com que um dispositivo reinicie durante o Autopilot. Atualmente, não há como suprimir ou adiar o reboot.
-- Quando a política DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) estiver ativada como parte de um perfil ESP, o autologon OOBE ou do ambiente de trabalho do utilizador pode falhar sem expectante por duas razões.
+- Quando a políticahttps://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) DeviceLock ( ativada como parte de um perfil ESP, o autologon OOBE ou do ambiente de trabalho do utilizador pode falhar sem expectante por duas razões.
   - Se o dispositivo não tiver sido reiniciado antes de sair da fase de configuração do Dispositivo ESP, o utilizador poderá ser solicitado a introduzir as suas credenciais De AD Azure. Esta solicitação ocorre em vez de um autologon bem sucedido onde o utilizador vê a primeira animação de login do Windows.
   - O autologon falhará se o dispositivo tiver sido reiniciado após o utilizador ter introduzido as suas credenciais De AD Azure, mas antes de sair da fase de configuração do Dispositivo ESP. Esta falha ocorre porque a fase de configuração do Dispositivo ESP nunca foi concluída. A supõeção é redefinir o dispositivo.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Depois de configurar as suas páginas de inscrição do Windows, saiba como gerir dispositivos Windows. Para obter mais informações, veja [O que é a gestão de dispositivos do Microsoft Intune?](../remote-actions/device-management.md)

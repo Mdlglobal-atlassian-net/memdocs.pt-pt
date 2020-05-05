@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576834"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074797"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Como utilizar o Intune em ambientes sem o Google Mobile Services
 
@@ -33,7 +33,7 @@ O Microsoft Intune utiliza o Google Mobile Services (GMS) para comunicar com o p
 
 ### <a name="for-users-outside-of-mainland-china"></a>Para utilizadores fora da China continental 
 
-Se o Google Play não estiver disponível, os dispositivos Android podem descarregar o Portal da [Empresa Intune](../user-help/install-the-company-portal-app-android.md) microsoft para Android e carregar lateralmente a aplicação. Quando instalada desta maneira, a aplicação não recebe atualizações nem correções automaticamente. Deve ter a certeza de atualizar e remendar a aplicação manualmente. 
+Se o Google Play não estiver disponível, os dispositivos Android podem descarregar o Portal da [Empresa Intune](https://www.microsoft.com/en-us/download/details.aspx?id=49140) microsoft para Android e carregar lateralmente a aplicação. Quando instalada desta maneira, a aplicação não recebe atualizações nem correções automaticamente. Deve ter a certeza de atualizar e remendar a aplicação manualmente. 
 
 ### <a name="for-users-in-mainland-china"></a>Para utilizadores na China continental 
 
@@ -47,7 +47,7 @@ Algumas funcionalidades intune dependem de componentes de GMS, como a loja Googl
 
 | Cenário  | Funcionalidades  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Políticas de conformidade do dispositivo  | Ao criar ou editar políticas de conformidade para administrador de dispositivos Android, todas as opções listadas no **Google Play Protect** não estão disponíveis.  |
+| Políticas de conformidade de dispositivo  | Ao criar ou editar políticas de conformidade para administrador de dispositivos Android, todas as opções listadas no **Google Play Protect** não estão disponíveis.  |
 | Políticas de proteção de aplicações (lançamento condicional)  | **O atestado** do dispositivo SafetyNet e a necessidade de **uma verificação** de ameaças nas condições do dispositivo de aplicações não podem ser utilizados para o lançamento condicional.  |
 | Aplicações do cliente  | Aplicações do tipo **Android** não estão disponíveis. Utilize **a app Line-of-business** para implementar e gerir aplicações.  |
 | Defesa Contra Ameaças para Dispositivos Móveis  | Trabalhe com o seu fornecedor de MTD para perceber se a sua solução está integrada com a Intune, se está disponível na região de interesse, e se depende de GMS.  |
@@ -79,6 +79,6 @@ As seguintes tarefas podem requerer até 8 horas para terminar:
 
 Se o dispositivo se matriculou recentemente, o cumprimento, o incumprimento e o check-in de configuração são mais frequentes. Para obter mais informações sobre check-ins de dispositivos, consulte [questões comuns, problemas e resoluções com políticas e perfis de dispositivos no Microsoft Intune](../configuration/device-profile-troubleshoot.md). 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Atribuir aplicativos a grupos com o Microsoft Intune](../apps/apps-deploy.md)
+- [Atribuir aplicações a grupos com o Microsoft Intune](../apps/apps-deploy.md)

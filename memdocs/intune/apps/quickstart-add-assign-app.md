@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323845"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023032"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Guia de Início Rápido: adicionar e atribuir uma aplicação cliente
 
@@ -37,7 +37,7 @@ Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita
 
 ## <a name="sign-in-to-intune"></a>Iniciar sessão no Intune
 
-Inscreva-se na [Intune](https://aka.ms/intuneportal) como [administrador global ou administrador do Serviço Intune](../fundamentals/users-add.md#types-of-administrators). Se criou uma Subscrição de avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
+Inscreva-se na [Intune](https://aka.ms/intuneportal) como [administrador global ou administrador do Serviço Intune](../fundamentals/users-add.md#types-of-administrators). Se criou uma Subscrição de Avaliação do Intune, a conta com a qual criou a subscrição é de Administrador global.
 
 ## <a name="add-the-client-app-to-intune"></a>Adicionar a aplicação cliente ao Intune
 
@@ -46,7 +46,7 @@ Inscreva-se na [Intune](https://aka.ms/intuneportal) como [administrador global 
 Siga os seguintes passos para adicionar uma aplicação ao Intune:
 
 1. Intune , selecione **Apps** > **Todas as aplicações** > **Adicionar**. [Intune](https://aka.ms/intuneportal) 
-2. Selecione o **Windows 10** na secção **Suite Office 365** do painel do **tipo Select.**
+2. Selecione o **Windows 10** na secção aplicações da **Microsoft 365** do painel do **tipo Select.**
 3. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 4. Confirme os detalhes predefinidos na página de informação da **Suite App.**
 5. Clique em **Seguir** para exibir a página de suíte de **aplicação Configure.**
@@ -70,10 +70,10 @@ Siga os seguintes passos para atribuir uma aplicação a um grupo:
 
 1. Intune , selecione **Apps** > **Todas as aplicações.** [Intune](https://aka.ms/intuneportal) 
 2. Selecione a aplicação que pretende atribuir a um grupo.
-3. Clique em **Atribuições** > **Adicionar grupo** para exibir o painel do **grupo Adicionar.**
+3. Clique em **Tarefas** > **Adicione** o grupo para exibir o painel do **grupo Adicionar.**
 4. Selecione **Disponível para dispositivos inscritos** na caixa pendente **Tipo de atribuição**. 
-5. Clique em **Grupos Incluídos** > **Selecionar grupos para incluir** > **Técnicos de Teste da Contoso**.
-6. Clique em **Selecionar** > **OK** > **OK** > **Guardar** para atribuir ao grupo.
+5. Clique em **grupos incluídos** > **Selecione grupos para incluir** > **Os Testers Contoso**.
+6. Clique em **Selecionar** > **OK** > **OK** > **Guardar** para atribuir o grupo.
 
 Agora já atribuiu a aplicação ao grupo **Técnicos de Teste da Contoso**.
 
@@ -87,8 +87,8 @@ Tem de instalar e utilizar a aplicação Portal da Empresa para instalar a aplic
     > O dispositivo tem de estar [inscrito no Intune](../enrollment/quickstart-enroll-windows-device.md). Além disso, tem de iniciar sessão no dispositivo com uma conta incluída no grupo ao qual atribuiu a aplicação.
 
 2. A partir do menu **Iniciar**, abra a **Microsoft Store**. Em seguida, localize a aplicação **Portal da Empresa** e instale-a.
-3. Inicie a aplicação **Portal da Empresa**.
-4. Clique na aplicação que adicionou com o Intune. Neste guia de início rápido, adicionou a aplicação **Conjunto de Aplicações do Microsoft Office 365**.
+3. Lançar a aplicação Portal da **Empresa.**
+4. Clique na aplicação que adicionou com o Intune. Neste arranque rápido, adicionou o conjunto **de Aplicações Microsoft 365.**
 
     > [!NOTE]
     > Se não tiver atribuído com êxito nenhuma aplicação ao utilizador do Intune, verá a seguinte mensagem: *O seu administrador de TI não lhe disponibilizou nenhuma aplicação.*
@@ -97,7 +97,7 @@ Tem de instalar e utilizar a aplicação Portal da Empresa para instalar a aplic
 
 Se as suas necessidades empresariais incluírem a atribuição da aplicação Portal da Empresa à sua força de trabalho, pode atribuir manualmente a aplicação Portal da Empresa do Windows 10 diretamente a partir do Intune. Para obter mais informações, veja [Adicionar manualmente a aplicação Portal da Empresa do Windows 10 através do Microsoft Intune](company-portal-app.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste guia de início rápido, adicionou aplicações ao Intune, atribuiu as aplicações a um grupo e instalou as aplicações no dispositivo inscrito com o Windows 10 Desktop. Para obter mais informações sobre a gestão de aplicações no Intune, veja [O que é a gestão de aplicações do Microsoft Intune?](app-management.md)
 

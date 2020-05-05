@@ -1,12 +1,12 @@
 ---
-title: Instalar o Office 365 em dispositivos macOS através do Microsoft Intune
+title: Instale aplicações do Office 365 para dispositivos macOS utilizando o Microsoft Intune
 titleSuffix: ''
 description: Saiba como pode utilizar o Microsoft Intune para instalar as aplicações do Office 365 em dispositivos macOS.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,36 +18,38 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007d5929c6d1b0dd953d4910b31c872582e817cc
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324855"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023236"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Atribuir o Office 365 a dispositivos macOS com o Microsoft Intune
 
-Com este tipo de aplicação, é mais fácil atribuir aplicações da versão 2016 do Office 365 a dispositivos macOS. Ao utilizar este tipo de aplicações, pode instalar o Word, Excel, PowerPoint, Outlook e OneNote. Para ajudar a manter as aplicações mais protegidas e atualizadas, as aplicações vêm com Microsoft AutoUpdate (MAU). As aplicações que quer são mostradas como uma aplicação na lista de aplicações na consola do Intune.
+Com este tipo de aplicação, é mais fácil atribuir aplicações da versão 2016 do Office 365 a dispositivos macOS. Ao utilizar este tipo de aplicação, pode instalar word, Excel, PowerPoint, Outlook, OneNote e Teams. Para ajudar a manter as aplicações mais protegidas e atualizadas, as aplicações vêm com Microsoft AutoUpdate (MAU). As aplicações que quer são mostradas como uma aplicação na lista de aplicações na consola do Intune.
 
+> [!NOTE]
+> O Microsoft Office 365 ProPlus foi renomeado para **microsoft 365 Apps para empresa**. Na nossa documentação, geralmente vamos referir-nos a ela como **Aplicações Microsoft 365**.
 
 ## <a name="before-you-start"></a>Antes de começar
 
-Antes de começar a adicionar o Office 365 a dispositivos macOS, compreenda os seguintes detalhes:
+Antes de começar a adicionar aplicações do Office 365 aos dispositivos macOS, compreenda os seguintes detalhes:
 
 - Os dispositivos em que pretende implementar estas aplicações têm de ter o macOS 10.10 ou posterior em execução.
 - O Intune suporta apenas a adição de aplicações do Office que são incluídas com o Office 2016 apenas suite de Mac.
 - Se estiverem abertas aplicações do Office quando o Intune instalar o conjunto de aplicações, os utilizadores poderão perder os dados dos ficheiros não guardados.
 
-## <a name="select-the-office-365-suite-app-type"></a>Selecione o tipo de aplicativo Office 365 Suite
+## <a name="select-microsoft-365-apps"></a>Selecione Aplicações Microsoft 365
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
-3. Selecione **macOS** na secção **Suite Office 365** do painel do **tipo select.**
-4. Clique em **Selecionar**. Os **passos da Suíte Add Office 365** são apresentados.
+3. Selecione **o macOS** na secção aplicações microsoft **365** do painel do **tipo select.**
+4. 4. Clique em **Selecionar**. Os passos **add Microsoft 365 Apps** são apresentados.
 
 ## <a name="step-1---app-suite-information"></a>Passo 1 - Informação da suite da aplicação
 
-Neste passo, vai fornecer as informações acerca do conjunto de aplicações. Estas informações ajudam-no a identificar o conjunto de aplicações no Intune e também ajuda os utilizadores a encontrá-la no portal da empresa.
+Neste passo, vai fornecer as informações acerca do conjunto de aplicações. Estas informações ajudam-no a identificar o conjunto de aplicações no Intune e também ajudam os utilizadores a encontrá-lo no portal da empresa.
 
 1. Na página de informações do **suite app,** pode confirmar ou modificar os valores predefinidos:
     - **Nome do Conjunto**: introduza o nome do conjunto de aplicações tal como será apresentado no portal da empresa. Confirme que todos os nomes de conjuntos de aplicações que utiliza são exclusivos. Se o nome de um conjunto de aplicações existir em duplicado, apenas uma das aplicações será apresentada aos utilizadores no portal da empresa.
@@ -60,7 +62,7 @@ Neste passo, vai fornecer as informações acerca do conjunto de aplicações. E
     - **Programador**: a Microsoft aparece como o programador.
     - **Proprietário**: a Microsoft aparece como o proprietário.
     - **Notas**: introduza quaisquer notas que queira associar a esta aplicação.
-    - **Logótipo**: o logótipo do Office 365 é apresentado com a aplicação quando os utilizadores procuram no portal da empresa.
+    - **Logotipo**: O logótipo das Aplicações Microsoft 365 é apresentado com a aplicação quando os utilizadores navegam no portal da empresa.
 2. Clique em **Seguir** para exibir a página **de tags scope.**
 
 ## <a name="step-2---select-scope-tags-optional"></a>Passo 2 - Selecione etiquetas de âmbito (opcional)
@@ -74,7 +76,7 @@ Pode utilizar etiquetas de âmbito para determinar quem pode ver informações s
 1. Selecione o **Necessário** ou Disponível para atribuições de grupo de **dispositivos inscritos** para o conjunto de aplicações. Para mais informações, consulte [grupos Add para organizar utilizadores e dispositivos](../fundamentals/groups-add.md) e [atribuir aplicações a grupos com](apps-deploy.md)o Microsoft Intune .
 
     >[!Note]
-    > Não é possível desinstalar o Office 365 para o pacote de aplicações macOS através do Intune.
+    > Não é possível desinstalar o pacote de aplicações 'Microsoft 365 para macOS' através do Intune.
 
 2. Clique em **Seguir** para exibir a página **Review + criar.** 
 
@@ -83,9 +85,9 @@ Pode utilizar etiquetas de âmbito para determinar quem pode ver informações s
 1. Reveja os valores e configurações que inseriu para a suite da aplicação.
 2. Quando terminar, clique em **Criar** para adicionar a app ao Intune.
 
-    A lâmina **de visão geral** da suíte de aplicação Office 365 Window 10 que criou é exibida. O conjunto é apresentado na lista de aplicações como uma única entrada.
+    A lâmina **de visão geral** é exibida. O conjunto é apresentado na lista de aplicações como uma única entrada.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- Para saber mais sobre a adição de aplicações do Office 365 a dispositivos Windows 10, veja [Atribuir aplicações do Office 365 ProPlus 2016 para dispositivos Windows 10 com o Microsoft Intune](apps-add-office365.md).
+- Para saber adicionar aplicações do Office 365 aos dispositivos Windows 10, consulte [as aplicações DoMicrosoft 365 para dispositivos Windows 10 com](apps-add-office365.md)o Microsoft Intune .
 - Para saber mais sobre como incluir e excluir atribuições de aplicações a partir de grupos de utilizadores, veja [Incluir e excluir atribuições de aplicações](apps-inc-exl-assignments.md).

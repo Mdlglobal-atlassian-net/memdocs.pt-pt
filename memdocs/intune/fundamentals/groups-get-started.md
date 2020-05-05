@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7613606cd6803c4d65007ce5792e47d60bfb38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331509"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075392"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Grupos clássicos do Microsoft Intune no portal do Azure
 
@@ -47,9 +47,9 @@ Algumas das capacidades de grupos do Intune que poderá ter utilizado anteriorme
 ## <a name="how-to-get-started"></a>Como começar?
 
 - Leia os seguintes tópicos para saber mais sobre os grupos de segurança do Azure AD e como funcionam:
-  - [Gerir o acesso aos recursos com grupos do Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Gerir grupos no Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Utilizar atributos para criar regras avançadas](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Gerir o acesso aos recursos com grupos de Diretórios Ativos Azure.](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)
+  - [Gerir grupos no Diretório Ativo Azure.](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
+  - [Usando atributos para criar regras avançadas.](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
 - Certifique-se de que os administradores que precisam de criar grupos são adicionados à função **Administrador do Serviço Intune** do Azure AD. A função Administrador do Serviço Azure AD não tem as permissões **Gerir Grupo**.
 - Se os seus grupos do Intune utilizaram a opção **Excluir membros específicos**, tem de decidir se pode reestruturar esses grupos sem exclusões ou se precisa de regras avançadas para satisfazer as necessidades da empresa.
 
@@ -65,7 +65,7 @@ Quando os grupos são migrados do portal do Azure para o Intune no portal do Azu
 |Grupo de dispositivos dinâmico|Grupo de segurança dinâmico do Azure AD|
 |Um grupo com uma condição de inclusão|Grupo de segurança estático do Azure AD que contém quaisquer membros estáticos ou dinâmicos da condição de inclusão no Intune|
 |Um grupo com uma condição de exclusão|Não migrado|
-|Os grupos incorporados:<br>- **Todos os Utilizadores**<br>- **Utilizadores Sem Grupo**<br>- **Todos os Dispositivos**<br>- **Dispositivos Sem Grupo**<br>- **Todos os Computadores**<br>- **Todos os Dispositivos Móveis**<br>- **Todos os dispositivos geridos pela MDM**<br>- **Todos os dispositivos geridos pelo EAS**|Grupos de segurança do Azure AD|
+|Os grupos incorporados:<br>- **Todos os Utilizadores**<br>- **Utilizadores Sem Grupo**<br>- **Todos os Dispositivos**<br>- **Dispositivos Sem Grupo**<br>- **Todos os Computadores**<br>- **Todos os dispositivos móveis**<br>- **Todos os dispositivos geridos pela MDM**<br>- **Todos os dispositivos geridos pelo EAS**|Grupos de segurança do Azure AD|
 
 ## <a name="group-hierarchy"></a>Hierarquia de grupos
 
@@ -82,7 +82,7 @@ Os atributos podem ter propriedades de dispositivos que podem ser utilizadas na 
 |Atributo de gestor para grupos de utilizadores|Regra Avançada para o atributo *gestor* nos grupos dinâmicos|
 |Todos os utilizadores do grupo de utilizadores principal|Grupo estático com o respetivo grupo como membro|
 |Todos os dispositivos móveis do grupo de dispositivos principal|Grupo estático com o respetivo grupo como membro|
-|Todos os dispositivos móveis geridos pelo Intune|Atributo Tipo de Gestão com "MDM" como o valor para grupo dinâmico|
+|Todos os dispositivos móveis geridos pelo Intune|Atributo tipo de gestão com 'MDM' como valor para grupo dinâmico|
 |Grupos aninhados em grupos estáticos |Grupos aninhados em grupos estáticos|
 |Grupos aninhados em grupos dinâmicos|Grupo dinâmico com um nível de aninhamento|
 
