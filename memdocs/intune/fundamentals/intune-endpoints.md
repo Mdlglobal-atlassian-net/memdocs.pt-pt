@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331369"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725538"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Pontos finais da rede para Microsoft Intune  
 
@@ -34,6 +34,9 @@ Como um serviço apenas na cloud, o Intune não precisa de infraestrutura no loc
 
 Para gerir dispositivos protegidos por firewalls e servidores proxy, tem de ativar as comunicações para o Intune.
 
+> [!NOTE]
+> As informações na secção aplicam-se também ao Conector de Certificadoino Microsoft. O conector tem os mesmos requisitos de rede que os dispositivos geridos
+
 - O servidor proxy deve suportar tanto **http (80)** como **HTTPS (443)** porque os clientes Intune usam ambos os protocolos. A Proteção de Informações do Windows utiliza a porta 444.
 - Para algumas tarefas (como descarregar atualizações de software para o agente clássico do PC), intune requer acesso não autenticado do servidor proxy ao manage.microsoft.com
 
@@ -44,6 +47,7 @@ Pode modificar as definições do servidor proxy em computadores cliente individ
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Os dispositivos geridos requerem configurações que permitam a **Todos os Utilizadores** aceder a serviços através de firewalls.
+
 
 As tabelas que se seguem listam as portas e os serviços a que o cliente do Intune acede:
 
@@ -125,7 +129,7 @@ Para metadados de otimização de entrega:
 
 ## <a name="apple-device-network-information"></a>Informações da rede de dispositivos Apple  
 
-|Utilizado para|Nome do anfitrião (endereço IP/sub-rede)|Protocol|Porta|
+|Utilizado para|Nome do anfitrião (endereço IP/sub-rede)|Protocolo|Porta|
 |-----|--------|------|-------|
 |Obter e apresentar o conteúdo de servidores da Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
 |Comunicações com os servidores do APNS|#-courier.push.apple.com<br>'#' é um número aleatório de 0 a 50.|    TCP     |  5223 e 443  |

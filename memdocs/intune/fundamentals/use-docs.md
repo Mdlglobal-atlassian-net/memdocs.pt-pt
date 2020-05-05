@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330249"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726046"
 ---
 # <a name="using-the-intune-docs"></a>Using the Intune docs (Utilizar a documentação do Intune)
 
@@ -28,11 +28,11 @@ Para obter ajuda geral e apoio ao Intune, consulte [Obter suporte para Intune](g
 
  Utilize as seguintes sugestões de procura para localizar as informações de que necessita:  
 
-- Ao utilizar o seu motor de pesquisa preferido para localizar conteúdos para o Microsoft Intune, inclua `Intune` juntamente com as suas palavras-chave de pesquisa.  
+- Ao utilizar o seu motor de busca preferido `Intune` para localizar conteúdos para o Microsoft Intune, inclua juntamente com as suas palavras-chave de pesquisa.  
 
   - Procure os resultados de docs.microsoft.com. Os resultados de technet.microsoft.com ou msdn.microsoft.com são para versões de produtos mais antigas.  
 
-  - Para focar ainda mais os resultados da pesquisa na biblioteca de conteúdos atuais, inclua `site:docs.microsoft.com` para examinar o motor de busca.  
+  - Para focar ainda mais os resultados `site:docs.microsoft.com` da pesquisa na biblioteca de conteúdos atuais, inclua o scope do motor de busca.  
 
 - Utilize termos de pesquisa que correspondam à terminologia na interface do utilizador e documentação online. Evite termos ou abreviaturas não oficiais que possa ver em conteúdos comunitários.
 
@@ -86,7 +86,7 @@ Os docs Intune, como a maioria dos conteúdos em docs.microsoft.com, são de có
 
 4. Na secção de alteração de ficheiros Proposta, insira o comentário de compromisso público descrevendo *o que* mudou. Em seguida, clique em **Propor alterar ficheiros**.  
 
-5. Desça e verifique as alterações que fez. Clique em **Criar pedido de puxar** para abrir o formulário. Descreva *por* que fez esta mudança. Clique **em Criar pedido de puxar**.
+5. Desça e verifique as alterações que fez. Clique em **Criar pedido de puxar** para abrir o formulário. Descreva *por* que fez esta mudança. Clique em **Criar pedido Pull**.
 
 A equipa de redação receberá o seu pedido de puxão, atribuirá o item ao autor apropriado, analisará o texto e fará um passe de edição rápida, e aprovará e fundirá as alterações ou contactá-lo-á para obter mais informações sobre a atualização.  
 
@@ -94,7 +94,7 @@ A equipa de redação receberá o seu pedido de puxão, atribuirá o item ao aut
 
 Se está interessado em contribuir, mas não sabe por onde começar, consulte as seguintes sugestões:  
 
-- Reveja um artigo para precisão. Em seguida, atualize os metadados **ms.date** utilizando `mm/dd/yyyy` formato. Esta contribuição ajuda a manter o conteúdo fresco.  
+- Reveja um artigo para precisão. Em seguida, atualize os `mm/dd/yyyy` metadados **ms.date** utilizando o formato. Esta contribuição ajuda a manter o conteúdo fresco.  
 
 - Adicione esclarecimentos, exemplos ou orientações com base na sua experiência. Esta contribuição usa o poder da comunidade para partilhar conhecimento.
 
@@ -117,11 +117,11 @@ Siga estas orientações gerais ao contribuir para os docs intune:
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidação da documentação para o Microsoft Endpoint Manager
 
-Para melhor apoiar os cenários combinados para Intune e Configuration Manager, esta biblioteca de documentação foi transferida para [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). A biblioteca de documentação do Gestor de Configuração passará mais tarde para `docs.microsoft.com/mem/configmgr`. Todas as ligações serão automaticamente redirecionadas, pelo que não é necessário fazer alterações para a leitura deste conteúdo.
+Para melhor suportar cenários combinados para Intune e Configuration Manager, a documentação intune e configuração manager foi consolidada no site do Microsoft Endpoint Manager. A documentação Intune [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) está agora e a [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr)biblioteca de documentação do Gestor de Configuração está disponível em . Todas as ligações serão automaticamente redirecionadas se estiver a utilizar um URL antigo, pelo que não precisa de fazer alterações para a leitura deste conteúdo.
 
 Se fornecer feedback ou contribuir para artigos, são necessárias algumas alterações:
 
-- As questões existentes do GitHub permanecerão no repositório original, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- As questões existentes do GitHub permaneceram no [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/)repositório original, ou .
 
   - Estas questões não vão aparecer como questões abertas ou fechadas na secção de Feedback do artigo vinculado.
 
