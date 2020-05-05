@@ -5,7 +5,7 @@ description: Reveja as definições de predefinição e de definição disponív
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11d01481369f1f6439217262c4181c2c9dabf548
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: 0416332c74ba3305d344794c888d1867c25f8271
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693387"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782230"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Definições de base de segurança do Windows MDM para Intune
 
@@ -38,6 +38,7 @@ Certifique-se de selecionar a versão da linha de base que pretende ver.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **Base de Segurança do MDM para maio de 2019:**  
 > [!NOTE]
 > Em junho de 2019, o modelo de Base de Segurança do MDM para maio de *2019* foi lançado como geralmente disponível (não em pré-visualização). Esta versão da linha de base de segurança substitui a linha de base anterior, a Base de Segurança do *MDM para outubro de 2018.*  Os perfis criados antes da disponibilidade da linha de base de maio de 2019 não serão atualizados para refletir as definições e valores que estão na versão de maio de 2019.  Embora não possa criar novos perfis com base no modelo de pré-visualização, pode editar e continuar a utilizar perfis que criou anteriormente baseados no modelo de pré-visualização.
@@ -46,6 +47,7 @@ Para saber o que mudou nesta versão da linha de base da versão anterior, veja 
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Pré-visualização - Base de Segurança do MDM para outubro de 2018**:  
 > [!NOTE]
 > Esta é a versão de pré-visualização da linha de base de segurança do MDM, lançada em outubro de 2018. Esta linha de pré-visualização foi substituída em junho de 2019 pelo lançamento do modelo de Base de Segurança do MDM para maio de *2019,* que geralmente está disponível (não em pré-visualização). Os perfis criados antes da disponibilidade da linha de base de segurança do MDM para maio de *2019* não serão atualizados para refletir as definições e valores que estão na linha de base de segurança do MDM para maio de 2019. Embora não possa criar novos perfis com base no modelo de pré-visualização, pode editar e continuar a utilizar perfis que criou anteriormente baseados no modelo de pré-visualização.
@@ -146,11 +148,17 @@ Para mais informações, consulte [Policy CSP - BitLocker](https://docs.microsof
 
   Para a política de unidade amovível BitLocker, configure a seguinte definição:
 
-  - **Exigir encriptação para o acesso**à escrita:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **O bloqueio escreve o acesso a unidades de dados amovíveis não protegidas pelo BitLocker:**  
     **Padrão**: Sim
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Exigir encriptação para o acesso**à escrita:  
+    **Padrão**: Sim
 
 - Política de **unidade amovível BitLocker:**  
   Esta definição de política é usada para controlar o método de encriptação e a força da cifra. Os valores desta política determinam a força da cifra que o BitLocker utiliza para encriptação. As empresas podem querer controlar o nível de encriptação para uma maior segurança (a AES-256 é mais forte do que a AES-128). Se ativar esta definição, pode configurar um algoritmo de encriptação e a força de cifra chave para unidades de dados fixas, unidades do sistema operativo e unidades de dados amovíveis individualmente. Para unidades fixas e funcionais do sistema, recomendamos que utilize o algoritmo XTS-AES. Para unidades amovíveis, deve utilizar AES-CBC 128-bit ou AES-CBC 256-bit se a unidade for utilizada noutros dispositivos que não estejam a executar o Windows 10, versão 1511 ou mais tarde. A alteração do método de encriptação não tem qualquer efeito se a unidade já estiver encriptada ou se a encriptação estiver em curso. Nestes casos, esta definição de política é ignorada.  
@@ -284,7 +292,7 @@ Para mais informações, consulte [Policy CSP - DataProtection](https://docs.mic
 
 Para mais informações, consulte [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) na documentação do Windows.
 
-- **Guarda credencial:**  
+- Ligue a **proteção de credenciais:**  
   Esta definição permite que os utilizadores liguem a Guarda Credencial com segurança baseada em virtualização para ajudar a proteger as credenciais no próximo reboot.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -384,7 +392,7 @@ Para mais informações, consulte [Policy CSP - DeviceLock](https://docs.microso
 
     **Padrão**: 60
 
-  - **Tipo de palavra-passe exigido:**  
+  - **Senha necessária:**  
     Determina o tipo de PIN ou palavra-passe necessário.  
     [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -1504,7 +1512,7 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
 
   **Padrão**: Sim
   
-- **Permitir aplicações de acesso ui para locais seguros:**  
+- **Apenas permitir aplicações de acesso ui para locais seguros:**  
   Esta definição de política controla se os programas de acessibilidade da interface do utilizador (UIAccess ou UIA) podem desativar automaticamente o ambiente de trabalho seguro para obter indicações de elevação utilizadas por um utilizador padrão.
 
   - *Sim* - Os programas UIA, incluindo o Windows Remote Assistance, desativam automaticamente o ambiente de trabalho seguro para obter indicações de elevação. Se não desativar a definição de definição de "Controlo de Conta do Utilizador: Mude para o ambiente de trabalho seguro quando pedir elevação", as indicações aparecem no ambiente de trabalho do utilizador interativo em vez do ambiente de trabalho seguro.
@@ -1542,151 +1550,168 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
 
 Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) na documentação do Windows.
 
-- **Digitalizar mensagens de correio de entrada:**  
-  Permite ou proíbe a digitalização de e-mail.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Padrão**: Sim
-
-- **As aplicações de escritório lançam o tipo de processo infantil:**  
-  As aplicações de escritório não serão autorizadas a criar processos infantis. Isto inclui Word, Excel, PowerPoint, OneNote e Access. Este é um comportamento típico de malware, especialmente para ataques macro-baseados que tentam usar aplicações do Office para lançar ou descarregar executáveis maliciosos.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Predefinição**: Bloco
-
-- Tipo de consentimento de **submissão da amostra**defensor:  
-  Verifica o nível de consentimento do utilizador no Microsoft Defender para enviar dados. Se o consentimento exigido já tiver sido concedido, o Microsoft Defender submete-os. Caso contrário (e se o utilizador tiver especificado nunca pedir), a UI é lançada para pedir o consentimento do utilizador (quando o Defender/AllowCloudProtection é permitido) antes de enviar dados.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Predefinição**: Enviar amostras seguras automaticamente
-
-- Intervalo de **atualização de assinatura (em horas)**:  
-  Intervalo de atualização de assinatura de defender em horas.
-
-  **Padrão**: 4
-
-- **Script descarregado tipo de execução**de carga útil:  
-  O script do defender descarregou o tipo de execução da carga útil.
-
-  **Predefinição**: Bloco
-  
-- Evite o tipo de **roubo de credenciais:**  
-  A Microsoft Defender Credential Guard usa segurança baseada em virtualização para isolar segredos para que apenas o software privilegiado do sistema possa aceder aos mesmos. O acesso não autorizado a estes segredos pode levar a ataques de roubo de credenciais, tal como Ataques PtH ou PtT. A Microsoft Defender Credential Guard impede estes ataques protegendo as hashes de senha NTLM, os bilhetes de concessão de bilhetes Kerberos e credenciais armazenadas por aplicações como credenciais de domínio.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Padrão**: Ativar
-
-- **Tipo de execução de conteúdo de e-mail:**  
-  Esta regra bloqueia os seguintes tipos de ficheiros de executar ou lançar a partir de um e-mail visto no Microsoft Outlook ou no webmail (como Gmail.com ou Outlook.com): Ficheiros executáveis (tais como ficheiros de script .exe, .dll ou .scr) (tais como um Ficheiro de scriptPowerShell .ps, VisualBasic .vbs ou JavaScript .js) Script.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Predefinição**: Bloco
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- Lançamento do **leitor adobe num processo infantil:**  
+- Bloqueie o **Leitor adobe de criar processos infantis:**  
 Esta regra impede os ataques bloqueando o Adobe Reader de criar processos adicionais. Através de engenharia social ou explorações, o malware pode descarregar e lançar cargas adicionais e sair do Adobe Reader. Ao bloquear os processos infantis de serem gerados pelo Adobe Reader, o malware que tenta usá-lo como vetor está impedido de se espalhar.
 [Mais informações](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Padrão**: Ativar
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Proteção da rede:**  
-  Esta política permite-lhe ativar a proteção da rede (block/audit) ou desligar no Microsoft Defender Exploit Guard. A proteção de rede é uma funcionalidade do Microsoft Defender Exploit Guard que protege os funcionários que usam qualquer aplicação para aceder a esquemas de phishing, sites de hospedagem de exploração e conteúdo malicioso na Internet. Isto inclui impedir que os navegadores de terceiros se conectem a sites perigosos. O tipo de valor é inteiro. Se ativar esta definição, a proteção da rede é ativada e os funcionários não podem desligá-lo. O seu comportamento pode ser controlado pelas seguintes opções: Bloquear e Auditar. Se ativar esta política com a opção "Block", os utilizadores e aplicações estão impedidos de se ligarem a domínios perigosos. Pode ver esta atividade no Microsoft Defender Security Center. Se ativar esta política com a opção "Auditoria", os utilizadores/aplicações não serão impedidos de se ligarem a domínios perigosos. No entanto, ainda vai ver esta atividade no Microsoft Defender Security Center. Se desativar esta política, os utilizadores/aplicações não serão impedidos de se ligarem a domínios perigosos. Não verá nenhuma atividade de rede no Microsoft Defender Security Center. Se não configurar esta política, o bloqueio da rede é desativado por defeito.  
-  [Mais informações](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Aplicações de comunicação de escritório saem num processo infantil:**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Padrão**: Ativar
+
+- **Insira quantas vezes (0-24 horas) para verificar se há atualizações de inteligência de segurança**  
+  CSP: [Intervalo de atualização de defender/assinatura](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Especifique com que frequência verificar se há novas assinaturas. Um valor de 1 é uma hora, 2 são duas horas, e assim por diante.
+
+  **Padrão**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - Dia de **exame de horário do defender:**  
   O defender marca o dia da varredura.
 
   **Padrão**: Todos os dias
 
-- **Proteção entregue em nuvem:**  
-  Para melhor proteger o seu PC, o Microsoft Defender enviará informações à Microsoft sobre quaisquer problemas que encontre. A Microsoft analisará essa informação, aprenderá mais sobre problemas que afetam o mesmo e outros clientes e oferecerá soluções melhoradas.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Ligue a proteção entregue em nuvem:**  
+  CSP: [Defender/Permitir Proteção cloud](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Quando definido para Sim, o Defender enviará informações à Microsoft sobre quaisquer problemas que encontre. Se definido para Não configurado, o cliente voltará ao predefinido, o que permite a funcionalidade, mas permite ao utilizador desativá-la.
 
   **Padrão**: Sim  
 
-- **Defender ação de aplicações potencialmente indesejadas:**  
-  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Microsoft Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem fazer ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico do PUA inclui: Vários tipos de software que agregam a injeção de Anúncio saqueado em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidos como programas antivírus fraudulentos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.  
-  [Mais informações](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Ativar a proteção em tempo real**  
+  CSP: [Monitorização de Tempo Real/Defensor](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Predefinição**: Bloco  
-
-- **Script obfuscated macro código tipo:**  
-  Malware e outras ameaças podem tentar obstar ou esconder o seu código malicioso em alguns ficheiros de script. Esta regra impede que os scripts que parecem estar obfuscados de correr.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Predefinição**: Bloco
-
-- **Digitalizar unidades amovíveis durante uma varredura completa:**  
-  Permite ao Microsoft Defender procurar software malicioso e indesejado em unidades amovíveis (por exemplo, pen drives) durante uma varredura completa. O Microsoft Defender Antivírus digitaliza todos os ficheiros em dispositivos USB antes da execução.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067036)
+  Quando esta definição estiver definida para Sim, a monitorização em tempo real será executada e o utilizador não pode desativá-la. Quando definido para Não configurado, a definição é devolvida ao padrão do cliente que está ligado, mas o utilizador pode troco.pode troco. Para desativar a monitorização em tempo real, utilize um URI personalizado.
 
   **Padrão**: Sim  
 
 - **Digitale ficheiros de arquivo:**  
-  Os ficheiros de arquivo do Defender scan.
+  CSP:[](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Quando definido para Sim, ficheiros de arquivo como zip ou digitalização de ficheiros CAB serão aplicados. Quando definido para Não configurado, a definição será devolvida ao predefinido do cliente, que é digitalizar ficheiros arquivados, no entanto o utilizador poderá desativar esta posição.
 
   **Padrão**: Sim
 
-- **Monitorização do comportamento:**  
-  Permite ou proíbe a funcionalidade de Monitorização de Comportamento do Microsoft Defender. Incorporados no Windows 10, estes sensores recolhem e processam sinais comportamentais do sistema operativo e enviam estes dados de sensores para a sua instância privada, isolada e cloud do Microsoft Defender ATP.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Ligue a monitorização do comportamento:**  
+  CSP: [Monitorização de Comportamento de Defesa/Permitir](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Quando esta definição estiver definida para Sim, a monitorização do comportamento será executada e o utilizador não pode desativá-la. Quando definido para Não configurado, a definição é devolvida ao padrão do cliente que está ligado, mas o utilizador pode troco.pode troco. Para desativar a monitorização em tempo real, utilize um URI personalizado.
 
   **Padrão**: Sim
 
-- **Scaneie ficheiros abertos a partir de pastas de rede:**  
-  Se os ficheiros forem apenas de leitura, o utilizador não será capaz de remover qualquer malware detetado.
+- **Digitalizar mensagens de correio de entrada:**  
+  CSP: [Defender/PermitirEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Quando definido para Sim, a caixa de correio eletrónico e os ficheiros de correio eletrónico como PST, DBX, MNX, MIME e BINHEX serão digitalizados. Quando não estiver configurada, a definição voltará ao padrão do cliente de ficheiros de e-mail que não estão a ser digitalizados.
 
   **Padrão**: Sim
 
-- Tipo de **processo USB não confiável:**  
-  Com esta regra, os administradores podem impedir que ficheiros executáveis não assinados ou não confiáveis sejam executados a partir de unidades amovíveis USB, incluindo cartões SD.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Digitalizar unidades amovíveis durante uma varredura completa:**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  Quando definido para Sim, durante uma varredura completa de unidades amovíveis (por exemplo, pen drives USB) será digitalizado. Quando definido para Não Configurado, a definição voltará ao padrão do cliente, que digitaliza as unidades amovíveis, no entanto o utilizador pode desativar esta.
+  **Padrão**: Sim  
+
+- **Bloquear pedidos de injetação de código em outros processos:**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Quando definido para Sim, as aplicações do Office serão bloqueadas de injetar código em outros processos. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Predefinição**: Bloco
 
-- **Aplicações de escritório outros tipos de injeção**de processo:  
-  As aplicações de escritório, incluindo Word, Excel, PowerPoint e OneNote, não podem injetar código noutros processos. Isto é normalmente usado por malware para executar código malicioso numa tentativa de esconder a atividade de motores de digitalização antivírus.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Aplicações do Block Office da criação de conteúdo executável**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Quando definidopara Sim, as aplicações do Office não serão autorizadas a criar conteúdo executável. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: 3B576869-A4EC-4529-8536-B80A7769E899
 
   **Predefinição**: Bloco
 
-- **O código macro do escritório permite o tipo de importações Win32:**  
-  O malware pode usar o código macro nos ficheiros do Office para importar e carregar DLLs Win32, que é usado para fazer chamadas API para permitir mais infeções em todo o sistema. Esta regra tenta bloquear ficheiros do Office que contêm código macro que pode importar DLLs Win32. Isto inclui Word, Excel, PowerPoint e OneNote.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Bloqueie todas as candidaturas do Office à criação de processos infantis**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Quando definido para o modo de Auditoria, os eventos do Windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
   **Predefinição**: Bloco
 
-- **Nível de bloco de nuvem de defensor:**  
-  Nível de bloco de nuvem de defensor.
+- **Block Win32 API liga da macro do Office:**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872977)
 
-  **Predefinição**: Não configurado
+  Quando definido para Sim, os macro's do Office serão impedidos de usar chamadas Win32 API. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Predefinição**: Bloco
 
-- **Monitorização em tempo real:**  
-  Defender requer monitorização em tempo real.
+- **Execução por blocode scripts potencialmente obfuscados (js/vbs/ps)**:  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872978)
 
-  **Padrão**: Sim
+  Quando definido para sim, Defender bloqueará a execução de scripts obfuscados. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Predefinição**: Bloco
+
+- **Tipo de execução de conteúdo de e-mail:**    
+  [Bloquear o download de conteúdo executável a partir de clientes de e-mail e webmail](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Quando definido para Sim, os conteúdos executáveis descarregados a partir de e-mail e clientes de webmail serão bloqueados. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado.
+
+  **Predefinição**: Bloco
+
+- Evite o tipo de **roubo de credenciais:**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Quando definido para Sim, as tentativas de roubar credenciais via lsass.exe serão bloqueadas. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  **Padrão**: Ativar
+
+- **Defender ação de aplicações potencialmente indesejadas:**  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+
+  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Microsoft Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem fazer ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico do PUA inclui: Vários tipos de software que agregam a injeção de Anúncio saqueado em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidos como programas antivírus fraudulentos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.
+
+  **Predefinição**: Bloco
+
+- **Bloqueie processos não confiáveis e não assinados que funcionam**a partir de USB:  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Quando definido para Sim, processos não confiáveis/não assinados que executem a partir de uma unidade USB serão bloqueados. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **Predefinição**: Bloco
+
+- **Proteção da rede:**  
+  [Proteção de Rede Defensor/Ativa](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Quando definido para Sim, a proteção da rede será ativada para todos os utilizadores do sistema. A proteção da rede protege os colaboradores do acesso a esquemas de phishing e conteúdos maliciosos na Internet. Isto inclui navegadores de terceiros. Definindo isto apenas para Auditoria, os utilizadores não serão bloqueados de domínios perigosos, no entanto, os eventos windows serão levantados. A definição de isto para Não COnfigura devolverá a definição ao predefinido do Windows, que está desativada.
+
+  **Padrão**: Ativar
+
+- Tipo de consentimento de **submissão da amostra**defensor:  
+  [Defender/SubmeterSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Verifica o nível de consentimento do utilizador no Microsoft Defender para enviar dados. Se o consentimento exigido já tiver sido concedido, o Microsoft Defender submete-os. Caso contrário, (e se o utilizador tiver especificado nunca pedir), a UI é lançada para pedir o consentimento do utilizador (quando o Defender/AllowCloudProtection é permitido) antes de enviar dados.
+
+  **Predefinição**: Enviar amostras seguras automaticamente
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Aplicações de comunicação de escritório saem num processo infantil:**  
-  **Padrão**: Ativar
+- **Scan ficheiros de rede**  
+  [Defender/Permitirficheiros de Redes de Digitalização](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Padrão**: Sim
+
+- **Bloqueie o JavaScript ou o VBScript a partir do lançamento de conteúdo executável descarregado**  
+  [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Quando definido para Sim, o Defender bloqueará ficheiros JavaScript ou VBScript que tenham sido descarregados da Internet a partir de serem executados. Quando definido apenas para Auditar, os eventos windows serão levantados em vez de bloquear. A definição para não configurar irá retornar a definição ao predefinido do Windows, que está desligado. Esta regra ASR é controlada através do seguinte GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Aplicações de escritório executáveis criação de conteúdo ou tipo**de lançamento:  
-  Esta regra visa comportamentos típicos usados por addons e scripts suspeitos e maliciosos (extensões) que criam ou lançam ficheiros executáveis. Esta é uma técnica típica de malware. As extensões estão bloqueadas de serem usadas por aplicações do Office. Normalmente, estas extensões utilizam o Anfitrião de Scripts windows (. Ficheiros WSH) para executar scripts que automatizam determinadas tarefas ou fornecem funcionalidades adicionais criadas pelo utilizador.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Predefinição**: Bloco
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>Guia de Segurança Sra.
 
@@ -1736,7 +1761,7 @@ Para mais informações, consulte [Policy CSP - MSSLegacy](https://docs.microsof
 
   **Padrão**: Proteção mais elevada
 
-- **Rede ICMP redireciona os OSPF gerados:**  
+- **Rede ICMP redireciona rotas geradas pela OSPF:**  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Predefinição**: Desativado
@@ -1790,19 +1815,21 @@ Para mais informações, consulte [Policy CSP - RemoteAssistance](https://docs.m
 
   **Predefinição**: Desativar a assistência remota
 
-  Quando programado para ativar a *assistência remota,* configure as seguintes definições adicionais:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **A assistência remota solicitou autorização:**  
-    **Padrão**: Visualização
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - Valor máximo do **tempo de bilhete:**  
-    **Predefinição**: *Não configurado*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - Período máximo de tempo de **bilhete:**  
-    **Predefinição**: Minutos
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **Método de convite por e-mail:**  
-    **Padrão**: MAPI simples
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1920,6 +1947,9 @@ Para mais informações, consulte [Policy CSP - Procure](https://docs.microsoft.
 
 Para mais informações, consulte [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) na documentação do Windows.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Execução por bloco de ficheiros não verificados:**  
   Bloqueie o utilizador de executar ficheiros não verificados.
 
@@ -1936,6 +1966,26 @@ Para mais informações, consulte [Policy CSP - SmartScreen](https://docs.micros
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Padrão**: Sim
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Ligue o Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  A definição disto para Sim irá impor a utilização do SmartScreen para todos os utilizadores. A definição para Não configurada irá devolver a definição ao predefinido do Windows, que é para ativar o SmartScreen, no entanto os utilizadores podem alterar esta definição. Para desativar o SmartScreen, utilize um URI personalizado.
+
+  **Padrão**: Sim
+
+- **Bloqueie os utilizadores de ignorar os avisos do SmartScreen**  
+  CSP: [SmartScreen/PreventoverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Definindo isto para Sim, o SmartScreen não apresentará uma opção para o utilizador ignorar o aviso e executar a aplicação. O aviso será apresentado, mas o utilizador poderá contorná-lo. A definição para Não configurada devolverá a definição ao predefinido do Windows, que é para permitir a sobreposição do utilizador. Esta definição requer a definição 'Impor o SmartScreen para aplicações e ficheiros'.
+
+  **Padrão**: Sim
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>Sistema
 
@@ -1994,52 +2044,40 @@ Para mais informações, consulte [Policy CSP - WindowsConnectionManager](https:
 
 ## <a name="windows-hello-for-business"></a>Windows Hello para empresas
 
-- **Permitir a utilização de uma luta anti-falsificação melhorada, quando disponível**
+- **Bloqueie janelas Olá para negócios**  
+  O Windows Hello for Business é um método alternativo para iniciar sessão no Windows substituindo palavras-passe, Smart Cards e Cartões Inteligentes Virtuais. Se desativar ou não configurar esta definição de política, o dispositivo disponibiliza o Windows Hello for Business. Se ativar esta definição de política, o dispositivo não disponibiliza o Windows Hello for Business para qualquer utilizador.
 
-  Se Sim, os dispositivos utilizarão uma maior enão, quando disponível. Se não, a falsificação será bloqueada. Não configurado irá honrar as configurações feitas no cliente.  
-  [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Predefinição**: Ativado
+  
+  Quando definido para *desativar,* pode configurar as seguintes definições:
 
-  **Padrão**: Sim
+  - **Comprimento mínimo do PIN**  
+    O comprimento mínimo do PIN deve ser entre 4 e 127.
 
-- **Configure o Windows Olá para negócios**
+    **Predefinição**: *Não configurado*
 
-  O Windows Hello for Business é um método alternativo para iniciar sessão no Windows substituindo palavras-passe, Smart Cards e Cartões Inteligentes Virtuais.
+  - **Permitir a utilização de uma luta anti-falsificação melhorada, quando disponível**  
+    [Proteção anti-falsificação](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > As opções para esta definição são invertidas do seu significado implícito. Embora invertido, um valor de *Sim* não permite o Windows Hello e, em vez disso, é tratado como *Não configurado*. Quando esta definição está definida para *Não configurar,* o Windows Hello está ativado em dispositivos que recebem esta linha de base.
-  >
-  > As seguintes descrições foram revistas para refletir este comportamento. A inversão das definições será corrigida numa futura atualização desta linha de base de segurança.
+    Se ativado, os dispositivos utilizarão uma utilização anti-falsificação melhorada, quando disponível. Se não estiver configurado, a configuração do cliente para anti-falsificação será honrada.
 
-  - Quando definido para *Não configurado,* o Windows Hello está ativado e o dispositivo disponibiliza o Windows Hello for Business.
-  - Quando definido para *Sim,* a linha de base não afeta a definição de política do dispositivo. Isto significa que, se o Windows Hello for Business estiver desativado num dispositivo, permanece desativado. Se estiver ativado, permanece ativado.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Predefinição**: Não configurado
 
-  Não é possível desativar o Windows Hello for Business através desta linha de base. Pode desativar o Windows Hello for Business quando configurar a [inscrição](windows-hello.md)do Windows, ou como parte de um perfil de configuração do dispositivo para [proteção de identidade](identity-protection-configure.md).  
+  - **Letras minúsculas em PIN:**  
+    Se necessário, o PIN do utilizador deve incluir pelo menos uma letra minúscula.
 
-  **Padrão**: Sim
+    **Padrão**: Não é permitido
 
-- **Requerer letras minúsculas no PIN:**  
-  Se necessário, o PIN do utilizador deve incluir pelo menos uma letra minúscula.
+  - **Caracteres especiais em PIN:**  
+    Se necessário, o PIN do utilizador deve incluir pelo menos um personagem especial.
 
-  **Padrão**: Permitido
+    **Padrão**: Não é permitido
+ 
 
-- **Requerer caracteres especiais em PIN:**  
-  Se necessário, o PIN do utilizador deve incluir pelo menos um personagem especial.
+  - **Letras maiúsculas em PIN:**  
+    Se necessário, o PIN do utilizador deve incluir pelo menos uma letra maiúscula.
 
-  **Padrão**: Permitido
-
-- **Comprimento mínimo do PIN:**  
-  O comprimento mínimo do PIN deve ser entre 4 e 127.
-
-  **Padrão**: 6
-
-- **Requerer letras maiúsculas em PIN:**  
-  Se necessário, o PIN do utilizador deve incluir pelo menos uma letra maiúscula.
-
-  **Padrão**: Permitido
+    **Padrão**: Não é permitido
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2065,7 +2103,7 @@ Para mais informações, consulte [Policy CSP - WindowsInkWorkspace](https://doc
 
 Para mais informações, consulte [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) na documentação do Windows.
 
-- **Registo do bloco**de scripts de concha de concha de potência:  
+- Registo do bloco de **scriptpowerShell:**  
   Esta definição de política permite o registo de todas as entradas de script powerShell para o registo de eventos Microsoft-Windows-PowerShell/Operational. Se ativar esta definição de política, o Windows PowerShell registará o processamento de comandos, blocos de scripts, funções e scripts - seja invocado interativamente, quer através da automação. Se desativar esta definição de política, o registo da entrada do script PowerShell é desativado. Se ativar o Registo de Invocação de Bloqueio de Script, o PowerShell regista adicionalmente eventos quando a invocação de um comando, bloco de script, função ou script começa ou para. Ativar a exploração de registos de exploração gera um elevado volume de registos de eventos. Nota: Esta definição de política existe tanto na Configuração do Computador como na Configuração do Utilizador no Editor de Política do Grupo. A definição da política de configuração do computador tem precedência sobre a definição da política de configuração do utilizador.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067330)
 

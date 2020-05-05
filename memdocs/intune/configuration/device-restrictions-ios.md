@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
-ms.translationtype: HT
+ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782213"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos iOS e iPadOS para permitir ou restringir funcionalidades usando Intune
 
@@ -593,9 +593,12 @@ Para adicionar aplicações, pode:
 
 ## <a name="autonomous-single-app-mode"></a>Modo de aplicação single autónomo
 
-Utilize estas definições para configurar dispositivos iOS/iPadOS para executar aplicações específicas no modo de aplicação single autónomo. Quando este modo está configurado e os utilizadores iniciam uma das aplicações configuradas, o dispositivo está bloqueado a essa aplicação. A comutação de aplicações/tarefas é desativada até que os utilizadores saiam da aplicação permitida.
+Utilize estas definições para configurar dispositivos iOS/iPadOS para executar aplicações específicas no modo de aplicação single autónomo (ASAM). Quando este modo está configurado e os utilizadores iniciam uma das aplicações configuradas, o dispositivo está bloqueado a essa aplicação. A comutação de aplicações/tarefas é desativada até que os utilizadores saiam da aplicação permitida.
 
 Por exemplo, em ambiente escolar ou universitário, adicione uma aplicação que permite que os utilizadores possam fazer um teste no dispositivo. Ou, bloqueie o dispositivo na aplicação Portal da Empresa até que o utilizador autentique. Quando as ações das aplicações são concluídas pelos utilizadores, ou se remove esta política, o dispositivo regressa ao seu estado normal.
+
+> [!NOTE]
+> Nem todas as aplicações suportam o modo de aplicação single autónomo. Para colocar uma aplicação no modo de aplicação single autónomo, um pacote id ou um par de valor chave entregue por uma política de config de aplicação são normalmente necessários. Para mais informações, consulte a [ `autonomousSingleAppModePermittedAppIDs` restrição](https://developer.apple.com/documentation/devicemanagement/restrictions) na documentação do MDM da Apple. Para obter mais informações sobre as definições específicas necessárias para a aplicação que está a configurar, consulte a documentação do fornecedor.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -606,6 +609,8 @@ Por exemplo, em ambiente escolar ou universitário, adicione uma aplicação que
 Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e as suas iDs de pacote. Ou **Exportar** uma lista existente que inclua as aplicações.
 
 ## <a name="kiosk"></a>Kiosk
+
+Intune, o modo quiosque também é conhecido como modo Single App. Na [documentação do MDM da Apple,](https://developer.apple.com/documentation/devicemanagement/applock)o modo de quiosque é conhecido como App Lock.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -671,7 +676,7 @@ Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e
 
 O modo supervisionado iOS/iPadOS só pode ser ativado durante a configuração inicial do dispositivo através do Programa de Inscrição de Dispositivos da Apple, ou utilizando o Configurador Apple. Depois de ativar o modo supervisionado, o Intune pode configurar um dispositivo com a seguinte funcionalidade:
 
-- Bloqueio de Aplicação (Modo de Aplicação Única) 
+- Modo Quiosque (Modo App Único): Chamado "bloqueio de aplicações" na documentação do APPLE MDM.
 - Desativar o Bloqueio de Ativação 
 - Modo de Aplicação Única Autónomo 
 - Filtro de Conteúdo Web 

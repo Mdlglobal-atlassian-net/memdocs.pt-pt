@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
-ms.translationtype: HT
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729327"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745195"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorizar as políticas de conformidade do Dispositivo do Intune
 
@@ -104,9 +104,9 @@ Esta ação abre a janela de conformidade do **Dispositivo** e exibe dispositivo
 Se quiser ver todos os dispositivos de um utilizador específico, também pode filtrar o relatório da tabela digitando o e-mail do utilizador.
 
 > [!TIP]
-> Se um utilizador não iniciar sessão no dispositivo, o dispositivo com a política de conformidade do dispositivo direcionado enviará um relatório de conformidade para Intune mostrando a **Conta do Sistema** como o nome principal do utilizador. Isto acontece porque uma política de conformidade do dispositivo foi direcionada para um grupo de utilizadores ou dispositivos, e nenhum utilizador foi assinado no dispositivo no momento em que a conformidade foi avaliada.
+> Se nenhum utilizador estiver inscrito no dispositivo, o dispositivo com a política de conformidade do dispositivo direcionado enviará um relatório de conformidade para Intune mostrando a **Conta do Sistema** como o nome principal do utilizador. Isto acontece porque uma política de conformidade do dispositivo foi direcionada para um grupo de utilizadores ou dispositivos, e nenhum utilizador foi assinado no dispositivo no momento em que a política de conformidade foi avaliada.
 >
-> Além disso, se houver vários utilizadores inscritos no mesmo dispositivo, e este dispositivo for direcionado para uma política de conformidade do dispositivo, e considerando que estes utilizadores fazem parte da mesma política de conformidade do dispositivo que precisa de ser avaliada, o relatório de conformidade pode mostrar o mesmo dispositivo várias vezes que cada utilizador que assinou no dispositivo tem de avaliar a política de conformidade do dispositivo e denunciá-lo de volta ao Intune.
+> Além disso, se houver vários utilizadores inscritos no mesmo dispositivo, e por coincidência o dispositivo é direcionado para uma política de conformidade que é direcionada para cobrir todos os utilizadores que estão atualmente assinados no dispositivo, o relatório de conformidade pode mostrar o mesmo dispositivo várias vezes que cada utilizador que assinou no dispositivo tem de avaliar a política de conformidade do dispositivo e denunciá-lo ao Intune.
 
 #### <a name="filter-and-columns"></a>Filtro e colunas
 
