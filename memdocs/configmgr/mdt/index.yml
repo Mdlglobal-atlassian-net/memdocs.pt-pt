@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Documentação do Microsoft Deployment Toolkit
+summary: O Microsoft Deployment Toolkit proporciona uma coleção unificada de ferramentas, processos e orientações para automatizar implementações de servidor e computador.
+metadata:
+  title: Documentação do Microsoft Deployment Toolkit
+  description: O Microsoft Deployment Toolkit proporciona uma coleção unificada de ferramentas, processos e orientações para automatizar implementações de servidor e computador.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdt
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7647af8f5835c134d5f3847c4ec87188740a5076
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740937"
+landingContent:
+- title: Obter o MDT
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Transferir o MDT
+      url: https://aka.ms/mdtdownload
+    - text: Notas de versão
+      url: release-notes.md
+  - linkListType: how-to-guide
+    links:
+    - text: Como utilizar o MDT
+      url: use-the-mdt.md
+    - text: Guia de amostras
+      url: samples-guide.md
+- title: Guias de cenários
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Toque leve (LTI)
+      url: lite-touch-installation-guide.md
+    - text: Sem contacto (ZTI)
+      url: configmgr-guide.md
+    - text: Controlado pelo utilizador (UDI)
+      url: user-driven-installation-guide.md
+- title: Referências
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Referência do toolkit
+      url: toolkit-reference.md
+    - text: Resolver problemas do MDT
+      url: troubleshooting-reference.md
+    - text: Guia de UDI para programadores
+      url: user-driven-installation-developers-guide.md
