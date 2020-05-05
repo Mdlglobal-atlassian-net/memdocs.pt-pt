@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a2f8ccfccfdca26416b0da92e6f27425e13c90c6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325485"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078044"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Gerir dispositivos com perfil de trabalho do Android com o Intune
 
@@ -33,7 +33,7 @@ O Android Enterprise oferece um conjunto de opções de inscrição que fornecem
 
 As capacidades de gestão do Android Enterprise dependem de funcionalidades que fazem parte de sistemas operativos Android mais recentes. Para dispositivos que não suportam o Android Enterprise, a gestão convencional do Android continua disponível. Para mais informações, consulte [os requisitos do Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
-## <a name="onboarding"></a>Integração
+## <a name="onboarding"></a>Inclusão
 
 Antes de inscrever dispositivos de perfil de trabalho Android Enterprise, deve completar algumas etapas de embarque. Estes passos estabelecem uma ligação entre o seu inquilino Intune e o Managed Google Play. Para mais informações, consulte [Enable a inscrição de dispositivos de perfil de trabalho Android Enterprise](android-work-profile-enroll.md).
 
@@ -45,7 +45,7 @@ O Intune oferece um conjunto de definições gerais incorporadas que pode config
 
 ## <a name="app-publishing-and-distribution"></a>Publicação e distribuição de aplicações
 
-O Google Play gerido é parte integrante da distribuição e gestão de aplicações Android Enterprise. Todas as aplicações implementadas para dispositivos de perfil de trabalho Android Enterprise no perfil de trabalho provêm do serviço Managed Google Play. Para gerir e implementar aplicações na Play Store, inicie sessão no site do Google Play com as credenciais de administrador da empresa para a gestão do Google. Pode aprovar aplicações para implementação do Android Enterprise para que apareçam nos perfis de trabalho dos dispositivos. Estas aplicações são sincronizadas com a consola do Intune, onde podem ser implementadas e geridas através do Intune. As aplicações de linha de negócio (LOB) desenvolvidas pela sua organização têm de ser publicadas na Google Play Store Gerida através da consola de publicação de aplicações Android do Google. As aplicações de linha de negócio têm de ser configuradas na consola de publicação de aplicações Android para restringir o acesso à sua organização.
+O Google Play gerido é parte integrante da distribuição e gestão de aplicações Android Enterprise. Todas as aplicações implementadas para dispositivos de perfil de trabalho Android Enterprise no perfil de trabalho provêm do serviço Managed Google Play. Para gerir e implementar aplicações na Play Store, inicie sessão no site do Google Play com as credenciais de administrador da empresa para a gestão do Google. Pode aprovar aplicações para implementação do Android Enterprise para que apareçam nos perfis de trabalho dos dispositivos. Estas aplicações são sincronizadas com a consola do Intune, onde podem ser implementadas e geridas através do Intune. As aplicações de linha de negócios (LOB) desenvolvidas pela sua organização devem ser publicadas na Managed Google Play utilizando a consola de publicação de aplicações Android da Google. As aplicações de linha de negócio têm de ser configuradas na consola de publicação de aplicações Android para restringir o acesso à sua organização.
 
 As aplicações podem ser instaladas sem a interação do utilizador e sem exigir que o utilizador permita a **Instalação de Origens Desconhecidas**. Para procurar e instalar aplicações opcionais ou disponíveis, o utilizador pode procurar na Google Play for Work Store no dispositivo. Para mais informações, consulte [as aplicações de atribuição para dispositivos](../apps/apps-add-android-for-work.md)de perfil de trabalho Android Enterprise com Intune .
 
@@ -76,7 +76,7 @@ O suporte de VPN é semelhante aos perfis de VPN em Android. Os mesmos fornecedo
   - a capacidade de configurar VPN por app através do perfil de configuração da aplicação Android Enterprise.
   Para obter mais informações, veja [Utilizar um perfil personalizado do Microsoft Intune para criar um perfil VPN por aplicação para dispositivos Android](../configuration/android-pulse-secure-per-app-vpn.md).
 
-## <a name="certificate-profiles"></a>Perfis de certificados
+## <a name="certificate-profiles"></a>Perfis de certificado
 
 As mesmas opções de configuração de perfil de certificado que estão disponíveis para gestão android estão disponíveis em dispositivos de perfil de trabalho Android Enterprise. O Android Enterprise fornece APIs de gestão de certificados melhorados. A gestão de certificados melhorada fornece as seguintes funcionalidades:
 
@@ -86,10 +86,10 @@ As mesmas opções de configuração de perfil de certificado que estão dispon�
 
 Para obter mais informações, veja [Configurar um perfil de certificado para os seus dispositivos no Microsoft Intune](../protect/certificates-configure.md).
 
-## <a name="wi-fi-profiles"></a>Perfis de Wi-Fi
+## <a name="wi-fi-profiles"></a>Perfis Wi-Fi
 
 Os perfis Wi-Fi geridos pelo Android Enterprise são removidos quando o dispositivo é retirado de Intune e o perfil de trabalho é eliminado. Para obter mais informações, veja [Como configurar definições de Wi-Fi no Microsoft Intune](../configuration/wi-fi-settings-configure.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Inscrever dispositivos Android](android-enroll.md)
 - [Atribuir aplicativos a dispositivos de perfil de trabalho Android Enterprise com Intune](../apps/apps-add-android-for-work.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d058da21a0ab9afea68b1f9cc1be4a73930d43
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329045"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079217"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -183,7 +183,7 @@ Para mais informações, consulte [Policy CSP - CredentialsUI](https://docs.micr
   
   **Predefinição**: Desativado  
 
-### <a name="data-protection"></a>Proteção de dados  
+### <a name="data-protection"></a>Proteção de Dados  
 
 Para mais informações, consulte [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
 ) na documentação do Windows.  
@@ -199,7 +199,7 @@ Para mais informações, consulte [Policy CSP - DataProtection](https://docs.mic
 Para mais informações, consulte [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) na documentação do Windows.  
 
-- **Guarda Credencial**  
+- **Credential Guard**  
   Esta definição permite que os utilizadores liguem a Guarda Credencial com segurança baseada em virtualização para ajudar a proteger as credenciais no próximo reboot.
    
   **Predefinição**: Ativar com bloqueio UEFI 
@@ -209,7 +209,7 @@ Para mais informações, consulte [Policy CSP - DeviceGuard](https://docs.micros
   
   **Padrão**: Sim  
 
-- **  ** de guarda do sistema de lançamento  
+- **Guarda do sistema de lançamento**    
   **Predefinição**: Ativado  
 
 ### <a name="device-installation"></a>Instalação de Dispositivos  
@@ -223,7 +223,7 @@ Para mais informações, consulte [Policy CSP - Instalação](https://docs.micro
 
   Quando a instalação do *dispositivo de hardware block* for selecionada, as seguintes definições estão disponíveis.
 
-  - **Remova dispositivos de hardware correspondentes**   
+  - **Remover dispositivos de hardware correspondentes**   
   Esta definição só está disponível quando a instalação de dispositivos de *hardware por identificadores* de dispositivo saem definidas para bloquear a instalação do dispositivo de *hardware*.
     
     **Padrão**: Sim
@@ -239,7 +239,7 @@ Para mais informações, consulte [Policy CSP - Instalação](https://docs.micro
   **Predefinição**: Bloquear a instalação de dispositivos de hardware  
 
   Quando a instalação do *dispositivo de hardware block* for selecionada, as seguintes definições estão disponíveis.
-  - **Remova dispositivos de hardware correspondentes**    
+  - **Remover dispositivos de hardware correspondentes**    
   Esta definição só está disponível quando a instalação do *dispositivo de hardware por classes* de configuração estiver definida para bloquear a instalação de dispositivos de *hardware*.  
 
     **Predefinição**: *Nenhuma configuração predefinida*  
@@ -492,7 +492,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
     
   
 - **Controle o Internet Explorer Ative X em modo protegido**  
-  Esta definição de política impede que os controlos ActiveX sejam acionados no modo protegido quando o modo protegido melhorado estiver ativado. Quando um utilizador tem um controlo ActiveX instalado que não é compatível com o Modo Protegido Melhorado e um website tenta carregar o controlo, o Internet Explorer notifica o utilizador e dá a opção de executar o website em modo protegido regular. Esta definição de política desativa esta notificação e obriga todos os websites a funcionar em Modo Protegido Melhorado. O Modo Protegido Melhorado fornece proteção adicional contra websites maliciosos utilizando processos de 64 bits em versões de 64 bits do Windows. Para computadores que executam pelo menos o Windows 8, o Modo Protegido Melhorado também limita as localizações que o Internet Explorer pode ler no registo e no sistema de ficheiros. Quando o modo protegido melhorado está ativado, e um utilizador encontra um website que tenta carregar um controlo ActiveX que não é compatível com o Modo Protegido Melhorado, o Internet Explorer notifica o utilizador e dá a opção de desativar o Modo Protegido Melhorado para que site em particular. Se ativar esta definição de política, o Internet Explorer não dará ao utilizador a opção de desativar o Modo Protegido Melhorado. Todos os websites do Modo Protegido serão executados em Modo Protegido Melhorado. Se desativar ou não configurar esta definição de política, o Internet Explorer informa os utilizadores e oferece uma opção para executar websites com controlos ActiveX incompatíveis no modo protegido regular.  
+  Esta definição de política impede que os controlos ActiveX sejam acionados no modo protegido quando o modo protegido melhorado estiver ativado. Quando um utilizador tem um controlo ActiveX instalado que não é compatível com o Modo Protegido Melhorado e um website tenta carregar o controlo, o Internet Explorer notifica o utilizador e dá a opção de executar o website em modo protegido regular. Esta definição de política desativa esta notificação e obriga todos os websites a funcionar em Modo Protegido Melhorado. O Modo Protegido Melhorado fornece proteção adicional contra websites maliciosos utilizando processos de 64 bits em versões de 64 bits do Windows. Para computadores que executam pelo menos o Windows 8, o Modo Protegido Melhorado também limita as localizações que o Internet Explorer pode ler no registo e no sistema de ficheiros. Quando o Modo Protegido Melhorado está ativado, e um utilizador encontra um website que tenta carregar um controlo ActiveX que não é compatível com o Modo Protegido Melhorado, o Internet Explorer notifica o utilizador e dá a opção de desativar o Modo Protegido Melhorado para esse website em particular. Se ativar esta definição de política, o Internet Explorer não dará ao utilizador a opção de desativar o Modo Protegido Melhorado. Todos os websites do Modo Protegido serão executados em Modo Protegido Melhorado. Se desativar ou não configurar esta definição de política, o Internet Explorer informa os utilizadores e oferece uma opção para executar websites com controlos ActiveX incompatíveis no modo protegido regular.  
   
   **Predefinição**: Desativado  
   
@@ -963,11 +963,11 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
   **Predefinição**: Requerer encriptação NTLM V2 e 128 bits  
   
 - **Minutos de inatividade do ecrã de bloqueio até que o protetor de ecrã seja ativado**  
-  O Windows nota a inatividade de uma sessão de logon e, se a quantidade de tempo inativo exceder o limite de inatividade, então o protetor de ecrã será executado, bloqueando a sessão.
+  O Windows repara na inatividade de um início de sessão e, se a quantidade de tempo inativo exceder o limite de inatividade, então, a proteção de ecrã será executado, bloqueando a sessão.
   
   **Predefinição**: 15
   
-- **Exigir que o cliente assine sempre comunicações digitalmente** Esta definição de segurança determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Quando um computador se junta a um domínio, é criada uma conta de computador. Depois disso, quando o sistema começa, utiliza a palavra-passe da conta do computador para criar um canal seguro com um controlador de domínio para o seu domínio. Este canal seguro é utilizado para realizar operações como a passagem da NTLM através da autenticação, LSA SID/nome Lookup e muito mais. Esta definição determina se todo o tráfego de canal seguro iniciado pelo membro do domínio satisfaz os requisitos mínimos de segurança. Especificamente, determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Se esta política estiver ativada, o canal seguro não será estabelecido a menos que seja negociada a assinatura ou encriptação de todo o tráfego de canais seguros. Se esta política for desativada, então a encriptação e a assinatura de todo o tráfego de canal seguro são negociados com o Controlador de Domínio, caso em que o nível de assinatura e encriptação depende da versão do Controlador de Domínio e das definições dos dois seguintes políticas: Membro do domínio: Encriptar digitalmente dados de canais seguros (quando possível) Membro do domínio: Sinal digitalde dados de canal seguros (quando possível)
+- **Exigir que o cliente assine sempre comunicações digitalmente** Esta definição de segurança determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Quando um computador se junta a um domínio, é criada uma conta de computador. Depois disso, quando o sistema começa, utiliza a palavra-passe da conta do computador para criar um canal seguro com um controlador de domínio para o seu domínio. Este canal seguro é utilizado para realizar operações como a passagem da NTLM através da autenticação, LSA SID/nome Lookup e muito mais. Esta definição determina se todo o tráfego de canal seguro iniciado pelo membro do domínio satisfaz os requisitos mínimos de segurança. Especificamente, determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Se esta política estiver ativada, o canal seguro não será estabelecido a menos que seja negociada a assinatura ou encriptação de todo o tráfego de canais seguros. Se esta política for desativada, então a encriptação e a assinatura de todo o tráfego de canais seguros são negociados com o Controlador de Domínio, caso em que o nível de assinatura e encriptação depende da versão do Controlador de Domínio e das definições das seguintes duas políticas: Membro do domínio: encriptar digitalmente dados de canal seguros (quando possível) Membro do domínio: Assinar digitalmente dados de canal seguros (quando possível)
   
   **Padrão**: Sim
   
@@ -1088,7 +1088,7 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
   **Padrão**: Sim
 
 - **Virtualize falhas de registo e registo por localização de utilizadores**  
-  Esta definição de política controla se as falhas de escrita da aplicação são redirecionadas para locais definidos de registo e sistema de ficheiros. Esta definição de política atenua aplicações que funcionam como administrador e escrevem dados de aplicações a tempo de execução para *%ProgramFiles%* , *%Windir%* , *%Windir%\system32*, ou *HKLM\Software*.
+  Esta definição de política controla se as falhas de escrita da aplicação são redirecionadas para locais definidos de registo e sistema de ficheiros. Esta definição de política atenua aplicações que funcionam como administrador e escrevem dados de aplicações a tempo de execução para *%ProgramFiles%*, *%Windir%*, *%Windir%\system32*, ou *HKLM\Software*.
   
   **Padrão**: Sim
 
@@ -1127,7 +1127,7 @@ Para mais informações, consulte [Policy CSP - MSSLegacy](https://docs.microsof
 - **Rede ICMP redireciona os OSPF gerados**  
   **Predefinição**: Desativado
   
-### <a name="power"></a>Energia  
+### <a name="power"></a>Power  
 
 Para mais informações, consulte [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) in the Windows documentação.  
 
@@ -1166,7 +1166,7 @@ Para mais informações, consulte [Policy CSP - RemoteDesktopServices](https://d
   **Predefinição**: Ativado
   
 - **Redirecionamento de unidade de bloqueio**  
-  Esta definição de política especifica se deve impedir o mapeamento das unidades do cliente numa sessão de Serviços de Ambiente de Trabalho Remoto (redirecionamento de unidade). Por predefinição, um servidor rd Session Host mapeia o cliente automaticamente após a ligação. As unidades mapeadas aparecem na pasta da sessão no File Explorer ou no Computador no formato *\<driveletter>* em *\<nome de computador>* . Pode usar esta definição de política para anular este comportamento. Se ativar esta definição de política, a redirecção de unidade do cliente não é permitida nas sessões de Serviços de Ambiente de Trabalho Remoto, e a redirecção de cópias de ficheiros de clipboard não é permitida em computadores que executam o Windows Server 2003, Windows 8 e Windows XP. Se desativar esta definição de política, a reorientação da unidade do cliente é sempre permitida. Além disso, a redirecção da cópia do ficheiro de clipboard é sempre permitida se for permitida a reorientação da área de clipboard. Se não configurar esta definição de política, a redirecção de direção do cliente e a redirecção da cópia de ficheiros de clipboard não são especificadas ao nível da Política de Grupo.
+  Esta definição de política especifica se deve impedir o mapeamento das unidades do cliente numa sessão de Serviços de Ambiente de Trabalho Remoto (redirecionamento de unidade). Por predefinição, um servidor rd Session Host mapeia o cliente automaticamente após a ligação. As unidades mapeadas aparecem na árvore da pasta da sessão no File Explorer ou no Computador no formato * \<driveletter>* no * \<nome de computador>*. Pode usar esta definição de política para anular este comportamento. Se ativar esta definição de política, a redirecção de unidade do cliente não é permitida nas sessões de Serviços de Ambiente de Trabalho Remoto, e a redirecção de cópias de ficheiros de clipboard não é permitida em computadores que executam o Windows Server 2003, Windows 8 e Windows XP. Se desativar esta definição de política, a reorientação da unidade do cliente é sempre permitida. Além disso, a redirecção da cópia do ficheiro de clipboard é sempre permitida se for permitida a reorientação da área de clipboard. Se não configurar esta definição de política, a redirecção de direção do cliente e a redirecção da cópia de ficheiros de clipboard não são especificadas ao nível da Política de Grupo.
   
   **Predefinição**: Ativado
   
@@ -1232,7 +1232,7 @@ Para mais informações, consulte [Policy CSP - RemoteProcedureCall](https://doc
 
   **Padrão**: Autenticado
 
-### <a name="search"></a>Procura  
+### <a name="search"></a>Pesquisa  
 
 Para mais informações, consulte [Policy CSP - Procure](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) na documentação do Windows.  
 
@@ -1241,7 +1241,7 @@ Para mais informações, consulte [Policy CSP - Procure](https://docs.microsoft.
   
 **Padrão**: Sim
   
-### <a name="smart-screen"></a>Smart Screen  
+### <a name="smart-screen"></a>Tela Inteligente  
 
 Para mais informações, consulte [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) na documentação do Windows.  
 
@@ -1299,7 +1299,7 @@ Para mais informações, consulte [Policy CSP - WindowsConnectionManager](https:
 - **Bloquear a ligação a redes não-domínio**  
   Esta definição de política impede que os computadores se conectem tanto a uma rede baseada em domínios como a uma rede não baseada em domínios ao mesmo tempo. Se esta definição de política estiver ativada, o computador responde a tentativas de ligação automática e manual de rede com base nas seguintes circunstâncias: 
   - Tentativas de ligação automática Quando o computador já está ligado a uma rede baseada em domínios, todas as tentativas de ligação automática a redes não-domínio são bloqueadas. Quando o computador já está ligado a uma rede não baseada em domínios, as tentativas de ligação automática a redes baseadas em domínios são bloqueadas. 
-  - Tentativas de ligação manual Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios através de meios que não o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta política definição, a ligação de rede existente desliga-se e a ligação manual é permitida. Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios sobre o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta definição de política, a ligação Ethernet existente é mantida e a tentativa de ligação manual está bloqueada.  
+  - Tentativas de ligação manual Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios através de meios que não o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional, violando esta definição de política, a ligação de rede existente desliga-se e a ligação manual é permitida. Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios sobre o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta definição de política, a ligação Ethernet existente é mantida e a tentativa de ligação manual é bloqueada.  
 
   Se esta definição de política não estiver configurada ou for desativada, os computadores podem ligar-se simultaneamente a redes de domínio e não-domínio.  
 
@@ -1335,12 +1335,12 @@ Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft
   **Predefinição**: Bloco
   
 - **Prevenir o tipo de roubo de credenciais**  
-  A Guarda Credencial do Windows Defender utiliza segurança baseada em virtualização para isolar segredos para que apenas o software privilegiado do sistema possa aceder aos mesmos. O acesso não autorizado a estes segredos pode levar a ataques de roubo de credenciais, como pass-the-Hash ou Pass-The-Ticket. A Guarda Credencial do Windows Defender evita estes ataques protegendo os hashes de senha NTLM, os bilhetes de concessão de bilhetes kerberos e credenciais armazenadas por aplicações como credenciais de domínio.
+  A Guarda Credencial do Windows Defender utiliza segurança baseada em virtualização para isolar segredos para que apenas o software privilegiado do sistema possa aceder aos mesmos. O acesso não autorizado a estes segredos pode levar a ataques de roubo de credenciais, tal como Ataques PtH ou PtT. A Guarda Credencial do Windows Defender evita estes ataques protegendo os hashes de senha NTLM, os bilhetes de concessão de bilhetes kerberos e credenciais armazenadas por aplicações como credenciais de domínio.
   
   **Padrão**: Ativar
 
 - **Tipo de execução de conteúdo de e-mail**  
-  Esta regra bloqueia os seguintes tipos de ficheiros de serem executados ou lançados a partir de um e-mail visto no Microsoft Outlook ou no webmail (como Gmail.com ou Outlook.com): Ficheiros executáveis (tais como ficheiros de script .exe, .dll ou .scr) (tais como powerShell .ps, VisualBasic .vbs, ou ficheiro sinuoso do Script ScriptScript .js. Script.
+  Esta regra bloqueia os seguintes tipos de ficheiros de serem executados ou lançados a partir de um e-mail visto no Microsoft Outlook ou no webmail (como Gmail.com ou Outlook.com): Ficheiros executáveis (tais como ficheiros de script .exe, .dll ou .scr) (tais como um Ficheiro de ficheiros Script PowerShell .ps, VisualBasic .vbs ou JavaScript .js) Script.
   
   **Predefinição**: Bloco
   
@@ -1360,7 +1360,7 @@ Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft
   **Padrão**: Sim  
 
 - **Defender ação de aplicação potencialmente indesejada**  
-  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Windows Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem realizar ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico da PUA inclui: Vários tipos de software que agregam a injeção de anúncios em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidas como " programas antivírus desonestos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.  
+  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Windows Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem realizar ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico do PUA inclui: Vários tipos de software que agregam a injeção de Anúncio saqueado em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidos como programas antivírus fraudulentos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.  
   
   **Predefinição**: Bloco  
 
@@ -1419,7 +1419,7 @@ Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft
   
   **Predefinição**: Bloco
 
-### <a name="windows-ink-workspace"></a>Espaço de trabalho de tinta windows  
+### <a name="windows-ink-workspace"></a>Área de Trabalho do Windows Ink  
 
 Para mais informações, consulte [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) na documentação do Windows.  
 
@@ -1440,7 +1440,7 @@ Para mais informações, consulte [Policy CSP - WindowsPowerShell](https://docs.
   
   **Predefinição**: Ativado
  
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
 [Ver a versão base atual](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)  
 [Atualizar perfis para usar uma nova versão de base](security-baselines.md#change-the-baseline-version-for-a-profile)

@@ -19,21 +19,21 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324141"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077262"
 ---
-# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>O que acontece se instalar a aplicação Portal da Empresa e inscrever o seu dispositivo Windows no Intune?
+# <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>O que acontece se instalar a aplicação do Portal da Empresa e inscrever o seu dispositivo Windows no Intune?
 
 Quando instala a aplicação Portal da Empresa e a utiliza para inscrever um dispositivo Windows ou Windows Phone, está a dar permissão ao suporte da empresa para gerir o seu dispositivo de forma a ajudar a manter os dados da sua empresa ou escola em segurança. Este tópico descreve o que acontece em dispositivos anteriores ao Windows 10. Para dispositivos com o Windows 10, consulte o [tópico relacionado](about-cp-app-for-windows-10.md).  
 
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>O que acontece a todos os dispositivos Windows após a inscrição
 Inscrever o seu dispositivo Windows ou Windows Phone no Intune permite-lhe:
 
-- Aceder à rede da empresa e ao seu e-mail e ficheiros de trabalho.
+- Aceda à rede da empresa e aos seus ficheiros de e-mail e trabalho.
 
 - Obter aplicações da empresa a partir do site do Portal da Empresa. (__Nota__: para o Windows 7 e o Windows Vista, só pode obter aplicações da empresa a partir do site do Portal da Empresa.)
 
@@ -43,9 +43,9 @@ Inscrever o seu dispositivo Windows ou Windows Phone no Intune permite-lhe:
 
 Quando inscreve o seu dispositivo, está a dar permissão ao suporte da empresa para fazer coisas como:
 
-- Repor as predefinições de fábrica do seu dispositivo. Esta ação é útil em caso de perda ou roubo do dispositivo.
+- Reponha o seu dispositivo de volta às definições predefinidas do fabricante. Esta ação é útil em caso de perda ou roubo do dispositivo.
 
-- Remover apenas aplicações empresariais e ficheiros relacionados com a empresa. *Os dados e definições pessoais não são removidos.*
+- Remover apenas aplicações empresariais e ficheiros relacionados com a empresa. *Os seus dados pessoais e configurações não são removidos.*
 
 - O suporte da empresa consegue ver o software que tem instalado no dispositivo, incluindo o software que tem instalado para utilização pessoal.
 
@@ -53,7 +53,7 @@ Quando inscreve o seu dispositivo, está a dar permissão ao suporte da empresa 
 
 - Exigir-lhe que faça a encriptação dos dados no seu dispositivo para ajudar a proteger os dados da empresa em caso de perda ou roubo do seu dispositivo.
 
-- O seu administrador de TI pode exigir que aceite os termos e condições.
+- O administrador de TI pode exigir que aceite os termos e condições.
 
 - Impedir que tire fotografias de dados relacionados com a empresa.
 
@@ -63,7 +63,7 @@ Quando inscreve o seu dispositivo, está a dar permissão ao suporte da empresa 
 
 - O Endpoint Protection do Intune poderá ser instalado no seu computador. Este software verifica a existência de vírus e software maligno.
 
-- O suporte da empresa pode recolher ou eliminar dados do disco rígido do seu computador.
+- O suporte da sua empresa pode recolher ou eliminar dados do disco rígido do computador.
 
 - O suporte da empresa pode instalar aplicações e atualizações no seu computador.
 
@@ -77,4 +77,4 @@ A cada oito horas, os dispositivos inscritos irão:
 
 - Enviar atualizações de inventário de aplicações da empresa.
 
-Se tiver dúvidas, contacte o suporte da sua empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Se tiver dúvidas, contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

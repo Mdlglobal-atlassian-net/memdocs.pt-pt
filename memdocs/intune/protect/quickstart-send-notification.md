@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ec5bf332d951fc19cb4d6ef1dee242b87d02ee
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325467"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079489"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Guia de Início Rápido: enviar notificações para dispositivos não conformes
 
@@ -33,7 +33,7 @@ Por predefinição, quando o Intune deteta um dispositivo não conforme, este ma
 
 Uma das medidas a tomar quando um dispositivo não cumpre a conformidade é enviar e-mail para o utilizador dos dispositivos. Também pode personalizar uma notificação de e-mail antes de enviá-la. Mais concretamente, pode personalizar os destinatários, o assunto e o corpo da mensagem, incluindo o logótipo da empresa e as informações de contacto. Intune também inclui detalhes sobre o dispositivo não conforme na notificação de e-mail.
 
-Se não tiver uma subscrição do Intune, [inscreva-se numa conta de avaliação gratuita](../fundamentals/free-trial-sign-up.md).
+Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -47,7 +47,7 @@ Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https:/
 
 Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notificação. Quando um dispositivo não estiver em conformidade, os detalhes que introduzir no modelo são apresentados no e-mail enviado aos utilizadores.
 
-1. Intune, selecione **Dispositivos** > Políticas de **conformidade** > **Notificações** > **Criar notificação**.
+1. Intune, selecione **Devices** > **Compliance Policies** > **Notificações** > **Criar notificação**.
 2. Introduza as seguintes informações:
 
    - **Nome**: *Administrador da Contoso*
@@ -66,8 +66,8 @@ Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notif
 
 Para mais informações sobre a definição do nome da sua empresa, informações de contacto da empresa e logotipo da empresa, consulte os seguintes artigos:
 
-- [Informações da empresa e declaração de privacidade](../apps/company-portal-app.md#configuration)
-- [Informação de suporte](../apps/company-portal-app.md#support-information)
+- [Informações e declaração de privacidade da empresa](../apps/company-portal-app.md#configuration)
+- [Informações de suporte](../apps/company-portal-app.md#support-information)
 - [Personalizando a experiência do utilizador.](../apps/company-portal-app.md#customizing-the-user-experience)
 
 ## <a name="add-a-noncompliance-policy"></a>Adicionar uma política de não conformidade
@@ -76,15 +76,15 @@ Quando cria uma política de conformidade do dispositivo, o Intune cria automati
 
 Os seguintes passos descrevem como pode criar uma política de conformidade para dispositivos com o Windows 10.
 
-1. Em Intune, selecione **Dispositivos** > Políticas de **Conformidade** > **Criar Política**.
+1. Em Intune, selecione **Devices** > **Compliance Policies** > **Create Policy**.
 
 2. Introduza as seguintes informações:
 
    - **Nome**: *Política de conformidade do Windows 10*
    - **Descrição**: *Política de conformidade do Windows 10*
-   - **Plataforma**: Windows 10 e posterior
+   - **Plataforma**: Windows 10 e mais tarde
 
-3. Selecione **Definições** > **Segurança do Sistema** para apresentar as definições de segurança do dispositivo.
+3. Selecione **Definições** > **Segurança do Sistema** para visualizar as definições relacionadas com a segurança do dispositivo.
 
 4. Configure as seguintes opções:
 
@@ -96,19 +96,19 @@ Os seguintes passos descrevem como pode criar uma política de conformidade para
 
 5. Selecione **OK** > **OK** > **Criar** para criar a sua política de conformidade.
 
-6. Selecione **Propriedades** > **Ações para não conformidade** > **Adicionar**.
+6. Selecione **Properties** > **Action for noncompliance** > **Add**.
 
 7. Na caixa pendente **Ação**, confirme se a opção **Enviar mensagem de e-mail ao utilizador final** está selecionada.
 
 8. Selecione **o modelo de mensagem,** o modelo que criou anteriormente neste artigo e, em seguida, **selecione** para selecionar o modelo de mensagem.
 
-9. Selecione **ADD** > **OK** > **Guardar** para guardar as suas alterações.
+9. Selecione ADD**OK** >  **Guarde** > para guardar as suas alterações.**Save**
 
 ## <a name="assign-the-policy"></a>Atribuir a política
 
 Pode atribuir a política de conformidade a um grupo específico de utilizadores ou a todos os utilizadores. Quando a Intune reconhece que um dispositivo não está em conformidade, o utilizador é notificado de que deve atualizar o seu dispositivo para cumprir a política de conformidade. Utilize os seguintes passos para atribuir a apólice.
 
-1. Intune vá para **Dispositivos** > **Políticas** de Conformidade e selecione a política de **conformidade do Windows 10** que criou anteriormente.
+1. Intune vá para**as Políticas** de Conformidade de **Dispositivos** > e selecione a política de **conformidade do Windows 10** que criou anteriormente.
 
 2. Selecione **Atribuições**.
 
@@ -121,7 +121,7 @@ Pode atribuir a política de conformidade a um grupo específico de utilizadores
 
 Quando tiver criado e salvo com sucesso a política, ela aparecerá na lista de políticas de **conformidade - Políticas**. Repare se a opção **Atribuído** na lista está definida como **Sim**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste guia de início rápido, utilizou o Intune para criar e atribuir uma política de conformidade aos dispositivos com o Windows 10 da sua força de trabalho para exigir uma palavra-passe de pelo menos seis carateres de comprimento. Para obter mais informações sobre como criar políticas de conformidade para dispositivos Windows, veja [Adicionar uma política de conformidade para dispositivos Windows no Intune](compliance-policy-create-windows.md).
 

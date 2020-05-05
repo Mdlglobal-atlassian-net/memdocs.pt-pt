@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e0802e068b98e3f71393ca9b8124558243bf4847
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c16f2d8cf70fe42e5122083364efa222cffa706e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328037"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078894"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalar e partilhar aplicações no seu dispositivo
 
@@ -44,7 +44,7 @@ Instale aplicações no seu dispositivo a partir da aplicação Portal da Empres
     * **Search for apps** (Procurar aplicações): uma barra de pesquisa estática encontra-se no painel de navegação da aplicação. Para encontrar as aplicações disponíveis, procure por nome da aplicação ou publicador.  
 
 3. Selecione uma aplicação.   
-4. Na página de detalhes das aplicações, clique em **Install** (Instalar). Quando a instalação estiver concluída, será apresentado um estado **Installed** (Instalado).  
+4. Na página de detalhes das aplicações, clique em **Instalar**. Quando a instalação estiver concluída, será apresentado um estado **Installed** (Instalado).  
 
     ![Aplicação selecionada na página App details (Detalhes da aplicação) da aplicação Portal da Empresa para Windows 10.](./media/RS1_AppDetailsPage_Installed_02.png)  
     
@@ -55,14 +55,14 @@ Instale aplicações no seu dispositivo a partir da aplicação Portal da Empres
 
 Consoante o tamanho da sua empresa, poderá ver múltiplas versões do Office disponíveis para transferência a partir do Portal da Empresa. Para obter informações específicas sobre o conjunto de aplicações do Office para dispositivos Windows, veja [Instalar o Office 365 no seu dispositivo Windows 10](./install-office-windows.md).
 
-## <a name="share-apps"></a>Partilhar aplicativos  
+## <a name="share-apps"></a>Partilhar aplicações  
 Partilhe e recomende aplicações aos seus contactos profissionais ou escolares. Os passos seguintes descrevem como partilhar uma ligação diretamente a partir do Portal da Empresa.
 
 1. No Portal da Empresa, clique com o botão direito do rato ou mantenha premida qualquer aplicação para abrir o respetivo [menu de contexto](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Página frontal da aplicação Portal da Empresa para Windows 10 a mostrar uma lista de aplicações e dispositivos. O menu de contexto clicável "Share" (Partilhar) está visível acima do ícone da aplicação de exemplo. ](./media/1808_ShareContext_CP_Windows.png)  
 
-2. Selecione **Share** (Partilhar).
+2. Selecione **Partilhar**.
 3. Selecione contactos individuais ou outro programa, como o OneNote, para enviar para um grupo. Se não vir uma aplicação que pretenda utilizar, selecione **Get apps in Store** (Obter aplicações na Microsoft Store) para ver outras aplicações disponíveis.  
 
     ![Captura de ecrã de exemplo da aplicação Portal da Empresa para Windows 10, página de pop-up Share (Partilhar). A página indica "Learn about <example app name> in the Company Portal app" (Saiba mais sobre <nome da aplicação de exemplo> na aplicação Portal da Empresa). Mostra um contacto e duas aplicações à sua escolha para enviar a ligação e uma ligação "Get apps in Store" (Obter aplicações na Microsoft Store). ](./media/1808_ShareApps_CP_Windows.png) 
@@ -79,9 +79,9 @@ As aplicações são-lhe atribuídas pela sua organização. A sua organização
 As aplicações também são disponibilizadas para si com base no tipo de dispositivo. Por exemplo, se estiver a utilizar o aplicativo Portal da Empresa para Windows, terá acesso a aplicações Windows, mas não a aplicações iOS.
 
 ## <a name="request-an-app-for-work-or-school"></a>Solicite uma aplicação para trabalho ou escola  
-Se houver uma aplicação de que precisa, mas não veja no Portal da Empresa, solicite-a. Encontre detalhes de contacto para o seu **Helpdesk** na aplicação Portal da Empresa, na página de ajuda e suporte. Encontrará as mesmas informações de contacto no site do Portal da [Empresa.](https://go.microsoft.com/fwlink/?linkid=2010980)    
+Se houver uma aplicação de que precisa, mas não veja no Portal da Empresa, solicite-a. Encontre detalhes de contacto para o seu **Helpdesk** na aplicação Portal da Empresa, na página de suporte & ajuda. Encontrará as mesmas informações de contacto no site do Portal da [Empresa.](https://go.microsoft.com/fwlink/?linkid=2010980)    
 
-  ![O aplicativo Portal da Empresa para windows 10, página de Ajuda e Suporte, destacando detalhes do Helpdesk. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+  ![O aplicativo Portal da Empresa para windows 10, página de suporte de ajuda &, destacando detalhes do Helpdesk. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
 ## <a name="view-installed-apps"></a>Ver aplicativos instalados  
 Veja uma lista de todas as aplicações instaladas no seu dispositivo. A página de **aplicações instaladas** lista os seguintes detalhes sobre cada aplicação:
@@ -97,4 +97,4 @@ Para chegar a esta página, vá ao menu de navegação e **selecione aplicaçõe
 
 Use **O Sort por** para reorganizar o tipo de atribuição de aplicações, editor, alfabeticamente pelo nome ou cronologicamente por data de publicação. Utilize o **Filter para** limitar as aplicações que vê pelo estado de instalação.  Se não houver aplicações disponíveis, verá uma mensagem de que não foram instaladas aplicações da empresa.  
 
-Precisa de ajuda adicional? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Precisa de ajuda adicional? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

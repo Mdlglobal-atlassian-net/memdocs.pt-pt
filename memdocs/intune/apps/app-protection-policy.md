@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863167"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078367"
 ---
 # <a name="app-protection-policies-overview"></a>Descrição geral das políticas de proteção de aplicações
 
@@ -36,7 +36,7 @@ As políticas de proteção de aplicações mobile Application Management (MAM) 
 ## <a name="how-you-can-protect-app-data"></a>Como pode proteger dados de aplicações
 Os seus empregados utilizam dispositivos móveis para tarefas pessoais e profissionais. Se, por um lado, quer garantir que os seus funcionários são produtivos, por outro, quer evitar a perda de dados, intencional e não intencional. Também irá querer proteger os dados da empresa que são acedidos a partir de dispositivos que não são geridos por si.
 
-Pode utilizar as políticas de proteção de aplicações do Intune **independentemente de qualquer solução de gestão de dispositivos móveis (MDM)** . Esta independência ajuda-o a proteger dados da sua empresa com ou sem inscrição de dispositivos numa solução de gestão de dispositivos. Ao implementar **políticas ao nível da aplicação**, pode restringir o acesso aos recursos da empresa e manter os dados sob a alçada do seu departamento de TI.
+Pode utilizar as políticas de proteção de aplicações do Intune **independentemente de qualquer solução de gestão de dispositivos móveis (MDM)**. Esta independência ajuda-o a proteger os dados da sua empresa com ou sem dispositivos de inscrição numa solução de gestão de dispositivos. Ao implementar **políticas ao nível da aplicação**, pode restringir o acesso aos recursos da empresa e manter os dados sob a alçada do seu departamento de TI.
 
 ### <a name="app-protection-policies-on-devices"></a>Políticas de proteção de aplicações em dispositivos
 
@@ -60,9 +60,9 @@ Os benefícios importantes da utilização das políticas de proteção da App s
 
 - **Proteger os dados da sua empresa ao nível da aplicação.** Como a gestão de aplicações móveis não requer a gestão de dispositivos, pode proteger os dados da empresa nos dispositivos geridos e não geridos. A gestão centra-se na identidade do utilizador, o que elimina a necessidade de gestão de dispositivos.
 
-- **A produtividade dos utilizadores finais não é afetada e as políticas não se aplicam quando se utiliza a aplicação num contexto pessoal.** As políticas são aplicadas apenas num contexto profissional, o que lhe permite proteger os dados da empresa sem afetar os dados pessoais.
+- **A produtividade do utilizador final não é afetada e as políticas não são aplicadas quando a aplicação for utilizada num contexto pessoal.** As políticas são aplicadas apenas num contexto profissional, o que lhe permite proteger os dados da empresa sem afetar os dados pessoais.
 
-- **As políticas de proteção de aplicações asseguram-se de que as proteções da camada de aplicações estão em vigor.** Por exemplo, pode:
+- **As políticas de proteção de aplicações asseguram-se de que as proteções da camada de aplicações estão em vigor.** Pode, por exemplo:
   - Exigir um PIN para abrir uma aplicação num contexto de trabalho 
   - Controlar a partilha de dados entre aplicações 
   - Impedir a gravação de dados empresariais da aplicação numa localização de armazenamento pessoal
@@ -167,7 +167,7 @@ Os requisitos adicionais para utilizar a [aplicação móvel Outlook](https://pr
 ### <a name="word-excel-and-powerpoint"></a>Palavra, Excel e PowerPoint
 Os requisitos adicionais para utilizar as aplicações [Word, Excel e PowerPoint](https://products.office.com/business/office) incluem os seguintes:
 
-- O utilizador final tem de ter uma licença do [Office 365 Empresas ou Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) associada à respetiva conta do Azure Active Directory. A subscrição tem de incluir as aplicações do Office para dispositivos móveis e pode incluir uma conta de armazenamento na cloud com o [OneDrive para Empresas](https://onedrive.live.com/about/business/). As licenças do Office 365 podem ser atribuídas no centro de administração da [Microsoft 365](https://admin.microsoft.com) seguindo estas [instruções](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- O utilizador final deve ter uma licença para [aplicações Microsoft 365 para negócios ou empresas](https://products.office.com/business/compare-more-office-365-for-business-plans) ligadas à sua conta Azure Ative Directory. A subscrição tem de incluir as aplicações do Office para dispositivos móveis e pode incluir uma conta de armazenamento na cloud com o [OneDrive para Empresas](https://onedrive.live.com/about/business/). As licenças do Office 365 podem ser atribuídas no centro de administração da [Microsoft 365](https://admin.microsoft.com) seguindo estas [instruções](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - O utilizador final deve ter uma localização gerida configurada utilizando o ecorânico save como funcionalidade no âmbito da definição da política de proteção de aplicações "Guardar cópias de dados org". Por exemplo, se a localização gerida for o OneDrive, a aplicação [OneDrive](https://onedrive.live.com/about/) deverá ser configurada na aplicação Word, Excel ou PowerPoint do utilizador final.
 
@@ -190,7 +190,7 @@ As definições, disponibilizadas para a consola de administração do OneDrive,
 
 Uma vez ativadas, as aplicações OneDrive e SharePoint para iOS/iPadOS e Android estão protegidas com as definições selecionadas por padrão. Um profissional de TI pode editar esta política na consola do Intune para adicionar mais aplicações segmentadas e para modificar qualquer definição de política. 
 
-Por predefinição, só pode existir uma política **Global** por inquilino. No entanto, pode utilizar [Graph APIs do Intune](../developer/intune-graph-apis.md) para criar políticas globais adicionais por inquilino, mas não é recomendado. A criação de políticas globais adicionais não é recomendada, uma vez que resolver problemas relacionados com a implementação destas políticas pode tornar-se complicado.
+Por predefinição, só pode existir uma política **Global** por inquilino. No entanto, pode utilizar [Graph APIs do Intune](../developer/intune-graph-apis.md) para criar políticas globais adicionais por inquilino, mas não é recomendado. A criação de políticas globais extranão é recomendada porque a resolução de problemas na implementação de tal política pode tornar-se complicada.
 
 Embora a política **Global** se aplique a todos os utilizadores no seu inquilino, qualquer política de proteção de aplicações padrão do Intune substituirá estas definições.
 
@@ -231,7 +231,7 @@ Para dispositivos iOS/iPadOS, mesmo que o PIN seja partilhado entre aplicações
   > Para verificar os requisitos de acesso do utilizador com mais frequência (ou seja, o pedido de PIN), especialmente para uma aplicação utilizada com frequência, é recomendado reduzir o valor da definição “Reverificar os requisitos de acesso após (minutos)”.
 
 **Aplicativo incorporado PINs para Outlook e OneDrive**<br>
-O PIN Intune funciona com base num temporizador baseado em inatividade (o valor de **Reverificar os requisitos de acesso após (minutos)** ). Como tal, os pedidos de PIN do Intune são apresentados de forma independente dos pedidos de PIN de aplicação incorporados para o Outlook e OneDrive, que normalmente estão associados à inicialização da aplicação por predefinição. Se o utilizador receber ambos os pedidos de PIN ao mesmo tempo, o comportamento esperado deverá ser o de que o PIN do Intune tem precedência.
+O PIN Intune funciona com base num temporizador baseado em inatividade (o valor de **Reverificar os requisitos de acesso após (minutos)**). Como tal, os pedidos de PIN do Intune são apresentados de forma independente dos pedidos de PIN de aplicação incorporados para o Outlook e OneDrive, que normalmente estão associados à inicialização da aplicação por predefinição. Se o utilizador receber ambos os pedidos de PIN ao mesmo tempo, o comportamento esperado deverá ser o de que o PIN do Intune tem precedência.
 
 **Segurança PIN Intune**<br>
 O PIN serve para garantir que só o utilizador correto consegue aceder aos dados da respetiva organização na aplicação. Por conseguinte, o utilizador final tem de iniciar sessão com a conta profissional ou escolar para poder definir ou repor o PIN da aplicação Intune. Esta autenticação é tratada pelo Azure Ative Directory através de uma troca segura de tokene e não é transparente para o [Intune SDK](../developer/app-sdk.md). No que diz respeito à segurança, a melhor forma de proteger os seus dados profissionais ou escolares é encriptá-los. A encriptação não está relacionada com o PIN da aplicação, mas é a própria política de proteção da aplicação.
@@ -310,7 +310,7 @@ As políticas de proteção de aplicações do Intune permitem o controlo sobre 
 A intenção deste processo é continuar a manter os dados da sua organização dentro da app seguros e protegidos ao nível da aplicação. Esta funcionalidade só está disponível para iOS/iPadOS, e requer a participação de aplicações que integram o Intune SDK para iOS/iPadOS, versão 9.0.1 ou posterior. Precisa da integração do SDK para que o comportamento possa ser imposto nas aplicações de destino. Esta integração decorre de forma gradual e está dependente das equipas específicas da aplicação. Algumas aplicações participantes incluem: WXP, Outlook, Managed Browser e Yammer.
   
 ### <a name="ios-share-extension"></a>extensão de partilha iOS
-Pode utilizar a extensão de partilha iOS/iPadOS para abrir o trabalho ou dados escolares em aplicações não geridas, mesmo com a política de transferência de dados definida apenas para **aplicações geridas** ou **sem aplicações.** A política de proteção de aplicações intonizada não pode controlar a extensão de partilha iOS/iPadOS sem gerir o dispositivo. Por isso, o _**Intune encripta os dados "empresariais" antes de estes serem partilhados fora da aplicação**_ . Pode validar este comportamento de encriptação tentando abrir um ficheiro "corporativo" fora da aplicação gerida. O ficheiro deve estar encriptado e não deve ser possível abri-lo fora da aplicação gerida.
+Pode utilizar a extensão de partilha iOS/iPadOS para abrir o trabalho ou dados escolares em aplicações não geridas, mesmo com a política de transferência de dados definida apenas para **aplicações geridas** ou **sem aplicações.** A política de proteção de aplicações intonizada não pode controlar a extensão de partilha iOS/iPadOS sem gerir o dispositivo. Por isso, o _**Intune encripta os dados "empresariais" antes de estes serem partilhados fora da aplicação**_. Pode validar este comportamento de encriptação tentando abrir um ficheiro "corporativo" fora da aplicação gerida. O ficheiro deve estar encriptado e não deve ser possível abri-lo fora da aplicação gerida.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Múltiplas definições de acesso à proteção de aplicativos Intune para o mesmo conjunto de apps e utilizadores
 As políticas de proteção de aplicações intonantes para acesso serão aplicadas numa ordem específica sobre dispositivos de utilizador final, uma vez que tentam aceder a uma aplicação direcionada a partir da sua conta corporativa. Em geral, uma limpeza teria precedência, seguida de um bloqueio e de um aviso que pode ser dispensado. Por exemplo, se aplicável ao utilizador/app específico, será aplicada uma definição mínima do sistema operativo iOS/iPadOS que avisa um utilizador para atualizar a sua versão iOS/iPadOS após a definição mínima do sistema operativo iOS/iPadOS que bloqueia o acesso ao utilizador. Portanto, no cenário em que o administrador de TI configura o sistema operativo iOS mínimo para 11.0.0.0 e o sistema operativo iOS mínimo (apenas Aviso) para 11.1.0.0, embora o dispositivo que tentava aceder à aplicação tivesse o iOS 10, o utilizador final seria bloqueado com base na definição mais restrita de versão mínima de sistema operativo iOS que resulta num bloqueio do acesso.
@@ -320,7 +320,7 @@ Ao lidar com diferentes tipos de configurações, um requisito de versão Intune
 ## <a name="app-protection-experience-for-android-devices"></a>Experiência de proteção de aplicativos para dispositivos Android
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>App Portal da Empresa e proteção de aplicativos Intune
-Uma grande parte da funcionalidade de proteção de aplicações está incorporada na aplicação Portal da Empresa. Embora a aplicação Portal da Empresa seja sempre necessária, a inscrição de dispositivos _não é obrigatória_. Para a gestão de aplicações móveis sem matrícula (MAM-WE), o utilizador final apenas precisa de ter a aplicação Portal da Empresa instalada no dispositivo.
+Uma grande parte da funcionalidade de proteção de aplicações está incorporada na aplicação Portal da Empresa. A inscrição do dispositivo não é _necessária,_ apesar de a aplicação Portal da Empresa ser sempre necessária. Para a gestão de aplicações móveis sem matrícula (MAM-WE), o utilizador final apenas precisa de ter a aplicação Portal da Empresa instalada no dispositivo.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Múltiplas definições de acesso à proteção de aplicativos Intune para o mesmo conjunto de apps e utilizadores
 As políticas de proteção de aplicações intonantes para acesso serão aplicadas numa ordem específica sobre dispositivos de utilizador final, uma vez que tentam aceder a uma aplicação direcionada a partir da sua conta corporativa. Em geral, um bloqueio teria precedência, seguido de um aviso que pode ser dispensado. Por exemplo, se aplicável ao utilizador/aplicação específico, uma definição mínima de versão de patch do Android que avisa um utilizador para atualizar o patch será aplicada após a definição mínima de versão de patch do Android bloquear o acesso do utilizador. Portanto, no cenário em que o administrador de TI configura a versão mínima de patch do Android para 2018-03-01 e a versão mínima de patch do Android (apenas Aviso) para 2018-02-01, embora o dispositivo que tentava aceder à aplicação tivesse a versão de patch 2018-01-01, o utilizador final seria bloqueado com base na definição mais restrita de versão mínima de patch do Android que resulta num bloqueio do acesso. 
@@ -331,10 +331,10 @@ Ao lidar com diferentes tipos de definições, um requisito de versão de aplica
 As políticas de proteção de aplicações intune fornecem a capacidade para os administradores exigirem dispositivos de utilizador final para passar em Dispositivos Android SafetyNet da Google. Uma nova determinação do serviço Google Play será reportada ao administrador de TI num intervalo determinado pelo serviço Intune. A frequência com que a chamada de serviço é feita é acelerada devido à carga, pelo que este valor é mantido internamente e não é configurável. Qualquer ação configurada por TI para a definição de Attestation Google SafetyNet será tomada com base no último resultado reportado ao serviço Intune no momento do lançamento condicional. Caso não existam dados, o acesso será permitido dependendo de nenhuma outra verificação de lançamento condicional falhando, e o Google Play Service "trip" para determinar os resultados da atesta começará no backend e solicitará ao utilizador assincronicamente se o dispositivo tiver falhado. Se houver dados antigos, o acesso será bloqueado ou permitido dependendo do último resultado reportado, e da mesma forma, uma "ida e volta" do Serviço Google Play para determinar os resultados da atesta começará e solicitará ao utilizador assincronicamente se o dispositivo tiver falhado.
 
 ### <a name="intune-app-protection-policies-and-googles-verify-apps-api-for-android-devices"></a>Intune apps protection policies e Google's Check Apps API para dispositivos Android
-As Políticas de Proteção de Aplicações Intune fornecem a capacidade para os administradores exigirem que dispositivos de utilizador final enviem sinais através da API de Aplicações de Verificação da Google para dispositivos Android. As instruções sobre como fazê-lo variam ligeiramente por dispositivo. O processo geral envolve ir à Google Play Store, clicando depois nas **minhas aplicações e jogos,** clicando no resultado da última pesquisa de aplicações que o levará ao menu Play Protect. Certifique-se de que o **dispositivo Desativação para ameaças** de segurança está ligado.
+As Políticas de Proteção de Aplicações Intune fornecem a capacidade para os administradores exigirem que dispositivos de utilizador final enviem sinais através da API de Aplicações de Verificação da Google para dispositivos Android. As instruções sobre como fazê-lo variam ligeiramente por dispositivo. O processo geral envolve ir à Google Play Store, clicando em **my apps & jogos**, clicando no resultado da última pesquisa de aplicações que o levará ao menu Play Protect. Certifique-se de que o **dispositivo Desativação para ameaças** de segurança está ligado.
 
 ### <a name="googles-safetynet-attestation-api"></a>API de Attestation SafetyNet da Google 
-Intune aproveita as APIs do Google Play Protect SafetyNet para adicionar aos nossos controlos de deteção de raízes existentes para dispositivos não matriculados. A Google desenvolveu e manteve este conjunto de API para as aplicações Android adotarem se não quiserem que as suas aplicações sejam executadas em dispositivos enraizados. A aplicação Android Pay incorporou isto, por exemplo. Embora a Google não partilhe publicamente a totalidade das verificações de deteção de raízes que ocorrem, esperamos que estas APIs detetem utilizadores que tenham enraizado os seus dispositivos. Estes utilizadores podem então ser impedidos de aceder, ou as suas contas corporativas eliminadas das suas aplicações ativadas pela política. **Verifique a integridade básica** que lhe diz sobre a integridade geral do dispositivo. Dispositivos enraizados, emuladores, dispositivos virtuais e dispositivos com sinais de adulteração falham a integridade básica. Verifique a **integridade básica e os dispositivos certificados** contam-lhe sobre a compatibilidade do dispositivo com os serviços da Google. Apenas dispositivos não modificados certificados pela Google podem passar este cheque. Os dispositivos que falharão incluem o seguinte:
+Intune aproveita as APIs do Google Play Protect SafetyNet para adicionar aos nossos controlos de deteção de raízes existentes para dispositivos não matriculados. A Google desenvolveu e manteve este conjunto de API para as aplicações Android adotarem se não quiserem que as suas aplicações sejam executadas em dispositivos enraizados. A aplicação Android Pay incorporou isto, por exemplo. Embora a Google não partilhe publicamente a totalidade das verificações de deteção de raízes que ocorrem, esperamos que estas APIs detetem utilizadores que tenham enraizado os seus dispositivos. Estes utilizadores podem então ser impedidos de aceder, ou as suas contas corporativas eliminadas das suas aplicações ativadas pela política. **Verifique a integridade básica** que lhe diz sobre a integridade geral do dispositivo. Dispositivos enraizados, emuladores, dispositivos virtuais e dispositivos com sinais de adulteração falham a integridade básica. Verifique a **integridade básica & dispositivos certificados** lhe diz sobre a compatibilidade do dispositivo com os serviços da Google. Apenas dispositivos não modificados certificados pela Google podem passar este cheque. Os dispositivos que falharão incluem o seguinte:
 
 - Dispositivos que falham na integridade básica
 - Dispositivos com um bootloader desbloqueado
@@ -351,7 +351,7 @@ As verificações da API SafetyNet da Google Play Protect exigem que o utilizado
 ### <a name="google-play-protect-apis-and-google-play-services"></a>Google Play Protect APIs e Google Play Services
 As definições de política de proteção de aplicações que alavancam as APIs do Google Play Protect exigem que os Serviços de Reprodução do Google funcionem. Tanto o **atestado safetyNet**como a **análise de ameaças nas** definições de apps exigem que a versão determinada do Google Play Services funcione corretamente. Uma vez que estas são configurações que caem na área de segurança, o utilizador final será bloqueado se tiver sido alvo destas definições e não estiver a cumprir a versão adequada dos Serviços Google Play ou não tiver acesso aos Serviços de Reprodução do Google.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Como criar e implementar políticas de proteção de aplicações com o Microsoft Intune](app-protection-policies.md)
 
@@ -359,5 +359,5 @@ As definições de política de proteção de aplicações que alavancam as APIs
 
 [Definições de política de proteção de aplicações iOS/iPadOS disponíveis com microsoft Intune](app-protection-policy-settings-ios.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 As aplicações de terceiros como a aplicação móvel do Salesforce funcionam com o Intune de formas específicas para proteger os dados empresariais. Para obter mais informações sobre como a aplicação Salesforce em particular funciona com o Intune (incluindo configurações de aplicações de MDM), veja [Aplicação Salesforce e Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

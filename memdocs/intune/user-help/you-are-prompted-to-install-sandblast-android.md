@@ -17,16 +17,16 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324061"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079659"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Tem de instalar o SandBlast Mobile Protect no seu dispositivo Android
 
-Antes de poder aceder ao seu trabalho, o suporte da sua empresa precisa que instale a aplicação SandBlast Mobile Protect, que ajuda a proteger o seu dispositivo ao detetar potenciais ameaças de segurança.
+Antes de poder aceder ao seu trabalho, o suporte da empresa precisa que instale a aplicação SandBlast Mobile Protect, que ajuda a proteger o seu dispositivo ao detetar potenciais ameaças de segurança.
 
 Se tiver problemas com a instalação, experimente os passos de resolução de problemas no fim deste tópico.
 
@@ -36,11 +36,11 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 2. É direcionado para a página de instalação do SandBlast Mobile Protect na Play Store. Instale o SandBlast Mobile Protect e, em seguida, toque em **ACCEPT (ACEITAR)** para permitir que o SandBlast Mobile Protect aceda ao seu dispositivo.
 
-3. Abra o SandBlast Mobile Protect e, em seguida, toque em **VERIFY (VERIFICAR)** .
+3. Abra o SandBlast Mobile Protect e, em seguida, toque em **VERIFY (VERIFICAR)**.
 
 4. Toque em **Sign in with Azure Active Directory (Iniciar sessão com o Azure Active Directory)** e introduza a conta que utiliza para aceder aos seus ficheiros e e-mail escolares ou profissionais.
 
-5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)** .
+5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)**.
 
 6. Toque em **Accept (Aceitar)** para conceder permissão ao SandBlast Mobile Protect para iniciar a sua sessão e ler o seu perfil.
 
@@ -52,7 +52,7 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 10. Se não forem encontradas ameaças, os três tipos de ameaças aparecem a verde.
 
-11. O ecrã **Detalhes do Dispositivo**, no Portal da Empresa, mostra que está agora em conformidade com os requisitos de segurança da empresa.
+11. O ecrã **De detalhes** do dispositivo no Portal da Empresa mostra que está agora em conformidade com os requisitos de segurança da sua empresa.
 
     ![O dispositivo está agora em conformidade com as políticas](./media/mtd-device-now-compliant-android.png)
 
@@ -60,4 +60,4 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 Por vezes, as instalações podem falhar devido a problemas técnicos fora do seu controlo. Se tal acontecer, experimente instalar o SandBlast Mobile Protect [manualmente a partir da Play Store](https://play.google.com/store/apps/details?id=com.lacoon.security.fox).
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

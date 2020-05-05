@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e81a88ae3d6db37dfeece31a2e78a2243a9a6387
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333145"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078282"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Atribuir perfis de utilizador e dispositivo no Microsoft Intune
 
@@ -44,7 +44,7 @@ Certifique-se de que tem o papel adequado para atribuir perfis. Para mais inform
 ## <a name="assign-a-device-profile"></a>Atribuir um perfil do dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > perfis de **configuração**. Todos os perfis são apresentados.
+2. Selecione perfis de**configuração**de **dispositivos** > . Todos os perfis são apresentados.
 3. Selecione o perfil que quer atribuir > **Atribuições**.
 4. Escolha **Incluir** ou **Excluir** grupos e, em seguida, selecione os grupos. Ao selecionar os seus grupos, estará a escolher um grupo do Azure AD. Para selecionar vários grupos, mantenha premida a tecla **Ctrl** e selecione os grupos.
 
@@ -56,7 +56,7 @@ Certifique-se de que tem o papel adequado para atribuir perfis. Para mais inform
 
 Quando atribui o perfil, também pode **Avaliar** quantos utilizadores são afetados. Esta funcionalidade calcula os utilizadores, mas não calcula os dispositivos.
 
-1. No centro de administração, selecione **Dispositivos** > Perfis de **Configuração**.
+1. No centro de administração, selecione perfis de**configuração**de **dispositivos** > .
 2. Selecione um perfil > **Atribuições** > **Avaliar**. É apresentada uma mensagem que mostra a quantidade de utilizadores visados por este perfil.
 
 Se o botão **Avaliar** ficar cinzento, verifique se o perfil foi atribuído a um ou mais grupos.
@@ -65,7 +65,7 @@ Se o botão **Avaliar** ficar cinzento, verifique se o perfil foi atribuído a u
 
 Quando cria ou atualiza um perfil, também pode adicionar etiquetas de âmbito e regras de aplicabilidade ao perfil.
 
-**As etiquetas** de âmbito são uma ótima maneira de filtrar perfis para grupos específicos, como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações, veja [Utilizar o RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
+**As etiquetas** de âmbito são uma ótima maneira `US-NC IT Team` de `JohnGlenn_ITDepartment`filtrar perfis para grupos específicos, tais como ou . Para obter mais informações, veja [Utilizar o RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
 
 Nos dispositivos Windows 10, pode adicionar regras de **aplicabilidade** para que o perfil se aplique apenas a uma versão oS específica ou a uma edição específica do Windows. As regras de [aplicabilidade](device-profile-create.md#applicability-rules) têm mais informações.
 
@@ -73,7 +73,7 @@ Nos dispositivos Windows 10, pode adicionar regras de **aplicabilidade** para qu
 
 Muitos utilizadores perguntam quando usar grupos de utilizadores e quando usar grupos de dispositivos. A resposta depende do seu objetivo. Aqui está uma orientação para começar.
 
-### <a name="device-groups"></a>Grupos de dispositivos
+### <a name="device-groups"></a>Device groups
 
 Se pretender aplicar as definições num dispositivo, independentemente de quem tenha assinado, atribua os seus perfis a um grupo de dispositivos. As definições aplicadas aos grupos de dispositivos vão sempre com o dispositivo, não com o utilizador.
 
@@ -87,7 +87,7 @@ Por exemplo:
 
 Para resumir, utilize grupos de dispositivos quando não se importa quem assinou o dispositivo, ou se alguém está inscrito. Quer que as suas definições estejam sempre no dispositivo.
 
-### <a name="user-groups"></a>Grupos de utilizadores:
+### <a name="user-groups"></a>Grupos de utilizadores
 
 As definições de perfil aplicadas aos grupos de utilizadores vão sempre com o utilizador e vão com o utilizador quando estão inscritos nos seus muitos dispositivos. É normal que os utilizadores tenham muitos dispositivos, como um Surface Pro para trabalho, e um dispositivo pessoal iOS/iPadOS. E é normal que uma pessoa aceda a emails e outros recursos da organização a partir destes dispositivos.
 
@@ -126,6 +126,6 @@ Ao atribuir os seus perfis, utilize a tabela seguinte ao incluir e excluir grupo
 
   Como resultado, não é recomendado atribuir perfis a grupos mistos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Veja [monitorizar perfis de dispositivos](device-profile-monitor.md) para obter orientações sobre como monitorizar os perfis e os dispositivos que executam os seus perfis.

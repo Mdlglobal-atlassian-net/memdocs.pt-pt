@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a40f614dccf3a61c8323acab763ce284a775324
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1b8fcab22462027cc50b5794319b71cb467c8bc2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325305"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079518"
 ---
 >[!Note] 
->Se estiver interessado em ver ou eliminar dados pessoais, veja o artigo [Azure Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) (Pedidos de Titulares de Dados do Azure para o RGPD). Se quiser obter informações gerais sobre o RGPD, veja a [secção RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Se estiver interessado em visualizar ou apagar dados pessoais, consulte os Pedidos de Assunto de Dados do Azure para o artigo [do RGPD.](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) Se procura informações gerais sobre o RGPD, consulte a [secção rGPD do portal Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

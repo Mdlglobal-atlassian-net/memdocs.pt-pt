@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af44b09f5e539306a24ae0e0294b3ad674f7cb74
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325161"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079132"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Resolução de problemas no Conector de Câmbio Intune
 
@@ -45,9 +45,9 @@ Antes de começar a resolver problemas com um problema de Conector de Intercâmb
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Use powerShell para obter mais dados sobre questões de Conectore de troca
 
-- Para obter uma lista de todos os dispositivos móveis para uma caixa de correio, use `Get-ActiveSyncDeviceStatistics -mailbox mbx`
-- Para obter uma lista de endereços SMTP para uma caixa de correio, use `Get-Mailbox -Identity user | select emailaddresses | fl`
-- Para obter informações detalhadas sobre o estado de acesso de um dispositivo, use `Get-CASMailbox <upn> | fl`
+- Para obter uma lista de todos os dispositivos móveis para uma caixa de correio, use`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Para obter uma lista de endereços SMTP para uma caixa de correio, use`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Para obter informações detalhadas sobre o estado de acesso de um dispositivo, use`Get-CASMailbox <upn> | fl`
 
 ## <a name="review-the-connector-configuration"></a>Reveja a configuração do conector
 
@@ -70,7 +70,7 @@ Reveja os requisitos do [conector de troca no local](exchange-connector-install.
 - Sincronização do Servidor de Acesso ao **Cliente**: Ao configurar o Conector de Troca, especifique um CAS que tenha a latência de rede mais baixa possível para o servidor que acolhe o conector De troca. A latência de comunicação entre o CAS e o conector Exchange pode atrasar a descoberta do dispositivo, especialmente quando se utiliza o Exchange Online Dedicated.
 - Calendário de **sincronização**: Um utilizador com um dispositivo recém-inscrito pode ser adiado para ter acesso até que o conector Detroca sincronize com o EXCHANGE CAS. Uma sincronização completa é realizada uma vez ao dia e uma sincronização (rápida) delta ocorre várias vezes ao dia. Pode [forçar manualmente uma sincronização rápida ou uma sincronização completa](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) para minimizar atrasos.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Os seguintes artigos podem ajudar a resolver problemas comuns e erros específicos:
 
 - [Resolver problemas comuns para o Conector de Câmbio Intune](troubleshoot-exchange-connector-common-problems.md).

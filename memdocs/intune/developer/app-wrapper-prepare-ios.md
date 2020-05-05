@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327313"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078146"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar as aplicações iOS para as políticas de proteção de aplicações com a Ferramenta de Encapsulamento de Aplicações do Intune
 
@@ -81,7 +81,7 @@ Para saber mais sobre a distribuição de aplicações iOS internamente para os 
 
 5. Selecione o **Tipo de Entidade** e clique em **Continuar**.
 
-6. Preencha o formulário com as informações da sua organização. Clique em **Continuar**. Neste passo, a Apple contacta-o para verificar se está autorizado a inscrever a sua organização.
+6. Preencha o formulário com as informações da sua organização. Clique em **Continue** (Continuar). Neste passo, a Apple contacta-o para verificar se está autorizado a inscrever a sua organização.
 
 7. Após a verificação, clique em **Aceitar Licenciar**.
 
@@ -99,7 +99,7 @@ Para saber mais sobre a distribuição de aplicações iOS internamente para os 
 
 4. Clique em **Certificados, IDs e Perfis**.
 
-   ![Portal apple developer - Certificados, IDs e Perfis](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
+   ![Portal apple developer - Certificados, IDs & Perfis](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
 5. Clique no ![sinal de adição do portal de Programador da Apple](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) no canto superior direito para adicionar um certificado iOS.
 
@@ -126,7 +126,7 @@ Para saber mais sobre a distribuição de aplicações iOS internamente para os 
 
     ![Insira informações para o certificado que está a solicitar](./media/app-wrapper-prepare-ios/iOS-signing-cert-6.png)
 
-12. Regresse ao site de programador da Apple. Clique em **Continuar**. Em seguida, carregue o ficheiro CSR.
+12. Regresse ao site de programador da Apple. Clique em **Continue** (Continuar). Em seguida, carregue o ficheiro CSR.
 
 13. A Apple gera o certificado de assinatura. Transfira e guarde-o numa localização fácil de memorizar no seu computador macOS.
 
@@ -154,7 +154,7 @@ Para saber mais sobre a distribuição de aplicações iOS internamente para os 
 
    ![Selecionar o perfil de aprovisionamento interno](./media/app-wrapper-prepare-ios/iOS-provisioning-profile-1.png)
 
-5. Clique em **Continuar**. Certifique-se de que associa o certificado de assinatura gerado anteriormente ao perfil de aprovisionamento.
+5. Clique em **Continue** (Continuar). Certifique-se de que associa o certificado de assinatura gerado anteriormente ao perfil de aprovisionamento.
 
 6. Siga os passos para transferir o perfil (com a extensão .mobileprovision) para o seu computador macOS.
 
@@ -191,21 +191,21 @@ Abra o Terminal macOS e execute o seguinte comando:
 
 Pode utilizar os seguintes parâmetros de linha de comandos na Ferramenta de Encapsulamento de Aplicações:
 
-|Propriedade|Como a utilizar|
+|Propriedade|Como utilizá-lo|
 |---------------|--------------------------------|
 |**-i**|`<Path of the input native iOS application file>`. O nome do ficheiro tem de terminar em .app ou .ipa. |
 |**-o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Mostra informações de utilização detalhadas sobre propriedades de linha de comandos disponíveis para a Ferramenta de Encapsulamento de Aplicações. |
-|**-aa**|(Opcional) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` ou assim `login.windows.net/common` |
+|**-aa**|(Opcional) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` i.e `login.windows.net/common` |
 |**-ac**|(Opcional) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Este é o guia no campo id do cliente é da listagem da sua aplicação na lâmina de registo de aplicações. |
-|**-ar**|(Opcional) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Este é o Uri Redirect configurado no registo da sua aplicação. Normalmente seria o protocolo URL da aplicação a que a aplicação Microsoft Authenticator voltaria após a autenticação intermediada. |
+|**-ar**|(Opcional) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Este é o Redirect URI configurado no seu Registo de Aplicações. Normalmente seria o protocolo URL da aplicação a que a aplicação Microsoft Authenticator voltaria após a autenticação intermediada. |
 |**-v**| (Opcional) Dá saída de mensagens verbosas para a consola. Recomenda-se a utilização deste sinalizador para depurar quaisquer erros. |
-|**-e**| (Opcional) Utilize este sinalizador para fazer com que a Ferramenta de Encapsulamento de Aplicações remova as elegibilidades em falta à medida que processa a aplicação. Veja [Definição de elegibilidade da aplicação](#setting-app-entitlements) para obter mais detalhes.|
-|**-xe**| (Opcional) Imprime informações acerca das extensões iOS na aplicação e que elegibilidades são necessárias para as utilizar. Veja [Definição de elegibilidade da aplicação](#setting-app-entitlements) para obter mais detalhes. |
+|**-e**| (Opcional) Utilize este sinalizador para fazer com que a Ferramenta de Encapsulamento de Aplicações remova as elegibilidades em falta à medida que processa a aplicação. Consulte os [direitos da aplicação Definição](#setting-app-entitlements) para obter mais detalhes.|
+|**-xe**| (Opcional) Imprime informações acerca das extensões iOS na aplicação e que elegibilidades são necessárias para as utilizar. Consulte os [direitos da aplicação Definição](#setting-app-entitlements) para obter mais detalhes. |
 |**-x**| (Opcional) `<An array of paths to extension provisioning profiles>`. Utilize esta opção se a sua aplicação necessitar de perfis de aprovisionamento de extensões.|
-|**-b**|(Opcional) Utilize -b sem um argumento se quiser que a aplicação de saída encapsulada tenha a mesma versão de pacote que a aplicação de entrada (não recomendado). <br/><br/> Utilize `-b <custom bundle version>` se quiser que a aplicação encapsulada tenha uma CFBundleVersion personalizada. Se optar por especificar uma CFBundleVersion personalizada, é recomendado incrementar a CFBundleVersion da aplicação nativa pelo componente menos significativo, como 1.0.0 -> 1.0.1. |
+|**-b**|(Opcional) Utilize -b sem um argumento se quiser que a aplicação de saída encapsulada tenha a mesma versão de pacote que a aplicação de entrada (não recomendado). <br/><br/> Utilize `-b <custom bundle version>` se quiser que a aplicação encapsulada tenha uma CFBundleVersion personalizada. Se optar por especificar um CFBundleVersion personalizado, é uma boa ideia incrementar o CFBundleVersion da aplicação nativa pelo componente menos significativo, como 1.0.0 -> 1.0.1. |
 |**-citrix**|(Opcional) Inclua o Citrix XenMobile App SDK (variante apenas de rede). Tem de ter instalado o Kit de [Ferramentas Citrix MDX](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) para utilizar esta opção. |
 |**-f**|(Opcional) `<Path to a plist file specifying arguments.>` Utilize este sinalizador à frente do ficheiro [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) se optar por utilizar o modelo plist para especificar o resto das propriedades do IntuneMAMPackager, como -i, -o e -p. Consulte Utilizar uma plist para argumentos de entrada. |
 
@@ -217,18 +217,18 @@ Na pasta IntuneMAMPackager/Contents/MacO, abra `Parameters.plist` (um modelo pli
 
 | Chave plist | Tipo |  Valor Predefinido | Notas |
 |------------------|-----|--------------|-----|
-| Caminho de Pacote de Aplicação de Entrada |Cadeia|vazio| Mesmo que -i|
-| Caminho de Pacote de Aplicação de Saída |Cadeia|vazio| Mesmo que -o|
-| Caminho de Perfil de Aprovisionamento |Cadeia|vazio| Mesmo que -p|
-| Hash de Certificado SHA-1 |Cadeia|vazio| Mesmo que -c|
-| Autoridade ADAL |Cadeia|vazio| O mesmo que -aa|
-| Id do cliente ADAL |Cadeia|vazio| O mesmo que -ac|
-| Resposta ADAL URI |Cadeia|vazio| O mesmo que -ar|
-| Verbose Ativada |Booleano|falso| Mesmo que -v|
-| Remover Elegibilidades em Falta |Booleano|falso| Mesmo que -c|
-| Prevenir a atualização de construção predefinida |Booleano|falso| Equivalente a utilizar -b sem argumentos|
-| Substituição de Cadeia da Compilação |Cadeia|vazio| A CFBundleVersion personalizada da aplicação de saída encapsulada|
-| Incluir Citrix XenMobile App SDK (variante apenas para rede)|Booleano|falso| O mesmo que -citrix|
+| Caminho de Pacote de Aplicação de Entrada |String|vazio| Mesmo que -i|
+| Caminho de Pacote de Aplicação de Saída |String|vazio| Mesmo que -o|
+| Caminho de Perfil de Aprovisionamento |String|vazio| Mesmo que -p|
+| Hash de Certificado SHA-1 |String|vazio| Mesmo que -c|
+| Autoridade ADAL |String|vazio| O mesmo que -aa|
+| Id do cliente ADAL |String|vazio| O mesmo que -ac|
+| Resposta ADAL URI |String|vazio| O mesmo que -ar|
+| Verbose Ativada |Booleano|false| Mesmo que -v|
+| Remover Elegibilidades em Falta |Booleano|false| Mesmo que -c|
+| Prevenir a atualização de construção predefinida |Booleano|false| Equivalente a utilizar -b sem argumentos|
+| Substituição de Cadeia da Compilação |String|vazio| A CFBundleVersion personalizada da aplicação de saída encapsulada|
+| Incluir Citrix XenMobile App SDK (variante apenas para rede)|Booleano|false| O mesmo que -citrix|
 | Caminhos de Perfil de Aprovisionamento de Extensão |Matriz de Cadeias|vazio| Uma matriz dos perfis de aprovisionamento de extensão da aplicação.
 
 Execute o IntuneMAMPackager com o ficheiro plist como único argumento:
@@ -239,7 +239,7 @@ Execute o IntuneMAMPackager com o ficheiro plist como único argumento:
 
 ### <a name="post-wrapping"></a>Pós-encapsulamento
 
-Depois de o processamento de encapsulamento ser concluído, será apresentada a mensagem "A aplicação foi encapsulada com êxito". Se ocorrer um erro, consulte [Mensagens de erro](#error-messages-and-log-files) para obter ajuda.
+Depois de o processamento de encapsulamento ser concluído, será apresentada a mensagem "A aplicação foi encapsulada com êxito". Se ocorrer um erro, consulte [as mensagens error](#error-messages-and-log-files) para obter ajuda.
 
 A aplicação encapsulada é guardada no ficheiro de saída que especificou anteriormente. Pode carregar a aplicação para a consola de administrador do Intune e associá-la a uma política de gestão de aplicações móveis.
 
@@ -255,7 +255,7 @@ Os principais cenários nos quais teria de encapsular novamente as suas aplicaç
 * A própria aplicação lançou uma nova versão. A versão anterior da aplicação foi encapsulada e carregada para a consola do Intune.
 * A Ferramenta de Encapsulamento de Aplicações do Intune para iOS lançou uma nova versão com correções de erros importantes ou funcionalidades específicas e novas da política de proteção de aplicações do Intune. Isto ocorre passadas seis a oito semanas através do repositório do GitHub para a [Ferramenta de Encapsulamento de Aplicações do Microsoft Intune para iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-Para iOS/iPadOS, embora seja possível embrulhar com diferentes perfis cert/provisioning do que o original utilizado para assinar a app, se os direitos especificados na app não estiverem incluídos no novo perfil de provisionamento, o embrulho falhará. Utilizar a opção de linha de comandos "–e", que remove todas as elegibilidades em falta da aplicação, para impedir que o encapsulamento falhe neste cenário pode causar falhas de funcionalidade na aplicação.
+Para iOS/iPadOS, embora seja possível embrulhar com diferentes perfis cert/provisioning do que o original utilizado para assinar a app, se os direitos especificados na app não estiverem incluídos no novo perfil de provisionamento, o embrulho falhará. A utilização da opção linha de comando "-e", que remove quaisquer direitos em falta da app, para forçar o embrulho a não falhar neste cenário pode causar funcionalidadequebrada na aplicação.
 
 As melhores práticas para encapsular novamente incluem:
 
@@ -279,7 +279,7 @@ Se a ferramenta de encapsulamento de aplicações não conseguir concluir com ê
 |Não foi possível localizar o ficheiro do perfil de aprovisionamento de entrada que especificou. Especifique um ficheiro do perfil de aprovisionamento de entrada válido.|Certifique-se de que o caminho para o ficheiro de aprovisionamento de entrada é válido e que o ficheiro que especificou existe.|
 |Não foi possível localizar a pasta da aplicação de saída que especificou. Especifique um caminho válido para a aplicação de saída.|Certifique-se de que o caminho de saída que especificou é válido e existe.|
 |A aplicação de saída não tem a extensão **.ipa**.|A Ferramenta de Encapsulamento de Aplicações só aceita aplicações com as extensões **.app** e **.ipa**. Certifique-se de que o seu ficheiro de saída tem uma extensão válida.|
-|Especificou um certificado de assinatura inválido. Especifique um certificado de assinatura da Apple válido.|Certifique-se de que transferiu o certificado de assinatura correto a partir do portal de programador da Apple. O seu certificado poderá ter expirado ou uma chave pública ou privada poderá estar em falta. Se o seu perfil de aprovisionamento e o certificado da Apple puderem ser utilizados para assinar corretamente uma aplicação no Xcode, significa que são válidos para a Ferramenta de Encapsulamento de Aplicações.|
+|Especificou um certificado de assinatura inválido. Especifique um certificado de assinatura da Apple válido.|Certifique-se de que descarregou o certificado de assinatura correto do portal de desenvolvimento da Apple. O seu certificado poderá ter expirado ou uma chave pública ou privada poderá estar em falta. Se o seu perfil de aprovisionamento e o certificado da Apple puderem ser utilizados para assinar corretamente uma aplicação no Xcode, significa que são válidos para a Ferramenta de Encapsulamento de Aplicações.|
 |A aplicação de entrada que especificou é inválida. Especifique uma aplicação válida.|Certifique-se de que tem uma aplicação iOS válida que tenha sido compilada como um ficheiro .app ou .ipa.|
 |A aplicação de entrada que especificou está encriptada. Especifique uma aplicação não encriptada válida.|A Ferramenta de Encapsulamento de Aplicações não suporta aplicações encriptadas. Forneça uma aplicação não encriptada.|
 |A aplicação de entrada que especificou não está no formato PIE (Position Independent Executable). Especifique uma aplicação válida no formato PIE.|As aplicações no formato Position Independent Executable (PIE) podem ser carregadas num endereço de memória aleatória ao ser executadas. Isto pode ter vantagens de segurança. Para obter mais informações sobre vantagens de segurança, consulte a sua documentação Apple Developer.|
@@ -307,7 +307,7 @@ A sua aplicação pode estar a registar informações úteis para a consola do d
 
 1. Reproduza o problema ao executar a aplicação.
 
-2. Recolha o resultado da consola ao seguir as instruções da Apple para [Depurar Aplicações iOS Implementadas](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
+2. Colete a saída da consola seguindo as instruções da Apple para [depurar aplicações iOS implantadas](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
 As aplicações encapsuladas também apresentam aos utilizadores a opção para enviar registos diretamente a partir do dispositivo por e-mail depois de a aplicação falhar. Os utilizadores podem enviar-lhe os registos para que os examine e reencaminhe para a Microsoft se necessário.
 
@@ -323,11 +323,11 @@ A Ferramenta de Encapsulamento de Aplicações para iOS tem alguns requisitos qu
 
 ## <a name="setting-app-entitlements"></a>Definição de elegibilidade da aplicação
 
-Antes de encapsular a sua aplicação, pode conceder *elegibilidade* para atribuir à aplicação permissões e funcionalidades adicionais que excedem o que uma aplicação pode fazer normalmente. É utilizado um *ficheiro de elegibilidade* durante a assinatura de código para especificar permissões especiais na sua aplicação (por exemplo, acesso a uma keychain partilhada). São ativados serviços aplicacionais específicos no Xcode, denominados *capacidades*, durante o desenvolvimento da aplicação. Depois de ativadas, as capacidades são refletidas no ficheiro de elegibilidade. Para mais informações sobre elegibilidade e capacidades, consulte [Adicionar Capacidades](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na iOS Developer Library. Para obter uma lista completa de capacidades suportadas, veja [Supported capabilities (Capacidades suportadas)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Antes de encapsular a sua aplicação, pode conceder *elegibilidade* para atribuir à aplicação permissões e funcionalidades adicionais que excedem o que uma aplicação pode fazer normalmente. É utilizado um *ficheiro de elegibilidade* durante a assinatura de código para especificar permissões especiais na sua aplicação (por exemplo, acesso a uma keychain partilhada). São ativados serviços aplicacionais específicos no Xcode, denominados *capacidades*, durante o desenvolvimento da aplicação. Depois de ativadas, as capacidades são refletidas no ficheiro de elegibilidade. Para mais informações sobre elegibilidade e capacidades, consulte [Adicionar Capacidades](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na iOS Developer Library. Para obter uma lista completa de capacidades suportadas, consulte [as capacidades suportadas](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Capacidades suportadas para a Ferramenta de Encapsulamento de Aplicações para iOS
 
-|Funcionalidade|Descrição|Orientações recomendadas|
+|Capacidade|Descrição|Orientações recomendadas|
 |--------------|---------------|------------------------|
 |Grupos de aplicações|Utilize grupos de aplicações para permitir que várias aplicações acedam a contentores partilhados e permitir a comunicação adicional entre processos entre as aplicações.<br /><br />Para ativar grupos de aplicações, abra o painel **Capacidades** e clique em **ATIVAR** em **Grupos de Aplicações**. Pode adicionar grupos de aplicações ou selecionar grupos já existentes.|Quando utilizar Grupos de Aplicações, utilize a notação de DNS reverso:<br /><br />*Grupo.com.nomeDaEmpresa.GrupoDeAplicações*|
 |Modos em segundo plano|A ativação de modos em segundo plano permite à aplicação iOS continuar a ser executada em segundo plano.||
@@ -335,14 +335,14 @@ Antes de encapsular a sua aplicação, pode conceder *elegibilidade* para atribu
 |Compras via aplicação|A compra via aplicação incorpora uma loja diretamente na sua aplicação, permitindo ligar à loja e processar pagamentos do utilizador em segurança. Pode utilizar a compra via aplicação para recolher o pagamento de funcionalidade melhorada ou de conteúdo adicional utilizável pela sua aplicação.||
 |Partilha de keychain|A ativação da partilha de keychain permite à aplicação partilhar palavras-passe na keychain com outras aplicações desenvolvidas pela sua equipa.|Quando utilizar a partilha de keychain, utilize a notação de DNS reverso:<br /><br />*com.companyName.KeychainGroup*|
 |VPN Pessoal|Ative a VPN pessoal para permitir à aplicação criar e controlar uma configuração de VPN do sistema personalizada utilizando a estrutura de Extensão de Rede.||
-|Notificações push|O serviço Apple Push Notification (APNs) permite a uma aplicação que não está em execução em primeiro plano notificar o utilizador de que tem informações para o mesmo.|Para que as notificações push funcionem, tem de utilizar um perfil de aprovisionamento específico da aplicação.<br /><br />Siga os passos na [documentação de programador da Apple](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
+|Notificações push|O serviço de Notificação Push apple (APNs) permite que uma aplicação que não esteja a funcionar em primeiro plano notifique o utilizador de que possui informações para o utilizador.|Para que as notificações push funcionem, tem de utilizar um perfil de aprovisionamento específico da aplicação.<br /><br />Siga os passos na documentação do desenvolvedor da [Apple.](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)|
 |Configuração de acessórios sem fios|A ativação da configuração de acessórios sem fios adiciona a estrutura Acessórios Externos ao seu projeto e permite à aplicação configurar acessórios Wi-Fi MFi.||
 
 ### <a name="steps-to-enable-entitlements"></a>Passos para ativar a elegibilidade
 
 1. Ativar capacidades na sua aplicação:
 
-    a.  No Xcode, aceda ao destino da sua aplicação e clique no painel **Capacidades**.
+    a.  No Xcode, vá ao alvo da sua aplicação e clique em **Capabilities**.
 
     b.  Ative as capacidades adequadas. Para obter informações detalhadas sobre cada capacidade e como determinar os valores corretos, consulte [Adicionar Capacidades](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na iOS Developer Library.
 
@@ -354,7 +354,7 @@ Antes de encapsular a sua aplicação, pode conceder *elegibilidade* para atribu
 
     a.  Inicie sessão no Apple Developer Member Center.
 
-    b.  Crie um perfil de aprovisionamento para a sua aplicação. Para obter instruções, veja [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS (Como Obter os Pré-requisitos para a Ferramenta de Encapsulamento de Aplicações do Microsoft Intune para iOS)](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/)
+    b.  Crie um perfil de aprovisionamento para a sua aplicação. Para obter instruções, consulte [Como Obter os Pré-Requisitos para a Ferramenta de Embrulho de Aplicações Intune para iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
     c.  No perfil de aprovisionamento, ative a mesma elegibilidade existente na sua aplicação. Terá de fornecer os mesmos IDs (os valores `AppIdentifierPrefix`) que especificou durante o desenvolvimento da aplicação. 
 
@@ -438,13 +438,13 @@ Execute o seu comando de encapsulamento de aplicações geral com o sinalizador 
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
-**Comando de exemplo**:
+**Comando de exemplo:**
 
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Decidir como preparar as aplicações para a gestão de aplicações móveis com o Microsoft Intune](apps-prepare-mobile-application-management.md)
 - [Questões, questões e resoluções comuns com políticas e perfis de dispositivos](../configuration/device-profile-troubleshoot.md)

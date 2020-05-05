@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324197"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077415"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>Desinscreva o seu dispositivo macOS do Portal da Empresa
 
@@ -35,23 +35,23 @@ Siga estes passos para anular a inscrição do seu dispositivo macOS na gestão:
 1. Inscreva-se no Portal da Empresa para o macOS.
 2. Vá ao **Dispositivoe** selecione o dispositivo que pretende desinscrever.
 
-3. Selecione o ícone do menu elipses > **Remova**.
+3. Selecione o ícone do menu elipses > **Remover**.
 4. É apresentada uma mensagem de confirmação. Selecione **Remover** para desinscrever o seu dispositivo. 
 
 Quando anular a inscrição do dispositivo no Intune, eis o que acontece:
 
-- O dispositivo não é apresentado no Portal da Empresa.
+- O seu dispositivo não aparece no Portal da Empresa.
 
-- Não pode instalar aplicações a partir do Portal da Empresa.
+- Não é possível instalar aplicações a partir do Portal da Empresa.
 
 - Todas as definições alteradas no dispositivo quando o adicionou (por exemplo, o comprimento da palavra-passe) deixam de ser aplicáveis.
 
 - É possível que deixe de ter acesso a alguns recursos da empresa, como partilhas de ficheiros ou web sites internos, no seu dispositivo.
 
-- Deixará de poder utilizar aplicações e dados da empresa no seu dispositivo.
+- Já não é possível utilizar aplicações da empresa e dados da empresa no seu dispositivo.
 
 - É possível que deixe de conseguir ligar-se à rede da sua empresa através de Wi-Fi ou de uma rede privada virtual (VPN).
 
 - O acesso ao e-mail da empresa pode ser removido do dispositivo.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

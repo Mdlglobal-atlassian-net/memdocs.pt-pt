@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a3fc8976c4799759088db4c4f28a9f50dff8e37
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d754076537fb8014b3e66a05413379637a67ba32
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332853"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077976"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Relatório de inscrições incompletas dos utilizadores
 
 Este relatório diz-lhe onde no processo de inscrição do Portal da Empresa os utilizadores não estão a concluir o processo de inscrição.
 
-Para ver o relatório, escolha **Intune** > **Device matricula** das matrículas > **incompletas do utilizador**.
+Para ver o relatório, escolha**inscrição** >  **intune** > Dispositivo**Incomplete user registrations**.
 
 Utilizando estas informações, pode atualizar os seus documentos de embarque para ajudar os utilizadores a completar a inscrição. Por exemplo, se existirem muitos utilizadores a desistir nos Termos de Utilização, pode investigar essa área e torná-la mais intuitiva para os utilizadores.
 
@@ -74,43 +74,43 @@ As tabelas seguintes mostram a lista de ações dos utilizadores que se qualific
 
 #### <a name="setup-checklist-section"></a>Secção da lista de verificação da configuração
 
-| Nome da ação | Ecrã ou fluxo | Platform | Ação |
+| Nome de ação | Ecrã ou fluxo | Plataforma | Ação |
 | ---- |---- |---- |---- |
-| EnrollmentWrapUp | Pedido para abrir uma página no Portal da Empresa | iOS/Android | **Cancel** |
+| EnrollmentWrapUp | Pedido para abrir uma página no Portal da Empresa | iOS/Android | **Cancelar** |
 | EnrollmentWrapUp | Ecrã de inscrição do dispositivo até à conclusão da operação **A carregar recursos da empresa** | iOS/Android | Demorou mais de 30 minutos |
 | DeviceCategory | Seleção da Categoria do Dispositivo (se configurado pelo administrador) até clicar em **Concluído** | iOS/Android | Demorou mais de 30 minutos |
 | PreEnrollmentWizard | Ecrã de configuração do acesso quando inicia a inscrição, mas voltou à secção Configurar acesso | iOS/Android| **Adiar** |
-| PreEnrollmentWizard | Ecrã de configuração do acesso até clicar em **Seguinte** no ecrã **O Que Se Segue** | iOS/Android | Demorou mais de 30 minutos |
+| PreEnrollmentWizard | Configurar o ecrã de acesso até clicar em **Seguida** no **ecrã What's Next** | iOS/Android | Demorou mais de 30 minutos |
 
 #### <a name="platform-screens-section"></a>Secção dos ecrãs de plataforma
 
-| Nome da ação | Ecrã ou fluxo | Platform | Ação |
+| Nome de ação | Ecrã ou fluxo | Plataforma | Ação |
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Pedido para mostrar um perfil de configuração | iOS/iPadOS | **Ignorar** |
-| iOSProfileLaunch | Ecrã de instalação do perfil | iOS/iPadOS | **Cancel** |
-| iOSProfileLaunch | Pedido para confiar na origem do perfil para inscrever o dispositivo | iOS/iPadOS | **Cancel** |
+| iOSProfileLaunch | Ecrã de instalação do perfil | iOS/iPadOS | **Cancelar** |
+| iOSProfileLaunch | Solicita-me que confie na fonte do perfil para inscrever o dispositivo | iOS/iPadOS | **Cancelar** |
 | iOSProfileLaunch | Ecrã de instalação do perfil até à instalação com êxito do perfil | iOS/iPadOS | Demorou mais de 30 minutos |
-| AndroidPermissions | Ecrã de ativação do administrador do dispositivo | Android | **Cancel** |
+| AndroidPermissions | Ecrã de ativação do administrador do dispositivo | Android | **Cancelar** |
 | AndroidPermissions | Desde o pedido de aprovação para efetuar e gerir chamadas telefónicas até o administrador do dispositivo selecionar **Ativar** | Android | Demorou mais de 30 minutos |
-| KnoxActivation | Ativação do agente KLMS (apenas Samsung) | Android| **Cancel** |
+| KnoxActivation | Ativação do agente KLMS (apenas Samsung) | Android| **Cancelar** |
 | KnoxActivation | Ativação do agente KLMS até **Confirmar** | Android | Demorou mais de 30 minutos|
 
 #### <a name="terms-of-use-section"></a>Secção dos termos de utilização
 
-| Nome da ação | Ecrã ou fluxo | Platform | Ação |
+| Nome de ação | Ecrã ou fluxo | Plataforma | Ação |
 | ---- |---- |---- |---- |
 | TermsofUse | Termos de utilização (se configurado pelo administrador) | iOS/Android | **Recusar Tudo** |
 | TermsofUse | Termos de utilização até **Aceitar tudo** | iOS/Android | Demorou mais de 30 minutos |
 
 #### <a name="complianceactivation-section"></a>Secção de Conformidade/Ativação
 
-| Nome da ação | Ecrã ou fluxo | Platform | Ação |
+| Nome de ação | Ecrã ou fluxo | Plataforma | Ação |
 | ---- |---- |---- |---- |
 | Conformidade | A conformidade do dispositivo (se configurado pelo administrador) é apresentada como não verde na fase de pós-inscrição da configuração do acesso| iOS/Android | **Adiar** |
 | Conformidade | A conformidade do dispositivo é apresentada como não verde até ser atualizada e ficar a verde | iOS/Android | Demorou mais de 30 minutos |
 | Ativação | A ativação da inscrição (se configurado pelo administrador) é apresentada como não verde na configuração do acesso | iOS/Android | **Adiar** |
 | Conformidade | A ativação do dispositivo é apresentada como não verde até ser atualizada e ficar a verde | iOS/Android | Demorou mais de 30 minutos |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Depois de verificar as suas taxas de inscrição incompletas, pode rever as opções de [inscrição](enrollment-options.md) para ver se pode fazer alterações para melhorar a inscrição.

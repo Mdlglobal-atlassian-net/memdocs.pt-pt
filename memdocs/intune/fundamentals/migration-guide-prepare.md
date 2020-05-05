@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e717478078ab13cc2c8783cdacbde0911e83a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cb0b8bdc3fb5ed13f68ab2e261ada091e245ac1d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331205"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079677"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fase 1: preparar o Microsoft Intune para a gestão de dispositivos móveis (MDM)
 
-Antes de explorar os detalhes da configuração do Intune, vamos rever os requisitos da gestão de dispositivos móveis da sua organização. Poderá ser útil executar relatórios de utilizadores ativos no seu fornecedor de MDM atual para identificar os grupos de utilizadores críticos. Em seguida, pode começar a abordar as questões na secção [de requisitos](migration-guide-prepare.md#assess-mdm-requirements) de Avaliação do MDM.
+Antes de mergulhar nos detalhes da configuração do Intune, vamos rever os requisitos de gestão de dispositivos móveis da sua organização. Poderá ser útil executar relatórios de utilizadores ativos no seu fornecedor de MDM atual para identificar os grupos de utilizadores críticos. Em seguida, pode começar a abordar as questões na secção [de requisitos](migration-guide-prepare.md#assess-mdm-requirements) de Avaliação do MDM.
 
 ## <a name="assess-mdm-requirements"></a>Avaliar requisitos de MDM
 
@@ -77,7 +77,7 @@ Antes de explorar os detalhes da configuração do Intune, vamos rever os requis
   <br/><br/>
 - Podem ser feitas exceções temporárias para determinados requisitos de forma a evitar períodos de inatividade? Ou os dispositivos com acesso cumprem sempre todos os requisitos de segurança?
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Leia estes [casos práticos](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) de setores da indústria diferentes para ver como as organizações avaliaram os respetivos requisitos para a gestão de dispositivos móveis.
 
 Reveja a [configuração básica do Intune](migration-guide-setup.md).

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 542a49e53e8d95a1f0290001151e175a0bbd7eab
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8f533a04e9865b4d841bee1a2764eef2fbbbcda9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327905"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079387"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Enviar erros ao suporte da empresa relativos a problemas com o dispositivo iOS
 Por vezes, pode ser apresentado um erro ao utilizar a aplicação Portal da Empresa no seu dispositivo iOS. Se isto ocorrer, pode enviar por e-mail os detalhes sobre o erro para o responsável pelo suporte da sua empresa. Estes detalhes irão fornecer o contexto necessário para resolver o problema.
@@ -33,10 +33,10 @@ Ao carregar os registos na aplicação Portal da Empresa, estes são primeiro en
 
 Se obtiver erros no dispositivo iOS ao utilizar a aplicação Portal da Empresa, pode enviar informações para ajudar o suporte da empresa a resolver o problema. Pode enviar informações de erro de formas diferentes:
 
-- Nas mensagens de alerta do erro, toque em **Relatório**.
+- Em mensagens de alerta de erro, toque no **Relatório**.
 
 - No separador **Mais** da aplicação Portal da Empresa, toque em **Obter Ajuda**.
 
-- Na aplicação Portal da Empresa, abane o dispositivo e, quando o alerta de diagnóstico for apresentado, toque em **Enviar Relatório de Diagnóstico**. Se o alerta não aparecer quando abanar o dispositivo, abra **Definições** >  **Portal da Empresa** e confirme que a opção **Gesto de Abanar** está ativada.
+- Na aplicação Portal da Empresa, abane o dispositivo e, quando o alerta de diagnóstico for apresentado, toque em **Enviar Relatório de Diagnóstico**. Se o alerta não aparecer quando abanar o dispositivo, abra o**Portal da Empresa** **definições** > , e certifique-se de que a opção **Shake Gesture** está aser.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

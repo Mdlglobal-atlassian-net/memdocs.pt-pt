@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7bf08775a6cccac3dd96268765d6e1a2e453c51
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327257"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078095"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Mover os dados da conta do Armazém de Dados do Intune 
 
@@ -43,16 +43,16 @@ Para fazer uma cópia de segurança dos seus dados do Armazém de Dados, tem de 
 Alguns gráficos de tendências na vista do portal do Azure vão ser repostos. Pode fazer cópias de segurança destes gráficos ao executar o seguinte script no **Gráfico**:   
 
 ### <a name="terms--conditions-acceptance-reports"></a>Relatórios de Aceitação dos Termos e Condições
-1. No portal do Azure, navegue para **Microsoft Intune** -> **Inscrição de Dispositivos** -> **Termos e Condições**.
+1. No portal Azure, navegue para **a Microsoft Intune** -> **Device Registration** -> **Terms & Conditions**.
 2. Para cada item dos **Termos e Condições**, selecione **Relatório de Aceitação**, seguido de **Exportar**.
 3. Guarde o relatório localmente.
  
 ### <a name="app-protection-reports"></a>Relatórios de Proteção de Aplicações  
-1. No portal do Azure, navegue para **Microsoft Intune** -> **Aplicações do Cliente** -> **Estado da proteção de aplicações**.
+1. No portal Azure, navegue para o estado de proteção da**Aplicação**de**Aplicações** -> de Clientes Intune da **Microsoft Intune** -> .
 2. Clique no ícone de transferência (⤓) para guardar cada relatório.
 
 ### <a name="device-configuration-charts"></a>Gráficos da Configuração do Dispositivo 
-1. No portal do Azure, navegue para **Microsoft Intune** -> **DeviceConfiguration**.
+1. No portal Azure, navegue para **a Microsoft Intune** -> **DeviceConfiguration**.
 2. Com a ferramenta [Testes de API do Graph ](https://developer.microsoft.com/graph/graph-explorer) da Microsoft, transfira os dados por trás dos gráficos. 
     - Para obter o estado de implementação de todos os perfis de configuração de todos os dispositivos, veja [Estado de implementação do dispositivo](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -64,7 +64,7 @@ Alguns gráficos de tendências na vista do portal do Azure vão ser repostos. P
     > Tem de ter um token de autenticação válido para aceder às informações do estado de implementação e de configuração do dispositivo.
 
 ## <a name="device-enrollment-charts"></a>Gráficos de Inscrição de Dispositivos
-1. No portal do Azure, navegue para **Microsoft Intune** -> **DeviceEnrollment**.
+1. No portal Azure, navegue para **a Microsoft Intune** -> **DeviceEnrollment**.
 2. Com a ferramenta [Testes de API do Graph ](https://developer.microsoft.com/graph/graph-explorer) da Microsoft, transfira os dados por trás dos gráficos.
     - Para obter o estado de inscrição, copie esta [consulta do estado de inscrição](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) e cole-a na ferramenta [Testes de API do Graph](https://developer.microsoft.com/graph/graph-explorer).
     - Para obter as principais falhas de inscrição desta semana, copie esta [consulta do estado de inscrição](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) e cole-a na ferramenta [Testes de API do Graph](https://developer.microsoft.com/graph/graph-explorer).
@@ -80,7 +80,7 @@ Após mover a conta do Armazém de Dados, verá no Intune que o Armazém de Dado
 
 O cliente X pede que uma conta seja movida a 01/06/2018. Em resposta ao pedido, o cliente receberá uma ligação para ver documentação com detalhes sobre os passos a realizar se quiser fazer uma cópia de segurança do Armazém de Dados anterior. A 01/06/2018, o Armazém de Dados e os gráficos que suporta serão repostos e começarão a armazenar dados no novo datacenter. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- Saiba mais sobre [as novidades todas as semanas no Intune](../fundamentals/whats-new.md). Também pode descobrir quais são as alterações futuras, os avisos importantes sobre o serviço e as informações sobre versões anteriores.
+- Saiba [o que há de novo a cada semana em Intune.](../fundamentals/whats-new.md) Também pode descobrir quais são as alterações futuras, os avisos importantes sobre o serviço e as informações sobre versões anteriores.
 - Leia o [Blogue do Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

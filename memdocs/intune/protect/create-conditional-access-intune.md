@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e9f30daef96180e58c6d4307d91155cf1305254
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2af62dd8480c1e804e1ab8558d270b95fe97bbd4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323065"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079795"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Criar uma política de acesso condicional baseada em dispositivos
 
@@ -37,8 +37,8 @@ Uma política de Acesso Condicional especifica a app ou serviços que pretende p
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **Políticas** de > de **acesso condicional** > **nova política**.
-  ![Criar uma nova](./media/create-conditional-access-intune/create-ca.png) política de acesso condicional
+2. Selecione **Dispositivos** > **Políticas** > **de acesso** > condicional**Nova política**.
+  ![Criar uma nova política de acesso condicional](./media/create-conditional-access-intune/create-ca.png)
 
 3. Em **Atribuições**, selecione **Utilizadores e grupos**.
 
@@ -57,7 +57,7 @@ Uma política de Acesso Condicional especifica a app ou serviços que pretende p
         > [!TIP]
         > Teste a política contra um grupo mais pequeno de utilizadores para garantir que funciona como esperado.
 
-5. Selecione **Concluído**.
+5. Selecione **Done** (Concluído).
 
 6. Em **Atribuições,** selecione **aplicações ou ações cloud**.
 
@@ -91,7 +91,7 @@ Uma política de Acesso Condicional especifica a app ou serviços que pretende p
      > [!TIP]
      > Se quiser proteger tanto os clientes de **autenticação moderna** como os **clientes Exchange ActiveSync,** crie duas políticas de Acesso Condicional separadas, uma para cada tipo de cliente. Embora o Exchange ActiveSync suporte a autenticação moderna, a única condição que é suportada pelo Exchange ActiveSync é a plataforma. Outras condições, incluindo a autenticação multifactor, não são suportadas. Para proteger eficazmente o acesso ao Exchange Online do Exchange ActiveSync, crie uma política de Acesso Condicional que especifique a aplicação cloud Office 365 Exchange Online e a aplicação cliente Exchange ActiveSync com a política de Aplicação apenas para plataformas suportadas selecionadas.
 
-9. Selecione **Concluído**.
+9. Selecione **Done** (Concluído).
 
 10. Em **Controlos de acesso**, selecione **Concessão**. Configure o que acontece com base nas condições que configura.  Pode selecionar entre as seguintes opções:
 
@@ -105,11 +105,11 @@ Uma política de Acesso Condicional especifica a app ou serviços que pretende p
 
       ![Controlos de acesso Definições de subvenção](./media/create-conditional-access-intune/create-ca-grant-access-settings.png)
 
-11. Em **Ativar política**, selecione **Ativar**.
+11. Em **Ativar política**, selecione **Ativado**.
 
 12. Selecione **Criar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Acesso Condicional baseado em aplicativos com Intune](app-based-conditional-access-intune.md)
 

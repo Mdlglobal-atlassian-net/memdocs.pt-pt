@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322329"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078856"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Ações de dispositivo de resolução de problemas em Intune
 
@@ -32,7 +32,7 @@ A Microsoft Intune tem muitas ações que o ajudam a gerir dispositivos. Este ar
 ## <a name="disable-activation-lock-action"></a>Desativar a ação de bloqueio de ativação
 
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Clicei na ação "Desativação" no portal, mas nada aconteceu no dispositivo.
-Isto é esperado. Depois de iniciar a ação de bloqueio de ativação de sactivação, intune é solicitado um código atualizado da Apple. Introduzirá manualmente o código no campo de código de acesso depois de o seu dispositivo estar no ecrã 'Bloqueio de Activação'. Este código só é válido por 15 dias, por isso certifique-se de clicar na ação e copiar o código antes de emitir a Limpeza.
+Isto era esperado. Depois de iniciar a ação de bloqueio de ativação de sactivação, intune é solicitado um código atualizado da Apple. Introduzirá manualmente o código no campo de código de acesso depois de o seu dispositivo estar no ecrã 'Bloqueio de Activação'. Este código só é válido por 15 dias, por isso certifique-se de clicar na ação e copiar o código antes de emitir a Limpeza.
 
 ### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Por que não vejo o código de bloqueio de ativação de sactivação na lâmina de visão geral do hardware do meu dispositivo iOS/iPadOS?
 As razões mais prováveis incluem:
@@ -54,7 +54,7 @@ Não. E não precisas de entrar nas traços.
 ## <a name="remove-devices-action"></a>Remover a ação dos dispositivos
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Como posso dizer quem começou um aposentado/limpo?
-No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > **Registos** de Auditoria > verifique a coluna **Iniciada por Coluna.**
+No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)aceda aos**registos** de auditoria da **administração do** > Inquilino > verificar a coluna **Iniciada por** Coluna.
 Se não vir uma entrada, a pessoa mais provável de ter iniciado a ação é o utilizador do dispositivo. Provavelmente usaram a aplicação do Portal da Empresa ou portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Porque é que a minha aplicação não foi desinstalada depois de usar o Reforma?
@@ -69,7 +69,7 @@ Este comportamento está previsto. A Google não permite a Reposição de Dispos
 Porque reformar um dispositivo não revoga fichas de acesso. Pode utilizar políticas de Acesso Condicional para mitigar esta condição.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Como posso monitorizar uma ação de aposentadoria/limpeza depois de ter sido emitida?
-No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)vá à **administração do Inquilino** > registos de **auditoria.**
+No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)vá aos > **registos**de auditoria da **administração do Arrendatário.**
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Por que as toalhetes às vezes aparecem como pendentes indefinidamente?
 Os dispositivos nem sempre reportam o seu estado de volta ao serviço Intune antes do reset. Então, a ação mostra como Pendente. Se confirmou que a ação foi bem sucedida, elimine o dispositivo do serviço.
@@ -107,6 +107,6 @@ Isto pode ser causado se utilizar o dispositivo Wipe e **continuar a limpar mesm
 Para resolver este problema, utilize meios de comunicação saqueados para reinstalar o Windows 10 no dispositivo.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Obtenha [ajuda de suporte da Microsoft](../fundamentals/get-support.md), ou use os [fóruns comunitários](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

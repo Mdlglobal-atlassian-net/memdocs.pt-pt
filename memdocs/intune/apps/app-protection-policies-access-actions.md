@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551340"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079336"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Limpe seletivamente os dados utilizando ações de lançamento condicional da política de proteção de aplicações em Intune
 
 Ao utilizar as políticas de proteção de aplicações do Intune, pode configurar definições para impedir que os utilizadores finais acedam a uma conta ou aplicação empresarial. Estas definições destinam-se aos requisitos de acesso e relocalização de dados definidos pela sua organização em casos de, por exemplo, dispositivos desbloqueados por jailbreak e versões de SO mínimas.
  
-Com estas definições, pode eliminar dados da empresa explicitamente do dispositivo do utilizador final como uma ação a ser realizada em caso de não conformidade. Em algumas definições, será possível configurar múltiplas ações, como impedir o acesso e eliminar os dados com base em diferentes valores especificados.
+Pode optar explicitamente por eliminar os dados corporativos da sua empresa a partir do dispositivo do utilizador final como uma ação a tomar para o incumprimento utilizando estas definições. Em algumas definições, será possível configurar múltiplas ações, como impedir o acesso e eliminar os dados com base em diferentes valores especificados.
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Criar uma política de proteção de aplicações utilizando ações de lançamento condicional
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > Políticas de proteção de **aplicações**.
+2. Selecione Políticas de**proteção de** **aplicativos** > .
 3. Clique na **política Criar** e selecione a plataforma do dispositivo para a sua apólice. 
 4. Clique em **Configurar definições obrigatórias** para ver a lista de definições disponíveis a configurar para a política. 
 5. Ao deslocar-se para baixo no painel Definições, verá uma secção intitulada **Lançamento Condicional** com uma tabela editável.
@@ -80,12 +80,12 @@ Para Android, poderá configurar ações para as seguintes definições a partir
 - Versão mínima da aplicação
 - Versão mínima da correção
 - Fabricantes de dispositivos
-- Atestação do dispositivo SafetyNet
+- Atestado de dispositivo SafetyNet
 - Exigir uma varredura de ameaças em apps
 - Versão Min Company Portal
 - Max permitiu o nível de ameaça do dispositivo
 
-Utilizando a **versão Min Company Portal,** pode especificar uma versão definida específica do Portal da Empresa que é aplicada num dispositivo de utilizador final. Esta definição de lançamento condicional permite-lhe definir valores para **bloquear o acesso,** **eliminar dados**e **alertar** como possíveis ações quando cada valor não for atingido. Os possíveis formatos para este valor seguem o padrão *[Major]. Menor,* *[Major].[ Menor]. [Construir]* ou *[Major].[ Menor]. [Construir]. [Revisão]* . Dado que alguns utilizadores finais podem não preferir uma atualização forçada de aplicações no local, a opção 'warn' pode ser a ideal para configurar esta definição. A Google Play Store faz um bom trabalho ao enviar apenas os bytes delta para atualizações de aplicações, mas esta ainda pode ser uma grande quantidade de dados que o utilizador pode não querer utilizar se estiverem em dados no momento da atualização. Forçar uma atualização e, assim, descarregar uma aplicação atualizada pode resultar em cargas de dados inesperadas no momento da atualização. A definição da **versão Min Company Portal,** se configurada, afetará qualquer utilizador final que obtenha a versão 5.0.4560.0 do Portal da Empresa e quaisquer futuras versões do Portal da Empresa. Esta definição não terá qualquer efeito sobre os utilizadores utilizando uma versão do Portal da Empresa que seja mais antiga do que a versão com a que esta funcionalidade é lançada. Os utilizadores finais que utilizam as atualizações automáticas da aplicação no seu dispositivo provavelmente não verão quaisquer diálogos desta funcionalidade, dado que provavelmente estarão na versão mais recente do Portal da Empresa. Esta definição é Android apenas com proteção de aplicativos para dispositivos matriculados e não matriculados.
+Utilizando a **versão Min Company Portal,** pode especificar uma versão definida específica do Portal da Empresa que é aplicada num dispositivo de utilizador final. Esta definição de lançamento condicional permite-lhe definir valores para **bloquear o acesso,** **eliminar dados**e **alertar** como possíveis ações quando cada valor não for atingido. Os possíveis formatos para este valor seguem o padrão *[Major].. Menor,* *[Major].[ Menor]. [Construir]* ou *[Major].[ Menor]. [Construir]. [Revisão]*. Dado que alguns utilizadores finais podem não preferir uma atualização forçada de aplicações no local, a opção 'warn' pode ser a ideal para configurar esta definição. A Google Play Store faz um bom trabalho ao enviar apenas os bytes delta para atualizações de aplicações, mas esta ainda pode ser uma grande quantidade de dados que o utilizador pode não querer utilizar se estiverem em dados no momento da atualização. Forçar uma atualização e, assim, descarregar uma aplicação atualizada pode resultar em cargas de dados inesperadas no momento da atualização. A definição da **versão Min Company Portal,** se configurada, afetará qualquer utilizador final que obtenha a versão 5.0.4560.0 do Portal da Empresa e quaisquer futuras versões do Portal da Empresa. Esta definição não terá qualquer efeito sobre os utilizadores utilizando uma versão do Portal da Empresa que seja mais antiga do que a versão com a que esta funcionalidade é lançada. Os utilizadores finais que utilizam as atualizações automáticas da aplicação no seu dispositivo provavelmente não verão quaisquer diálogos desta funcionalidade, dado que provavelmente estarão na versão mais recente do Portal da Empresa. Esta definição é Android apenas com proteção de aplicativos para dispositivos matriculados e não matriculados.
 
 Para utilizar a definição **Fabricantes de dispositivos**, introduza uma lista de fabricantes de dispositivos Android separados por ponto e vírgula. Estes valores não são sensíveis aos casos. Além do Intune Reporting, pode encontrar o fabricante Android de um dispositivo sob as definições do dispositivo. <br>
 Entrada de exemplo: *Fabricante A;Fabricante B* 
@@ -109,7 +109,7 @@ Para configurar uma definição, selecione uma definição na lista pendente da 
 
 A seguinte lista apresenta as ações comuns:
 - **Bloquear acesso** – impedir o utilizador final de aceder à aplicação da empresa.
-- **Apagar dados** – apagar os dados da empresa do dispositivo do utilizador final.
+- **Limpe os dados** – Limpe os dados corporativos do dispositivo do utilizador final.
 - **Avisar** – apresentar uma caixa de diálogo com uma mensagem de aviso para o utilizador final.
 
 Em alguns casos, como a definição **Versão mínima do SO**, pode configurar a definição para realizar todas as ações aplicáveis com base em números de versão diferentes. 
@@ -118,7 +118,7 @@ Em alguns casos, como a definição **Versão mínima do SO**, pode configurar a
 
 Depois de ter configurado totalmente uma definição, a linha será apresentada numa vista só de leitura e estará disponível para editar em qualquer altura. A linha também parecerá ter uma lista pendente disponível para seleção na coluna **Definição**. As definições que já tenham sido configuradas e que não permitam múltiplas ações não estarão disponíveis para seleção na lista pendente.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter mais informações sobre as políticas de proteção de aplicações do Intune, veja:
 - [Como criar e atribuir políticas de proteção de aplicações](app-protection-policies.md)

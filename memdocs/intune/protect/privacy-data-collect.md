@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e986a6dcb598a11a0f2906d6d7be8e2e1abb6aba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329121"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079574"
 ---
 # <a name="data-collection-in-intune"></a>Recolha de dados no Intune
 
 Quando os utilizadores inscrevem os respetivos dispositivos pessoais ou de empresa com o Intune, o Intune recolhe e partilha alguns dados pessoais. O Intune recolhe dados pessoais das seguintes origens:
 
-- A utilização que o administrador faz do Intune no portal do Azure.
+- A utilização do Administrador do Intune no portal Azure.
 - Os dispositivos de utilizador final (quando o utilizador final se inscreve na gestão do Intune e durante a utilização).
-- As contas de cliente de serviços de terceiros (de acordo com as instruções do administrador).
+- Contas de clientes em serviços de terceiros (de acordo com as instruções do administrador).
 - Informações de diagnóstico, desempenho e utilização.
 
 Destas origens, o Intune recolhe informações que se encaixam nas três categorias seguintes: [identificados](#identified-data), [com pseudónimo](#pseudonymized-data) e [agregados](#aggregated-data).
@@ -41,7 +41,7 @@ Destas origens, o Intune recolhe informações que se encaixam nas três categor
 
 ## <a name="identified-data"></a>Dados identificados
 
-A maior parte dos dados pessoais que o Intune recolhe são dados identificados. Estes dados estão associados a um utilizador, dispositivo ou aplicação e são essenciais para a natureza da gestão. Os dados identificados são utilizados para gerir o dispositivo e as aplicações de um utilizador e para aprovisionar o serviço do Intune.
+A maior parte dos dados pessoais que o Intune recolhe são dados identificados. Estes dados estão associados a um utilizador, dispositivo ou aplicação e são essenciais para a natureza da gestão. Os dados identificados são utilizados para gerir o dispositivo e aplicações de um utilizador e para fornecer o serviço Intune.
 
 Os dados identificados que o Intune recolhe podem incluir, entre outros: 
 
@@ -51,8 +51,8 @@ Os dados identificados que o Intune recolhe podem incluir, entre outros:
   - Identidades de utilizador de terceiros (como o ID Apple)
 - Informações do inventário de hardware
   - Nome do dispositivo
-  - Manufacturer
-  - Sistema Operativo
+  - Fabricante
+  - Sistema operativo
   - Número de série
   - Número IMEI
   - Endereço IP
@@ -85,7 +85,7 @@ Os dados identificados que o Intune recolhe podem incluir, entre outros:
   - nome da aplicação
   - versão
   - ID da aplicação
-  - tamanho
+  - size
   - localização da instalação
   - Os dados de inventário da aplicação apenas são recolhidos quando são marcados pelo Administrador como dispositivo pertencente à propriedade ou quando a funcionalidade da aplicação de conformidade está ativada.  
 - IDs de clientes de inquilinos de terceiros, como o ID Apple. 
@@ -99,7 +99,7 @@ Os dados com pseudónimo que o Intune recolhe podem incluir, entre outros:
 - Dados de diagnóstico, desempenho e utilização associados a um utilizador e/ou dispositivo
   - O número de vezes que uma funcionalidade é utilizada
   - Os comandos fornecidos à funcionalidade
-  - O tempo de resposta de um serviço
+  - Tempo de resposta de um serviço
   - As taxas de êxito das instalações e de outros processos
   - Erros da aplicação do portal da empresa do Intune
   - Identificadores de utilizador e de dispositivo
@@ -108,8 +108,8 @@ Os dados com pseudónimo que o Intune recolhe podem incluir, entre outros:
   - ID de dispositivo do Intune
   - ID de dispositivo do Azure Active Directory
   - ID de gestão de dispositivos do Intune
-  - ID de inquilino
-  - ID de conta
+  - ID do inquilino
+  - ID da Conta
   - ID de dispositivo EAS
   - IDs específicos de plataforma
   - AppleID para dispositivos iOS/iPadOS
@@ -138,6 +138,6 @@ Os dados agregados que o Intune recolhe podem incluir, entre outros:
   - notInstalledDeviceCount: o número de dispositivos a que a aplicação é aplicável, mas em que não está instalada.
   - pendenteInstallDeviceCount: O número de dispositivos para os quais a aplicação é aplicável e a instalação está pendente.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre como o Intune [armazena e processa](privacy-data-store-process.md) e [partilha](privacy-data-secure-share.md) dados pessoais. 

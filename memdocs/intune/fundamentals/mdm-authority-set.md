@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326759"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077908"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Definir a autoridade de gestão de dispositivos móveis
 
@@ -73,7 +73,7 @@ Depois de mudar para a nova autoridade de MDM, provavelmente haverá um tempo de
 
 ## <a name="change-mdm-authority-to-office-365"></a>Mudar a autoridade de MDM para o Office 365
 
-Para ativar o Office 365 MDM (ou para ativar a coexistência de MDM para além do seu serviço Intune existente), vá a [https://protection.office.com](https://protection.office.com), escolha a **prevenção** de dados > Políticas de **segurança** do dispositivo > ver a lista **de dispositivos geridos** > **vamos começar.**
+Para ativar o Office 365 MDM (ou para ativar a coexistência [https://protection.office.com](https://protection.office.com)de MDM para além do seu serviço Intune existente), escolha , escolha**políticas** > de segurança de dispositivos de **prevenção** > de perda de dados**Ver lista de dispositivos geridos** > **Vamos começar**.
 
 Para obter mais informações, veja [Set up Mobile Device Management (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) (Configurar a Gestão de Dispositivos Móveis [MDM] no Office 365).
 
@@ -89,7 +89,7 @@ A autoridade de MDM não pode ser novamente alterada para Desconhecida. A autori
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>O que esperar depois de alterar a autoridade de MDM
 
-- Quando o serviço do Intune deteta a alteração da autoridade de MDM de um inquilino, envia uma mensagem de notificação para todos os dispositivos inscritos se registarem e sincronizarem com o serviço (esta notificação não está incluída no registo agendado com regularidade). Assim, depois de a autoridade do MDM para o inquilino ter sido alterada de Intune autónoma, todos os dispositivos que são ligados e online ligar-se-ão ao serviço, receberão a nova autoridade do MDM e serão geridos pela nova autoridade do MDM. A gestão e proteção destes dispositivos é contínua.
+- Quando o serviço Intune detetar que a autoridade de MDM de um inquilino mudou, envia uma mensagem de notificação a todos os dispositivos inscritos para fazer o check-in e sincronizar com o serviço (esta notificação está fora do check-in regular). Assim, depois de a autoridade do MDM para o inquilino ter sido alterada de Intune autónoma, todos os dispositivos que são ligados e online ligar-se-ão ao serviço, receberão a nova autoridade do MDM e serão geridos pela nova autoridade do MDM. A gestão e proteção destes dispositivos é contínua.
 - Mesmo nos dispositivos ligados e online durante (ou pouco depois) a alteração da autoridade de MDM, irá ocorrer um atraso de até oito horas (consoante a hora do próximo registo regular agendado) até que os dispositivos sejam registados com o serviço da nova autoridade de MDM.    
 
   > [!IMPORTANT]    
@@ -115,6 +115,6 @@ A autoridade de MDM não pode ser novamente alterada para Desconhecida. A autori
   - Execute uma ação para o dispositivo, como o Bloqueio Remoto, a partir da consola de administração. Se tiver êxito, significa que o dispositivo está a ser gerido pela nova autoridade de MDM.
 - Se tiver problemas com dispositivos específicos, pode anular a inscrição e inscrever novamente os dispositivos para ligá-los à nova autoridade e geri-los o mais rapidamente possível.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Com a autoridade de MDM definida, pode começar a [inscrever dispositivos](../enrollment/device-enrollment.md).

@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324757"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077772"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Configurar dispositivo iOS ou iPadOS com Portal da Empresa e Intercede
 
@@ -36,7 +37,7 @@ Durante a inscrição, também irá instalar uma credencial derivada no seu disp
 * Inscreva-se em apps escolares ou de trabalho, Wi-Fi e redes privadas virtuais (VPN)
 * Assinar e encriptar e-mails escolares ou de trabalho usando certificados S/MIME  
 
-Neste artigo, irá:  
+Neste artigo, vai:  
 
 * Inscreva um dispositivo iOS ou iPadOS móvel com o Intune Company Portal.  
 * Obtenha uma credencial derivada do fornecedor credencial derivado da sua organização, [Intercede](https://www.intercede.com/).   
@@ -61,12 +62,12 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 * A aplicação Intune Company Portal para iOS e iPadOS instalada no seu dispositivo
 
 
-## <a name="enroll-device"></a>Dispositivo de inscrição  
+## <a name="enroll-device"></a>Inscrever o dispositivo  
 1. Abra a aplicação Portal da Empresa para iOS/iPadOS no seu dispositivo móvel e inscreva-se na sua conta de trabalho.  
 2. Escreva o código que aparece no ecrã.  
 
     ![Imagem de exemplo da aplicação Do Portal da Empresa com mensagem e código no ecrã.](./media/copy-code-intercede.png)  
-1. Mude para o seu dispositivo inteligente ativado pelo cartão e vá para https://microsoft.com/devicelogin. 
+1. Mude para o seu dispositivo inteligente https://microsoft.com/deviceloginativado pelo cartão e vá para . 
 
 1. Introduza o código que escreveu anteriormente.
  
@@ -86,21 +87,21 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 6. Mude para o seu dispositivo ou quiosque de self-service e abra a aplicação MyID. Inscreva-se com as suas credenciais de trabalho.  
 7. Selecione a opção de solicitar o seu ID. 
 8. Quando lhe perguntarem qual o perfil que pretende utilizar, selecione a opção de ativar com uma credencial móvel. Aparece um código QR.  
-9. Volte ao seu dispositivo móvel. No Portal da Empresa > Obtenha o ecrã **de código QR,** toque **em Continuar**.  
+9. Volte ao seu dispositivo móvel. No Portal da Empresa > obter ecrã **de código QR,** toque **em Continuar**.  
 
     ![Exemplo de screenshot do portal da empresa Obter ecrã de código QR.](./media/get-qr-code-intercede.png) 
  
-10. Toque na câmara de **utilização** > **OK**.  
+10. Toque bem **na câmara** > de utilização **.**  
 
     ![Exemplo de imagem de um pedido do Portal da Empresa, pedindo permissão para permitir o acesso à câmara.](./media/allow-cp-camera-access-intercede.png)  
 
 11. Escaneie a imagem do código QR que está no seu dispositivo inteligente ativado pelo cartão. 
 12. Aguarde que o Portal da Empresa termine de configurar o seu dispositivo.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 Após a inscrição estar concluída, terá acesso a recursos de trabalho, como e-mail, Wi-Fi e quaisquer aplicações que a sua organização disponibilize. Para mais informações sobre como obter, procurar, instalar e desinstalar aplicações no Portal da Empresa ver:
 
 * [Gerir aplicações a partir do site do Portal da Empresa](manage-apps-cpweb.md)  
 * [Utilizar aplicações geridas no dispositivo](use-managed-apps-on-your-device-ios.md)  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

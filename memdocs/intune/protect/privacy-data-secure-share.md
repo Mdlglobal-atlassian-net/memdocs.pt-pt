@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325317"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079557"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Partilha e segurança de dados no Intune
 
@@ -52,21 +52,21 @@ Quando é identificado um Incidente de Segurança Comunicável pelo Cliente (CRS
 
 Quando os administradores de inquilinos ativam determinadas funcionalidades, por exemplo, o Programa de Registo de Aparelho Apple, o Microsoft Intune obtém o consentimento do administrador para partilhar dados com terceiros adequados. Nestes casos, o Intune poderá partilhar dados pessoais com:
 
-- Terceiros que atuem como agentes da Microsoft.
-- Terceiros que não atuem como agentes da Microsoft, mas apenas quando os administradores de inquilinos concederem explicitamente permissão ao Intune para o fazer.
+- Terceiros agindo como agentes da Microsoft.
+- Terceiros não atuam como agentes da Microsoft, mas apenas quando os administradores dos inquilinos concedem explicitamente permissão ao Intune para o fazer.
 
 Os terceiros que atuem como agentes da Microsoft estão incluídos na [lista de Subcontratantes dos Serviços Online](https://aka.ms/Online_Serv_Subcontractor_List).
 
 Os dados são partilhados com estas entidades para ajudar o cliente e o suporte técnico, a manutenção do serviço e outras operações.
 
-Os dados pessoais constantes no Intune mantidos em serviços de terceiros são regidos por um contrato de inquilino com terceiros. Este contrato também permite que o Intune transmita os dados para os serviços de terceiros.  
+O contrato de um inquilino com terceiros rege os dados pessoais intune detidos ao serviço de terceiros. Este contrato também permite que o Intune transmita os dados para os serviços de terceiros.  
 
 Para obter informações sobre os dados partilhados com alguns terceiros, veja os seguintes artigos:
 - [Dados que o Intune envia para a Apple](data-intune-sends-to-apple.md)
 - [Dados que o Intune envia para a Google](data-intune-sends-to-google.md)
 - [Dados que a Apple envia para o Intune](data-apple-sends-to-intune.md)
 - [Dados que a Google envia para o Intune](data-google-sends-to-intune.md)
-- [Data Jamf Pro envia para Intune](data-jamf-sends-to-intune.md)
+- [Dados que o Jamf Pro envia para o Intune](data-jamf-sends-to-intune.md)
 
 ### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Partilha de dados do Microsoft Endpoint Configuration Manager
 
@@ -75,6 +75,6 @@ O Microsoft Intune não partilha quaisquer dados com o Gestor de Configuração.
 Para saber mais, consulte diagnósticos e dados de [utilização para O Gestor](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data)de Configuração . 
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba como [ver e corrigir](privacy-data-view-correct.md) dados pessoais no Intune.

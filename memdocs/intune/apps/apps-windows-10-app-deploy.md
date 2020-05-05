@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324340"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079319"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementação de aplicações do Windows 10 utilizando o Microsoft Intune 
 
 O Microsoft Intune suporta uma variedade de tipos de aplicações e cenários de implementação em dispositivos Windows 10. Depois de adicionar uma aplicação ao Intune, pode atribuí-la a utilizadores e dispositivos. Este artigo fornece mais detalhes sobre os cenários suportados pelo Windows 10, e também cobre detalhes chave para notar quando está a implementar aplicações para o Windows. 
 
-As aplicações de linha de negócio (LOB) e as aplicações da Microsoft Store para Empresas são os tipos de aplicações suportadas em dispositivos com o Windows 10. As extensões de ficheiros para aplicações do Windows incluem .msi, .appx e .appxbundle.  
+As aplicações de linha de negócio (LOB) e as aplicações da Microsoft Store para Empresas são os tipos de aplicações suportadas em dispositivos com o Windows 10. As extensões de ficheiros de aplicações do Windows incluem .msi, .appx e .appxbundle.  
 
 > [!Note]
 > Para implementar aplicações modernas, precisa pelo menos:
@@ -44,7 +44,7 @@ As aplicações de linha de negócio (LOB) e as aplicações da Microsoft Store 
 
 Os tipos de aplicações específicos são suportados com base na versão do Windows 10 que os seus utilizadores estão a executar. A tabela seguinte fornece o tipo de aplicação e a capacidade de suporte do Windows 10.
 
-| Tipo de aplicação | Casa | Pro | Empresa | Enterprise | Educação | Modo S | HoloLens<sup>1 | Surface Hub | WCOS | Mobile |
+| Tipo de aplicação | Casa | Pro | Empresa | Enterprise | Education | Modo S | Hololens<sup>1 | Surface Hub | WCOS | Telemóvel |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . MSI | Não | Sim | Sim | Sim | Sim | Não | Não | Não | Não | Não |
 | . IntuneWin | Não | Sim | Sim | Sim | Sim | 19H2+ | Não | Não | Não | Não |
@@ -52,7 +52,7 @@ Os tipos de aplicações específicos são suportados com base na versão do Win
 | LOB: APPX/MSIX | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
 | MSFB Offline | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
 | MSFB Online | Sim | Sim | Sim | Sim | Sim | Sim | RS4+ | Não | Sim | Sim |
-| Aplicações na Web | Sim | Sim | Sim | Sim | Sim | Sim | Sim<sup>2 | Sim<sup>2 | Sim | Sim<sup>2 |
+| Aplicações Web | Sim | Sim | Sim | Sim | Sim | Sim | Sim<sup>2 | Sim<sup>2 | Sim | Sim<sup>2 |
 | Link da loja | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
 | Microsoft Edge | Não | Sim | Sim | Sim | Sim | 19H2+<sup>3 | Não | Não | Não | Não |
 
@@ -67,16 +67,16 @@ Os tipos de aplicações específicos são suportados com base na versão do Win
 
 Pode assinar e carregar aplicações lob do Windows 10 para a consola intune. Estas podem incluir aplicações modernas, como aplicações universal Windows Platform (UWP) e Pacotes de Aplicações Windows (AppX), bem como aplicações Win 32, como ficheiros simples de pacotes de instalação da Microsoft (MSI). O administrador deve carregar manualmente e implementar atualizações de aplicações LOB. Estas atualizações são automaticamente instaladas em dispositivos de utilizador que tenham instalado a aplicação. Não é necessária nenhuma intervenção do utilizador e o utilizador não tem controlo sobre as atualizações. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplicações da Microsoft Store para Empresas
+## <a name="microsoft-store-for-business-apps"></a>Aplicações da Loja Microsoft para Empresas
 
-As aplicações microsoft Store for Business são aplicações modernas, compradas no portal de administração da Microsoft Store para empresas. São então sincronizados com a Microsoft Intune para gestão. As aplicações podem ser licenciadas online ou offline. A Microsoft Store gere diretamente as atualizações, sem nenhuma ação adicional exigida pelo administrador. Também pode prevenir atualizações para aplicações específicas utilizando um identificador de recursos uniformes personalizado (URI). Para obter mais informações, veja [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Gestão de aplicações empresariais – impedir as atualizações automáticas da aplicação). O utilizador também pode desativar atualizações para todas as aplicações da Microsoft Store for Business no dispositivo. 
+As aplicações microsoft Store for Business são aplicações modernas, compradas no portal de administração da Microsoft Store para empresas. São então sincronizados com a Microsoft Intune para gestão. As aplicações podem ser licenciadas online ou licenciadas offline. A Microsoft Store gere diretamente as atualizações, sem nenhuma ação adicional exigida pelo administrador. Também pode prevenir atualizações para aplicações específicas utilizando um identificador de recursos uniformes personalizado (URI). Para obter mais informações, veja [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Gestão de aplicações empresariais – impedir as atualizações automáticas da aplicação). O utilizador também pode desativar atualizações para todas as aplicações da Microsoft Store for Business no dispositivo. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Categorize a Microsoft Store para aplicações empresariais 
 Para categorizar as aplicações da Microsoft Store para as empresas: 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.** 
-3. Selecione uma aplicação Microsoft Store for Business. Em seguida, selecione **Propriedades** > categoria **de**informações de **aplicações** > . 
+3. Selecione uma aplicação Microsoft Store for Business. Em seguida, selecione **Properties** > **App Information** > **Category**. 
 4. Selecione uma categoria.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Instale aplicações em dispositivos Windows 10
@@ -94,10 +94,10 @@ Dependendo do tipo de aplicação, pode instalar a aplicação num dispositivo W
 
 As aplicações só podem ser instaladas no contexto do dispositivo quando suportadas pelo dispositivo e pelo tipo de aplicação Intune. Pode instalar os seguintes tipos de aplicações no contexto do dispositivo e atribuir estas aplicações a um grupo de dispositivos:
 
-- Aplicativos Win32
+- Aplicações Win32
 - Microsoft Store licenciada offline para aplicações empresariais
 - Aplicativos LOB (MSI, APPX e MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps para empresa
 
 As aplicações Do Windows LOB (especificamente APPX e MSIX) e Microsoft Store for Business (aplicações Offline) que selecionou para instalar no contexto do dispositivo devem ser atribuídas a um grupo de dispositivos. A instalação falha se uma destas aplicações for implementada no contexto do utilizador. O seguinte estado e erro aparece na consola de administração:
   - Estado: falha.
@@ -115,7 +115,7 @@ Se houver um conflito nas políticas num único utilizador ou dispositivo, aplic
 
 Para obter mais informações, veja [Incluir e excluir atribuições de aplicações no Microsoft Intune](apps-inc-exl-assignments.md). Para obter mais informações sobre tipos de aplicações no Intune, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Atribuir aplicativos a grupos com o Microsoft Intune](apps-deploy.md)
+- [Atribuir aplicações a grupos com o Microsoft Intune](apps-deploy.md)
 - [Como monitorizar aplicações](apps-monitor.md)

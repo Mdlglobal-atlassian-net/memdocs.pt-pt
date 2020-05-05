@@ -1,5 +1,5 @@
 ---
-title: Problemas relatam a implementação de certificados de sucesso para dispositivos quando utilizar o SCEP com a Microsoft Intune  Microsoft Docs
+title: Problemas relatam a implementação de certificados de sucesso para dispositivos quando utilizar o SCEP com a Microsoft Intune [ Microsoft Docs
 description: Problemas de resolução do relatório por NDES e do conector ao Intune sobre uma implementação bem sucedida de certificados que foram provisionados com perfis de certificadoS SCEP.
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93bacecf2829b1e7119f909c14ce9ab44a8f6d2f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f4b374d79d689e1ecad8124489fe5023378bd4f1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328653"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079081"
 ---
 # <a name="troubleshoot-ndes-reporting-of-certificate-deployments-in-microsoft-intune"></a>Relatório sinuoso nDES de resolução de problemas de implementações de certificados no Microsoft Intune
 
@@ -65,6 +65,6 @@ Se não vir novos ficheiros a serem criados na pasta *Succeed,* verifique se exi
 
 Verifique se o Serviço de Conector Intune foi iniciado no servidor NDES e não existem erros no Ndesconnector.svclog.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Como obter suporte para o Microsoft Intune](../fundamentals/get-support.md)

@@ -1,5 +1,5 @@
 ---
-title: Resolver problemas de acesso condicional
+title: Resolver Problemas do Acesso Condicional
 titleSuffix: Microsoft Intune
 description: O que fazer quando os seus utilizadores não têm acesso aos recursos através do Intune Conditional Access.
 keywords: ''
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328889"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079149"
 ---
-# <a name="troubleshoot-conditional-access"></a>Resolver problemas de acesso condicional
+# <a name="troubleshoot-conditional-access"></a>Resolver Problemas do Acesso Condicional
 Este artigo descreve o que fazer quando os seus utilizadores não têm acesso a recursos protegidos com Acesso Condicional, ou quando os utilizadores podem aceder a recursos protegidos, mas devem ser bloqueados.
 
 Com Acesso Intune e Condicional, pode proteger o acesso a serviços como:
@@ -42,7 +42,7 @@ Devem ser cumpridos os seguintes requisitos para o acesso condicional ao trabalh
 
 - O utilizador e o dispositivo têm de estar em conformidade com as políticas de conformidade do Intune atribuídas.
 
-- Por predefinição, tem de ser atribuída ao utilizador uma política de conformidade de dispositivos. Isto pode depender da configuração dos dispositivos de definição **Mark sem nenhuma política** de conformidade atribuída como que esteja em conformidade com o **dispositivo** > **Definições** de política de conformidade no portal de administração Intune.
+- Por predefinição, tem de ser atribuída ao utilizador uma política de conformidade de dispositivos. Isto pode depender da configuração dos dispositivos de definição **Mark sem nenhuma política** de conformidade atribuída como que esteja em**definições** de política de conformidade > de conformidade de **dispositivono**portal de administração Intune.
 
 - O Exchange ActiveSync tem de estar ativado no dispositivo se o utilizador estiver a utilizar o cliente de correio nativo do dispositivo em vez do Outlook. Isto acontece automaticamente para dispositivos iOS/iPadOS, Windows Phone e Android Knox.
 
@@ -69,7 +69,7 @@ Estas condições podem ser visualizadas para cada dispositivo no portal do Azur
 
   Se o problema persistir, contacte o Suporte da Microsoft, conforme descrito em [Como obter suporte para o Microsoft Intune](../fundamentals/get-support.md).
 
-- Alguns dispositivos Android podem parecer encriptados, no entanto a aplicação Portal da Empresa reconhece estes dispositivos como não encriptados e marca-os como não conformes. Neste cenário, o utilizador verá uma notificação na aplicação Portal da Empresa que lhe pede para definir um código de acesso para o dispositivo. Depois de tocar na notificação e confirmar a palavra-passe ou PIN existente, selecione a opção **Require PIN to start device**  (Exigir PIN para iniciar o dispositivo) no ecrã **Secure start-up** (Arranque seguro) e, em seguida, toque no botão **Check Compliance** (Verificar Conformidade) do dispositivo a partir da aplicação Portal da Empresa. O dispositivo deverá ser detetado como encriptado agora. 
+- Alguns dispositivos Android podem parecer encriptados, no entanto a aplicação Portal da Empresa reconhece estes dispositivos como não encriptados e marca-os como não conformes. Neste cenário, o utilizador verá uma notificação na aplicação Portal da Empresa que lhe pede para definir um código de acesso para o dispositivo. Depois de tocar na notificação e confirmar a palavra-passe ou PIN existente, selecione a opção **Require PIN to start device ** (Exigir PIN para iniciar o dispositivo) no ecrã **Secure start-up** (Arranque seguro) e, em seguida, toque no botão **Check Compliance** (Verificar Conformidade) do dispositivo a partir da aplicação Portal da Empresa. O dispositivo deverá ser detetado como encriptado agora. 
 
   > [!NOTE]
   > Alguns fabricantes de dispositivos encriptam os seus dispositivos bu utilizando um PIN predefinido em vez de um PIN definido pelo utilizador. A encriptação intune vê que utiliza um PIN predefinido como inseguro e marca esses dispositivos como incompatíveis até que o utilizador crie um novo PIN não predefinido.
@@ -80,12 +80,12 @@ Estas condições podem ser visualizadas para cada dispositivo no portal do Azur
   1. Abra a aplicação Portal da Empresa.
   2. Vá para a página Definições a partir dos pontos triplos (...) ou no botão do menu de hardware.
   3. Selecione o botão *'Enable Browser Access'.*
-  4. No browser Chrome, termine a sessão no Office 365 e reinicie o Chrome.  
+  4. No browser Chrome, termine sessão no Office 365 e reinicie o Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Os dispositivos estão bloqueados e não foi recebido qualquer e-mail de quarentena
 
-- Verifique se o dispositivo está presente na consola de administração do Intune como um dispositivo do Exchange ActiveSync. Se não estiver, a deteção de dispositivos pode estar a falhar, provavelmente devido a um problema do Exchange Connector. Para mais informações, consulte [Troubleshoot o conector Intune on-premises Exchange](troubleshoot-exchange-connector.md).
+- Verifique se o dispositivo está presente na consola de administração do Intune como um dispositivo do Exchange ActiveSync. Se não for, é provável que a descoberta do dispositivo esteja a falhar, provavelmente por causa de um problema no Exchange Connector. Para mais informações, consulte [Troubleshoot o conector Intune on-premises Exchange](troubleshoot-exchange-connector.md).
 
 - Antes do Exchange Connector bloquear um dispositivo, o mesmo envia um e-mail de ativação (quarentena). Se o dispositivo estiver offline, poderá não receber o e-mail de ativação. 
 
@@ -105,14 +105,14 @@ Estas condições podem ser visualizadas para cada dispositivo no portal do Azur
 
 Se um dispositivo não estiver em conformidade, mas continuar a ter acesso, tome as seguintes ações.
 
-- Reveja os grupos de Destino e Exclusão. Se um utilizador não estiver no grupo de destino certo ou estiver no grupo de exclusão, não será bloqueado. Apenas os dispositivos de utilizadores num grupo de Destino são verificados relativamente à conformidade.
+- Reveja os grupos de Destino e Exclusão. Se um utilizador não estiver no grupo alvo certo ou estiver no grupo de exclusão, não será bloqueado. Apenas os dispositivos de utilizadores num grupo de Destino são verificados relativamente à conformidade.
 
 - Certifique-se de que o dispositivo está a ser detetado. O Exchange Connector está a apontar para um CAS do Exchange 2010 enquanto o utilizador está num servidor do Exchange 2013? Neste caso, se a regra do Exchange predefinida for Permitir, mesmo que o utilizador esteja no grupo de Destino, o Intune não pode ter conhecimento da ligação do dispositivo ao Exchange.
 
 - Verifique o estado de Existência/Acesso do Dispositivo no Exchange:
-  - Utilize este cmdlet PowerShell para obter uma lista de todos os dispositivos móveis para uma caixa de correio: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. Se o dispositivo não estiver listado, significa que não está a aceder ao Exchange.
+  - Utilize este cmdlet PowerShell para obter uma lista de todos os dispositivos móveis para uma caixa de correio: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. Se o dispositivo não está listado, não está a aceder ao Exchange.
   
-  - Se o dispositivo estiver listado, utilize o 'Get-CASmailbox -identity:'upn'  Fl' cmdlet para obter informações detalhadas sobre o seu estado de acesso, e fornecer essa informação ao Microsoft Support.
+  - Se o dispositivo estiver listado, utilize o 'Get-CASmailbox -identity:'upn' [ Fl' cmdlet para obter informações detalhadas sobre o seu estado de acesso, e fornecer essa informação ao Microsoft Support.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Se estas informações não o ajudarem, também pode [obter suporte para o Microsoft Intune](../fundamentals/get-support.md).

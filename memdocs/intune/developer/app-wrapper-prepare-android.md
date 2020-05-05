@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331857"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078129"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparar as aplicações Android para as políticas de proteção de aplicações com a Ferramenta de Encapsulamento de Aplicações do Intune
 
 Utilize a Ferramenta de Encapsulamento de Aplicações do Microsoft Intune para Android para alterar o comportamento das suas aplicações Android internas ao restringir funcionalidades da aplicação sem alterar o código da aplicação em si.
 
-A ferramenta é uma aplicação de linha de comandos do Windows executada no PowerShell, que cria um encapsulamento em torno da aplicação Android. Quando a aplicação estiver encapsulada, pode alterar a funcionalidade da aplicação ao configurar [políticas de gestão de aplicações móveis](../apps/app-protection-policies.md) no Intune.
+A ferramenta é uma aplicação de linha de comandos do Windows executada no PowerShell, que cria um encapsulamento em torno da aplicação Android. Depois de a app estar embrulhada, pode alterar a funcionalidade da aplicação configurando políticas de gestão de [aplicações móveis](../apps/app-protection-policies.md) em Intune.
 
 Antes de executar a ferramenta, consulte as [Considerações de segurança para executar a ferramenta de encapsulamento de aplicações](#security-considerations-for-running-the-app-wrapping-tool). Para transferir a ferramenta, aceda à [Ferramenta de Encapsulamento de Aplicações do Microsoft Intune para Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) no GitHub.
 
@@ -54,7 +54,7 @@ Antes de executar a ferramenta, consulte as [Considerações de segurança para 
     > [!NOTE]
     > A Ferramenta de Encapsulamento de Aplicações do Intune não suporta esquemas de assinatura v2 e v3 da Google para a assinatura de aplicações. Depois de encapsular o ficheiro .apk com a Ferramenta de Encapsulamento de Aplicações do Intune, é recomendado utilizar a [ferramenta Apksigner fornecida pela Google]( https://developer.android.com/studio/command-line/apksigner). Isto irá garantir que, assim que a sua aplicação chegar aos dispositivos dos utilizadores finais, poderá ser iniciada corretamente de acordo com os padrões do Android. 
 
-- (Opcional) Por vezes, uma aplicação pode atingir o limite de tamanho Dalvik Executable (DEX) devido às classes Intune MAM SDK que são adicionadas durante o embrulho. Os ficheiros do DEX fazem parte da compilação de uma aplicação Android. A Ferramenta de Embrulho de Aplicações Intune trata automaticamente o transbordo de ficheiros DEX durante o embrulho para aplicações com um nível de API min igual ou superior a 21 (a partir de [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Para aplicações com um nível de API min de < 21, as melhores práticas seriam aumentar o nível de API do min usando a bandeira `-UseMinAPILevelForNativeMultiDex` do invólucro. Para os clientes incapazes de aumentar o nível mínimo de API da aplicação, estão disponíveis as seguintes suposições de transbordo DEX. Em certas organizações, isto pode exigir trabalhar com quem compila a app (ou seja, a equipa de construção de aplicações):
+- (Opcional) Por vezes, uma aplicação pode atingir o limite de tamanho Dalvik Executable (DEX) devido às classes Intune MAM SDK que são adicionadas durante o embrulho. Os ficheiros do DEX fazem parte da compilação de uma aplicação Android. A Ferramenta de Embrulho de Aplicações Intune trata automaticamente o transbordo de ficheiros DEX durante o embrulho para aplicações com um nível de API min igual ou superior a 21 (a partir de [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Para aplicações com um nível de API min de < 21, a melhor `-UseMinAPILevelForNativeMultiDex` prática seria aumentar o nível de API do min usando a bandeira do invólucro. Para os clientes incapazes de aumentar o nível mínimo de API da aplicação, estão disponíveis as seguintes suposições de transbordo DEX. Em certas organizações, isto pode exigir trabalhar com quem compila a app (ou seja, a equipa de construção de aplicações):
 
   - Utilize o ProGuard para eliminar referências de classe não utilizadas do ficheiro DEX primário da aplicação.
   - Para clientes que utilizem v3.1.0 ou superior ao plugin Android Gradle, desative o [d8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
@@ -88,12 +88,12 @@ Não se esqueça da pasta na qual instalou a ferramenta. A localização predefi
 
 |Propriedade|Informações|Exemplo|
 |-------------|--------------------|---------|
-|**-InputPath**&lt;String&gt;|Caminho da aplicação Android de origem (.apk).| |
- |**-OutputPath**&lt;String&gt;|Caminho para a aplicação Android de saída. Se este for o mesmo caminho de diretório como o InputPath, o empacotamento irá falhar.| |
-|**-KeyStorePath**&lt;String&gt;|Caminho para o ficheiro de keystore que tem o par de chaves pública/privada para assinatura.|Por predefinição, os ficheiros de keystore são armazenados em "C:\Program Files (x86)\Java\jreX.X.X_XX\bin." |
-|**-KeyStorePassword**&lt;SecureString&gt;|Palavra-passe utilizada para desencriptar o keystore. O Android requer que todos os pacotes de aplicações (. apk) estejam assinados. Utilize a ferramenta de chave Java para gerar a KeyStorePassword. Leia mais acerca da [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) de Java aqui.| |
-|**-KeyAlias**&lt;String&gt;|Nome da chave a ser utilizada para assinatura.| |
-|**-KeyPassword**&lt;SecureString&gt;|Palavra-passe utilizada para desencriptar a chave privada que vai ser utilizada para assinatura.| |
+|**-Cadeia InputPath**&lt;&gt;|Caminho da aplicação Android de origem (.apk).| |
+ |**-Cadeia De Saídapath**&lt;&gt;|Caminho para a aplicação Android de saída. Se este for o mesmo caminho de diretório como o InputPath, o empacotamento irá falhar.| |
+|**-Cadeia KeyStorePath**&lt;&gt;|Caminho para o ficheiro de keystore que tem o par de chaves pública/privada para assinatura.|Por predefinição, os ficheiros de keystore são armazenados em "C:\Program Files (x86)\Java\jreX.X.X_XX\bin." |
+|**-KeyStorePassword**&lt;Securestring&gt;|Palavra-passe utilizada para desencriptar o keystore. O Android requer que todos os pacotes de aplicações (. apk) estejam assinados. Utilize a ferramenta de chave Java para gerar a KeyStorePassword. Leia mais acerca da [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) de Java aqui.| |
+|**-Corda KeyAlias**&lt;&gt;|Nome da chave a ser utilizada para assinatura.| |
+|**-ChavePassword**&lt;SecureString&gt;|Palavra-passe utilizada para desencriptar a chave privada que vai ser utilizada para assinatura.| |
 |**-SigAlg**&lt;SecureString&gt;| (Opcional) O nome do algoritmo de assinatura a ser utilizado na assinatura. O algoritmo tem de ser compatível com a chave privada.|Exemplos: SHA256withRSA, SHA1withRSA|
 |**-UseMinAPILevelForNativeMultiDex**| (Opcional) Use esta bandeira para aumentar o nível mínimo de API da aplicação Android para 21. Esta bandeira irá solicitar confirmação, uma vez que irá limitar quem poderá instalar esta aplicação. Os utilizadores podem ignorar o diálogo de confirmação acedendo o parâmetro "-Confirm:$false" ao seu comando PowerShell. A bandeira só deve ser utilizada pelos clientes em apps com min API < 21 que não conseguem embrulhar com sucesso devido a erros de transbordo DEX. | |
 | **&lt;CommonParameters&gt;** | (Opcional) O comando suporta parâmetros comuns do PowerShell, como verboso e depuração. |
@@ -107,7 +107,7 @@ Não se esqueça da pasta na qual instalou a ferramenta. A localização predefi
     Help Invoke-AppWrappingTool
     ```
 
-**Example:**
+**Exemplo:**
 
 Importe o módulo PowerShell.
 
@@ -155,7 +155,7 @@ Para impedir potenciais ataques de spoofing, divulgação de informações e ata
 
 - Proteja o diretório de saída que tem a aplicação encapsulada. Considere utilizar um diretório de nível de utilizador para a saída.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Decidir como preparar as aplicações para a gestão de aplicações móveis com o Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
-- [Guia para programadores do SDK da Aplicação do Microsoft Intune para Android](../developer/app-sdk-android.md)
+- [SDK da Aplicação do Microsoft Intune do guia para programadores de Android](../developer/app-sdk-android.md)

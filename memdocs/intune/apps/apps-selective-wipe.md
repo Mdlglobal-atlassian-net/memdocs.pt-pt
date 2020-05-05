@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324509"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078350"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Como eliminar apenas dados empresariais de aplicações geridas pelo Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Quando um dispositivo se perde ou é roubado ou se o funcionário sair da sua empresa, quer ter a certeza de que os dados empresariais da aplicação são removidos do dispositivo. No entanto, é recomendável não remover os dados pessoais do dispositivo, especialmente se o dispositivo pertencer ao funcionário.
+Quando um dispositivo se perde ou é roubado ou se o empregado sair da sua empresa, quer ter a certeza de que os dados empresariais da aplicação são removidos do dispositivo. No entanto, é recomendável não remover os dados pessoais do dispositivo, especialmente se o dispositivo pertencer ao funcionário.
 
 >[!NOTE]
 > As plataformas iOS/iPadOS, Android e Windows 10 são as únicas plataformas atualmente suportadas para limpar dados corporativos de aplicações geridas pela Intune. As aplicações geridas intune são aplicações que incluem o Intune APP SDK e têm uma conta de utilizador licenciada para a sua organização. A implementação de políticas de proteção de aplicações não é necessária para permitir a limpeza seletiva da aplicação.
@@ -39,13 +39,13 @@ Para remover seletivamente os dados de aplicações da empresa, utilize os passo
 >[!IMPORTANT]
 > Os contactos sincronizados diretamente da aplicação para o livro de endereços nativo são removidos. Não é possível eliminar contactos que sejam sincronizados do livro de endereços nativo para outra origem externa. Atualmente, é aplicável apenas à aplicação Microsoft Outlook.
 
-## <a name="deployed-wip-policies-without-user-enrollment"></a>Políticas de WiP implementadas sem inscrição de utilizadores
-As políticas de Proteção de Informação do Windows (WIP) podem ser implementadas sem exigir que os utilizadores de MDM insuem o seu dispositivo Windows 10. Esta configuração permite que as empresas protejam os seus documentos empresariais com base na configuração do WIP, o que permite que o utilizador mantenha a gestão dos seus próprios dispositivos Windows. Assim que os documentos estiverem protegidos com uma política WIP, os dados protegidos poderão ser eliminados seletivamente por um administrador do Intune. Ao selecionar o utilizador e o dispositivo, e ao enviar um pedido de eliminação de dados, todos os dados protegidos através da política WIP ficarão inutilizáveis. A partir do Intune no portal Azure, selecione **app cliente** > app de limpeza seletiva da **App**. Para obter mais informações, veja [Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Intune](windows-information-protection-policy-create.md).
+## <a name="deployed-wip-policies-without-user-enrollment"></a>Políticas WIP implementadas sem inscrição do utilizador 
+As políticas de Proteção de Informação do Windows (WIP) podem ser implementadas sem exigir que os utilizadores de MDM insuem o seu dispositivo Windows 10. Esta configuração permite que as empresas protejam os seus documentos empresariais com base na configuração do WIP, o que permite que o utilizador mantenha a gestão dos seus próprios dispositivos Windows. Uma vez protegidos os documentos com uma política wip, os dados protegidos podem ser limpos seletivamente por um administrador intune (administrador global ou administrador de[serviço intune).](../fundamentals/users-add.md#types-of-administrators) Ao selecionar o utilizador e o dispositivo, e ao enviar um pedido de eliminação de dados, todos os dados protegidos através da política WIP ficarão inutilizáveis. A partir do Intune no portal Azure, selecione **app** > cliente**app limpeza seletiva**. Para obter mais informações, veja [Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Intune](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Criar um pedido de apagamento
+## <a name="create-a-device-based-wipe-request"></a>Criar um pedido de limpeza baseado em dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **app limpeza seletiva** > Criar pedido de **limpeza**.<br>
+2. Selecione **Apps** > **App limpeza seletiva Criar pedido** > de**limpeza**.<br>
    O painel de pedido de **limpeza Create** é apresentado.
 3. Clique em **Selecionar utilizador,** escolha o utilizador cujos dados da aplicação pretende limpar e clique em **Selecionar** na parte inferior do painel de **utilizadores Select.**
 
@@ -61,11 +61,21 @@ O serviço cria e controla um pedido de eliminação separado para cada aplicaç
 
    ![Screenshot de 'Aplicativos cliente - App selective wipe' pane](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Criar um pedido de limpeza baseado no utilizador
+
+Ao adicionar mos um utilizador à limpeza ao nível do Utilizador, emitemos automaticamente comandos de limpeza a todas as aplicações em todos os dispositivos do utilizador.  O utilizador continuará a receber comandos de limpeza em todos os check-ins de todos os dispositivos.  Para voltar a ativar um utilizador, deve removê-lo da lista.  
+
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selecione **Apps** > **App limpeza seletiva Criar pedido** > de**limpeza**.<br>
+   **Selecione a limpeza ao nível do utilizador**
+3. Clique em **Adicionar** e **Selecione** painel de utilizador.
+4. Escolheu o utilizador cujos dados da aplicação gostaria de limpar e clicar em **Select**.
+
 ## <a name="monitor-your-wipe-requests"></a>Monitorizar os pedidos de eliminação
 
 Pode obter um relatório resumido que mostra o estado geral do pedido de eliminação e inclui o número de pedidos pendentes e de falhas. Para obter mais detalhes, siga estes passos:
 
-1. No painel de limpeza seletivo da App ** > ** **Apps,** pode ver a lista dos seus pedidos agrupados pelos utilizadores. Uma vez que o sistema cria um pedido de eliminação para cada aplicação protegida em execução no dispositivo, poderá ver múltiplos pedidos para um utilizador. O estado indica se um pedido de eliminação está **pendente**, **falhou** ou se teve **êxito**.
+1. No painel**de limpeza seletivo** da App **Apps,** > pode ver a lista dos seus pedidos agrupados pelos utilizadores. Uma vez que o sistema cria um pedido de eliminação para cada aplicação protegida em execução no dispositivo, poderá ver múltiplos pedidos para um utilizador. O estado indica se um pedido de eliminação está **pendente**, **falhou** ou se teve **êxito**.
 
     ![Captura de ecrã do estado do pedido de eliminação no painel Eliminação seletiva de aplicações](./media/apps-selective-wipe/wipe-request-status-1.png)
 
@@ -74,7 +84,7 @@ Além disso, pode ver o nome do dispositivo e o respetivo tipo de dispositivo, o
 >[!IMPORTANT]
 > O utilizador tem de abrir a aplicação para que a eliminação ocorra. Após efetuar o pedido, a eliminação pode durar até 30 minutos.
 
-## <a name="delete-a-wipe-request"></a>Eliminar um pedido de eliminação
+## <a name="delete-a-device-wipe-request"></a>Eliminar um pedido de limpeza de dispositivos
 
 As eliminações em estado pendente são apresentadas até que as elimine manualmente. Para eliminar manualmente um pedido de eliminação:
 
@@ -86,7 +96,15 @@ As eliminações em estado pendente são apresentadas até que as elimine manual
 
 3. Quando lhe for pedido para confirmar a eliminação, escolha **Sim** ou **Não** e, em seguida, clique em **OK**.
 
-## <a name="see-also"></a>Veja também
+## <a name="delete-a-user-wipe-request"></a>Eliminar um pedido de limpeza do utilizador
+
+As toalhetes do utilizador permanecerão na lista até serem removidas por um administrador. Para remover um utilizador da lista:
+
+1. Nas **Aplicações do Cliente - Painel** de limpeza seletiva da aplicação selecione **Limpeza ao Nível do Utilizador**
+2. A partir da lista, clique à direita no utilizador que pretende eliminar e, em seguida, escolha **Eliminar**. 
+
+
+## <a name="see-also"></a>Consulte também
 [O que é uma política de proteção de aplicações](app-protection-policy.md)
 
 [O que é a gestão de aplicações](app-management.md)

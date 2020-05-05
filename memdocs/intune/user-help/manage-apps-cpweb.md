@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 374b433ff6ee50f91343489ae36a1a190d87c7aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328025"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078826"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Gerir aplicações a partir do site do Portal da Empresa 
 Visite o site do Portal da [Empresa](https://portal.manage.microsoft.com) para ver e gerir aplicações da sua organização. 
@@ -80,7 +80,7 @@ Use a barra de pesquisa para encontrar aplicativos. Os resultados da pesquisa s�
 * Nome da editora, ascendente ou descendente alfabeticamente  
 * Publicar data, mais antiga ou mais recente  
 
-Precisa de ajuda adicional? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Precisa de ajuda adicional? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ### <a name="available-and-required-apps"></a>Aplicativos disponíveis e necessários
 As aplicações são-lhe atribuídas pela sua organização e rotuladas como disponíveis ou necessárias. A página de **aplicações instaladas** mostra quais as aplicações que tem na coluna Type de **Atribuição.** 
@@ -98,5 +98,5 @@ Selecione uma aplicação na página **apps** ou **aplicações instaladas** par
 
    ![Screenshot do site do Portal da Empresa, página de detalhes da app.](./media/intune-app-details-1907.png)  
 
-## <a name="next-steps"></a>Próximos passos
-Precisa de mais ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## <a name="next-steps"></a>Passos seguintes
+Precisa de mais ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  

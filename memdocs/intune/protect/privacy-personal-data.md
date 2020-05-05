@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 953dbf7883377b95647a1cd1f253306cf41f0fd6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329085"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079519"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Dados pessoais e privacidade no Intune
 
-Os utilizadores finais podem receber, transmitir e armazenar dados em dispositivos geridos pelo Intune. Os utilizadores confiam que a privacidade dos dados é protegida e utilizada apenas de forma consistente com as suas expetativas. Para ajudar os administradores do Intune a definir tais expetativas, os artigos que se encontram nesta secção fornecem informações sobre como o Intune recolhe, armazena, mantém, processa, protege, partilha, audita e exporta dados pessoais. Também irá aprender o que fazer para ver, corrigir e eliminar dados pessoais.
+Os utilizadores finais podem receber, transmitir e armazenar dados em dispositivos geridos pelo Intune. Eles confiam que a privacidade dos dados é protegida e usada apenas de uma forma que seja consistente com as suas expectativas. Para ajudar os administradores do Intune a definir tais expetativas, os artigos que se encontram nesta secção fornecem informações sobre como o Intune recolhe, armazena, mantém, processa, protege, partilha, audita e exporta dados pessoais. Também irá aprender o que fazer para ver, corrigir e eliminar dados pessoais.
 
 O Microsoft Intune não utiliza os dados pessoais recolhidos como parte do fornecimento do serviço para efeitos de criação de perfis, publicidade ou marketing.
 
@@ -35,10 +35,10 @@ O Microsoft Intune não utiliza os dados pessoais recolhidos como parte do forne
 
 ## <a name="your-company-terms-and-conditions"></a>Termos e condições da sua empresa
 
-Pode [incluir declarações de privacidade nos termos e condições da sua empresa para os utilizadores finais](../apps/company-portal-app.md). Essas declarações de privacidade podem incluir informações sobre a utilização e a privacidade dos dados pessoais do utilizador final.
+Pode [incluir declarações de privacidade nos termos e condições da sua empresa para os utilizadores finais.](../apps/company-portal-app.md) Tais declarações de privacidade podem incluir informações sobre a utilização e privacidade dos dados pessoais do utilizador final.
 
-Pode apresentar os termos e condições da sua empresa na aplicação Portal da Empresa do Intune. Desta forma, os utilizadores podem consultar os termos e condições, incluindo a declaração de privacidade, antes de se inscreverem no Intune e acederem a recursos e dados da empresa.
+Pode apresentar os termos e condições da sua empresa na aplicação Intune Company Portal. Desta forma, os utilizadores podem consultar os termos e condições, incluindo a declaração de privacidade, antes de se inscreverem no Intune e acederem a recursos e dados da empresa.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre como o Intune [recolhe](privacy-data-collect.md), [armazena e processa](privacy-data-store-process.md) e [partilha](privacy-data-secure-share.md) dados pessoais. 

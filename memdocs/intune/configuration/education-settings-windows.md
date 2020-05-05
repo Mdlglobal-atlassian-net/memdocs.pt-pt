@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f881b05c9698a8560fe009331fac3389b35bde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333081"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078197"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Configure a aplicação Take a Test em dispositivos Windows 10 usando Intune
 
@@ -37,12 +37,12 @@ Depois de configurar o perfil, atribuir e implantá-lo aos seus alunos.
 Criar um perfil de [configuração do dispositivo](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Faça um teste de definições
-Depois de criar um perfil de configuração do dispositivo, vá ao **tipo de Perfil** e selecione **avaliação segura (Educação)** . Encontrará as seguintes definições de aplicações Take a Test. 
+Depois de criar um perfil de configuração do dispositivo, vá ao **tipo de Perfil** e selecione **avaliação segura (Educação)**. Encontrará as seguintes definições de aplicações Take a Test. 
 
 
 - Tipo de **conta:** Escolha como os utilizadores se inscrevem no teste. As opções são:
   - Conta do Azure AD
-  - Conta de domínio
+  - Conta do domínio
   - Conta local
   - Conta de hóspedes local: Disponível apenas em dispositivos com windows 10, versão 1903 e posterior.    
 - **Nome**do utilizador da conta : Introduza o nome de utilizador da conta utilizada com a aplicação Take a Test. Pode introduzir contas no seguinte formato:
@@ -56,6 +56,6 @@ Depois de criar um perfil de configuração do dispositivo, vá ao **tipo de Per
 - **Monitorização do ecrã**: Escolha **permitir** monitorizar a atividade do ecrã enquanto os utilizadores estão a fazer um teste. **Não configurado** impede que monitorize o ecrã durante o teste.
 - **Sugestões de texto**: Escolha **Permitir** para que os participantes possam ver sugestões de texto. **Não configurado** bloqueia sugestões de texto enquanto os utilizadores estão a fazer um teste.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Certifique-se de [atribuir o perfil](device-profile-assign.md)e monitorizar [o seu estado](device-profile-monitor.md).

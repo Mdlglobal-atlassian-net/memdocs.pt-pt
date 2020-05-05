@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401432"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076106"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Visão geral dos cenários guiados insinados 
 
@@ -46,7 +46,7 @@ Os cenários guiados oferecem uma funcionalidade específica. Os seguintes detal
 
 ### <a name="launching"></a>Lançamento  
 
-Todos os cenários guiados estão disponíveis no portal de Gestão de **[Dispositivos](https://endpoint.microsoft.com)**  > **Resolução de Problemas + suporte** > **cenários guiados.** 
+Todos os cenários guiados estão disponíveis no portal > de **[Gestão](https://endpoint.microsoft.com)** de Dispositivos**Resolução de Problemas + suporte** > **cenários guiados**. 
 
 O cenário guiado começa com uma introdução explicando o propósito do cenário e quaisquer pré-requisitos necessários para completar a configuração. Neste ponto, as suas permissões de administração são verificadas para verificar se tem todos os privilégios necessários para completar o cenário.  
 
@@ -60,7 +60,7 @@ O próximo passo é implementar o cenário. A implementação de um cenário cri
 > A lista apresentada no final do cenário guiado não é guardada e só é visível enquanto o cenário guiado está aberto.  
 Se houver um erro de implementação do cenário, todas as alterações serão revertidas. 
 
-### <a name="editing"></a>Em edição 
+### <a name="editing"></a>Editar 
 
 Os cenários guiados não podem ser utilizados para editar os recursos existentes. Uma vez criados, todos os recursos, grupos e atribuições devem ser editados utilizando as cargas de trabalho existentes.
 
@@ -76,6 +76,6 @@ Os cenários guiados não podem ser utilizados para retirar os recursos existent
 
 À medida que a tecnologia evolui, Intune pode atualizar de vez em quando um cenário guiado para melhorar a experiência do utilizador, segurança ou outros aspetos do cenário. Esta atualização só afetará novas implementações feitas pelo cenário guiado. A Intune não atualizará os recursos existentes anteriormente gerados pelo cenário guiado para corresponder às novas boas práticas ou recomendações.  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para começar a correr rapidamente no Microsoft Intune, passe pelos cenários guiados do Intune. Se você é novo em Intune, instale o seu inquilino Intune seguindo o início rápido do [teste gratuito](free-trial-sign-up.md).

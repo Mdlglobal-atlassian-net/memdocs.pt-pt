@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6b4afd0c440455b7dab9c1e7674a935967b2fd64
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325076"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078945"
 ---
-# <a name="turn-on-iosipados-supervised-mode"></a>Ativar o modo supervisionado do iOS/iPadOS
+# <a name="turn-on-iosipados-supervised-mode"></a>Ligue o modo supervisionado iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ O modo supervisionado pela Apple iOS/iPadOS dá aos administradores mais opçõe
 
 O Intune suporta o modo supervisionado como parte do [Programa de Registo de Aparelho (DEP)](../enrollment/device-enrollment-program-enroll-ios.md) da Apple.
 
-Para obter uma lista dos controlos da Apple que exigem o modo supervisionado, veja [Payload settings reference (Referência de definições de payload)](http://help.apple.com/configurator/mac/2.4/#/cad5370d089) da Apple.
+Para obter uma lista de controlos da Apple que requerem supervisão, consulte a referência das definições de [Payload](http://help.apple.com/configurator/mac/2.4/#/cad5370d089)da Apple .
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>Ativar o modo supervisionado durante a inscrição
 
@@ -41,7 +41,7 @@ No centro de administração do [Microsoft Endpoint Manager,](https://go.microso
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Ativar o modo supervisionado após a inscrição
 
-Após a inscrição, a única maneira de ligar o modo supervisionado é ligar um dispositivo iOS/iPadOS a um Mac e [utilizar o Configurador Apple](../enrollment/apple-configurator-enroll-ios.md) (que irá redefinir o dispositivo). Não pode configurar um dispositivo com o modo Supervisionado no Intune após a inscrição.
+Após a inscrição, a única maneira de ligar o modo supervisionado é ligar um dispositivo iOS/iPadOS a um Mac e [utilizar o Configurador Apple](../enrollment/apple-configurator-enroll-ios.md) (que irá redefinir o dispositivo). Não é possível configurar um dispositivo para o modo Supervisionado em Intune após a inscrição.
 
 ## <a name="identify-a-supervised-device"></a>Identificar um dispositivo supervisionado
 
@@ -49,6 +49,6 @@ Para determinar se um dispositivo é supervisionado, consulte o ecrã de bloquei
 - No ecrã de bloqueio do dispositivo, estará escrito **Este iPhone é gerido pela "Nome da Empresa".**
 - Na página **Sobre** do dispositivo, dirá que **este iPhone está supervisionado. O nome da empresa pode monitorizar o tráfego da Internet e localizar este dispositivo.**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para saber mais sobre outras opções de gestão de dispositivos, veja [O que é a gestão de dispositivos do Microsoft Intune?](device-management.md)

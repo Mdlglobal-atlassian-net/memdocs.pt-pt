@@ -19,31 +19,31 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1d6534fcbbf4e511635d452132f705fafb2e6166
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c82bf136f736218b3f831f1bed7471277093a57
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324593"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078877"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Como definir o tempo antes de o seu dispositivo Android bloquear o ecrã
 
-Para voltar a ter acesso ao seu trabalho, terá de definir o tempo limite para a palavra-passe no seu dispositivo ao seguir os passos relativos ao seu tipo de dispositivo.
+Para voltar a ligar ao seu trabalho, terá de definir o tempo de saída da palavra-passe no seu dispositivo seguindo os passos para o tipo de dispositivo que tem.
 
 ## <a name="native-non-samsung-knox-device"></a>Dispositivos nativos (não Samsung Knox)
 
-1. Em **Definições** no seu dispositivo, toque em **Segurança** &gt; **Bloquear automaticamente** (isto aparece como lock phone **depois** em alguns dispositivos).
+1. Em **Definições**, no seu dispositivo, toque em **Segurança** &gt; **Bloquear Automaticamente** (esta opção aparece como **Bloquear telemóvel após** em alguns dispositivos).
 
-    Se **bloquear automaticamente** **(bloquear** o telefone depois de alguns dispositivos) não for apresentado, certifique-se de que definiu uma palavra-passe válida em **Definições** &gt; **Bloqueio** de ecrã &gt; **palavra-passe**.
+    Se a opção **Bloquear Automaticamente** (**Bloquear telemóvel após** em alguns dispositivos) não for apresentada, certifique-se de que definiu uma palavra-passe válida em **Definições** &gt; **Bloqueio de Ecrã** &gt; **Palavra-passe**.
 
 2. Selecione o valor do tempo limite da palavra-passe.
 
 ## <a name="samsung-knox-device"></a>Dispositivos Samsung Knox
 
-1. Em **Definições** no seu dispositivo, toque no **ecrã de bloqueio e na segurança** &gt; bloqueie **automaticamente**.
+1. Em **Definições**, no seu dispositivo, toque em **Bloqueio de ecrã e segurança** &gt; **Bloquear automaticamente**.
 
-    Se **bloquear automaticamente** ( bloquear o telefone**depois** de alguns dispositivos) não é apresentado, certifique-se de que definiu uma palavra-passe válida em **Definições** &gt; **Bloqueio** de ecrã &gt; **palavra-passe**.
+    Se a opção **Bloquear automaticamente** (**Bloquear telemóvel após** em alguns dispositivos) não for apresentada, confirme que definiu uma palavra-passe válida em **Definições** &gt; **Bloqueio de Ecrã** &gt; **Palavra-passe**.
 
 2. Selecione um valor para o tempo limite da palavra-passe.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

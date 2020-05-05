@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa9b8bc49e9c5aaf6337988fd980115beea1200b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 56274fd614dfd521e59c604cf00f18df7c8b1bc3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329445"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079727"
 ---
 # <a name="data-intune-sends-to-google"></a>Dados que o Intune envia para a Google
 
@@ -38,11 +38,11 @@ A seguinte tabela lista os dados que o Microsoft Intune envia para a Google quan
 |:---:|:---:|:---:|:---:|
 | ID Empresarial | Tem origem na Google ao vincular a sua conta do Gmail ao Intune. | Identificador principal utilizado para comunicar entre o Intune e a Google.  Esta comunicação inclui a definição de políticas, a gestão de dispositivos e o vínculo/supressão do vínculo do Android Enterprise com o Intune. | Identificador exclusivo, Formato de exemplo: LC04eik8a6 |
 | Corpo de Política | Tem origem no Intune ao guardar uma nova política de configuração ou aplicação. | Aplicar políticas a dispositivos. | Isto é uma coleção de todas as definições configuradas para uma política de configuração ou aplicação. Isto pode conter informações de clientes, se estas forem fornecidas como parte de uma política. Por exemplo, nomes de redes, nomes de aplicações e definições específicas da aplicação. |
-| Dados do Dispositivo | Os dispositivos para cenários de Perfil Profissional começam com a inscrição no Intune. Os dispositivos para cenários de Dispositivo gerido começam com a inscrição na Google. | As informações de dados do dispositivo são enviadas entre o Intune e a Google para a realização de várias ações, como a aplicação de políticas, a gestão do dispositivo e a criação geral de relatórios. | **Identificador exclusivo para representar o Nome do Dispositivo.** Exemplo: enterprises/LC04ebru7b/devices/3592d971168f9ae4<br>**Identificador exclusivo para representar o Nome do Utilizador.** Exemplo: Enterprises/LC04ebru7b/users/116838519924207449711<br>**Estado do dispositivo.** Exemplos: Ativo, Desativado, Aprovisionamento.<br>**Estados de conformidade.** Exemplos: definição não suportada, aplicações obrigatórias em falta.<br>**Informações de Software.** Exemplos: versões de software e nível de patch.<br>**Informações de Rede.** Exemplos: IMEI, MEID, WifiMacAddress<br>**Definições do Dispositivo.** Exemplos: informações sobre os níveis de encriptação e sobre a permissão de aplicações desconhecidas no dispositivo.<br> Veja abaixo um exemplo de uma mensagem JSON. |
+| Dados do Dispositivo | Os dispositivos para cenários de Perfil Profissional começam com a inscrição no Intune. Os dispositivos para cenários de Dispositivo gerido começam com a inscrição na Google. | As informações de dados do dispositivo são enviadas entre o Intune e a Google para a realização de várias ações, como a aplicação de políticas, a gestão do dispositivo e a criação geral de relatórios. | **Identificador exclusivo para representar o Nome do Dispositivo.** Exemplo: enterprises/LC04ebru7b/devices/3592d971168f9ae4<br>**Identificador exclusivo para representar o Nome do Utilizador.** Exemplo: Enterprises/LC04ebru7b/users/116838519924207449711<br>**Estado do dispositivo.** Exemplos: Ativo, Desativado, Aprovisionamento.<br>**Estados de conformidade.** Exemplos: definição não suportada, aplicações obrigatórias em falta.<br>**Informações de Software.** Exemplos: versões de software e nível de patch.<br>**Informações de Rede.** Exemplos: IMEI, MEID, WifiMacAddress<br>**Definições do dispositivo.** Exemplos: informações sobre os níveis de encriptação e sobre a permissão de aplicações desconhecidas no dispositivo.<br> Veja abaixo um exemplo de uma mensagem JSON. |
 | Nova palavra-passe | Tem origem no Intune. | Repor o código de acesso do dispositivo. | Cadeia a representar uma nova palavra-passe. |
 | Utilizador da Google | Google | Gerir o perfil profissional em cenários de Perfil Profissional (BYOD). | Identificador exclusivo para representar a conta do Gmail ligada. Exemplo: 114223373813435875042 |
 | Dados da Aplicação | Tem origem no Intune ao guardar a política da aplicação. |  | Cadeia do Nome da Aplicação. Exemplo: app:com.microsoft.windowsintune.companyportal |
-| Conta de Serviço Empresarial | Tem origem na Google a pedido do Intune. | Utilizado para a autenticação entre o Intune e a Google para transações que envolvem o cliente. | Existem várias partes:<br> **ID Empresarial**: documentada anteriormente.<br>**UPN**: UPN gerado utilizado na autenticação em nome de um cliente.<br>Exemplo: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Chave**: blob codificado Base64 utilizado em pedidos de autor, armazenados e encriptados no serviço, mas este é o aspeto do blob:<br> Identificador exclusivo para representar a chave do cliente<br>Exemplo: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
+| Conta de Serviço Empresarial | Tem origem na Google a pedido do Intune. | Utilizado para a autenticação entre o Intune e a Google para transações que envolvem o cliente. | Existem várias partes:<br> **ID Empresarial**: documentada anteriormente.<br>**UPN**: UPN gerado utilizado na autenticação em nome de um cliente.<br>Exemplo: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Chave**: blob codificado Base64 utilizado em pedidos de autor, armazenados e encriptados no serviço, mas este é o aspeto do blob:<br> Identificador único para representar a chave do cliente<br>Exemplo: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
 
 
 Para deixar de utilizar a gestão de dispositivos Android Enterprise com o Microsoft Intune e eliminar os dados, tem de desativar a gestão de dispositivos Android Enterprise do Microsoft Intune e eliminar a sua conta Google. Consulte a conta Google para saber como desempenhar a gestão da conta.

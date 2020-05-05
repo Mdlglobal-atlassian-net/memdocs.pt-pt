@@ -1,5 +1,5 @@
 ---
-title: Problemas de resolução do módulo de política do Conector de Certificado Intune da Microsoft  Microsoft Docs
+title: Problemas de resolução do módulo de política do Conector de Certificado Intune da Microsoft [ Microsoft Docs
 description: Problemas de resolução do funcionamento do módulo de política NDES quando o módulo processa um pedido de certificado quando utiliza perfis de certificado SCEP para implementar certificados com Intune.
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328685"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079115"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Resolução de problemas do módulo de política NDES no Microsoft Intune
 
@@ -86,7 +86,7 @@ Os navegadores e navegadores modernos em dispositivos móveis ignoram o *Nome Co
 
   - **Nome do assunto**  
     CN = nome de servidor externo
-  - **Nome alternativo do sujeito**  
+  - **Nome Alternativo do Requerente**  
      Nome = nome do servidor externo  
      Nome DNS = nome do servidor interno
 
@@ -123,7 +123,7 @@ Quando o resultado do desafio for **falso,** verifique se o *CertificateRegistra
 Signing certificate could not be retrieved. System.Security.Cryptography.CryptographicException: m_safeCertContext is an invalid handle. at System.Security.Cryptography.X509Certificates.X509Certificate.ThrowIfContextInvalid() at System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString() at Microsoft.ConfigurationManager.CertRegPoint.CRPCertificate.RetrieveSigningCert(String certThumbprint
 ```
 
-**Resolução**: No servidor onde o conector está instalado, abra o Editor de Registo, localize a chave de registo `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` e verifique se o valor do Certificado de Assinatura existe.
+**Resolução**: No servidor onde o conector está instalado, abra o Editor de Registo, localize a chave de `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` registo e verifique se o valor do Certificado de Assinatura existe.
 
 Se este valor não existir, reinicie o Serviço de Conector Intune em serviços.msc e verifique se o valor aparece no registo. Se o valor ainda está em falta, é muitas vezes devido a problemas de conectividade de rede entre o servidor que o NDES e o serviço Intune.
 
@@ -170,6 +170,6 @@ Se não vir as entradas que indicam sucesso, siga estes passos:
 
    ![Reveja o registo de candidaturas](../protect/media/troubleshoot-scep-certificate-ndes-policy-module/application-log-errors.png)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Se o módulo de política NDES validar o pedido e o pedido for reencaminhado para a autoridade do certificado, o próximo passo é rever a entrega do [certificado ao dispositivo](troubleshoot-scep-certificate-delivery.md).

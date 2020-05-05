@@ -19,18 +19,18 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 581ff7ec85cc85e41968a4ed3a7b2616d0dd7c28
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ed1399f10a7a806ed6404e596a93b7aa5538caa6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327729"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077347"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-macos-device-in-intune"></a>O que acontece se instalar a aplicação Portal da Empresa e inscrever o seu dispositivo macOS no Intune?
 
 Quando instalar a aplicação Portal da Empresa e inscrever o seu dispositivo macOS no Intune, pode utilizar a aplicação Portal da Empresa para:
 
-- Aceder à rede da empresa e ao seu e-mail e ficheiros de trabalho.
+- Aceda à rede da empresa e aos seus ficheiros de e-mail e trabalho.
 
 - Obter aplicações da empresa a partir do Portal da Empresa.
 
@@ -42,13 +42,13 @@ Quando inscreve o seu dispositivo no Intune, está a dar permissão ao suporte d
 
 Quando o seu dispositivo está inscrito, o suporte da empresa pode:
 
-- Repor o dispositivo para as predefinições do fabricante se este for roubado ou perdido.
+- Reponha o seu dispositivo de volta às definições predefinidas do fabricante se o dispositivo estiver perdido ou roubado.
 
-- Remover todos os dados e aplicações da empresa instalados. Os dados e definições pessoais não são removidos.
+- Remover todos os dados e aplicações da empresa instalados. Os seus dados pessoais e configurações não são removidos.
 
 - Exigir que tenha uma palavra-passe ou PIN no dispositivo.
 
-- O seu administrador de TI pode exigir que aceite os termos e condições.
+- O administrador de TI pode exigir que aceite os termos e condições.
 
 - Desativar a câmara no seu dispositivo para o impedir de tirar fotografias a dados confidenciais da empresa.
 
@@ -66,4 +66,4 @@ Quando o seu dispositivo está inscrito, o suporte da empresa pode:
 
 - Ativar ou desativar a sincronização automática de ficheiros no modo de roaming no seu dispositivo. Se a sincronização automática de ficheiros for permitida, pode incorrer em tarifas de roaming.
 
-Se tiver dúvidas, contacte o suporte da sua empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Se tiver dúvidas, contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

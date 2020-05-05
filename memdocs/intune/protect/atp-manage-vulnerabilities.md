@@ -1,6 +1,6 @@
 ---
 title: Utilizar intune para remediar vulnerabilidades encontradas pelo Microsoft Defender ATP - Azure Microsoft Docs
-description: Veja como gerir as tarefas de segurança a partir de e Gestão de Ameaças e Vulnerabilidades, parte da Microsoft Defender Advanced Threat Protection (ATP) a partir da consola Intune.
+description: Veja como gerir as tarefas de segurança a partir e Threat & vulnerabilidade Management, parte da Microsoft Defender Advanced Threat Protection (ATP) a partir da consola Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 5464e70d915dceb9cf2c6a3b2385419cfc11e38b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322844"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077840"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Utilizar o Intune para remediar vulnerabilidades identificadas pelo Microsoft Defender ATP
 
@@ -45,7 +45,7 @@ As ações comuns de reparação incluem:
 - **Desative** ou **ative** uma configuração que afete a vulnerabilidade.
 - **A Necessidade de Atenção** alerta o administrador para a ameaça quando não há uma recomendação adequada a fornecer.
 
-Um fluxo de trabalho exemplo:
+Exemplo de fluxo de trabalho:
 
 - Dentro do Microsoft Defender ATP, é descoberta uma vulnerabilidade para uma aplicação chamada Contoso Media Player v4 e um administrador cria uma tarefa de segurança para atualizar essa aplicação. O jogador da Contoso Media é uma aplicação não gerida que foi implementada com o Intune.
 
@@ -81,7 +81,7 @@ Um fluxo de trabalho exemplo:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **tarefas**de **segurança endpoint** > Segurança .
+2. Selecione > **tarefas**de **segurança endpoint**.
 
 3. Selecione uma tarefa da lista para abrir uma janela de recursos que apresente detalhes adicionais para essa tarefa de segurança.
 
@@ -107,4 +107,4 @@ Saiba mais sobre Intune e [Microsoft Defender ATP](advanced-threat-protection.md
 
 Reveja a [Intune Mobile Threat Defense](mobile-threat-defense.md).
 
-Reveja o [dashboard de Gestão de Ameaças e Vulnerabilidades](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) no ATP do Microsoft Defender.
+Reveja o dashboard de Gestão de [Vulnerabilidades & Ameaça](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) no ATP do Microsoft Defender.

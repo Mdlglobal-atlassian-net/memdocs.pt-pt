@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332505"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079438"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ajudar a proteger PCs com o Windows a utilizarem políticas de Firewall do Windows no Microsoft Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "79332505"
 
 O Microsoft Intune pode ajudá-lo a proteger os PCs Windows que gere com o cliente Intune de várias formas. Uma forma como o faz é ao fornecer políticas que lhe permitem configurar as definições da Firewall do Windows nos PCs.
 
-Se ainda não instalou o cliente de PC Windows Intune nos seus computadores, veja o artigo [Instalar o cliente de PC Windows com o Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Se ainda não instalou o cliente Intune Windows PC nos seus computadores, consulte Instalar o cliente do Windows PC com o [Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Utilize as informações nas secções seguintes para o ajudar a configurar, implementar e monitorizar as políticas de Firewall do Windows em PCs Windows.
 
@@ -54,11 +54,11 @@ A política da Firewall do Windows permite-lhe criar e implementar definições 
 
 ## <a name="configure-a-windows-firewall-policy"></a>Configurar uma política da Firewall do Windows
 
-1. Na consola de [administração Microsoft Intune,](https://manage.microsoft.com/)escolha **Política** &gt; **Adicionar Política**.
+1. Na [consola de administração do Microsoft Intune](https://manage.microsoft.com/), escolha **Política** &gt; **Adicionar Política**.
 
-2. Configure e implemente uma política das **Definições da Firewall do Windows**. Pode utilizar as definições recomendadas ou personalizar as mesmas. Se precisar de mais informações sobre como criar e implementar políticas, veja o artigo [Tarefas de gestão comuns do PC Windows com o computador cliente do Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Configure e implemente uma política das **Definições da Firewall do Windows**. Pode utilizar as definições recomendadas ou personalizar as mesmas. Se precisar de mais informações sobre como criar e implementar políticas, consulte as tarefas de gestão do [Pc comum do Windows com o cliente de computador Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
-    A secção seguinte apresenta uma lista dos valores que pode configurar na política, bem como dos valores predefinidos que serão utilizados se não personalizar a política.
+    A secção seguinte lista os valores que pode configurar na política e também os valores predefinidos que serão usados se não personalizar a apólice.
 
 Depois de implementar uma política da Firewall do Windows, pode ver o respetivo estado na página **Todas as Políticas** da área de trabalho **Política**.
 
@@ -104,9 +104,9 @@ Pode configurar exceções que permitam tipos específicos de tráfego de rede a
 |Nome da definição|Detalhes|
 |------------------|--------------------|
 |**BranchCache – Obtenção de Conteúdo**<br>(Windows 7 ou posterior)|Permite que os clientes do BranchCache utilizem HTTP para obter conteúdo de outros clientes do BranchCache no modo distribuído, e a partir da cache alojada enquanto no modo de cache alojada. Esta definição utiliza HTTP.|
-|**BranchCache – Cliente de Cache Alojada**<br>(Windows 7 ou posterior)|Permite que os clientes do BranchCache utilizem uma cache alojada. Esta definição utiliza HTTPS.|
-|**BranchCache – Servidor de Cache Alojada**|Permite que os clientes do BranchCache utilizem uma cache alojada para comunicar com outros clientes. Esta definição utiliza HTTPS.|
-|**BranchCache – Deteção de Elementos da Rede**<br>(Windows 7 ou posterior)|Permite que os clientes do BranchCache utilizem o protocolo Web Services Dynamic Discovery (WS-Discovery) para procurar a disponibilidade de conteúdos na sub-rede local.|
+|**BranchCache - Cliente de Cache Alojada**<br>(Windows 7 ou posterior)|Permite que os clientes do BranchCache utilizem uma cache alojada. Esta definição utiliza HTTPS.|
+|**BranchCache - Servidor de Cache Alojada**|Permite que os clientes do BranchCache utilizem uma cache alojada para comunicar com outros clientes. Esta definição utiliza HTTPS.|
+|**BranchCache - Deteção de Elementos da Rede**<br>(Windows 7 ou posterior)|Permite que os clientes do BranchCache utilizem o protocolo eb Services Dynamic Discovery (WS-Discovery) para procurar a disponibilidade de conteúdos na sub-rede local.|
 |**Serviço de Colocação em Cache Ponto a Ponto BITS**|Permite que os clientes utilizem o Serviço de Transferência Inteligente em Segundo Plano (BITS) para localizar e partilhar ficheiros armazenados na cache BITS em clientes na mesma sub-rede. Esta definição utiliza os Serviços Web em Dispositivos (WSDAPI) e Chamada de Procedimento Remoto (RPC).|
 |**Ligar a um Projetor de Rede**|Permite que os utilizadores se liguem a projetores em redes com ou sem fios para projetar apresentações. Esta definição utiliza WSDAPI.|
 |**Componentes Essenciais de Rede**|Permite que os clientes utilizem o IPv4 e o IPv6 para ligar a recursos de rede.|
@@ -124,8 +124,8 @@ Pode configurar exceções que permitam tipos específicos de tráfego de rede a
 |**Ambiente de Trabalho Remoto**|Permite que o computador utilize o Ambiente de Trabalho Remoto para aceder a outros computadores.|
 |**Gestão do Registo de Eventos Remoto**|Permite a visualização e gestão remota dos registos de eventos de cliente. Esta definição utiliza Pipes Nomeados e RPC.|
 |**Gestão de Tarefas Agendadas Remota**|Ativa a gestão remota do serviço de agendamento de tarefas. Esta definição utiliza RPC.|
-|**Gestão do Serviço Remota**|Ativa a gestão remota de serviços locais em clientes. Esta definição utiliza Pipes Nomeados e RPC.|
-|**Gestão de Volumes Remota**|Ativa a gestão remota de volumes de discos de software e hardware. Esta definição utiliza RPC.|
+|**Gestão do Serviço Remoto**|Ativa a gestão remota de serviços locais em clientes. Esta definição utiliza Pipes Nomeados e RPC.|
+|**Gestão de Volume Remoto**|Ativa a gestão remota de volumes de discos de software e hardware. Esta definição utiliza RPC.|
 |**Encaminhamento e Acesso Remoto**|Ativa ligações VPN recebidas e ligações de acesso remoto a computadores.|
 |**Secure Socket Tunneling Protocol (protocolo SSTP)**|Ativa ligações VPN recebidas a computadores geridos com o Secure Socket Tunneling Protocol (SSTP). Esta definição utiliza HTTPS.|
 |**Trap SNMP**|Permite aos computadores geridos a receção de tráfego do serviço Trap Simple Network Management Protocol (SNMP).|
@@ -141,5 +141,5 @@ Pode configurar exceções que permitam tipos específicos de tráfego de rede a
 |**Windows Virtual PC**<br>(Windows 7 ou posterior)|Permite que as máquinas virtuais comuniquem com outros computadores.|
 |**Dispositivos Portáteis Sem Fios**|Ativa a transferência de multimédia de câmaras ou dispositivos multimédia ligados à rede para computadores geridos com do Media Transfer Protocol (MTP). Esta definição utiliza protocolos de rede SSDP e UPnP.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 [Políticas para proteger PCs Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

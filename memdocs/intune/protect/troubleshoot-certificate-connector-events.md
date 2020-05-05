@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b75faa501fa91dc82bfec83b8c418e28b39fcec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 592b42ca5f21cd68eaad01acf9895f7e5f4b5c73
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328893"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079166"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Eventos e códigos de diagnóstico do Conector de Certificado intune
 
@@ -45,8 +45,8 @@ A partir da versão 6.1806.X.X, o Serviço do Intune Connector regista eventos n
 | 20102 | PkcsCertIssue_Failure  | Falha ao emitir um certificado PKCS. Reveja os detalhes do evento para obter o ID do dispositivo, o ID do utilizador, o nome CA, o nome do modelo de certificado e o thumbprint do certificado relacionados com este evento. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Certificado revogado com êxito. Reveja os detalhes do evento para o ID do dispositivo, o ID do utilizador, o nome CA e o número de série do certificado relacionados com este evento. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Falha ao revogar o certificado. Reveja os detalhes do evento para o ID do dispositivo, o ID do utilizador, o nome CA e o número de série do certificado relacionados com este evento. Para obter mais informações, veja os Registos NDES SVC.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Upload_Success | Os dados de pedido ou revogação do certificado foram carregados com êxito. Reveja os detalhes do evento para obter os detalhes do carregamento. | 0x00000000, 0x0FFFFFFF |
-| 20302 | Upload_Failure | Falha ao carregar os dados de pedido ou revogação do certificado. Reveja os detalhes do evento > Estado de Carregamento para determinar o ponto de falha.| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | Carregou com sucesso os dados de pedido ou revogação do certificado. Reveja os detalhes do evento para obter os detalhes do carregamento. | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Não fez o upload dos dados de pedido ou revogação do certificado. Reveja os detalhes do evento > Estado de Carregamento para determinar o ponto de falha.| 0x00000000, 0x0FFFFFFF |
 | 20400 | Download_Success | Foi transferido com êxito o pedido para assinar um certificado, transferir um certificado de cliente ou revogar um certificado. Reveja os detalhes do evento para obter os detalhes da transferência.  | 0x00000000, 0x0FFFFFFF |
 | 20402 | Download_Failure | Falha ao transferir o pedido para assinar um certificado, transferir um certificado de cliente ou revogar um certificado. Reveja os detalhes do evento para obter os detalhes da transferência. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Ponto de Registo de Certificados verificou com êxito um desafio de cliente | 0x00000000, 0x0FFFFFFF |
@@ -73,5 +73,5 @@ A partir da versão 6.1806.X.X, o Serviço do Intune Connector regista eventos n
 | 0x0FFFFFFFF | Unknown_Error  | Não conseguimos concluir o pedido porque ocorreu um erro do lado do servidor. Tente novamente. |
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 Para obter assistência adicional, utilize a implementação do perfil de [certificado SCEP de resolução de problemas no guia Microsoft Intune.](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune)

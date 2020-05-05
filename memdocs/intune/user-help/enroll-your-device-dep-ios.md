@@ -1,5 +1,5 @@
 ---
-title: Inscrever um dispositivo iOS fornecido pela organização para gestão. | Documentos da Microsoft
+title: Inscrever um dispositivo iOS fornecido pela organização para gestão. | Microsoft Docs
 description: Descreve como pode inscrever um dispositivo iOS no Intune que foi comprado e fornecido pela sua organização
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1f6af588b6350bb7a0d2058f8f623c51bbdaa4c4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4c31f8ee0389da35fe515928cbb286dd2632809f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324841"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077738"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Inscrever um dispositivo iOS fornecido pela organização para gestão
 
@@ -45,7 +45,7 @@ Se estiver a utilizar o seu próprio dispositivo iOS em vez de um dispositivo fo
 1. Ligue o seu dispositivo iOS.
 2. Após selecionar o seu **Idioma**, ligue o seu dispositivo ao Wi-Fi.
 3. No ecrã do **dispositivo iOS configurar,** escolha **Configurar como novo dispositivo**.  
-4. Após estar ligado ao Wi-Fi, será apresentado o ecrã **Configuração**. Será apresentada a mensagem **A [A Sua Empresa] irá configurar automaticamente o seu dispositivo.**
+4. Uma vez ligado ao Wi-Fi, aparecerá o ecrã de **Configuração.** Será apresentada a mensagem **A [A Sua Empresa] irá configurar automaticamente o seu dispositivo.**
 
    **A configuração permite que [a Sua Empresa] gere este dispositivo no ar. Um administrador pode ajudá-lo a configurar contas de e-mail e rede, instalar e configurar aplicações e gerir as definições remotamente. Um administrador pode desativar funcionalidades, instalar e remover aplicações, monitorizar e restringir o tráfego de Internet e apagar remotamente este dispositivo.**
 
@@ -55,4 +55,4 @@ Se estiver a utilizar o seu próprio dispositivo iOS em vez de um dispositivo fo
 6. Concorde com os **Termos e Condições** e decida se quer enviar as informações de diagnóstico à Apple.
 7. Após concluir a inscrição, o seu dispositivo poderá pedir-lhe para efetuar mais ações. Alguns destes passos poderão incluir a introdução da sua palavra-passe de acesso ao e-mail ou a configuração de um código de acesso.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

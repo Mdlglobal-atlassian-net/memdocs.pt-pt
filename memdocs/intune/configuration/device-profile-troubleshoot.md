@@ -1,6 +1,6 @@
 ---
 title: Resolução de problemas de perfis de dispositivo no Microsoft Intune – Azure | Microsoft Docs
-description: Perguntas e respostas comuns com políticas e perfis de dispositivos, incluindo alterações de perfil não aplicadas a utilizadores ou dispositivos, quanto tempo leva para que novas políticas sejam empurradas para dispositivos, que configurações são aplicadas quando existem múltiplas políticas, o que acontece quando a o perfil é eliminado ou removido, e muito mais com o Microsoft Intune.
+description: Perguntas e respostas comuns com políticas e perfis do dispositivo, incluindo alterações de perfil não aplicadas a utilizadores ou dispositivos, quanto tempo leva para que novas políticas sejam empurradas para dispositivos, quais as definições que são aplicadas quando existem múltiplas políticas, o que acontece quando um perfil é eliminado ou removido, e muito mais com o Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d0d271b5befc65ad286a8da6e00f647973d73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333133"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078248"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Questões comuns, questões e resoluções com políticas e perfis de dispositivos no Microsoft Intune
 
@@ -40,7 +40,7 @@ Algumas recomendações adicionais:
 - Depois de se ligar com êxito ao ponto final do Wi-Fi (router do Wi-Fi), tenha em atenção o SSID e a credencial utilizados (este valor será a palavra-passe ou a frase de acesso).
 - Introduza o SSID e a credencial (palavra-passe ou frase de acesso) no campo Chave Pré-partilhada. 
 - Implemente num grupo de teste com um número de utilizadores limitado, preferencialmente apenas a equipa de TI. 
-- Sincronize o seu dispositivo iOS/iPadOS para Intune. Inscreva-o caso ainda não o tenha feito. 
+- Sincronize o seu dispositivo iOS/iPadOS para Intune. Inscreva-se se ainda não se inscreveu. 
 - Tente ligar-se novamente ao mesmo ponto final do Wi-Fi (como mencionado no primeiro passo).
 - Implemente em grupos maiores e, por fim, em todos os utilizadores esperados na sua organização. 
 
@@ -52,27 +52,27 @@ Se um dispositivo não fizer o check-in para obter a apólice ou perfil após a 
 
 **Frequências estimadas:**
 
-| Platform | Ciclo de atualização|
+| Plataforma | Ciclo de atualização|
 | --- | --- |
 | iOS/iPadOS | Cerca de 8 horas |
 | macOS | Cerca de 8 horas |
 | Android | Cerca de 8 horas |
 | PCs com o Windows 10 inscritos como dispositivos | Cerca de 8 horas |
 | Windows Phone | Cerca de 8 horas |
-| Windows 8,1 | Cerca de 8 horas |
+| Windows 8.1 | Cerca de 8 horas |
 
 Se o dispositivo recentemente matriculado, o cumprimento, o incumprimento e o check-in de configuração são mais frequentemente executados, o que é **estimado** em:
 
-| Platform | Frequência |
+| Plataforma | Frequência |
 | --- | --- |
 | iOS/iPadOS | A cada 15 minutos por 1 hora, e em volta de 8 horas |  
 | macOS | A cada 15 minutos por 1 hora, e em volta de 8 horas | 
 | Android | A cada 3 minutos por 15 minutos, a cada 15 minutos por 2 horas, e em volta de 8 horas | 
 | PCs com o Windows 10 inscritos como dispositivos | A cada 3 minutos por 15 minutos, a cada 15 minutos por 2 horas, e em volta de 8 horas | 
 | Windows Phone | A cada 5 minutos por 15 minutos, a cada 15 minutos por 2 horas, e em volta de 8 horas | 
-| Windows 8,1 | A cada 5 minutos por 15 minutos, a cada 15 minutos por 2 horas, e em volta de 8 horas | 
+| Windows 8.1 | A cada 5 minutos por 15 minutos, a cada 15 minutos por 2 horas, e em volta de 8 horas | 
 
-A qualquer momento, os utilizadores podem abrir a aplicação Portal da Empresa, **Definições** > **Sync** para verificar imediatamente as atualizações de política ou de perfil.
+A qualquer momento, os utilizadores podem abrir a aplicação Portal da Empresa, **Configurações** > **Sync** para verificar imediatamente as atualizações de política ou de perfil.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Que ações fazem o Intune enviar de imediato uma notificação para um dispositivo?
 
@@ -126,7 +126,7 @@ Quando elimina um perfil, ou remove um dispositivo de um grupo que tem o perfil,
     - Memorizar histórico de palavras-passe
     - Número de falhas de início de sessão consecutivas a permitir antes do dispositivo ser apagado
     - Minutos de inatividade antes da palavra-passe ser exigida
-    - Tipo de palavra-passe obrigatório – Número mínimo de conjuntos de carateres
+    - Tipo obrigatório de palavra-passe – número mínimo de conjuntos de carateres
     - Permitir câmara
     - Encriptação obrigatória no dispositivo móvel
     - Permitir armazenamento amovível
@@ -136,7 +136,7 @@ Quando elimina um perfil, ou remove um dispositivo de um grupo que tem o perfil,
     - Permitir geolocalização
     - Permitir conta Microsoft
     - Permitir copiar e colar
-    - Permitir tethering Wi-Fi
+    - Permitir partilha de Wi-Fi
     - Permitir ligação automática a hotspots Wi-Fi
     - Permitir relatórios de hotspots Wi-Fi
     - Permitir a limpeza
@@ -154,7 +154,7 @@ Quando elimina um perfil, ou remove um dispositivo de um grupo que tem o perfil,
 
 Uma vez definidos, os dispositivos Windows Phone não permitem que as políticas de segurança definidas utilizando MDM ou EAS sejam reduzidas em segurança. Por exemplo, define um **número mínimo de senha de caracteres** para 8. Tenta reduzi-lo a 4. O perfil mais restritivo já é aplicado ao dispositivo.
 
-Para mudar o perfil para um valor menos seguro, então redefinir as políticas de segurança. Por exemplo, no Windows 8.1, no ambiente de trabalho, passe para a direita > selecione **Definições** > **Painel de Controlo**. Selecione a miniaplicação **Contas de Utilizador** . No menu de navegação à esquerda, existe uma ligação de Políticas de **Segurança redefinida** (em direção ao fundo). Selecione-a e, em seguida, selecione **Repor Políticas**.
+Para mudar o perfil para um valor menos seguro, então redefinir as políticas de segurança. Por exemplo, no Windows 8.1, no ambiente de trabalho, passe a partir do > direito selecione Painel**de Controlo**de **Definições** > . Selecione a miniaplicação **Contas de Utilizador** . No menu de navegação à esquerda, existe uma ligação de Políticas de **Segurança redefinida** (em direção ao fundo). Selecione-a e, em seguida, selecione **Repor Políticas**.
 
 Outros dispositivos MDM, como Android, Windows Phone 8.1 e posteriormente, iOS/iPadOS e Windows 10 podem ter de ser retirados, e reinscritos em Intune para aplicar um perfil menos restritivo.
 
@@ -167,6 +167,6 @@ Algumas definições nos dispositivos do Windows 10 podem apresentar como "Não 
 
 Para saber mais sobre a versão e os requisitos sKU para as diferentes definições, consulte a referência do Fornecedor de Serviços de [Configuração (CSP).](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Precisa de ajuda adicional? Veja [Como obter suporte para o Microsoft Intune](../fundamentals/get-support.md).

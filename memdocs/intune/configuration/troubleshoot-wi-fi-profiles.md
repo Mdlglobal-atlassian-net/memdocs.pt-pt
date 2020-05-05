@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331953"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078214"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Perfis de configuração de dispositivowi-fi de resolução de problemas no Microsoft Intune
 
@@ -46,12 +46,12 @@ Este cenário utiliza um dispositivo Nokia 6.1. Antes de o perfil Wi-Fi ser inst
 1. Os utilizadores finais recebem uma notificação para instalar o perfil do certificado Raiz Fidedigna:
 
     > [!div class="mx-imgBorder"]
-    > ![notificação da aplicação Portal da Empresa de Amostras no Android para instalar](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png) de perfil de certificado de raiz fidedigna
+    > ![Notificação de aplicativo do Portal da Empresa de Amostras no Android para instalar perfil de certificado De Raiz Fidedigna](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
 
 2. A próxima notificação solicita a instalação do perfil de certificado SCEP:
 
     > [!div class="mx-imgBorder"]
-    > ![Notificação da aplicação Portal da Empresa de Amostras  no Android para instalar o perfil de certificado SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
+    > ![Notificação de aplicativo do Portal da Empresa de Amostras no Android para instalar perfil de certificado SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
 
     > [!TIP]
     > Ao utilizar um dispositivo Android gerido por administrador de dispositivos, pode haver vários certificados listados. Quando um perfil de certificado é revogado ou removido, o certificado permanece no dispositivo. Neste cenário, selecione o certificado mais recente. Normalmente é o último certificado mostrado na lista.
@@ -61,12 +61,12 @@ Este cenário utiliza um dispositivo Nokia 6.1. Antes de o perfil Wi-Fi ser inst
 3. Em seguida, os utilizadores recebem uma notificação para instalar o perfil Wi-Fi:
 
     > [!div class="mx-imgBorder"]
-    > ![Notificação da aplicação Portal da Empresa de Amostras  no Android para instalar o perfil de certificado SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
+    > ![Notificação de aplicativo do Portal da Empresa de Amostras no Android para instalar perfil de certificado SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
 
 4. Quando concluída, a ligação Wi-Fi é mostrada como uma rede guardada:
 
     > [!div class="mx-imgBorder"]
-    > ![ligação Wi-Fi mostra como uma rede salva](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
+    > ![Conexão Wi-Fi mostra como uma rede guardada](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
 
 ### <a name="review-company-portal-app-logs"></a>Rever registos de aplicativos do Portal da Empresa
 
@@ -75,7 +75,7 @@ No Android, o ficheiro **Omadmlog.log** detalha as atividades do perfil Wi-Fi qu
 No exemplo seguinte, utilize a [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) para ler os registos e procure "wifimgr":
 
 > [!div class="mx-imgBorder"]
-> ![ligação Wi-Fi mostra como uma rede salva](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
+> ![Conexão Wi-Fi mostra como uma rede guardada](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
 
 O seguinte registo mostra os resultados da sua pesquisa e mostra o perfil Wi-Fi aplicado com sucesso:
 
@@ -105,20 +105,20 @@ O seguinte registo mostra os resultados da sua pesquisa e mostra o perfil Wi-Fi 
 Após a instalação do perfil Wi-Fi no dispositivo, é mostrado no Perfil de **Gestão:**
 
 > [!div class="mx-imgBorder"]
-> perfil de gestão ![no dispositivo iOS/iPadOS em Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![Perfil de gestão no dispositivo iOS/iPadOS em Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![ligação Wi-Fi mostra como uma rede Wi-Fi no dispositivo iOS/iPadOS em Intune](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![A ligação Wi-Fi mostra como uma rede Wi-Fi no dispositivo iOS/iPadOS em Intune](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
 ### <a name="review-the-iosipados-console-and-device-logs"></a>Reveja os registos de consolas iOS/iPadOS e dispositivos
 
 Nos dispositivos iOS/iPadOS, o registo de aplicações do Portal da Empresa não inclui informações sobre perfis Wi-Fi. Para ver detalhes de instalação dos seus perfis Wi-Fi, utilize os Registos consola/dispositivo:
 
-1. Ligue o dispositivo iOS/iPadOS ao Mac. Vá a **Aplicações** > **Utilities**e abra a aplicação Consola.
+1. Ligue o dispositivo iOS/iPadOS ao Mac. Vá a**Utilitários**de **Aplicações** > e abra a aplicação Consola.
 2. Em **ação,** **selecione Incluir Mensagens de Informação** e incluir **Mensagens de Depuração:**
 
     > [!div class="mx-imgBorder"]
-    > ![incluir mensagens de informação e incluir mensagens de depuração na aplicação de consola iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![Incluir Mensagens de Informação e Incluir Mensagens Debug na aplicação de consola iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Reproduza o cenário e guarde os registos para um ficheiro de texto:
 
@@ -134,22 +134,22 @@ Nos dispositivos iOS/iPadOS, o registo de aplicações do Portal da Empresa não
     Line 392346: default    11:19:59.360460 -0400    profiled    Profile \'93www.windowsintune.com.wifi.Contoso\'94 installed.\
     ```
 
-## <a name="windows"></a>Portal do
+## <a name="windows"></a>Windows
 
-Depois de instalado o perfil Wi-Fi no dispositivo, aceda a **Definições** > **Contas** > Trabalho de **Acesso ou escola**. Selecione a sua conta > **Informação:**
+Depois de instalado o perfil Wi-Fi no dispositivo, aceda ao trabalho de acesso às**Contas** >  **de Definições** > **Ou à escola**. Selecione a sua conta > **Info**:
 
 > [!div class="mx-imgBorder"]
-> ![Aceder ao trabalho ou à escola e selecionar Informações sobre dispositivos Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
+> ![Aceda ao trabalho ou à escola e selecione Informações sobre o dispositivo Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
 
 Em **Áreas geridas pela Microsoft,** o **Wi-Fi** é mostrado:
 
 > [!div class="mx-imgBorder"]
-> ![Nas áreas geridas pela Microsoft, veja que o Wi-Fi está listado no Windows](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
+> ![Nas áreas geridas pela Microsoft, consulte que o Wi-Fi está listado no Windows](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Para ver a ligação Wi-Fi, vá a **Definições** > **Rede e Internet**  > **Wi-Fi:**
+Para ver a ligação Wi-Fi, vá à Rede **definições** > &**Wi-Fi**da**Internet:**  > 
 
 > [!div class="mx-imgBorder"]
-> ![No Windows, veja a ligação Wi-Fi como uma rede conhecida em definições](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
+> ![No Windows, consulte a ligação Wi-Fi como uma rede conhecida em definições](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
 
 ### <a name="review-event-viewer-logs"></a>Rever registos de espectadores de eventos
 
@@ -157,7 +157,7 @@ Nos dispositivos Windows, os detalhes sobre os perfis Wi-Fi estão registados no
 
 1. Abra a aplicação **Espectador de Eventos.**
 2. No menu **'Ver',** selecione **Registos Desalíticos e Debug**.
-3. Expandir registos de **aplicações e serviços** > **Microsoft** > **Windows** > **Dispositivos Gestão-Empresa-Provedor de Diagnóstico** > **Admin**
+3. Expandir **aplicações e serviços Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**
 
 A sua saída é semelhante aos seguintes registos:
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Confirme que o perfil Wi-Fi é atribuído ao grupo correto:
 
-    1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > perfis de **configuração**.
+    1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de**configuração**de **dispositivos** > .
     2. Selecione o seu perfil > **Atribuições**. Confirme que os grupos selecionados estão corretos.
     3. No Endpoint Manager, selecione **Troubleshooting + Suporte**. Reveja a informação de **Atribuição.**
 
@@ -191,14 +191,14 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - No Windows 10 e dispositivos mais recentes, reveja o registo de Informações de Diagnóstico do MDM:
 
-  1. Vá a **Definições** > **Contas** > **Trabalho de acesso ou escola.**
+  1. Ir para **Definições** > **Accounts** > Contas**Aceder ao trabalho ou à escola.**
   2. Selecione o seu trabalho ou conta escolar > **Info**.
   3. Na parte inferior da página **Definições,** selecione **Criar relatório**.
-  4. Abre-se uma janela que mostra o caminho para os ficheiros de registo. Selecione **Exportação**.
-  5. Vá ao caminho `\Users\Public\Documents\MDMDiagnostics` e veja o relatório:
+  4. Abre-se uma janela que mostra o caminho para os ficheiros de registo. Selecione **Export** (Exportar).
+  5. Vá ao `\Users\Public\Documents\MDMDiagnostics` caminho e veja o relatório:
 
       > [!div class="mx-imgBorder"]
-      > ![Amostra de Informação de Diagnóstico do MDM que mostra a configuração do perfil Wi-Fi nos dispositivos do Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
+      > ![Amostra de Informações de Diagnóstico do MDM que mostram configuração de perfil Wi-Fi em dispositivos Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
   > Para mais informações, consulte [diagnosticar falhas de MDM no Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
@@ -244,7 +244,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     A saída é semelhante ao seguinte tronco:
 
     > [!div class="mx-imgBorder"]
-    > ![amostra de saída de log CMTrace que mostra o perfil de configuração WiFi Intune aplicado com sucesso em dispositivos](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
+    > ![Saída de log CMTrace da amostra que mostra perfil de configuração WiFi Intune aplicado com sucesso em dispositivos](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
 
     Se vir um erro no registo, copie o carimbo de tempo do erro e desfile o registo. Em seguida, use a opção "encontrar" com o carimbo de tempo para ver o que aconteceu antes do erro.
 
@@ -271,6 +271,6 @@ Tipicamente, esta questão é causada por algo fora de Intune. As seguintes tare
   - [Blog da Microsoft Intune Support Team](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
   - [Blog de Mobilidade e Segurança Empresarial da Microsoft](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Monitorize os seus perfis.](device-profile-monitor.md)

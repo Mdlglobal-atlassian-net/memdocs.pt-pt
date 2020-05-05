@@ -1,6 +1,6 @@
 ---
 title: Necessita de ativar o Arranque Seguro | Documentos da Microsoft
-description: Tem de ativar o arranque seguro.
+description: Tens de ativar a Secure Boot.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 3b466261aff8392f7c055e523e433246c47918b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4d35ec1cc34b7bba7a27f67640d3adaf66510e02
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327581"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076820"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Necessita de ativar o Arranque Seguro
 
@@ -32,6 +32,6 @@ A sua organização obriga-o a ativar o Arranque Seguro do Windows, que é uma f
 
 A ativação do Arranque Seguro é uma tarefa avançada. Se estiver a utilizar um dispositivo móvel, contacte o suporte da empresa para obter ajuda.
 
-Se estiver a utilizar um PC, pode contactar o suporte da empresa ou ver a secção "To re-enable Secure Boot" (Para reativar o Arranque Seguro), na página [Disabling Secure Boot (Desativar o Arranque Seguro)](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx), para tentar ativar o Arranque Seguro por si próprio.
+Se estiver a utilizar um PC, pode contactar o suporte da sua empresa ou ver a secção "Reativar a Bota Segura" na página ['Bota Segura](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) incapacitante' para tentar ativar a Bota Segura.
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

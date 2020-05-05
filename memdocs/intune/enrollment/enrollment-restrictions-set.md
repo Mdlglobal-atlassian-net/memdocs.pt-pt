@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327090"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077993"
 ---
 # <a name="set-enrollment-restrictions"></a>Definir restrições de inscrição
 
@@ -33,7 +33,7 @@ Como administrador intune, pode criar e gerir restrições de inscrição que de
 - Número de dispositivos.
 - Sistemas operativos e versões.
 
-Pode criar múltiplas restrições e aplicá-las a diferentes grupos de utilizadores. Pode definir uma [ordem de prioridade](#change-enrollment-restriction-priority) para as diferentes restrições.
+Pode criar várias restrições e aplicá-las a diferentes grupos de utilizadores. Pode definir a [ordem prioritária](#change-enrollment-restriction-priority) para as suas diferentes restrições.
 
 >[!NOTE]
 >As restrições de inscrição não são funcionalidades de segurança. A identidade dos dispositivos pode ser falsificada de forma a contornar estas restrições. Estas restrições são uma forma de dissuadir utilizadores sem fins maliciosos.
@@ -59,11 +59,11 @@ As restrições predefinidas são fornecidas automaticamente para as restriçõe
 
 ## <a name="create-a-device-type-restriction"></a>Criar uma restrição de tipo de dispositivo
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **inscrição** > **Criar restrições** de restrição > **restrição**do tipo dispositivo .
+1. Iniciar sessão > no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**Dispositivos** > **Restrições** > de inscrição Criar**restrições**de**restrição** > do tipo dispositivo .
 2. Na página **Basics,** dê à restrição um **nome** e **descrição**opcional.
 3. Escolha **O Próximo** para ir à página de definições da **Plataforma.**
 4. No âmbito **da Plataforma,** escolha **Permitir** as plataformas que pretende que esta restrição permita.
-    ![tampa de ecrã para escolher as definições da plataforma](./media/enrollment-restrictions-set/choose-platform-settings.png)
+    ![Tampa de tela para escolher as definições da plataforma](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. Em **Versões,** escolha as versões mínimas e máximas que deseja que as plataformas permitidas suportem. As restrições de versão aplicam-se apenas aos dispositivos matriculados no Portal da Empresa.
      Os formatos suportados pelas versões são os seguintes:
     - O administrador de dispositivos Android e o perfil de trabalho android Enterprise suportam major.minor.rev.build.
@@ -84,8 +84,8 @@ As restrições predefinidas são fornecidas automaticamente para as restriçõe
 6. Sob **propriedade pessoal,** escolha **Permitir** as plataformas que pretende permitir como dispositivos pessoais.
 7. No **fabricante do Dispositivo,** introduza uma lista separada da vírposta dos fabricantes que pretende bloquear.
 8. Escolha **O Próximo** para ir à página de **Atribuiçãos.**
-9. Escolha **os grupos Select para incluir** e, em seguida, use a caixa de pesquisa para encontrar grupos que pretende incluir nesta restrição. A restrição só será aplicada aos grupos à qual for atribuída. Se não atribuir uma restrição a pelo menos um grupo, a mesma não terá efeito. Em seguida, selecione **Selecionar**. 
-    ![tampa de ecrã para escolher as definições da plataforma](./media/enrollment-restrictions-set/select-groups.png)
+9. Escolha **os grupos Select para incluir** e, em seguida, use a caixa de pesquisa para encontrar grupos que pretende incluir nesta restrição. A restrição só será aplicada aos grupos à qual for atribuída. Se não atribuir uma restrição a pelo menos um grupo, a mesma não terá efeito. Em seguida, escolha **Selecionar**. 
+    ![Tampa de tela para escolher as definições da plataforma](./media/enrollment-restrictions-set/select-groups.png)
 10. Selecione **Next** para ir à página **Review + criar.**
 11. Selecione **Criar** para criar a restrição.
 12. A nova restrição é criada com uma prioridade diretamente acima das restrições predefinidas. Pode [alterar a prioridade](#change-enrollment-restriction-priority).
@@ -93,14 +93,14 @@ As restrições predefinidas são fornecidas automaticamente para as restriçõe
 
 ## <a name="create-a-device-limit-restriction"></a>Criar uma restrição de limite de dispositivo
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > **Criar restrições** de restrição > **restrição**de limite de dispositivo .
+1. Iniciar sessão > no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**Dispositivos** > **Restrições** > de inscrição Criar restrições de restrição de**restrição** > **de dispositivos**.
 2. Na página **Basics,** dê à restrição um **nome** e **descrição**opcional.
 3. Escolha **O Próximo** para ir à página limite do **Dispositivo.**
 4. Para o limite do **dispositivo,** selecione o número máximo de dispositivos que um utilizador pode inscrever.
-    ![tampa de ecrã para escolher o limite do dispositivo](./media/enrollment-restrictions-set/choose-device-limit.png)
+    ![Tampa de tela para escolher limite de dispositivo](./media/enrollment-restrictions-set/choose-device-limit.png)
 5. Escolha **O Próximo** para ir à página de **Atribuiçãos.**
-6. Escolha **os grupos Select para incluir** e, em seguida, use a caixa de pesquisa para encontrar grupos que pretende incluir nesta restrição. A restrição só será aplicada aos grupos à qual for atribuída. Se não atribuir uma restrição a pelo menos um grupo, a mesma não terá efeito. Em seguida, selecione **Selecionar**. 
-    ![tampa de ecrã para selecionar grupos](./media/enrollment-restrictions-set/select-groups-device-limit.png)
+6. Escolha **os grupos Select para incluir** e, em seguida, use a caixa de pesquisa para encontrar grupos que pretende incluir nesta restrição. A restrição só será aplicada aos grupos à qual for atribuída. Se não atribuir uma restrição a pelo menos um grupo, a mesma não terá efeito. Em seguida, escolha **Selecionar**. 
+    ![Tampa de tela para selecionar grupos](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 7. Selecione **Next** para ir à página **Review + criar.**
 8. Selecione **Criar** para criar a restrição.
 9. A nova restrição é criada com uma prioridade diretamente acima das restrições predefinidas. Pode [alterar a prioridade](#change-enrollment-restriction-priority).
@@ -126,7 +126,7 @@ Durante as inscrições BYOD, os utilizadores verão uma notificação que os in
 
 Pode alterar as definições para uma restrição de inscrição seguindo os passos abaixo. Estas restrições não efetuam dispositivos que já foram matriculados. A inscrição de dispositivos com o [agente de PC do Intune](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) não pode ser bloqueada com esta funcionalidade.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivos** > Restrições de **Inscrição** > escolha a restrição que pretende alterar > **Properties**.
+1. Inscreva-se no > centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**Dispositivos** > Restrições de**inscrição** > escolha a restrição que pretende alterar > **Propriedades**.
 2. Escolha **editar** ao lado das definições que pretende alterar.
 3. Na página **Editar,** faça as alterações que deseja e proceda à página **'Rever + guardar',** em seguida, escolha **Guardar**.
 
@@ -141,9 +141,9 @@ Se bloquear a inscrição de dispositivos Windows de propriedade pessoal, o Intu
 
 Os seguintes métodos estão qualificados como autorizados como uma inscrição empresarial Windows:
 - A inscrição de utilizadores está a utilizar uma [conta do gestor de inscrição de dispositivos]( device-enrollment-manager-enroll.md).
-- O dispositivo é inscrito através do [Windows Autopilot](enrollment-autopilot.md).
+- O dispositivo insere-se através [do Windows Autopilot](enrollment-autopilot.md).
 - O dispositivo está registado no Windows Autopilot, mas não é uma opção de apenas inscrição na MDM a partir das Definições do Windows.
-- O número IMEI do dispositivo é apresentado em **Inscrição de dispositivos** >  **[Identificadores de dispositivos da empresa](corporate-identifiers-add.md)** . (Não suportado para o Windows Phone 8.1.)
+- O número IMEI do dispositivo está listado nos**[identificadores de dispositivos corporativos](corporate-identifiers-add.md)** **de inscrição** > do dispositivo. (Não suportado para o Windows Phone 8.1.)
 - O dispositivo é inscrito através de um [pacote de aprovisionamento em massa](windows-bulk-enroll.md).
 - O dispositivo matricula-se através de GPO, ou [inscrição automática do Gestor de Configuração para cogestão.](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)
  
@@ -174,8 +174,8 @@ A inscrição de dispositivos inclui restrições predefinidas para tipos e limi
 
 Pode alterar a prioridade de qualquer restrição que não seja predefinida.
 
-1. Inicie sessão no portal do Azure.
+1. Inicie sessão no Portal do Azure.
 2. Selecione **Mais Serviços**, procure o **Intune** e, em seguida, selecione **Intune**.
-3. Selecione **Inscrição de dispositivos** > **Restrições de inscrição**.
+3. Selecione**restrições**de **inscrição** > do dispositivo .
 4. Paire o cursor do rato sobre a lista de prioridades das restrições.
 5. Utilize os três pontos verticais para arrastar a prioridade para a posição pretendida na lista.

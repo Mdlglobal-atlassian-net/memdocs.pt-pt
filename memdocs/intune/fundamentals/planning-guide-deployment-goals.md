@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331057"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079234"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Determinar metas, objetivos e obstáculos da implementação
 
-Para criar um bom plano de implementação, primeiro tem de identificar as metas e os objetivos de implementação da sua organização, bem como os potenciais obstáculos à mesma. Vamos então abordar cada área de forma mais detalhada.
+Ter um bom plano de implantação começa primeiro por identificar os objetivos e objetivos de implantação da sua organização, juntamente com potenciais desafios. Vamos discutir cada área mais detalhadamente.
 
 ## <a name="deployment-goals"></a>Metas da Implementação
 
@@ -43,7 +43,7 @@ As metas da implementação são as realizações a longo prazo que pretende obt
 
   - **Descrição:** permita que os funcionários sejam produtivos independentemente do lugar a partir do qual precisem de trabalhar e do dispositivo mais adequado para eles. Este projeto deve visar permitir a produtividade móvel e o aceso aos dados empresariais de forma segura.
 
-  - **Valor comercial:** ao permitir que os funcionários sejam ágeis e trabalhem a partir de onde precisam, o negócio torna-se mais competitivo e o ambiente de trabalho mais satisfatório.
+  - **Valor do negócio:** Permitir que os colaboradores sejam ágeis e trabalhar de onde necessitam permite que o negócio seja mais competitivo e proporcione um ambiente de trabalho mais gratificante.
 
 - **Fornecer proteção de dados em dispositivos móveis**
 
@@ -51,7 +51,7 @@ As metas da implementação são as realizações a longo prazo que pretende obt
 
   - **Valor comercial:** a proteção de dados é fundamental para garantir que permanecemos competitivos e que tratamos os nossos clientes e os seus dados com o máximo cuidado.
 
-- **Reduzir os custos**
+- **Reduzir custos**
 
   - **Descrição:** sempre que possível, o projeto reduz os custos operacionais e de implementação.
 
@@ -93,6 +93,6 @@ Os obstáculos à implementação são problemas prioritários para uma organiza
 
   - **Mitigação:** embora possa estar ansioso por se lançar no seu projeto, confirme que definiu claramente as suas metas e objetivos. Inclua estas metas e objetivos em todas as atividades de sensibilização e de formação para ajudar a garantir que os utilizadores compreendem por que razão a sua organização escolheu o Intune.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-Agora que já identificou as suas metas, objetivos e potenciais obstáculos à implementação, vamos avançar para a secção seguinte: [Identificar cenários de casos de utilização](planning-guide-scenarios.md).
+Agora que identificou os seus objetivos de implantação, objetivos e potenciais desafios, vamos passar para a secção seguinte: [Identificar cenários](planning-guide-scenarios.md)de casos de utilização .

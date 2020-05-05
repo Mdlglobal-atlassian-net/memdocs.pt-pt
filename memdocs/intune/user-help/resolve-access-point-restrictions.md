@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b196b7e29ee8423efebd458564d12be950c14102
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8ce6c44ed569498e7c168353b39876dbfe14f8a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327917"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079404"
 ---
 # <a name="resolve-access-point-restrictions"></a>Resolver restrições de ponto de acesso
 
@@ -48,7 +48,7 @@ Ao tentar ligar a uma rede não reconhecida ou não aprovada, poderá receber um
 |------------------------|-----------------------------------|--------------------------|
 | **O dispositivo não está ligado a uma rede aprovada – ligue-se a uma rede sem fios aprovada.** | Está ligado a uma rede que não foi aprovada para o acesso a recursos de trabalho. Enquanto estiver ligado a esta rede, não conseguirá aceder ao e-mail do trabalho, aplicações e outros recursos empresariais protegidos. | Ligue-se a uma rede aprovada pela empresa. Em seguida, toque em **Resolver** para tentar novamente. |
 
-## <a name="restrictions-couldnt-be-enforced"></a>Não foi possível impor as restrições  
+## <a name="restrictions-couldnt-be-enforced"></a>As restrições não podiam ser aplicadas.  
 
 | Mensagem do Portal da Empresa | O que significa esta mensagem | O que deve fazer                                                                      
 |------------------------|-----------------------------------|--------------------------|

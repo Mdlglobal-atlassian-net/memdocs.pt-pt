@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9975ffb8ce56659016680304c936fc8bb7d0774
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f2244f484b44673454b1bbb6ba6286c253021517
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326897"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079268"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Formas comuns de utilizar o Microsoft Intune
 
@@ -45,7 +45,7 @@ Intune e Microsoft Enterprise Mobility + Security (EMS) fornecem uma [solução]
 
 O Intune também suporta permitir o acesso a aplicações móveis que exijam o acesso seguro a dados no local, como servidores de aplicações de linha de negócio. Normalmente, este tipo de acesso é feito através de [certificados geridos pelo Intune](../protect/certificates-configure.md) para controlo de acesso combinado com um proxy ou gateway de VPN padrão no perímetro, como o Proxy de Aplicações do Microsoft Azure Active Directory.
 
-Nestes casos, a única forma de aceder aos dados da empresa é inscrever o dispositivo na gestão. Uma vez inscritos os dispositivos, o sistema de gestão assegura que estão em conformidade com as suas políticas antes de poderem aceder aos dados empresariais. Além disso, a [Ferramenta de Encapsulamento de Aplicações e o SDK da Aplicação](../developer/apps-prepare-mobile-application-management.md) do Intune podem ajudar a conter os dados acedidos na sua aplicação de linha de negócio, para que não possa transmitir dados empresariais a aplicações ou serviços de consumidor.
+Nestes casos, a única forma de aceder aos dados da empresa é inscrever o dispositivo na gestão. Uma vez inscritos os dispositivos, o sistema de gestão assegura que estão em conformidade com as suas políticas antes de poderem aceder aos dados empresariais. Além disso, a Ferramenta de Embrulho de Aplicações da Intune e o [App SDK](../developer/apps-prepare-mobile-application-management.md) podem ajudar a conter os dados acedidos dentro da sua app de linha de negócio, para que não possa passar dados corporativos para aplicações ou serviços de consumo.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
@@ -55,13 +55,13 @@ Proteger os dados empresariais no Office 365 (e-mail, documentos, mensagens inst
 
 Intune e Microsoft Enterprise Mobility + Security fornecem uma solução de Acesso Condicional exclusivamente integrada que garante que nenhum utilizador, aplicações ou dispositivos pode aceder aos dados do Office 365 a menos que cumpram os requisitos de conformidade da sua empresa (autenticação de [vários fatores](../enrollment/multi-factor-authentication.md)realizada, matriculado com intune, utilizando aplicação gerida, versão de SISTEMA suportada, pin o dispositivo, perfil de baixo risco do utilizador, etc.).
 
-As aplicações móveis do Office, nas respetivas lojas de aplicações, estão prontas a ser utilizadas com políticas de contenção de dados que pode configurar através do Intune. Estas funcionalidades permitem-lhe impedir que os dados sejam partilhados com aplicações (por exemplo, aplicações de e-mail nativas) e localizações de armazenamento (por exemplo, Dropbox) que não são geridas pela equipa de TI. Todas estas funcionalidades estão incorporadas no Office 365 e no EMS. Não é necessário implementar infraestruturas adicionais para obter este valor.
+As aplicações móveis do Office, nas respetivas lojas de aplicações, estão prontas a ser utilizadas com políticas de contenção de dados que pode configurar através do Intune. Isto permite evitar que os dados sejam partilhados com apps (por exemplo, com aplicações de email nativas) e locais de armazenamento (por exemplo, Dropbox) que não são geridos por TI. Todas estas funcionalidades estão incorporadas no Office 365 e no EMS. Não é necessário implementar infraestruturas adicionais para obter este valor.
 
 Uma prática de implementação comum do Office 365 é exigir que os dispositivos se inscrevam na gestão, se precisarem de ser totalmente integrados com configurações de aplicações, certificados, Wi-Fi ou VPN da empresa, que é um cenário comum dos dispositivos pertencentes à empresa.  
 
 No entanto, se o utilizador simplesmente precisar de aceder a emails e documentos corporativos, o que acontece muitas vezes para dispositivos pessoais, então pode exigir que o utilizador utilize as aplicações móveis do Office (às quais aplicou políticas de proteção de [aplicações](../apps/app-protection-policies.md) e não inscreveu completamente o dispositivo.  
 
-De qualquer forma, os dados do Office 365 serão protegidos pelas políticas que definiu.
+De qualquer forma, os dados do Office 365 serão protegidos por políticas que definiu.
 
 <!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
 
@@ -69,7 +69,7 @@ De qualquer forma, os dados do Office 365 serão protegidos pelas políticas que
 
 A popularidade do programa BYOD (Bring Your Own Device) continua a aumentar entre as organizações como um meio para reduzir as despesas de hardware ou aumentar as opções de produtividade móvel para os funcionários. Hoje em dia, praticamente todas as pessoas têm um telefone pessoal, então porquê colocar outro nos seus bolsos? O principal desafio foi sempre convencer os funcionários a inscreverem os seus dispositivos pessoais na gestão, uma vez que receiam o que o departamento de TI poderá ver e fazer nos respetivos dispositivos.  
 
-Quando a inscrição de dispositivos não é uma opção viável, o Intune oferece um método BYOD alternativo que consiste simplesmente em [gerir as aplicações que contenham dados empresariais](../apps/app-protection-policies.md). O Intune protege os dados empresariais, mesmo que a aplicação em questão aceda a dados empresariais e pessoais, como é o caso das aplicações móveis do Office.  
+Quando a inscrição do dispositivo não é uma opção viável, intune oferece uma abordagem BYOD alternativa de simplesmente [gerir as aplicações que contêm dados corporativos.](../apps/app-protection-policies.md) O Intune protege os dados empresariais, mesmo que a aplicação em questão aceda a dados empresariais e pessoais, como é o caso das aplicações móveis do Office.  
 
 Como administrador, pode exigir que os utilizadores acedam ao Office 365 a partir de aplicações móveis do Office e configurem as aplicações com políticas que mantêm os dados protegidos (encriptados, protegidos por PIN, etc.). Estas políticas de proteção de aplicações evitam a perda de dados em aplicações não geridas e localizações de armazenamento – dentro ou fora dessas aplicações. Por exemplo, as políticas impedem que um utilizador copie texto de um perfil de e-mail empresarial para um perfil de e-mail de consumidor, mesmo que ambos os perfis estejam configurados no Outlook Mobile. Podem ser implementadas configurações semelhantes para outros serviços e aplicações necessárias aos utilizadores de BYOD.
 
@@ -97,6 +97,6 @@ A simplicidade da experiência do utilizador é fundamental neste caso. Por esta
 
 ## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>Permitir que os seus funcionários acedam de forma segura ao Office 365 a partir de um quiosque público não gerido
 
-Por vezes, os seus funcionários precisam de utilizar dispositivos, aplicações ou browsers que não pode gerir, tal como os computadores públicos em feiras para profissionais e átrios de hotel.
+Por vezes, os seus colaboradores precisam de usar dispositivos, apps ou navegadores que não consegue gerir, como os computadores públicos em feiras e em lobbies de hotéis.
 
 Deve permitir que os seus funcionários acedam ao e-mail da empresa a partir destes dispositivos? Com a Intune e a Microsoft Enterprise Mobility + Security, a resposta pode simplesmente ser "não", limitando o acesso por [e-mail a dispositivos geridos pela sua organização.](../protect/conditional-access.md) Tal garante que o seu funcionário totalmente autenticado não deixe acidentalmente dados empresariais no computador não fidedigno.

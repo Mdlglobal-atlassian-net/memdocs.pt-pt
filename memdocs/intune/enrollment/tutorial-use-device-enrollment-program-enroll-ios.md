@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40dd24c281f00fce71a98413ab2666cca2bab2ce
-ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
+ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80979210"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078911"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Tutorial: Utilize as funcionalidades de inscrição de dispositivos corporativos da Apple no Apple Business Manager (ABM) para inscrever dispositivos iOS/iPadOS em Intune
 As funcionalidades de Inscrição de Dispositivos no Apple Business Manager simplificam os dispositivos de inscrição. Intune também suporta o portal de inscrição de dispositivos mais antigo (DEP) da Apple, mas encorajamo-lo a começar de novo com o Apple Business Manager. Com a Microsoft Intune e a Apple Corporate Device Registration, os dispositivos estão automaticamente matriculados de forma segura na primeira vez que o utilizador liga o dispositivo. Por isso, pode enviar dispositivos para muitos utilizadores sem ter de configurar cada dispositivo individualmente. 
@@ -32,7 +32,7 @@ Neste tutorial, ficará a saber como:
 > * Criar um perfil de Inscrição
 > * Atribuir o perfil de Inscrição a dispositivos
 
-Se não tiver uma subscrição do Intune, [inscreva-se numa conta de avaliação gratuita](../fundamentals/free-trial-sign-up.md).
+Se não tiver uma subscrição Intune, [inscreva-se numa conta de teste gratuita](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 - Dispositivos adquiridos no [Apple Business Manager](https://business.apple.com) ou no Programa de [Inscrição de Dispositivos da Apple](http://deploy.apple.com)
@@ -44,7 +44,7 @@ Antes de inscrever dispositivos iOS/iPadOS com as funcionalidades de inscrição
 
 Usa o portal apple para criar um token de inscrição de dispositivos. Também utiliza os portais para atribuir dispositivos à Intune para gestão.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > iOS > **iOS matricula** do **iOS** > Programa de **Inscrição Tokens** > **Add**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS iOS** > programa de**inscrição** > **Tokens** > **Add**.
 
 2. Conceda permissão à Microsoft para enviar informações sobre o utilizador e o dispositivo à Apple, ao selecionar **Concordo**.
 
@@ -62,12 +62,12 @@ Usa o portal apple para criar um token de inscrição de dispositivos. Também u
 
 6. A caixa de diálogo **Adicionar &lt;NomeDoServidor&gt;** é aberta e pede para **Atualizar a Chave Pública**. Selecione **Escolher Ficheiro…** para carregar o ficheiro .pem e, em seguida, selecione **Seguinte**.
 
-6. Aceda a **Programas de Implementação** > **Programa de Inscrição de Dispositivos** > **Gerir Dispositivos**.
+6. Ir para > programas de **implementação****Programa** > de Inscrição de**Dispositivos Gerir Dispositivos**.
 7. Em **dispositivos escolha**por , escolha **número de série**. <!--ask Tiffany about this-->
 
 8. Em **Selecionar Ação**, selecione **Atribuir ao Servidor**, selecione o &lt;NomeDoServidor&gt; especificado no Microsoft Intune e, em seguida, selecione **OK**. O portal da Apple atribui os dispositivos especificados para o servidor do Intune para gestão e, em seguida, apresenta a mensagem **Atribuição Concluída**.
 
-   No portal da Apple, vá a Programas de **Implementação** &gt; Programa de **Inscrição de Dispositivos** &gt; **ver o Histórico** de Atribuição para ver uma lista de dispositivos e a sua atribuição de servidores MDM.
+   No portal da Apple, aceda a **Programas de Implementação** &gt; **Programa de Inscrição de Dispositivos** &gt; **Ver Histórico de Atribuições** para ver uma lista de dispositivos e a respetiva atribuição de servidores MDM.
 
 9. Para referência futura, em Intune no portal Azure, forneça o APPLE ID usado para criar este símbolo.
 
@@ -80,9 +80,9 @@ Usa o portal apple para criar um token de inscrição de dispositivos. Também u
 ## <a name="create-an-apple-enrollment-profile"></a>Criar um perfil de inscrição da Apple
 Agora que instalou o seu símbolo, pode criar um perfil de inscrição para dispositivos iOS/iPadOS de propriedade corporativa. Um perfil de inscrição de dispositivos especifica as definições aplicadas a um grupo de dispositivos durante a inscrição.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > iOS > **iOS matricula** do **iOS** > **Tokens**do Programa de Inscrição .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **os Dispositivos** > **iOS iOS** > **matriculado** > Programa de**Inscrição Tokens**.
 
-2. Selecione o token que acaba de instalar, escolha **Perfis** > **Criar perfis** > **iOS**.
+2. Selecione o símbolo que acaba de instalar, escolha **Perfis** > **Criar perfil** > **iOS**.
 
 3. Na página **Basics,** introduza *testProfile* para **nome** e *teste ADE para dispositivos iOS/iPadOS* para **Descrição**. Os utilizadores não verão estes detalhes.
 
@@ -120,13 +120,13 @@ Agora que instalou o seu símbolo, pode criar um perfil de inscrição para disp
 
 Depois de configurar um programa de inscrição com o portal ABM, ASM ou ADE e atribuir dispositivos ao servidor MDM, pode esperar que estes dispositivos sincroniem ao serviço Intune ou empurrem manualmente uma sincronização. Sem sincronização manual, os dispositivos podem demorar até 24 horas a aparecer no portal Azure.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > **inscrição do iOS** > Programa de **Inscrição Tokens** > escolha um símbolo na lista > **Dispositivos** > **Sync**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS iOS** > programa de inscrição Do Programa de**Inscrição** > **tokens** > escolha um símbolo na lista > **Devices** > **Sync**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Atribuir um perfil de inscrição aos dispositivos iOS/iPadOS
 
 Tem de atribuir um perfil do programa de inscrição aos dispositivos para poder inscrevê-los. Estes dispositivos estão sincronizados com intune da Apple, e devem ser atribuídos ao token de servidor MDM adequado no portal ABM, ASM ou ADE.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS** > inscrição do **iOS** > Programa de **Inscrição Tokens** > escolha o seu símbolo na lista.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **iOS iOS** > programa de inscrição Do Programa de**Inscrição** > **tokens** > escolha o seu token na lista.
 2. Escolha **Dispositivos** > escolha dispositivos na lista > **Atribuir perfil**.
 3. Em **Atribuir perfil**, escolha um perfil para os dispositivos > **Atribuir**.
 
@@ -134,7 +134,7 @@ Tem de atribuir um perfil do programa de inscrição aos dispositivos para poder
 
 Criou a gestão e a sincronização entre a Apple e a Intune, e atribuiu um perfil para permitir que os seus dispositivos ADE se inscrevam. Agora pode distribuir os dispositivos aos utilizadores. Os dispositivos com afinidade do utilizador necessitam que seja atribuída uma licença do Intune a cada utilizador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Pode encontrar mais informações sobre outras opções disponíveis para a inscrição de dispositivos iOS/iPadOS.
 

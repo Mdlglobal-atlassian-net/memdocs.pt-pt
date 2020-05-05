@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324865"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077806"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Configurar dispositivo iOS ou iPadOS com portal da empresa e DISA Purebred  
 
@@ -36,10 +37,10 @@ Durante a inscrição, também irá instalar uma credencial derivada no seu disp
 * Inscreva-se em apps escolares ou de trabalho, Wi-Fi e redes privadas virtuais (VPN)
 * Assinar e encriptar e-mails escolares ou de trabalho usando certificados S/MIME  
 
-Neste artigo, irá:  
+Neste artigo, vai:  
 
    * Inscreva um dispositivo iOS ou iPadOS móvel com o Intune Company Portal.  
-   * Obtenha uma credencial derivada do fornecedor credencial derivado da sua organização, [DISA Purebred](https://cyber.mil/pki-pke/purebred/).  
+   * Obtenha uma credencial derivada do fornecedor credencial derivado da sua organização, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>O que são credenciais derivadas?  
 Uma credencial derivada é um certificado derivado das credenciais do seu cartão inteligente e instalado no seu dispositivo. Concede-lhe acesso remoto a recursos de trabalho, ao mesmo tempo que impede que utilizadores não autorizados acedam a informações sensíveis.  
@@ -61,13 +62,13 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 
 Também terá de contactar um agente ou representante da Purebred durante a instalação.      
 
-## <a name="enroll-device"></a>Dispositivo de inscrição  
+## <a name="enroll-device"></a>Inscrever o dispositivo  
 1. Abra a aplicação Portal da Empresa para iOS/iPadOS no seu dispositivo móvel e inscreva-se na sua conta de trabalho.  
 
 2. Escreva o código no ecrã.  
 
     ![Imagem de exemplo da aplicação Do Portal da Empresa com mensagem e código no ecrã.](./media/copy-code-intercede.png)  
-3. Mude para o seu dispositivo inteligente ativado pelo cartão e vá para https://microsoft.com/devicelogin. 
+3. Mude para o seu dispositivo inteligente https://microsoft.com/deviceloginativado pelo cartão e vá para . 
 4. Introduza o código que escreveu anteriormente.  
 
     ![Exemplo de screenshot do site do Portal da Empresa "Introduzir código".](./media/enter-code-intercede.png)   
@@ -86,12 +87,12 @@ Também terá de contactar um agente ou representante da Purebred durante a inst
 
     ![Exemplo de screenshot do Portal da Empresa solicita-se a abertura da app DISA Purebred.](./media/open-app-prompt-disa-purbred.png)  
 10. Quando a aplicação funcionar, trabalhe com o agente Purebred da sua organização para configurar e descarregar o perfil de configuração pré-inscrição purebred.   
-11. Aceda à aplicação Definições > Perfis de > **Gerais** **e Gestão** de Dispositivos > **instalar perfil** e toque **na instalação**.  
+11. Aceda à aplicação Definições > Perfis **Gerais** > **& De instalação** > de dispositivos**e** toque **na instalação**.  
 12. Introduza a sua senha de dispositivo.  
 13. Instale o perfil. Pode ser necessário tocar para **instalar** mais de uma vez para iniciar a instalação. 
 14. Volte à aplicação Purebred Registration. Siga as instruções do seu agente Purebred para continuar.  
  
-15. Depois de descarregar o perfil de configuração, aceda à aplicação Definições > **General** > **Perfis e Gestão** de Dispositivos > **Instalar Perfil** e tocar **na Instalação**.   
+15. Depois de descarregar o perfil de configuração, aceda à aplicação Definições > Perfis **Gerais** > & Perfil de**Instalação** de**Dispositivos** > e toque na **instalação**.   
 16.  Introduza a sua senha de dispositivo.
 17. Instale o perfil. Pode ser necessário tocar para **instalar** mais de uma vez para iniciar a instalação. 
 18. Depois de concluída a instalação, volte à aplicação Portal da Empresa.  
@@ -99,28 +100,28 @@ Também terá de contactar um agente ou representante da Purebred durante a inst
 
 20. A partir do ecrã dos **certificados de importação,** você vai recuperar e importar a credencial derivada que obteve da DISA Purebred.  
 
-    a. Toque em **Continuar**.   
+    a. Toque **em Continuar**.   
 
-    ![exemplo de imagem do ecrã de certificados de importação do Portal da Empresa.](./media/import-certificate-disa-purebred.png)  
-    b. Vá ao iCloud Drive **Navegue** > **Localizações** e toque **em Mais Localizações**.  
+    ![Exemplo de screenshot do ecrã de certificados de importação do Portal da Empresa.](./media/import-certificate-disa-purebred.png)  
+    b. Vá ao iCloud Drive **Procurar** > **locais** e toque **em Mais Localizações**.  
 
-    ![Exemplo de imagem do iCloud Drive, menu De navegação destacando a opção Mais Localizações.](./media/icloud-drive-more-locations.png)  
+    ![Exemplo de screenshot do iCloud Drive, menu De navegação destacando a opção Mais Localizações.](./media/icloud-drive-more-locations.png)  
     c. Toque no interruptor para ativar a corrente de **tecla purebred**.  
 
     ![Exemplo de screenshot do iCloud Drive, vista de navegação, realçando que o interruptor purebred Key Chain está ativado.](./media/icloud-drive-enable-purebred-keychain.png)   
 
     d. Toque **no Pacote Credencial Purebred**.  
 
-    ![Screenshot exemplo de um ecrã iOS com uma opção selectível Purebred Credential Package.](./media/purebred-credential-package.png)  
+    ![Exemplo de screenshot de um ecrã iOS com uma opção selectível Purebred Credential Package.](./media/purebred-credential-package.png)  
     f. Aparece uma lista de certificados. Selecione um e, em seguida, toque na **tecla Import**.  
 
     ![Exemplo de screenshot de uma lista de certificados selecionáveis, com um já selecionado.](./media/import-purebred-keychain.png) 
 21. Volte à aplicação Portal da Empresa e aguarde que o Portal da Empresa termine a configuração do seu dispositivo.   
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 Após a inscrição estar concluída, terá acesso a recursos de trabalho, como e-mail, Wi-Fi e quaisquer aplicações que a sua organização disponibilize. Para mais informações sobre como obter, procurar, instalar e desinstalar aplicações no Portal da Empresa ver:
 
 * [Gerir aplicações a partir do site do Portal da Empresa](manage-apps-cpweb.md)  
 * [Utilizar aplicações geridas no dispositivo](use-managed-apps-on-your-device-ios.md)  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

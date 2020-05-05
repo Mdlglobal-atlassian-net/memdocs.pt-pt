@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330257"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077925"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Onde está a minha funcionalidade do Intune no Azure?
-Organizámos algumas tarefas por ordem mais lógica ao mover o Intune para o portal do Azure. Cada melhoria significa ter de conhecer a nova localização das funcionalidades. Criámos este guia de referência para os utilizadores que estão familiarizados com o Intune no portal clássico e que pretendem saber como realizar tarefas do Intune no portal do Azure. Se este artigo não abranger uma funcionalidade que procura, deixe um comentário no final do artigo para o atualizarmos.
+Organizámos algumas tarefas por ordem mais lógica ao mover o Intune para o portal do Azure. Cada melhoria significa ter de conhecer a nova localização das funcionalidades. Criámos este guia de referência para os utilizadores que estão familiarizados com o Intune no portal clássico e que pretendem saber como realizar tarefas do Intune no portal do Azure. Se este artigo não cobrir uma funcionalidade que está a tentar encontrar, deixe um comentário no final do artigo para que possamos atualizá-lo.
 ## <a name="quick-reference-guide"></a>Guia de referência rápida
 
 |Funcionalidade |Caminho no portal clássico|Caminho do Intune no portal do Azure|
@@ -40,7 +40,7 @@ Organizámos algumas tarefas por ordem mais lógica ao mover o Intune para o por
 | Perfil de Inscrição de Dispositivos Empresariais| Política > Inscrição de Dispositivos Empresariais | [Inscrição de dispositivos > Inscrição da Apple > Perfis do Programa de Inscrição](#where-did-corporate-pre-enrolled-devices-go) |
 | Perfil de Inscrição de Dispositivos Empresariais | Política > Inscrição de Dispositivos Empresariais | [Inscrição de dispositivos > Inscrição da Apple > Perfis de AC](#where-did-corporate-pre-enrolled-devices-go) |
 | Android for Work | Administrador > Gestão de Dispositivos Móveis > Android for Work | Inscrição de dispositivos > Inscrição Android |
-| Termos e Condições | Política > Termos e Condições | Inscrição de dispositivos > Termos e Condições |
+| Terms and Conditions | Política > Termos e Condições | Inscrição de dispositivos > Termos e Condições |
 Definições do Portal da Empresa|Admin > Portal da Empresa|**Gerir** > Dispositivos móveis<br> **Configurar** > Imagem corporativa do Portal da Empresa
 
 
@@ -64,7 +64,7 @@ A Restrição de Tipos de Dispositivos predefinida corresponde às Restrições 
 
 ![Imagem das restrições de tipo de dispositivos no Azure](./media/ui-changes/04-azure-platform-restrictions.png)
 
-A capacidade de permitir ou bloquear dispositivos pessoais é agora gerida na secção Configurações de Plataformas das Restrições de Tipos de Dispositivos.
+A capacidade de permitir ou bloquear dispositivos pessoais é agora gerida sob as Configurações da Plataforma da Restrição do Tipo de Dispositivo.
 
 ![Imagem das definições de bloqueio de dispositivos pessoais no Azure](./media/ui-changes/05-azure-personal-block.png)
 
@@ -81,7 +81,7 @@ Após a migração do seu inquilino para o portal do Azure, as políticas de con
 Se quiser ver e fazer alterações às políticas de conformidade a partir do portal do Azure, terá de remover as políticas antigas do portal clássico. Em seguida, deverá criá-las novamente no portal do Azure. Para saber mais sobre as políticas de conformidade de dispositivos, veja [Introdução às políticas de conformidade de dispositivos no Intune](../protect/device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Onde está o DEP da Apple?
-No portal clássico, pode configurar o Intune para se integrar com o Programa de Registo de Aparelho da Apple e pedir a sincronização com o serviço da Apple manualmente:
+No portal clássico, poderá configurar o Intune para integrar o Programa de Inscrição de Dispositivos da Apple e solicitar manualmente a sincronização com o serviço da Apple:
 
 ![Imagem de token DEP clássico](./media/ui-changes/06-classic-dep-token.png)
 
@@ -101,11 +101,11 @@ No portal clássico, pode inscrever dispositivos iOS através do Programa de Reg
 
 São indicados números de série para inscrição através do DEP da Apple e do Apple Configurator numa única lista. Para reduzir a probabilidade de erros de atribuição (perfil de DEP atribuído a um número de série do AC e vice-versa), separámos os números de série em duas listas no portal do Azure:
 
-**Números de série do DEP**
-![Imagem dos números de série do DEP no Azure](./media/ui-changes/10-azure-dep-serials.png)
+**Números**
+![de série de DEP Imagem dos números de série do DeP Azure](./media/ui-changes/10-azure-dep-serials.png)
 
-**Números de série do Apple Configurator**
-![Imagem dos números de série do Apple Configurator no Azure](./media/ui-changes/11-azure-ac-serials.png)
+**Números**
+![de série do Configurador apple Imagem dos números de série do Configurador Azure Apple](./media/ui-changes/11-azure-ac-serials.png)
 
 ### <a name="by-imei-all-platforms"></a>Por IMEI (todas as plataformas)
 
@@ -128,8 +128,8 @@ Esta lista apresenta os perfis para utilização com o Programa de Registo de Ap
 
 Para facilitar a distinção entre os dois tipos de perfil e reduzir potenciais erros de atribuição (perfil de DEP atribuído a dispositivos do Configurator e vice-versa), separámos a criação e gestão dos perfis do Programa de Registo (suportam o Programa de Registo de Aparelho da Apple e o Gestor de Escola da Apple) e os perfis do Apple Configurator:
 
-**Perfis de DEP**
-![Imagem dos perfis de DEP no Azure](./media/ui-changes/15-azure-dep-profiles.png)
+**PERFIS DEP**
+![Imagem dos perfis do DeP Azure](./media/ui-changes/15-azure-dep-profiles.png)
 
-**Perfis do Apple Configurator**
-![Imagem dos perfis do Apple Configurator no Azure](./media/ui-changes/16-azure-ac-profiles.png)
+**Apple Configurator perfis**
+![Imagem dos perfis do Configurator Azure Apple](./media/ui-changes/16-azure-ac-profiles.png)

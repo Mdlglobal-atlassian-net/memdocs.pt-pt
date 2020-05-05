@@ -1,5 +1,5 @@
 ---
-title: Sync devices com Microsoft Intune - Azure  Microsoft Docs
+title: Sync devices com Microsoft Intune - Azure [ Microsoft Docs
 description: Sincronize dispositivos registados ou geridos com o Microsoft Intune para obter as políticas e ações mais recentes. Inclui os passos para sincronizar através do portal do Azure e lista os códigos de erro que podem ser repetidos.
 keywords: ''
 author: ErikjeMS
@@ -16,17 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326232"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077823"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Sincronizar dispositivos para obter as políticas e ações mais recentes com o Intune
 
 
-A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar-se imediatamente com o Intune. Quando um dispositivo dá entrada, recebe imediatamente todas as ações ou políticas pendentes que foram atribuídas ao mesmo. Esta funcionalidade pode ajudá-lo a validar e resolver imediatamente problemas de políticas que atribuiu, sem esperar pela próxima entrada agendada.
+A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar-se imediatamente com o Intune. Quando um dispositivo dá entrada, recebe imediatamente todas as ações ou políticas pendentes que foram atribuídas ao mesmo. Esta funcionalidade pode ajudá-lo a validar imediatamente e a resolver as políticas que atribuiu, sem esperar pelo próximo check-in agendado.
 
 ## <a name="supported-platforms"></a>Plataformas suportadas
 
@@ -43,7 +43,7 @@ A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar
 4. Na lista de dispositivos que gere, selecione um dispositivo para abrir o seu painel de *visão geral* e, em seguida, selecione **Sync**.
 5. Para confirmar, selecione **Sim**.
 
-Para ver o estado da ação de sincronização, escolha **dispositivos** > **monitorizar** > **as ações**do Dispositivo .
+Para ver o estado da ação de sincronização, escolha**as ações**do Dispositivo**de Monitorização** > de **Dispositivos** > .
 
 Pode encontrar frequências padrão de check-in política Intune nos [tempos](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)do ciclo Refresh .
 
@@ -66,7 +66,7 @@ Quando um administrador executa a ação do dispositivo **Sync,** as aplicaçõe
 | 2016330889 | A ligação segura falhou. Reinicie a sua ligação. | Sim|
 | 2016330888 | A avaliação da fidedignidade do servidor falhou. | Não|
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Pode [verificar os detalhes](device-inventory.md) do dispositivo.
  

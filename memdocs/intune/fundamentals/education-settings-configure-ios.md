@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326877"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076123"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Como configurar as definições intune para a aplicação iOS/iPadOS Classroom
 
@@ -37,7 +37,7 @@ A [Sala de Aula](https://itunes.apple.com/app/id1085319084) é uma aplicação q
 - Bloquear e desbloquear o ecrã do iPad
 - Ver o ecrã do iPad de um estudante
 - Navegar nos iPads dos estudantes para abrir um marcador ou um capítulo de um livro
-- Apresentar o ecrã do iPad de um estudante numa Apple TV
+- Apresentar o ecrã do iPad de um aluno numa Apple TV
 
 Para configurar a Sala de Aula no seu dispositivo, terá de criar e configurar um perfil de dispositivo de educação intune iOS/iPadOS.
 
@@ -46,7 +46,7 @@ Para configurar a Sala de Aula no seu dispositivo, terá de criar e configurar u
 Antes de começar a configurar estas definições, tenha em atenção o seguinte:
 
 - Os iPads dos professores e dos estudantes têm de estar inscritos no Intune.
-- Confirme que a aplicação [Sala de Aula da Apple](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) está instalada no dispositivo do professor. Pode instalar a aplicação manualmente ou com a [gestão de aplicações do Intune](../apps/app-management.md).
+- Certifique-se de que instalou a aplicação [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) no dispositivo do professor. Pode instalar a aplicação manualmente ou com a [gestão de aplicações do Intune](../apps/app-management.md).
 - É necessário configurar certificados para autenticar ligações entre dispositivos de professor e aluno (ver Passo 2, Criar e atribuir um perfil de educação iOS/iPadOS em Intune).
 - Os iPads do professor e dos estudantes têm de estar na mesma rede Wi-Fi e ter o Bluetooth ativado.
 - A aplicação Classroom funciona em iPads supervisionados que executam iOS/iPadOS 9.3 ou posteriormente.
@@ -78,18 +78,18 @@ Pode importar informações para o SDS através de um dos seguintes métodos:
 
 1. Inscreva-se em [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. No painel **Intune**, selecione **Configuração do dispositivo**.
-2. No painel **Configuração do dispositivo** na secção **Gerir**, selecione **Perfis**.
-5. No painel de perfis, selecione **Criar perfil**.
+2. No painel **Configuração do dispositivo**, na secção **Gerir**, selecione **Perfis**.
+5. No painel Perfis, selecione **Criar perfil**.
 6. No painel de **perfil Criar,** insira um **Nome** e **Descrição** para o perfil de educação iOS/iPadOS.
 7. Na lista pendente **Plataforma**, selecione **iOS**.
 8. Na lista pendente **Tipo de perfil**, escolha **Educação**.
-9. Escolha **Definições** > **Configurar**.
+9. Escolha**configurar** **definições** > .
 
 
 Na secção seguinte, vai criar certificados para estabelecer uma relação de confiança entre os iPads do professor e dos estudantes. Os certificados são utilizados para autenticar de forma silenciosa e sem problemas as ligações entre os dispositivos, sem ter de introduzir os nomes de utilizador nem palavras-passe.
 
 >[!IMPORTANT]
->Os certificados de professor e estudante que utiliza têm de ser emitidos por autoridades de certificação (ACs) diferentes. Tem de criar duas ACs subordinadas novas ligadas à sua infraestrutura de certificados existente; uma para os professores e outra para os alunos.
+>Os certificados de professor e estudante que utiliza têm de ser emitidos por autoridades de certificação (ACs) diferentes. Tem de criar duas ACs subordinadas novas ligadas à sua infraestrutura de certificados existente; uma para os professores e outra para os estudantes.
 
 Os perfis de educação do iOS só suportam certificados PFX. Os certificados SCEP não são suportados.
 
@@ -109,10 +109,10 @@ Em **Certificado de raiz do professor**, escolha o botão Procurar. Selecione o 
 
 Em **Certificado do professor PKCS#12**, configure os seguintes valores:
 
-- **Formato do nome do requerente** – o Intune atribui automaticamente prefixos a nomes comuns para os certificados dos professores com **líder**. Os nomes comuns para certificados de Estudantes têm o prefixo **membro**.
+- **Formato de nome** do assunto - Insere automaticamente os nomes comuns para os certificados de professor com **o líder**. Os nomes comuns para certificados de Estudantes têm o prefixo **membro**.
 - **Autoridade de certificação** – uma Autoridade de Certificação (AC) Empresarial que é executada numa edição Enterprise do Windows Server 2008 R2 ou posterior. Não é suportada uma AC Autónoma. 
 - **Nome da autoridade de certificação** – introduza o nome da autoridade de certificação.
-- **Nome do modelo de certificado** – introduza o nome de um modelo de certificado que tenha sido adicionado a uma AC emissora. 
+- **Nome** do modelo do certificado - Introduza o nome de um modelo de certificado que tenha sido adicionado a um CA emissor. 
 - **Limiar de renovação (%)** – Especifique a percentagem da duração do certificado antes de o dispositivo pedir a renovação do certificado.
 - **Período de validade do certificado** – especifique o tempo restante até o certificado expirar.
 Pode especificar um valor inferior ao período de validade do modelo de certificado especificado, mas não superior. Por exemplo, se o período de validade do certificado no modelo de certificado for dois anos, pode especificar um valor de um ano, mas não um valor de cinco anos. O valor também tem de ser inferior ao período de validade restante do certificado da AC emissora.
@@ -134,10 +134,10 @@ Em **Certificado de raiz do estudante**, escolha o botão Procurar. Selecione o 
 
 Em **Certificado PKCS#12 do estudante**, configure os seguintes valores:
 
-- **Formato do nome do requerente** – o Intune atribui automaticamente prefixos a nomes comuns para os certificados dos professores com **líder**. Os nomes comuns para certificados de Estudantes têm o prefixo **membro**.
+- **Formato de nome** do assunto - Insere automaticamente os nomes comuns para os certificados de professor com **o líder**. Os nomes comuns para certificados de Estudantes têm o prefixo **membro**.
 - **Autoridade de certificação** – uma Autoridade de Certificação (AC) Empresarial que é executada numa edição Enterprise do Windows Server 2008 R2 ou posterior. Não é suportada uma AC Autónoma. 
 - **Nome da autoridade de certificação** – introduza o nome da autoridade de certificação.
-- **Nome do modelo de certificado** – introduza o nome de um modelo de certificado que tenha sido adicionado a uma AC emissora. 
+- **Nome** do modelo do certificado - Introduza o nome de um modelo de certificado que tenha sido adicionado a um CA emissor. 
 - **Limiar de renovação (%)** – Especifique a percentagem da duração do certificado antes de o dispositivo pedir a renovação do certificado.
 - **Período de validade do certificado** – especifique o tempo restante até o certificado expirar.
 Pode especificar um valor inferior ao período de validade do modelo de certificado especificado, mas não superior. Por exemplo, se o período de validade do certificado no modelo de certificado for dois anos, pode especificar um valor de um ano, mas não um valor de cinco anos. O valor também tem de ser inferior ao período de validade restante do certificado da AC emissora.
@@ -149,11 +149,11 @@ Quando concluir a configuração dos certificados, escolha **OK**.
 1. No painel **Educação**, selecione OK.
 2. No painel **Criar perfil**, selecione **Criar**.
 
-O perfil será criado e apresentado no painel Lista de perfis.
+O perfil é criado e apresentado no painel da lista de perfis.
 
-Atribua o perfil aos dispositivos dos alunos nos grupos de sala de aula que foram criados quando sincronizou os dados escolares com o Azure AD (veja [Como atribuir perfis de dispositivo](../configuration/device-profile-assign.md).
+Atribua o perfil aos dispositivos dos estudantes nos grupos de sala de aula que foram criados quando sincronizou os dados escolares com o Azure AD (veja [Como atribuir perfis de dispositivo](../configuration/device-profile-assign.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Agora, quando os professores utilizarem a aplicação Classroom, terão controlo total sobre os dispositivos dos estudantes.
 

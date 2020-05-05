@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23594bd1e728e20deba6d978fc2a1f678d692ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333137"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078265"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorizar perfis de dispositivos no Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune inclui algumas funcionalidades para ajudar a monitorizar e gerir os perfi
 ## <a name="view-existing-profiles"></a>Ver perfis existentes
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > perfis de **configuração**.
+2. Selecione perfis de**configuração**de **dispositivos** > .
 
 Todos os perfis existentes estão listados e incluem detalhes como a plataforma e se o perfil está atribuído a algum dispositivo.
 
@@ -42,7 +42,7 @@ Todos os perfis existentes estão listados e incluem detalhes como a plataforma 
 Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes gráficos apresentam o estado de um perfil, como a atribuição com êxito a dispositivos ou se o perfil mostra um conflito.
 
 1. Selecione um perfil existente. Por exemplo, selecione um perfil do macOS.
-2. Selecione o separador **Descrição geral**.
+2. Selecione o separador **Descrição Geral**.
 
     O gráfico gráfico superior mostra o número de dispositivos atribuídos ao perfil do dispositivo. Por exemplo, se o perfil de configuração do dispositivo se aplicar a dispositivos iOS, o gráfico apresentará a contagem de dispositivos macOS.
 
@@ -56,7 +56,7 @@ Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes
 
     São listados os dispositivos atribuídos ao perfil, além de indicar se o perfil foi implementado com êxito. Note também que apenas lista os dispositivos com a plataforma específica (por exemplo, macOS).
 
-    Feche os detalhes do **Estado do dispositivo**.
+    Feche os detalhes do estado do **Dispositivo.**
 
 4. Selecione o círculo no gráfico na parte inferior. O **Estado do utilizador** é apresentado. 
 
@@ -73,9 +73,9 @@ Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes
 
 ## <a name="view-conflicts"></a>Ver os conflitos
 
-Em **Dispositivos** > **Todos os dispositivos**, pode ver se existem definições que estejam a causar conflitos. Quando há um conflito, você também vê todos os perfis de configuração que contêm esta configuração. Os administradores podem utilizar esta funcionalidade para ajudar a resolver problemas e corrigir discrepâncias com os perfis.
+Em **Dispositivos** > **Todos os dispositivos,** pode ver quaisquer configurações que estejam a causar um conflito. Quando há um conflito, você também vê todos os perfis de configuração que contêm esta configuração. Os administradores podem utilizar esta funcionalidade para ajudar a resolver problemas e corrigir discrepâncias com os perfis.
 
-1. No Intune, selecione **Dispositivos** > **Todos os dispositivos** e selecione um dispositivo existente na lista. Um utilizador final pode obter o nome do dispositivo a partir da aplicação Portal da Empresa.
+1. Em Intune, selecione Todos os **dispositivos** > **All Devices** > selecione um dispositivo existente na lista. Um utilizador final pode obter o nome do dispositivo a partir da aplicação Portal da Empresa.
 2. Selecione **Configuração do dispositivo**. É apresentada uma lista de todas as políticas de configuração que se aplicam ao dispositivo.
 3. Selecione a política. São apresentadas todas as definições existentes nessa política que se aplicam ao dispositivo. Se um dispositivo apresentar o estado **Conflito**, selecione essa linha. Na nova janela, pode ver todos os perfis e os nomes dos perfis que têm a definição a causar o conflito.
 
@@ -108,7 +108,7 @@ Com as definições de perfil dFCI, pode ver os seguintes estados:
   - O dispositivo foi matriculado em Intune fora da matrícula do Piloto Automático.
   - O dispositivo não foi registado em Autopilot por um CSP da Microsoft, nem registado diretamente pelo OEM.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Questões comuns, questões e resoluções com perfis de dispositivos](device-profile-troubleshoot.md)  
 [Políticas e perfis de resolução de problemas e em Intune](troubleshoot-policies-in-microsoft-intune.md)

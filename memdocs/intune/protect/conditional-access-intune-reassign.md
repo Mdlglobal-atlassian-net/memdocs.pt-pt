@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329529"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079812"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Reatribuir políticas de acesso condicional do portal clássico Intune para o portal Azure
 
@@ -86,7 +86,7 @@ O painel **Proteção de Aplicações do Intune** no portal do Azure permite que
     ![Imagem que compara o grupo de utilizadores UI entre os portais Intune e Azure](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > A seleção que fizer no portal do Azure deve corresponder à seleção feita no portal clássico. Por exemplo, se tiver selecionado todos os utilizadores no portal clássico do Intune, selecione **Todos os utilizadores** no portal do Azure. Além disso, se tiver selecionado a opção **Grupos isentos** no portal clássico do Intune, tem de excluir esses grupos selecionados no portal do Azure.
+    > A seleção que fizer no portal do Azure deve corresponder à seleção feita no portal clássico. Por exemplo, se tiver selecionado todos os utilizadores no portal clássico do Intune, selecione **Todos os utilizadores** no portal do Azure. Além disso, se escolheu a opção de **grupos isentos** no portal clássico Intune, também exclua os grupos selecionados no portal Azure.
 
 5. Após escolher o seu grupo, clique em **Selecionar** e, em seguida, clique em **Concluído**.
 
@@ -96,7 +96,7 @@ O painel **Proteção de Aplicações do Intune** no portal do Azure permite que
 
 8. Escolha a aplicação a que pretende aplicar a nova política de Acesso Condicional e clique em **Select**.
 
-9. Clique em **Concluir**.
+9. Clique em **Concluído**.
 
     ![Imagem de uma comparação de UI da aplicação em nuvem entre os portais Intune e Azure](./media/conditional-access-intune-reassign/reassign-ca-3.png)
 
@@ -154,7 +154,7 @@ Se configurar as definições do Exchange ActiveSync como parte de uma política
     ![Imagem mostrando uma comparação de UI do grupo de utilizadores entre os portais Azure e Intune](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > A seleção que fizer no portal do Azure deve corresponder à seleção feita no portal do Intune. Por exemplo, se tiver selecionado todos os utilizadores no portal clássico do Intune, selecione **Todos os utilizadores** no portal do Azure. Além disso, se tiver selecionado a opção **Grupos isentos** no portal clássico do Intune, tem de excluir esses grupos selecionados no portal do Azure.
+    > A seleção que fizer no portal do Azure deve corresponder à seleção feita no portal do Intune. Por exemplo, se tiver selecionado todos os utilizadores no portal clássico do Intune, selecione **Todos os utilizadores** no portal do Azure. Além disso, se escolheu a opção de **grupos isentos** no portal clássico Intune, também exclua os grupos selecionados no portal Azure.
 
 5. Após escolher o seu grupo, clique em **Selecionar** e, em seguida, clique em **Concluído**.
 
@@ -167,7 +167,7 @@ Se configurar as definições do Exchange ActiveSync como parte de uma política
     > [!IMPORTANT] 
     > As políticas de acesso condicional para clientes EAS não podem incluir outras aplicações na cloud.
 
-8. No painel **Condições**, selecione **Aplicações cliente** e, em seguida, selecione a aplicação cliente aplicável. Se tiver optado por bloquear clientes que não sejam suportados pelo Intune, utilize a opção **Aplicar política apenas a plataformas suportadas**.
+8. No painel **Condições**, selecione **Aplicações cliente** e, em seguida, selecione a aplicação cliente aplicável. Se optou por bloquear clientes que não são suportados pela Intune, utilize a **política de Aplicação apenas para a** opção de plataformas suportadas.
 
     ![Imagem mostrando uma comparação de aplicativos de cliente UI entre os portais Azure e Intune](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 
@@ -199,8 +199,8 @@ Desde que o MDM foi removido do Portal Clássico Intune, foi fornecido o seguint
 
 [https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies](https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Formas comuns de usar o Acesso Condicional com Intune](conditional-access-intune-common-ways-use.md)
 - [acesso condicional baseado em aplicativos com Intune](app-based-conditional-access-intune.md)
-- [Acesso Condicional no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Acesso Condicional no Diretório Ativo Azure](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

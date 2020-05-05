@@ -1,6 +1,6 @@
 ---
-title: Definições de dispositivos do Windows Holographic Business – Microsoft Intune – Azure | Documentos da Microsoft
-description: Leia e configure as definições de restrição de dispositivos no Microsoft Intune para Windows Holographic for Business, incluindo não-inscrição, geolocalização, palavras-passe, instalar aplicações a partir de app store, cookies e pop ups no Microsoft Edge, Microsoft Defender, search, nuvem e armazenamento, conectividade bluetooth, tempo do sistema e dados de utilização em Azure.
+title: Definições de dispositivos Holográficos do Windows Business - Microsoft Intune - Azure [ Microsoft Docs
+description: Leia e configure as definições de restrição de dispositivos no Microsoft Intune para Windows Holographic for Business, incluindo não-inscrição, geolocalização, palavras-passe, instalar aplicações a partir de app store, cookies e pop ups no Microsoft Edge, Microsoft Defender, pesquisa, nuvem e armazenamento, conectividade bluetooth, tempo do sistema e dados de utilização no Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 837e7b5ccbeeae0664095619bf8703fa5cf422c6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332261"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078231"
 ---
-# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business definições do dispositivo para permitir ou restringir funcionalidades com o Intune
+# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business device definições para permitir ou restringir funcionalidades usando Intune
 
 
 
-Este artigo apresenta e descreve as diferentes definições que pode controlar o Windows Holographic for Business no dispositivos, como o Microsoft Hololens. Como parte da sua solução de gestão (MDM) de dispositivos móveis, utilize estas definições para permitir ou desativar funcionalidades, o controlo de segurança e muito mais.
+Este artigo lista e descreve as diferentes definições que pode controlar no Windows Holographic para dispositivos Empresariais, como o Microsoft Hololens. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para permitir ou desativar funcionalidades, segurança de controlo e muito mais.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -61,7 +61,7 @@ Criar um perfil de [configuração do dispositivo](device-restrictions-configure
 
 - **SmartScreen para Microsoft Edge**: Ative o Microsoft Edge SmartScreen para aceder ao site e aos downloads de ficheiros.
 
-## <a name="search"></a>Procura
+## <a name="search"></a>Pesquisa
 
 - **Procurar localização** – especifica se a pesquisa pode utilizar informações de localização. informações
 
@@ -89,7 +89,7 @@ Normalmente, um dispositivo de quiosque executa uma aplicação específica. Os 
 
   - **Não configurado** (predefinição): a política não ativa um modo de quiosque. 
   - Quiosque de **aplicações únicas**: O perfil permite que o dispositivo execute apenas uma aplicação. Quando um utilizador inicia sessão, uma aplicação específica é iniciada. Este modo também impede que o utilizador abra novas aplicações ou mude a aplicação em execução.
-  - **Quiosque multi-aplicativos**: O perfil permite que o dispositivo execute várias aplicações. Apenas as aplicações que adicionar estão disponíveis para o utilizador. A vantagem de um quiosque de várias aplicações ou dispositivos de objetivo fixo é o facto de proporcionar uma experiência fácil de compreender pelos utilizadores através do acesso às aplicações de que precisam. Além disso, permite que os utilizadores ocultem as aplicações de que não precisam. 
+  - **Quiosque multi-aplicativos**: O perfil permite que o dispositivo execute várias aplicações. Apenas as aplicações que adicionar estão disponíveis para o utilizador. A vantagem de um quiosque de várias aplicações ou dispositivos de objetivo fixo é o facto de proporcionar uma experiência fácil de compreender pelos utilizadores através do acesso às aplicações de que precisam. E, removendo as aplicações de que não precisam da sua visão. 
   
     Ao adicionar aplicações a uma experiência de quiosque de várias aplicações, também adiciona um ficheiro de esquema do menu Iniciar. O [ficheiro de esquema do menu Iniciar](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) inclui um XML de exemplo que pode ser utilizado no Intune. 
 
@@ -107,6 +107,6 @@ Introduza as seguintes definições:
 
 - **Partilhar dados de utilização**: Selecione o nível de submissão de dados de diagnóstico.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).

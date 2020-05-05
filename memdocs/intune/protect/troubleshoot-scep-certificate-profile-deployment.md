@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326614"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079098"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Implementação de um perfil de certificado SCEP para dispositivos no Microsoft Intune
 
@@ -102,13 +102,13 @@ Para validar o perfil foi enviado para o dispositivo que espera, no centro de ad
 
 ### <a name="validate-the-policy-reached-the-windows-device"></a>Validar a política chegou ao dispositivo Windows
 
-A chegada da política para o perfil está registada no registo de * > * **Admin** de um dispositivo Windows, com um id de evento **306**. 
+A chegada da política para o perfil está registada no registo de**administração** de administrador de um dispositivo Windows *Management-Enterprise-Diagnostics-Provider,* > com um ID de evento **306**. 
 
 Para abrir o tronco:
 
 1. No dispositivo, execute **eventvwr.msc** para abrir o Windows Event Viewer.
 
-2. Expandir registos de **aplicações e serviços** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
+2. Expandir **aplicações e serviços Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
 
 3. Procure o Evento **306,** que se assemelha ao seguinte exemplo:
 
@@ -126,6 +126,6 @@ Para abrir o tronco:
 
    Um código de erro não bem sucedido pode fornecer indicação do problema subjacente.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Se o perfil chegar ao dispositivo, o próximo passo é rever o dispositivo para a comunicação do [servidor NDES](troubleshoot-scep-certificate-device-to-ndes.md).

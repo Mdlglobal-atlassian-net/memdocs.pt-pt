@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80525196"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079591"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrar a Defesa de Ameaças Móveis do Pradeo com Intune
 
@@ -32,7 +32,7 @@ Tem de realizar os passos seguintes para integrar a solução de Defesa Contra A
 ## <a name="before-you-begin"></a>Antes de começar
 
 > [!NOTE]
-> Os seguintes passos devem ser realizados na [consola do Pradeo Security](https://www.apps-security.com).
+> Os seguintes passos devem ser realizados na [consola do Pradeo Security](https://pradeo-security.com/).
 
 Antes de iniciar o processo de integração do Pradeo com o Intune, certifique-se de que tem os seguintes elementos:
 
@@ -44,7 +44,7 @@ Antes de iniciar o processo de integração do Pradeo com o Intune, certifique-s
 
   - Aceder ao diretório como o utilizador com sessão iniciada
 
-  - Ler dados do diretório
+  - Ler os dados do diretório
 
   - Enviar informações do dispositivo para o Intune
 
@@ -56,7 +56,7 @@ O processo de autorização da aplicação Pradeo consiste no seguinte:
 
 - Permitir que o serviço do Pradeo transmita informações relacionadas com o estado de funcionamento do dispositivo ao Intune.
 
-- O Pradeo sincroniza com a associação do Grupo de Inscrição do Azure AD para preencher a respetiva base de dados do dispositivo.
+- Pradeo sincroniza com a filiação do Grupo de Inscrição Da Azure AD para preencher a base de dados do seu dispositivo.
 
 - Permitir que a consola de administração do Pradeo utilize o Início de Sessão Único (SSO) do Azure AD.
 
@@ -88,6 +88,6 @@ O processo de autorização da aplicação Pradeo consiste no seguinte:
 
 11. Quando a mensagem **Integração Bem-sucedida** for apresentada, significa que a integração foi concluída.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Configurar aplicativos Pradeo para dispositivos matriculados](mtd-apps-ios-app-configuration-policy-add-assign.md)

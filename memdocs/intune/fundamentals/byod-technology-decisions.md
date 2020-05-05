@@ -15,18 +15,18 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bc28f1b5170fb955f8614f098a46ed0c66a9f3a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326953"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079285"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Decisões tecnológicas para ativar o BYOD com o Microsoft Enterprise Mobility + Security
 
 Ao desenvolver a sua estratégia para permitir que os funcionários trabalhem remotamente a partir dos respetivos dispositivos (BYOD), precisará de tomar decisões chave nos cenários de ativação do BYOD e proteção os seus dados empresariais. Felizmente, o EMS oferece todas as funcionalidades necessárias num conjunto completo de soluções.  
 
-Neste tópico, examinamos o caso simples de utilização da permissão de acesso BYOD ao e-mail empresarial. Vamos concentrar-nos na necessidade de gerir todo um dispositivo ou apenas as aplicações, sendo que ambas as opções são válidas.
+Neste tópico, examinamos o caso simples de utilização da permissão de acesso BYOD ao e-mail empresarial. Vamos focar-nos em saber se precisa ou não de gerir todo o dispositivo ou apenas das aplicações, ambas são escolhas completamente válidas.
 
 ## <a name="assumptions"></a>Pressupostos
 * Tem conhecimentos básicos sobre o Azure Active Directory e o Microsoft Intune
@@ -60,7 +60,7 @@ Como já referido, o Acesso Condicional pode levar um utilizador a inscrever o s
 * Nível de risco de início de sessão
 * Plataforma de dispositivo
 
-Ainda assim, muitas organizações continuam frequentemente preocupadas com riscos específicos.  A tabela abaixo lista as preocupações mais comuns e as respostas da MDM e da MAM para essas preocupações.
+Ainda assim, muitas organizações têm frequentemente riscos específicos com os que se preocupam.  A tabela abaixo lista as preocupações mais comuns e as respostas da MDM e da MAM para essas preocupações.
 
 | Preocupação   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -68,7 +68,7 @@ Ainda assim, muitas organizações continuam frequentemente preocupadas com risc
 |Acesso a dados não autorizado | Exigir a inscrição de dispositivos | Exigir aplicação protegida |
 |Acesso a dados não autorizado | Exigir localização específica | Exigir localização específica |
 | | | |
-|Conta de utilizador comprometida| Exigir MFA | Exigir MFA|
+|Conta de utilizador comprometida| Requerer MFA | Requerer MFA|
 |Conta de utilizador comprometida | Bloquear utilizadores de alto risco | Bloquear utilizadores de alto risco |
 |Conta de utilizador comprometida | PIN do dispositivo | PIN da aplicação |
 | | | |
@@ -81,7 +81,7 @@ Ainda assim, muitas organizações continuam frequentemente preocupadas com risc
 | Dados guardados em localizações não protegidas ou partilhados acidentalmente | Restringir a opção Guardar Como | Restringir a opção Guardar Como |
 |Dados guardados em localizações não protegidas ou partilhados acidentalmente | Desativar a impressão | n/d|
 
-## <a name="next-steps"></a>Próximos passos
-Está na altura de decidir se irá ativar o BYOD na sua organização com a gestão de dispositivos, a gestão de aplicações ou uma combinação de ambas. A escolha de implementação é sua, mas seja qual for a sua opção, pode ter sempre a certeza de que as funcionalidades de identidade e segurança do Azure AD estarão disponíveis.  
+## <a name="next-steps"></a>Passos seguintes
+Agora é hora de decidir se vai ativar o BYOD na sua organização, focando-se na gestão de dispositivos, gestão de aplicações ou uma combinação dos dois. A escolha de implementação é sua, mas seja qual for a sua opção, pode ter sempre a certeza de que as funcionalidades de identidade e segurança do Azure AD estarão disponíveis.  
 
 Utilize o [Guia de Planeamento](planning-guide.md) do Intune para mapear o seu próximo nível de planeamento.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323829"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078401"
 ---
 # <a name="intune-discovered-apps"></a>Intune aplicativos descobertos
 
@@ -52,11 +52,11 @@ Intune também fornece a lista de aplicativos descobertos para o dispositivo ind
 
 A lista que se segue fornece o tipo de plataforma de aplicações, as aplicações que são monitorizadas para dispositivos pessoais, as aplicações que são monitorizadas para dispositivos da empresa e o ciclo de atualização. Para obter mais informações sobre os tipos de aplicações suportados pela Intune, consulte os tipos de [aplicações no Microsoft Intune](apps-add.md#app-types-in-microsoft-intune).
 
-| Platform | Para dispositivos pessoais | Para dispositivos pertencentes à empresa | Ciclo de atualização |
+| Plataforma | Para dispositivos pessoais | Para dispositivos pertencentes à empresa | Ciclo de atualização |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Aplicações Win32) NOTA: Requer extensão de [gestão intune](intune-management-extension.md) no dispositivo | Não Aplicável | Apenas aplicações geridas | A cada 24 horas da inscrição do dispositivo |
+| Windows 10 (Aplicações Win32) NOTA: Requer extensão de [gestão intune](intune-management-extension.md) no dispositivo | Não Aplicável | Todas as aplicações instaladas no dispositivo | A cada 24 horas da inscrição do dispositivo |
 | Windows 10 (Aplicações Modernas) | Apenas aplicações modernas geridas | Todas as aplicações modernas instaladas no dispositivo | A cada 7 dias da inscrição do dispositivo |
-| Windows 8,1 | Apenas aplicações geridas | Apenas aplicações geridas | A cada 7 dias da inscrição do dispositivo |
+| Windows 8.1 | Apenas aplicações geridas | Apenas aplicações geridas | A cada 7 dias da inscrição do dispositivo |
 | Windows Phone 8 | Apenas aplicações geridas | Apenas aplicações geridas | A cada 7 dias da inscrição do dispositivo |
 | Windows RT | Apenas aplicações geridas | Apenas aplicações geridas | A cada 7 dias da inscrição do dispositivo |
 | iOS/iPadOS | Apenas aplicações geridas | Todas as aplicações instaladas no dispositivo | A cada 7 dias da inscrição do dispositivo |
@@ -75,7 +75,7 @@ O número de aplicações detetadas pode não corresponder à contagem de estado
 - Abranger múltiplas instâncias da mesma aplicação num inquilino irá resultar em contagens diferentes, devido à potencial sobreposição de utilizadores ou dispositivos. Cada instância da aplicação irá contabilizar os utilizadores sobrepostos, mas as aplicações detetadas apresentarão contagens duplicadas.
 - As aplicações detetadas e o estado da aplicação são recolhidos em intervalos de tempo diferentes, o que pode provocar uma discrepância nas contagens de aplicações.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Tipos de aplicativos no Microsoft Intune](apps-add.md#app-types-in-microsoft-intune)
-- [Monitorize informações e atribuições de aplicativos com o Microsoft Intune](apps-monitor.md)
+- [Tipos de aplicações no Microsoft Intune](apps-add.md#app-types-in-microsoft-intune)
+- [Monitorizar informações e atribuições da aplicação com o Microsoft Intune](apps-monitor.md)

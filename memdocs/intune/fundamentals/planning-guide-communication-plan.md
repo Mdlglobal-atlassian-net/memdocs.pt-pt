@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8c3c2719759180fb4b367d46e45a314995b6f425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331073"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079251"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Desenvolver um plano de comunicação de implementação
 
@@ -37,11 +37,11 @@ Uma boa gestão da mudança depende de comunicações claras e úteis sobre as a
 
 - A linha cronológica das comunicações
 
-Vamos então rever cada área de forma mais detalhada.
+Vamos rever cada área mais detalhadamente.
 
 ## <a name="what-needs-to-be-communicated"></a>O que precisa de ser comunicado?
 
-A determinação das informações que serão comunicadas depende do momento em que a comunicação ocorrerá durante o processo de implementação do Intune. Pode optar por comunicar de forma faseada com os seus utilizadores e grupos organizacionais. Pode, por exemplo, começar por uma fase inicial de implementação do Intune, seguida pela fase de pré-inscrição e pela pós-inscrição. Vamos agora abordar os tipos de informação que podem ser comunicados em cada fase.
+A determinação das informações que serão comunicadas depende do momento em que a comunicação ocorrerá durante o processo de implementação do Intune. Pode optar por comunicar de forma faseada com os seus utilizadores e grupos organizacionais. Pode, por exemplo, começar por uma fase inicial de implementação do Intune, seguida pela fase de pré-inscrição e pela pós-inscrição. Vamos discutir o tipo de informação que pode ser comunicada em cada onda.
 
 **Fase inicial** <br/>Comunicações gerais que apresentam o projeto do Intune. Deve responder a perguntas como o que é o Intune, por que motivo é que a organização está a adotar o Intune (vantagens para a organização e utilizadores) e fornecer um plano de alto nível da implementação.
 
@@ -73,15 +73,15 @@ Por exemplo, as comunicações da fase inicial do projeto Intune podem destinar-
 
   | **Plano de comunicação** | **Julho** | **Agosto** | **Setembro** | **Outubro** |
 |:---:|:---:|:---:|:---:|:---:|
-| Fase 1  | Todas |  |  |  |
+| Fase 1  | Todos |  |  |  |
 | Reunião inicial | Primeira semana |  |  |  |
-| Fase 2 | TI | Departamento de Vendas e Marketing | Revenda | RH, Finanças e Executivos |
+| Fase 2 | TI | Vendas e Marketing | Retalho | RH, Finanças e Executivos |
 | Primeiro E-mail Relativo à Pré-inscrição | Primeira semana | Primeira semana | Primeira semana | Primeira semana |
-| Fase 3 | TI | Departamento de Vendas e Marketing | Revenda | RH, Finanças e Executivos |
+| Fase 3 | TI | Vendas e Marketing | Retalho | RH, Finanças e Executivos |
 | Segundo E-mail Relativo à Pré-inscrição | Segunda semana | Segunda semana | Segunda semana | Segunda semana |
-| Fase 4 | TI | Departamento de Vendas e Marketing | Revenda | RH, Finanças e Executivos |
+| Fase 4 | TI | Vendas e Marketing | Retalho | RH, Finanças e Executivos |
 | E-mail relativo à inscrição | Terceira semana | Terceira semana | Terceira semana | Terceira semana |
-| Fase 5 | TI | Departamento de Vendas e Marketing | Revenda | RH, Finanças e Executivos |
+| Fase 5 | TI | Vendas e Marketing | Retalho | RH, Finanças e Executivos |
 | E-mail relativo à pós-inscrição | Quarta semana | Quarta semana | Quarta semana | Quarta semana |
 
 Pode [transferir um modelo da tabela acima](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) para desenvolver o seu plano de comunicação.

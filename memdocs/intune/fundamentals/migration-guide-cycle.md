@@ -17,18 +17,18 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331213"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075953"
 ---
 # <a name="typical-migration-cycle"></a>Ciclo de migração típico
 
-É comum uma organização iniciar a migração do Intune com um pequeno piloto ao filtrar um subconjunto dos utilizadores no departamento de TI. Além disso, a sua organização poderá ter de debater fatores como a vontade de mudança do grupo, o número de utilizadores, a complexidade, os requisitos, a localização e o risco comercial para ajudar a determinar o intervalo de tempo da migração.
+É comum uma organização iniciar a sua migração intune com um pequeno piloto, direcionando um subconjunto dos seus utilizadores no departamento de TI. Além disso, a sua organização poderá ter de discutir fatores como a vontade do grupo de mudança, número de utilizadores, complexidade, requisitos, localização e risco de negócio para ajudar na determinação do prazo de migração.
 
-Veja a seguir um exemplo de como os seus grupos de destino podem ser agendados:
+Aqui está um exemplo de como os seus grupos-alvo podem ser agendados:
 
   | **Grupos de destino da migração** | **Período de tempo 1** | **Período de tempo 2** | **Período de tempo 3** | **Período de tempo 4** | **...**
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -63,4 +63,4 @@ Controle o número de utilizadores que têm dispositivos inscritos depois de cad
 
 ## <a name="post-migration"></a>Pós-migração
 
-Extinga o fornecedor de MDM anterior e anule a subscrição do serviço após a migração para o Intune. Além disso, remova todos os requisitos de infraestrutura desnecessários ao seguir as instruções do fornecedor de MDM.
+Extinga o fornecedor de MDM anterior e anule a subscrição do serviço após a migração para o Intune. Além disso, remova quaisquer requisitos de infraestrutura desnecessários seguindo as instruções do fornecedor do MDM.

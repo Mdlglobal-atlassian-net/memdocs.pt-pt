@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324049"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079642"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Instalar o Symantec Endpoint Protection Mobile no seu dispositivo Android
 
@@ -36,11 +36,11 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 2. É direcionado para a página de instalação do SEP Mobile na Play Store. Instale o SEP Mobile e, em seguida, toque em **ACEITAR** para permitir que o SEP Mobile aceda ao seu dispositivo.
 
-3. Abra o SEP Mobile e, em seguida, toque em **VERIFY (VERIFICAR)** .
+3. Abra o SEP Mobile e, em seguida, toque em **VERIFY (VERIFICAR)**.
 
 4. Toque em **Sign in with Azure Active Directory (Iniciar sessão com o Azure Active Directory)** e introduza a conta que utiliza para aceder aos seus ficheiros e e-mail escolares ou profissionais.
 
-5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)** .
+5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)**.
 
 6. Toque em **Accept (Aceitar)** para conceder permissão ao SEP Mobile para iniciar a sua sessão e ler o seu perfil.
 
@@ -52,7 +52,7 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
    * Se não forem encontradas ameaças, os três tipos de ameaças aparecem a verde.
 
-     * O ecrã **Detalhes do Dispositivo**, no Portal da Empresa, mostra que está agora em conformidade com os requisitos de segurança da empresa.
+     * O ecrã **De detalhes** do dispositivo no Portal da Empresa mostra que está agora em conformidade com os requisitos de segurança da sua empresa.
 
      ![O dispositivo está agora em conformidade com as políticas](./media/mtd-device-now-compliant-android.png)
 
@@ -60,4 +60,4 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 Por vezes, as instalações podem falhar devido a problemas técnicos fora do seu controlo. Se tal acontecer, experimente instalar o SEP Mobile [manualmente a partir da Play Store](https://play.google.com/store/apps/details?id=com.skycure.skycure).
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

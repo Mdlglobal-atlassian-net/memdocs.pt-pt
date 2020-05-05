@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 525389e2f1cec207389bc37816ea4fc5399c99b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329113"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079540"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Armazenamento e processamento de dados no Intune
 
@@ -35,9 +35,9 @@ Todos os dados recolhidos que não sejam telemétricos são processados através
 
 - SQLAzure 
 - Coleções Fiáveis (Service Fabric)  
-- Armazenamento do Azure 
+- Storage do Azure 
 
-A telemetria (registos de serviço, registos de desempenho, erros, etc.) que é essencial para a monitorização e o fornecimento de um serviço estável é enviada para os arquivos de dados telemétricos da Microsoft.
+A telemetria (registos de serviço, registos de desempenho, erros, e assim por diante) que são fundamentais para monitorizar e fornecer um serviço estável são enviados para as lojas de dados de telemetria da Microsoft.
 
 ### <a name="storage-locations"></a>Localizações de armazenamento
 
@@ -63,13 +63,13 @@ O Microsoft Intune não utiliza os dados pessoais recolhidos como parte do forne
 
 ### <a name="restrict-processing-of-personal-data"></a>Restrição do processamento de dados pessoais
 
-Para restringir o processamento de dados pessoais do utilizador, pode eliminar a conta do utilizador ao:
+Para restringir o tratamento dos dados pessoais de um utilizador, pode eliminar a conta dos utilizadores por:
 1. Exportar uma cópia eletrónica dos dados pessoais do utilizador, incluindo
-    - contas
+    - accounts
     - dados do serviço
     - registos associados
-2. Eliminar a conta do utilizador e os dados associados do Intune.
+2. Apagar a conta do utilizador e os dados associados do Intune.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre como o Intune [protege e partilha](privacy-data-secure-share.md) dados pessoais. 

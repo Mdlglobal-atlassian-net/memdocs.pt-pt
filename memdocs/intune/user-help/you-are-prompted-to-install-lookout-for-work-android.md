@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6eaf0013531018e77a65386ca32dece0bee4ea08
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327657"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079693"
 ---
 # <a name="install-lookout-for-work"></a>Instalar o Lookout for Work
 
@@ -48,7 +48,7 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
    ![inicie sessão com a sua conta escolar ou profissional](./media/lookout-sign-in-azure-android.png)
 
-5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)** .
+5. Selecione a conta que utiliza para aceder aos e-mails e ficheiros do seu trabalho ou escola e, em seguida, toque em **ADD ACCOUNT (ADICIONAR CONTA)**.
 
    ![selecione a sua conta escolar ou profissional e toque em Add Account (Adicionar conta)](./media/lookout-pick-account-android.png)
 
@@ -58,7 +58,7 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
 7. Reveja as informações sobre como o Lookout protege o seu dispositivo e, em seguida, toque em **OK**.
 
-   ![leia sobre como o Lookout protege o seu dispositivo](./media/lookout-how-it-protects-your-device-android.png)
+   ![leia sobre como o Lookout for Work protege o seu dispositivo](./media/lookout-how-it-protects-your-device-android.png)
 
    Quando vir o ecrã que apresentamos em seguida, o Lookout está configurado e ligado.
 
@@ -68,7 +68,7 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 
    ![O Lookout for Work não encontrou ameaças de segurança](./media/lookout-scan-no-threats-found-android.png)
 
-   O ecrã Detalhes do Dispositivo no Portal da Empresa mostra que está agora em conformidade com os requisitos de segurança da sua empresa.
+   O ecrã De detalhes do dispositivo no Portal da Empresa mostra que está agora em conformidade com os requisitos de segurança da sua empresa.
 
     ![o seu dispositivo está agora em conformidade com as políticas](./media/mtd-device-now-compliant-android.png)
 
@@ -79,5 +79,5 @@ Se tiver problemas com a instalação, experimente os passos de resolução de p
 Por vezes, as instalações podem falhar devido a problemas técnicos fora do seu controlo. Se tal acontecer, tente instalar o Lookout for Work [manualmente a partir da Play Store](https://play.google.com/store/apps/details?id=com.lookout.enterprise).
 
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

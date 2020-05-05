@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325319"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078996"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Enviar notificações personalizadas em Intune
 
@@ -36,19 +36,19 @@ As mensagens de notificação personalizadas incluem um título curto e um corpo
 Se tiver a aplicação Portal da Empresa aberta num dispositivo iOS/iPadOS, a notificação assemelha-se à seguinte imagem:
 
 > [!div class="mx-imgBorder"]
-> ![Portal da Empresa iOS/iPadOS Teste](./media/custom-notifications/105046-1.png)
+> ![Notificação do teste portal da empresa iOS/iPadOS](./media/custom-notifications/105046-1.png)
 
 Se o dispositivo estiver bloqueado, a notificação assemelha-se à seguinte imagem:
 
 > [!div class="mx-imgBorder"]
-> ![dispositivo bloqueado iOS/iPadOS Teste](./media/custom-notifications/105046-2.png)
+> ![Notificação de teste iOS/iPadOS dispositivo bloqueado](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Como é a notificação num dispositivo Android
 
 Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notificação assemelha-se à seguinte imagem:
 
 > [!div class="mx-imgBorder"]
-> ![](./media/custom-notifications/105046-3.png) de notificação do Teste Android
+> ![Notificação do Teste Android](./media/custom-notifications/105046-3.png)
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Cenários comuns para o envio de notificações personalizadas  
 
@@ -65,7 +65,7 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 
 **Permissões:**
 
-- Para enviar notificações a grupos, a sua conta deve ter a seguinte permissão RBAC em Intune: *Organização* > **Atualizar**.
+- Para enviar notificações a grupos, a sua conta deve ter a seguinte permissão RBAC em Intune: *Organization* > **Update**.
 - Para enviar notificações para um dispositivo, a sua conta deve ter a seguinte permissão RBAC em Intune: *Tarefas remotas* > **Enviar notificações personalizadas**.
 
 **Criação de notificações:**
@@ -89,7 +89,7 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 
 ## <a name="send-a-custom-notification-to-groups"></a>Enviar uma notificação personalizada a grupos
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir à **administração do Tenant** > **notificações personalizadas.**  
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir para**notificações personalizadas**da **administração** > do Inquilino.  
 
 2. No separador Basics, especifique o seguinte e, em seguida, selecione **Next** para continuar.  
    - **Título** – Especifique um título para esta notificação. Os títulos estão limitados a 50 caracteres.  
@@ -132,6 +132,6 @@ Nos dispositivos iOS/iPadOS, se a aplicação Portal da Empresa estiver aberta q
 
 A notificação permanece até que o utilizador a despeça.  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Gerir dispositivos](device-management.md)
