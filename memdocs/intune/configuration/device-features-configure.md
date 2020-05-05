@@ -1,11 +1,11 @@
 ---
-title: Crie o perfil do iOS/iPadOS ou do dispositivo macOS com o Microsoft Intune - Azure  Microsoft Docs
+title: Crie o perfil do iOS/iPadOS ou do dispositivo macOS com o Microsoft Intune - Azure [ Microsoft Docs
 description: Adicione ou crie um perfil de dispositivo iOS, iPadOS ou macOS e, em seguida, configure as definições para o AirPrint, layout do ecrã principal, notificações de aplicações, dispositivo partilhado, definição de inscrição única e filtro de conteúdo web no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551393"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149176"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adicione as definições de funcionalidades do iOS, iPadOS ou macOS em Intune
 
@@ -38,9 +38,6 @@ Intune usa "perfis de configuração" para criar e personalizar estas configura�
 
 Este artigo descreve as diferentes funcionalidades que pode configurar e mostra-lhe como criar um perfil de configuração do dispositivo. Também pode ver todas as definições disponíveis para [dispositivos iOS/iPadOS](ios-device-features-settings.md) e [macOS.](macos-device-features-settings.md)
 
-> [!NOTE]
-> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
-
 ## <a name="airprint"></a>Impressão aérea
 
 Airprint é uma funcionalidade da Apple que permite que os dispositivos imprimam para ficheiros numa rede sem fios. Em Intune, pode adicionar informações airPrint aos dispositivos.
@@ -55,7 +52,7 @@ Aplica-se a:
 - iPadOS 13.0 e mais recente
 - macOS 10.10 e mais recente
 
-## <a name="app-notifications"></a>Notificações de aplicativos
+## <a name="app-notifications"></a>Notificações de aplicação
 
 Escolha como as aplicações dos seus dispositivos iOS e iPadOS recebem notificações. Por exemplo, a partir de Intune, envie notificações de aplicativos para que apareçam no centro de notificação, mostrem no ecrã de bloqueio ou reproduzissem um som.
 
@@ -70,7 +67,7 @@ Aplica-se a:
 
 ## <a name="associated-domains"></a>Domínios associados
 
-Os domínios associados permitem criar uma relação entre os seus domínios, como `contoso.com`e as suas apps. Esta funcionalidade permite-lhe:
+Os domínios associados permitem criar uma relação entre `contoso.com`os seus domínios, como , e as suas apps. Esta funcionalidade permite-lhe:
 
 - Partilhe dados e assine credenciais entre apps e websites da sua organização.
 - Utilize funcionalidades de aplicações baseadas no seu website, tais como extensão de aplicação de entrada única, links universais e preenchimento automático de palavra-passe.
@@ -87,7 +84,7 @@ Aplica-se a:
 
 ## <a name="home-screen-layout"></a>Esquema do ecrã principal
 
-Estas configurações configuram o layout da aplicação e as pastas na doca e ecrãs domésticos nos dispositivos iOS e iPadOS. É possível:
+Estas configurações configuram o layout da aplicação e as pastas na doca e ecrãs domésticos nos dispositivos iOS e iPadOS. Pode:
 
 - Utilize as definições **da Doca** para adicionar aplicações ou pastas ao ecrã. Por exemplo, mostre o Safari e a aplicação Mail na doca do dispositivo.
 - Adicione **páginas** que deseja mostradas no ecrã principal e as aplicações que pretende mostrar em cada página. Por exemplo, adicione uma página **de Contoso** e adicione a aplicação Definições nesta página.
@@ -134,14 +131,14 @@ Aplica-se a:
 
 ## <a name="single-sign-on"></a>Início de sessão único
 
-A maioria das aplicações de Linha de Negócio (LOB) exige algum nível de autenticação do utilizador para suportar a segurança. Em muitos casos, a autenticação requer que o utilizador introduza repetidamente as mesmas credenciais. Para melhorar a experiência do utilizador, os desenvolvedores podem criar aplicações que utilizem um único sign-on (SSO). A utilização de um único sinal reduz o número de vezes que um utilizador deve introduzir credenciais.
+A maioria das aplicações de Linha de Negócio (LOB) exige algum nível de autenticação do utilizador para suportar a segurança. Em muitos casos, a autenticação requer que os utilizadores introduzam repetidamente as mesmas credenciais. Para melhorar a experiência do utilizador, os desenvolvedores podem criar aplicações que utilizem um único sign-on (SSO). A utilização de um único sinal reduz o número de vezes que um utilizador deve introduzir credenciais.
+
+O perfil de inscrição é baseado em Kerberos. Kerberos é um protocolo de autenticação de rede que usa criptografia de chave secreta para autenticar aplicações de servidor de clientes. As definições intune definem a informação da conta Kerberos ao aceder a servidores ou aplicações especificadas, e lidam com os desafios de Kerberos para páginas web e aplicações nativas. A Apple recomenda que utilize as definições de extensão da [aplicação Kerberos SSO](#single-sign-on-app-extension) (neste artigo) em vez das definições sso.  
 
 Para utilizar um único sinal, certifique-se de que tem:
 
 - Uma aplicação codificada para procurar a loja credencial do utilizador em um único sinal no dispositivo.
 - Insintonizado configurado para iOS/iPadOS único sinal de inscrição.
-
-![Painel Início de Sessão Único](./media/device-features-configure/sso-blade.png)
 
 Para obter uma lista das definições que pode configurar em Intune, consulte [o único sinal no iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
@@ -156,8 +153,8 @@ Estas configurações configuram uma extensão de aplicação que permite um ún
 
 No Intune, utilize estas definições para configurar uma extensão de aplicação SSO criada pela sua organização, pelo seu fornecedor de identidade, Microsoft ou Apple. A extensão da aplicação SSO trata da autenticação para os seus utilizadores. Estas configurações configuram extensões de aplicações SSO tipo redirecionamento e credenciais.
 
-- O tipo redireccional foi concebido para protocolos de autenticação modernos, tais como OAuth e SAML2. A Microsoft tem uma extensão de aplicação SSO do tipo IOS/iPadOS Azure que pode ser ativada com as definições de extensão de aplicações de início de sinal único.
-- O tipo credencial foi concebido para fluxos de autenticação de desafio e resposta. Pode escolher entre uma extensão de credencial específica da Kerberos fornecida pela Apple, ou uma extensão de credencial genérica.
+- O tipo de redirecionamento foi concebido para protocolos de autenticação modernos, tais como OAuth e SAML2. Pode utilizar uma extensão de redirecionamento genérico em dispositivos macOS. Para dispositivos iOS/iPadOS, pode escolher entre a extensão Azure AD SSO da Microsoft ([plug-in Microsoft Enterprise SSO](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) e uma extensão de redirecionamento genérico.
+- O tipo credencial foi concebido para fluxos de autenticação de desafio e resposta. Pode escolher entre uma extensão de credencial específica da Kerberos fornecida pela Apple e uma extensão de credencial genérica.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte a extensão da [aplicação iOS/iPadOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) e a extensão da [aplicação macOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -184,7 +181,7 @@ Aplica-se a:
 - iPadOS 13.0 e mais recente
 - macOS 10.15 e mais recente
 
-## <a name="wallpaper"></a>Papel de parede
+## <a name="wallpaper"></a>Padrão de Fundo
 
 Adicione uma imagem personalizada .png, .jpg ou .jpeg aos seus dispositivos iOS/iPadOS supervisionados. Por exemplo, utilize o Intune para adicionar um logótipo da empresa ao ecrã de bloqueio dos seus dispositivos.
 
@@ -197,7 +194,7 @@ Aplica-se a:
 
 ## <a name="web-content-filter"></a>Filtro de conteúdo web
 
-Estas definições usam o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só pode permitir que `contoso` web sites se abram.
+Estas definições usam o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só `contoso` pode permitir que os web sites se abram.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte o filtro de [conteúdo web no iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
@@ -209,7 +206,7 @@ Aplica-se a:
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -233,7 +230,7 @@ Aplica-se a:
     - [macOS](macos-device-features-settings.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -243,7 +240,7 @@ Aplica-se a:
 
 11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

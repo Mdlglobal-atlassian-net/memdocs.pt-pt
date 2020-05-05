@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863184"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254610"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Autónomo - Gestão de aplicações Win32
 
@@ -61,7 +61,7 @@ Pode descarregar a Ferramenta de Preparação de [Conteúdo microsoft Win32](htt
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>Executar a ferramenta de preparação de conteúdo microsoft Win32
 
-Se executar `IntuneWinAppUtil.exe` da janela de comando sem parâmetros, a ferramenta irá guiá-lo para inserir os parâmetros necessários passo a passo. Ou, pode adicionar os parâmetros ao comando com base nos seguintes parâmetros disponíveis da linha de comando.
+Se correr `IntuneWinAppUtil.exe` da janela de comando sem parâmetros, a ferramenta irá guiá-lo para inserir os parâmetros necessários passo a passo. Ou, pode adicionar os parâmetros ao comando com base nos seguintes parâmetros disponíveis da linha de comando.
 
 ### <a name="available-command-line-parameters"></a>Parâmetros da linha de comandos disponíveis 
 
@@ -101,7 +101,7 @@ Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplica�
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
-3. No painel do **tipo select,** sob os **outros** tipos de aplicações, selecione **a aplicação Windows (Win32)** .
+3. No painel do **tipo select,** sob os **outros** tipos de aplicações, selecione **a aplicação Windows (Win32)**.
 
     > [!IMPORTANT]
     > Certifique-se de que utiliza a versão mais recente da Ferramenta de Preparação de Conteúdo do Microsoft Win32. Se não utilizar a versão mais recente, verá um aviso indicando que a aplicação foi embalada utilizando uma versão mais antiga da Ferramenta de Preparação de Conteúdo do Microsoft Win32. 
@@ -122,8 +122,8 @@ Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplica�
 1. Na página de informações da **App,** adicione os detalhes para a sua aplicação. Consoante a aplicação que tenha escolhido, alguns dos valores neste painel podem ser preenchidos automaticamente.
     - **Nome**: introduza o nome da aplicação tal como aparece no portal da empresa. Certifique-se de que todos os nomes de aplicações que utiliza são exclusivos. Se existir o mesmo nome duas vezes, só aparece uma das aplicações no portal da empresa.
     - **Descrição**: introduza a descrição da aplicação. A descrição aparece no portal da empresa.
-    - **Publicador**: introduza o nome do publicador da aplicação.
-    - **Categoria**: selecione uma ou mais categorias das aplicações incorporadas ou, em alternativa, uma categoria criada por si. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
+    - **Editor**: Insira o nome do editor da app.
+    - **Categoria**: Selecione uma ou mais categorias de aplicações incorporadas ou selecione uma categoria que criou. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
     - **Mostre isto como uma aplicação em destaque no Portal da Empresa**: Mostrar a aplicação em destaque na página principal do portal da empresa quando os utilizadores navegam para apps.
     - **URL de Informações**: opcionalmente, introduza o URL de um site que contenha informações sobre esta aplicação. O URL aparece no portal da empresa.
     - **URL de Privacidade**: opcionalmente, introduza um URL para um site que contenha informações sobre a privacidade desta aplicação. O URL aparece no portal da empresa.
@@ -138,12 +138,12 @@ Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplica�
 1. Na página **programa,** configure os comandos de instalação e remoção da aplicação para a aplicação:
     - **Instale o comando**: Adicione a linha de comando de instalação completa para instalar a aplicação. 
 
-        Por exemplo, se o nome do ficheiro da sua aplicação for **MyApp123,** adicione o seguinte:<br>
+        Por exemplo, se o nome de ficheiro da aplicação for **MyApp123**, adicione o seguinte: <br>
         `msiexec /p "MyApp123.msp"`<p>
-        E, se a aplicação for `ApplicationName.exe`, o comando seria o nome da aplicação seguido pelos argumentos de comando (switches) suportados pelo pacote. <br>
+        E, se a `ApplicationName.exe`aplicação for, o comando seria o nome da aplicação seguido pelos argumentos de comando (switches) suportados pelo pacote. <br>
         Por exemplo:<br>
         `ApplicationName.exe /quiet`<br>
-        No comando acima, o pacote de `ApplicationName.exe` suporta o argumento de comando `/quiet`.<p> 
+        No comando acima, `ApplicationName.exe` o pacote `/quiet` suporta o argumento do comando.<p> 
         Para obter os argumentos específicos suportados pelo pacote de aplicações, contacte o seu fornecedor de aplicações.
 
         > [!IMPORTANT]
@@ -184,10 +184,10 @@ Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplica�
 1. Na página **Requisitos,** especifique os requisitos que os dispositivos devem cumprir antes da instalação da aplicação:
     - **Arquitetura de sistema operativo**: selecione as arquiteturas necessárias para instalar a aplicação.
     - **Sistema operativo mínimo**: selecione o sistema operativo mínimo necessário para instalar a aplicação.
-    - **Espaço em disco necessário (MB)** : opcionalmente, adicione o espaço livre em disco necessário na unidade do sistema para instalar a aplicação.
-    - **Memória física necessária (MB)** : opcionalmente, adicione a memória física (RAM) necessária para instalar a aplicação.
+    - **Espaço em disco necessário (MB)**: opcionalmente, adicione o espaço livre em disco necessário na unidade do sistema para instalar a aplicação.
+    - **Memória física necessária (MB)**: opcionalmente, adicione a memória física (RAM) necessária para instalar a aplicação.
     - **Número mínimo de processadores lógicos necessários**: opcionalmente, adicione o número mínimo de processadores lógicos necessários para instalar a aplicação.
-    - **Velocidade de CPU mínima necessária (MHz)** : opcionalmente, adicione a velocidade mínima de CPU necessária para instalar a aplicação.
+    - **Velocidade de CPU mínima necessária (MHz)**: opcionalmente, adicione a velocidade mínima de CPU necessária para instalar a aplicação.
     - **Configure regras de requisitos adicionais:** 
         1. Clique em **Adicionar** para mostrar o painel de **regra Adicionar um Requisito** e configurar regras de requisitos adicionais. Selecione o **tipo Requisito** para escolher o tipo de regra que utilizará para determinar como um requisito é validado. As regras de requisitos podem basear-se em informações do sistema de ficheiros, valores de registo ou scripts PowerShell. 
             - **Ficheiro**: Quando escolher o **Ficheiro** como **o tipo Requisito,** a regra do requisito deve detetar um ficheiro ou pasta, data, versão ou tamanho. 
@@ -298,7 +298,7 @@ O utilizador final verá notificações do Windows Toast indicando que as aplica
 - 1 ou mais requisitos de aplicação dependentes não cumpridos
 - 1 ou mais aplicações dependentes estão pendentes de um reboot do dispositivo
 
-Se optar por não **instalar automaticamente** uma dependência, a instalação da aplicação Win32 não será tentada. Além disso, o relatório de aplicações mostrará que a dependência foi sinalizada como `failed` e também fornecer uma razão de falha. Pode ver a falha de instalação da dependência clicando numa falha (ou aviso) fornecida nos detalhes de [instalação](troubleshoot-app-install.md#win32-app-installation-troubleshooting)da aplicação Win 32 .
+Se optar por não **instalar automaticamente** uma dependência, a instalação da aplicação Win32 não será tentada. Além disso, o relatório de aplicações `failed` mostrará que a dependência foi sinalizada como e também fornecerá uma razão de falha. Pode ver a falha de instalação da dependência clicando numa falha (ou aviso) fornecida nos detalhes de [instalação](troubleshoot-app-install.md#win32-app-installation-troubleshooting)da aplicação Win 32 .
 
 Cada dependência irá aderir à lógica de retry da aplicação Intune Win32 (tente instalar 3 vezes depois de esperar 5 minutos) e ao calendário global de reavaliação. Além disso, as dependências só são aplicáveis no momento da instalação da aplicação Win32 no dispositivo. As dependências não são aplicáveis para desinstalar uma aplicação Win32. Para eliminar uma dependência, deve clicar nas elipses (três pontos) à esquerda da app dependente localizada no final da linha da lista de dependência. 
 
@@ -357,12 +357,17 @@ Além disso, a aplicação Portal da Empresa mostra mensagens adicionais de esta
 ## <a name="set-win32-app-availability-and-notifications"></a>Definir disponibilidade e notificações de aplicações Win32
 Pode configurar o tempo de início e prazo para uma aplicação Win32. Na hora de início, a extensão de gestão Intune iniciará o download e cache de conteúdo da aplicação para a intenção necessária. A aplicação será instalada no prazo limite. Para aplicações disponíveis, a hora de início ditará quando a aplicação for visível no Portal da Empresa e os conteúdos serão descarregados quando o utilizador final solicitar a aplicação do Portal da Empresa. Além disso, pode permitir um período de reinício da graça. 
 
+> [!IMPORTANT]
+> A definição do período de **graça restart** na secção **Atribuição** só está disponível quando o comportamento de **reinício** do Dispositivo da secção **Programa** estiver definido para qualquer uma das seguintes opções:
+> - **Determine o comportamento com base nos códigos de devolução**
+> - **Intune vai forçar o reinício obrigatório do dispositivo**
+
 Detete a disponibilidade da aplicação com base numa data e hora para uma aplicação necessária utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selecione **Apps** > **Todas as aplicações.**
 3. Selecione uma aplicação Windows existente **(Win32)** da lista. 
-4. A partir do painel de aplicações, selecione **Propriedades** > **Editar** ao lado da secção **de Atribuição >** Adicionar **grupo** abaixo do tipo de atribuição **exigido.** 
+4. A partir do painel de aplicações, selecione **Properties** > **Edit** ao lado da secção de **Atribuiçãos** > Adicionar **grupo** abaixo do tipo de atribuição **exigido.** 
    Note que a disponibilidade da aplicação pode ser definida com base no tipo de atribuição. O **tipo de Atribuição** pode ser **exigido,** **disponível para dispositivos matriculados,** ou **desinstalar**.
 5. Selecione um grupo no painel do **grupo Select** para especificar qual o grupo de utilizadores que será atribuído à aplicação. 
 
@@ -378,15 +383,15 @@ Detete a disponibilidade da aplicação com base numa data e hora para uma aplic
 9. Detete o prazo de **instalação** da App para **Uma data e hora específicas** e selecione a sua data e hora. Esta data e hora especifica quando a aplicação é instalada no dispositivo de utilizadores finais. Quando for feita mais de uma atribuição para o mesmo utilizador ou dispositivo, o prazo de instalação da aplicação é escolhido com base no mais cedo possível.
 
 10. Clique **ativado** ao lado do período de **graça restart**. O período de graça de reinício começa assim que a instalação da aplicação estiver concluída no dispositivo. Quando desativado, o aparelho pode reiniciar sem aviso prévio. <br>Pode personalizar as seguintes opções:
-    - Período de graça de reinício do **dispositivo (minutos)** : O valor predefinido é de 1440 minutos (24 horas). Este valor pode ser no máximo 2 semanas.
-    - **Selecione quando deve visualizar a caixa de diálogo de contagem regressiva antes de o reinício ocorrer (minutos)** : O valor predefinido é de 15 minutos.
+    - Período de graça de reinício do **dispositivo (minutos)**: O valor predefinido é de 1440 minutos (24 horas). Este valor pode ser no máximo 2 semanas.
+    - **Selecione quando deve visualizar a caixa de diálogo de contagem regressiva antes de o reinício ocorrer (minutos)**: O valor predefinido é de 15 minutos.
     - **Permitir que o utilizador ressone a notificação de reinício:** Pode escolher **Sim** ou **Não**.
-        - **Selecione a duração do soneto (minutos)** : O valor predefinido é de 240 minutos (4 horas). O valor do soneca não pode ser mais do que reiniciar o período de graça.
+        - **Selecione a duração do soneto (minutos)**: O valor predefinido é de 240 minutos (4 horas). O valor do soneca não pode ser mais do que reiniciar o período de graça.
 
 11. Clique em **Rever + salvar**.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Notificações de brindes para aplicações Win32 
-Se necessário, pode suprimir a apresentação de notificações de torradas finais por aplicação. A partir de Intune, selecione **Apps** > **Todas as aplicações** > selecione a app > **Atribuições** > **Incluir Grupos.** 
+Se necessário, pode suprimir a apresentação de notificações de torradas finais por aplicação. A partir de Intune, selecione **Apps** > **Todas as aplicações** > selecionar a aplicação > Atribuições**Incluem** **Grupos** > . 
 
 > [!NOTE]
 > As aplicações Win32 instaladas da extensão de gestão do Intune não serão desinstaladas em dispositivos não inscritos. Os administradores podem tirar partido da exclusão de atribuição para não oferecer aplicações Win32 em dispositivos BYOD.
@@ -430,10 +435,10 @@ exit 1
 }
 ```
 
-No comando PowerShell acima, substitua a cadeia `<path to binary file>` pelo caminho para o ficheiro da aplicação Win32. Um caminho de exemplo seria semelhante ao seguinte:<br>
+No comando PowerShell acima, `<path to binary file>` substitua a cadeia pelo caminho para o ficheiro da aplicação Win32. Um caminho de exemplo seria semelhante ao seguinte:<br>
 `C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
 
-Além disso, substitua a cadeia `<file version of successfully detected file>` pela versão do ficheiro que precisa de detetar. Uma cadeia de versão de ficheiro de exemplo seria semelhante à seguinte:<br>
+Além disso, substitua a `<file version of successfully detected file>` cadeia pela versão do ficheiro que precisa de detetar. Uma cadeia de versão de ficheiro de exemplo seria semelhante à seguinte:<br>
 `2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
 
 Se precisar de obter as informações da versão da sua aplicação Win32, pode utilizar o seguinte comando PowerShell:
@@ -444,7 +449,7 @@ Se precisar de obter as informações da versão da sua aplicação Win32, pode 
 
 ```
 
-No comando powerShell acima, substitua `<path to binary file>` pelo seu caminho de ficheiro.
+No comando PowerShell acima, substitua-o `<path to binary file>` pelo seu caminho de ficheiro.
 
 ### <a name="additional-troubleshooting-areas-to-consider"></a>Áreas adicionais de resolução de problemas a considerar
 - Verificar o direcionamento para garantir que o agente está instalado no dispositivo – uma aplicação Win32 direcionada para um grupo ou um Script do PowerShell direcionado para um grupo irá criar a política de instalação de agente para o grupo de segurança.
@@ -453,6 +458,6 @@ No comando powerShell acima, substitua `<path to binary file>` pelo seu caminho 
 
 Para mais informações sobre a resolução de problemas das aplicações Win32, consulte a instalação de problemas de instalação da [aplicação Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Para obter mais informações sobre como adicionar aplicações ao Intune, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).

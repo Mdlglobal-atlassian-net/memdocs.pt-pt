@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80536853"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538147"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>O que é a gestão de aplicações do Microsoft Intune?
 
@@ -51,13 +51,13 @@ A MAM do Intune suporta dois tipos de configurações:
 
 O Intune oferece várias funcionalidades para o ajudar a obter as aplicações de que precisa, nos dispositivos nos quais quer executá-las. A seguinte tabela mostra um resumo das funcionalidades de gestão de aplicações.
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Wnodows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Adicionar e atribuir aplicações a dispositivos e utilizadores | Sim | Sim | Sim | Sim | Sim |
 | Atribuir aplicações a dispositivos não inscritos no Intune | Sim | Sim | Não | Não | Não |
 | Utilizar políticas de configuração de aplicações para controlar o comportamento de arranque das aplicações | Sim | Sim | Não | Não | Não |
 | Utilizar políticas de aprovisionamento de aplicações móveis para renovar aplicações expiradas | Não | Sim | Não | Não | Não |
-| Proteger dados da empresa em aplicações com políticas de proteção | Sim | Sim | Não | Não <sup>1</sup> | Não |
+| Proteger dados da empresa em aplicações com políticas de proteção | Sim | Sim | Não | N.º <sup>1</sup> | Não |
 | Remover apenas dados empresariais a partir de uma aplicação instalada (eliminação seletiva de aplicações) | Sim | Sim | Não | Sim | Sim |
 | Monitorizar atribuições de aplicações | Sim | Sim | Sim | Sim | Sim |
 | Atribuir e controlar aplicações compradas em volume a partir de uma loja de aplicações | Não | Não | Não | Sim | Não |
@@ -110,6 +110,11 @@ O topo do menu de navegação de carga de trabalho da App fornece detalhes da ap
     - **E-books**: Algumas lojas de aplicações dão-lhe a capacidade de adquirir várias licenças para uma app ou livros que pretende utilizar na sua empresa. Para obter mais informações, veja [Gerir aplicações e livros comprados em grandes volumes com o Microsoft Intune](vpp-apps.md).
 - **Ajuda e suporte**: resolva problemas, peça suporte ou veja o estado do Intune. Para mais informações, consulte problemas de [resolução de problemas.](../fundamentals/help-desk-operators.md)
 
+### <a name="try-the-interactive-guide"></a>Experimente o guia interativo
+O [Manage e proteger as aplicações móveis e desktop com](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) o Guia interativo do Microsoft Endpoint Manager passa-o pelo centro de administração do Microsoft Endpoint Manager para lhe mostrar como gerir os dispositivos matriculados no Intune, impor o cumprimento das políticas e proteger os dados da sua organização.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+
 ## <a name="additional-information"></a>Informações adicionais
 Os seguintes itens dentro da consola fornecem funcionalidaderelacionada com a aplicação:
 - **Microsoft Store para Empresas**: configure a integração na Microsoft Store para Empresas. Em seguida, pode sincronizar com o Intune as aplicações compradas, atribuí-las e controlar a utilização das suas licenças. Para mais informações, consulte a [Microsoft Store para aplicações compradas](windows-store-for-business.md)em volume de negócios.
@@ -122,6 +127,6 @@ Os seguintes itens dentro da consola fornecem funcionalidaderelacionada com a ap
 
 Para mais informações sobre apps, consulte [Adicionar aplicações ao Microsoft Intune](../apps/apps-add.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Adicionar uma aplicação ao Microsoft Intune](apps-add.md)

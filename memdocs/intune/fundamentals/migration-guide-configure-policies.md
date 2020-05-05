@@ -1,5 +1,5 @@
 ---
-title: Configurar a conformidade de dispositivos e aplicações durante uma migração do Intune
+title: Configure o cumprimento do dispositivo e da aplicação durante uma migração intune
 titleSuffix: Microsoft Intune
 description: Este artigo fornece os passos necessários para configurar as políticas de gestão de aplicações e de conformidade do dispositivo durante uma migração do Microsoft Intune.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f0f4106921f7b4ef1d33e72a217246543512bb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2cefc43aa4c1e5031bc1b755a244df54f6442137
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331233"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079999"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Configurar políticas de gestão de aplicações e de conformidade do dispositivo durante uma migração para o Microsoft Intune
 
@@ -50,7 +50,7 @@ Pode criar grupos de dispositivos quando tiver de realizar tarefas administrativ
 
 Os grupos de dispositivos são úteis para a gestão de dispositivos que não têm utilizadores dedicados, tais como dispositivos de local público, dispositivos partilhados por trabalhadores de turnos ou dispositivos atribuídos a uma localização específica.
 
-Ao configurar grupos de dispositivos antes da inscrição de dispositivos, pode utilizar as categorias de dispositivos para os associar automaticamente a grupos após a inscrição. Assim, as políticas de dispositivos do grupo serão recebidas automaticamente. [Introdução aos grupos](groups-get-started.md).
+Ao configurar grupos de dispositivos antes da inscrição de dispositivos, pode utilizar as categorias de dispositivos para os associar automaticamente a grupos após a inscrição. Em seguida, receberão automaticamente as políticas de dispositivos do seu grupo. [Começar com grupos.](groups-get-started.md)
 
 ### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Tarefa 2: Utilizar perfis de acesso a recursos (certificados de e-mail, Wi-Fi e VPN)
 
@@ -62,7 +62,7 @@ Tem de criar um perfil de configuração de dispositivos para impor definições
 
 #### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Importar diretamente perfis de configuração iOS/iPadOS (opcional)
 
-- **Perfis de iOS do Apple Configurator (iOS 7.1 e posterior):** se a sua solução de MDM existente utilizar perfis do Apple Configurator (ficheiros .mobileconfig), o Intune pode importá-los diretamente como políticas de configuração personalizadas.
+- **Perfis apple configurator iOS (iOS 7.1 e posterior):** Se a sua solução MDM existente utilizar perfis Apple Configurator (.ficheiros mobileconfig), intune pode importá-los diretamente como políticas de configuração personalizadas.
 
 - Políticas de configuração de **aplicações móveis iOS:** Se a sua solução MDM existente utilizar as políticas de configuração de aplicações móveis iOS/iPadOS, a Intune pode importá-las diretamente desde que cumpram o formato XML especificado pela Apple para listas de propriedades.
 
@@ -88,12 +88,12 @@ Ao utilizar o Intune MDM, pode fornecer aplicações ao exigir a sua instalaçã
 
 - [Como adicionar aplicações](../apps/apps-add.md).
 
-- [Como implementar aplicações](../apps/apps-deploy.md).
+- [Como implementar aplicações.](../apps/apps-deploy.md)
 
 ### <a name="task-6-enable-device-enrollment"></a>Tarefa 6: Ativar a inscrição de dispositivos
 
 A inscrição de dispositivos é necessária para gerir o dispositivo. Saiba [como se preparar para inscrever dispositivos pessoais do utilizador pertencentes à empresa](../enrollment/device-enrollment.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-[Configurar políticas de proteção de aplicações (opcional)](../apps/app-protection-policies.md).
+Configure as políticas de proteção de [aplicações (opcional)](../apps/app-protection-policies.md).

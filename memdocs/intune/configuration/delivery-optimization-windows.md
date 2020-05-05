@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327353"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506544"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Definições de otimização de entrega no Microsoft Intune
 
@@ -36,25 +36,31 @@ Para saber mais sobre a Otimização de Entregas no Windows 10, consulte [as atu
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
+   - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+   - **Tipo de perfil**: Selecione **Otimização de Entrega**.
 
-    - **Nome**: introduza um nome descritivo para o novo perfil.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil**: Selecione **otimização de entrega**.
+4. Selecione **Criar**.
 
-4. Escolha **Definições** > **Configurar**e defina como pretende que as atualizações e aplicações descarreguem. Para obter informações sobre as definições disponíveis, consulte [as definições de otimização da entrega para Intune](delivery-optimization-settings.md).
+5. Na página **Basics,** introduza um nome e descrição para o perfil e, em seguida, escolha **Seguinte**.
 
-5. Quando terminar, selecione **OK** > **Criar** para guardar as alterações.
+6. Na página de definições de **Configuração,** defina como pretende que as atualizações e aplicações descarreguem. Para obter informações sobre as definições disponíveis, consulte [as definições de otimização da entrega para Intune](delivery-optimization-settings.md).
 
-O perfil é criado e é mostrado na lista. Em seguida, [atribua o perfil](device-profile-assign.md) e, em [seguida, monitorize o seu estado](device-profile-monitor.md).
+   Quando terminar as definições de configuração, selecione **Next**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. Na página **Scope (Tags),** selecione **Selecione etiquetas** de âmbito para abrir o painel *de etiquetas Select para* atribuir etiquetas de âmbito ao perfil.
+  
+   Selecione **Seguinte** para continuar.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. Na página **de Atribuiçãos,** selecione os grupos que receberão este perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](../configuration/device-profile-assign.md).
+
+   Selecione **Seguinte**.
+
+9. Na página regras de **aplicabilidade,** utilize as opções **de Regra**, **Propriedade**e **Valor** para definir como este perfil se aplica dentro dos grupos designados.
+
+10. Na página **Review + criar** página, quando terminar, escolha **Criar**. O perfil é criado e é mostrado na lista. Em seguida, [atribua o perfil](device-profile-assign.md) e, em [seguida, monitorize o seu estado](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Remover otimização de entrega dos anéis de atualização do Windows 10
 
@@ -62,11 +68,11 @@ A Otimização da Entrega foi previamente configurada como parte dos Anéis de A
 
 1. Criar um perfil de configuração do dispositivo de otimização de entrega:
 
-    1. No centro de administração do Microsoft Endpoint Manager, selecione **Dispositivos** > perfis de **configuração** > **Criar perfil**.
+    1. No centro de administração do Microsoft Endpoint Manager, selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
     2. Introduza as seguintes propriedades:
 
         - **Nome**: introduza um nome descritivo para o novo perfil.
-        - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+        - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
         - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
         - **Tipo de perfil**: Selecione **otimização de entrega**.
         - **Definições**: Para o modo de transferência de otimização da **entrega,** escolha o mesmo modo que é utilizado pelo anel de atualização de software existente, a menos que pretenda alterar as definições que aplica nos seus dispositivos. As opções são:
@@ -85,9 +91,9 @@ A Otimização da Entrega foi previamente configurada como parte dos Anéis de A
     1. No centro de administração do Microsoft Endpoint Manager, vá a **atualizações** de Software > Windows 10 Update Rings.
     2. Na lista, selecione o seu anel de atualização.
     3. Nas definições, desajuste o modo de transferência de **otimização** da entrega para **Não configurado**.
-    4. **OK** > **Guarde** as suas alterações.
+    4. **Ok** > **Guarde** as suas alterações.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribuir o perfil](device-profile-assign.md) e [monitorizar o seu estado.](device-profile-monitor.md)  
 Consulte as definições de [otimização](delivery-optimization-settings.md) da entrega para Intune.

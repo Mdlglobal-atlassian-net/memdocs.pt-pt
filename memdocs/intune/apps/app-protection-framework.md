@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696482"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182298"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Quadro de proteção de dados utilizando políticas de proteção de aplicações 
 
@@ -37,7 +37,7 @@ O quadro de configuração de proteção de dados da APP é organizado em três 
 
 - Proteção de dados melhorada pela empresa nível 2 – a Microsoft recomenda esta configuração para dispositivos onde os utilizadores acedem a informações confidenciais ou confidenciais. Esta configuração é aplicável à maioria dos utilizadores móveis que acedem a dados do trabalho ou da escola. Alguns dos controlos podem ter impacto na experiência do utilizador.
 
-- Proteção de dados de nível 3 empresa elevada – A Microsoft recomenda esta configuração para dispositivos geridos por uma organização com uma equipa de segurança maior ou mais sofisticada, ou para utilizadores ou grupos específicos que estão em risco único (como exemplo, uma organização identificou utilizadores que lidam com dados cujo roubo teria impacto direto e grave no seu preço de stock). Uma organização suscetível de ser alvo de adversários bem financiados e sofisticados deve aspirar a esta configuração.
+- Proteção de dados de nível 3 empresa elevada – A Microsoft recomenda esta configuração para dispositivos geridos por uma organização com uma equipa de segurança maior ou mais sofisticada, ou para utilizadores ou grupos específicos que estão em risco único (utilizadores que lidam com dados altamente sensíveis onde a divulgação não autorizada causa perdas materiais consideráveis para a organização). Uma organização suscetível de ser alvo de adversários bem financiados e sofisticados deve aspirar a esta configuração.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Metodologia de implementação do quadro de proteção de dados da APP
 
@@ -45,9 +45,9 @@ Tal como acontece com qualquer implementação de novos softwares, funcionalidad
 
 A Microsoft recomenda a seguinte abordagem do anel de implementação para a estrutura de proteção de dados da APP:
 
-| Anel de implantação  | Inquilino  | Equipas de avaliação  | Saída  | Linha do tempo  |
+| Anel de implantação  | Inquilino  | Equipas de avaliação  | Saída  | Linha cronológica  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
-| Garantia da Qualidade  | Inquilino de pré-produção  | Proprietários de capacidademóvel, Segurança, Avaliação de Risco, Privacidade, UX  | Validação do cenário funcional, projeto de documentação  | 0-30 dias  |
+| Garantia de Qualidade  | Inquilino de pré-produção  | Proprietários de capacidademóvel, Segurança, Avaliação de Risco, Privacidade, UX  | Validação do cenário funcional, projeto de documentação  | 0-30 dias  |
 | Pré-visualização  | Inquilino de produção  | Proprietários de capacidademóvel, UX  | Validação do cenário do utilizador final, documentação virada para o utilizador  | 7-14 dias, pós Garantia de Qualidade  |
 | Produção  | Inquilino de produção  | Proprietários de capacidade móvel, balcão de ajuda de TI  | N/D  | 7 dias a várias semanas, pós Pré-visualização  |
 
@@ -72,7 +72,7 @@ Para cada Política de Proteção de Aplicações, devem ser incluídas as segui
 
 - Microsoft Edge
 - Excel
-- Escritório
+- Office
 - OneDrive
 - OneNote
 - Outlook
@@ -92,42 +92,42 @@ As políticas no nível 1 impõem um nível razoável de acesso a dados, minimiz
 
 #### <a name="data-protection"></a>Proteção de dados
 
-| Definição | Descrição da definição |             Valor  |             Platform        |
+| Definição | Descrição da definição |             Valor  |             Plataforma        |
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
 | Transferência de Dados |             Dados de backup org para...  |             Permitir  |             iOS/iPadOS, Android        |
 | Transferência de Dados |       Envie dados org para outras aplicações  |             Todas as aplicações  |             iOS/iPadOS, Android        |
 | Transferência de Dados |       Receber dados de outras apps  |             Todas as aplicações  |             iOS/iPadOS, Android        |
 | Transferência de Dados |       Restringir corte, cópia e pasta entre apps  |             Qualquer aplicação  |             iOS/iPadOS, Android        |
 | Transferência de Dados |       Teclados de terceiros  |             Permitir  |             iOS/iPadOS        |
-| Transferência de Dados |       Teclados aprovados  |             Não é necessário  |             Android        |
+| Transferência de Dados |       Teclados aprovados  |             Não é necessária  |             Android        |
 | Transferência de Dados |       Captura de ecrã e Google Assistant  |             Permitir  |             Android        |
-| Encriptação |             Criptografe dados org  |             Exigir  |             iOS/iPadOS, Android        |
-| Encriptação |       Criptografe dados org em dispositivos matriculados  |             Exigir  |             Android        |
-| Funcionalidade  |             Sync app com app de contactos nativos  |             Permitir  |             iOS/iPadOS, Android        |
+| Encriptação |             Criptografe dados org  |             Requerer  |             iOS/iPadOS, Android        |
+| Encriptação |       Criptografe dados org em dispositivos matriculados  |             Requerer  |             Android        |
+| Funcionalidade  |             Sincronizar aplicação com a aplicação de contactos nativa  |             Permitir  |             iOS/iPadOS, Android        |
 | Funcionalidade  |       Imprimir dados org  |             Permitir  |             iOS/iPadOS, Android        |
 | Funcionalidade  |       Restringir a transferência de conteúdos web com outras aplicações  |             Qualquer aplicação  |             iOS/iPadOS, Android        |
 | Funcionalidade  |       Notificações de dados org  |             Permitir  |             iOS/iPadOS, Android        |
 
 #### <a name="access-requirements"></a>Requisitos de acesso 
 
-| Definição  | Valor  | Platform  | Notas  |
+| Definição  | Valor  | Plataforma  | Notas  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PIN para acesso  | Exigir  | iOS/iPadOS, Android  |   |
-| Tipo PIN  | Numérica  | iOS/iPadOS, Android  |   |
+| PIN para acesso  | Requerer  | iOS/iPadOS, Android  |   |
+| Tipo de PIN  | Numérico  | iOS/iPadOS, Android  |   |
 | PIN simples  | Permitir  | iOS/iPadOS, Android  |   |
 | Selecione comprimento pin mínimo  | 4  | iOS/iPadOS, Android  |   |
 | Biométrico em vez de PIN para acesso  | Permitir  | iOS/iPadOS, Android  |   |
-| Sobrepor biométrico em vez de PIN para acesso  | Exigir  | iOS/iPadOS, Android  |   |
+| Sobrepor biométrico em vez de PIN para acesso  | Requerer  | iOS/iPadOS, Android  |   |
 | Tempo limite (minutos de atividade)  | 720  | iOS/iPadOS, Android  |   |
 | Id do rosto em vez de PIN para acesso  | Permitir  | iOS/iPadOS  |   |
-| PIN reset após o número de dias  | Não  | iOS/iPadOS, Android  |   |
-| Pin de aplicativo quando o PIN do dispositivo é definido  | Exigir  | iOS/iPadOS, Android  | Se o dispositivo estiver matriculado no Intune, os administradores podem considerar a definição deste para "Não necessário" se estiverem a impor um PIN de dispositivo forte através de uma política de conformidade do dispositivo.  |
-| Credenciais de conta de trabalho ou de escola para acesso  | Não é necessário  | iOS/iPadOS, Android  |   |
-| Volte a verificar os requisitos de acesso após (minutos de inatividade)  | 30  | iOS/iPadOS, Android  |   |
+| Reposição do PIN após número de dias  | Não  | iOS/iPadOS, Android  |   |
+| PIN da aplicação quando o PIN do dispositivo estiver definido  | Requerer  | iOS/iPadOS, Android  | Se o dispositivo estiver matriculado no Intune, os administradores podem considerar a definição deste para "Não necessário" se estiverem a impor um PIN de dispositivo forte através de uma política de conformidade do dispositivo.  |
+| Credenciais da conta escolar ou profissional para acesso  | Não é necessária  | iOS/iPadOS, Android  |   |
+| Verificar novamente os requisitos de acesso após (minutos de inatividade)  | 30  | iOS/iPadOS, Android  |   |
 
 #### <a name="conditional-launch"></a>Iniciação condicional 
 
-| Definição | Descrição da definição |          Valor / Ação  |          Platform        | Notas |
+| Definição | Descrição da definição |          Valor / Ação  |          Plataforma        | Notas |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Condições da aplicação |       Tentativas max PIN  |          5 / Pin de reset  |          iOS/iPadOS, Android  |                  |
 | Condições da aplicação |       Período de graça offline  |          720 / Acesso ao bloco (minutos)  |          iOS/iPadOS, Android  |                  |
@@ -144,23 +144,23 @@ As definições de política aplicadas no nível 2 incluem todas as definições
 
 #### <a name="data-protection"></a>Proteção de dados
 
-| Definição | Descrição da definição |             Valor  |             Platform        | Notas |
+| Definição | Descrição da definição |             Valor  |             Plataforma        | Notas |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Transferência de Dados |       Dados de backup org para...  |          Bloqueio  |          iOS/iPadOS, Android  |                  |
+| Transferência de Dados |       Dados de backup org para...  |          Bloquear  |          iOS/iPadOS, Android  |                  |
 | Transferência de Dados |       Envie dados org para outras aplicações  |          Aplicativos geridos por políticas  |          iOS/iPadOS, Android  |          <p>Com o iOS/iPadOS, os administradores podem configurar este valor como "Aplicações geridas por políticas", "Aplicações geridas por políticas com partilha de OS", ou "Aplicações geridas por políticas com filtragem Open-In/Share". </p><p>As aplicações geridas pela política com partilha de OS estão disponíveis quando o dispositivo também está matriculado no Intune. Esta definição permite a transferência de dados para outras aplicações geridas por políticas, bem como transferências de ficheiros para outras aplicações que tenham sido geridas pela Intune. </p><p>Aplicações geridas por políticas com filtros de filtragem Open-In/Share os diálogos OS Open-in/Share para apenas exibir aplicações geridas pela política. </p><p> Para mais informações, consulte as definições da política de proteção de [aplicações iOS](app-protection-policy-settings-ios.md).</p> |
-| Transferência de Dados |       Guardar cópias dos dados org  |          Bloqueio  |          iOS/iPadOS, Android  |                  |
+| Transferência de Dados |       Guardar cópias dos dados org  |          Bloquear  |          iOS/iPadOS, Android  |                  |
 | Transferência de Dados |       Permitir que os utilizadores guardem cópias para serviços selecionados  |          OneDrive para negócios, SharePoint Online |          iOS/iPadOS, Android  |                  |
 | Transferência de Dados |       Restringir corte, cópia e pasta entre apps  |          Aplicativos geridos pela política com pasta em  |          iOS/iPadOS, Android  |                  |
-| Transferência de Dados |       Captura de ecrã e Google Assistant  |          Bloqueio  |          Android  |                  |
+| Transferência de Dados |       Captura de ecrã e Google Assistant  |          Bloquear  |          Android  |                  |
 | Funcionalidade |       Restringir a transferência de conteúdos web com outras aplicações  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
 | Funcionalidade |       Notificações de dados org  |          Bloquear dados org  |          iOS/iPadOS, Android  |          Para obter uma lista de aplicações que suportem esta definição, consulte as definições de políticas de proteção de [aplicações iOS](app-protection-policy-settings-ios.md) e as definições de políticas de proteção de [aplicações Android.](app-protection-policy-settings-android.md)       |
 
 #### <a name="conditional-launch"></a>Iniciação condicional
 
-| Definição | Descrição da definição |          Valor / Ação  |          Platform        | Notas |
+| Definição | Descrição da definição |          Valor / Ação  |          Plataforma        | Notas |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor.Construa <br>Exemplo: 12.4.4* / Acesso ao bloco |          iOS/iPadOS        | A Microsoft recomenda configurar a versão principal do iOS mínimo para combinar com as versões suportadas para iOS para aplicações da Microsoft.   As aplicações da Microsoft suportam uma abordagem N-1 onde n é a versão atual do iOS. Para valores de versão menor estonteantes e de construção, a Microsoft recomenda garantir que os dispositivos estão atualizados com as respetivas atualizações de segurança. Consulte [as atualizações](https://support.apple.com/en-us/HT201222) de segurança da Apple para as mais recentes recomendações da Apple |
-| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor<br> Exemplo: 8.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor.Build <br>Exemplo: 12.4.6* / Acesso ao bloco |          iOS/iPadOS        | A Microsoft recomenda configurar a versão principal do iOS mínimo para combinar com as versões suportadas para iOS para aplicações da Microsoft.   As aplicações da Microsoft suportam uma abordagem N-1 onde n é a versão atual do iOS. Para valores de versão menor estonteantes e de construção, a Microsoft recomenda garantir que os dispositivos estão atualizados com as respetivas atualizações de segurança. Consulte [as atualizações](https://support.apple.com/en-us/HT201222) de segurança da Apple para as mais recentes recomendações da Apple |
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor<br> Exemplo: 5.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
 | Condições do dispositivo  |       Versão de patch de min  |          *Formato: YYYY-MM-DD <br> Exemplo: 2020-01-01* / Acesso ao bloco  |          Android        | Os dispositivos Android podem receber patches de segurança mensais, mas o lançamento depende de OEMs e/ou transportadoras. As organizações devem garantir que os dispositivos Android implantados recebem atualizações de segurança antes de implementar esta definição. Consulte os [Boletims](https://source.android.com/security/bulletin/) de Segurança Android para ver os mais recentes lançamentos de patch.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Alta proteção de dados da empresa de nível 3 
@@ -171,35 +171,36 @@ As definições de política aplicadas no nível 3 incluem todas as definições
 
 #### <a name="data-protection"></a>Proteção de dados
 
-| Definição | Descrição da definição |             Valor  |             Platform        | Notas |
+| Definição | Descrição da definição |             Valor  |             Plataforma        | Notas |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Transferência de dados |       Receber dados de outras apps  |          Aplicativos geridos por políticas  |          iOS/iPadOS, Android         |  |
-| Transferência de dados |       Teclados de terceiros  |          Bloqueio  |          iOS/iPadOS        | No iOS, isto bloqueia que todos os teclados de terceiros funcionem dentro da aplicação.  |
-| Transferência de dados |       Teclados aprovados  |          Exigir  |          Android        | Com o Android, os teclados devem ser selecionados para serem utilizados com base nos seus dispositivos Android implantados.  |
+| Transferência de dados |       Teclados de terceiros  |          Bloquear  |          iOS/iPadOS        | No iOS, isto bloqueia que todos os teclados de terceiros funcionem dentro da aplicação.  |
+| Transferência de dados |       Teclados aprovados  |          Requerer  |          Android        | Com o Android, os teclados devem ser selecionados para serem utilizados com base nos seus dispositivos Android implantados.  |
 | Transferência de dados |       Selecione teclados para aprovar  |          *adicionar/remover teclados*  |          Android        | Com o Android, os teclados devem ser selecionados para serem utilizados com base nos seus dispositivos Android implantados.  |
-| Funcionalidade |       Imprimir dados org  |          Bloqueio  |          iOS/iPadOS, Android         |  |
+| Funcionalidade |       Imprimir dados org  |          Bloquear  |          iOS/iPadOS, Android         |  |
 
 #### <a name="access-requirements"></a>Requisitos de acesso
 
-|       Definição  |          Valor  |          Platform  |
+|       Definição  |          Valor  |          Plataforma  |
 |-----------------------------------------------------------|--------------------|---------------------------------|
-|       PIN simples  |          Bloqueio  |          iOS/iPadOS, Android  |
+|       PIN simples  |          Bloquear  |          iOS/iPadOS, Android  |
 |       Selecione comprimento pin mínimo  |          6  |          iOS/iPadOS, Android  |
 |       PIN reset após o número de dias  |          Sim  |          iOS/iPadOS, Android  |
 |       Número de dias  |          365  |          iOS/iPadOS, Android  |
 
 #### <a name="conditional-launch"></a>Iniciação condicional
 
-| Definição | Descrição da definição |          Valor / Ação  |          Platform        | Notas |
+| Definição | Descrição da definição |          Valor / Ação  |          Plataforma        | Notas |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor<br> Exemplo: 8.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
 |       Condições do dispositivo  |          Dispositivos com jailbreak/rooting  |        Dados de N/A / Limpeza  |          iOS/iPadOS, Android        |  |
 |       Condições do dispositivo  |          Max permitiu o nível de ameaça  |          Acesso seguro / Bloco  |          iOS/iPadOS, Android        | <p>Dispositivos não matriculados podem ser inspecionados para obter ameaças usando a Defesa de Ameaças Móveis. Para mais informações, consulte [mobile threat defense para dispositivos não matriculados](https://aka.ms/mtdmamdocs).      </p><p>     Se o dispositivo estiver matriculado, esta definição pode ser ignorada a favor da implementação da Defesa de Ameaças Móveis para dispositivos matriculados. Para mais informações, consulte [mobile threat defense para dispositivos matriculados](../protect/mtd-device-compliance-policy-create.md).</p> |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Os administradores podem incorporar os níveis de configuração acima indicados na sua metodologia de implantação de anéis para testes e utilização da produção, importando os [modelos json](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) de configuração da política de proteção de aplicações [Intune Intune com os scripts PowerShell da Intune](https://github.com/microsoftgraph/powershell-intune-samples).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como criar e implementar políticas de proteção de aplicações com o Microsoft Intune](app-protection-policies.md)
 - [Definições de política de proteção de aplicativos Android disponíveis com microsoft Intune](app-protection-policy-settings-android.md)

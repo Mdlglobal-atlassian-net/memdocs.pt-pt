@@ -15,20 +15,20 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325121"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254712"
 ---
-# <a name="windows-update-settings-for-intune"></a>Definições de atualização do Windows para Intune  
+# <a name="windows-update-settings-for-intune"></a>Definições do Windows Update para o Intune  
 
 Ver as definições de Atualização do Windows 10 pode [configurar e gerir](windows-update-for-business-configure.md) com o Microsoft Intune.  
 
 Quando configurar as definições para os anéis de atualização do Windows 10 no Intune, está a configurar as definições de Atualização do Windows. Se uma definição de atualização do Windows tiver uma dependência da versão Do Windows 10, a dependência da versão é notada nos detalhes das definições.  
 
-## <a name="update-settings"></a>Definições de atualização  
+## <a name="update-settings"></a>Atualizar definições  
 
 As definições de atualização controlam quais as bits que um dispositivo irá descarregar e quando. Para obter mais informações sobre o comportamento de cada definição, consulte a documentação de referência do Windows.  
 
@@ -42,7 +42,7 @@ As definições de atualização controlam quais as bits que um dispositivo irá
 
   Canais de atualização suportados:  
 
-  - Canal Semestral  
+  - Via de Atualizações Semianuais  
   - Canal semestral (visado)  
   - Windows Insider – Rápido  
   - Windows Insider – Lento  
@@ -85,8 +85,7 @@ As definições de atualização controlam quais as bits que um dispositivo irá
   Período de adiamento apoiado:  
 
   - *Windows versão 1709 e mais tarde* - 0 a 365 dias  
-  - *Versão do Windows 1703* - 0 a 180 dias  
-
+  
   Normalmente, as Atualizações de Funcionalidades são novas funcionalidades do Windows.  
 
 - **Definir período de desinstalação de funcionalidades (2 a 60 dias)**  
@@ -164,8 +163,6 @@ As definições de experiência do utilizador controlam a experiência do utiliz
   
   Esta definição tem resultados diferentes dependendo da versão dos dispositivos do Windows:  
  
-  - *Versão 1703 do Windows e mais cedo* - Quando reinicia um dispositivo, existem algumas verificações que ocorrem, incluindo a verificação de utilizadores ativos, níveis de bateria, jogos de corrida e muito mais.  
-  
   - *Versão 1709 do Windows e posterior* - Durante o Dia ativo, os seguintes processos não funcionam para atualizações: digitalizar, descarregar, instalar e reiniciar. Após o Ative Hours, os processos de atualização funcionam e podem acordar o dispositivo do sono, digitalizar, descarregar, instalar e reiniciar o dispositivo desde que a bateria verifique e as verificações de energia passem. 
 
 - **Bloqueie o utilizador de fazer uma pausa nas atualizações do Windows**  
@@ -239,7 +236,7 @@ As definições de experiência do utilizador controlam a experiência do utiliz
 
     Especifica o número de dias que um utilizador tem antes de serem instaladas atualizações de qualidade nos seus dispositivos automaticamente (2-30).
 
-  - **Período de graça**  
+  - **Período de tolerância**  
     **Predefinição**: CSP de atualização do Windows *não configurado:* [Atualização/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Especifica um número mínimo de dias após o prazo até que orine automaticamente (2-7).

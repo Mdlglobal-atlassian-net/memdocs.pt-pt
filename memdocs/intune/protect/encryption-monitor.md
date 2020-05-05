@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322446"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255001"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorizar encriptação do dispositivo com Intune
 
 O relatório de encriptação Microsoft Intune é um local centralizado para visualizar detalhes sobre o estado de encriptação de um dispositivo e encontrar opções para gerir as chaves de recuperação do dispositivo. As opções-chave de recuperação disponíveis dependem do tipo de dispositivo que está a ver.
 
-Para encontrar o relatório, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Dispositivos** > **Monitor**, e, em seguida, em *Configuração,* selecione **relatório de encriptação**.
+Para encontrar o relatório, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Monitor de Dispositivos** > **,** e, em seguida, sob *configuração,* selecione **relatório de encriptação**.
 
 ## <a name="view-encryption-details"></a>Ver detalhes de encriptação
 
@@ -41,7 +41,7 @@ O relatório de encriptação suporta relatórios de reporte em dispositivos que
 - macOS 10.13 ou posterior
 - Versão 1607 ou mais tarde do Windows
 
-### <a name="report-details"></a>Reportar detalhes
+### <a name="report-details"></a>Detalhes do relatório
 
 O painel de relatório de encriptação apresenta uma lista dos dispositivos que gere com detalhes de alto nível sobre esses dispositivos. Pode selecionar um dispositivo da lista para perfurar e visualizar detalhes adicionais do painel de estado de encriptação do [dispositivo.](#device-encryption-status)
 
@@ -53,10 +53,10 @@ O painel de relatório de encriptação apresenta uma lista dos dispositivos que
   - **Ready**: O dispositivo pode ser encriptado utilizando a política de MDM, que requer que o dispositivo cumpra os seguintes requisitos:
 
     **Para dispositivos macOS:**
-    - MacOS versão 10.13 ou mais tarde
+    - macOS versão 10.13 ou posterior
 
     **Para dispositivos Windows 10:**
-    - Versão 1703 ou posterior, de *Negócios,* *Empresa,* *Educação,* ou versão 1809 ou posterior da *Pro*
+    - Versão 1709 ou posterior, de *Negócios,* *Empresa,* *Educação,* ou versão 1809 ou posterior da *Pro*
     - O dispositivo deve ter um chip TPM
 
     Para mais informações, consulte o fornecedor de serviços de [configuração BitLocker (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) na documentação do Windows.
@@ -90,13 +90,13 @@ Quando seleciona um dispositivo a partir do relatório de encriptação, intune 
 
   - Windows 10:
     - Tipo de perfil = *Proteção de Ponto final*
-    - Definições > Encriptação do Windows > Encriptar dispositivos = *Exigir*
+    - Definições > encriptação do Windows > encriptar dispositivos = *Exigir*
 
   Pode utilizar a lista de perfis para identificar políticas individuais de revisão caso o *resumo do Estado* do Perfil indique problemas.
 
 - **Resumo** do estado de perfil – Um resumo dos perfis que se aplicam a este dispositivo. O resumo representa a condição menos favorável entre os perfis aplicáveis. Por exemplo, se apenas um em cada vários perfis aplicáveis resultar num erro, o *resumo do estado do Perfil* mostrará *Erro*.
 
-  Para ver mais detalhes de um estado, vá à **configuração** do dispositivo **intune** >  > **Perfis**, e selecione o perfil. Opcionalmente, selecione **o estado do Dispositivo** e, em seguida, selecione um dispositivo.
+  Para ver mais detalhes de um estado, vá aos**Perfis**de**Configuração** > do Dispositivo **Intune,** > e selecione o perfil. Opcionalmente, selecione **o estado do Dispositivo** e, em seguida, selecione um dispositivo.
 
 - **Detalhes** do estado – Detalhes avançados sobre o estado de encriptação do dispositivo.
 
@@ -120,11 +120,11 @@ Quando seleciona um dispositivo a partir do relatório de encriptação, intune 
 
     *Considere: Intune não pode configurar fileVault num dispositivo que já está encriptado. Em vez disso, o utilizador precisa de desencriptar manualmente o seu dispositivo antes de poder ser gerido por uma política de configuração do dispositivo e insoina .*
 
-  - O FileVault precisa que o utilizador aprove o seu perfil de gestão no MacOS Catalina e superior.
+  - O FileVault precisa que o utilizador aprove o seu perfil de gestão no macOS Catalina e superior.
 
-    *Considere: Começando com a versão 10.15 do MacOS (Catalina), as definições de inscrição aprovadas pelo utilizador podem resultar na exigência de que os utilizadores aprovem manualmente a encriptação do FileVault. Para mais informações, consulte a [inscrição aprovada](../enrollment/macos-enroll.md) pelo utilizador na documentação Intune*.
+    *Considere: Começando com a versão 10.15 do macOS (Catalina), as definições de inscrição aprovadas pelo utilizador podem resultar na exigência de que os utilizadores aprovem manualmente a encriptação fileVault. Para mais informações, consulte a [inscrição aprovada](../enrollment/macos-enroll.md) pelo utilizador na documentação Intune*.
 
-  - Desconhecida.
+  - Desconhecido.
 
     *Considere: Uma causa possível para um estado desconhecido é que o dispositivo está bloqueado e Intune não pode iniciar o processo de caução ou encriptação. Depois de o dispositivo ser desbloqueado, o progresso pode continuar.*
 
@@ -229,8 +229,8 @@ Intune fornece acesso à lâmina AD Azure para BitLocker para que possa ver IDs 
 
    Quando as teclas não estiverem em Azure AD, intune apresentará *nenhuma tecla BitLocker encontrada para este dispositivo*.
 
-A informação para o BitLocker é obtida utilizando o fornecedor de serviços de [configuração BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). O BitLocker CSP é suportado na versão 1703 do Windows 10 e posteriormente, e para a versão 1809 do Windows 10 Pro.
+A informação para o BitLocker é obtida utilizando o fornecedor de serviços de [configuração BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). O BitLocker CSP é suportado na versão 1709 do Windows 10 e posteriormente, e para a versão 1809 do Windows 10 Pro.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Crie uma política de [conformidade com o dispositivo.](compliance-policy-create-windows.md)

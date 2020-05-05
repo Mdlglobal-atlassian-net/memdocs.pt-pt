@@ -1,6 +1,6 @@
 ---
-title: Definições de dispositivos empresariais Android no Microsoft Intune – Azure | Documentos da Microsoft
-description: Nos dispositivos Android Enterprise ou Android for Work, restringeas definições no dispositivo, incluindo cópia e pasta, notificações de exibição, permissões de aplicações, partilha de dados, comprimento da palavra-passe, registo de falhas, utilização de impressões digitais para desbloquear, reutilizar palavras-passe e ativar bluetooth partilha de contactos de trabalho. Configure os dispositivos como um quiosque dedicado para executar uma aplicação, ou várias aplicações.
+title: Configurações de dispositivos Android Enterprise no Microsoft Intune - Azure Microsoft Docs
+description: Nos dispositivos Android Enterprise ou Android for Work, restringe as definições do dispositivo, incluindo cópia e pasta, notificações de exibição, permissões de aplicações, partilha de dados, comprimento da palavra-passe, registo de falhas, utilização de impressões digitais para desbloquear, reutilizar palavras-passe e permitir a partilha de bluetooth dos contactos de trabalho. Configure os dispositivos como um quiosque dedicado para executar uma aplicação, ou várias aplicações.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407892"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166575"
 ---
-# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos do Android Enterprise para permitir ou restringir funcionalidades com o Intune
+# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configurações do dispositivo Android Enterprise para permitir ou restringir funcionalidades usando Intune
 
-Este artigo apresenta e descreve as diferentes definições que pode controlar em dispositivos Android Enterprise. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para permitir ou desativar funcionalidades, executar aplicações em dispositivos dedicados, segurança de controlo e muito mais.
+Este artigo lista e descreve as diferentes configurações que pode controlar nos dispositivos Android Enterprise. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para permitir ou desativar funcionalidades, executar aplicações em dispositivos dedicados, segurança de controlo e muito mais.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -43,7 +43,7 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
   Intune só consegue o acesso à câmara do dispositivo. Não tem acesso a fotografias ou vídeos.
 
 - **Política de permissões predefinida**: esta definição configura a política de permissões predefinida para pedidos de permissões de runtime. As suas opções
-  - **Predefinição do dispositivo**: utiliza a predefinição do dispositivo.
+  - **Predefinição do dispositivo**: Utilize a definição predefinida do dispositivo.
   - **Solicitação**: Os utilizadores são solicitados a aprovar a permissão.
   - **Conceder automaticamente**: as permissões são concedidas automaticamente.
   - **Negar automaticamente**: as permissões são negadas automaticamente.
@@ -53,7 +53,7 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 - **Bota segura**: **O bloco** impede que os utilizadores reiniciem o dispositivo em modo de segurança. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores reiniciem o dispositivo em modo de segurança.
 - **Barra de estado**: **O bloco** impede o acesso à barra de estado, incluindo notificações e configurações rápidas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir aos utilizadores o acesso à barra de estado.
 - **Serviços**de dados de roaming : **O bloco** impede que os dados circulam pela rede celular. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o roaming de dados quando o dispositivo está numa rede celular.
-- Alterações de definição de **Wi-Fi**: **O bloco** impede que os utilizadores mudem as definições de Wi-Fi criadas pelo proprietário do dispositivo. Os utilizadores podem criar suas próprias configurações de Wi-Fi. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores alterem as definições de Wi-Fi no dispositivo.
+- Alterações de definição de **Wi-Fi**: **O bloco** impede que os utilizadores mudem as definições de Wi-Fi criadas pelo proprietário do dispositivo. Os utilizadores podem criar as suas próprias configurações wi-fi. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores alterem as definições de Wi-Fi no dispositivo.
 - **Configuração do ponto de acesso Wi-Fi**: O **bloco** impede os utilizadores de criar ou alterar quaisquer configurações wi-fi. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores alterem as definições de Wi-Fi no dispositivo.
 - **Configuração Bluetooth**: **O bloco** impede os utilizadores de configurar bluetooth no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a utilização de Bluetooth no dispositivo.
 - **Amarração e acesso a hotspots**: **O bloco** impede a amarração e o acesso a hotspots portáteis. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a amarração e o acesso a hotspots portáteis.
@@ -63,13 +63,13 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 - Dados de **feixes utilizando NFC**: **O bloco** impede a utilização da tecnologia Near Field Communication (NFC) para obter dados de aplicações. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que o NFC partilhe dados entre dispositivos.
 - **Funcionalidades de depuração**: Escolha **permitir** que os utilizadores utilizem funcionalidades de depuração no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode impedir que os utilizadores utilizem as funcionalidades de depuração do dispositivo.
 - **Regulação do microfone**: **O bloco** impede que os utilizadores desloquem o microfone e ajustem o volume do microfone. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores utilizem e ajustem o volume do microfone no dispositivo.
-- **E-mails**de proteção de reset de fábrica : Escolha endereços de **e-mail da conta google**. Introduza os endereços de e-mail dos administradores de dispositivos que possam desbloquear o dispositivo depois de serem eliminado. Certifique-se de separar os endereços de e-mail com um ponto e vírgula, como `admin1@gmail.com;admin2@gmail.com`. Se uma mensagem de e-mail não é inserida, qualquer pessoa pode desbloquear o dispositivo após o restauro para as definições de fábrica. Estes e-mails só se aplicam quando uma fábrica não utilizadora é executada, como executar uma reposição de fábrica usando o menu de recuperação.
+- **E-mails**de proteção de reset de fábrica : Escolha endereços de **e-mail da conta google**. Introduza os endereços de e-mail dos administradores do dispositivo que podem desbloquear o dispositivo depois de limpo. Certifique-se de separar os endereços de e-mail com um ponto evíbis, como `admin1@gmail.com;admin2@gmail.com`. Se um e-mail não for introduzido, qualquer pessoa pode desbloquear o dispositivo depois de restaurado nas definições da fábrica. Estes e-mails só se aplicam quando uma fábrica não utilizadora é executada, como executar uma reposição de fábrica usando o menu de recuperação.
 
   Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
-- **Saída de rede**: **Ativar** permite que os utilizadores liguem a função de saída da rede. Se uma conexão de rede não é feita quando o dispositivo for arrancado, a saída de emergência pede para temporariamente ligar a uma rede e atualizar a política de dispositivo. Depois da aplicação da política, a rede temporária é esquecida e o dispositivo continua o arranque. Esta funcionalidade liga dispositivos a uma rede se:
-  - Não existe uma rede adequada na política de última.
-  - O dispositivo for arrancado numa aplicação no modo de bloqueio de tarefa.
+- **Saída de rede**: **Ativar** permite que os utilizadores liguem a função de saída da rede. Se uma ligação de rede não for feita quando o dispositivo arranca, então a escotilha de fuga pede para ligar temporariamente a uma rede e refrescar a política do dispositivo. Depois da aplicação da política, a rede temporária é esquecida e o dispositivo continua o arranque. Esta função liga os dispositivos a uma rede se:
+  - Não há uma rede adequada na última apólice.
+  - O dispositivo entra numa aplicação em modo de tarefa de bloqueio.
   - Os utilizadores não conseguem alcançar as definições do dispositivo.
 
   Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode impedir que os utilizadores ligassem a função de saída da rede no dispositivo.
@@ -78,14 +78,14 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
   - **Predefinição do Dispositivo**: utiliza a predefinição do dispositivo.
   - **Automático**: as atualizações são instaladas automaticamente sem interação do utilizador. Definir esta política imediatamente instala todas as atualizações pendentes.
   - **Adiado**: as atualizações são adiadas por 30 dias. No final dos 30 dias, o Android leva os utilizadores a instalarem a atualização. É possível os fabricantes de dispositivos ou operadoras impedirem (isentarem) o adiamento de atualizações de segurança importantes. Uma atualização isenta mostra uma notificação do sistema aos utilizadores no dispositivo.
-  - **Janela de manutenção**: as atualizações são instaladas automaticamente durante uma janela de manutenção diária definida no Intune. Instalação tenta diariamente durante 30 dias e pode falhar se houver níveis insuficientes de espaço ou útil da bateria. Após 30 dias, o Android leva os utilizadores a instalarem-se. Esta janela também é utilizada para instalar atualizações para aplicações do Play. Utilize esta opção para dispositivos dedicados, como quiosques, uma vez que as aplicações de primeiro plano dedicadas a dispositivos únicos podem ser atualizadas.
+  - **Janela de manutenção**: as atualizações são instaladas automaticamente durante uma janela de manutenção diária definida no Intune. A instalação tenta diariamente durante 30 dias, podendo falhar se não houver espaço ou níveis de bateria insuficientes. Após 30 dias, o Android leva os utilizadores a instalarem-se. Esta janela também é utilizada para instalar atualizações para aplicações do Play. Utilize esta opção para dispositivos dedicados, como quiosques, uma vez que as aplicações de primeiro plano dedicadas a dispositivos únicos podem ser atualizadas.
 
 - **Janelas de notificação**: Quando definido para **Desativar,** notificações de janelas, incluindo torradas, chamadas recebidas, chamadas de saída, alertas de sistema e erros do sistema não são mostrados no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode apresentar notificações.
 - **Ignore as dicas de utilização inicial**: **Ative** ocultar ou ignora sugestões de apps que passem por tutoriais ou sugestões quando a aplicação começa. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode mostrar estas sugestões quando a aplicação começar.
 
 ### <a name="system-security"></a>Segurança do sistema
 
-- **A varredura de ameaças em apps**: **Require** (padrão) permite ao Google Play Protect digitalizar aplicações antes e depois de serem instaladas. Caso detete uma ameaça, poderá alertar os utilizadores para a remoção da aplicação do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o OS pode não ativar ou executar o Google Play Protect para digitalizar aplicações.
+- **A varredura de ameaças em apps**: **Require** (padrão) permite ao Google Play Protect digitalizar aplicações antes e depois de serem instaladas. Caso detete uma ameaça, poderá alertar os utilizadores para a remoção da aplicação do dispositivo. Quando definido para **Não configurado**, Intune não altera nem atualiza esta definição. Por padrão, o OS pode não ativar ou executar o Google Play Protect para digitalizar aplicações.
 
 ### <a name="dedicated-devices"></a>Dispositivos dedicados
 
@@ -94,7 +94,7 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
 **Modo quiosque**: Escolha se o dispositivo executa uma aplicação ou executa várias aplicações.
 
 - **Não configurado**: Intune não altera nem atualiza esta definição.
-- **Aplicação única**: Os utilizadores só podem aceder a uma única aplicação no dispositivo. Quando o dispositivo é iniciado, apenas a aplicação específica é iniciada. Os utilizadores não podem abrir novas aplicações ou mudar a aplicação em execução.
+- **Aplicação única**: Os utilizadores só podem aceder a uma única aplicação no dispositivo. Quando o dispositivo começa, apenas começa a aplicação específica. Os utilizadores não podem abrir novas aplicações ou mudar a aplicação em execução.
 
   - **Selecione uma aplicação gerida**: Selecione a aplicação gerida do Google Play na lista.
 
@@ -103,7 +103,7 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   > [!IMPORTANT]
   > Ao utilizar o modo de quiosque de aplicações únicas, as aplicações dialerador/telefone podem não funcionar corretamente.
   
-- **Multi-aplicações:** Os utilizadores podem aceder a um conjunto limitado de aplicações no dispositivo. Quando o dispositivo é iniciado, inicie apenas as aplicações que adicionar. Também pode adicionar alguns links da web que os utilizadores podem abrir. Quando a política é aplicada, os utilizadores veem ícones para aplicações permitidas na tela inicial.
+- **Multi-aplicações:** Os utilizadores podem aceder a um conjunto limitado de aplicações no dispositivo. Quando o dispositivo começa, apenas as aplicações que adiciona saem. Também pode adicionar alguns links web que os utilizadores podem abrir. Quando a política é aplicada, os utilizadores vêem ícones para as aplicações permitidas no ecrã principal.
 
   > [!IMPORTANT]
   > Para dispositivos dedicados a várias aplicações, a [aplicação Managed Home Screen](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) do Google Play **deve ser:**
@@ -130,11 +130,11 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   
     1. Continua a selecionar o botão traseiro até que seja mostrado o botão do **quiosque de saída.** 
     2. Seleciona o botão **de quiosque de saída** e introduz o código pin do modo de quiosque **Leave.**
-    3. Quando terminar, selecione a aplicação **Managed Home Screen.** Este passo relocks o dispositivo em modo de local público de várias aplicações.
+    3. Quando terminar, selecione a aplicação **Managed Home Screen.** Este passo rebloqueia o dispositivo em modo quiosque multi-aplicações.
 
       Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode impedir os administradores de pararem o modo de quiosque. Se o administrador continuar a selecionar o botão de trás e selecionar o botão de **quiosque de saída,** então uma mensagem indica que é necessária uma senha.
 
-    - **Deixe**o código do modo quiosque : Introduza um PIN numérico de 4-6 dígitos. O administrador utiliza este PIN para interromper temporariamente o modo de local público.
+    - **Deixe**o código do modo quiosque : Introduza um PIN numérico de 4-6 dígitos. O administrador utiliza este PIN para interromper temporariamente o modo de quiosque.
 
   - **Definir o fundo de URL personalizado**: Introduza um URL para personalizar o ecrã de fundo no dispositivo dedicado. Por exemplo, introduza `http://contoso.com/backgroundimage.jpg`.
 
@@ -160,7 +160,7 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
 
     Quando ativado, configure também:
 
-    - **Definir imagem de poupança**de ecrã personalizada : Introduza o URL num PNG personalizado, JPG, JPEG, GIF, BMP, WebP ou ICOimage. Por exemplo, introduza:
+    - **Definir imagem de poupança**de ecrã personalizada : Introduza o URL num PNG personalizado, JPG, JPEG, GIF, BMP, WebP ou ICOimage. Por exemplo, introduza: 
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
@@ -171,8 +171,8 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
       > [!TIP]
       > Qualquer URL de recurso de ficheiro que possa ser transformado num bitmap é suportado.
 
-    - **Número de segundos o dispositivo mostra o protetor de ecrã antes**de desligar o ecrã : Escolha quanto tempo o dispositivo mostra o protetor de ecrã. Introduza um valor entre 0-9999999 segundos. O padrão é `0` segundos. Quando deixada em branco, ou definida a zero (`0`), o protetor de ecrã está ativo até que um utilizador interaja com o dispositivo.
-    - **Número de segundos em**que o dispositivo está inativo antes de mostrar o protetor de ecrã : Escolha o tempo que o dispositivo está inativo antes de mostrar o protetor de ecrã. Introduza um valor entre 1-9999999 segundos. O padrão é `30` segundos. Deve introduzir um número superior a zero (`0`).
+    - **Número de segundos o dispositivo mostra o protetor de ecrã antes**de desligar o ecrã : Escolha quanto tempo o dispositivo mostra o protetor de ecrã. Introduza um valor entre 0-9999999 segundos. Padrão `0` são segundos. Quando deixada em branco,`0`ou definida a zero , o protetor de ecrã está ativo até que um utilizador interaja com o dispositivo.
+    - **Número de segundos em**que o dispositivo está inativo antes de mostrar o protetor de ecrã : Escolha o tempo que o dispositivo está inativo antes de mostrar o protetor de ecrã. Introduza um valor entre 1-9999999 segundos. Padrão `30` são segundos. Deve introduzir um número superior`0`a zero ( ).
     - **Detete os meios de comunicação antes**de iniciar o protetor de ecrã : **Ativar** (predefinido) não mostra o protetor de ecrã se o áudio ou o vídeo estiverem a reproduzir-se no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode mostrar o protetor de ecrã, mesmo que o áudio ou o vídeo esteja a ser reproduzido.
 
 ### <a name="password"></a>Palavra-passe
@@ -186,7 +186,7 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   - **Predefinição do dispositivo**
   - **Palavra-passe obrigatória, sem restrições**
   - **Biométrico fraco**: [Biometria forte vs. biométrico fraco](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre o site do Android)
-  - **Numérico:** A palavra-passe só deve ser números, como `123456789`. Introduza também:
+  - **Numérico:** A palavra-passe `123456789`só deve ser números, tais como . Introduza também:
     - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, entre 4 e 16 caracteres.
   - **Complexo numérico**: Números repetidos ou consecutivos, como "1111" ou "1234", não são permitidos. Introduza também:
     - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, entre 4 e 16 caracteres.
@@ -201,22 +201,25 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
     - **Número de caracteres minúsculos necessários**: Introduza o número de caracteres minúsculos que a palavra-passe deve ter, entre 0 e 16 caracteres.
     - **Número de caracteres maiúsculos necessários**: Introduza o número de caracteres maiúsculos que a palavra-passe deve ter, entre 0 e 16 caracteres.
     - **Número de caracteres não-letra necessários**: Introduza o número de não-letras (qualquer outra coisa que não seja letras no alfabeto) a palavra-passe deve ter, entre 0 e 16 caracteres.
-    - **Número de caracteres numéricos necessários**: Introduza o número de caracteres numéricos (`1`, `2`, `3`, e assim por diante) a palavra-passe deve ter, entre 0 e 16 caracteres.
-    - **Número de caracteres de símbolo necessários**: Introduza o número de caracteres de símbolos (`&`, `#`, `%`, e assim por diante) a palavra-passe deve ter, entre 0 e 16 caracteres.
+    - **Número de caracteres numéricos necessários:** Introduza`1` `2`o `3`número de caracteres numéricos ( , , , e assim por diante) a palavra-passe deve ter, entre 0 e 16 caracteres.
+    - **Número de caracteres de símbolo necessários**:`&` `#`Introduza o número de caracteres de símbolo ( , , `%`, e assim por diante) a palavra-passe deve ter, entre 0 e 16 caracteres.
 
-- Número de dias até que a **palavra-passe expire**: Introduza o número de dias, até que a palavra-passe do dispositivo seja alterada, de 1 a 365. Por exemplo, insira `90` para expirar a senha após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-- **Número de palavras-passe necessárias antes de o utilizador poder reutilizar uma palavra-passe**: Utilize esta definição para restringir os utilizadores de criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, introduza `5` para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0` (zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- Número de dias até que a **palavra-passe expire**: Introduza o número de dias, até que a palavra-passe do dispositivo seja alterada, de 1 a 365. Por exemplo, `90` introduza para expirar a palavra-passe após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Número de palavras-passe necessárias antes de o utilizador poder reutilizar uma palavra-passe**: Utilize esta definição para restringir os utilizadores de criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, `5` introduza para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0`(zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+
+  > [!NOTE]
+  > Dispositivo Os dispositivos proprietário do dispositivo não serão solicitados a definir uma palavra-passe. As definições serão aplicadas e terá de definir a palavra-passe manualmente. A aplicação da política será como falhada até definir a palavra-passe que satisfaz os seus requisitos.
 
 ### <a name="power-settings"></a>Definições de energia
 
-- **Tempo para bloquear o ecrã**: Introduza o tempo máximo que um utilizador pode definir até que o dispositivo bloqueie. Por exemplo, se definir esta definição para `10 minutes`, então os utilizadores podem definir o tempo de 15 segundos até 10 minutos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Tempo para bloquear o ecrã**: Introduza o tempo máximo que um utilizador pode definir até que o dispositivo bloqueie. Por exemplo, se definir `10 minutes`esta definição para , então os utilizadores podem definir o tempo de 15 segundos até 10 minutos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
 - **Ecrã ligado enquanto o dispositivo está ligado**: selecione que fontes de energia fazem com que o ecrã do dispositivo permaneça ligado enquanto o dispositivo está ligado.
 
 ### <a name="users-and-accounts"></a>Utilizadores e Contas
 
-- **Adicionar novos utilizadores**: **O Bloco** impede os utilizadores de adicionarem novos utilizadores. Cada utilizador tem um espaço pessoal no dispositivo para personalizado Home ecrãs, contas, aplicações e definições. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores adicionem outros utilizadores ao dispositivo.
+- **Adicionar novos utilizadores**: **O Bloco** impede os utilizadores de adicionarem novos utilizadores. Cada utilizador tem um espaço pessoal no dispositivo para ecrãs, contas, apps e configurações personalizadas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores adicionem outros utilizadores ao dispositivo.
 - **Remoção do utilizador**: **O bloco** impede que os utilizadores removam os utilizadores. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores removam outros utilizadores do dispositivo.
 - **Alterações na conta** (apenas dispositivos dedicados): **O bloco** impede os utilizadores de modificar contas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir aos utilizadores atualizarem as contas dos utilizadores no dispositivo.
 
@@ -251,14 +254,14 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   - F5 Access
   - Palo Alto Networks GlobalProtect
   - Pulse Secure
-  - Personalizar
+  - Personalizado
     - **ID de Pacote**: introduza o ID do pacote da aplicação na Google Play Store. Por exemplo, se o URL da aplicação na Play Store for `https://play.google.com/store/details?id=com.contosovpn.android.prod`, o ID de pacote é `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  > - O cliente VPN que escolher tem de estar instalado no dispositivo e deve suportar a VPN por aplicação em perfis de trabalho. Caso contrário, será apresentado um erro. 
+  > - O cliente VPN que escolher tem de estar instalado no dispositivo e deve suportar a VPN por aplicação em perfis de trabalho. Caso contrário, ocorrerá um erro. 
   > - Tem de aprovar a aplicação cliente VPN na **Managed Google Play Store**, sincronizar a aplicação com o Intune e implementar a aplicação no dispositivo. Depois de o fazer, a aplicação é instalada no perfil de trabalho do utilizador.
   > - Ainda precisa de configurar o cliente VPN com um [perfil VPN](vpn-settings-android-enterprise.md), ou através de um perfil de configuração de [aplicações](../apps/app-configuration-policies-use-android.md).
-  > - Aqui pode ser problemas conhecidos ao utilizar a VPN por aplicação com acesso de F5 para Android 3.0.4. Para mais informações, consulte as notas de lançamento do F5 para o [Acesso F5 para Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - Pode haver problemas conhecidos ao utilizar VPN por app com Acesso F5 para Android 3.0.4. Para mais informações, consulte as notas de lançamento do F5 para o [Acesso F5 para Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Modo de bloqueio**: **Ativar** todo o tráfego de rede para utilizar o túnel VPN. Se não for estabelecida uma ligação à VPN, o dispositivo não terá acesso à rede. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que o tráfego flua através do túnel VPN ou através da rede móvel.
 
@@ -271,7 +274,7 @@ Utilize estas definições para configurar uma experiência de estilo quiosque n
   - **Direto**: Introduza manualmente os dados do servidor proxy, incluindo:
     - **Anfitrião**: Introduza o nome de anfitrião ou endereço IP do seu servidor proxy. Por exemplo, introduza: `proxy.contoso.com` ou `127.0.0.1`.
     - **Número**da porta : Introduza o número da porta TCP utilizado pelo servidor proxy. Por exemplo, introduza `8080`.
-    - **Anfitriões excluídos**: Introduza uma lista de nomes de anfitriões ou endereços IP que não utilizem o proxy. Esta lista pode incluir um wildcard asterisco (`*`) e vários anfitriões separados por pontos evímetros (`;`) sem espaços. Por exemplo, introduza `127.0.0.1;web.contoso.com;*.microsoft.com`.
+    - **Anfitriões excluídos**: Introduza uma lista de nomes de anfitriões ou endereços IP que não utilizem o proxy. Esta lista pode incluir um`*`wildcard asterisco e vários`;`anfitriões separados por pontos evímetros ( ) sem espaços. Por exemplo, introduza `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
   - **Proxy Auto-Config**: Introduza o **URL PAC** num script de configuração automática proxy. Por exemplo, introduza `https://proxy.contoso.com/proxy.pac`.
 
@@ -295,11 +298,11 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 - **Notificações**de perfil de trabalho enquanto o dispositivo está bloqueado : O **bloco** impede que as notificações das janelas, incluindo torradas, chamadas recebidas, chamadas de saída, alertas de sistema e erros do sistema apareçam em dispositivos bloqueados. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema operativo pode apresentar notificações.
 - **Permissões de aplicações predefinidas**: define a política de permissões predefinida para todas as aplicações do perfil de trabalho. A partir do Android 6, os utilizadores são solicitados a conceder determinadas permissões exigidas pelas aplicações quando a aplicação é lançada. Esta definição de política permite-lhe decidir se é pedido aos utilizadores a concessão de permissões para todas as aplicações no perfil de trabalho. Por exemplo, poderá atribuir uma aplicação ao perfil de trabalho que precisa de acesso de localização. Normalmente, essa aplicação leva os utilizadores a aprovarou ou negar o acesso à localização da aplicação. Utilize esta política para conceder automaticamente permissões sem um aviso prévio, negar automaticamente permissões sem um aviso prévio ou deixar os utilizadores decidirem. As opções são:
   - **Predefinição do dispositivo**
-  - **Pedido de confirmação**
-  - **Conceder automaticamente**
+  - **Mensagem**
+  - **Concessão de automóveis**
   - **Negar automaticamente**
 
-  Também pode utilizar uma política de configuração de aplicações para conceder permissões para aplicações individuais **(Aplicações de clientes** > políticas de configuração de **Apps).**
+  Também pode utilizar uma política de configuração de aplicações para conceder permissões para aplicações individuais (políticas de configuração de > **aplicações****de aplicações de clientes).**
 
 - **Adicionar e remover contas**: **O bloco** impede os utilizadores de adicionar ou remover manualmente contas no perfil de trabalho. Por exemplo, quando implementa a aplicação do Gmail num perfil de trabalho Android, pode impedir que os utilizadores adicionem ou removam contas neste perfil de trabalho. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir adicionar contas no perfil de trabalho.  
 
@@ -337,24 +340,24 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
   - Android 7.0 e mais recente com o perfil de trabalho ativado
 
 - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, entre 4 e 16 caracteres.
-- **Minutos máximos de inatividade até que o perfil**de trabalho bloqueie : Introduza o comprimento do tempo que os dispositivos devem ficar inativos antes de o ecrã estar automaticamente bloqueado. Os utilizadores devem introduzir as suas credenciais para recuperar o acesso. Por exemplo, introduza `5` para bloquear o aparelho após 5 minutos de inativo. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
+- **Minutos máximos de inatividade até que o perfil**de trabalho bloqueie : Introduza o comprimento do tempo que os dispositivos devem ficar inativos antes de o ecrã estar automaticamente bloqueado. Os utilizadores devem introduzir as suas credenciais para recuperar o acesso. Por exemplo, `5` introduza para bloquear o dispositivo após 5 minutos de inativo. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
 
-  Nos dispositivos, os utilizadores não podem definir um valor de tempo superior ao tempo configurado no perfil. Os utilizadores podem definir um valor de tempo mais baixo. Por exemplo, se o perfil for definido para `15` minutos, os utilizadores podem definir o valor para 5 minutos. Os utilizadores não podem definir o valor para 30 minutos.
+  Nos dispositivos, os utilizadores não podem definir um valor de tempo superior ao tempo configurado no perfil. Os utilizadores podem definir um valor de tempo mais baixo. Por exemplo, se o `15` perfil for definido para minutos, os utilizadores podem definir o valor para 5 minutos. Os utilizadores não podem definir o valor para 30 minutos.
 
-- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0` (zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0`(zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 
-- **Expiração da palavra-passe (dias)** : Introduza o número de dias até que as palavras-passe do utilizador sejam alteradas (a partir de **1**-**365**).
+- **Expiração da palavra-passe (dias)**: Introduza o número de dias até que as palavras-passe do utilizador sejam alteradas (a partir de **1**-**365**).
 - Tipo de **palavra-passe necessário**: Introduza o nível de complexidade da palavra-passe exigido e se podem ser utilizados dispositivos biométricos. As opções são:
   - **Predefinição do dispositivo**
   - **Biometria de baixa segurança**: [Biometria forte vs. biométrico fraco](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre o site do Android)
   - **Necessário**
-  - **Pelo menos numérico:** Inclui caracteres numéricos, como `123456789`.
-  - **Complexo numérico**: Números repetidos ou consecutivos, tais como `1111` ou `1234`, não são permitidos.
+  - **Pelo menos numérico:** Inclui caracteres `123456789`numéricos, tais como .
+  - **Complexo numérico**: Números `1111` repetidos ou consecutivos, tais como ou, `1234`não são permitidos.
   - **Pelo menos alfabético:** Inclui letras no alfabeto. Não são obrigatórios números nem símbolos.
   - **Pelo menos alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos.
   - **Pelo menos alfanumérico com símbolos**: Inclui letras maiúsculas, letras minúsculas, caracteres numéricos, marcas de pontuação e símbolos.
 
-- **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, introduza `5` para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, `5` introduza para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - **Desbloqueio de impressões digitais**: **O bloco** impede que os utilizadores utilizem o scanner de impressões digitais do dispositivo para desbloquear o dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores desbloqueiem o dispositivo utilizando uma impressão digital.
 - **Smart Lock e outros agentes fidedignos:** **O Bloco** impede que o Smart Lock ou outros agentes fiduciários ajustem as definições do ecrã de bloqueio em dispositivos compatíveis. Se os dispositivos estiverem num local de confiança, então esta funcionalidade, também conhecida como agente fiduciário, permite-lhe desativar ou contornar a palavra-passe do ecrã de bloqueio do dispositivo. Por exemplo, ignore a palavra-passe do perfil de trabalho quando os dispositivos estiverem ligados a um dispositivo Bluetooth específico, ou quando os dispositivos estiverem perto de uma etiqueta NFC. Utilize esta definição para impedir que os utilizadores configurem o Smart Lock.
 
@@ -362,26 +365,26 @@ Estas definições aplicam-se aos tipos de inscrição do Android Enterprise ond
 
 ### <a name="password"></a>Palavra-passe
 
-Estas definições de palavra-passe aplicam-se aos perfis pessoais nos dispositivos que utilizam um perfil de trabalho.
+Estas definições de palavra-passe aplicam-se a perfis pessoais em dispositivos que utilizam um perfil de trabalho.
 
 - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, entre 4 e 16 caracteres.
-- **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o comprimento do tempo que os dispositivos devem ficar inativos antes de o ecrã estar automaticamente bloqueado. Os utilizadores devem introduzir as suas credenciais para recuperar o acesso. Por exemplo, introduza `5` para bloquear o aparelho após 5 minutos de inativo. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
+- **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o comprimento do tempo que os dispositivos devem ficar inativos antes de o ecrã estar automaticamente bloqueado. Os utilizadores devem introduzir as suas credenciais para recuperar o acesso. Por exemplo, `5` introduza para bloquear o dispositivo após 5 minutos de inativo. Quando o valor está em branco ou definido para **Não configurado**, Intune não altera nem atualiza esta definição.
 
-  Nos dispositivos, os utilizadores não podem definir um valor de tempo superior ao tempo configurado no perfil. Os utilizadores podem definir um valor de tempo mais baixo. Por exemplo, se o perfil for definido para `15` minutos, os utilizadores podem definir o valor para 5 minutos. Os utilizadores não podem definir o valor para 30 minutos.
+  Nos dispositivos, os utilizadores não podem definir um valor de tempo superior ao tempo configurado no perfil. Os utilizadores podem definir um valor de tempo mais baixo. Por exemplo, se o `15` perfil for definido para minutos, os utilizadores podem definir o valor para 5 minutos. Os utilizadores não podem definir o valor para 30 minutos.
 
-- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0` (zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-- **Expiração da palavra-passe (dias)** : Introduza o número de dias, até que a palavra-passe do dispositivo seja alterada, de 1 a 365. Por exemplo, insira `90` para expirar a senha após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 4 a 11. `0`(zero) pode desativar a funcionalidade de limpeza do dispositivo. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Expiração da palavra-passe (dias)**: Introduza o número de dias, até que a palavra-passe do dispositivo seja alterada, de 1 a 365. Por exemplo, `90` introduza para expirar a palavra-passe após 90 dias. Quando a palavra-passe expirar, será pedido aos utilizadores para criar uma nova. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - Tipo de **palavra-passe necessário**: Introduza o nível de complexidade da palavra-passe exigido e se podem ser utilizados dispositivos biométricos. As opções são:
   - **Predefinição do dispositivo**
   - **Biometria de baixa segurança**: [Biometria forte vs. biométrico fraco](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (abre o site do Android)
   - **Necessário**
-  - **Pelo menos numérico:** Inclui caracteres numéricos, como `123456789`.
-  - **Complexo numérico**: Números repetidos ou consecutivos, tais como `1111` ou `1234`, não são permitidos.
+  - **Pelo menos numérico:** Inclui caracteres `123456789`numéricos, tais como .
+  - **Complexo numérico**: Números `1111` repetidos ou consecutivos, tais como ou, `1234`não são permitidos.
   - **Pelo menos alfabético:** Inclui letras no alfabeto. Não são obrigatórios números nem símbolos.
   - **Pelo menos alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos.
   - **Pelo menos alfanumérico com símbolos**: Inclui letras maiúsculas, letras minúsculas, caracteres numéricos, marcas de pontuação e símbolos.
 
-- **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, introduza `5` para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, `5` introduza para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - **Desbloqueio de impressões digitais**: **O bloco** impede que os utilizadores utilizem o scanner de impressões digitais do dispositivo para desbloquear o dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores desbloqueiem o dispositivo utilizando uma impressão digital.
 - **Smart Lock e outros agentes fidedignos:** **O Bloco** impede que o Smart Lock ou outros agentes fiduciários ajustem as definições do ecrã de bloqueio em dispositivos compatíveis. Se os dispositivos estiverem num local de confiança, então esta funcionalidade, também conhecida como agente fiduciário, permite-lhe desativar ou contornar a palavra-passe do ecrã de bloqueio do dispositivo. Por exemplo, ignore a palavra-passe do perfil de trabalho quando os dispositivos estiverem ligados a um dispositivo Bluetooth específico, ou quando os dispositivos estiverem perto de uma etiqueta NFC. Utilize esta definição para impedir que os utilizadores configurem o Smart Lock.
 
@@ -414,19 +417,19 @@ Estas definições de palavra-passe aplicam-se aos perfis pessoais nos dispositi
   - F5 Access
   - Palo Alto Networks GlobalProtect
   - Pulse Secure
-  - Personalizar
+  - Personalizado
     - **ID de Pacote**: introduza o ID do pacote da aplicação na Google Play Store. Por exemplo, se o URL da aplicação na Play Store for `https://play.google.com/store/details?id=com.contosovpn.android.prod`, o ID de pacote é `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  > - O cliente VPN que escolher tem de estar instalado no dispositivo e deve suportar a VPN por aplicação em perfis de trabalho. Caso contrário, será apresentado um erro.
+  > - O cliente VPN que escolher tem de estar instalado no dispositivo e deve suportar a VPN por aplicação em perfis de trabalho. Caso contrário, ocorrerá um erro.
   > - Tem de aprovar a aplicação cliente VPN na **Managed Google Play Store**, sincronizar a aplicação com o Intune e implementar a aplicação no dispositivo. Depois de o fazer, a aplicação é instalada no perfil de trabalho do utilizador.
-  > - Aqui pode ser problemas conhecidos ao utilizar a VPN por aplicação com acesso de F5 para Android 3.0.4. Consulte [as notas de lançamento do F5 para o Acesso F5 para Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) para obter mais informações.
+  > - Pode haver problemas conhecidos ao utilizar VPN por app com Acesso F5 para Android 3.0.4. Consulte [as notas de lançamento do F5 para o Acesso F5 para Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) para obter mais informações.
 
 - **Modo de bloqueio**: **Ativar** todo o tráfego de rede para utilizar o túnel VPN. Se não for estabelecida uma ligação à VPN, o dispositivo não terá acesso à rede.
 
   Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que o tráfego flua através do túnel VPN ou através da rede móvel.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

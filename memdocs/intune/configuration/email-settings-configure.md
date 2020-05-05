@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086971"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587031"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Adicionar definições de e-mail a dispositivos com o Intune
 
@@ -41,7 +41,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -49,7 +49,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
         - **Administrador de dispositivos Android** (apenas Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows 10 e posterior**
+        - **Windows 10 e posterior**
         - **Windows Phone 8.1**
 
     - **Perfil**: Selecione **Email**.
@@ -71,7 +71,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -85,7 +85,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
 
 Os perfis de e-mail são atribuídos a grupos de dispositivos e não a grupos de utilizadores. Existem diferentes formas de remover um perfil de e-mail de um dispositivo, mesmo quando existe apenas um perfil de e-mail no dispositivo:
 
-- **Opção 1**: Abra o perfil de e-mail **(Dispositivos** > perfis de **configuração** > selecione o seu perfil) e escolha **Atribuições**. O separador **Incluir** apresenta os grupos atribuídos ao perfil. Clique com o botão direito do rato no grupo e selecione **Remover**. Não se esqueça de **Guardar** as alterações.
+- **Opção 1**: Abra o perfil de e-mail **(Perfis** > de configuração de**dispositivos** > selecione o seu perfil) e escolha **Atribuições**. O separador **Incluir** apresenta os grupos atribuídos ao perfil. Clique com o botão direito do rato no grupo e selecione **Remover**. Não se esqueça de **Guardar** as alterações.
 
 - **Opção 2**: [elimine ou extinga o dispositivo](../remote-actions/devices-wipe.md). Pode utilizar estas ações para remover dados e definições de forma seletiva ou na totalidade.
 
@@ -94,6 +94,8 @@ Os perfis de e-mail são atribuídos a grupos de dispositivos e não a grupos de
 Pode ajudar a proteger os perfis de e-mail através das seguintes opções:
 
 - **Certificados**: quando cria o perfil de e-mail, seleciona um perfil de certificado criado anteriormente no Intune. Este certificado é conhecido como certificado de identidade. Autentica-se contra um perfil de certificado de confiança ou um certificado de raiz para confirmar que o dispositivo do utilizador está autorizado a ligar-se. O certificado fidedigno é atribuído ao computador que autentica a ligação de e-mail. Normalmente, este computador é o servidor de e-mail nativo.
+
+  Se utilizar a autenticação baseada em certificados para o seu perfil de e-mail, implemente o perfil de e-mail, perfil de certificado e perfil de raiz fidedigno para os mesmos grupos para garantir que cada dispositivo pode reconhecer a legitimidade da sua autoridade de certificado.
 
   Para obter mais informações sobre como criar e utilizar perfis de certificado no Intune, veja [How to configure certificates with Intune (Como configurar certificados com o Intune)](../protect/certificates-configure.md).
 
@@ -107,14 +109,14 @@ Se o utilizador já tiver configurado uma conta de e-mail, o perfil de e-mail se
 
 - **Windows**: um perfil de e-mail duplicado existente é detetado com base no nome de anfitrião e no endereço de e-mail. Intune substitui o perfil de e-mail existente criado pelo utilizador final.
 
-- **Android Samsung Knox Standard**: é detetado um perfil de e-mail duplicado existente com base no endereço de e-mail e é substituído pelo perfil do Intune. O Android não utiliza o nome do anfitrião para identificar o perfil. Não crie múltiplos perfis de e-mail com o mesmo endereço de e-mail em diferentes anfitriões. Os perfis sobressaem uns aos outros.
+- **Android Samsung Knox Standard**: Um perfil de e-mail duplicado existente é detetado com base no endereço de e-mail, e substitui-o com o perfil Intune. O Android não utiliza o nome do anfitrião para identificar o perfil. Não crie múltiplos perfis de e-mail com o mesmo endereço de e-mail em diferentes anfitriões. Os perfis sobressaem uns aos outros.
 
-- **Perfis**de trabalho android : Intune fornece dois perfis de email de trabalho Android: um para a aplicação Gmail e outro para a aplicação Nine Work. Estas aplicações estão disponíveis na Google Play Store e são instaladas no perfil de trabalho do dispositivo. Estas aplicações não criam perfis duplicados. Ambas as aplicações suportam ligações ao Exchange. Para utilizar a conectividade de e-mail, implemente uma destas aplicações de e-mail nos dispositivos dos seus utilizadores. Em seguida, crie e implemente o perfil de e-mail adequado. As aplicações de e-mail como o Nine Work podem não ser gratuitas. Reveja os dados de licenciamento da aplicação ou contacte a empresa de aplicações com quaisquer questões.
+- **Perfis**de trabalho android : Intune fornece dois perfis de email de trabalho Android: um para a aplicação Gmail e outro para a aplicação Nine Work. Estas aplicações estão disponíveis na Google Play Store e são instaladas no perfil de trabalho do dispositivo. Estas aplicações não criam perfis duplicados. Ambas as aplicações suportam ligações ao Exchange. Para utilizar a conectividade de e-mail, implemente uma destas aplicações de e-mail nos dispositivos dos seus utilizadores. Em seguida, crie e implemente o perfil de e-mail adequado. Pode utilizar perfis de configuração de email do Gmail e nove que funcionarão tanto para os tipos de registo de Perfil de Trabalho como para os tipos de inscrição do Proprietário do Dispositivo, incluindo a utilização de perfis de certificado em ambos os tipos de configuração de email. Quaisquer políticas do Gmail ou Nove que tenha criado no âmbito da Configuração do Dispositivo para Perfis de Trabalho continuarão a aplicar-se ao dispositivo e não é necessário movê-las para as políticas de configuração de apps. As aplicações de e-mail como o Nine Work podem não ser gratuitas. Reveja os dados de licenciamento da aplicação ou contacte a empresa de aplicações com quaisquer questões. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Alterações a perfis de e-mail atribuídos
 
 Se fizer alterações a um perfil de e-mail atribuído anteriormente, os utilizadores finais poderão ver uma mensagem a pedir que aprovem a reconfiguração das definições de e-mail.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil não estará ativo assim que for criado. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).

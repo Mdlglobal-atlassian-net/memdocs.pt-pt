@@ -1,5 +1,5 @@
 ---
-title: Inscreva o dispositivo Windows 10 no Portal da Empresa Intune  Microsoft Docs
+title: Inscreva o dispositivo Windows 10 no Portal da Empresa Intune [ Microsoft Docs
 description: Passos para inscrever dispositivos Windows 10 no Portal da Empresa Intune
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328205"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080084"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Inscreva dispositivos Windows 10 com Portal da Empresa Intune
 
@@ -39,9 +39,9 @@ Estes passos descrevem como inscrever um dispositivo que funciona no Windows 10,
 
 1. Aceda a **Iniciar**. Se estiver num dispositivo Móvel Windows 10, continue na lista **de Todas as Aplicações.**
 
-2. Abra a aplicação **Definições.** Se a aplicação não estiver prontamente disponível na sua lista de aplicações, vá à barra de pesquisa e escreva "definições".
+2. Abra a aplicação **Definições**. Se a aplicação não estiver prontamente disponível na sua lista de aplicações, vá à barra de pesquisa e escreva "definições".
 
-3. Selecione **Contas** > **Aceder a profiss./escolar** > **Ligar**.  
+3. Selecione **Contas** > **Aceder ao trabalho ou** > à escola**Connect**.  
 
 
     ![Selecione Contas, Aceder a profiss./escolar](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
@@ -62,7 +62,7 @@ Estes passos descrevem como inscrever um dispositivo que funciona no Windows 10,
 
 7. No **You's all set!** selecione **Concluído**. O dispositivo está agora inscrito.  
 
-8. Para verificar duas vezes a sua ligação, volte às **Definições** > **Contas** > **Trabalho de Acesso ou escola**.  A sua conta deve agora estar listada.  
+8. Para verificar duas vezes a sua ligação, volte ao**trabalho de acesso**às**Contas** > de **Definições** > ou à escola .  A sua conta deve agora estar listada.  
 
 
     ![Validar a definição correta da ligação](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -74,14 +74,14 @@ Estes passos descrevem como inscrever um dispositivo que funciona no Windows 10,
 
 1. Aceda a **Iniciar**. Se estiver num dispositivo Móvel Windows 10, continue na lista **de Todas as Aplicações.**
 
-2. Abra a aplicação **Definições.** Se a aplicação não estiver prontamente disponível na sua lista de aplicações, vá à barra de pesquisa e escreva "definições".
+2. Abra a aplicação **Definições**. Se a aplicação não estiver prontamente disponível na sua lista de aplicações, vá à barra de pesquisa e escreva "definições".
 
-3. Selecione **Contas** > **Sua conta**.  
+3. Selecione **Contas** > **A sua conta**.  
 
 
     ![Selecione A sua conta](./media/W10-enroll-2-accounts-your-account.png)  
 
-5. Selecione **Adicionar uma conta escolar ou profissional**.  
+5. Selecione **Adicionar uma conta de trabalho ou escola**.  
 
 
     ![Selecione Adicionar uma conta escolar ou profissional](./media/w10-enroll-3-add-work-school-acct.png)  
@@ -97,7 +97,7 @@ Continua sem aceder ao seu e-mail, ficheiros ou outros dados do trabalho ou da e
 
 Se for um administrador de TI e tiver problemas durante a inscrição de dispositivos, consulte problemas de [inscrição de dispositivos do Windows em Microsoft Intune](https://support.microsoft.com/help/4469913). Este artigo enumera erros comuns, as suas causas e passos para os resolver. 
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 Se precisar de ajuda com o Portal da Empresa ou a inscrição, contacte a equipa de suporte de TI da sua organização. Encontrará as suas informações de contacto no site do Portal da [Empresa.](https://go.microsoft.com/fwlink/?linkid=2010980) Inscreva-se no site com o seu trabalho ou conta escolar.  
 
  

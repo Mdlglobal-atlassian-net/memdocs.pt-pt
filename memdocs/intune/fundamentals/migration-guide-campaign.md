@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331281"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080033"
 ---
 # <a name="phase-2-migration-campaign"></a>Fase 2: campanha de migração
 
-Selecione uma abordagem de migração mais adequada às necessidades da sua organização e ajuste as táticas de implementação com base nos seus requisitos específicos. O resto deste guia proporciona as ferramentas de que precisa para alcançar o objetivo de inscrever os dispositivos dos seus utilizadores no Intune.
+Selecione uma abordagem de migração mais adequada às necessidades da sua organização e ajuste as táticas de implementação com base nos seus requisitos específicos. O restante deste guia irá dotá-lo das ferramentas necessárias para atingir o objetivo de inserir os dispositivos dos seus utilizadores no Intune.
 
 ## <a name="keys-to-a-successful-migration"></a>Aspetos essenciais para uma migração com êxito
 
@@ -64,11 +64,11 @@ Quando estiver satisfeito com a primeira fase de migrações, repita o [ciclo de
 
 - Confirme que a equipa de suporte técnico está pronta para suportar os utilizadores finais ao longo da campanha de migração. Execute uma migração voluntária até poder fazer uma estimativa da carga de trabalho de chamadas de suporte.
 
-- Não estabeleça prazos para a inscrição enquanto a população restante não puder ser processada pelo suporte técnico
+- Não estabeleça prazos para inscrição até que a restante população possa ser tratada pelo seu helpdesk
 
 > [!IMPORTANT]
 > Não configure o Intune e a sua solução de MDM de terceiros existente para aplicar controlos de acesso a recursos, tais como o Exchange ou o SharePoint Online. Além disso, só deve inscrever os dispositivos numa solução de cada vez.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Crie o seu [plano de comunicação](migration-guide-communication-plan.md).

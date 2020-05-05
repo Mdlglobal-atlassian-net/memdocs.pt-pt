@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7b09240c2bd1d562985ce69c35f07181dc5c9489
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331165"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079914"
 ---
 # <a name="intune-migration-guide"></a>Guia de migração do Intune
 
@@ -42,13 +42,13 @@ Este guia divide o processo de migração em duas fases, que incluem tarefas, es
 
   - [Configuração básica](migration-guide-setup.md)
 
-  - [Configurar políticas de gestão de aplicações e dispositivos](migration-guide-configure-policies.md)
+  - [Configurar políticas de gestão de aplicações e de dispositivos](migration-guide-configure-policies.md)
 
   - [Configurar políticas de proteção de aplicações](../apps/app-protection-policies.md)
 
   - [Considerações especiais sobre a migração](migration-guide-considerations.md)
 
-- [Fase 2: campanha de migração](migration-guide-campaign.md)
+- [Fase 2: Campanha de migração](migration-guide-campaign.md)
 
   - [Plano de comunicação](migration-guide-communication-plan.md)
 
@@ -70,6 +70,6 @@ Este guia divide o processo de migração em duas fases, que incluem tarefas, es
 
 - Consulte as [formas comuns de utilizar o Intune](common-scenarios.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Fase 1: Preparar o Intune para a gestão de dispositivos móveis](migration-guide-prepare.md)

@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488089"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254797"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Inscrição em massa para dispositivos Windows
 
@@ -32,7 +32,7 @@ Os utilizadores do Azure AD são utilizadores padrão nestes dispositivos e obt
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Pré-requisitos para a inscrição em massa de dispositivos Windows
 
-- Dispositivos que executem a atualização de Criativos do Windows 10 (compilação 1703) ou posterior
+- Dispositivos que executam a atualização do Criador do Windows 10 (construa 1709) ou mais tarde
 - [Inscrição automática no Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>Criar um pacote de aprovisionamento
@@ -74,8 +74,8 @@ Os utilizadores do Azure AD são utilizadores padrão nestes dispositivos e obt
 
 1. Aceda ao pacote de aprovisionamento na localização especificada na **Pasta do projeto** especificada na aplicação.
 
-2. Escolha como vai aplicar o pacote de aprovisionamento ao dispositivo.  Um pacote de aprovisionamento pode ser aplicado a um dispositivo de uma das seguintes formas:
-   - Colocar o pacote de aprovisionamento numa unidade USB, inserir a unidade USB no dispositivo que pretende inscrever em massa e aplicá-lo durante a configuração inicial
+2. Escolha como vai aplicar o pacote de fornecimento no dispositivo.  Um pacote de aprovisionamento pode ser aplicado a um dispositivo de uma das seguintes formas:
+   - Coloque o pacote de fornecimento numa unidade USB, insira a unidade USB no dispositivo que deseja inscrever a granel e aplique-o durante a configuração inicial
    - Coloque o pacote de provisionamento numa pasta de rede e aplique-o após a configuração inicial
 
    Para obter instruções passo a passo sobre a aplicação de um pacote de aprovisionamento, veja [Apply a provisioning package (Aplicar um pacote de aprovisionamento)](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
@@ -99,5 +99,5 @@ Pode verificar se há sucesso/falha das definições do seu pacote no registo de
 
 Quando não utilizar uma rede aberta, deve utilizar [certificados de nível de dispositivo](../protect/certificates-configure.md) para iniciar ligações. Os dispositivos matriculados a granel não podem utilizar para certificados direcionados ao utilizador para acesso à rede. 
 
-### <a name="conditional-access"></a>Conditional Access
+### <a name="conditional-access"></a>Acesso Condicional
 O Acesso Condicional não está disponível para dispositivos Windows matriculados com matrícula a granel.

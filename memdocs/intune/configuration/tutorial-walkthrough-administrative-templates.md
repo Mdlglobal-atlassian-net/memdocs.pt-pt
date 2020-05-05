@@ -1,5 +1,5 @@
 ---
-title: Walkthrough - Criar modelo administrativo no Microsoft Intune - Azure  Microsoft Docs
+title: Walkthrough - Criar modelo administrativo no Microsoft Intune - Azure [ Microsoft Docs
 description: Este tutorial ou walkthrough utiliza o Microsoft Intune para configurar os modelos De Office, Windows e Microsoft Edge ADMX no Windows 10 e dispositivos mais recentes.
 keywords: ''
 author: MandiOhlinger
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488142"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254865"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Tutorial: Use a nuvem para configurar a política de grupo em dispositivos Windows 10 com modelos ADMX e Microsoft Intune
 
@@ -34,7 +34,7 @@ Os modelos administrativos da política do grupo, também conhecidos como modelo
 Os modelos ADMX estão disponíveis para os seguintes serviços:
 
 - **Microsoft Edge**: Descarregue no [ficheiro de política do Microsoft Edge](https://www.microsoftedgeinsider.com/en-us/enterprise).
-- **Escritório**: Download no [Office 365 ProPlus, Office 2019 e Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Janelas**: Incorporado no Sistema Operativo Windows 10.
 
 Para obter mais informações sobre as políticas da ADMX, consulte [a compreensão das políticas apoiadas pela ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
@@ -53,7 +53,7 @@ No final deste laboratório, terá as habilidades para começar a usar Intune e 
 
 Esta funcionalidade aplica-se a:
 
-- Windows 10 versão 1703 e mais recente
+- Windows 10 versão 1709 e mais recente
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -71,7 +71,7 @@ Esta funcionalidade aplica-se a:
   1. Copie os seguintes modelos de Office e Microsoft Edge para a [Central Store (pasta sysvol)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Modelos administrativos de escritório](https://www.microsoft.com/download/details.aspx?id=49030)
-      - [Modelos administrativos do Microsoft Edge > Ficheiro de política](https://www.microsoftedgeinsider.com/en-us/enterprise)
+      - [Modelos administrativos do Microsoft Edge > Ficheiro de Política](https://www.microsoftedgeinsider.com/en-us/enterprise)
 
   2. Crie uma política de grupo para empurrar estes modelos para um computador administrador da Empresa Windows 10 no mesmo domínio que o DC. Neste tutorial:
 
@@ -90,13 +90,13 @@ Esta funcionalidade aplica-se a:
 
   - Instalar o **RSAT: Ferramentas**de Gestão de Políticas do Grupo:
 
-    1. Abra a aplicação **Definições** > **Apps** > **Funcionalidades opcionais** > **Adicionar**funcionalidade.
-    2. Selecione **RSAT: Ferramentas** de gestão de políticas de grupo > **instalar**.
+    1. Abra a aplicação **Definições** > **Apps** > **Opcionais Funcionalidades Adicionais.** > **Add feature**
+    2. Selecione **RSAT:** > **Instalação**de ferramentas de gestão de políticas de grupo .
 
         Espere enquanto o Windows instala a funcionalidade. Quando estiver concluído, acaba por aparecer na aplicação **Windows Administrative Tools.**
 
         > [!div class="mx-imgBorder"]
-        > ![aplicações de ferramentas administrativas do Windows, incluindo app de gestão de políticas de grupo](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
+        > ![Aplicativos de Ferramentas Administrativas do Windows, incluindo app de Gestão de Políticas de Grupo](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
 
   - Certifique-se de que tem acesso à Internet e direitos de administrador da subscrição microsoft 365, que inclui o centro de administração do Endpoint Manager.
 
@@ -112,12 +112,12 @@ Este centro de administração está focado na gestão de dispositivos, e inclui
 
 Também pode abrir o centro de administração endpoint manager do centro de administração Microsoft [365:](https://admin.microsoft.com)
 
-1. Vai para [https://admin.microsoft.com. ](https://admin.microsoft.com)
+1. Vai [https://admin.microsoft.com](https://admin.microsoft.com)para.
 2. Inscreva-se na conta de administrador da sua subscrição de inquilino Microsoft 365.
-3. Sob **os centros de Administração**, selecione Todos os centros de **administração** > **gestão endpoint.** O centro de administração do Endpoint Manager abre.
+3. Sob **os centros de Administração,** selecione Todos os centros > de **administração****Endpoint management**. O centro de administração do Endpoint Manager abre.
 
     > [!div class="mx-imgBorder"]
-    > ![Ver todos os centros de administração do centro de administração da Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
+    > ![Veja todos os centros de administração do centro de administração da Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
 
 ## <a name="create-groups-and-add-users"></a>Criar grupos e adicionar utilizadores
 
@@ -157,11 +157,11 @@ Nestes próximos passos, você vai criar grupos de segurança, e adicionar utili
         1. Selecione **Adicionar expressão**. A sua expressão é mostrada na **sintaxe**da regra:
 
             > [!div class="mx-imgBorder"]
-            > ![Criar uma consulta dinâmica e adicionar expressão no modelo administrativo Intune da Microsoft](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
+            > ![Crie uma consulta dinâmica e adicione expressão no modelo administrativo Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
 
             Quando os utilizadores ou dispositivos cumprem os critérios em que entra, são automaticamente adicionados aos grupos dinâmicos. Neste exemplo, os dispositivos são automaticamente adicionados a este grupo quando o sistema operativo é windows. Se está a usar este tutorial num ambiente de produção, então tenha cuidado. O objetivo é praticar a criação de grupos dinâmicos.
 
-        2. **Guarde** > **Criar** para salvar as suas alterações.
+        2. **Guarde** > a**Create** para salvar as suas alterações.
 
 6. Crie o grupo **All Teachers** com as seguintes definições:
 
@@ -178,7 +178,7 @@ Nestes próximos passos, você vai criar grupos de segurança, e adicionar utili
 
             Quando os utilizadores ou dispositivos cumprem os critérios em que entra, são automaticamente adicionados aos grupos dinâmicos. Neste exemplo, os utilizadores são automaticamente adicionados a este grupo quando o seu departamento é Professores. Pode entrar no departamento e outras propriedades quando os utilizadores forem adicionados à sua organização. Se está a usar este tutorial num ambiente de produção, então tenha cuidado. O objetivo é praticar a criação de grupos dinâmicos.
 
-        2. **Guarde** > **Criar** para salvar as suas alterações.
+        2. **Guarde** > a**Create** para salvar as suas alterações.
 
 ### <a name="talking-points"></a>Pontos de conversa
 
@@ -203,14 +203,14 @@ Nestes próximos passos, você vai criar grupos de segurança, e adicionar utili
   - Administradores de TI da costa oeste
   - Administradores de TI da costa leste
 
-Os utilizadores e grupos criados também são vistos no centro de administração da [Microsoft 365,](https://admin.microsoft.com)Azure AD no portal Azure, e [Microsoft Intune no portal Azure](https://go.microsoft.com/fwlink/?linkid=2090973). Você pode criar e gerir grupos em todas estas áreas para a sua subscrição de inquilino. **Se o seu objetivo é a gestão do dispositivo, utilize o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)** .
+Os utilizadores e grupos criados também são vistos no centro de administração da [Microsoft 365,](https://admin.microsoft.com)Azure AD no portal Azure, e [Microsoft Intune no portal Azure](https://go.microsoft.com/fwlink/?linkid=2090973). Você pode criar e gerir grupos em todas estas áreas para a sua subscrição de inquilino. **Se o seu objetivo é a gestão do dispositivo, utilize o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**.
 
-### <a name="review-group-membership"></a>Reveja a adesão ao grupo
+### <a name="review-group-membership"></a>Rever associação ao grupo
 
-1. No centro de administração do Endpoint Manager, selecione **Users** > selecione o nome de qualquer utilizador existente.
+1. No centro de administração do Endpoint Manager, selecione **Utilizadores** > selecionar o nome de qualquer utilizador existente.
 
     > [!div class="mx-imgBorder"]
-    > ![Centro de Administração do Endpoint Manager, selecione Utilizadores](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
+    > ![No centro de administração do Endpoint Manager, selecione Utilizadores](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
 
 2. Reveja algumas das informações que pode adicionar ou alterar. Por exemplo, veja as propriedades que pode configurar, tais como Job Title, Department, City, Office location, e muito mais. Você pode usar estas propriedades em suas consultas dinâmicas ao criar grupos dinâmicos.
 3. Selecione **Grupos** para ver a adesão deste utilizador. Também pode remover o utilizador de um grupo.
@@ -224,7 +224,7 @@ No centro de administração do Endpoint Manager, criou novos grupos de seguran�
 
 Nesta secção, criamos um modelo administrativo em Intune, olhamos para algumas configurações na **Gestão de Políticas**de Grupo, e comparamos a mesma configuração em Intune. O objetivo é mostrar um cenário na política de grupo, e mostrar o mesmo cenário em Intune.
 
-1. No centro de administração do Endpoint Manager, selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+1. No centro de administração do Endpoint Manager, selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 2. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
@@ -234,23 +234,23 @@ Nesta secção, criamos um modelo administrativo em Intune, olhamos para algumas
 4. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, introduza o **modelo De Administrador - Dispositivos estudantis do Windows 10**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 5. Selecione **Seguinte**.
 6. Nas definições de **configuração,** as definições aplicam-se aos dispositivos **(configuração do computador)** e as definições aplicam-se aos utilizadores **(configuração do utilizador):**
 
     > [!div class="mx-imgBorder"]
-    > ![Aplicar definições de modelo ADMX para utilizadores e dispositivos no Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+    > ![Aplicar as definições do modelo ADMX aos utilizadores e dispositivos no Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
 
-7. Expandir a **configuração do computador** > **Microsoft Edge** > selecione **as definições do SmartScreen**. Note o caminho para a apólice e todas as definições disponíveis:
+7. Expandir **a configuração do** > computador**Microsoft Edge** > selecione **as definições do SmartScreen**. Note o caminho para a apólice e todas as definições disponíveis:
 
     > [!div class="mx-imgBorder"]
-    > ![Ver as definições de política do Microsoft Edge SmartScreen nos modelos ADMX na Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+    > ![Consulte as definições de política do Microsoft Edge SmartScreen nos modelos ADMX no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
 
 8. Em busca, insira **o download**. Note que as definições de política são filtradas:
 
     > [!div class="mx-imgBorder"]
-    > ![filter as definições de política do Microsoft Edge SmartScreen no modelo INTune ADMX da Microsoft](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
+    > ![Filtrar as definições de política do Microsoft Edge SmartScreen no modelo INTune ADMX da Microsoft](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Gestão de Políticas de Grupo Aberto
 
@@ -262,18 +262,18 @@ Nesta secção, mostramos uma política em Intune e a sua política de correspon
 
     Esta aplicação é instalada com **RSAT: Ferramentas**de Gestão de Políticas de Grupo, que é uma funcionalidade opcional que instala no Windows. [Os pré-requisitos](#prerequisites) (neste artigo) listam os passos para instalá-lo.
 
-2. Expandir **Domínios** > selecione o seu domínio. Por exemplo, selecione **contoso.net**.
+2. Expandir **domínios** > selecione o seu domínio. Por exemplo, selecione **contoso.net**.
 3. Clique à direita na política **do OfficeandEdge** > **Editar**. A aplicação Group Policy Management Editor abre.
 
     > [!div class="mx-imgBorder"]
-    > ![clique na política do grupo Office e Microsoft Edge ADMX e selecione Edit](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Clique na política do grupo Office e Microsoft Edge ADMX e selecione Editar](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** é uma política de grupo que inclui os modelos Office e Microsoft Edge ADMX. Esta política é descrita em [pré-requisitos](#prerequisites) (neste artigo).
 
-4. Expandir as **políticas** de > de **configuração informática** > **modelos administrativos** > Painel de **Controlo** > **Personalização**. Repare nas definições disponíveis.
+4. Expandir políticas de **configuração** > do computador**Políticas** > de**controlo** > de**modelos administrativos** > **Personalização**do Painel de Controlo . Repare nas definições disponíveis.
 
     > [!div class="mx-imgBorder"]
-    > ![expandir a configuração do computador em Editor de Gestão de Políticas de Grupo, e ir para personalização](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png)
+    > ![Expandir a Configuração de Computador estoque em Editor de Gestão de Políticas de Grupo, e ir para personalização](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png)
 
     Clique duas vezes Para prevenir a câmara de **bloqueio,** e ver as opções disponíveis:
 
@@ -281,26 +281,26 @@ Nesta secção, mostramos uma política em Intune e a sua política de correspon
     > ![Consulte as opções de definição de configuração do Computador na política do grupo](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. No centro de administração do Endpoint Manager, vá ao seu **modelo de dispositivos de estudante do Windows 10.**
-6. **Selecione a configuração do computador** > Painel de **Controlo** > **Personalização**. Note as definições disponíveis:
+6. Selecione**Personalização**do**Painel** > de Controlo de **Configuração** > do Computador . Note as definições disponíveis:
 
     > [!div class="mx-imgBorder"]
-    > ![O caminho de definição da política de personalização na Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
+    > ![O caminho de definição da política de personalização no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
     O tipo de definição é **Dispositivo,** e o caminho é **/Painel de Controlo/Personalização**. Este caminho é semelhante ao que acabou de ver no Editor de Gestão de Políticas do Grupo. Se abrir a definição de câmara de **ecrã de bloqueio Prevent,** verá as mesmas opções **Não configuradas**, **Ativadas**e **Desativadas** que vê no Editor de Gestão de Políticas do Grupo.
 
 #### <a name="compare-a-user-policy"></a>Compare uma política de utilizador
 
-1. No seu modelo de administração, selecione **a configuração do Computador** > Todas as **definições**, e procure a **navegação inprivada**. Reparem no caminho.
+1. No seu modelo de administração, selecione **configuração** > do computador**Todas as definições,** e procure a **navegação inprivada**. Reparem no caminho.
 
     Faça o mesmo para **a configuração do Utilizador**. Selecione **todas as definições**e procure **navegação inprivada**.
 
 2. No Editor de **Gestão de Políticas**do Grupo, encontre as definições correspondentes do utilizador e do dispositivo:
 
-    - Dispositivo: Expandir **as políticas** de **configuração** de computador >  > **modelos administrativos** > **componentes do Windows** > Internet **Explorer** > **Privacidade** > desligar **a navegação privada**.
-    - Utilizador: Expandir **as políticas** de > do **utilizador** > **modelos administrativos** > **componentes do Windows** > internet **Explorer** > **Privacidade** > desligar **a navegação privada**.
+    - Dispositivo: Expandir políticas de **configuração** > do computador**Modelos** > **administrativos** > **Windows components** > Componentes do Windows**Internet Explorer** > **Privacidade** > **desligue a navegação privada**.
+    - Utilizador: Expandir políticas de **configuração** > do utilizador**Modelos** > **administrativos** > **Windows components** > Componentes do Windows**Internet Explorer** > **Privacidade** > **desligue a navegação privada**.
 
     > [!div class="mx-imgBorder"]
-    > ![desligue a navegação privada no Internet Explorer usando](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png) de modelo ADMX
+    > ![Desligue a navegação privada no Internet Explorer usando o modelo ADMX](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
 
 > [!TIP]
 > Para ver as políticas incorporadas do Windows, também pode utilizar o GPEdit ( App de política de**grupo Editar).**
@@ -308,14 +308,14 @@ Nesta secção, mostramos uma política em Intune e a sua política de correspon
 #### <a name="compare-an-edge-policy"></a>Compare uma política edge
 
 1. No centro de administração do Endpoint Manager, vá ao seu **modelo de dispositivos de estudante do Windows 10.**
-2. Expandir a **configuração do computador** > **Microsoft Edge** > **Startup, página inicial e nova página de separadores**. Repare nas definições disponíveis.
+2. Expanda a **configuração** > do computador**Microsoft Edge** > **Startup, página inicial e nova página de separadores**. Repare nas definições disponíveis.
 
     Faça o mesmo para **a configuração do Utilizador**.
 
 3. No Editor de Gestão de Políticas do Grupo, encontre estas definições:
 
-    - Dispositivo: Expandir **as políticas** de **configuração** do computador >  > **modelos administrativos** > **Microsoft Edge** > **Startup, página inicial e nova página de separadores**.
-    - Utilizador: Expandir **as políticas** de > de **configuração** do utilizador > **modelos administrativos** > **Microsoft Edge** > **Startup, página inicial e nova página de separadores**
+    - Dispositivo: Expandir políticas de **configuração** > de computador**Modelos** > **Administrativos** > **Microsoft Edge** > **Startup, página inicial e nova página de separador**.
+    - Utilizador: Expandir**as políticas** > de **configuração** > do utilizador**Modelos Administrativos** > **Microsoft Edge** > **Startup, página inicial e nova página de separador**
 
 ### <a name="what-did-i-just-do"></a>O que acabei de fazer?
 
@@ -328,10 +328,10 @@ Neste modelo, configuramos algumas definições do Internet Explorer para bloque
 1. No seu **modelo de Administrador - Dispositivos de estudante do Windows 10,** expandir a **configuração do Computador,** selecionar **todas as definições**e procurar **desativar a navegação privada:**
 
     > [!div class="mx-imgBorder"]
-    > ![desligue a política de dispositivos de navegação privada em modelo administrativo no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
+    > ![Desligue a política de dispositivos de navegação privada em modelo administrativo no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
 2. Selecione a definição de **desligação de navegação privada.** Nesta janela, repare na descrição e valores que pode definir. Estas opções são semelhantes às que se vê na política de grupo.
-3. Selecione > **OK** **ativado** para guardar as suas alterações.
+3. Selecione **Enabled** > **OK** para guardar as suas alterações.
 4. Configure também as seguintes definições do Internet Explorer. Certifique-se de que seleciona **OK** para guardar as suas alterações.
 
     - **Permitir ficheiros de arrastar e largar ou copiar e colar**
@@ -348,12 +348,12 @@ Neste modelo, configuramos algumas definições do Internet Explorer para bloque
       - **Tipo**: Utilizador
       - **Caminho**: \Windows Components\Internet Explorer
       - **Valor**: Habilitado
-      - **Página inicial**: Introduza um URL, como `contoso.com`.
+      - **Página inicial**: Introduza `contoso.com`um URL, como .
 
 5. Limpe o filtro de pesquisa. Note que as definições configuradas estão listadas no topo:
 
     > [!div class="mx-imgBorder"]
-    > ![configurações configuradas estão listadas no topo da Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
+    > ![As definições configuradas estão listadas no topo no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
 
 ### <a name="assign-your-template"></a>Atribuir o seu modelo
 
@@ -362,7 +362,7 @@ Neste modelo, configuramos algumas definições do Internet Explorer para bloque
     > [!div class="mx-imgBorder"]
     > ![Selecione o seu perfil de modelo administrativo na lista de perfis de configuração do dispositivo no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo de **dispositivos estudantis All Windows 10** que criou anteriormente > **Selecione**.
+2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo de **dispositivos estudantis All Windows 10** que criou anteriormente > **Select**.
 
     Se você está usando este tutorial em um ambiente de produção, então considere adicionar grupos que estão vazios. O objetivo é praticar a atribuição do seu modelo.
 
@@ -380,7 +380,7 @@ No centro de administração do Endpoint Manager, criou um perfil de configuraç
 
 Nesta secção, cria-se um modelo de administração OneDrive em Intune para controlar algumas definições. Estas configurações específicas são escolhidas porque são comumente usadas pelas organizações.
 
-1. Criar outro perfil **(Dispositivos** > Perfis de **Configuração** > **Criar perfil).**
+1. Criar outro perfil **(Perfis** > de configuração de**dispositivos** > **Criar perfil).**
 
 2. Introduza as seguintes propriedades:
 
@@ -391,12 +391,12 @@ Nesta secção, cria-se um modelo de administração OneDrive em Intune para con
 4. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza **o modelo De Administrador - As políticas OneDrive que se aplicam a todos os utilizadores do Windows 10**.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 5. Selecione **Seguinte**.
 6. Nas definições de **Configuração,** configure as seguintes definições. Certifique-se de selecionar **OK** para guardar as suas alterações.:
 
-    - **Configuração do computador** > **Todas as definições:**
+    - **Configuração do** > computador**Todas as definições:**
       - **Inscreva-se silenciosamente nos utilizadores do cliente sincronizado OneDrive com as suas credenciais Windows**
         - **Tipo**: Dispositivo
         - **Valor**: Habilitado
@@ -404,7 +404,7 @@ Nesta secção, cria-se um modelo de administração OneDrive em Intune para con
         - **Tipo**: Dispositivo
         - **Valor**: Habilitado
 
-    - **Configuração** do utilizador > **Todas as definições:**
+    - **Configuração do** > utilizador**Todas as definições**:
       - **Impedir que os utilizadores sincroniem contas pessoais do OneDrive**
         - **Tipo**: Utilizador
         - **Valor**: Habilitado
@@ -412,14 +412,14 @@ Nesta secção, cria-se um modelo de administração OneDrive em Intune para con
 As suas definições são semelhantes às seguintes definições:
 
 > [!div class="mx-imgBorder"]
-> ![Criar um modelo administrativo OneDrive na Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
+> ![Criar um modelo administrativo OneDrive no Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
 Para obter mais informações sobre as definições do cliente OneDrive, consulte [a Política de Grupo use para controlar as definições do cliente sincronizado do OneDrive](https://docs.microsoft.com/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Atribuir o seu modelo
 
 1. No seu modelo, selecione **Next** até chegar às **Atribuições**. Escolha **selecionar grupos para incluir:**
-2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo **de dispositivos All Windows** que criou anteriormente > **Selecione**.
+2. É apresentada uma lista de utilizadores e grupos existentes. Selecione o grupo **de dispositivos All Windows** que criou anteriormente > **Select**.
 
     Se você está usando este tutorial em um ambiente de produção, então considere adicionar grupos que estão vazios. O objetivo é praticar a atribuição do seu modelo.
 
@@ -437,24 +437,24 @@ Esta secção utiliza os seguintes recursos. Vamos instalar estes recursos nesta
 1. No **computador Admin,** abra o **Windows PowerShell** como administrador:
 
     1. Na sua barra de pesquisa, introduza **powershell**.
-    2. Clique no **Windows PowerShell** > **Executar como administrador**.
+    2. Clique no **Windows PowerShell** > **Run como administrador**.
 
     > [!div class="mx-imgBorder"]
-    > ![executar o Windows PowerShell como administrador](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
+    > ![Executar o Windows PowerShell como administrador](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
 
 2. Pegue e estabeleça a política de execução.
 
-    1. Entrada: `get-ExecutionPolicy`
+    1. Insira:`get-ExecutionPolicy`
 
         Escreva o que está definido, o que pode **restringir.** Quando terminar com o tutorial, volte ao seu valor original.
 
-    2. Entrada: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+    2. Insira:`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 
     3. Insira `Y` para mudá-lo.
 
     A política de execução da PowerShell ajuda a prevenir a execução de scripts maliciosos. Para mais informações, consulte as Políticas de [Execução.](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
 
-3. Entrada: `Install-Module -Name Microsoft.Graph.Intune`
+3. Insira:`Install-Module -Name Microsoft.Graph.Intune`
 
     Insira `Y` se:
 
@@ -464,25 +464,25 @@ Esta secção utiliza os seguintes recursos. Vamos instalar estes recursos nesta
     Pode levar vários minutos para ser completado. Quando terminada, é mostrada uma solicitação semelhante à seguinte solicitação:
 
     > [!div class="mx-imgBorder"]
-    > ![pedido do Windows PowerShell após instalar um módulo](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
+    > ![Pedido do Windows PowerShell após instalar um módulo](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
 
-4. No seu navegador web, vá a [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)e selecione o ficheiro **Intune-PowerShell-SDK_v6.1907.00921.0001.zip.**
+4. No seu navegador web, vá ao [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)ficheiro **Intune-PowerShell-SDK_v6.1907.00921.0001.zip.**
 
-    1. Selecione **Guardar como**, e selecione uma pasta de que se lembrará. `c:\psscripts` é uma boa escolha.
-    2. Abra a pasta, clique à direita no ficheiro .zip > **Extrata todos os** **extratos** > . A sua estrutura de pasta é semelhante à seguinte pasta:
+    1. Selecione **Guardar como**, e selecione uma pasta de que se lembrará. `c:\psscripts`é uma boa escolha.
+    2. Abra a pasta, clique à direita no ficheiro .zip > **Extrair todos os** > **extratos**. A sua estrutura de pasta é semelhante à seguinte pasta:
 
         > [!div class="mx-imgBorder"]
-        > ![estrutura de pasta Intune PowerShell SDK depois de ter sido extraído](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
+        > ![Estrutura de pasta SDK PowerShell Intune após ser extraído](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
 
 5. No separador **Ver,** verifique as extensões de **nome do ficheiro:**
 
     > [!div class="mx-imgBorder"]
-    > ![Selecione extensões de nome de ficheiro no separador visualização no](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png) explorador
+    > ![Selecione extensões de nome de ficheiro no separador visualização no explorador](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
 
-6. Na sua pasta, e vá para `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Clique à direita em cada .dll > **Propriedades** > **Desbloquear**.
+6. Na sua pasta, `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`e vá para . Clique à direita em cada .dll > **Propriedades** > **Desbloquear**.
 
     > [!div class="mx-imgBorder"]
-    > ![desbloquear os DLLs](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
+    > ![Desbloquear os DLLs](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
 
 7. Na sua aplicação **Windows PowerShell,** introduza:
 
@@ -490,22 +490,22 @@ Esta secção utiliza os seguintes recursos. Vamos instalar estes recursos nesta
     Import-Module c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471\Microsoft.Graph.Intune.psd1
     ```
 
-    Introduza `R` se for solicitado a fugir do editor não confiável.
+    Entre `R` se for solicitado a fugir do editor não confiável.
 
 8. Os modelos administrativos insinados utilizam a versão beta do Graph:
 
-    1. Entrada: `Update-MSGraphEnvironment -SchemaVersion 'beta'`
+    1. Insira:`Update-MSGraphEnvironment -SchemaVersion 'beta'`
 
-    2. Entrada: `Connect-MSGraph -AdminConsent`
+    2. Insira:`Connect-MSGraph -AdminConsent`
 
     3. Quando solicitado, inscreva-se na mesma conta de administrador da Microsoft 365. Estes cmdlets criam a política na sua organização de inquilinos.
 
         **Utilizador**: Insira a conta de administrador da sua subscrição de inquilino Microsoft 365.  
         **Palavra-passe**: Introduza a sua palavra-passe.
 
-    4. **Selecione Aceitar**.
+    4. Selecione **Aceitar**.
 
-9. Crie o perfil de configuração de configuração do **teste.** introduza:
+9. Crie o perfil de configuração de configuração do **teste.** Introduza:
 
     ```powershell
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
@@ -513,19 +513,19 @@ Esta secção utiliza os seguintes recursos. Vamos instalar estes recursos nesta
 
     Quando estes cmdlets têm sucesso, o perfil é criado. Para confirmar, vá ao centro de administração do Endpoint Manager > Perfis de **Configuração**. O seu perfil de **Configuração** de Teste deve ser listado.
 
-10. Obtenha todas as Definições de Definição. introduza:
+10. Obtenha todas as Definições de Definição. Introduza:
 
     ```powershell
     $settingDefinitions = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions -HttpMethod GET
     ```
 
-11. Encontre o ID de definição utilizando o nome de visualização de definição. introduza:
+11. Encontre o ID de definição utilizando o nome de visualização de definição. Introduza:
 
     ```powershell
     $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync client with their Windows credentials"}
     ```
 
-12. Configure uma definição. introduza:
+12. Configure uma definição. Introduza:
 
     ```powershell
     $configuredSetting = Invoke-MSGraphRequest -Url "https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations('$($configuration.id)')/definitionValues" -Content ("{""enabled"":""true"",""configurationType"":""policy"",""definition@odata.bind"":""https://graph.microsoft.com/beta/deviceManagement/groupPolicyDefinitions('$($desiredSettingDefinition.id)')""}") -HttpMethod POST
@@ -541,8 +541,8 @@ Esta secção utiliza os seguintes recursos. Vamos instalar estes recursos nesta
 
 ### <a name="see-your-policy"></a>Consulte a sua política
 
-1. No Endpoint Manager administrador center > Perfis de **configuração** > **Refresh**.
-2. Selecione o seu perfil de **configuração** de teste e **configurações**.
+1. No centro de administração do Endpoint Manager > > **Atualização**de Perfis de **Configuração**.
+2. Selecione o seu perfil de **configuração** de teste > **Definições**.
 3. Na lista de lançamentos, selecione **Todos os produtos**.
 
 Verá o **sessão silenciosa de utilizadores no cliente sincronizado oneDrive com** a definição de credenciais do Windows configurada.
@@ -573,7 +573,7 @@ Quando já não for necessário, pode:
   Set-ExecutionPolicy -ExecutionPolicy Restricted
   ```
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Neste tutorial, você se familiariza mais com o centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)usou o construtor de consultas para criar grupos dinâmicos, e criou modelos administrativos em Intune para configurar [as definições do ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). Também comparou a utilização de modelos ADMX no local e na nuvem com Intune. Como bónus, usaste cmdlets PowerShell para criar um modelo administrativo.
 

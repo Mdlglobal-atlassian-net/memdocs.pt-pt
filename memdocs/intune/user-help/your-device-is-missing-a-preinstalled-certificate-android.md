@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 341cb27d59786802124a575b04a2809ba6f3a987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 827780900904f4a04575b6ed6d1363112b8c6eec
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323901"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079931"
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Está em falta um certificado no seu dispositivo Android que, geralmente, vem instalado no telemóvel
 
-Se o dispositivo não estiver inscrito no Intune e não tiver um certificado que, geralmente, vem instalado no seu telemóvel, não poderá iniciar sessão na aplicação Portal da Empresa. Ao tentar iniciar sessão, verá a seguinte mensagem:
+Se o seu dispositivo não estiver matriculado no Intune, e falta um certificado que normalmente vem instalado no seu telemóvel, não poderá iniciar sessão na aplicação Portal da Empresa. Ao tentar iniciar sessão, verá a seguinte mensagem:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -40,15 +40,15 @@ Pode corrigir este problema ao obter o certificado necessário a partir da [pág
 
 3. O seu dispositivo irá pedir-lhe para **Dar um Nome ao Certificado**. Não altere o nome predefinido do certificado que é apresentado.
 
-4. Certifique-se de que a **Utilização da Credencial** está definida como **Utilizada para VPN e aplicações** e, em seguida, toque em **OK**.
+4. Certifique-se de que o **Uso Credencial** está definido **para utilizado para VPN e aplicações**, e depois toque **OK**.
 
     ![screenshot-certificate-name-dialog-showing-baltimore-certificate-name](./media/andr-cert_install-2-add_cert_name.png)
 
 5. Feche o seu browser e a aplicação Portal da Empresa.
 
-6. Reabra a aplicação Portal da Empresa. Agora deverá conseguir iniciar sessão na aplicação do Portal da Empresa. Se ainda assim não conseguir utilizar a aplicação Portal da Empresa, contacte o suporte da empresa através das informações fornecidas no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para obter mais instruções.
+6. Reabra a aplicação Portal da Empresa. Agora deverá conseguir iniciar sessão na aplicação Portal da Empresa. Se ainda assim não conseguir utilizar a aplicação Portal da Empresa, contacte o suporte da empresa através das informações fornecidas no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980) para obter mais instruções.
 
 >[!NOTE]
 > Se instalar esse certificado não resolver o problema e vir uma mensagem a indicar que tem um "certificado em falta", precisará de executar passos adicionais para [instalar o certificado em falta](your-device-is-missing-an-IT-required-certificate-android.md).
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

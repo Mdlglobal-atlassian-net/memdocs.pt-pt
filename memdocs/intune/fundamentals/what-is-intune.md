@@ -1,5 +1,5 @@
 ---
-title: O que é Microsoft Intune - Azure  Microsoft Docs
+title: O que é Microsoft Intune - Azure [ Microsoft Docs
 description: Saiba como a Microsoft Intune é a componente de gestão de dispositivos móveis (MDM) e gestão de aplicações móveis (MAM) da solução Enterprise Mobility + Security e como ajuda a proteger os dados da empresa.
 keywords: o que é o Intune
 author: dougeby
@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233483"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538087"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune é um fornecedor de MDM e MAM para os seus dispositivos
 
 O Microsoft Intune é um serviço baseado na nuvem que se foca na gestão de dispositivos móveis (MDM) e na gestão de aplicações móveis (MAM). Intune está incluído no [suite Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)da Microsoft, e permite que os utilizadores sejam produtivos, mantendo os dados da sua organização protegidos. Integra-se com outros serviços, incluindo o Microsoft 365 e o Azure Ative Directory (Azure AD) para controlar quem tem acesso e aquilo a que têm acesso, e a Proteção de Informação Azure para proteção de dados. Quando o utiliza com o Microsoft 365, pode permitir que a sua força de trabalho seja produtiva em todos os seus dispositivos, mantendo as informações da sua organização protegidas.
 
-![Imagem da arquitetura do Intune](./media/what-is-intune/intunearch_sm.png)
-
-Veja uma [versão maior](./media/what-is-intune/intunearchitecture.svg) do diagrama da arquitetura do Intune.
+[![Imagem da arquitetura do Intune](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Com o Intune, pode:
 
@@ -60,7 +58,12 @@ Quando os dispositivos são matriculados e geridos em Intune, os administradores
 
 - [Aplique funcionalidades e definições nos seus dispositivos utilizando perfis de dispositivos](../configuration/device-profiles.md)
 
-- [Proteja os dispositivos com a Microsoft Intune](../protect/device-protect.md)
+- [Proteger dispositivos com o Microsoft Intune](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>Experimente o guia interativo
+Os [dispositivos Manage com o guia](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) interativo Do Microsoft Endpoint Manager passam por si através do centro de administração do Microsoft Endpoint Manager para lhe mostrar como gerir e proteger aplicações móveis e de desktop.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>Gerir aplicações
 
@@ -73,7 +76,7 @@ Quando as aplicações são geridas em Intune, os administradores podem:
 - Consulte os relatórios sobre quais as aplicações utilizadas e rastreie o seu uso.
 - Faça uma limpeza seletiva removendo apenas dados da organização de aplicações.
 
-Uma das formas que o Intune fornece a segurança das aplicações móveis é através de políticas de **[proteção de aplicações.](../apps/app-protection-policy.md)** Políticas de proteção de aplicações:
+Uma das formas que o Intune fornece a segurança das aplicações móveis é através de políticas de **[proteção de aplicações.](../apps/app-protection-policy.md)** Políticas de proteção de aplicações :
 
 - Utilize a identidade Azure AD para isolar os dados da organização a partir de dados pessoais. Assim, as informações pessoais estão isoladas da consciência organizacional das TI. Os dados acedidos usando credenciais da organização recebem proteção adicional de segurança.
 - Ajude a garantir o acesso aos dispositivos pessoais, restringindo as ações que os utilizadores podem tomar, tais como cópia e pasta, economize e vista.
@@ -105,7 +108,7 @@ Intune está disponível:
 
 Intune é usado em muitos setores, incluindo [governo](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [educação,](https://www.microsoft.com/en-us/education/intune) [quiosque ou dispositivo dedicado](../configuration/kiosk-settings.md) para fabricação e retalho, e muito mais.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Leia alguns dos [problemas comerciais comuns que Intune ajuda a resolver.](common-scenarios.md)
 - Comece com um [julgamento de 30 dias de Intune.](free-trial-sign-up.md)

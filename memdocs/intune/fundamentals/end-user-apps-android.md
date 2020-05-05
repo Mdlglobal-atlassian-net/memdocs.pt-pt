@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372556"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182315"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Como os utilizadores de dispositivos Android obtêm as aplicações  
 
@@ -33,12 +33,12 @@ Este artigo ajuda-o a perceber como e onde os utilizadores finais do administrad
 | Tipo de aplicação | Aplicações de linha de negócio (LOB) | Aplicações da Play Store  |
 | ------------- |-------------| -----|
 | Aplicações disponíveis      | Os utilizadores tocam em **instalar** no Portal da Empresa. É apresentada uma notificação, na qual os utilizadores tocam para iniciar a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. | Os utilizadores tocam na aplicação no Portal da Empresa e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação.|
-| Aplicações necessárias      | **Nos dispositivos que executam o Android 9.0 e anteriormente,** os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de descarregar uma aplicação. Os utilizadores tocam na notificação para iniciar o download e instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. **Nos dispositivos que executam o Android 10 e posteriormente,** os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de descarregar uma aplicação. Os utilizadores tocam na notificação para iniciar o download e depois recebem uma notificação para iniciar a instalação da aplicação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece.| Os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de instalar uma aplicação. Os utilizadores tocam na notificação e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. |
+| Required apps      | Os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de instalar uma aplicação. Os utilizadores tocam na notificação para iniciar a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece.    | Os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de instalar uma aplicação. Os utilizadores tocam na notificação e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. |
 
-Os utilizadores finais precisam de permitir a instalação de fontes desconhecidas para instalar [aplicações LOB](../apps/lob-apps-android.md). Esta configuração é normalmente encontrada em dois lugares diferentes:
+Os utilizadores finais precisam de permitir a instalação de fontes desconhecidas para instalar [aplicações LOB](../apps/lob-apps-android.md). Esta configuração é normalmente encontrada em dois lugares diferentes, dependendo da versão do Android:
 
-* **Android 7.1.2 e inferior**: **Definições** > **Segurança** > **Fontes desconhecidas**
-* **Android 8.0 e superior**: **Definições** > **Aplicações e notificações** > **Acesso de aplicações especiais** > **Instalar aplicações desconhecidas** > **Portal da Empresa** > **Permitir desta fonte**
+* Android 7.1.2 e inferior: **Definições** > **Segurança** > **Fontes desconhecidas**
+* Android 8.0 e acima: **Definições** > **Apps & notificações** > Acesso especial**app** > **Instala aplicações** > desconhecidas Portal > da**Empresa**Permitir a partir**desta fonte**
 
 Neste caso, a aplicação Portal da Empresa irá informar e orientar o utilizador final consoante a definição adequada. 
 
@@ -47,13 +47,13 @@ Neste caso, a aplicação Portal da Empresa irá informar e orientar o utilizado
 | Tipo de aplicação | Aplicações de linha de negócio (LOB) | Aplicações da Play Store  |
 | ------------- |-------------| -----|
 | Aplicações disponíveis      | Os utilizadores tocam em **instalar** no Portal da Empresa. A aplicação é instalada sem intervenção do utilizador adicional. | Os utilizadores tocam na aplicação no Portal da Empresa e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação.|
-| Aplicações necessárias      | **Nos dispositivos que executam o Android 9.0 e anteriormente,** a aplicação está instalada sem qualquer intervenção do utilizador. **Nos dispositivos que executam o Android 10 e posteriormente,** os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de descarregar uma aplicação. Os utilizadores tocam na notificação para iniciar a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. | Os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de instalar uma aplicação. Os utilizadores tocam na notificação e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. |
+| Required apps      | A aplicação é instalada sem qualquer intervenção do utilizador.    | Os utilizadores recebem uma notificação, que não podem descartar, indicando que precisam de instalar uma aplicação. Os utilizadores tocam na notificação e são levados para uma página de aplicações na Play Store. É aqui que iniciam a instalação. Depois de a instalação ter sido concluída com êxito, a notificação desaparece. |
 
 As aplicações podem ser geridas ou não geridas, conforme descrito abaixo. O processo para tornar as aplicações geridas é igual para todos os tipos de dispositivos Android.
 
-**Aplicativos geridos** - Estas aplicações são geridas através de políticas. Foram "embrulhados" pela Intune ou construídos com o Intune App SDK. Estas aplicações podem ser geridas pelo Intune e podem ser aplicadas políticas de aplicação às mesmas.
+* Aplicações geridas: Estas aplicações são geridas através de políticas. Foram "embrulhados" pela Intune ou construídos com o Intune App SDK. Estas aplicações podem ser geridas pelo Intune e podem ser aplicadas políticas de aplicação às mesmas.
 
-Apps não **geridas** - Estas aplicações não são geridas através de políticas. Não foram embrulhados pela Intune ou não incorporam o Intune App SDK. As políticas de aplicação não podem ser aplicadas a estas aplicações.
+* Apps não geridas: Estas aplicações não são geridas através de políticas. Não foram embrulhados pela Intune ou não incorporam o Intune App SDK. As políticas de aplicação não podem ser aplicadas a estas aplicações.
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>Dispositivos zebra com extensões de mobilidade da zebra
 
@@ -61,7 +61,7 @@ Intune usa o conjunto de ferramentas Zebra Mobility Extensions (MX) para instala
 
 As aplicações LOB implantadas para dispositivos Zebra devem ser instaladas a partir de uma localização pública no dispositivo. O pacote de aplicações .apk pode ser acessível a outras aplicações e serviços que também tenham acesso ao armazenamento público no dispositivo. Normalmente, este acesso é uma pequena janela entre o download da aplicação e no início da instalação. Esta janela pode permitir um ataque de tempo. Por exemplo, um pacote .apk pode ser alterado durante esta janela. Intune minimiza o tempo que a .apk passa em armazenamento público, e não permite que as aplicações não assinadas se instalem. Para ajudar a minimizar o risco de segurança, certifique-se de que os ficheiros .apk que envia não contêm informações sensíveis.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Adicionar aplicações com o Microsoft Intune](../apps/apps-add.md)
 

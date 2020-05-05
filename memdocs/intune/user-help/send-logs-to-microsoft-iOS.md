@@ -19,22 +19,22 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cce452f5790091cbba351147b7c54da85a472f75
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 64a42bebdff76186d74854237e7985afa0ee2c89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327897"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079965"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-ios-devices"></a>Enviar registos para os programadores do Portal da Empresa para dispositivos iOS
 
 Por vezes, a aplicação Portal da Empresa poderá fechar inesperadamente. Este é um problema sobre o qual os programadores da aplicação querem ser informados, uma vez que nos pode ajudar a melhorar o seu funcionamento e a impedir que este tipo de situação aconteça no futuro. Estas informações encontram-se no dispositivo, num documento especial denominado _registo de diagnóstico_.
 
-Se esta situação lhe estiver a acontecer, o Portal da Empresa precisará de algumas informações para tentar diagnosticar a causa principal. Terá de fazer o seguinte:
+Se esta situação lhe estiver a acontecer, o Portal da Empresa precisará de algumas informações para tentar diagnosticar a causa principal. Eis o que precisamos que faça:
 
-1. Tente fazer com que o problema ocorra novamente. Se não conseguir, não há problema, mas pode facilitar o passo seguinte caso consiga.
-2. Aceda a __Definições__ > __Privacidade__ > __Análise__ > __Dados de Análise__. Esta é uma lista das atividades de aplicações que ocorreram, desde falhas a padrões de utilização geral, e não contém quaisquer informações pessoais. Esta lista está organizada da mais recente à mais antiga. Se conseguiu reproduzir o problema, este deve ser o primeiro item que aparece na lista de atividades de aplicações nesta página. Se não conseguiu reproduzir o problema, desloque-se para baixo até encontrar o primeiro item que começa com “Portal da Empresa” e, em seguida, toque nele para o abrir.
+1. Tente fazer com que o problema ocorra novamente. Tudo bem se não puder, mas pode tornar o próximo passo mais fácil se puder.
+2. Vá a __Definições__ > __Dados__ > __de Análise__ > __Analytics Data__de Privacidade . Esta é uma lista das atividades de aplicações que ocorreram, desde falhas a padrões de utilização geral, e não contém quaisquer informações pessoais. Esta lista está organizada da mais recente à mais antiga. Se conseguiu reproduzir o problema, este deve ser o primeiro item que aparece na lista de atividades de aplicações nesta página. Se não conseguiu reproduzir o problema, desça até encontrar o primeiro item que começa com "Portal da Empresa", toque-o para o abrir.
 3. Mantenha premido o item e, em seguida, arraste os pequenos pontos azuis para cima e para baixo até que todo o texto no relatório tenha sido selecionado. Toque em __Copiar__ no menu de pop-up.
-4. Abra a sua aplicação de e-mail e cole esse conteúdo no corpo do e-mail. Envie esse e-mail para <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>.
+4. Abra a sua aplicação de e-mail e cole esse conteúdo no corpo do e-mail. Envie o <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Press and hold, then paste your copied Company Portal app logs here.">IntuneCPiOSfeedback@microsoft.com</a>e-mail para .
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

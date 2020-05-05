@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
-ms.translationtype: MT
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407823"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166558"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos iOS e iPadOS para permitir ou restringir funcionalidades usando Intune
 
@@ -52,7 +52,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 - **Certificados TLS não fidedignos**: **Bloco** impede certificados de segurança de camadas de transporte não confiáveis (TLS) em dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir certificados TLS.
 - **Bloqueie atualizações PKI over-the-air**: **O bloco** impede que os seus utilizadores recebem atualizações de software a menos que os dispositivos estejam ligados a um computador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que um dispositivo receba atualizações de software sem estar ligado a um computador.
 - **Limitar o rastreio de anúncios:** **Limitar** desativa o identificador de publicidade do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o Sistema operativo pode mantê-lo ativado.
-- **Enterprise app trust**: **Block** remove o botão Trust **Enterprise Developer** em Definições > General > Perfis & Gestão de Dispositivos nos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores optem por confiar em aplicações que não são descarregadas a partir da loja de aplicações.
+- **Enterprise app trust**: **Block** remove o botão Trust **Enterprise Developer** em Definições > Perfis gerais > & Gestão de Dispositivos em dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores optem por confiar em aplicações que não são descarregadas a partir da loja de aplicações.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -85,7 +85,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
   O nome desta definição foi mudado em **Ativar restrições nas definições do dispositivo**. Impacto desta alteração:  
   
   - iOS 11.4.1 ou mais: **O bloco** impede que os utilizadores estabeleçam as suas próprias restrições nas definições do dispositivo. O comportamento é o mesmo; e não há alterações para os utilizadores.
-  - iOS 12.0 e mais recente: **O bloco** impede que os utilizadores definam o seu próprio Tempo de **Ecrã** nas definições do dispositivo (Definições > General > Tempo de ecrã), incluindo restrições de conteúdo e privacidade. Os dispositivos atualizados para o iOS 12.0 deixam apresentar o separador de restrições nas definições do dispositivo (Definições > Geral > Gestão de Dispositivos > Perfil de Gestão > Restrições). Estas definições estão em **Tempo do Ecrã**.
+  - iOS 12.0 e mais recente: **O bloco** impede que os utilizadores definam o seu próprio Tempo de **Ecrã** nas definições do dispositivo (Definições > Hora geral > do ecrã), incluindo restrições de conteúdo e privacidade. Os dispositivos atualizados para o iOS 12.0 deixam apresentar o separador de restrições nas definições do dispositivo (Definições > Geral > Gestão de Dispositivos > Perfil de Gestão > Restrições). Estas definições estão em **Tempo do Ecrã**.
   
 - **Utilização da opção**de apagar todos os conteúdos e definições no dispositivo : **O bloco** impede a utilização de todos os conteúdos e definições dos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode dar aos utilizadores acesso a estas definições.
 - **Modificação do nome**do dispositivo : **O bloco** evita alterar o nome do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que os utilizadores alterem o nome dos dispositivos.
@@ -95,7 +95,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 - **Bloqueio de ativação**: **Permitir ativa** o bloqueio de ativação em dispositivos iOS/iPadOS supervisionados. O Bloqueio de Ativação dificulta que um dispositivo perdido ou roubado seja reativado. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Remoção de aplicativos de blocos**: **Bloco** impede a remoção de aplicações. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores removam as aplicações dos dispositivos.
 - **Permitir acessórios USB enquanto o dispositivo estiver bloqueado:** **Permitir que** os acessórios USB troquem dados com dispositivos que estejam bloqueados durante mais de uma hora. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não atualizar o modo RESTRITO USB nos dispositivos, e os acessórios USB estão bloqueados da transferência de dados dos dispositivos se estiverem bloqueados durante mais de uma hora.
-- **Forçar a data e a hora automáticas**: **Exigir** forças com controlo de dispositivos para definir automaticamente a Data e a Hora. O fuso horário do dispositivo é atualizado quando o dispositivo está ligado à rede móvel ou ao Wi-Fi com os serviços de localização ativados. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Forçar a data e a hora automáticas**: **Exigir** que as forças comandadas estabeleçam automaticamente a data & hora. O fuso horário do dispositivo é atualizado quando o dispositivo está ligado à rede móvel ou ao Wi-Fi com os serviços de localização ativados. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Exigir que os alunos solicitem autorização para deixar**o curso de sala de aula : **Exigir** que os alunos matriculados num curso não gerido utilizem a app sala de aula para solicitar autorização ao professor para deixar o curso. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por defeito, o SO pode não forçar o aluno a pedir permissão.
 
   Esta funcionalidade aplica-se a:  
@@ -147,21 +147,21 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 > Por exemplo, configura a definição de validade da **Palavra-passe** e empurra esta política para dispositivos inscritos pelo utilizador. Nos dispositivos, acontece o seguinte:
 >
 > - A definição de expiração da **palavra-passe** é ignorada.
-> - Não são permitidas senhas simples, como `1111` ou `1234`.
+> - Não são permitidas `1111` `1234`senhas simples, tais como ou, não são permitidas.
 > - Um pino de 6 dígitos é imposto.
 
-- **Palavras-passe simples**: **O bloco** requer senhas mais complexas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir senhas simples, como `0000` e `1234`.
+- **Palavras-passe simples**: **O bloco** requer senhas mais complexas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode `0000` permitir `1234`senhas simples, tais como e .
 
 - Tipo de **palavra-passe necessário**: Introduza o nível de complexidade de senha exigido que a sua organização necessita. As opções são:
   - **Predefinição do dispositivo**
   - **Numérico:** A palavra-passe deve ser apenas números, como o 123456789.
   - **Alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos.
-- **Número de caracteres não alfanuméricos na palavra-passe**: Introduza o número de caracteres de símbolo, como `#` ou `@`, que devem ser incluídos na palavra-passe, de 1 a 4. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Número de caracteres não alfanuméricos na palavra-passe**: `#` `@`Introduza o número de caracteres de símbolo, tais como ou , que devem ser incluídos na palavra-passe, a partir de 1-4. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
 - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, de 4 a 16 caracteres. Nos dispositivos inscritos no utilizador, introduza um comprimento entre 4 e 6 caracteres.
   
   > [!NOTE]
-  > Para dispositivos inscritos no utilizador, os utilizadores podem definir um PIN superior a 6 dígitos. Mas, não são aplicados mais de 6 dígitos nos dispositivos. Por exemplo, um administrador define o comprimento mínimo para `8`. Nos dispositivos inscritos no utilizador, os utilizadores só são obrigados a definir um PIN de 6 dígitos. Intune não força um PIN superior a 6 dígitos em dispositivos matriculados pelo utilizador.
+  > Para dispositivos inscritos no utilizador, os utilizadores podem definir um PIN superior a 6 dígitos. Mas, não são aplicados mais de 6 dígitos nos dispositivos. Por exemplo, um administrador define `8`o comprimento mínimo para . Nos dispositivos inscritos no utilizador, os utilizadores só são obrigados a definir um PIN de 6 dígitos. Intune não força um PIN superior a 6 dígitos em dispositivos matriculados pelo utilizador.
 
 - **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de inscrições falhadas antes de o dispositivo ser limpo, de 4 a 11.
   
@@ -194,12 +194,12 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
   - **10**: Bloqueios de ecrã após 10 minutos de inatividade.
   - **15**: Bloqueios de ecrã após 15 minutos de inatividade.
 
-  Se um valor não se aplica ao iOS e iPadOS, então a Apple utiliza o valor *mais baixo* mais próximo. Por exemplo, se introduzir `4` minutos, os dispositivos iPadOS usam `2` minutos. Se entrar `10` minutos, os dispositivos iOS utilizam `5` minutos. Esta é uma limitação da Apple.
+  Se um valor não se aplica ao iOS e iPadOS, então a Apple utiliza o valor *mais baixo* mais próximo. Por exemplo, se `4` introduzir minutos, os `2` dispositivos iPadOS utilizam minutos. Se introduzir `10` minutos, os dispositivos iOS utilizam `5` minutos. Esta é uma limitação da Apple.
   
   > [!NOTE]
   > O Intune UI para esta definição não separa os valores suportados pelo iOS e iPadOS. A UI pode ser atualizada num futuro lançamento.
 
-- **Expiração da palavra-passe (dias)** : Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada, de 1-65535.
+- **Expiração da palavra-passe (dias)**: Introduza o número de dias antes de a palavra-passe do dispositivo ser alterada, de 1-65535.
 - **Evite a reutilização de senhas anteriores**: Utilize esta definição para restringir os utilizadores a criarem senhas usadas anteriormente. Introduza o número de senhas usadas anteriormente que não podem ser usadas, de 1 a 24. Por exemplo, insira 5 para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - **Touch ID e Face ID desbloqueia:** **O bloco** evita a utilização de uma impressão digital ou rosto para desbloquear dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores desbloqueiem dispositivos utilizando biometria.
 
@@ -278,7 +278,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 - **Requerer a senha do iTunes Store para todas as compras**: Exija **que** os utilizadores introduzam a palavra-passe apple ID para cada compra na aplicação ou iTunes. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir compras sem pedir sempre uma senha.
 - **Compras in-app**: **O bloco** impede as compras in-app da loja. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir compras de loja dentro de uma aplicação de execução.
-- **Descarregue os conteúdos da loja iBook sinalizadas como 'Erotica'** : **O Bloco** impede os utilizadores de descarregarem os meios de comunicação da loja iBook que está marcada como erótica. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores descarreguem livros com a categoria "Erotica".
+- **Descarregue os conteúdos da loja iBook sinalizadas como 'Erotica'**: **O Bloco** impede os utilizadores de descarregarem os meios de comunicação da loja iBook que está marcada como erótica. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores descarreguem livros com a categoria "Erotica".
 - **Permitir que as aplicações geridas escrevam contactos para contas**de contactos não geridas : **Permitir** que as aplicações geridas, como a aplicação móvel Outlook, guardem ou sincronizam informações de contacto, incluindo contactos empresariais e corporativos, para a aplicação incorporada iOS/iPadOS Contacts. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o OS poderá impedir que as aplicações geridas guardem ou sincronizem informações de contacto para a aplicação de contactos iOS/iPadOS incorporados nos dispositivos.
   
   Para utilizar esta definição, configure **Ver documentos empresariais em aplicações não geridas** como **Bloquear**.
@@ -324,7 +324,10 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição do dispositivo, inscrição automática de dispositivos (supervisionado)
 
+
 - **Pesquisa de holofotes para devolver resultados da internet**: **O Bloco** impede o Spotlight de devolver quaisquer resultados de uma pesquisa na Internet. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que a pesquisa de Holofotes se conectem à Internet para fornecer resultados de pesquisa.
+
+  Esta definição é duplicada na UI, e será fixada numa próxima versão. Atualmente, esta definição aplica-se a dispositivos supervisionados. Numa versão futura, esta definição aplica-se a dispositivos matriculados e automatizados de dispositivos matriculados e não necessitarão de supervisão.
 
 - **Cookies de Safari**: Selecione como os cookies são tratados em dispositivos. As opções são:
   - Permitir
@@ -334,7 +337,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 - **Safari JavaScript**: **Bloco** impede que scripts Java no navegador sejam recorridos em dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir scripts Java.
 
-- **Safari Pop-ups**: **O bloco** desativa o bloqueador pop-up no navegador web. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o bloqueador pop-up.
+- **Safari Pop-ups**: **Bloqueia** todos os pop-ups no navegador safari. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir o bloqueador pop-up.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -387,6 +390,8 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 - **Pesquisa de holofotes para devolver resultados da internet**: **O Bloco** impede o Spotlight de devolver quaisquer resultados de uma pesquisa na Internet. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que a pesquisa de Holofotes se conectem à Internet para fornecer resultados de pesquisa.
 
+  Esta definição é duplicada na UI, e será fixada numa próxima versão. Atualmente, esta definição aplica-se a dispositivos supervisionados. Numa versão futura, esta definição aplica-se a dispositivos matriculados e automatizados de dispositivos matriculados e não necessitarão de supervisão.
+
 - **Remoção de blocos de aplicações do sistema a partir do dispositivo**: O **bloco** desativa a capacidade de remover aplicações do sistema dos dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores removam as aplicações do sistema.
 
 - **Safari**: **Bloqueie** a utilização do navegador Safari em dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores utilizem o navegador Safari.
@@ -409,7 +414,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 Para adicionar aplicações a estas listas, pode:
 
-- **Adicionar** o URL do iTunes App Store da aplicação desejada. Por exemplo, para adicionar a aplicação Microsoft Work Folders, insira `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` ou `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
+- **Adicionar** o URL do iTunes App Store da aplicação desejada. Por exemplo, para adicionar a aplicação `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`Microsoft Work Folders, insira ou .
 
   Para localizar o URL de uma aplicação, abra o iTunes App Store e procure a aplicação. Por exemplo, procure `Microsoft Remote Desktop` ou `Microsoft Word`. Selecione a aplicação e copie o URL.
 
@@ -439,9 +444,9 @@ Esta funcionalidade aplica-se a:
 
 - **URL da aplicação**: Introduza o URL da aplicação da loja da app que pretende mostrar ou ocultar. Por exemplo:
 
-  - Para adicionar a aplicação Microsoft Work Folders, introduza `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` ou `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
+  - Para adicionar a aplicação Microsoft `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`Work Folders, insira ou . 
 
-  - Para adicionar a aplicação Microsoft Word, introduza `https://itunes.apple.com/de/app/microsoft-word/id586447913` ou `https://apps.apple.com/de/app/microsoft-word/id586447913`.
+  - Para adicionar a aplicação `https://itunes.apple.com/de/app/microsoft-word/id586447913` `https://apps.apple.com/de/app/microsoft-word/id586447913`Microsoft Word, insira ou .
 
   Para localizar o URL de uma aplicação, abra o iTunes App Store e procure a aplicação. Por exemplo, procure `Microsoft Remote Desktop` ou `Microsoft Word`. Selecione a aplicação e copie o URL.
 
@@ -473,7 +478,7 @@ Para adicionar aplicações, pode:
   > [!IMPORTANT]
   > Esta definição é tratada como uma ação remota do dispositivo. Portanto, esta definição não é mostrada no perfil de gestão dos dispositivos. Sempre que o estado do hotspot pessoal muda no dispositivo, o **Hotspot Pessoal** é bloqueado pelo serviço Intune. Em Intune, se o estado de reporte mostrar um sucesso, então saiba que está a funcionar, mesmo que a configuração não seja mostrada no perfil de gestão do dispositivo.
 
-- **Regras de utilização celular (apenas aplicações geridas)** : **Permitir definir** os tipos de dados que as aplicações geridas podem usar quando em redes celulares. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. As opções são:
+- **Regras de utilização celular (apenas aplicações geridas)**: **Permitir definir** os tipos de dados que as aplicações geridas podem usar quando em redes celulares. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. As opções são:
   - **Bloquear a utilização de dados celulares**: Bloquear a utilização de dados celulares para **todas as aplicações geridas** ou **escolher aplicações específicas**.
   - **Bloquear a utilização de dados celulares durante o roaming**: Bloquear a utilização de dados celulares ao roaming para **todas as aplicações geridas** ou **escolher aplicações específicas**.
 
@@ -563,7 +568,7 @@ Para adicionar aplicações, pode:
 - **Backup encriptado**: **Exija** para que as cópias de segurança do dispositivo sejam encriptadas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Apps geridas sincronizam-se na nuvem**: **O Bloco** impede que as aplicações geridas por Intune sincronizem dados na conta iCloud do utilizador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que este sincronizado de dados seja sincronizado no iCloud.
 - **Block Enterprise Book Backup**: **Block** impede o backup de livros empresariais. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores reerquem estes livros.
-- **Sincronização de metadados de livros empresariais de blocos (notas e destaques)** : **Bloco** impede a sincronização de notas e destaques nos livros empresariais. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a sincronização.
+- **Sincronização de metadados de livros empresariais de blocos (notas e destaques)**: **Bloco** impede a sincronização de notas e destaques nos livros empresariais. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a sincronização.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição do dispositivo, inscrição automática de dispositivos (supervisionado)
 
@@ -600,7 +605,7 @@ Por exemplo, em ambiente escolar ou universitário, adicione uma aplicação que
 
 Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e as suas iDs de pacote. Ou **Exportar** uma lista existente que inclua as aplicações.
 
-## <a name="kiosk"></a>Modo de Local Público
+## <a name="kiosk"></a>Kiosk
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -650,13 +655,13 @@ Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição do dispositivo, inscrição automática de dispositivos (supervisionado)
 
-- **Domínios de e-mail não marcados** > URL de domínio de **e-mail**: Adicione um ou mais URLs à lista. Quando os utilizadores recebem um e-mail de um domínio diferente dos domínios em que introduz, o e-mail é marcado como não confiável na aplicação iOS/iPadOS Mail.
+- **Domínios de e-mail não marcados** > **Email Domain URL**: Adicione um ou mais URLs à lista. Quando os utilizadores recebem um e-mail de um domínio diferente dos domínios em que introduz, o e-mail é marcado como não confiável na aplicação iOS/iPadOS Mail.
 
-- **Domínios Web geridos** > **URL do Domínio Web**: adicione um ou mais URLs à lista. Quando forem transferidos documentos dos domínios introduzidos, estes serão considerados geridos. Esta definição só se aplica a documentos transferidos através do browser Safari.
+- **Gerido sição** > web**domínios Web Domain URL;** Adicione um ou mais URLs à lista. Quando forem transferidos documentos dos domínios introduzidos, estes serão considerados geridos. Esta definição só se aplica a documentos transferidos através do browser Safari.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
-- **Domínios de auto-enchimento de palavra-passe safari** > URL de **domínio:** Adicione um ou mais URLs à lista. Os utilizadores só podem guardar as palavras-passe Web de URLs nesta lista. Esta definição aplica-se apenas ao navegador Safari e aos dispositivos em modo supervisionado. Se não introduzir urLs, as palavras-passe podem ser guardadas em todos os web sites.
+- **Safari password autofill domínios Domínios** > **Domínio**: Adicione um ou mais URLs à lista. Os utilizadores só podem guardar as palavras-passe Web de URLs nesta lista. Esta definição aplica-se apenas ao navegador Safari e aos dispositivos em modo supervisionado. Se não introduzir urLs, as palavras-passe podem ser guardadas em todos os web sites.
 
   Esta definição aplica-se a:  
   - iOS 9.3 e mais recente
@@ -667,7 +672,6 @@ Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e
 O modo supervisionado iOS/iPadOS só pode ser ativado durante a configuração inicial do dispositivo através do Programa de Inscrição de Dispositivos da Apple, ou utilizando o Configurador Apple. Depois de ativar o modo supervisionado, o Intune pode configurar um dispositivo com a seguinte funcionalidade:
 
 - Bloqueio de Aplicação (Modo de Aplicação Única) 
-- Proxy HTTP Global 
 - Desativar o Bloqueio de Ativação 
 - Modo de Aplicação Única Autónomo 
 - Filtro de Conteúdo Web 
@@ -687,7 +691,7 @@ O modo supervisionado iOS/iPadOS só pode ser ativado durante a configuração i
 - Apagar dispositivo 
 - Restrições da IU 
 - Instalação dos perfis de configuração pela IU 
-- Notícias 
+- Novidades 
 - Atalhos de teclado 
 - Modificações do código de acesso 
 - Alterações do nome do dispositivo 
@@ -710,7 +714,7 @@ O modo supervisionado iOS/iPadOS só pode ser ativado durante a configuração i
 > - Adicionar amigos do Game Center
 > - Siri
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

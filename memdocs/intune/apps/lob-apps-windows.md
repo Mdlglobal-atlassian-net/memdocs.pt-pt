@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9695db99b8c170978ed2a27800b7cfe6090168
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323904"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166643"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Adicionar aplicações de linha de negócio Windows ao Microsoft Intune
 
@@ -50,7 +50,7 @@ Uma aplicação de linha de negócio (LOB) é uma aplicação que adiciona a par
    Os detalhes da aplicação serão apresentados.
 
     > [!NOTE]
-    > As extensões de ficheiros de aplicações do Windows incluem **.msi**, **.appx**, **.appxbundle**, **.msix** e **.msixbundle**.  
+    > As extensões de ficheiros para aplicações do Windows incluem **.msi**, **.appxbundle**, **.msix**, e **.msixbundle**. **.appxbundle**  
 
 3. Quando terminar, selecione **OK** no painel de **ficheiros** do pacote app para adicionar a aplicação.
 
@@ -59,9 +59,11 @@ Uma aplicação de linha de negócio (LOB) é uma aplicação que adiciona a par
 1. Na página de informações da **App,** adicione os detalhes para a sua aplicação. Consoante a aplicação que tenha escolhido, alguns dos valores neste painel podem ser preenchidos automaticamente.
     - **Nome**: introduza o nome da aplicação tal como aparece no portal da empresa. Certifique-se de que todos os nomes de aplicações que utiliza são exclusivos. Se existir o mesmo nome duas vezes, só aparece uma das aplicações no portal da empresa.
     - **Descrição**: introduza a descrição da aplicação. A descrição aparece no portal da empresa.
-    - **Publicador**: introduza o nome do publicador da aplicação.
-    - **Sistema Operativo Mínimo**: na lista, escolha a versão mínima do sistema operativo no qual a aplicação pode ser instalada. Se atribuir a aplicação a um dispositivo com um sistema operativo anterior, não será instalada.
-    - **Categoria**: selecione uma ou mais categorias das aplicações incorporadas ou, em alternativa, uma categoria criada por si. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
+    - **Editor**: Insira o nome do editor da app.
+    - Contexto de instalação de **aplicações**: Selecione o contexto de instalação para ser associado a esta aplicação. Para aplicações de modo duplo, selecione o contexto desejado para esta aplicação. Para todas as outras aplicações, esta é pré-selecionada com base no pacote e não pode ser modificada.
+    - **Ignorar versão da aplicação**: defina como **Sim** se a aplicação for atualizada automaticamente pelo programador da aplicação. Esta opção aplica-se apenas a aplicações .msi para dispositivos móveis.
+    - **Argumentos da linha de comandos**: opcionalmente, pode introduzir qualquer argumento da linha de comandos que pretenda aplicar ao ficheiro .msi quando este for executado.  Um exemplo é **/q**. Não inclua o comando ou argumentos msiexec, tais como **/i** ou **/x,** pois são automaticamente utilizados. Para mais informações, consulte [Opções de Linha de Comando](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Se o . O ficheiro MSI precisa de opções adicionais de linha de comando, considere usar a gestão da [aplicação Win32.](app-management.md)
+    - **Categoria**: Selecione uma ou mais categorias de aplicações incorporadas ou selecione uma categoria que criou. As categorias permitem que os utilizadores encontrem a aplicação mais facilmente quando procurarem no portal da empresa.
     - **Mostre isto como uma aplicação em destaque no Portal da Empresa**: Mostrar a aplicação em destaque na página principal do portal da empresa quando os utilizadores navegam para apps.
     - **URL de Informações**: opcionalmente, introduza o URL de um site que contenha informações sobre esta aplicação. O URL aparece no portal da empresa.
     - **URL de Privacidade**: opcionalmente, introduza um URL para um site que contenha informações sobre a privacidade desta aplicação. O URL aparece no portal da empresa.
@@ -97,7 +99,7 @@ A aplicação criada agora aparece na lista de aplicações. Na lista, pode atri
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Para que o serviço Intune implemente com sucesso um novo ficheiro APPX para o dispositivo, tem de incrementar a cadeia `Version` no ficheiro AppxManifest.xml no seu pacote APPX.
+   > Para que o serviço Intune implemente com sucesso um novo `Version` ficheiro APPX para o dispositivo, tem de aumentar a cadeia no ficheiro AppxManifest.xml no seu pacote APPX.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Configurar uma aplicação MSI móvel de atualização automática para ignorar o processo de verificação da versão
 
@@ -107,7 +109,7 @@ Algumas aplicações baseadas em instaladores MSI são automaticamente atualizad
 
 Esta funcionalidade é útil para evitar que ocorra uma condição race. Por exemplo, pode ocorrer uma condição race quando a aplicação é atualizada automaticamente pelo programador e pelo Intune. Ambos podem tentar impor uma versão da aplicação num cliente Windows, o que cria um conflito.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - A aplicação criada aparece na lista de aplicações. Agora pode atribuí-la aos grupos que escolher. Para obter ajuda, veja [Como atribuir aplicações a grupos](apps-deploy.md).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08a9656328c6de29441a0d8b0b5e2526836cdb9b
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863201"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506595"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Definições do Windows 10 (e mais tarde) para proteger dispositivos que utilizem Intune
 
@@ -201,7 +201,7 @@ As seguintes definições são listadas neste artigo uma única vez, mas todas s
   - **Ativar** - Ligue a firewall e segurança avançada. 
   - **Não configurado** Permite todo o tráfego de rede, independentemente de quaisquer outras definições de política.  
 
-- **Modo stealth**  
+- **Modo furtivo**  
   **Predefinição**: Não configurado  
   Firewall CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)  
   - **Não configurado**  
@@ -268,8 +268,8 @@ As seguintes definições são listadas neste artigo uma única vez, mas todas s
 
   - **Não configurado**  
   - **Bloco** - As regras de firewall de aplicação autorizadas na loja local são ignoradas e não aplicadas.  
-  - **Permitir** -
-   Escolher **Ativar** aplica regras de firewall na loja local para que sejam reconhecidas e executadas.  
+  - **Permitir a** -
+   Escolha **Ativa** Aplica regras de firewall na loja local para que sejam reconhecidas e executadas.  
 
 - **Regras globais da Microsoft Defender Firewall da loja local**  
   **Predefinição**: Não configurado  
@@ -295,13 +295,13 @@ As seguintes definições são listadas neste artigo uma única vez, mas todas s
   - **Bloco** - As regras de segurança de ligação da loja local são ignoradas e não aplicadas, independentemente da versão do esquema e da versão da regra de segurança de ligação.  
   - **Permitir** - Aplicar regras de segurança de ligação a partir da loja local, independentemente das versões de regras de segurança de esquemas ou de ligação.  
 
-### <a name="firewall-rules"></a>Regras de firewall  
+### <a name="firewall-rules"></a>Regras da firewall  
 
 Pode **adicionar** uma ou mais regras personalizadas de Firewall. Para mais informações, consulte [Adicionar regras de firewall personalizadas para dispositivos Windows 10](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices).  
 
 As regras de Firewall personalizadas suportam as seguintes opções:  
 
-#### <a name="general-settings"></a>Definições gerais:  
+#### <a name="general-settings"></a>Configurações gerais:  
 
 - **Nome**  
   **Predefinição**: *Sem nome*  
@@ -403,7 +403,7 @@ Especifique as portas locais e remotas a que se aplica esta regra.
     - **Portas remotas** - Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Personalizado** – Especifique um número de **protocolo** personalizado de 0 a 255.  
 
-#### <a name="advanced-configuration"></a>Configurações avançadas  
+#### <a name="advanced-configuration"></a>Configuração avançada  
 - **Tipos de interface**  
   **Predefinição**: 0 selecionado  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
@@ -748,17 +748,6 @@ Estas definições aplicam-se especificamente a unidades de dados fixas.
     - **Palavras-passe de recuperação de cópia de segurança e pacotes de chaves**  
     - **Apenas palavras-passe de recuperação de cópia de segurança**  
 
-  - **Rotação da palavra-passe de recuperação orientada pelo cliente**  
-    **Predefinição**: Rotação de chaves ativada para dispositivos unidos pelo Azure  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    Esta definição inicia uma rotação de palavra-passe de recuperação orientada pelo cliente após uma recuperação de unidade solado (quer utilizando o bootmgr ou o WinRE).  
-
-    - Não configurado  
-    - Rotação da chave desativada  
-    - Rotação de chave ativada para degelos unidos pela AD azure  
-    - Rotação de chaves ativada para dispositivos Azure AD e Híbridos  
-
   - **Armazenar informações de recuperação no Diretório Ativo da Azure antes de ativar o BitLocker**  
     **Predefinição**: Não configurado  
  
@@ -796,11 +785,11 @@ As regras de redução de superfície de ataque ajudam a prevenir comportamentos
 
 #### <a name="attack-surface-reduction-rules"></a>Regras de Redução de Superfície de Ataque  
 
-- **Marcar o roubo de credenciais do sistema de autoridade de segurança local do Windows**  
+- **Sinalizar o roubo de credenciais do subsistema de autoridade de segurança local do Windows**  
   **Predefinição**: Não configurado  
   Regra: Roubo de credenciais de bloco do subsistema da autoridade de [segurança local do Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
-  Ajude a prevenir ações e aplicações que são normalmente usadas através da exploração de malware para infetar máquinas.  
+  Ajude a impedir as ações e aplicações que são normalmente utilizadas por software maligno para explorar falhas de segurança e infetar computadores.  
 
   - **Não configurado**  
   - **Ativar** - Roubo de credenciais de bandeira do subsistema da autoridade de segurança local do Windows (lsass.exe).  
@@ -878,7 +867,7 @@ Bloqueie os itens seguintes para impedir ameaças de script:
   - **Bloco** - Bloqueie js/vbs da execução da carga útil descarregada da Internet.  
   - **Apenas auditoria**  
 
-- **Processo de criação de comandos PSExec e WMI**  
+- **Criação de processos com os comandos PsExec e WMI**  
   **Predefinição**: Não configurado  
   Regra: [Criações de processo sinuosos com origem nos comandos PSExec e WMI](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
@@ -887,7 +876,7 @@ Bloqueie os itens seguintes para impedir ameaças de script:
   
   - **Apenas auditoria**  
 
-- **Processos não fidedignos e não assinados que executam a partir de USB**  
+- **Processos não fidedignos e não assinados executados a partir de USB**  
   **Predefinição**: Não configurado  
   Regra: [Bloqueie processos não confiáveis e não assinados que vão a partir de USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
@@ -987,7 +976,7 @@ Bloqueie ligações de saída de qualquer aplicação para endereços IP ou dom�
 
   - **Não configurado** - Desative esta funcionalidade. Os utilizadores e aplicações não estão impedidos de se conectarem a domínios perigosos. Os administradores não conseguem ver esta atividade no Microsoft Defender Security Center.  
   - **Ativar** - Ligue a proteção da rede e bloqueie os utilizadores e aplicações da ligação a domínios perigosos. Os administradores podem ver esta atividade no Microsoft Defender Security Center.  
-  - **Auditoria apenas:** - Os utilizadores e aplicações não estão impedidos de se ligarem a domínios perigosos. Os administradores podem ver esta atividade no Microsoft Defender Security Center.  
+  - **Auditoria apenas:**- Os utilizadores e aplicações não estão impedidos de se ligarem a domínios perigosos. Os administradores podem ver esta atividade no Microsoft Defender Security Center.  
 
 ### <a name="exploit-protection"></a>Exploit Protection  
 
@@ -998,7 +987,7 @@ Bloqueie ligações de saída de qualquer aplicação para endereços IP ou dom�
 
   - *PowerShell* - Utilize um ou mais dos cmdlets PowerShell *get-process,* *Set-ProcessMitigation*e *ConvertTo-ProcessMitigationPolicy* PowerShell. Os cmdlets configuram definições de mitigação e exportam uma representação XML deles.  
 
-  - *Microsoft Defender Security Center UI* - No Microsoft Defender Security Center, clique no controlo de App & browser e, em seguida, percorra para a parte inferior do ecrã resultante para encontrar a Explore Protection. Em primeiro lugar, utilize as definições do sistema e os separadores das definições de programa para configurar definições de atenuação. Em seguida, localize a ligação de definições de Exportação na parte inferior do ecrã para exportar uma representação XML dos mesmos.  
+  - *Microsoft Defender Security Center UI* - No Microsoft Defender Security Center, clique na App & controlo do navegador e, em seguida, percorra para a parte inferior do ecrã resultante para encontrar a Explore Protection. Em primeiro lugar, utilize as definições do sistema e os separadores das definições de programa para configurar definições de atenuação. Em seguida, localize a ligação de definições de Exportação na parte inferior do ecrã para exportar uma representação XML dos mesmos.  
 
 - **Edição do utilizador da interface de proteção de exploração**  
   **Predefinição**: Não configurado  
@@ -1029,7 +1018,7 @@ Escolha aplicações adicionais que precisam de ser auditadas ou que possam ser 
 
 A Guarda Credencial do Microsoft Defender protege contra ataques de roubo de credenciais. Isola os segredos para permitir o acesso apenas a software de sistema com privilégios.  
 
-- **Guarda Credencial**  
+- **Credential Guard**  
   **Predefinição**: Desativar  
   [DispositivoGuarda CSP](https://go.microsoft.com/fwlink/?linkid=872424)  
 
@@ -1064,7 +1053,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem ver a área de proteção contra vírus e ameaças no Microsoft Defender Security Center. Ocultar esta secção também bloqueará todas as notificações relacionadas com o Vírus e a proteção contra ameaças.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Proteção ransomware**  
   **Predefinição**: Não configurado  
@@ -1073,7 +1062,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem visualizar a área de proteção ransomware no Microsoft Defender Security Center. Ocultar esta secção também bloqueará todas as notificações relacionadas com a proteção ransomware.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Proteção de Conta**  
   **Predefinição**: Não configurado  
@@ -1082,7 +1071,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem visualizar a área de proteção da conta no Microsoft Defender Security Center. Ocultar esta secção também bloqueará todas as notificações relacionadas com a proteção de Conta.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Firewall e proteção da rede**  
   **Predefinição**: Não configurado  
@@ -1091,7 +1080,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem visualizar a firewall e a área de proteção de rede no centro de segurança Do Microsoft Defender. Ocultar esta secção também bloqueará todas as notificações relacionadas com firewall e proteção de rede.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Controlo de aplicativos e navegador**  
   **Predefinição**: Não configurado  
@@ -1100,7 +1089,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem ver a app e a área de controlo do navegador no centro de Segurança do Microsoft Defender. Ocultar esta secção também bloqueará todas as notificações relacionadas com o controlo de Apps e navegador.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Proteção de hardware**  
   **Predefinição**: Não configurado  
@@ -1109,25 +1098,25 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure se os utilizadores finais puderem visualizar a área de proteção de hardware no Microsoft Defender Security Center. Ocultar esta secção também bloqueará todas as notificações relacionadas com a proteção de Hardware.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
-- **Desempenho e estado de funcionamento do dispositivo**  
+- **Desempenho e funcionamento do dispositivo**  
   **Predefinição**: Não configurado  
   WindowsDefenderSecurityCenter CSP: [DisablehealthUI](https://go.microsoft.com/fwlink/?linkid=873671)  
 
   Configure se os utilizadores finais puderem visualizar o desempenho do Dispositivo e a área de saúde no centro de segurança do Microsoft Defender. Ocultar esta secção também bloqueará todas as notificações relacionadas com o desempenho e saúde do Dispositivo.  
   
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
-- **Opções de família**  
+- **Opções de famílias**  
   **Predefinição**: Não configurado  
   WindowsDefenderSecurityCenter CSP: [DisableFamilyui](https://go.microsoft.com/fwlink/?linkid=873673)  
 
   Configure se os utilizadores finais puderem visualizar a área de opções familiares no centro de Segurança Do Microsoft Defender. Ocultar esta secção também bloqueará todas as notificações relacionadas com opções familiares.  
   
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Notificações das áreas expostas da app**  
   **Predefinição**: Não configurado  
@@ -1145,7 +1134,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure o visualizar o controlo da área de notificação. O utilizador precisa de assinar e iniciar sessão ou reiniciar o computador para que esta definição faça efeito.  
   
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Botão TPM claro**  
   **Predefinição**: Não configurado  
@@ -1161,7 +1150,7 @@ Bloqueie o acesso do utilizador final às várias áreas da aplicação Microsof
   Configure o visor da atualização TPM Firmware quando for detetado um firmware vulnerável.  
 
   - **Não configurado**  
-  - **Esconder**  
+  - **Ocultar**  
 
 - **Proteção de Adulteração**  
   **Predefinição**: Não configurado
@@ -1229,7 +1218,7 @@ Utilize estas opções para configurar as definições da segurança local em di
    - **Bloco** - Permita que apenas contas locais com senhas em branco assinem utilizando o teclado do dispositivo.  
    - **Não configurado** - Permita que contas locais com senhas em branco sintetizam em outros locais que não o dispositivo físico.  
 
-#### <a name="admin"></a>Administração  
+#### <a name="admin"></a>Administrador  
 
 - **Conta de administração local**  
   **Predefinição**: Não configurado  
@@ -1267,9 +1256,8 @@ Utilize estas opções para configurar as definições da segurança local em di
   **Predefinição**: Não configurado  
   Opções locais DeSegurança CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Bloco** - Os utilizadores podem premir o botão de ejeção física de um dispositivo portátil para desancorar com segurança o dispositivo.  
-  - **Não configurado** - Um utilizador deve iniciar sessão no dispositivo e receber permissão para desancorar o dispositivo.  
+  - **Bloco** - Um utilizador deve iniciar sessão no dispositivo e receber permissão para desancorar o dispositivo.
+  - **Não configurado** - Os utilizadores podem premir o botão de ejeção física de um dispositivo portátil para desancorar com segurança o dispositivo.
 
 - **Instale controladores de impressoras para impressoras partilhadas**  
   **Predefinição**: Não configurado  
@@ -1312,8 +1300,8 @@ Utilize estas opções para configurar as definições da segurança local em di
   Opções de segurança de políticas locais CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Ativar** - Premir CTRL+ALT+DEL não é necessário para que os utilizadores possam iniciar sessão.  
-  - **Não configurado** Exija que os utilizadores pressionem CTRL+ALT+DEL antes de iniciars sessão no Windows.  
+  - **Ativar** - Exija que os utilizadores pressionem CTRL+ALT+DEL antes de iniciars sessão no Windows.
+  - **Não configurado** - Premir CTRL+ALT+DEL não é necessário para que os utilizadores assinem.
 
 - **Comportamento de remoção de cartões inteligentes**  
   **Padrão**: Bloquear a estação de trabalho   
@@ -1347,8 +1335,8 @@ Utilize estas opções para configurar as definições da segurança local em di
   - **Ativar** - Ocultar o nome de utilizador.  
   - **Não configurado** - Mostre o último nome de utilizador.  
 
-- **Ocultar o nome de utilizador no início do
-  ** **Predefinido**: Não configurado  
+- **Ocultar o nome de utilizador no predefinido de início de sessão**
+  **Default**: Não configurado  
   Opções de Segurança local CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](https://go.microsoft.com/fwlink/?linkid=867959)  
 
   
@@ -1614,7 +1602,7 @@ Utilize estas opções para configurar as definições da segurança local em di
   CSP: [TaskScheduler/EnableXboxGameSaveTask](https://go.microsoft.com/fwlink/?linkid=875480)  
    
   Esta definição determina se a Xbox Game Save Task está ativada ou desativada.  
-  - **Habilitado**
+  - **Ativado**
   - **Não configurado**
 
 - **Serviço de Gestão de Acessórios Xbox**  
@@ -1624,7 +1612,7 @@ Utilize estas opções para configurar as definições da segurança local em di
   Esta definição determina o tipo de início do Serviço de Gestão do Acessório.  
   - **Manual**
   - **Automático**
-  - **Deficientes**
+  - **Desativado**
 
 - **Serviço de Gerente Auth Xbox Live**  
   **Predefinição**: Manual  
@@ -1633,7 +1621,7 @@ Utilize estas opções para configurar as definições da segurança local em di
   Esta definição determina o tipo de início do Serviço de Gerente live Auth.  
   - **Manual**
   - **Automático**
-  - **Deficientes**
+  - **Desativado**
  
 - **Serviço de salvamento de jogos xbox ao vivo**  
   **Predefinição**: Manual  
@@ -1642,7 +1630,7 @@ Utilize estas opções para configurar as definições da segurança local em di
   Esta definição determina o tipo de início do Serviço de Salvamento de Jogos Ao Vivo.  
   - **Manual**
   - **Automático**
-  - **Deficientes**
+  - **Desativado**
 
 - **Serviço de Rede Xbox Live**  
   **Predefinição**: Manual  
@@ -1651,9 +1639,9 @@ Utilize estas opções para configurar as definições da segurança local em di
   Esta definição determina o tipo de início do Serviço de Rede.  
   - **Manual**
   - **Automático**
-  - **Deficientes**
+  - **Desativado**
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](../configuration/device-profile-assign.md)e [monitorize o seu estado](../configuration/device-profile-monitor.md).  
 

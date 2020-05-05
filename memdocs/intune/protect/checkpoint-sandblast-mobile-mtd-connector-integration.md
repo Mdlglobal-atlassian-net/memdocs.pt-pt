@@ -1,5 +1,5 @@
 ---
-title: Integrar MTD do Check Point SandBlast
+title: Integrar ponto de verificação SandBlast MTD
 titleSuffix: Microsoft Intune
 description: Como configurar a Defesa Contra Ameaças para Dispositivos Móveis (MTD) do Check Point SandBlast com o Intune para controlar o acesso de dispositivos móveis aos seus recursos empresariais.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71dc3eed84f2f1a5a267740b5c1539b29f4c63bb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329721"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079863"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrar o Check Point SandBlast Mobile com o Intune
 
@@ -46,7 +46,7 @@ Antes de iniciar o processo de integração do Check Point SandBlast Mobile com 
 
   - Aceder ao diretório como o utilizador com sessão iniciada
 
-  - Ler dados do diretório
+  - Ler os dados do diretório
 
   - Enviar informações do dispositivo para o Intune
 
@@ -58,7 +58,7 @@ O processo de autorização da aplicação Check Point SandBlast consiste no seg
 
 - Permitir que o serviço Check Point SandBlast Mobile comunique informações relacionadas com o estado de funcionamento do dispositivo ao Intune.
 
-- O Check Point SandBlast Mobile sincroniza com a associação do Grupo de Inscrição do Azure AD para povoar a respetiva base de dados do dispositivo.
+- CheckPoint SandBlast Mobile sincroniza-se com a adesão do Grupo de Inscrição AD Azure para preencher a base de dados do seu dispositivo.
 
 - Permitir que a consola do administrador do Check Point SandBlast utilize o Início de Sessão Único (SSO) do Azure AD.
 
@@ -87,6 +87,6 @@ O processo de autorização da aplicação Check Point SandBlast consiste no seg
 
 8. Selecione **Verificar**. Assim que o grupo de segurança do Azure AD for verificado com êxito, selecione **Guardar**.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Set up Check Point SandBlast Mobile apps (Configurar aplicações do Check Point SandBlast Mobile)](mtd-apps-ios-app-configuration-policy-add-assign.md)

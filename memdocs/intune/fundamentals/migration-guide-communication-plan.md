@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7322ca043db4f6c6f7b66221ba20a02ee505ba2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aaeca2e4dadf7ef28b55479fb83becfc3b206123
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331237"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080016"
 ---
 # <a name="plan-communications"></a>Planear as comunicações
 
@@ -30,9 +30,9 @@ O plano de comunicação é um elemento-chave para uma migração inoportuna. As
 
 Download: [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit)
 
-## <a name="email-templates"></a>Modelos de e-mail
+## <a name="email-templates"></a>Modelos de E-mail
 
-Recomendamos o seguinte plano de comunicação de e-mails. Pode editar o texto para se alinhar com o sistema operativo e o ambiente dos seus utilizadores. Nós fornecemos modelos para que você se adapte para o seu plano de comunicação:
+Recomendamos o seguinte plano de comunicação de e-mails. Pode editar o texto para se alinhar com o sistema operativo e o ambiente dos seus utilizadores. Fornecemos modelos que pode adaptar ao seu plano de comunicação:
 
 - **E-mail #1**: Explique os benefícios, expectativas e horários. Aproveite esta oportunidade para apresentar outros serviços novos cujo acesso será concedido a dispositivos geridos pelo Intune.
 
@@ -56,7 +56,7 @@ Criámos vídeos curtos e passo a passo para ajudar os seus utilizadores a inscr
 - [Inscrever o seu dispositivo macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Inscreva as suas Janelas](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Intune tem recursos adicionais que pode utilizar para promover a inscrição do dispositivo com os seus utilizadores:
 

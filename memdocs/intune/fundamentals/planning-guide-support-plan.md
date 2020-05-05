@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330925"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080118"
 ---
 # <a name="develop-a-support-plan"></a>Desenvolver um plano de suporte
 
@@ -37,19 +37,19 @@ Ter um plano de suporte do Intune pode ajudar a identificar e resolver problemas
 
 - Quais são as oportunidades para envolver a equipa de suporte no início do processo de implementação do Intune?
 
-Vamos então rever cada área de forma mais detalhada.
+Vamos rever cada área mais detalhadamente.
 
 ## <a name="which-teams-are-responsible-for-providing-support"></a>Que equipas são responsáveis por fornecer suporte?
 
 As organizações podem ter camadas ou níveis diferentes de suporte (de 1 a 3). Por exemplo, as camadas 1 e 2 poderão fazer parte da equipa de suporte e a camada 3 poderá incluir os membros da equipa de MDM responsáveis pela implementação do Intune.
 
-Geralmente, a camada 1 é o primeiro nível de suporte, sendo a primeira camada a ser contactada pelo utilizador quando este quer solicitar suporte. Se a camada 1 não conseguir resolver o problema do utilizador final, este é escalado para a camada 2. Se necessário, a camada 2 irá escalá-lo para a camada 3. Além disso, o suporte da Microsoft poderá ser considerado a camada 4.
+Geralmente, a camada 1 é o primeiro nível de suporte, sendo a primeira camada a ser contactada pelo utilizador quando este quer solicitar suporte. Se o nível 1 não conseguir resolver o problema do utilizador final, aumentá-lo para o nível 2. Se necessário, a camada 2 irá escalá-lo para a camada 3. Além disso, o suporte da Microsoft poderá ser considerado a camada 4.
 
 Saiba mais sobre o [suporte do Intune](get-support.md).
 
 ## <a name="what-is-the-support-process"></a>Qual é o processo de suporte?
 
-Nas fases de implementação de produção iniciais, poderá ter as três camadas a participar numa bridge ou chamada Skype. Veja a seguir um exemplo de como uma organização pode implementar os seus fluxos de trabalho de suporte técnico ou suporte de TI:
+Nas fases de implementação de produção iniciais, poderá ter as três camadas a participar numa bridge ou chamada Skype. Aqui está um exemplo de como uma organização poderia implementar o seu suporte de TI ou fluxos de trabalho de helpdesk:
 
 1. O utilizador final entra em contacto com a camada 1 de suporte técnico ou suporte de TI relativamente a um problema de inscrição.
 
@@ -71,7 +71,7 @@ Este tipo de abordagem, especialmente nas fases iniciais da implementação do I
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>Como prevê disponibilizar formação sobre o suporte do Intune?
 
-É importante disponibilizar formação técnica relativa ao Intune à sua equipa de suporte técnico ou suporte de TI para que a formação tenha um nível adequado e se aplique à camada de suporte específica e às respetivas responsabilidades. Pode encarregar a equipa de MDM do Intune para ministrar esta formação aos líderes de suporte (formar o formador) e, em seguida, fazer com que estes líderes ministrem esta formação aos membros da sua equipa de suporte. Geralmente, esta formação pode ser ministrada em 2 ou 3 horas e inclui uma componente expositiva e uma prática.
+É importante fornecer formação técnica intune para o seu pessoal de suporte de TI ou helpdesk para que a formação esteja a um nível adequado e se aplique ao nível específico de suporte e suas responsabilidades. Pode encarregar a equipa de MDM do Intune para ministrar esta formação aos líderes de suporte (formar o formador) e, em seguida, fazer com que estes líderes ministrem esta formação aos membros da sua equipa de suporte. Geralmente, esta formação pode ser ministrada em 2 ou 3 horas e inclui uma componente expositiva e uma prática.
 
 Abaixo encontra-se um exemplo de conteúdos programáticos de uma formação sobre suporte do Intune.
 

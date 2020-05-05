@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d838260f0a4961302b24486474eec74b4cacd23e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326821"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254984"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Como gerir a transferência de dados entre aplicações iOS no Microsoft Intune
 
@@ -45,7 +45,7 @@ Utilize as políticas de proteção de aplicações com a funcionalidade **de ge
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurar a definição de UPN do utilizador para o Microsoft Intune ou EMM de terceiros
 Configurar a definição UPN do utilizador é **necessária** para dispositivos que são geridos pela Intune ou uma solução EMM de terceiros para identificar a conta de utilizador inscrita. A configuração UPN funciona com as políticas de proteção de aplicações que implementa a partir de Intune. O seguinte procedimento é um fluxo geral sobre como configurar a configuração da UPN e a experiência do utilizador resultante:
 
-1. No [portal Azure, crie](https://portal.azure.com) [e atribua uma política](app-protection-policies.md) de proteção de aplicações para iOS/iPadOS. Configure definições de política em conformidade com os requisitos da sua empresa e selecione as aplicações iOS que devem ter esta política.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) [crie e atribua uma política](app-protection-policies.md) de proteção de aplicações para iOS/iPadOS. Configure definições de política em conformidade com os requisitos da sua empresa e selecione as aplicações iOS que devem ter esta política.
 
 2. Implemente as aplicações e o perfil de e-mail que deseja gerido através do Intune ou da sua solução MDM de terceiros utilizando os seguintes passos generalizados. Esta experiência também é abrangida pelo *Exemplo 1*.
 
@@ -53,7 +53,7 @@ Configurar a definição UPN do utilizador é **necessária** para dispositivos 
 
       **chave** = IntuneMAMUPN, **valor** = <username@company.com>
 
-      Exemplo: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Exemplo: ['IntuneMAMUPN',janellecraig@contoso.com']
       
      > [!NOTE]
      > Em Intune, o tipo de inscrição da política de configuração da aplicação deve ser definido para **Dispositivos Geridos**.
@@ -74,11 +74,11 @@ Configurar a definição UPN do utilizador é **necessária** para dispositivos 
 
    |Fornecedor de MDM de terceiros| Chave de Configuração | Tipo de Valor | Valor de Configuração|
    | ------- | ---- | ---- | ---- |
-   |Microsoft Intune| IntuneMAMUPN | Cadeia | {{UserPrincipalName}}|
-   |VMware AirWatch| IntuneMAMUPN | Cadeia | {UserPrincipalName}|
-   |MobileIron | IntuneMAMUPN | Cadeia | ${userUPN} **ou** ${userEmailAddress} |
-   |Gestão de Pontos Finais de Citrix | IntuneMAMUPN | Cadeia | ${user.userprincipalname} |
-   |Gestor de Dispositivos Móveis ManageEngine | IntuneMAMUPN | Cadeia | %upn% |
+   |Microsoft Intune| IntuneMAMUPN | String | {{UserPrincipalName}}|
+   |VMware AirWatch| IntuneMAMUPN | String | {UserPrincipalName}|
+   |MobileIron | IntuneMAMUPN | String | ${userUPN} **ou** ${userEmailAddress} |
+   |Gestão de Pontos Finais de Citrix | IntuneMAMUPN | String | ${user.userprincipalname} |
+   |Gestor de Dispositivos Móveis ManageEngine | IntuneMAMUPN | String | %upn% |
 
 > [!NOTE]  
 > Para o Outlook para iOS/iPadOS, se implementar uma Política de Configuração de Aplicações gerida com a opção "Utilizar o designer de configuração" e permitir permitir apenas contas de **trabalho ou de escola,** a chave de configuração IntuneMAMUPN está configurada automaticamente nos bastidores da apólice. Mais detalhes podem ser encontrados na secção FAQ em [New Outlook para iOS e Android App Configuração De Política de Política de Configuração – Configuração Geral](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481)de Aplicações . 
@@ -124,5 +124,5 @@ Por exemplo, a definição da política PIN da **aplicação Require** é fácil
 Em primeiro lugar, [crie e atribua uma política de proteção de aplicações](app-protection-policies.md) à aplicação iOS. Para obter mais informações sobre como testar a política de proteção de aplicações, consulte as políticas de proteção de [aplicações .](app-protection-policies-validate.md)
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 [O que é uma política de proteção de aplicações do Intune](app-protection-policy.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330905"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080101"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Guia de planeamento, estruturação e implementação do Intune
 
@@ -61,6 +61,6 @@ Este guia fornece também mais informações técnicas e modelos de tabelas que 
 
 - Já se familiarizou com o Intune e as suas funcionalidades.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-Comecemos pela primeira secção: [eterminar metas, objetivos e obstáculos da implementação](planning-guide-deployment-goals.md).
+Vamos começar com a primeira secção: [Determinar objetivos de implantação, objetivos e desafios.](planning-guide-deployment-goals.md)

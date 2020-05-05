@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326058"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254848"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utilizar e gerir dispositivos Android Enterprise com OEMConfig no Microsoft Intune
 
@@ -79,7 +79,7 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
 ## <a name="create-an-oemconfig-profile"></a>Criar um perfil OEMConfig
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > Perfis de **Configuração** > **Criar perfil**.
+2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **empresa Android**.
@@ -89,10 +89,10 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
 5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: introduza um nome descritivo para o novo perfil.
-    - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Aplicação OEMConfig**: **Escolha Selecione uma aplicação OEMConfig**.
 
-6. Na **aplicação Associated,** selecione uma aplicação OEMConfig existente que adicionou anteriormente > **Selecione**. Certifique-se de que escolhe a aplicação OEMConfig correta para os dispositivos a que atribui a apólice.
+6. Na **aplicação Associated,** selecione uma aplicação OEMConfig existente que adicionou anteriormente > **Select**. Certifique-se de que escolhe a aplicação OEMConfig correta para os dispositivos a que atribui a apólice.
 
     Se não vir nenhuma aplicação listada, então crie o Managed Google Play e obtenha aplicações da loja Managed Google Play. [Adicione aplicações geridas](../apps/apps-add-android-for-work.md) do Google Play a dispositivos Android Enterprise lista os passos.
 
@@ -103,7 +103,7 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
 8. Nas **definições de Configuração,** selecione o designer de **configuração** ou **o editor JSON:**
 
     > [!TIP]
-    > Leia a documentação do OEM para se certificar de que está a configurar corretamente as propriedades. Estas propriedades da aplicação estão incluídas pelo OEM, não pelo Intune. Intune faz a validação mínima das propriedades, ou do que você entra. Por exemplo, se introduzir `abcd` para um número de porta, o perfil economiza como está e é implantado nos seus dispositivos com os valores que configura. Certifique-se de introduzir a informação correta.
+    > Leia a documentação do OEM para se certificar de que está a configurar corretamente as propriedades. Estas propriedades da aplicação estão incluídas pelo OEM, não pelo Intune. Intune faz a validação mínima das propriedades, ou do que você entra. Por exemplo, se `abcd` introduzir um número de porta, o perfil economiza como está e é implantado nos seus dispositivos com os valores que configura. Certifique-se de introduzir a informação correta.
 
     - **Designer de configuração**: Quando selecionar esta opção, as propriedades disponíveis dentro do esquema da aplicação são mostradas para que possa configurar.
 
@@ -126,7 +126,7 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
     Quaisquer alterações feitas no designer de configuração também são feitas automaticamente no editor da JSON. Da mesma forma, quaisquer alterações feitas no editor da JSON são feitas automaticamente no designer de configuração. Se a sua entrada contiver valores inválidos, não pode alternar entre o designer de configuração e o editor jSON até corrigir os problemas.
 
 9. Selecione **Seguinte**.
-10. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+10. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -151,27 +151,31 @@ Em comparação com as aplicações padrão, as aplicações OEMConfig expandem 
 
 | OEM | ID do Pacote | Documentação OEM (se disponível) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Guia de administrador de plugin de serviço Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Tecnologias Zebra | com.zebra.oemconfig.common | [Visão geral da Zebra OEMConfig](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cifra | com.cipherlab.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Rio Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Guia de administrador de plugin de serviço Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink - Barcos de barras | com.spectralink.códigode.service |  |
 | Spectralink - Botões | com.spectralink.buttons |  |
 | Spectralink - Dispositivo | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Exploração Madeireira | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Tecnologias Zebra | com.zebra.oemconfig.common | [Visão geral da Zebra OEMConfig](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 
-Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na tabela acima, ou não aparece na consola Intune, o email `IntuneOEMConfig@microsoft.com`.
+Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na tabela acima, `IntuneOEMConfig@microsoft.com`ou não aparece na consola Intune, e-mail .
 
 > [!NOTE]
 > As aplicações OEMConfig devem embarcar pela Intune antes de poderem ser configuradas com perfis OEMConfig. Uma vez que uma aplicação é suportada, você não precisa contactar a Microsoft sobre a configuração no seu inquilino. Basta seguir as instruções nesta página.
 >
 > Se sentir que uma aplicação OEMConfig se comporta mal, contacte os desenvolvedores da aplicação OEMConfig. Intune não é responsável por problemas técnicos com as aplicações individuais da OEMConfig.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Monitorize o estado do perfil](device-profile-monitor.md).

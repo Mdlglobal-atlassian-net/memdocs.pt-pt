@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326781"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210354"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Atribuir licenças aos utilizadores para que estes possam inscrever dispositivos no Intune
 
@@ -34,9 +34,9 @@ Quer adicione utilizadores manualmente ou sincronize a partir do Active Director
 
 Pode utilizar o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) para adicionar manualmente utilizadores baseados na nuvem e atribuir licenças tanto a contas de utilizadores baseados na nuvem como a contas sincronizadas desde o seu Diretório Ativo no local até à AD Azure.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores** > **Todos os Utilizadores** > escolha um utilizador > **Licenças** > **Atribuições**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores** > **Todos os Utilizadores** > escolham um utilizador > Missões de **Licenças** > **Assignments**.
 
-2. Escolha a caixa para **Intune** > **Save**.
+2. Escolha a caixa para **Intune** > **Save**. Se pretender utilizar a Enterprise Mobility + Security E5 ou outra licença, escolha essa caixa.
 
    ![Screenshot da secção de licenças de produto do centro de administração Microsoft 365.](./media/licenses-assign/mem-assign-license.png)
 

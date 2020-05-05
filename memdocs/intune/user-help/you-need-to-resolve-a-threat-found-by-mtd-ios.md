@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bc6780d8956b00e9e0f177c69f067bafa4e8b49e
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327517"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182995"
 ---
-# <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Resolver uma ameaça detetada pela aplicação Defesa Contra Ameaças para Dispositivos Móveis
+# <a name="resolving-a-threat-found-by-a-mobile-threat-defense-app"></a>Resolver uma ameaça encontrada por uma aplicação de Defesa de Ameaças Móveis
 
-As aplicações de Defesa Contra Ameaças para Dispositivos Móveis detetam e alertam para ameaças potenciais nos seus dispositivos. Algumas organizações integram um serviço de Defesa Contra Ameaças para Dispositivos Móveis com um fornecedor de MDM, como o Intune. Quando integrado, o serviço de Defesa Contra Ameaças para Dispositivos Móveis comunica as ameaças (por exemplo, aplicações suspeitas, redes e vulnerabilidades do SO) e notifica-o na aplicação Portal da Empresa. Em seguida, pode encontrar detalhes sobre a ameaça e passos de remediação na aplicação Defesa Contra Ameaças para Dispositivos Móveis.  
+Uma aplicação de Defesa de Ameaças Móveis (MTD) deteta e alerta para potenciais ameaças no seu dispositivo, tais como aplicações suspeitas, redes ou vulnerabilidades de SO. A aplicação Portal da Empresa avisa-o quando é detetada uma ameaça e informa se afeta o seu acesso à escola ou recursos de trabalho. Em seguida, redireciona-o para a aplicação MTD para obter detalhes sobre a ameaça e, se disponível, passos para corrigi-la. 
 
-As ameaças são apresentadas no Portal da Empresa como problemas de não conformidade por resolver. Se as ameaças forem classificadas como de risco, a sua empresa irá revogar o acesso aos respetivos recursos empresariais. Enquanto estas ameaças estiverem presentes no seu dispositivo, poderá não ser possível:  
+Se uma ameaça parecer demasiado arriscada, como determinado pela sua organização, o seu acesso à escola ou recursos de trabalho pode ser revogado. Enquanto estas ameaças estiverem presentes no seu dispositivo, poderá não ser possível:  
 
 * Ligar ao e-mail empresarial
 * Ligar ao Wi-Fi empresarial
@@ -36,7 +36,7 @@ As ameaças são apresentadas no Portal da Empresa como problemas de não confor
 * Sincronizar ficheiros empresariais com o OneDrive
 * Aceder a aplicações da empresa
 
-Abaixo, encontram-se os serviços de Defesa Contra Ameaças para Dispositivos Móveis específicos do iOS que a sua organização poderá ter configurado. Selecione uma aplicação para ler mais sobre o respetivo comportamento. 
+Existem uma variedade de aplicações de fornecedores MTD que você poderia ter, todos com nomes diferentes. Abaixo estão apenas algumas aplicações específicas para iOS que você poderia ter. Selecione uma aplicação para ver como funciona com o Portal da Empresa para alertá-lo para ameaças. Para obter mais orientações, siga as instruções da aplicação Portal da Empresa e da Aplicação MTD ou contacte a pessoa de suporte de TI. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -44,5 +44,5 @@ Abaixo, encontram-se os serviços de Defesa Contra Ameaças para Dispositivos M�
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Pode encontrar as informações de contacto no [Site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ainda precisa de ajuda? Faça o check-in com a sua pessoa de apoio. Pode encontrar as informações de contacto no [Site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

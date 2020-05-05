@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325745"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079897"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configure infraestruturas para apoiar o SCEP com Intune
 
@@ -53,6 +53,7 @@ A infraestrutura no local seguinte deve ser executada em servidores que estejam 
 - **Conector** de certificado intune da Microsoft – O Conector de Certificado Intune da Microsoft é obrigado a utilizar perfis de certificado SCEP com Intune. Este artigo irá guiá-lo através [da instalação deste conector](#install-the-intune-certificate-connector).
 
   O conector suporta o modo Federal de Processamento de Informação (FIPS). O FIPS não é necessário, mas quando está ativado, pode emitir e revogar certificados.
+  - O conector tem os mesmos requisitos de rede que [os dispositivos geridos](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - O conector deve ser executado no mesmo servidor que a função do servidor NDES, um servidor que executa o Windows Server 2012 R2 ou mais tarde.
   - A estrutura .NET 4.5 é exigida pelo conector e está automaticamente incluída no Windows Server 2012 R2.
   - A configuração de segurança melhorada do Internet Explorer [deve ser desativada no servidor que acolhe o NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) e o Conector de Certificado Intune da Microsoft.
@@ -61,11 +62,11 @@ A infraestrutura no local seguinte deve ser executada em servidores que estejam 
 
 Para permitir que os dispositivos na internet obtenha certificados, tem de publicar o seu URL NDES externo à sua rede corporativa. Pode utilizar o Proxy de Aplicação AD Azure, o Servidor proxy de aplicação web ou outro proxy invertido.
 
-- **Procuração de aplicação Azure AD** (opcional) – Pode utilizar o Proxy de Aplicação AD Azure em vez de um servidor dedicado à aplicação web Proxy (WAP) para publicar o seu URL NDES na internet. Isto permite que tanto dispositivos de intranet como de internet obtenha certificados. Para obter mais informações, veja [Como fornecer acesso remoto seguro às aplicações no local](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Procuração de aplicação Azure AD** (opcional) – Pode utilizar o Proxy de Aplicação AD Azure em vez de um servidor dedicado à aplicação web Proxy (WAP) para publicar o seu URL NDES na internet. Isto permite que tanto dispositivos de intranet como de internet obtenha certificados. Para mais informações, consulte [How to provide secure remote access to on-premises applications (Como fornecer acesso remoto seguro a aplicações no local)](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 - Servidor proxy de **aplicação web** (opcional) - Utilize um servidor que execute o Windows Server 2012 R2 ou mais tarde como um servidor proxy de aplicação web (WAP) para publicar o seu URL NDES na internet.  Isto permite que tanto dispositivos de intranet como de internet obtenha certificados.
 
-  O servidor que aloja o WAP [tem de instalar uma atualização](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) que ativa o suporte para os URLs longos que são utilizados pelo Serviço de Inscrição de Dispositivos de Rede. Esta atualização está incluída no [rollup da atualização de dezembro de 2014](https://support.microsoft.com/kb/3013769)ou individualmente a partir do [KB3011135](https://support.microsoft.com/kb/3011135).
+  O servidor que aloja o WAP [tem de instalar uma atualização](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) que ativa o suporte para os URLs longos que são utilizados pelo Serviço de Inscrição de Dispositivos de Rede. Esta atualização está incluída com o rollup de atualização de dezembro de [2014](https://support.microsoft.com/kb/3013769), ou individualmente a partir de [KB3011135](https://support.microsoft.com/kb/3011135).
 
   O servidor WAP deve ter um certificado SSL que corresponda ao nome que é publicado a clientes externos e confiar no certificado SSL que é usado no computador que acolhe o serviço NDES. Estes certificados permitem ao servidor WAP interromper a ligação SSL dos clientes e criar uma nova ligação SSL ao serviço NDES.
 
@@ -87,7 +88,7 @@ Para permitir que os dispositivos na internet obtenha certificados, tem de publi
 
 - **Acesso à autoridade** de certificação - Você precisará de uma conta de utilizador de domínio que tenha direitos para gerir a sua autoridade de certificação.
 
-### <a name="network-requirements"></a>Requisitos de rede
+### <a name="network-requirements"></a>Requisitos da rede
 
 Recomendamos a publicação do serviço NDES através de um proxy inverso, como o proxy de [aplicação Azure AD, o Web Access Proxy,](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)ou um representante de terceiros. Se não utilizar um proxy inverso, permita o tráfego de TCP na porta 443 de todos os anfitriões e endereços IP na internet para o serviço NDES.
 
@@ -102,7 +103,7 @@ Os seguintes certificados e modelos são utilizados quando utiliza SCEP.
 |**Modelo de certificado SCEP**         |Modelo que configurará no seu CA emissor usado para completar os pedidos scep dos dispositivos. |
 |**Certificado de autenticação de cliente** |Solicitado da sua AC emissora ou CA pública.<br /> Instala este certificado no computador que acolhe o serviço NDES e é utilizado pelo Conector de Certificado Intune.<br /> Se o certificado tiver o conjunto de utilizações da chave de *autenticação* do *cliente* e do servidor (**Utilizações de chaves melhoradas**) no modelo CA que utiliza para emitir este certificado. Pode então utilizar o mesmo certificado para autenticação de servidor e cliente. |
 |**Certificado de autenticação do servidor** |Certificado do Servidor Web solicitado a partir da sua CA emissora ou CA pública.<br /> Instala e liga este certificado SSL no IIS no computador que acolhe o NDES.<br />Se o certificado tiver o conjunto de utilizações da chave de *autenticação* do *cliente* e do servidor (**Utilizações de chaves melhoradas**) no modelo CA que utiliza para emitir este certificado. Pode então utilizar o mesmo certificado para autenticação de servidor e cliente. |
-|**Certificado da AC de Raiz Fidedigna**       |Para utilizar um perfil de certificado SCEP, os dispositivos devem confiar na sua Autoridade de Certificação de Raiz Fidedigna (CA). Utilize um perfil de *certificado fidedigno* no Intune para fornecer o certificado De Raiz de Confiança CA aos utilizadores e dispositivos. <br/><br/> **-**  Utilize um único certificado de Root Root Ca fidedigno por plataforma do sistema operativo e associe esse certificado a cada perfil de certificado fidedigno que criar. <br /><br /> **-**  Pode utilizar certificados adicionais de Root Root CA quando necessário. Por exemplo, pode utilizar certificados adicionais para fornecer um fundo a um CA que assina os certificados de autenticação do servidor para os seus pontos de acesso Wi-Fi. Crie certificados adicionais de Root Root CA para a emissão de CAs.  No perfil de certificado SCEP que cria em Intune, não se esqueça de especificar o perfil de Root CA fidedigno para o CA emissor.<br/><br/> Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o certificado de ca de raiz fidedigno](certificates-configure.md#export-the-trusted-root-ca-certificate) e criar perfis de [certificadofiais](certificates-configure.md#create-trusted-certificate-profiles) em *certificados de utilização para autenticação no Intune*. |
+|**Certificado da AC de Raiz Fidedigna**       |Para utilizar um perfil de certificado SCEP, os dispositivos devem confiar na sua Autoridade de Certificação de Raiz Fidedigna (CA). Utilize um perfil de *certificado fidedigno* no Intune para fornecer o certificado De Raiz de Confiança CA aos utilizadores e dispositivos. <br/><br/> **-** Utilize um único certificado de Root Root Ca fidedigno por plataforma do sistema operativo e associe esse certificado a cada perfil de certificado fidedigno que criar. <br /><br /> **-** Pode utilizar certificados adicionais de Root Root CA quando necessário. Por exemplo, pode utilizar certificados adicionais para fornecer um fundo a um CA que assina os certificados de autenticação do servidor para os seus pontos de acesso Wi-Fi. Crie certificados adicionais de Root Root CA para a emissão de CAs.  No perfil de certificado SCEP que cria em Intune, não se esqueça de especificar o perfil de Root CA fidedigno para o CA emissor.<br/><br/> Para obter informações sobre o perfil de certificado fidedigno, consulte [Exportar o certificado de ca de raiz fidedigno](certificates-configure.md#export-the-trusted-root-ca-certificate) e criar perfis de [certificadofiais](certificates-configure.md#create-trusted-certificate-profiles) em *certificados de utilização para autenticação no Intune*. |
 
 ## <a name="configure-the-certification-authority"></a>Configurar a autoridade de certificação
 
@@ -119,11 +120,11 @@ As seguintes secções requerem conhecimento do Windows Server 2012 R2 ou poster
 
 2. Abra a Consola de Gestão Microsoft Management Authority Authority Authority (MMC). Ou **executar** 'certsrv.msc' ou no **Server Manager,** clique em **Ferramentas**, e, em seguida, clique na Autoridade de **Certificação**.
 
-3. Selecione o nó de modelos de **certificado,** clique em **Ação** > **Gerir**.
+3. Selecione o nó de modelos de **certificado,** clique em **Manage** > **Ação**.
 
 ### <a name="create-the-scep-certificate-template"></a>Criar o modelo de certificado SCEP
 
-1. Crie um modelo de certificado v2 (com compatibilidade com o Windows 2003) para utilização como modelo de certificado SCEP. É possível:
+1. Crie um modelo de certificado v2 (com compatibilidade com o Windows 2003) para utilização como modelo de certificado SCEP. Pode:
 
    - Utilize os *modelos* de certificado snap-in para criar um novo modelo personalizado.
    - Copie um modelo existente (como o modelo de utilizador) e, em seguida, atualize a cópia para usar como modelo NDES.
@@ -178,8 +179,8 @@ As seguintes secções requerem conhecimento do Windows Server 2012 R2 ou poster
 
 O Conector de Certificado Intune requer um certificado com a autenticação do *cliente Utilização* melhorada da chave e nome do assunto igual ao FQDN da máquina onde o conector está instalado. É necessário um modelo com as seguintes propriedades:
 
-- **Extensões** > Políticas de **Aplicação** devem conter **autenticação do cliente**
-- **Nome do assunto** > **Fornecimento no pedido**.
+- **Políticas de** > **aplicação** de extensões devem conter **autenticação do cliente**
+- **Nome do** > assunto**Fornecimento no pedido**.
 
 Se já tem um modelo que inclui estas propriedades, pode reutilizá-lo, caso contrário, criar um novo modelo duplicando um existente ou criando um modelo personalizado.
 
@@ -187,8 +188,8 @@ Se já tem um modelo que inclui estas propriedades, pode reutilizá-lo, caso con
 
 As comunicações entre dispositivos geridos e IIS no servidor NDES utilizam HTTPS, o que requer a utilização de um certificado. Pode utilizar o modelo de certificado **do Web Server** para emitir este certificado. Ou, se preferir ter um modelo dedicado, são necessárias as seguintes propriedades:
 
-- **Extensões** > Políticas de **aplicação** devem conter **autenticação do servidor**
-- **Nome do assunto** > **Fornecimento no pedido**.
+- **As** > políticas de**aplicação** de extensões devem conter **a autenticação do servidor**
+- **Nome do** > assunto**Fornecimento no pedido**.
 
 > [!NOTE]
 > Se tiver um certificado que satisfaça os dois requisitos dos modelos de certificado de cliente e servidor, pode utilizar um único certificado tanto para o IIS como para o conector Intune Certificate.
@@ -225,9 +226,9 @@ Por predefinição, o Intune utiliza o valor configurado no modelo. No entanto, 
 
    -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
    -**net stop certsvc**
-   -**certsvc de início líquido**
+   -net start**certsvc**
 
-2. Na AC emissora, utilize o snap-in Autoridade de Certificação para publicar o modelo de certificado. Selecione o nó de modelos de **certificado,** selecione **Action** > **Novo** modelo de certificado de > **para emitir,** e, em seguida, selecione o modelo de certificado que criou na secção anterior.
+2. Na AC emissora, utilize o snap-in Autoridade de Certificação para publicar o modelo de certificado. Selecione o nó de modelos de **certificado,** selecione **Action** > **New** > **Certificate Template to Issue,** e, em seguida, selecione o modelo de certificado que criou na secção anterior.
 
 3. Valide que o modelo tenha sido publicado visualizando-o na pasta modelos de **certificado.**
 
@@ -246,17 +247,17 @@ Os seguintes procedimentos podem ajudá-lo a configurar o Serviço de Inscriçã
 
    2. Quando o NDES é adicionado ao servidor, o assistente também instala o IIS. Confirme que o IIS tem as seguintes configurações:
 
-      - **Servidor Web** > **Segurança** > **Filtragem de Pedidos**
-      - **Servidor Web** > **Desenvolvimento de Aplicações** > **ASP.NET 3.5**
+      - **Web Server** > **Security** > **Filtragem de pedido de** segurança do servidor web
+      - **Web Server** > **Desenvolvimento de** > aplicações do servidor web**ASP.NET 3.5**
 
-        A instalação do ASP.NET 3.5 instala o .NET Framework 3.5. Ao instalar o .NET Framework 3.5, instala tanto a funcionalidade **.NET Framework 3.5** principal como a **Ativação HTTP**.
+        A instalação do ASP.NET 3.5 instala o .NET Framework 3.5. Ao instalar .NET Quadro 3.5, instale tanto a função core **.NET Framework 3.5** e **http Activation**.
 
-      - **Servidor Web** > **Desenvolvimento de Aplicações** > **ASP.NET 4.5**
+      - **Web Server** > **Desenvolvimento de** > aplicações do servidor web**ASP.NET 4.5**
 
         A instalação do ASP.NET 4.5 instala o .NET Framework 4.5. Ao instalar o .NET Framework 4.5, instale a funcionalidade **.NET Framework 4.5** principal, o **ASP.NET 4.5** e a funcionalidade **Serviços do WCF** > **Ativação HTTP**.
 
-      - **Ferramentas de Gestão** > **Compatibilidade de Gestão do IIS 6** > **Compatibilidade com Metabase do IIS 6**
-      - **Ferramentas de Gestão** > **Compatibilidade de Gestão do IIS 6** > **Compatibilidade WMI do IIS 6**
+      - **Ferramentas de** > **Gestão IIS 6 Compatibilidade de** > Gestão**IIS 6 Compatibilidade metamédia**
+      - **Ferramentas de** > **Gestão IIS 6 Compatibilidade de** > Gestão**IIS 6 Compatibilidade WMI**
       - No servidor, adicione a conta do serviço do NDES como membro do grupo local **IIS_IUSR**.
 
 2. No computador que acolhe o serviço NDES, execute o seguinte comando num pedido de comando elevado. O seguinte comando define o SPN da conta de Serviço NDES:
@@ -298,7 +299,7 @@ Os seguintes procedimentos podem ajudá-lo a configurar o Serviço de Inscriçã
 
 3. Configure a filtragem do pedido IIS para adicionar suporte no IIS para os URLs longos (consultas) que o serviço NDES recebe.
 
-   1. No gestor IIS, selecione **'Predefinido Web Site** > **Solicitar filtragem** > **Editar Definição** de funcionalidade seletiva para abrir a página de Definições de Filtragem de **Pedidos de Edição.**
+   1. No gestor IIS, selecione Predefinição de funcionalidade de**filtragem** de pedido de página de**filtragem** > de pedido de **predefinição** > do site predefinido para abrir a página de definições de filtragem de pedidos de **edição.**
 
    2. Configure as seguintes definições:
 
@@ -361,7 +362,7 @@ O Conector de Certificado Intune da Microsoft instala-se no servidor que executa
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **a administração do Inquilino** > **Conectores e fichas** > **conectores** de certificado > **Adicionar**.
+2. Selecione > **Conectores e** > **conectores** > de certificados de **administração do arrendatário****Adicionar**.
 
 3. Descarregue e guarde o conector para o ficheiro SCEP. Guarde-o numa localização acessível a partir do servidor onde vai instalar o conector.
 
@@ -425,14 +426,14 @@ O Conector de Certificado Intune da Microsoft instala-se no servidor que executa
 
     5. Agora, pode fechar a IU do Certificate Connector.
 
-8. Abra uma linha de comandos, introduza **services.msc** e, em seguida, prima **Enter**. Clique com o botão direito do rato em **Intune Connector Service** > **Reiniciar**.
+8. Abra uma linha de comandos, introduza **services.msc** e, em seguida, prima **Enter**. Clique à direita no Reinício do **Reector** > **Restart**Intune .
 
-Para se certificar de que o serviço está em execução, abra um browser e introduza o seguinte URL. Deve devolver um erro **403:** `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
+Para se certificar de que o serviço está em execução, abra um browser e introduza o seguinte URL. Deve devolver um erro **403:**`https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
 > [!NOTE]
 > O Conector intune suporta TLS 1.2. Se o servidor que acolhe o conector suportar TLS 1.2, então é utilizado TLS 1.2. Se o servidor não suportar o TLS 1.2, será utilizado o TLS 1.1. Atualmente, é utilizado o TLS 1.1 para a autenticação entre os dispositivos e o servidor.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Criar um perfil de certificado SCEP](certificates-profile-scep.md)  
 [Problemas de resolução de problemas para o conector de certificado Intune](troubleshoot-certificate-connector-events.md)

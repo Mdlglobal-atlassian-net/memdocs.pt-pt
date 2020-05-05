@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5e550f18908ae34c7df7e8ba9f03ce6a1b7d0a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 349ad64867426efda8bb33134edc09fcae7b16cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325333"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82095991"
 ---
 >[!Note] 
-> Este artigo disponibiliza passos para eliminar dados pessoais do dispositivo ou serviço e pode ser utilizado para o ajudar a cumprir as suas obrigações referentes ao RGPD. Se quiser obter informações gerais sobre o RGPD, veja a [secção RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Este artigo mostra os passos para eliminar dados pessoais do dispositivo ou serviço e pode ser utilizado para dar apoio às suas obrigações ao abrigo do GDPR. Se procura informações gerais sobre o RGPD, consulte a [secção rGPD do portal Service Trust](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

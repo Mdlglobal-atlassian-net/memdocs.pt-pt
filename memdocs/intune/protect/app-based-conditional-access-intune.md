@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329973"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080152"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Acesso Condicional baseado em aplicativos com Intune
 
@@ -34,7 +34,7 @@ O Acesso Condicional baseado em aplicativos e a gestão de aplicações de clien
 > [!NOTE]
 > Uma aplicação gerida é uma aplicação que tem políticas de proteção de aplicações aplicadas à mesma e pode ser gerida pelo Intune.
 
-Pode bloquear as aplicações de correio incorporados no iOS/iPadOS e Android quando permite apenas que a aplicação Microsoft Outlook aceda ao Exchange Online. Além disso, pode bloquear o acesso ao SharePoint Online para as aplicações que não têm políticas de proteção de aplicações do Intune aplicadas.
+Pode bloquear as aplicações de correio incorporados no iOS/iPadOS e Android quando permite apenas que a aplicação Microsoft Outlook aceda ao Exchange Online. Além disso, pode bloquear aplicações que não possuam políticas de proteção de aplicações Intune aplicadas a partir do acesso ao SharePoint Online.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -64,15 +64,15 @@ Neste exemplo, o administrador aplicou políticas de proteção de aplicações 
 
 2. O utilizador é redirecionado para a loja de aplicações para instalar uma aplicação de mediador quando tenta autenticar-se pela primeira vez. A aplicação de mediador pode ser o Microsoft Authenticator para iOS ou o Portal da Empresa da Microsoft para dispositivos Android.
 
-   Se os utilizadores tentarem utilizar uma aplicação de e-mail nativa, serão redirecionados para a App Store para instalarem a aplicação Outlook.
+   Se os utilizadores tentarem utilizar uma aplicação de e-mail nativa, serão redirecionados para a loja de aplicações para depois instalarem a aplicação Outlook.
 
 3. A aplicação de mediador é instalada no dispositivo.
 
 4. A aplicação de mediador inicia o processo de registo do Microsoft Azure AD que cria um registo de dispositivo no Microsoft Azure AD. Este não é o mesmo que o processo de inscrição de dispositivos móveis (MDM), mas este registo é necessário para que as políticas de Acesso Condicional possam ser aplicadas no dispositivo.
 
-5. A aplicação de mediador verifica a identidade da aplicação. Existe uma camada de segurança para que a aplicação de mediador possa validar se a aplicação está autorizada para ser utilizada pelo utilizador.
+5. A aplicação de mediador verifica a identidade da aplicação. Existe uma camada de segurança para que a aplicação de corretor possa validar se a aplicação for autorizada a ser usada pelo utilizador.
 
-6. A aplicação de mediador envia o ID da Aplicação Cliente para o Azure AD como parte do processo de autenticação do utilizador para verificar se este consta na lista aprovada de políticas.
+6. A aplicação broker envia o ID do Cliente da App para a AD Azure como parte do processo de autenticação do utilizador para verificar se está na lista aprovada pela política.
 
 7. O Azure AD permite ao utilizador autenticar-se e utilizar a aplicação com base na lista aprovada de políticas. Se a aplicação não estiver na lista, o Microsoft Azure AD recusará o acesso à aplicação.
 
@@ -84,7 +84,7 @@ Neste exemplo, o administrador aplicou políticas de proteção de aplicações 
 
 11. O e-mail empresarial é entregue na caixa de correio do utilizador.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 [Criar uma política de acesso condicional baseada em aplicativos](app-based-conditional-access-intune-create.md)
 
 [Bloquear aplicações que não tenham autenticação moderna](app-modern-authentication-block.md)

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324109"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079948"
 ---
 # <a name="why-enroll-your-android-device"></a>Porquê inscrever o seu dispositivo Android  
 
@@ -64,20 +64,20 @@ Quando o seu dispositivo está dessincronizado ou já não satisfaz os requisito
 
 
 ## <a name="permits-company-support-access-to-your-device"></a>Permite à empresa acesso de suporte ao seu dispositivo
-Ao inscrever o seu dispositivo, o suporte da empresa ou o administrador de TI tem acesso ao dispositivo por razões limitadas e significativas. Nestes canais, os utilizadores podem:  
+Ao inscrever o seu dispositivo, o suporte da empresa ou o administrador de TI tem acesso ao dispositivo por razões limitadas e significativas. Podem:  
 
-* Repor as predefinições do fabricante do seu dispositivo. Conforme mencionado acima, também tem acesso para repor o seu dispositivo. No entanto, se não conseguir aceder imediatamente à aplicação Portal da Empresa, a sua empresa pode repor o dispositivo.  
+* Reponha o seu dispositivo de volta às predefinições do fabricante. Conforme mencionado acima, também tem acesso para repor o seu dispositivo. No entanto, se não conseguir aceder imediatamente à aplicação Portal da Empresa, a sua empresa pode repor o dispositivo.  
 
 * Remover todos os dados relacionados com a empresa. A sua organização poderá remover dados relacionados com a empresa do seu dispositivo se sair da empresa ou se o seu dispositivo passar a ser não gerido. Os seus dados pessoais e configurações não são removidos e permanecerão no dispositivo.  
 
 * Definir requisitos do seu dispositivo, como exigir que tenha uma palavra-passe de dispositivo ou um PIN. Neste caso, receberá notificações de aplicações de que o seu dispositivo não está em conformidade. O suporte da empresa também pode limitar o número de vezes que pode introduzir uma palavra-passe incorreta no dispositivo. Tentativas de palavra-passe falhadas excessivas podem resultar no bloqueio do seu dispositivo.  
 
-* O seu administrador de TI pode exigir que aceite os termos e condições.  
+* O administrador de TI pode exigir que aceite os termos e condições.  
 
 * Desativar a câmara. O objetivo desta política é impedi-lo de fotografar informações próprias e também acabar com distrações em ambientes escolares. As instituições de ensino podem desativar as câmeras em dispositivos de sala de aula para que os estudantes não possam partilhar os materiais de testes.  
 
 * Exigir que todos os dados no dispositivo sejam encriptados. Se este for perdido ou roubado, esta política ajuda a proteger os dados no seu dispositivo. Também protege os dados que são partilhados entre aplicações ou dispositivos. 
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
 Precisa de ajuda? Contacte o suporte da empresa (verifique as informações de contacto no [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980)) ou escreva para a <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">equipa Android da Microsoft</a>.

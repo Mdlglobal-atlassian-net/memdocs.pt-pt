@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084405"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182281"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalar defesa de ameaça móvel   
 
@@ -30,7 +30,7 @@ Como parte dos requisitos de segurança da sua organização, poderá ser necess
 
 Se não tiver a aplicação MTD necessária, estará impedido de iniciar sessão em aplicações protegidas com o seu trabalho ou conta escolar. Neste artigo, você vai aprender [a instalar uma aplicação MTD](set-up-mobile-threat-defense.md#install-app) para ser desbloqueada.  
 
-Existem uma variedade de aplicações de fornecedores MTD disponíveis para instalar; sua organização vai informá-lo qual usar. 
+Existem uma variedade de aplicações de fornecedores MTD disponíveis para instalar, todas com nomes diferentes. A sua organização vai dizer-lhe qual usar. Se for solicitado a instalar a aplicação, mas não tiver mais instruções ou um link para obter a aplicação, contacte a pessoa de suporte de TI. 
 
 
 ## <a name="information-your-organization-can-see"></a>Informação que a sua organização pode ver   
@@ -43,7 +43,7 @@ A sua organização não consegue ver quaisquer dados, tais como textos, e-mails
 * Pacote de aplicativos e tamanho dinâmico: A quantidade de espaço que uma aplicação utiliza no seu dispositivo. 
 
 
-## <a name="install-app"></a>Instalar app    
+## <a name="install-app"></a>Instalar a aplicação    
 Quando iniciar sessão numa aplicação protegida, será automaticamente solicitado a instalar uma aplicação MTD. Siga os passos no ecrã para concluir a instalação. Utilize os passos nesta secção para obter ajuda adicional.  
  
 Pode também ser solicitado a registar o seu dispositivo. As inscrições são necessárias para confirmar a sua identidade e ligar a sua escola ou conta de trabalho ao seu dispositivo. Se não estiver registado, será automaticamente guiado através dessa configuração antes de instalar a aplicação MTD. Quando chegar ao ecrã de **acesso Get,** pode iniciar os passos de instalação.  
@@ -54,7 +54,7 @@ Para obter mais informações sobre o registo do dispositivo, consulte [Registar
 
 1. No ecrã de **acesso Get,** siga as instruções para instalar a aplicação MTD que é exigida pela sua organização.   
 2. Volte ao ecrã de **acesso Get** e selecione **Open**.  
-3. A aplicação MTD pede permissão para abrir o Microsoft Authenticator. Selecione **Abrir**. 
+3. A aplicação MTD pede permissão para abrir o Microsoft Authenticator. Selecione **Open** (Abrir). 
 4. Selecione a sua conta de trabalho para iniciar sessão. 
 5. Espere enquanto a aplicação MTD digitaliza o seu dispositivo para ameaças de segurança. 
 6. Volte para a escola ou app de trabalho a que estava inicialmente a tentar aceder. Neste momento, a sua organização pode instá-lo a configurar outros requisitos de segurança da aplicação, tais como a criação de um PIN.   
@@ -91,7 +91,7 @@ Se uma ameaça exceder o nível de ameaça definido da sua organização, a sua 
 
 Para resolver uma ameaça e recuperar o acesso, abra a aplicação MTD no seu dispositivo. Leia as informações fornecidas para saber como a ameaça pode afetar o seu dispositivo e como resolvê-lo. Depois de seguir os passos para resolver a ameaça, volte à aplicação MTD e inicie uma nova digitalização. Pode levar alguns minutos para recuperar o acesso à sua organização.  
 
-## <a name="next-steps"></a>Próximos passos  
+## <a name="next-steps"></a>Passos seguintes  
 
-Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [Web site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
 

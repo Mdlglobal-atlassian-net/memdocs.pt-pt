@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526466"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126089"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Dispositivo de resolução de problemas para comunicação do servidor NDES para perfis de certificadoS SCEP no Microsoft Intune
 
@@ -77,7 +77,7 @@ As entradas-chave incluem as seguintes cadeias de texto da amostra:
 
 - Há 1 pedidos
 - Recebido '200 OK' ao enviar GetCACaps(ca) para https://\<servidor>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
-- Assinar pkiMessage utilizando a chave pertencente a [dn=CN=\<username>; serial=1]
+- Assinar pkiMessage utilizando a chave pertencente\<a [dn=CN= username>; serial=1]
 
 
 A ligação também é registada pelo IIS na pasta %SystemDrive%\inetpub\logs\LogFiles\W3SVC1\ do servidor NDES. Exemplo:
@@ -110,13 +110,13 @@ As entradas-chave incluem as seguintes cadeias de texto da amostra:
 
 ### <a name="windows-devices"></a>Dispositivos Windows
 
-Num dispositivo Windows que está a fazer uma ligação ao NDES, pode ver os dispositivos Windows Event Viewer e procurar indicações de uma ligação bem sucedida. As ligações são registadas como um evento ID **36** nos dispositivos *DispositivoS Gestão-Empresa-Diagnóstico-Fornecer* > registo **de administração.**
+Num dispositivo Windows que está a fazer uma ligação ao NDES, pode ver os dispositivos Windows Event Viewer e procurar indicações de uma ligação bem sucedida. As ligações são registadas como um evento ID **36** no registo de**administração** de *dispositivos Gestão-Empresa-Diagnóstico-Diagnóstico.* > 
 
 Para abrir o tronco:
 
 1. No dispositivo, execute **eventvwr.msc** para abrir o Windows Event Viewer.
 
-2. Expandir registos de **aplicações e serviços** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
+2. Expandir **aplicações e serviços Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
 
 3. Procure o Evento **36**, que se assemelha ao seguinte exemplo, com a linha-chave do **SCEP: Pedido**de certificado gerado com sucesso:
 
@@ -131,7 +131,7 @@ Para abrir o tronco:
    SCEP: Certificate request generated successfully. Enhanced Key Usage: (1.3.6.1.5.5.7.3.2), NDES URL: (https://<server>/certsrv/mscep/mscep.dll/pkiclient.exe), Container Name: (), KSP Setting: (0x2), Store Location: (0x1).
    ```
 
-## <a name="troubleshoot-common-errors"></a>Erros comuns de resolução de problemas
+## <a name="troubleshoot-common-errors"></a>Resolver erros comuns
 
 As seguintes secções podem ajudar com problemas comuns de ligação de todas as plataformas do dispositivo para NDES.
 
@@ -161,7 +161,7 @@ As ligações que se assemelham ao seguinte exemplo, com um código de estado de
 
 Utilize os seguintes passos para testar o URL especificado no perfil do certificado SCEP.
 
-1. Em Intune, edite o seu perfil de certificado SCEP e copie o URL do Servidor. O URL deve assemelhar-se *a https://contoso.com/certsrv/mscep/msecp.dll* .
+1. Em Intune, edite o seu perfil de certificado SCEP e copie o URL do Servidor. O URL *https://contoso.com/certsrv/mscep/mscep.dll*deve assemelhar-se a .
 
 2. Abra um navegador web e, em seguida, navegue para o URL do servidor SCEP. O resultado deve ser: **HTTP Error 403.0 – Proibido**. Este resultado indica que o URL está a funcionar corretamente.
 
@@ -202,7 +202,7 @@ Esta questão é geralmente porque o conjunto de aplicações **SCEP** no IIS n�
 
 Se o conjunto de aplicações SCEP não estiver iniciado, verifique o registo do evento de aplicação no servidor:
 
-1. No dispositivo, execute **eventvwr.msc** para abrir **o Espectador de Eventos** e ir ao **Windows Logs** > **Application**.
+1. No dispositivo, execute **eventvwr.msc** para abrir o **Espectador de Eventos** e ir para a**Aplicação**de **Registos** > do Windows .
 
 2. Procure um evento semelhante ao seguinte exemplo, o que significa que o pool de aplicações se despenha quando um pedido é recebido:
 
@@ -224,7 +224,7 @@ Se o conjunto de aplicações SCEP não estiver iniciado, verifique o registo do
 
   **Resolução**: Retire os certificados intermédios do certificado trust Root Certification Authorities e, em seguida, reinicie o servidor NDES.
   
-  Para identificar todos os certificados intermédios na loja de certificados Trusted Root Certification Authorities, execute o seguinte cmdlet PowerShell: `Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
+  Para identificar todos os certificados intermédios na loja de certificados Trust Root Certification Authorities, execute o seguinte cmdlet PowerShell:`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
   Um certificado que tenha o mesmo **Emitido** e **Emitido por** valores, é um certificado de raiz. Caso contrário, é um certificado intermédio.
 
@@ -234,7 +234,7 @@ Se o conjunto de aplicações SCEP não estiver iniciado, verifique o registo do
 
   **Resolução**: Permitir que o registo extrairindo adicional recolha mais informações:
   1. Abra o Espectador de Eventos, clique em **Visualizar,** certifique-se de que a opção **Debug Logs é** verificada.
-  2. Aceda a Registos de **Aplicações e Serviços** > **Microsoft** > **o Windows** > **O CAPI2** > **Operacional,** clique no clique direito **Operacional,** em seguida, clique em **Ativar O Log**.
+  2. Aceda a **Aplicações e Serviços** > Regista**o Microsoft** > **Windows** > **CAPI2** > **Operacional,** clique no clique à direita **Operacional,** em seguida, clique em **Ativar Log**.
   3. Após a ativação da exploração madeireira CAPI2, reproduza o problema e examine o registo do evento para resolver o problema.
 
 - **Causa 3**: A permissão IIS no **CertificateRegistrationSvc** tem **a autenticação** do Windows ativada.
@@ -252,9 +252,9 @@ Se o conjunto de aplicações SCEP não estiver iniciado, verifique o registo do
      - Renovar o certificado existente
      - Selecione um certificado diferente com adereços semelhantes (sujeito, EKU, tipo de chave e comprimento, etc.)
      - Inscrever um novo certificado
-  2. Exportar a chave `NDESPolicy` Registo para apoiar os valores atuais.
-  3. Substitua os dados do valor do Registo `NDESCertThumbprint` pela impressão digital do novo certificado, removendo todo o espaço branco e convertendo o texto para minúscula.
-  4. Reinicie as Piscinas de Aplicações NDES IIS ou execute `iisreset` a partir de um pedido de comando elevado.
+  2. Exportar `NDESPolicy` a chave do Registo para apoiar os valores atuais.
+  3. Substitua os `NDESCertThumbprint` dados do valor do Registo pela impressão digital do novo certificado, removendo todo o espaço branco e convertendo o texto para minúscula.
+  4. Reinicie as Piscinas de Aplicações `iisreset` NDES IIS ou execute a partir de um pedido de comando elevado.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
@@ -268,13 +268,13 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 Request-URI Demasiado Tempo
 
-Quando navega no URL do servidor SCEP, recebe o seguinte erro: `HTTP 414 Request-URI Too Long`
+Quando navega no URL do servidor SCEP, recebe o seguinte erro:`HTTP 414 Request-URI Too Long`
 
 - **Causa**: A filtragem do pedido IIS não está configurada para suportar os URLs longos (consultas) que o serviço NDES recebe. Este suporte é configurado quando [configura o serviço NDES](certificates-scep-configure.md#configure-the-ndes-service) para utilização com a sua infraestrutura para SCEP.
 
 - **Resolução**: Configure o suporte para URLs longos.
 
-  1. No servidor NDES, abra o gestor IIS, selecione **o Web Site padrão** > solicitar **filtragem** > definição de funcionalidade de **edição** para abrir a página de Definições de Filtragem de Pedidos de **Edição.**
+  1. No servidor NDES, abra o gestor IIS, selecione a definição de funcionalidade de**filtragem** de pedido de página de**filtragem** > de pedido de página **Default Web Site** > do Site Padrão para abrir a página de definições de filtragem de pedidos de **edição.**
 
   2. Configure as seguintes definições:
      - **Comprimento máximo de URL (Bytes)** = 65534
@@ -290,7 +290,7 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro: `HTTP 414 Request
      - Nome: **MaxFieldLength**, com um valor decimal de **65534**
      - Nome: **MaxRequestBytes**, com um valor decimal de **65534**
 
-  5. Reiniciar o servidor NDES.
+  5. Reinicie o servidor NDES.
 
 #### <a name="this-page-cant-be-displayed"></a>Esta página não pode ser exibida
 
@@ -298,11 +298,11 @@ Tem o Proxy de Aplicação AD Azure configurado. Quando navega no URL do servido
 
 `This page can't be displayed`
 
-- **Causa**: Este problema ocorre quando o URL externo do SCEP está incorreto na configuração do Proxy de Aplicação. Um exemplo deste URL é https://contoso.com/certsrv/mscep/mscep.dll.
+- **Causa**: Este problema ocorre quando o URL externo do SCEP está incorreto na configuração do Proxy de Aplicação. Um exemplo deste `https://contoso.com/certsrv/mscep/mscep.dll`URL é .
 
   **Resolução**: Utilize o domínio predefinido de *yourtenant.msappproxy.net* para o URL externo scep na configuração proxy de aplicação.
 
-#### <a name="internal-server-error"></a>500 - Erro interno do servidor
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - Erro interno do servidor
 
 Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
@@ -324,7 +324,7 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
   3. Abra os Certificados MMC para **a conta de computador.**
 
-  4. Expandir **Certificados** **Pessoais,** cliques à direita e, em seguida, selecione **todas as tarefas** > **solicitar novo certificado**.
+  4. Expandir **Certificados** **Pessoais,** cliques à direita e, em seguida, selecionar **todas as tarefas** > **Solicitar novo Certificado**.
 
   5. Na página **do Certificado de Pedido,** selecione **Encriptação CEP,** clique em **Mais informações são necessárias para se inscrever para este certificado. Clique aqui para configurar as definições**.
 
@@ -338,7 +338,7 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
      Quando se inscreve para o certificado de agente de inscrição cambial (pedido offline), deve ser feito no contexto do utilizador. Porque o tipo de **assunto** deste modelo de certificado está definido para **o Utilizador**.
 
-  9. Expandir **Certificados** **Pessoais,** cliques à direita e, em seguida, selecione **todas as tarefas** > **solicitar novo certificado**.
+  9. Expandir **Certificados** **Pessoais,** cliques à direita e, em seguida, selecionar **todas as tarefas** > **Solicitar novo Certificado**.
 
   10. Na página do **Certificado de Pedido,** selecione **Exchange Registration Agent (pedido offline)** e, em seguida, clique **Em Mais informações são necessárias para se inscrever para este certificado. Clique aqui para configurar as definições**.
 
@@ -360,10 +360,10 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
   15. Nos certificados MMC, faça as seguintes ações para cada um dos novos certificados:
 
-      Clique no certificado à direita, clique em **Todas as Tarefas** > **Gerir Chaves Privadas,** adicione a permissão **de leitura** na conta de serviço NDES.
+      Clique no certificado à direita, clique em **Read** Todas as Tarefas Gerir Chaves **Privadas,** > **Manage Private Keys**adicione a permissão de leitura na conta de serviço NDES.
 
   16. Executar o comando **iisreset** para reiniciar o IIS.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Se o dispositivo chegar com sucesso ao servidor NDES para apresentar o pedido de certificado, o próximo passo é rever o módulo de [política de Conectores de Certificado Intune](troubleshoot-scep-certificate-ndes-policy-module.md).

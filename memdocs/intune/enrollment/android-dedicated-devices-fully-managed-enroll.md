@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d8136ff1e03b00232a58c1b0687f9e193297e1
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: 0913937714b59aca56c1e61fabe9d8154b6d4d24
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007730"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149097"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Inscreva os seus dispositivos dedicados android Enterprise ou dispositivos totalmente geridos
 
@@ -34,9 +34,8 @@ Depois de configurar os seus [dispositivos dedicados ao Android Enterprise](andr
 | Comunicação de Proximidade | 6.0 |
 | Entrada de token | 6.0 |
 | Código QR | 7.0 |
-| Zero Touch  | 8.0\* |
-
-\* nos fabricantes participantes.
+| Zero Touch  | 8.0<br><br> Sobre os fabricantes participantes. |
+| [Inscrição Móvel Knox](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Apenas em dispositivos Samsung Knox 2.8 ou superiores. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Inscrever com NFC (Comunicação de Proximidade)
 
@@ -91,8 +90,10 @@ Para utilizar o sistema Zero Touch da Google, o dispositivo tem de o suportar e 
 
 4. Escolha **Aplicar**.
 
+## <a name="enroll-by-using-knox-mobile-enrollment"></a>Inscreva-se usando a inscrição móvel knox
+Para utilizar a Matrícula Móvel Knox da Samsung, o dispositivo deve estar a executar a versão 6 ou posterior do Android OS e o Samsung Knox 2.8 ou superior. Para mais informações, saiba [como inscrever automaticamente os seus dispositivos com](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)a Knox Mobile Registration .
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - [Implementar aplicações Android](../apps/apps-deploy.md)
 - [Adicionar políticas de configuração para Android](../configuration/device-profiles.md)
 
