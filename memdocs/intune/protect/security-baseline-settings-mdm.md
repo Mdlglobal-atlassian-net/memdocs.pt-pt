@@ -13,17 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: NOINDEX
-ms.reviewer: joglocke
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329037"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693363"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Definições de base de segurança do MDM para Intune  
 
@@ -197,7 +197,7 @@ Para mais informações, consulte [Policy CSP - CredentialsUI](https://docs.micr
   
   **Predefinição**: Desativado  
 
-## <a name="data-protection"></a>Proteção de dados  
+## <a name="data-protection"></a>Proteção de Dados  
 Para mais informações, consulte [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
 ) na documentação do Windows.  
 
@@ -211,20 +211,20 @@ Para mais informações, consulte [Policy CSP - DataProtection](https://docs.mic
 Para mais informações, consulte [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) na documentação do Windows.  
 
-- **Guarda Credencial**  
+- **Credential Guard**  
   Esta definição permite que os utilizadores liguem a Guarda Credencial com segurança baseada em virtualização para ajudar a proteger as credenciais no próximo reboot.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067044)
    
   **Predefinição**: Ativar com bloqueio UEFI 
 
-- Ativar  de **segurança baseadas em virtualização**  
+- **Ativar a segurança baseada em virtualização**   
   Liga a segurança baseada em virtualização (VBS) no próximo reboot. A segurança baseada em Virtualização utiliza o Windows Hypervisor para dar suporte aos serviços de segurança e requer o Windows Hypervisor.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067066)  
   
   **Padrão**: Sim  
 
 
-- **  ** de guarda do sistema de lançamento  
+- **Guarda do sistema de lançamento**    
   **Predefinição**: Ativado  
 
 ## <a name="device-installation"></a>Instalação de Dispositivos  
@@ -238,7 +238,7 @@ Para mais informações, consulte [Policy CSP - Instalação](https://docs.micro
 
   Quando a instalação do *dispositivo de hardware block* for selecionada, as seguintes definições estão disponíveis.
 
-  - **Remova dispositivos de hardware correspondentes**   
+  - **Remover dispositivos de hardware correspondentes**   
     Esta definição só está disponível quando a instalação de dispositivos de *hardware por identificadores* de dispositivo saem definidas para bloquear a instalação do dispositivo de *hardware*.
     
     **Padrão**: Sim
@@ -255,7 +255,7 @@ Para mais informações, consulte [Policy CSP - Instalação](https://docs.micro
   **Predefinição**: Bloquear a instalação de dispositivos de hardware  
 
   Quando a instalação do *dispositivo de hardware block* for selecionada, as seguintes definições estão disponíveis.
-  - **Remova dispositivos de hardware correspondentes**    
+  - **Remover dispositivos de hardware correspondentes**    
     Esta definição só está disponível quando a instalação do *dispositivo de hardware por classes* de configuração estiver definida para bloquear a instalação de dispositivos de *hardware*.  
 
     **Predefinição**: *Nenhuma configuração predefinida*  
@@ -432,7 +432,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
 
   **Predefinição**: Desativar
 
-- Zona restrita do **Internet Explorer .NET Estrutura componentes dependentes**    
+- **Zona restrita do Internet Explorer .NET Estrutura componentes dependentes**    
   Esta definição de política permite-lhe gerir se os componentes .NET Framework que não estão assinados com a Authenticode podem ser executados a partir do Internet Explorer. Estes componentes incluem controlos geridos referenciados a partir de uma etiqueta de objeto e executáveis geridos referenciados a partir de um link. Se ativar esta definição de política, o Internet Explorer executará componentes geridos não assinados. Se selecionar O Aviso na caixa de lançamento, o Internet Explorer irá solicitar ao utilizador que determine se executa componentes geridos não assinados. Se desativar esta definição de política, o Internet Explorer não executará componentes geridos não assinados. Se não configurar esta definição de política, o Internet Explorer não executará componentes geridos não assinados.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067077)
 
@@ -586,7 +586,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
     
   
 - **Controle o Internet Explorer Ative X em modo protegido**  
-  Esta definição de política impede que os controlos ActiveX sejam acionados no modo protegido quando o modo protegido melhorado estiver ativado. Quando um utilizador tem um controlo ActiveX instalado que não é compatível com o Modo Protegido Melhorado e um website tenta carregar o controlo, o Internet Explorer notifica o utilizador e dá a opção de executar o website em modo protegido regular. Esta definição de política desativa esta notificação e obriga todos os websites a funcionar em Modo Protegido Melhorado. O Modo Protegido Melhorado fornece proteção adicional contra websites maliciosos utilizando processos de 64 bits em versões de 64 bits do Windows. Para computadores que executam pelo menos o Windows 8, o Modo Protegido Melhorado também limita as localizações que o Internet Explorer pode ler no registo e no sistema de ficheiros. Quando o modo protegido melhorado está ativado, e um utilizador encontra um website que tenta carregar um controlo ActiveX que não é compatível com o Modo Protegido Melhorado, o Internet Explorer notifica o utilizador e dá a opção de desativar o Modo Protegido Melhorado para que site em particular. Se ativar esta definição de política, o Internet Explorer não dará ao utilizador a opção de desativar o Modo Protegido Melhorado. Todos os websites do Modo Protegido serão executados em Modo Protegido Melhorado. Se desativar ou não configurar esta definição de política, o Internet Explorer informa os utilizadores e oferece uma opção para executar websites com controlos ActiveX incompatíveis no modo protegido regular.  
+  Esta definição de política impede que os controlos ActiveX sejam acionados no modo protegido quando o modo protegido melhorado estiver ativado. Quando um utilizador tem um controlo ActiveX instalado que não é compatível com o Modo Protegido Melhorado e um website tenta carregar o controlo, o Internet Explorer notifica o utilizador e dá a opção de executar o website em modo protegido regular. Esta definição de política desativa esta notificação e obriga todos os websites a funcionar em Modo Protegido Melhorado. O Modo Protegido Melhorado fornece proteção adicional contra websites maliciosos utilizando processos de 64 bits em versões de 64 bits do Windows. Para computadores que executam pelo menos o Windows 8, o Modo Protegido Melhorado também limita as localizações que o Internet Explorer pode ler no registo e no sistema de ficheiros. Quando o Modo Protegido Melhorado está ativado, e um utilizador encontra um website que tenta carregar um controlo ActiveX que não é compatível com o Modo Protegido Melhorado, o Internet Explorer notifica o utilizador e dá a opção de desativar o Modo Protegido Melhorado para esse website em particular. Se ativar esta definição de política, o Internet Explorer não dará ao utilizador a opção de desativar o Modo Protegido Melhorado. Todos os websites do Modo Protegido serão executados em Modo Protegido Melhorado. Se desativar ou não configurar esta definição de política, o Internet Explorer informa os utilizadores e oferece uma opção para executar websites com controlos ActiveX incompatíveis no modo protegido regular.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067145)  
   
   **Predefinição**: Desativado  
@@ -818,7 +818,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Alta segurança 
   
-- **O bloqueio do Internet Explorer desatualizado Ative X controla**   
+- **Controlos Ative X desatualizados do bloco Internet Explorer**   
   Esta definição de política determina se o Internet Explorer bloqueia controlos ActiveX desatualizados específicos. Os controlos ActiveX desatualizados nunca são bloqueados na Zona intranet. Se ativar esta definição de política, o Internet Explorer deixa de bloquear controlos ActiveX desatualizados. Se desativar ou não configurar esta definição de política, o Internet Explorer continua a bloquear controlos ActiveX desatualizados específicos. Para mais informações, consulte "Controlos ActiveX Desatualizados" na biblioteca do Internet Explorer TechNet.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067203)  
   
@@ -836,7 +836,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Ativado  
   
-- **Internet Explorer trusted zone java permissões**   
+- **Permissões java de zona de confiança do Internet Explorer**   
   Esta definição de política permite-lhe gerir permissões para applets Java. Se ativar esta definição de política, pode escolher opções a partir da caixa de lançamento. Personalizado, para controlar as definições de permissões individualmente. A Low Safety permite que as applets realizem todas as operações. A Medium Safety permite que as applets corram na sua caixa de areia (uma área na memória fora da qual o programa não pode fazer chamadas), além de capacidades como o espaço de risco (uma área de armazenamento segura e segura no computador cliente) e o ficheiro controlado pelo utilizador I/O. A Alta Segurança permite que as maçãs corram na sua caixa de areia. Desative Java para evitar que as maçãs se esgotem. Se desativar este cenário de política, as maçãs Java não podem correr. Se não configurar esta definição de política, a permissão é definida para a Baixa Segurança.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
@@ -848,13 +848,13 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desativar  
   
-- **Internet Explorer bloqueou permissões restritas** de java de zona   
+- **Internet Explorer bloqueou permissões java de zona restrita**   
   Esta definição de política permite-lhe gerir permissões para applets Java. Se ativar esta definição de política, pode escolher opções a partir da caixa de lançamento. Personalizado, para controlar as definições de permissões individualmente. A Low Safety permite que as applets realizem todas as operações. A Medium Safety permite que as applets corram na sua caixa de areia (uma área na memória fora da qual o programa não pode fazer chamadas), além de capacidades como o espaço de risco (uma área de armazenamento segura e segura no computador cliente) e o ficheiro controlado pelo utilizador I/O. A Alta Segurança permite que as maçãs corram na sua caixa de areia. Desative Java para evitar que as maçãs se esgotem. Se desativar este cenário de política, as maçãs Java não podem correr. Se não configurar esta definição de política, as maçãs Java são desativadas.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067181)  
   
   **Predefinição**: Desative o java 
   
-- A zona de **internet do Internet Explorer permite que apenas os domínios aprovados utilizem controlos ActiveX**   
+- **A zona de internet do Internet Explorer permite que apenas os domínios aprovados utilizem controlos ActiveX**   
   Esta definição de política controla se o utilizador for solicitado a permitir que os controlos ActiveX possam ser executados em websites que não o website que instalou o controlo ActiveX. Se ativar esta definição de política, o utilizador é solicitado antes que os controlos ActiveX possam ser executados a partir de websites nesta zona. O utilizador pode optar por permitir que o controlo possa ser executado a partir do site atual ou de todos os sites. Se desativar esta definição de política, o utilizador não vê o pedido do ActiveX por site, e os controlos ActiveX podem ser executados a partir de todos os sites desta zona.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067091)  
   
@@ -878,7 +878,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desativar 
   
-- **Internet Explorer bloqueado por ** de ecrã inteligente de zona restrita  
+- **Internet Explorer bloqueado por ecrã inteligente de zona restrita**   
   Esta definição de política controla se o Filtro SmartScreen digitaliza páginas nesta zona para obter conteúdo malicioso. Se ativar esta definição de política, o Filtro SmartScreen analisa as páginas desta zona para obter conteúdo malicioso. Se desativar esta definição de política, o Filtro SmartScreen não digitaliza páginas nesta zona para obter conteúdo malicioso. Se não configurar esta definição de política, o utilizador pode escolher se o Filtro SmartScreen digitaliza páginas nesta zona para obter conteúdo malicioso. Nota: No Internet Explorer 7, esta definição de política controla se o Filtro de Phishing digitaliza páginas nesta zona para conteúdos maliciosos.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067092)  
   
@@ -944,7 +944,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desativado  
   
-- **Os processos do Internet Explorer restringem** a instalação do Ative X   
+- **Os processos do Internet Explorer restringem a instalação do Ative X**   
   Esta definição de política permite que as aplicações que hospedam o Controlo do Navegador Web bloqueiem o pedido automático de instalação de controlo ActiveX. Se ativar esta definição de política, o Controlo do Navegador Web bloqueará a instalação automática de controlo ActiveX para todos os processos. Se desativar ou não configurar esta definição de política, o Controlo do Navegador Web não bloqueará a instalação automática de controlo ActiveX para todos os processos.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067250)  
   
@@ -1004,7 +1004,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desative o java 
   
-- A zona restrita do **Internet Explorer não executa antimalware contra os controlos Ative X**   
+- **A zona restrita do Internet Explorer não executa antimalware contra controlos Ative X**   
   Esta definição de política determina se o Internet Explorer executa programas antimalware contra controlos ActiveX, para verificar se são seguros para carregar em páginas. Se ativar esta definição de política, o Internet Explorer não verificará com o seu programa antimalware para ver se é seguro criar uma instância do controlo ActiveX. Se desativar esta definição de política, o Internet Explorer verifica sempre com o seu programa antimalware para ver se é seguro criar uma instância do controlo ActiveX. Se não configurar esta definição de política, o Internet Explorer verifica sempre com o seu programa antimalware para ver se é seguro criar uma instância do controlo ActiveX. Os utilizadores podem ligar ou desligar este comportamento, utilizando as definições de Segurança do Internet Explorer.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067089)
   
@@ -1052,7 +1052,7 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desativar  
   
-- A zona de **internet do Internet Explorer do Internet navega janelas e quadros em diferentes domínios**   
+- **Internet Explorer internet zone navegar janelas e quadros em diferentes domínios**   
   Esta definição de política permite-lhe gerir a abertura de janelas e molduras e o acesso de aplicações em diferentes domínios. Se ativar esta definição de política, os utilizadores podem abrir janelas e quadros de outros domínios e aceder a aplicações de outros domínios. Se selecionar o Prompt na caixa de entrega, os utilizadores são questionados se permitem que janelas e caixilharias acedam a aplicações de outros domínios. Se desativar esta definição de política, os utilizadores não podem abrir janelas e quadros para aceder a aplicações de diferentes domínios. Se não configurar esta definição de política, os utilizadores podem abrir janelas e quadros de outros domínios e aceder a aplicações de outros domínios.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067083)  
   
@@ -1070,13 +1070,13 @@ Para mais informações, consulte [Policy CSP - InternetExplorer](https://docs.m
   
   **Predefinição**: Desativado  
   
-- **Os processos do Internet Explorer restringem** o download de ficheiros   
+- **Os processos do Internet Explorer restringem o download de ficheiros**   
   Esta definição de política permite que as aplicações que hospedam o Controlo do Navegador Web bloqueiem a solicitação automática de transferências de ficheiros que não são iniciadas pelo utilizador. Se ativar esta definição de política, o Controlo do Navegador Web bloqueará a solicitação automática de transferências de ficheiros que não são iniciados pelo utilizador para todos os processos. Se desativar esta definição de política, o Controlo de Navegador web não bloqueará a solicitação automática de transferências de ficheiros que não são iniciados pelo utilizador para todos os processos.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067164)  
   
   **Predefinição**: Ativado  
   
-- A zona restrita do **Internet Explorer permite que apenas os domínios aprovados utilizem controlos Ative X**   
+- **A zona restrita do Internet Explorer permite que apenas os domínios aprovados utilizem controlos Ative X**   
   Esta definição de política controla se o utilizador for solicitado a permitir que os controlos ActiveX possam ser executados em websites que não o website que instalou o controlo ActiveX. Se ativar esta definição de política, o utilizador é solicitado antes que os controlos ActiveX possam ser executados a partir de websites nesta zona. O utilizador pode optar por permitir que o controlo possa ser executado a partir do site atual ou de todos os sites. Se desativar esta definição de política, o utilizador não vê o pedido do ActiveX por site, e os controlos ActiveX podem ser executados a partir de todos os sites desta zona.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067233)  
   
@@ -1159,12 +1159,12 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
   **Predefinição**: Requerer encriptação NTLM V2 e 128 bits  
   
 - **Minutos de inatividade do ecrã de bloqueio até que o protetor de ecrã seja ativado**  
-  O Windows nota a inatividade de uma sessão de logon e, se a quantidade de tempo inativo exceder o limite de inatividade, então o protetor de ecrã será executado, bloqueando a sessão.  
+  O Windows repara na inatividade de um início de sessão e, se a quantidade de tempo inativo exceder o limite de inatividade, então, a proteção de ecrã será executado, bloqueando a sessão.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067210)  
   
   **Predefinição**: 15
   
-- **Exigir que o cliente assine sempre comunicações digitalmente** Esta definição de segurança determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Quando um computador se junta a um domínio, é criada uma conta de computador. Depois disso, quando o sistema começa, utiliza a palavra-passe da conta do computador para criar um canal seguro com um controlador de domínio para o seu domínio. Este canal seguro é utilizado para realizar operações como a passagem da NTLM através da autenticação, LSA SID/nome Lookup e muito mais. Esta definição determina se todo o tráfego de canal seguro iniciado pelo membro do domínio satisfaz os requisitos mínimos de segurança. Especificamente, determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Se esta política estiver ativada, o canal seguro não será estabelecido a menos que seja negociada a assinatura ou encriptação de todo o tráfego de canais seguros. Se esta política for desativada, então a encriptação e a assinatura de todo o tráfego de canal seguro são negociados com o Controlador de Domínio, caso em que o nível de assinatura e encriptação depende da versão do Controlador de Domínio e das definições dos dois seguintes políticas: Membro do domínio: Encriptar digitalmente dados de canais seguros (quando possível) Membro do domínio: Sinal digitalmente dados de canal seguro (quando possível).  
+- **Exigir que o cliente assine sempre comunicações digitalmente** Esta definição de segurança determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Quando um computador se junta a um domínio, é criada uma conta de computador. Depois disso, quando o sistema começa, utiliza a palavra-passe da conta do computador para criar um canal seguro com um controlador de domínio para o seu domínio. Este canal seguro é utilizado para realizar operações como a passagem da NTLM através da autenticação, LSA SID/nome Lookup e muito mais. Esta definição determina se todo o tráfego de canal seguro iniciado pelo membro do domínio satisfaz os requisitos mínimos de segurança. Especificamente, determina se todo o tráfego de canal seguro iniciado pelo membro do domínio deve ser assinado ou encriptado. Se esta política estiver ativada, o canal seguro não será estabelecido a menos que seja negociada a assinatura ou encriptação de todo o tráfego de canais seguros. Se esta política for desativada, então a encriptação e a assinatura de todo o tráfego de canais seguros são negociados com o Controlador de Domínio, caso em que o nível de assinatura e encriptação depende da versão do Controlador de Domínio e das definições das seguintes duas políticas: Membro do domínio: encriptar digitalmente dados de canal seguros (quando possível) Membro do domínio: Assinar digitalmente dados de canal seguros (quando possível).  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067187) 
   
   **Padrão**: Sim
@@ -1312,7 +1312,7 @@ Para mais informações, consulte [Política CSP - LocaiSPolíticasOp](https://d
   **Padrão**: Sim
 
 - **Virtualize falhas de registo e registo por localização de utilizadores**  
-  Esta definição de política controla se as falhas de escrita da aplicação são redirecionadas para locais definidos de registo e sistema de ficheiros. Esta definição de política atenua aplicações que funcionam como administrador e escrevem dados de aplicações a tempo de execução para *%ProgramFiles%* , *%Windir%* , *%Windir%\system32*, ou *HKLM\Software*.  
+  Esta definição de política controla se as falhas de escrita da aplicação são redirecionadas para locais definidos de registo e sistema de ficheiros. Esta definição de política atenua aplicações que funcionam como administrador e escrevem dados de aplicações a tempo de execução para *%ProgramFiles%*, *%Windir%*, *%Windir%\system32*, ou *HKLM\Software*.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067321)  
   
   **Padrão**: Sim
@@ -1368,7 +1368,7 @@ Para mais informações, consulte [Policy CSP - MSSLegacy](https://docs.microsof
 
   **Predefinição**: Desativado
   
-## <a name="power"></a>Energia  
+## <a name="power"></a>Power  
 Para mais informações, consulte [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) in the Windows documentação.  
 
 - **Exigir senha no velório enquanto está ligado**  
@@ -1437,7 +1437,7 @@ Para mais informações, consulte [Policy CSP - RemoteDesktopServices](https://d
   **Predefinição**: Ativado
   
 - **Redirecionamento de unidade de bloqueio**  
-  Esta definição de política especifica se deve impedir o mapeamento das unidades do cliente numa sessão de Serviços de Ambiente de Trabalho Remoto (redirecionamento de unidade). Por predefinição, um servidor rd Session Host mapeia o cliente automaticamente após a ligação. As unidades mapeadas aparecem na pasta da sessão no File Explorer ou no Computador no formato *\<driveletter>* em *\<nome de computador>* . Pode usar esta definição de política para anular este comportamento. Se ativar esta definição de política, a redirecção de unidade do cliente não é permitida nas sessões de Serviços de Ambiente de Trabalho Remoto, e a redirecção de cópias de ficheiros de clipboard não é permitida em computadores que executam o Windows Server 2003, Windows 8 e Windows XP. Se desativar esta definição de política, a reorientação da unidade do cliente é sempre permitida. Além disso, a redirecção da cópia do ficheiro de clipboard é sempre permitida se for permitida a reorientação da área de clipboard. Se não configurar esta definição de política, a redirecção de direção do cliente e a redirecção da cópia de ficheiros de clipboard não são especificadas ao nível da Política de Grupo.  
+  Esta definição de política especifica se deve impedir o mapeamento das unidades do cliente numa sessão de Serviços de Ambiente de Trabalho Remoto (redirecionamento de unidade). Por predefinição, um servidor rd Session Host mapeia o cliente automaticamente após a ligação. As unidades mapeadas aparecem na árvore da pasta da sessão no File Explorer ou no Computador no formato * \<driveletter>* no * \<nome de computador>*. Pode usar esta definição de política para anular este comportamento. Se ativar esta definição de política, a redirecção de unidade do cliente não é permitida nas sessões de Serviços de Ambiente de Trabalho Remoto, e a redirecção de cópias de ficheiros de clipboard não é permitida em computadores que executam o Windows Server 2003, Windows 8 e Windows XP. Se desativar esta definição de política, a reorientação da unidade do cliente é sempre permitida. Além disso, a redirecção da cópia do ficheiro de clipboard é sempre permitida se for permitida a reorientação da área de clipboard. Se não configurar esta definição de política, a redirecção de direção do cliente e a redirecção da cópia de ficheiros de clipboard não são especificadas ao nível da Política de Grupo.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Predefinição**: Ativado
@@ -1511,7 +1511,7 @@ Para mais informações, consulte [Policy CSP - RemoteProcedureCall](https://doc
 
   **Padrão**: Autenticado
 
-## <a name="search"></a>Procura 
+## <a name="search"></a>Pesquisa 
 Para mais informações, consulte [Policy CSP - Procure](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) na documentação do Windows.  
 
 - **Desativar itens encriptados de indexação**  
@@ -1520,7 +1520,7 @@ Para mais informações, consulte [Policy CSP - Procure](https://docs.microsoft.
   
   **Padrão**: Sim
   
-## <a name="smart-screen"></a>Smart Screen  
+## <a name="smart-screen"></a>Tela Inteligente  
 Para mais informações, consulte [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) na documentação do Windows.  
 
 - **Bloquear a execução de ficheiros não verificados**  
@@ -1575,7 +1575,7 @@ Para mais informações, consulte [Policy CSP - WindowsConnectionManager](https:
 - **Bloquear a ligação a redes não-domínio**  
   Esta definição de política impede que os computadores se conectem tanto a uma rede baseada em domínios como a uma rede não baseada em domínios ao mesmo tempo. Se esta definição de política estiver ativada, o computador responde a tentativas de ligação automática e manual de rede com base nas seguintes circunstâncias: 
   - Tentativas de ligação automática Quando o computador já está ligado a uma rede baseada em domínios, todas as tentativas de ligação automática a redes não-domínio são bloqueadas. Quando o computador já está ligado a uma rede não baseada em domínios, as tentativas de ligação automática a redes baseadas em domínios são bloqueadas. 
-  - Tentativas de ligação manual Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios através de meios que não o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta política definição, a ligação de rede existente desliga-se e a ligação manual é permitida. Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios sobre o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta definição de política, a ligação Ethernet existente é mantida e a tentativa de ligação manual está bloqueada.  
+  - Tentativas de ligação manual Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios através de meios que não o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional, violando esta definição de política, a ligação de rede existente desliga-se e a ligação manual é permitida. Quando o computador já está ligado a uma rede não baseada em domínios ou a uma rede baseada em domínios sobre o Ethernet, e um utilizador tenta criar uma ligação manual a uma rede adicional em violação desta definição de política, a ligação Ethernet existente é mantida e a tentativa de ligação manual é bloqueada.  
 
   Se esta definição de política não estiver configurada ou for desativada, os computadores podem ligar-se simultaneamente a redes de domínio e não-domínio.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067323)  
@@ -1614,13 +1614,13 @@ Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft
   **Predefinição**: Bloco
   
 - **Prevenir o tipo de roubo de credenciais**  
-  A Microsoft Defender Credential Guard usa segurança baseada em virtualização para isolar segredos para que apenas o software privilegiado do sistema possa aceder aos mesmos. O acesso não autorizado a estes segredos pode levar a ataques de roubo de credenciais, como pass-the-Hash ou Pass-The-Ticket. A Microsoft Defender Credential Guard impede estes ataques protegendo as hashes de senha NTLM, os bilhetes de concessão de bilhetes Kerberos e credenciais armazenadas por aplicações como credenciais de domínio.  
+  A Microsoft Defender Credential Guard usa segurança baseada em virtualização para isolar segredos para que apenas o software privilegiado do sistema possa aceder aos mesmos. O acesso não autorizado a estes segredos pode levar a ataques de roubo de credenciais, tal como Ataques PtH ou PtT. A Microsoft Defender Credential Guard impede estes ataques protegendo as hashes de senha NTLM, os bilhetes de concessão de bilhetes Kerberos e credenciais armazenadas por aplicações como credenciais de domínio.  
   [Mais informações](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Padrão**: Ativar
 
 - **Tipo de execução de conteúdo de e-mail**  
-  Esta regra bloqueia os seguintes tipos de ficheiros de serem executados ou lançados a partir de um e-mail visto no Microsoft Outlook ou no webmail (como Gmail.com ou Outlook.com): Ficheiros executáveis (tais como ficheiros de script .exe, .dll ou .scr) (tais como powerShell .ps, VisualBasic .vbs, ou ficheiro sinuoso do Script ScriptScript .js. Script.  
+  Esta regra bloqueia os seguintes tipos de ficheiros de serem executados ou lançados a partir de um e-mail visto no Microsoft Outlook ou no webmail (como Gmail.com ou Outlook.com): Ficheiros executáveis (tais como ficheiros de script .exe, .dll ou .scr) (tais como um Ficheiro de ficheiros Script PowerShell .ps, VisualBasic .vbs ou JavaScript .js) Script.  
   [Mais informações](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) 
   
   **Predefinição**: Bloco
@@ -1647,7 +1647,7 @@ Para mais informações, consulte [Policy CSP - Defender](https://docs.microsoft
   **Padrão**: Sim  
 
 - **Defender ação de aplicação potencialmente indesejada**  
-  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Microsoft Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem realizar ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico da PUA inclui: Vários tipos de software que agregam a injeção de anúncios em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidas como " programas antivírus desonestos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.  
+  A funcionalidade de proteção de aplicações potencialmente indesejadas (PUA) no Antivírus Do Microsoft Defender pode identificar e bloquear as API de descarregar e instalar em pontos finais da sua rede. Estas aplicações não são consideradas vírus, malware ou outros tipos de ameaças, mas podem realizar ações em pontos finais que afetam negativamente o seu desempenho ou uso. A PUA também pode referir-se a aplicações que são consideradas como tendo uma má reputação. O comportamento típico do PUA inclui: Vários tipos de software que agregam a injeção de Anúncio saqueado em navegadores web O condutor e os otimizadores de registo que detetam problemas, solicitam o pagamento para corrigir os erros, mas permanecem no ponto final e não fazem alterações ou otimizações (também conhecidos como programas antivírus fraudulentos). Estas aplicações podem aumentar o risco de a sua rede estar infetada com malware, fazer com que as infeções por malware sejam mais difíceis de identificar e podem desperdiçar recursos de TI na limpeza das aplicações.  
   [Mais informações](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)    
   
   **Predefinição**: Bloco  
@@ -1775,7 +1775,7 @@ Para mais informações, consulte [2.2.2 FW_PROFILE_TYPOE]( https://docs.microso
   - **Firewall ativado**  
     **Padrão**: Permitido
 
-## <a name="windows-hello-for-business"></a>Windows Hello para Empresas  
+## <a name="windows-hello-for-business"></a>Windows Hello para empresas  
 
 - **Bloqueie janelas Olá para negócios**  
     O Windows Hello for Business é um método alternativo para iniciar sessão no Windows substituindo palavras-passe, Smart Cards e Cartões Inteligentes Virtuais.  
@@ -1794,28 +1794,28 @@ Para mais informações, consulte [2.2.2 FW_PROFILE_TYPOE]( https://docs.microso
 
     **Padrão**: Sim
 
-  - **Letras minúsculas em PIN**  
+  - **Letras em minúsculas no PIN**  
     Se *necessário,* o PIN do utilizador deve incluir pelo menos uma letra minúscula.
 
     **Padrão**: Permitido
 
-  - **Caracteres especiais em PIN**  
+  - **Carateres especiais no PIN**  
     Se *necessário,* o PIN do utilizador deve incluir pelo menos um personagem especial.
 
     **Padrão**: Permitido
 
-  - **Comprimento mínimo pin**  
+  - **Comprimento mínimo do PIN**  
     O comprimento mínimo do PIN deve ser entre 4 e 127.
 
     **Padrão**: 6
 
-  - **Letras maiúsculas em PIN**  
+  - **Letras em maiúsculas no PIN**  
     Se *necessário,* o PIN do utilizador deve incluir pelo menos uma letra maiúscula.
 
     **Padrão**: Permitido
 
 
-## <a name="windows-ink-workspace"></a>Espaço de trabalho de tinta windows  
+## <a name="windows-ink-workspace"></a>Área de Trabalho do Windows Ink  
 Para mais informações, consulte [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) na documentação do Windows.  
 
 - **Espaço de trabalho de tinta**  
@@ -1846,38 +1846,38 @@ As seguintes definições são:
 - *Removido* desta versão mais recente, mas esteve presente na versão anterior.
 - *Revisto de* alguma forma pela forma como as definições apareceram na versão anterior. 
 
-*[Novo]* [**Acima da fechadura:** ](#above-lock)
+*[Novo]* [**Acima da fechadura:**](#above-lock)
 - **Aplicativos de ativação de voz a partir de ecrã bloqueado**    
 
-*[Nova]* [**Gestão de Aplicações:** ](#application-management) 
+*[Nova]* [**Gestão de Aplicações:**](#application-management) 
 - **Bloqueie o controlo do utilizador sobre as instalações**  
 - **Instalações de aplicações Block MSI com privilégios elevados**  
 
-*[Removido]* [**BitLocker:** ](#bitlocker)  
-- BitLocker política de unidade amovível > **Método de encriptação**
+*[Removido]* [**BitLocker:**](#bitlocker)  
+- BitLocker política de unidade removível > método de **encriptação**
 - Política de **unidade fixa BitLocker** *(todas as definições)*
 - Política de **unidade de sistema BitLocker** *(todas as configurações)*
 
-*[Nova]* [**Conectividade:** ](#connectivity)
+*[Nova]* [**Conectividade:**](#connectivity)
 - **Configure o acesso seguro aos caminhos da CNU**
 
-*[Novo]* [**Dispositivo Guarda:** ](#device-guard)
+*[Novo]* [**Dispositivo Guarda:**](#device-guard)
 - **Segurança baseada em virtualização**
 
-*[Novo]* [**DMA Guarda:** ](#dma-guard)
+*[Novo]* [**DMA Guarda:**](#dma-guard)
 - **Enumeração de dispositivos externos incompatíveis com a Proteção Kernel DMA**  
 
-*[Novo]* [**Internet Explorer:** ](#internet-explorer)
+*[Novo]* [**Internet Explorer:**](#internet-explorer)
 - **Explorer internet zone atualizações para barra de estado via script**
 - **Internet Explorer internet zone drag and drop or copy and paste files**  
 - **Zona restrita do Internet Explorer .NET Estrutura componentes dependentes**  
 - **A zona de máquina local do Internet Explorer não executa antimalware contra os controlos Ative X**
 - **Suporte de encriptação do Internet Explorer**  
 
-*[Revisto]* [**Internet Explorer:** ](#internet-explorer)
-- **Internet Explorer internet zone automatic prompt for file downloads** > O valor padrão é agora **desativado**. Na pré-visualização, este foi definido para Enabled.
+*[Revisto]* [**Internet Explorer:**](#internet-explorer)
+- Pedido automático de zona de **internet do Internet Do Internet Explorer para downloads** de ficheiros > O valor predefinido é agora **desativado**. Na pré-visualização, este foi definido para Enabled.
 
-*[Nova]* [**Assistência Remota:** ](#remote-assistance)  
+*[Nova]* [**Assistência Remota:**](#remote-assistance)  
 - **Assistência Remota solicitada** 
   - **Autorização solicitada pela Assistência Remota**
   - **Valor máximo do tempo do bilhete**  
@@ -1885,7 +1885,7 @@ As seguintes definições são:
   - **Método de convite por e-mail**
 
 
-*[Novo]* [**Microsoft Defender:** ](#microsoft-defender)
+*[Novo]* [**Microsoft Defender:**](#microsoft-defender)
 - **Lançamento do leitor adobe em processo infantil**  
 - **Aplicativos de comunicação do escritório lançam-se num processo infantil** 
 
@@ -1911,7 +1911,7 @@ As seguintes definições são:
 *[Novo]* [**Windows Hello for Business**](#windows-hello-for-business):  
 - **Bloqueie janelas Olá para negócios**
   - **Permitir a utilização de uma luta anti-falsificação melhorada, quando disponível**  
-  - **Letras minúsculas em PIN** 
-  - **Caracteres especiais em PIN** 
-  - **Comprimento mínimo pin**  
-  - **Letras maiúsculas em PIN** 
+  - **Letras em minúsculas no PIN** 
+  - **Carateres especiais no PIN** 
+  - **Comprimento mínimo do PIN**  
+  - **Letras em maiúsculas no PIN** 

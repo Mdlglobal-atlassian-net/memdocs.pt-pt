@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359457"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587257"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Definições de proteção de ponto final do macOS no Intune  
 
@@ -54,7 +54,7 @@ Este artigo mostra-lhe as definições de proteção de pontofinal que pode conf
 
 Utilize a firewall para controlar ligações por aplicação e não por porta. Utilizar definições por aplicação torna mais fácil obter as vantagens de proteção da firewall. Também ajuda a impedir que aplicações indesejáveis controlem as portas da rede que estão abertas para as aplicações legítimas.  
 
-**Geral**
+**General**
 - **Firewall**  
   Ative a Firewall para configurar a forma como as ligações de entrada são tratadas no seu ambiente.  
   - **Não configurado**  
@@ -65,7 +65,7 @@ Utilize a firewall para controlar ligações por aplicação e não por porta. U
 - **Ligações de entrada**  
   Bloqueie todas as ligações de entrada, exceto as ligações necessárias para serviços básicos de Internet, tais como DHCP, Bonjour e IPSec. Esta funcionalidade também bloqueia todos os serviços de partilha, tal como a Partilha de Ficheiros e a Partilha de Ecrãs. Se estiver a utilizar serviços de partilha, mantenha esta definição como *Não configurado*.  
   - **Não configurado**  
-  - **Bloquear**  
+  - **Bloco**  
 
   **Predefinição**: Não configurado  
 
@@ -77,7 +77,7 @@ Utilize a firewall para controlar ligações por aplicação e não por porta. U
   - **Aplicativos bloqueados**  
     Selecione as aplicações que devem bloquear as ligações de entrada.  
 
-  - **Modo stealth**  
+  - **Modo furtivo**  
     Para evitar que o computador responda a pedidos de sondagem, ative o modo de stealth. O dispositivo continua a responder a pedidos recebidos de aplicações autorizadas. São ignorados pedidos inesperados, tais como o protocolo ICMP (ping).  
     - **Não configurado**  
     - **Ativar**  
@@ -114,6 +114,18 @@ Para obter mais informações sobre as definições do Apple FileVault, consulte
   - **Número de vezes permitidos para contornar**  
   Detete o número de vezes que um utilizador pode ignorar as instruções para ativar o FileVault antes de o FileVault ser necessário para que o utilizador faça o início. 
 
+    > [!IMPORTANT]
+    >
+    > Há uma questão conhecida com o valor **Sem limite, sempre solicitado.** Em vez de permitir que um utilizador ignore a encriptação quando iniciar o seu início, esta definição requer encriptação do dispositivo no próximo início de sessão. Esta emissão deverá ser corrigida no final de junho e é reportada no MC210922.
+    >
+    > Quando fixada, esta definição terá uma nova opção de zero (**0),** que exigirá que os dispositivos encriptem a próxima vez que um utilizador assinar no dispositivo. Além disso, quando a Intune atualizar para incluir esta correção, qualquer política que esteja definida para **não limite, sempre** será atualizada para usar o novo valor de **0**, o que mantém o comportamento atual de exigir encriptação.
+    >
+    > Depois de este problema ser corrigido, pode utilizar a capacidade de contornar a encriptação exigindo encriptação reconfigurando esta definição para definir **nenhum limite, sempre que a** definição funcione como inicialmente esperado e permitirá que os utilizadores contornem a encriptação do dispositivo.
+    >
+    > Se tiver dispositivos macOS matriculados, pode ver mais informações quando iniciar sessão no centro de [administração do Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)ir para o estatuto de > **inquilino**da **administração tenant,** selecionar o centro de **saúde e mensagem**de serviço, e procurar a mensagem ID **MC210922**.
+
+    <br> 
+
     - **Não configurado** - A encriptação no dispositivo é necessária antes da próxima inscrição ser permitida.  
     - **1** a **10** - Permita que um utilizador ignore a solicitação de 1 a 10 vezes antes de necessitar de encriptação no dispositivo.  
     - **Sem limite, sempre solicitado** - O utilizador é solicitado para ativar o FileVault, mas a encriptação nunca é necessária.  
@@ -122,7 +134,7 @@ Para obter mais informações sobre as definições do Apple FileVault, consulte
 
 Para mais informações sobre fileVault com Intune, consulte as chaves de [recuperação do FileVault](encryption-monitor.md#filevault-recovery-keys).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o respetivo estado](../configuration/device-profile-monitor.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Verifique o sucesso ou falha das linhas de segurança no Microsoft Intune - Azure  Microsoft Docs
+title: Verifique o sucesso ou falha das linhas de segurança no Microsoft Intune - Azure [ Microsoft Docs
 description: Verifique o estado de erro, conflito e estado de sucesso ao implementar linhas de segurança para utilizadores e dispositivos no Microsoft Intune MDM. Veja como resolver problemas usando registos de clientes, e o relatório apresenta-se em Intune.
 keywords: ''
 author: brenduns
@@ -12,16 +12,16 @@ ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: b9208c07b35aa7830cfe702604a6dabbcb41ab9f
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551674"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693425"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorize a linha de base de segurança e os perfis no Microsoft Intune
 
@@ -35,7 +35,7 @@ As linhas de base de [segurança em Intune](security-baselines.md) fornecem mais
 
 Quando monitoriza uma linha de base, obtém-se informações sobre o estado de segurança dos seus dispositivos com base nas recomendações da Microsoft. Pode visualizar estas informações a partir do painel de visão geral da linha de base de segurança na consola Intune.  Leva até 24 horas para que os dados apareçam depois de atribuir uma linha de base. As alterações posteriores demoram até seis horas a aparecer.
 
-Para visualizar os dados de monitorização da linha de base e dispositivos, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Em seguida, selecione **a segurança endpoint** > **Security Baselines**, selecione uma linha de base e veja o painel de **visão geral.**
+Para visualizar os dados de monitorização da linha de base e dispositivos, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Em seguida, selecione **Endpoint Security** > **Baselines**, selecione uma linha de base e veja o painel de **visão geral.**
 
 O painel **de visão geral** fornece dois métodos para monitorizar o estado:
 
@@ -65,7 +65,7 @@ Por exemplo, se um dispositivo tiver uma definição classificada como *mal conf
 
 Pode clicar na tabela para perfurar e ver uma lista de dispositivos com vários estados. Em seguida, pode selecionar dispositivos individuais a partir dessa lista para visualizar detalhes sobre dispositivos individuais. Por exemplo:
 
-- Selecione **configuração** do dispositivo > Selecione o perfil com uma posição error:
+- Selecione **a configuração** do dispositivo > Selecione o perfil com uma estado de erro:
 
   ![Ver o estado de um perfil](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
@@ -92,13 +92,13 @@ Pode classificar a vista por categoria por cada coluna, selecionando o ícone de
 
 Monitorizar o perfil dá-lhe uma visão do estado de implantação dos seus dispositivos, mas não do estado de segurança com base nas recomendações de base.
 
-1. Intune, selecione **Security Baselines** > selecione uma linha de base > **Perfis criados**.
+1. Em Intune, selecione **Security Baselines** > selecione uma linha de base > **Perfis criados**.
 
 2. Selecione um perfil. Em **resumo,** a imagem mostra quantos dispositivos e utilizadores têm este perfil atribuído:
 
    ![Veja quantos dispositivos e utilizadores são atribuídos ao perfil de base de segurança](./media/security-baselines-monitor/existing-profile-overview.png)
 
-3. No âmbito **da Manage** > **Properties,** é apresentada uma lista de todas as definições da linha de base. Também pode alterar qualquer uma destas definições:
+3. No âmbito do **Manage** > **Properties,** é apresentada uma lista de todas as definições da linha de base. Também pode alterar qualquer uma destas definições:
 
    ![Ver e atualizar definições no perfil de base de segurança](./media/security-baselines-monitor/manage-settings.png)
 
@@ -112,7 +112,7 @@ Consulte detalhes sobre as configurações de segurança que se aplicam a um dis
 
 1. Inscreva-se no signine do centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vá ao **Dispositivo > ** Todos **os dispositivos** e selecione o dispositivo que pretende visualizar.
+2. Vá a **Dispositivos** > **Todos os dispositivos** e selecione o dispositivo que pretende ver.
 
 3. Na categoria *Monitor,* selecione a configuração de **segurança endpoint** para visualizar a lista de configurações de segurança que se aplicam a esse dispositivo.
 
@@ -122,9 +122,9 @@ Consulte detalhes sobre as configurações de segurança que se aplicam a um dis
 
 Implementou uma linha de base de segurança, mas o estado de implantação mostra um erro. Os seguintes passos dão-lhe alguma orientação sobre a resolução de problemas do erro.
 
-1. Intune, selecione **Security Baselines** > selecione uma linha de base > **Perfis criados**.
+1. Em Intune, selecione **Security Baselines** > selecione uma linha de base > **Perfis criados**.
 
-2. Selecione um perfil > Sob **o monitor** > estado **de definição por definição**.
+2. Selecione um perfil > sob o estado de**regulação por** **controlo** > .
 
 3. A tabela mostra todas as definições e o estado de cada definição. Selecione a coluna **Error** ou a coluna **Conflito** para ver a definição que causa o erro.
 
@@ -134,9 +134,9 @@ Agora já conhece o cenário problemático. O próximo passo é descobrir por qu
 
 Nos dispositivos windows 10, há um relatório de diagnóstico de MDM incorporado. Este relatório inclui valores predefinidos, valores atuais, lista a política, mostra se está implantado no dispositivo ou no utilizador, e muito mais. Utilize este relatório para ajudar a determinar por que razão a definição está a causar um conflito ou erro.
 
-1. No dispositivo, aceda a **Definições** > **Contas** > Trabalho de **Acesso ou escola**.
+1. No dispositivo, aceda a **Definições** > **Accounts** > Contas**O acesso ao trabalho ou à escola.**
 
-2. Selecione a conta > **Info** > **Relatório Avançado** de Diagnóstico > **Criar relatório**.
+2. Selecione a conta > **Relatório** > **de Diagnóstico Avançado** > **Criar relatório**.
 
 3. Escolha **exportação**e abra o ficheiro gerado.
 
@@ -149,12 +149,12 @@ Nos dispositivos windows 10, há um relatório de diagnóstico de MDM incorporad
 > [!TIP]
 >
 > - Algumas configurações também listam o GUID. Pode pesquisar este GUID no registo local (regedita) por quaisquer valores definidos.
-> - Os registos do Espectador de Eventos também podem incluir algumas informações de erro sobre a definição problemática ( Registos de > de**visualização** de **eventos > ** **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin).**
+> - Os registos do Espectador de Eventos também podem incluir algumas informações de erro sobre a definição problemática (**Aplicações e Registos** > de Visualização de**Eventos** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Conheça as linhas de base de segurança](security-baselines.md)
 - [Evitar conflitos](security-baselines.md#avoid-conflicts)
 - [Monitorizar perfis de dispositivo](../configuration/device-profile-monitor.md) 
 - [Questões e resoluções comuns.](../configuration/device-profile-troubleshoot.md)
-- [Políticas e perfis de resolução de problemas em Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Resolução de problemas de políticas e perfis no Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

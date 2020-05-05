@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 0151bfd993c3ad5cc48194da368d3385d8bc32ec
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808177"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619564"
 ---
-# <a name="in-development-for-microsoft-intune---april-2020"></a>Em desenvolvimento para microsoft Intune - abril 2020
+# <a name="in-development-for-microsoft-intune"></a>Em desenvolvimento para microsoft Intune
 
 Para ajudar na sua prontidão e planeamento, esta página lista atualizações e funcionalidades intune UI que estão em desenvolvimento mas ainda não foram lançadas. Além das informações nesta página: 
 
@@ -33,9 +33,11 @@ Para ajudar na sua prontidão e planeamento, esta página lista atualizações e
 - Consulte o roteiro da [Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) para entregas estratégicas e prazos.
 
 > [!NOTE]
-> Esta página reflete as nossas expectativas atuais sobre as capacidades intune num lançamento futuro. As datas e as características individuais podem mudar. Esta página não descreve todas as funcionalidades em desenvolvimento.
+> Esta página reflete as nossas expectativas atuais sobre as capacidades intune num próximo lançamento. As datas e as características individuais podem mudar. Esta página não descreve todas as funcionalidades em desenvolvimento.
 
-**Feed RSS**: Descubra quando esta página é atualizada copiando e colando o seguinte URL no leitor de feed: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+**Alimentação RSS**: Descubra quando esta página é atualizada copiando e colando o seguinte URL no seu leitor de feed:`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+
+Este artigo foi atualizado pela última vez na data listada no título acima.
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -58,38 +60,39 @@ Para ajudar na sua prontidão e planeamento, esta página lista atualizações e
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Gestão de aplicações
 
-### <a name="update-to-android-app-configuration-policies---6113334----"></a>Atualização para políticas de configuração de aplicativos Android<!-- 6113334  -->
-As políticas de configuração de aplicações Android serão atualizadas para permitir aos administradores selecionaro tipo de inscrição do dispositivo antes de criar um perfil de config de aplicação. A funcionalidade está a ser adicionada para ter em conta os perfis de certificado que se baseiam no tipo de inscrição (Perfil de trabalho ou Proprietário do Dispositivo).  Após a libertação, ocorrerá o seguinte:
+### <a name="support-for-multiple-accounts-in-company-portal-for-mac---5779449----"></a>Suporte para várias contas no Portal da Empresa para Mac<!-- 5779449  -->
+O Portal da Empresa sobre dispositivos macOS agora caches contas de utilizador, facilitando o início do sessão. Os utilizadores já não precisam de assinar no Portal da Empresa sempre que lançam a aplicação. Além disso, o Portal da Empresa apresentará um picker de conta se várias contas de utilizador estiverem em cache, para que os utilizadores não tenham de introduzir o seu nome de utilizador. 
 
-- As políticas existentes criadas antes do lançamento desta funcionalidade que não possuam quaisquer perfis de certificado associados à política serão indefinidas no Perfil de Trabalho e perfil do proprietário do dispositivo para o tipo de inscrição do dispositivo.
-- As políticas existentes criadas antes do lançamento desta funcionalidade que tenham perfis de certificados associados apenas serão padrão para o Perfil de Trabalho.
-- Se for criado um novo perfil e se selecionar o Perfil de Trabalho e o Perfil do Proprietário do Dispositivo para o tipo de inscrição do dispositivo, não poderá associar um perfil de certificado à política de config da aplicação.
-- Se for criado um novo perfil e se selecionar apenas o Perfil de Trabalho, as políticas de certificados de perfil de trabalho criadas no âmbito da Configuração do Dispositivo podem ser utilizadas.
-- Se for criado um novo perfil e o Proprietário do Dispositivo apenas for selecionado, as políticas de certificados do Proprietário do Dispositivo criadas no âmbito da Configuração do Dispositivo podem ser utilizadas.
+### <a name="auto-update-vpp-available-apps---3640511----"></a>Atualização automática VPP disponíveis aplicações<!-- 3640511  -->
+As aplicações que forem publicadas como Programa de Compra de Volume (VPP) serão automaticamente atualizadas quando as **Atualizações automáticas** de aplicações estiverem ativadas para o token VPP. Atualmente, as aplicações disponíveis vPP não atualizam automaticamente. Em vez disso, os utilizadores finais devem ir ao Portal da Empresa e reinstalar a aplicação se uma versão mais recente estiver disponível. No entanto, as aplicações necessárias suportam atualmente atualizações automáticas.
 
-As políticas existentes não remediarão nem emitirão novos certificados.
+### <a name="customize-self-service-device-actions-in-the-company-portal--4393379----"></a>Personalize as ações de dispositivos self-service no Portal da Empresa<!--4393379  -->
+Poderá personalizar as ações de dispositivos self-service disponíveis que são mostradas aos utilizadores finais na aplicação e website do Portal da Empresa. Para ajudar a prevenir ações não intencionais do dispositivo, poderá configurar estas definições para a aplicação Portal da Empresa, selecionando**funcionalidades**de**Personalização** > de **Administração** > de Inquilinos**Create** > Hide . Estão disponíveis as seguintes ações:
+- Ocultar o botão **Remover** no dispositivo corporativo Windows.
+- Ocultar o botão **Reset** em dispositivos windows corporativos.
+- Ocultar o botão **Reset** em dispositivos corporativos iOS.
+- Ocultar O botão **Remover** em dispositivos iOS corporativos.
 
-Além disso, estamos adicionando perfis de configuração de gmail e nove e-mails que funcionarão tanto para os tipos de inscrição do Perfil de Trabalho como para os tipos de inscrição do Proprietário do Dispositivo, incluindo a utilização de perfis de certificado em ambos os tipos de configuração de e-mail.  Quaisquer políticas do Gmail ou Nove que tenha criado no âmbito da Configuração do Dispositivo para Perfis de Trabalho continuarão a aplicar-se ao dispositivo e não é necessário movê-las para as políticas de configuração de apps.
+Para mais informações, consulte [as ações do dispositivo self-service user a partir do Portal da Empresa](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
 
-No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)pode encontrar políticas de configuração de aplicações selecionando **apps** > polícias de **configuração**de Apps . Para obter mais informações sobre as políticas de configuração de apps, consulte as políticas de configuração da [App para o Microsoft Intune](../apps/app-configuration-policies-overview.md).
+### <a name="unified-delivery-of-azure-ad-enterprise-or-office-online-applications-in-the-company-portal--4404429---"></a>Entrega unificada de aplicações azure AD Enterprise ou Office Online no Portal da Empresa<!--4404429 -->
+Poderá alternar (**Ocultar** ou **Mostrar)** a exposição de aplicações Azure AD Enterprise ou Office Online no Portal da Empresa. Cada utilizador verá todo o seu catálogo de aplicações a partir do serviço da Microsoft escolhido. Por predefinição, cada fonte adicional de aplicação será definida para **Ocultar**. Esta funcionalidade entrará primeiro em vigor no site do Portal da Empresa no lançamento de 2005 com suporte no Windows, iOS/iPadOS e macOS Company Portals que se espera que se sigam. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione a**personalização** da **administração** > do Inquilino para encontrar esta definição futura. Para obter informações relacionadas, consulte [como personalizar as aplicações intune Company Portal, website do Portal da Empresa e aplicação Intune](../apps/company-portal-app.md).
 
-### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams está agora incluído na Suite Office 365 para macOS<!-- 5903936  -->
-Os utilizadores que lhe forem atribuídos microsoft Office para macOS no Microsoft Endpoint Manager passarão a receber Microsoft Teams para além das aplicações existentes do Microsoft Office (Word, Excel, PowerPoint, Outlook e OneNote). A Intune reconhecerá os dispositivos Mac existentes que têm os outros Dispositivos Do Office para aplicações macOS instaladas, e tentará instalar as Microsoft Teams da próxima vez que o dispositivo verificar com o Intune. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)pode encontrar a **Suite Office 365** para macOS selecionando **Apps** > **macOS** > **Add**. Para mais informações, consulte [o SignOffice 365 para dispositivos macOS com](../apps/apps-add-office365-macos.md)o Microsoft Intune .
+### <a name="search-the-intune-docs-from-the-company-portal---1736480---"></a>Pesquise os docs Intune do Portal da Empresa<!-- 1736480 -->
+Agora pode pesquisar a documentação Intune diretamente do Portal da Empresa para aplicação macOS. Na barra de menus, selecione **Help** > **Search** e introduza as palavras-chave da sua pesquisa para encontrar rapidamente respostas às suas perguntas.
 
-### <a name="group-targeting-support-for-customization-pane----4722837----"></a>Suporte de grupo para painel de personalização <!-- 4722837  -->
-Poderá direcionar as definições no painel de personalização para grupos de utilizadores. A partir do portal Intune, selecione **aplicações do Cliente** > **Personalização.** Para mais informações, consulte [Como personalizar as aplicações intune Company Portal, website do Portal da Empresa e aplicação Intune](empresa-portal-app.md].
+### <a name="company-portal-for-android-will-guide-users-to-get-apps-after-work-profile-enrollment----6103999----"></a>Portal da empresa para Android vai orientar utilizadores a obter aplicações após inscrição no perfil de trabalho <!-- 6103999  -->
+Estamos a melhorar a orientação in-app no Portal da Empresa para facilitar aos utilizadores a descoberta e instalação de apps.  Depois de se inscreverem na gestão de perfis de trabalho, os utilizadores verão uma mensagem a dizer-lhes que podem encontrar aplicações sugeridas na versão com insígnias do Google Play. Os utilizadores também verão uma nova ligação de **apps Get** na gaveta do Portal da Empresa à esquerda. Para dar lugar a estas novas e melhoradas experiências, o separador **APPS** será removido. 
+
+### <a name="android-company-portal-user-experience---5736084---"></a>Experiência de utilizador do Portal da Empresa Android<!-- 5736084 -->
+No lançamento de 2005 do Portal da Empresa Android, os utilizadores finais de dispositivos Android que são emitidos um aviso, bloqueio ou limpeza por uma política de proteção de aplicações verão uma nova experiência do utilizador. Em vez da experiência atual do diálogo, os utilizadores finais verão uma mensagem de página inteira descrevendo o motivo do aviso, bloqueio ou limpeza e os passos para remediar o problema. Para mais informações, consulte a experiência de proteção de [aplicativos para dispositivos Android](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) e definições de política de proteção de [aplicações Android no Microsoft Intune](../apps/app-protection-policy-settings-android.md).
+
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Configuração do dispositivo
 
-### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Perfis de configuração de dispositivos de rede com fios para dispositivos macOS<!-- 3508686  -->
-Um novo perfil de configuração do dispositivo macOS estará disponível que configura redes com fios (**configuração** do dispositivo > **Perfis** > **Criar perfil** > **macOS** para plataforma > **Rede Com fios** para tipo de perfil). Utilize esta funcionalidade para criar perfis 802.1x para gerir redes com fios e implementar estas redes com fios para os seus dispositivos macOS.
-
-Aplica-se a:
-- macOS
-
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>As definições e valores do perfil de configuração do dispositivo serão atualizados para plataformas Windows<!-- 4091122 -->
-Quando cria perfis de configuração de dispositivos para plataformas Windows **(Dispositivos** > Perfis de **Configuração** > **Criar perfil** > qualquer opção **do Windows** para plataforma), algumas definições e os seus valores são diferentes do CSP, e podem ser confusos. Os nomes de definição e os seus valores serão atualizados para serem mais claros.
+Quando cria perfis de configuração de dispositivos para plataformas Windows **(Perfis** > de configuração de**dispositivos** > **Criar perfil** > qualquer opção **windows** para plataforma), algumas definições e os seus valores são diferentes do CSP, e podem ser confusos. Os nomes de definição e os seus valores serão atualizados para serem mais claros.
 
 Aplica-se a:
 
@@ -99,40 +102,46 @@ Aplica-se a:
 - Perfis de configuração do dispositivo Windows Phone 8.1
 
 ### <a name="configure-the-microsoft-defender-atp-app-for-macos-----5520115----"></a>Configure a aplicação ATP microsoft defender para macOS  <!-- 5520115  -->
-Em breve poderá configurar as [definições](../protect/endpoint-protection-macos.md) da aplicação ATP do Microsoft Defender para dispositivos que executam o macOS como parte de um perfil de configuração de dispositivos de proteção endpoint **(Dispositivos** > perfis de **configuração** > **Criar perfil,** selecionar **o macOS** para a *Plataforma*e, em seguida, **proteção Endpoint** para o *tipo de Perfil).* Haverá oito configurações para a configuração do dispositivo macOS. 
+Em breve poderá configurar as [definições](../protect/endpoint-protection-macos.md) da aplicação ATP do Microsoft Defender para dispositivos que executam o macOS como parte de um perfil de configuração de dispositivos de proteção endpoint (Perfis de**configuração** > de**dispositivos** > **Criar perfil,** selecionar **macOS** para a *Plataforma*e, em seguida, **proteção Endpoint** para o *tipo de Perfil).* Haverá oito configurações para a configuração do dispositivo macOS. 
 
 O Defender ATP é suportado no macOS 10.13 (High Sierra) e posteriormente, e a aplicação [ATP Microsoft Defender](../apps/apps-advanced-threat-protection-macos.md) deve ser implementada no dispositivo *após* a aplicação destas definições. As definições devem ser enviadas para o dispositivo antes da aplicação ser implementada. As versões beta do macOS não serão suportadas.
 
 ### <a name="new-filevault-setting-for-macos-endpoint-protection-device-configuration-policy---5459801-----"></a>Nova definição de FileVault para a política de configuração do dispositivo de proteção de pontofinal macOS<!-- 5459801   -->
-Estamos adicionando uma nova definição à categoria FileVault dentro do modelo de proteção de [ponto final macOS:](../protect/endpoint-protection-macos.md) Ocultar a chave de recuperação. **(Dispositivos** > perfis de **configuração** > **Criar perfil,** selecione **o macOS** para a *Plataforma* e, em seguida, a **proteção endpoint** para o *tipo de perfil).* Esta definição esconde a chave pessoal do utilizador final durante a encriptação FileVault 2. Um utilizador do dispositivo pode visualizar a sua chave de recuperação pessoal a qualquer momento a partir da aplicação portal da empresa iOS ou do portal da empresa para o dispositivo macOS encriptado. Para ver a chave de recuperação pessoal, podem ir aos detalhes do dispositivo e clicar na *chave de recuperação do get*.
+Estamos adicionando uma nova definição à categoria FileVault dentro do modelo de proteção de [ponto final macOS:](../protect/endpoint-protection-macos.md) Ocultar a chave de recuperação. (Perfis de**configuração** > de**dispositivos** > **Criar perfil,** selecionar **macOS** para a *Plataforma* e, em seguida, **proteção endpoint** para o *tipo de perfil).* Esta definição esconde a chave pessoal do utilizador final durante a encriptação FileVault 2. Um utilizador do dispositivo pode visualizar a sua chave de recuperação pessoal a qualquer momento a partir da aplicação portal da empresa iOS ou do portal da empresa para o dispositivo macOS encriptado. Para ver a chave de recuperação pessoal, podem ir aos detalhes do dispositivo e clicar na *chave de recuperação do get*.
 
 Esta definição não estará disponível na política previamente criada. Terá de recriar as políticas do FileVault para configurar esta definição para a utilizar. 
 
-### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Enviar notificações push como uma ação para o incumprimento <!-- 1733150   -->
-Para as plataformas iOS e Android, estamos a adicionar uma nova ação para o incumprimento que enviará uma notificação push de aplicação através da aplicação Portal da Empresa. Os utilizadores podem clicar nas notificações, que lançarão a aplicação Portal da Empresa que depois exibe a razão pela qual não são compatíveis. Os administradores poderão configurar esta nova ação por incumprimento no centro de administração do Microsoft Endpoint Manager, indo para **dispositivos** > **políticas** de conformidade > **Criar políticas,** e, em seguida, selecionar a *Ação* para enviar uma notificação push app.
+### <a name="configure-system-extensions-on-macos-devices---6255624----"></a>Configurar extensões do sistema em dispositivos macOS<!-- 6255624  -->
+Nos dispositivos macOS, pode criar um perfil de extensões de kernel para configurar as definições ao nível do kernel ( Perfis de**configuração** > de**dispositivos** > **macOS** para plataformas > **extensões kernel** para perfil). A Apple acaba por depreciar as extensões de kernel e substituí-las por extensões do sistema numa futura versão. As extensões do sistema funcionam no espaço do utilizador e não dão acesso ao núcleo. O objetivo é aumentar a segurança e fornecer mais controlo final do utilizador, limitando os ataques ao nível do núcleo. Ambas as extensões de kernel e extensões do sistema permitem que os utilizadores instalem extensões de aplicações que alargam as capacidades nativas do sistema operativo.
 
-### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Teste de pré-lançamento para aplicações geridas do Google Play<!-- 2681933  -->
-As organizações que estão a usar as [faixas de teste fechadas do Google Play para testes de pré-lançamento](https://support.google.com/googleplay/android-developer/answer/3131213) de aplicações poderão gerir estas faixas com o Intune. Poderá atribuir seletivamente aplicações line of business que são publicadas nas faixas de pré-produção da Google Play a grupos piloto para realizar testes. Em Intune, também poderá ver se uma aplicação tem uma pista de teste de pré-produção publicada, bem como ser capaz de atribuir essa faixa a grupos de utilizadores ou dispositivos AAD. Esta funcionalidade está disponível para todos os nossos cenários Android Enterprise atualmente suportados (perfil de trabalho, totalmente gerido e dedicado). No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)pode adicionar uma aplicação gerida pela Google Play selecionando **Apps** > **Android** > **Add.** Para mais informações, consulte [adicionar aplicações do Google Play geridas para dispositivos Android Enterprise com Intune](../apps/apps-add-android-for-work.md).
+Em Intune, pode configurar as extensões de kernel e as extensões do sistema (perfis de**configuração** > de**dispositivos** > **macOS** para **extensões** de > de plataforma para perfil). As extensões de kernel aplicam-se a 10.13.2 e mais recentes. As extensões do sistema aplicam-se às 10.15 e mais recentes. Do macOS 10.15 ao macOS 10.15.4, as extensões de kernel e as extensões do sistema podem ser executadas lado a lado. 
 
-### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>Gerir as definições de S/MIME para Outlook no Android<!-- 6517085   -->
-Poderá utilizar as políticas de configuração da App para gerir a definição S/MIME para outlook em dispositivos que executam o Android Enterprise. Também poderá escolher se permite ou não que os utilizadores do dispositivo ativem ou desativem S/MIME nas definições do Outlook. Para utilizar a política de configuração de Aplicativos para Android, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vai para **apps** > políticas de **configuração** de apps > **adicionar** > **dispositivos geridos**.
-
-### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>Opções adicionais nos perfis de extensão de apps SSO e SSO em dispositivos iOS/iPadOS<!-- 6504155  -->
-Nos dispositivos iOS/iPadOS, pode:
-
-- Nos perfis SSO (**Dispositivos** > Perfis de **Configuração** > **Criar perfil** > **iOS/iPadOS** para **funcionalidades** de plataforma > Dispositivo para perfil > **single sign-on**), definiu o nome principal kerberos como o nome da conta Security Account Manager (SAM) nos perfis SSO. 
-- Nos perfis de extensão da aplicação SSO (**Dispositivos** > Perfis de **Configuração** > **Criar perfis** > **iOS/iPadOS** para as **funcionalidades** do dispositivo para o perfil > extensão de **aplicação de assinatura única),** configure a extensão iOS/iPadOS Microsoft Azure AD com menos cliques utilizando um novo tipo de extensão de aplicação SSO. Pode ativar a extensão da AD Azure para dispositivos partilhados e enviar dados específicos para a extensão.
+Para saber mais sobre extensões de kernel em dispositivos macOS, consulte [Adicionar extensões de kernel macOS](../configuration/kernel-extensions-overview-macos.md).
 
 Aplica-se a:
-- iOS/iPadOS 13.0+
-
-Para obter mais informações sobre a utilização de um único sinal nos dispositivos iOS/iPadOS, consulte a visão geral da [extensão](../configuration/device-features-configure.md#single-sign-on-app-extension) da aplicação de assinatura única e a [lista de definições de inscrição única](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+- macOS 10.15 e mais recente
 
 <!-- ***********************************************-->
 ## <a name="device-enrollment"></a>Inscrição de dispositivos
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Trazer os seus próprios dispositivos pode usar VPN para implementar<!--5015344 -->
-O novo perfil autopiloto **Skip Domain Connectivity Toggle** permite-lhe implementar dispositivos Hybrid Azure AD Join sem acesso à sua rede corporativa utilizando o seu próprio cliente Win32 VPN de terceiros. Para ver o novo alternância, vá ao [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > windows ** > ** Perfis de **implementação** > **Criar perfis** de perfil > **experiência Out-of-box (OOBE)** .
+Esta funcionalidade pode ser adiada.
+
+### <a name="automated-device-sync-interval-down-to-12-hours--3077535---"></a>Intervalo de sincronização automatizada do dispositivo até 12 horas<!--3077535 -->
+Para a Inscrição automática de Dispositivos da Apple, o intervalo de sincronização automatizada entre Intune e Apple Business Manager será reduzido de 24 horas para 12 horas. Para obter mais informações sobre sincronização, consulte [os dispositivos geridos pelo Sync](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
+
+### <a name="autopilot-support-for-hololens-2-devices--6305220--"></a>Suporte de piloto automático para dispositivos Hololens 2<!--6305220-->
+O Windows Autopilot irá suportar dispositivos Hololens 2. Para obter mais informações sobre a utilização do Autopilot em Intune, consulte [Os dispositivos DoWindows em Insintonia utilizando o Windows Autopilot](../enrollment/enrollment-autopilot.md).
+
+### <a name="enrollment-restrictions-will-support-scope-tags--4209550---"></a>Restrições de inscrição vão apoiar etiquetas de âmbito<!--4209550 -->
+Poderá atribuir etiquetas de âmbito às restrições de inscrição. Para isso, vá ao [microsoft Endpoint Manager administrador centro](https://go.microsoft.com/fwlink/?linkid=2109431) > de administração**Dispositivos** > **Restrições** > de inscrição**Criar restrições**de restrição . Crie qualquer tipo de restrição e verá a página scope **tags.**
+
+### <a name="shared-ipads-for-business--6367326---"></a>IPads partilhados para Negócios<!--6367326 -->
+Poderá utilizar intune e Apple Business Manager para configurar facilmente e de forma segura o iPad partilhado para que vários colaboradores possam partilhar dispositivos. O [iPad partilhado](https://developer.apple.com/education/shared-ipad/) da Apple proporciona uma experiência personalizada para vários utilizadores, preservando os dados dos utilizadores. Utilizando um ID apple gerido, os utilizadores podem aceder às suas aplicações, dados e configurações depois de assinarem qualquer iPad partilhado na sua organização. O iPad partilhado funciona com identidades federadas.
+
+Para ver esta funcionalidade, vá ao centro > de [administração do Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**Dispositivos** > **iOS iOS** > **matricula** do programa de**inscrição** > > escolher um token** > **Perfis** > **Criar perfil** > **iOS**. Na página **'Definições** de Gestão', selecione **Inscrever-se sem afinidade** do utilizador e verá a opção **de iPad partilhado.**
+
+**Aplica-se a:** iPadOS 13.4 e posteriormente. Este lançamento adicionou suporte para sessões temporárias com iPad partilhado para que os utilizadores possam aceder a um dispositivo sem um ID da Apple gerido. No início do início, o dispositivo apaga todos os dados do utilizador de modo a que o dispositivo esteja imediatamente pronto para ser utilizado, eliminando a necessidade de uma limpeza do dispositivo. 
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Gestão de dispositivos
@@ -140,23 +149,24 @@ O novo perfil autopiloto **Skip Domain Connectivity Toggle** permite-lhe impleme
 ### <a name="powershell-scripts-support-for-byod-devices---1862833----"></a>Suporte de scripts PowerShell para dispositivos BYOD<!-- 1862833  -->
 Os scripts PowerShell suportarão dispositivos registados em Intune. Para obter mais informações sobre o PowerShell, consulte [scripts PowerShell em dispositivos Windows 10 em Intune](../apps/intune-management-extension.md). Esta funcionalidade não suporta dispositivos que executam a edição home do Windows 10.
 
-### <a name="script-support-for-macos-devices---4280361----"></a>Suporte de script para dispositivos macOS<!-- 4280361  -->
-Poderá adicionar e implementar scripts para dispositivos macOS. Este suporte alarga a sua capacidade de configurar dispositivos macOS para além do que é possível utilizando capacidades nativas de MDM em dispositivos macOS.
-
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>O Log Analytics incluirá o registo de detalhes do dispositivo<!--6014987  -->
-Os registos de detalhes do dispositivo insintonizem os registos disponíveis nos **relatórios** > análise de **registo**. Pode correlacionar detalhes do dispositivo para construir consultas personalizadas e livros de trabalho azure.
+Os registos de detalhes do dispositivo insintonizem os registos disponíveis na análise de **registode** > **relatórios**. Pode correlacionar detalhes do dispositivo para construir consultas personalizadas e livros de trabalho azure.
 
-### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>Notificação push quando o tipo de propriedade do dispositivo é alterado<!-- 5575875  -->
-Poderá configurar uma notificação push para enviar aos utilizadores do Portal do Portal do Android e iOS quando o seu tipo de propriedade do dispositivo tiver sido alterado de Personal para Corporate como cortesia de privacidade. Esta definição pode ser encontrada no Microsoft Endpoint Manager selecionando a **administração do Inquilino** > **Personalização**. Para saber mais sobre como a propriedade do dispositivo afeta os seus utilizadores finais, consulte a [propriedade do dispositivo Change](../enrollment/corporate-identifiers-add.md#change-device-ownership).
+### <a name="new-details-for-the-autopilot-report--5405786---"></a>Novos detalhes para o relatório autopiloto<!--5405786 -->
+Para ver os novos detalhes sobre o estado de instalação de App e Policy, vá ao [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha implementações de Monitor**Monitor** > de **Dispositivos** > **Autopilot**.
+
+### <a name="macos-script-support---6376978----"></a>suporte para script saos<!-- 6376978  -->
+O suporte para o script para macOS está agora geralmente disponível. Além disso, vamos adicionar suporte tanto para scripts atribuídos ao utilizador como para dispositivos macOS que foram matriculados com a Inscrição automática de dispositivos da Apple (anteriormente Programa de Inscrição de Dispositivos). Para mais informações, consulte [Utilize scripts de concha em dispositivos macOS em Intune](../apps/macos-shell-scripts.md).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-<!--
-## Monitor and troubleshoot
--->
+## <a name="monitor-and-troubleshoot"></a>Monitorizar e resolver problemas
+
+### <a name="power-bi-compliance-report-template-v20---636958----"></a>Modelo de relatório de conformidade do POWER BI V2.0<!-- 636958  -->
+Os administradores poderão atualizar a versão do modelo de relatório de conformidade do Power BI de V1.0 a V2.0. O V2.0 incluirá um design melhorado, bem como alterações nos cálculos e dados que estão a ser surgidos como parte do modelo. Para obter informações relacionadas, consulte [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
 <!--
@@ -166,28 +176,41 @@ Poderá configurar uma notificação push para enviar aos utilizadores do Portal
 <!-- ***********************************************-->
 ## <a name="security"></a>Segurança
 
-### <a name="derived-credentials-support-on-android-fully-managed-devices--4839592--"></a>Suporte de credenciais derivadas em dispositivos geridos totalmente pelo Android<!--4839592-->
-Poderá utilizar credenciais derivadas em dispositivos geridos pela Android Enterprise. O apoio será incluído para recuperar uma credencial derivada para Entrust Datacard, Intercede e DISA Purebred. Poderá utilizar uma credencial derivada para autenticação de apps, Wi-Fi, VPN ou s/MIME assinando e/ou encriptação com aplicações que a suportam.
+### <a name="derived-credentials-support-for-disa-purebred-on-android-devices--4839592---"></a>Suporte de credenciais derivadas para DISA Purebred em dispositivos Android<!--4839592 -->
+Você poderá usar *DISA Purebred* como um fornecedor [de credenciais derivado](../protect/derived-credentials.md) em dispositivos Android Enterprise totalmente geridos (**Conectores** > de**administração** > de inquilinos e**credenciais derivadas**de fichas). O apoio será incluído na recuperação de uma credencial derivada para dISA Purebred. Poderá utilizar uma credencial derivada para autenticação de apps, Wi-Fi, VPN ou s/MIME assinando e/ou encriptação com aplicações que a suportam. 
+
+Em abril, intune acrescentou o apoio à *Entrust Datacard* e *intercede* como fornecedores de credenciais derivadas. 
 
 ### <a name="privacy-preferences-settings-for-macos-devices---2934232---"></a>Definições de preferências de privacidade para dispositivos macOS<!-- 2934232 --> 
 Com o lançamento do macOS Catalina 10.15, a Apple adicionou novos melhoramentos de segurança e privacidade. Por defeito, as aplicações e processos não conseguem aceder a dados específicos sem o consentimento do utilizador. Se os utilizadores não fornecerem o consentimento, as aplicações e processos podem não funcionar. A Intune está a adicionar suporte para configurações que permitem aos administradores de TI permitir ou proibir o consentimento de acesso de dados em nome dos utilizadores finais em dispositivos que executam o macOS 10.14 ou posteriormente. Estas definições garantirão que as aplicações e processos continuem a funcionar corretamente e reduzem o número de indicações que os utilizadores finais experimentam.
 
-### <a name="updated-ui-text-and-labels-for-windows-10-endpoint-protection-profile-settings---5983747---"></a>Texto e etiquetas ui atualizados para definições de perfil de proteção de ponto final do Windows 10<!-- 5983747 -->
-Estamos a atualizar o texto para várias definições que configura como perfis de configuração do dispositivo Windows 10 para facilitar a compreensão das definições pretendidas e resultados.
 
-As definições que estamos a atualizar incluem perfis de configuração do dispositivo Windows 10 para:
+### <a name="duplicate-your-policies-in-endpoint-security---5892558-----"></a>Duplique as suas políticas em Endpoint Security<!-- 5892558   -->
+Poderá selecionar uma política que criou no nó de segurança Endpoint do centro de administração do Microsoft Endpoint Manager e, em seguida, duplicar para criar uma cópia.  As políticas que poderá duplicar incluem as que cria para: 
 
-- [Restrições](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) ao dispositivo > Microsoft Defender Antivírus  
-- [Proteção endpoint](../protect/endpoint-protection-windows-10.md) > Microsoft Defender Antivírus
+- Antivírus
+- Encriptação de disco
+- Firewall
+- Deteção e resposta de pontofinal
+- Redução da superfície de ataque
+- Proteção de Conta
 
-As definições que são suportadas com Intune não estão a mudar. Esta é apenas uma atualização para o texto UI no Microsoft Endpoint Management Admin Center.
+A duplicação fará uma cópia da política original, que poderá depois mudar o nome e editar. A cópia não incluirá atribuições do original.
+
+### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Enviar notificações push como uma ação para o incumprimento <!-- 1733150   -->
+Para as plataformas iOS e Android, estamos a adicionar uma nova ação para o incumprimento que enviará uma notificação push de aplicação através da aplicação Portal da Empresa. Os utilizadores podem clicar nas notificações que irão lançar a aplicação Portal da Empresa que depois exibe a razão pela qual não são compatíveis. Os administradores poderão configurar esta nova ação por incumprimento no centro de administração do Microsoft Endpoint Manager, indo para as**políticas** > de conformidade de **dispositivos** > **Criar a política,** e, em seguida, selecionar a *Ação* para enviar uma notificação push app. 
+
+### <a name="new-profile-for-endpoint-security-firewall-policy---5653324-----"></a>Novo perfil para a política de firewall de segurança endpoint<!-- 5653324   -->
+Como pré-visualização, estamos adicionando um perfil adicional para o Windows 10 e mais tarde para a política de Firewall na segurança Endpoint de Intune ( Política de criação de > **firewall** > de**segurança endpoint****>** selecione Windows **10 e mais tarde).** 
+
+Cada instância deste novo perfil suporta até 150 regras personalizadas do *Microsoft Defender Firewall*. O perfil de regras do Microsoft Defender Firewall permite definir regras granulares do Windows Firewall para permitir ou bloquear portas e aplicações no Windows 10.
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Avisos
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 Para mais detalhes sobre os recentes desenvolvimentos, consulte [o que há de novo no Microsoft Intune](whats-new.md).
 

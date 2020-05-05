@@ -11,31 +11,33 @@ A inscrição automática permite que os utilizadores inscrevam os respetivos di
 
 1. Inicie sessão no [portal do Azure](https://portal.azure.com) e selecione **Azure Active Directory**.
 
-   ![Captura de ecrã do portal do Azure](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
+   ![Captura de ecrã a mostrar o portal do Azure](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
 
-2. Selecione **Mobilidade (MDM e MAM)** .
+2. Selecione **Mobilidade (MDM e MAM)**.
 
-   ![Captura de ecrã do portal do Azure](../enrollment/media/windows-enroll/auto-enroll-mdm.png)
+   ![Captura de ecrã a mostrar o portal do Azure](../enrollment/media/windows-enroll/auto-enroll-mdm.png)
 
 3. Selecione **Microsoft Intune**.
 
-   ![Captura de ecrã do portal do Azure](../enrollment/media/windows-enroll/auto-enroll-intune.png)
+   ![Captura de ecrã a mostrar o portal do Azure](../enrollment/media/windows-enroll/auto-enroll-intune.png)
 
-4. Configure **Âmbito do Utilizador de MDM**. Especifique os dispositivos de utilizadores que devem ser geridos pelo Microsoft Intune. Os dispositivos com Windows 10 podem ser automaticamente inscritos na gestão com o Microsoft Intune.
+4. Configure **Âmbito do Utilizador de MDM**. Especifique quais os dispositivos dos utilizadores que devem ser geridos pelo Microsoft Intune. Os dispositivos com Windows 10 podem ser automaticamente inscritos na gestão com o Microsoft Intune.
 
    - **Nenhum** – Inscrição automática de MDM desativada
    - **Alguns** – Selecione os **Grupos** que podem inscrever automaticamente os dispositivos Windows 10
    - **Todos** – Todos os utilizadores podem inscrever automaticamente os dispositivos Windows 10
 
       > [!IMPORTANT]
-      > Para dispositivos BYOD, o escopo de usuário MAM terá precedência se o escopo do usuário de MAM e o escopo do usuário do MDM (registro automático do MDM) estiverem habilitados para todos os usuários (ou os mesmos grupos de usuários). O dispositivo usará as políticas de WIP (proteção de informações do Windows) (se você as configurou) em vez de ser registrado em MDM.
+      > Para os dispositivos ByOD do Windows, o âmbito do utilizador MAM tem precedência se tanto o âmbito do utilizador MAM como o âmbito do utilizador do MDM (inscrição automática de MDM) estiverem ativados para todos os utilizadores (ou os mesmos grupos de utilizadores). O dispositivo não será inscrito em MDM e as políticas de Proteção de Informação do Windows (WIP) serão aplicadas se os tiver configurado.
       >
-      > Para dispositivos corporativos, o escopo de usuário do MDM terá precedência se ambos os escopos estiverem habilitados. Os dispositivos obtêm MDM registrado.
+      > Se a sua intenção é permitir a inscrição automática de dispositivos BYOD do Windows para um MDM: configurar o âmbito do utilizador do MDM para **Todos** (ou **Alguns**, e especificar um grupo) e configurar o âmbito do utilizador MAM para **Nenhum** (ou **Alguns**, e especificar um grupo - garantindo que os utilizadores não são membros de um grupo direcionado tanto pelos âmbitos de utilizadores do MDM como do MAM).
+      >
+      >Para [dispositivos corporativos,](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices)o âmbito do utilizador do MDM tem precedência se os âmbitos de utilizador do MDM e da MAM estiverem ativados. O dispositivo será automaticamente inscrito no MDM configurado.
 
    > [!NOTE]
-   > O escopo de usuário do MDM deve ser definido como um grupo do Azure AD que contém objetos de usuário.
+   > O âmbito do utilizador do MDM deve ser definido para um grupo De AD Azure que contenha objetos de utilizador.
 
-   ![Captura de ecrã do portal do Azure](../enrollment/media/windows-enroll/auto-enroll-scope.png)
+   ![Captura de ecrã a mostrar o portal do Azure](../enrollment/media/windows-enroll/auto-enroll-scope.png)
 
 5. Utilize os valores predefinidos para os seguintes URLs:
     - **URL dos Termos de utilização de MDM**
@@ -44,4 +46,4 @@ A inscrição automática permite que os utilizadores inscrevam os respetivos di
 
 6. Selecione **Guardar**.
 
-Por predefinição, a autenticação de dois fatores não está ativada para o serviço. No entanto, é recomendada a autenticação de dois fatores ao registar um dispositivo. Para ativar a autenticação de dois fatores, configure um fornecedor de autenticação de dois fatores no AD e configure as contas de utilizador para a autenticação multifator. Veja [Introdução ao Servidor Multi-Factor Authentication do Microsoft Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Por predefinição, a autenticação de dois fatores não está ativada para o serviço. No entanto, recomenda-se a autenticação de dois fatores aquando do registo de um dispositivo. Para ativar a autenticação de dois fatores, configure um fornecedor de autenticação de dois fatores no AD e configure as contas de utilizador para a autenticação multifator. Veja [Introdução ao Servidor Multi-Factor Authentication do Microsoft Azure](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

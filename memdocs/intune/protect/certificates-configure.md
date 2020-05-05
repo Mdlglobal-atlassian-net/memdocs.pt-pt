@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322803"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587299"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utilize certificados para autenticação no Microsoft Intune
 
@@ -30,7 +30,7 @@ Utilize certificados com Intune para autenticar os seus utilizadores a aplicaç�
 
 ## <a name="intune-supported-certificates-and-usage"></a>Certificados e utilização suportados insintonizados
 
-| Type              | Autenticação | Assinatura S/MIME | Encriptação S/MIME  |
+| Tipo              | Autenticação | Assinatura S/MIME | Encriptação S/MIME  |
 |--|--|--|--|
 | Certificado importado de criptografia de chaves públicas (PKCS) |  | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png)|
 | PKCS#12 (ou PFX)    | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) |  |
@@ -77,7 +77,7 @@ Quando utiliza uma Autoridade de Certificação de Terceiros (não Microsoft) (C
 
 ## <a name="supported-platforms-and-certificate-profiles"></a>Plataformas suportadas e perfis de certificados
 
-| Platform              | Perfil de certificado fidedigno | Perfil de certificado PKCS | Perfil de certificado SCEP | Perfil de certificado importado pKCS  |
+| Plataforma              | Perfil de certificado fidedigno | Perfil de certificado PKCS | Perfil de certificado SCEP | Perfil de certificado importado pKCS  |
 |--|--|--|--|---|
 | Administrador de dispositivos Android | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png)|  ![Suportado](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> - Totalmente gerido (Proprietário do dispositivo)   | ![Suportado](./media/certificates-configure/green-check.png) |   | ![Suportado](./media/certificates-configure/green-check.png) |   |
@@ -99,7 +99,9 @@ Utilizará este ficheiro .cer quando criar perfis de [certificado fidedignos](#c
 
 ## <a name="create-trusted-certificate-profiles"></a>Criar perfis de certificado fidedignos
 
-Crie um perfil de certificado fidedigno antes de poder criar um perfil de certificado importado SCEP, PKCS ou PKCS. A implementação de um perfil de certificado fidedigno garante que cada dispositivo reconhece a legitimidade do seu CA. Os perfis de certificado SCEP referem diretamente um perfil de certificado fidedigno. Os perfis de certificadoPKCS não referenciam diretamente o perfil de certificado fidedigno, mas referenciam diretamente o servidor que acolhe o seu CA. Os perfis de certificados importados do PKCS não referenciam diretamente o perfil de certificado fidedigno, mas podem utilizá-lo no dispositivo. A implementação de um perfil de certificado fidedigno para dispositivos garante que esta confiança é estabelecida. Quando um dispositivo não confia na raiz ca, a política de perfil de certificado SCEP ou PKCS falhará.
+Crie e implemente um perfil de certificado fidedigno antes de criar um perfil de certificado importado SCEP, PKCS ou PKCS. A implementação de um perfil de certificado fidedigno para os mesmos grupos que recebem os outros tipos de perfil de certificado garante que cada dispositivo pode reconhecer a legitimidade do seu CA. Isto inclui perfis como os de VPN, Wi-Fi e e-mail.
+
+Os perfis de certificado SCEP referem diretamente um perfil de certificado fidedigno. Os perfis de certificadoPKCS não referenciam diretamente o perfil de certificado fidedigno, mas referenciam diretamente o servidor que acolhe o seu CA. Os perfis de certificados importados do PKCS não referenciam diretamente o perfil de certificado fidedigno, mas podem utilizá-lo no dispositivo. A implementação de um perfil de certificado fidedigno para dispositivos garante que esta confiança é estabelecida. Quando um dispositivo não confia na raiz ca, a política de perfil de certificado SCEP ou PKCS falhará.
 
 Crie um perfil de certificado fidedigno separado para cada plataforma de dispositivo que pretenda suportar, tal como fará para perfis de certificados importados sCEP, PKCS e PKCS.
 
@@ -107,7 +109,7 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione e vá aos perfis de **configuração** de **dispositivos** >  > **Criar perfil**.
+2. Selecione e vá aos perfis de**configuração** > de **dispositivos** > **Criar perfil**.
 
    ![Navegue para Intune e crie um novo perfil para um certificado de confiança](./media/certificates-configure/certificates-configure-profile-new.png)
 
@@ -119,7 +121,7 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 5. No Básico, insira as **seguintes**propriedades:
    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é *perfil de certificado fidedigno para toda a empresa*.
-   - **Descrição:** introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
+   - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 
@@ -135,7 +137,7 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 8. Selecione **Seguinte**.
 
-9. Nas **etiquetas scope** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment`. Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
    Selecione **Seguinte**.
 
@@ -155,10 +157,10 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 - [Use S/MIME to sign and encrypt emails (Utilizar S/MIME para assinar e encriptar e-mails)](certificates-s-mime-encryption-sign.md)  
 - [Utilize autoridade de certificação de terceiros](certificate-authority-add-scep-overview.md)  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Crie perfis de certificados importados SCEP, PKCS ou PKCS para cada plataforma que pretenda utilizar. Para continuar, consulte os seguintes artigos:
 
 - [Configure infraestrutura para apoiar certificados SCEP com Intune](certificates-scep-configure.md)  
 - [Configurar e gerir certificados PKCS com o Intune](certficates-pfx-configure.md)  
-- [Criar um perfil de certificado importado PKCS](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Criar um perfil de certificado PKCS importado](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)

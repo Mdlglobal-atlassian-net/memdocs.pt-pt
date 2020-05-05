@@ -5,34 +5,58 @@ description: Definições de base de segurança suportadas pela Intune para geri
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551756"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693402"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Definições de base de proteção de ameaças avançadas para Intune
 
 Ver as definições de base de proteção de ameaças avançadas do Microsoft Defender que são suportadas pela Microsoft Intune. As predefinições de base de proteção de ameaças avançadas (ATP) representam a configuração recomendada para ATP, e podem não corresponder às predefinições de base para outras linhas de segurança.
 
-Os detalhes deste artigo aplicam-se à versão 3 da linha de base ATP do Microsoft Defender, que foi lançada a 1 de março de 2020.
+::: zone pivot="atp-april-2020"
+
+Os detalhes deste artigo aplicam-se à versão 4 da linha de base ATP do Microsoft Defender, que foi lançada a 21 de abril de 2020. Para entender o que mudou com esta versão da linha de base de versões anteriores, use a ação [compare baselines](../protect/security-baselines.md#compare-baseline-versions) que está disponível ao visualizar o painel *veras versões* para esta linha de base.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+Os detalhes deste artigo aplicam-se à versão 3 da linha de base ATP do Microsoft Defender, que foi lançada a 1 de março de 2020. Para entender o que mudou com esta versão da linha de base de versões anteriores, use a ação [compare baselines](../protect/security-baselines.md#compare-baseline-versions) que está disponível ao visualizar o painel *veras versões* para esta linha de base.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 A linha de base de proteção contra ameaças avançada do Microsoft Defender está disponível quando o seu ambiente satisfaz os pré-requisitos para a utilização de [proteção de ameaças avançadas do Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
 Esta linha de base está otimizada para dispositivos físicos e não é atualmente recomendada para utilização em máquinas virtuais (VMs) ou pontos finais VDI. Certas definições de base podem ter impacto em sessões interativas remotas em ambientes virtualizados. Para mais informações, consulte Aumentar a conformidade com a linha de [segurança ATP do Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) na documentação do Windows.
+
 
 ## <a name="application-guard"></a>Guarda de Aplicações
 
@@ -43,7 +67,7 @@ Ao utilizar o Microsoft Edge, o Microsoft Defender Application Guard protege o s
 - **Ligue a Guarda de Aplicação para Edge (Opções)**  
   CSP: [Definições/Permitirguarda de AplicaçõesdoWindowsDefender](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  - **Ativado para Edge** *(predefinido)* - O Protetor de Aplicações abre sites não aprovados num recipiente de navegação virtualizado Hyper-V.
+  - **Ativado para Edge** *(predefinido)*- O Protetor de Aplicações abre sites não aprovados num recipiente de navegação virtualizado Hyper-V.
   - **Não configurado** - Qualquer site (confiável e não confiável) abre no dispositivo e não num recipiente virtualizado.  
   
   Quando definido para *ativar o Edge,* pode configurar *o bloquear conteúdos externos a partir de sites não aprovados pela empresa* e comportamento de *clipboard*.
@@ -51,7 +75,7 @@ Ao utilizar o Microsoft Edge, o Microsoft Defender Application Guard protege o s
   - **Bloquear conteúdo externo de sites não aprovados pela empresa**  
     CSP: [Definições/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-    - **Sim** *(padrão)* - Bloqueie o conteúdo de sites não aprovados a partir do carregamento.
+    - **Sim** *(padrão)*- Bloqueie o conteúdo de sites não aprovados a partir do carregamento.
     - **Não configurado** - Sites não empresariais podem abrir no dispositivo
 
   - **Comportamento de clipboard**  
@@ -84,7 +108,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
   CSP: [RequirerStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
   Esta definição aplica-se apenas aos dispositivos Windows Mobile e Mobile Enterprise SKU.
-  - **Sim** *(padrão)* - A encriptação nos cartões de armazenamento é necessária para dispositivos móveis.
+  - **Sim** *(padrão)*- A encriptação nos cartões de armazenamento é necessária para dispositivos móveis.
   - **Não configurado** - A definição retorna ao padrão DE SO, que não é para exigir encriptação do cartão de armazenamento.
 
 - **Ativar encriptação completa do disco para OS e unidades de dados fixas**  
@@ -94,7 +118,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
   
   Para aplicar esta política a um disco já encriptado, desencriptar a unidade e reaplicar a política de MDM. O predefinido do Windows não é necessário para não exigir encriptação de unidade BitLocker, no entanto, no Azure AD Join e microsoft Account (MSA) a encriptação automática de login pode aplicar-se permitindo o BitLocker na encriptação xTS-AES de 128 bits.
 
-  - **Sim** *(padrão)* - Impor a utilização do BitLocker.
+  - **Sim** *(padrão)*- Impor a utilização do BitLocker.
   - **Não configurado** - Não ocorre nenhuma aplicação bitLocker.
 
 - **Política de condução do sistema BitLocker**  
@@ -133,7 +157,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
     - **Sim** - O Windows não permitirá que quaisquer dados sejam escritos a unidades fixas que não estejam protegidas pelo BitLocker. Se uma unidade fixa não for encriptada, o utilizador terá de completar o assistente de configuração BitLocker para a unidade antes de ser concedido o acesso à escrita.
 
   - **Configurar o método de encriptação para unidades de dados fixas**  
-    CSP: [EncriptaçãoMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncriptaçãoMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Esta definição está disponível quando a política de *unidade fixa BitLocker* está definida para *configurar*.
 
     Configure o método de encriptação e a força da cifra para discos de discos de discos fixos de unidades de dados. *XTS- AES 128-bit* é o método de encriptação padrão do Windows e o valor recomendado.
@@ -176,7 +200,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
 - **Requerer smartScreen para microsoft edge**  
   CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
-  - **Sim** *(padrão)* - Utilize o SmartScreen para proteger os utilizadores de potenciais esquemas de phishing e software malicioso.
+  - **Sim** *(padrão)*- Utilize o SmartScreen para proteger os utilizadores de potenciais esquemas de phishing e software malicioso.
   - **Não configurado**
 
 - **Bloqueie o acesso malicioso ao site**  
@@ -191,7 +215,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
   - **Sim** *(padrão*) - Bloqueie os utilizadores de ignorar os avisos do Filtro SmartScreen do Microsoft Defender e bloqueá-los de descarregar ficheiros não verificados.
   - **Não configurado**
 
-## <a name="data-protection"></a>Proteção de dados
+## <a name="data-protection"></a>Proteção de Dados
 
 - **Bloquear o acesso à memória direta**  
   CSP: Proteção de [Dados/PermitirAcesso de Memória Direta](https://go.microsoft.com/fwlink/?linkid=2067031)  
@@ -209,19 +233,19 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
   A Credential Guard utiliza o Windows Hypervisor para fornecer proteções, o que requer proteções Secure Boot e DMA para funcionar, o que requer que os requisitos de hardware sejam cumpridos.
 
   - **Não configurado** - Desative a utilização da Guarda Credencial, que é a falha do Windows.
-  - **Ativar com o bloqueio UEFI** *(predefinido)* - Ativar a Guarda Credencial e não permitir que seja desativada remotamente, uma vez que a configuração do UEFI deve ser manualmente desobstruída.
+  - **Ativar com o bloqueio UEFI** *(predefinido)*- Ativar a Guarda Credencial e não permitir que seja desativada remotamente, uma vez que a configuração do UEFI deve ser manualmente desobstruída.
   - **Ativar sem bloqueio UEFI** - Ativar a Guarda Credencial e permitir que seja desligada sem acesso físico à máquina.
 
 ## <a name="device-installation"></a>Instalação de Dispositivos
 
 - **Instalação de dispositivos de hardware por identificadores de dispositivos**  
-  [Instalação/Prevenção de Instalações de Dispositivos DeCorrespondênciaIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  [Instalação/Prevenção de Instalações de Dispositivos DeCorrespondênciaIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Esta definição de política permite especificar uma lista de IDs de hardware plug e play e IDs compatíveis para dispositivos que o Windows está impedido de instalar. Esta definição de política tem precedência sobre qualquer outra definição de política que permita ao Windows instalar um dispositivo.  Se ativar esta definição de política num servidor de ambiente de trabalho remoto, a definição de política afeta a reorientação dos dispositivos especificados de um cliente de ambiente de trabalho remoto para o servidor de ambiente de trabalho remoto.
 
   - **Não configurado**
   - Permitir a instalação de dispositivos de **hardware** - Os dispositivos podem ser instalados e atualizados conforme permitido ou impedido por outras definições de política.
-  - Bloquear a **instalação** do dispositivo de hardware *(predefinido)* - O Windows está impedido de instalar um dispositivo cujo ID de hardware ou ID compatível aparece numa lista que define.
+  - Bloquear a **instalação** do dispositivo de hardware *(predefinido)*- O Windows está impedido de instalar um dispositivo cujo ID de hardware ou ID compatível aparece numa lista que define.
 
   Quando definido para bloquear a instalação do dispositivo de *hardware,* pode configurar Remover dispositivos de *hardware correspondentes* e identificadores de dispositivos de *hardware que estão bloqueados*.
 
@@ -269,7 +293,7 @@ Para mais informações, as definições da [Política do Grupo BitLocker](https
   
   Esta política só entra em vigor quando a Kernel DMA Protection é suportada e ativada pelo firmware do sistema. Kernel DMA Protection é uma funcionalidade de plataforma que deve ser suportada pelo sistema no momento da fabricação. Para verificar se o sistema suporta a Proteção Kernel DMA, verifique o campo de proteção Kernel DMA na página sumária de MSINFO32.exe.
 
-  - **Não configurado** - *(padrão)*
+  - **Não configurado** -*(padrão)*
   - **Bloqueie tudo**
   - **Permitir que todos**
 
@@ -324,18 +348,18 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   Especifique como a verificação da lista de revogação do certificado (CRL) é executada.  
 
-  - **Não configurado** *(predefinido)* - A verificação de CRL é desativada.
+  - **Não configurado** *(predefinido)*- A verificação de CRL é desativada.
   - **Nenhum**
   - **Tentativa**
-  - **Exigir**
+  - **Requerer**
 
 - **Fila de pacotes**  
   CSP: [Mdmstore/Global/EnablePacketqueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
   Especifique como a escala para o software no lado de receção está ativada para a receção encriptada e texto claro para a frente para o cenário de gateway do túnel IPsec. Esta definição garante que a encomenda do pacote seja preservada.
 
-  - **Não configurado** *(predefinido)* - O pacote de filas devolve ao padrão do cliente, que está desativado.
-  - **Deficientes**
+  - **Não configurado** *(predefinido)*- O pacote de filas devolve ao padrão do cliente, que está desativado.
+  - **Desativado**
   - **Fila Entrada**
   - **Fila saída**
   - **Fila Ambos**
@@ -573,7 +597,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   Esta regra ASR é controlada através do seguinte GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
   - **Não configurado** - O predefinido do Windows é restaurado, é para não bloquear a criação de processos infantis.
-  - **Definido pelo utilizador**
+  - **Utilizador definido**
   - **Ativar** (*padrão*) - As aplicações de comunicação do escritório estão bloqueadas de criar processos infantis.
   - **Modo** de auditoria - Os eventos windows são levantados em vez de bloquear processos infantis.
 
@@ -581,20 +605,20 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Reduzir superfícies de ataque com regras de redução da superfície de ataque](https://go.microsoft.com/fwlink/?linkid=853979)  
 
   - **Não configurado** - O predefinido do Windows é restaurado, é para não bloquear a criação de processos infantis.
-  - **Definido pelo utilizador**
+  - **Utilizador definido**
   - **Ativar** *(predefinido*) - O Adobe Reader está impedido de criar processos infantis.
   - **Modo** de auditoria - Os eventos windows são levantados em vez de bloquear processos infantis.
 
 - **Digitalizar mensagens de e-mail de entrada**  
   CSP: [Defender/PermitirEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
 
-  - **Sim** *(predefinido)* - Caixas de correio eletrónico e ficheiros de correio eletrónico como PST, DBX, MNX, MIME e BINHEX são digitalizados.
+  - **Sim** *(predefinido)*- Caixas de correio eletrónico e ficheiros de correio eletrónico como PST, DBX, MNX, MIME e BINHEX são digitalizados.
   - **Não configurado** - A definição retorna ao padrão do cliente de ficheiros de e-mail não sendo digitalizados.
 
 - **Ativar a proteção em tempo real**  
   CSP: [Monitorização de Tempo Real/Defensor](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
 
-  - **Sim** (*predefinido)* - A monitorização em tempo real é executada e o utilizador não pode desativá-lo.
+  - **Sim** (*predefinido)*- A monitorização em tempo real é executada e o utilizador não pode desativá-lo.
   - **Não configurado** - A definição é devolvida ao padrão do cliente, que está ligado, mas o utilizador pode troco.pode mudá-la. Para desativar a monitorização em tempo real, utilize um URI personalizado.
 
 - **Número de dias (0-90) para manter malware em quarentena**  
@@ -615,26 +639,41 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Scan mapeado unidades de rede durante uma varredura completa**  
   CSP: [Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
 
-  - **Sim** *(padrão)* - Durante uma varredura completa, as unidades de rede mapeadas estão incluídas.
+  - **Sim** *(padrão)*- Durante uma varredura completa, as unidades de rede mapeadas estão incluídas.
   - **Não configurado** - O cliente regressa ao seu padrão, que desativa a digitalização em unidades de rede mapeadas.
 
 - **Ativar a proteção da rede**  
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
   
-  - **Sim** *(padrão)* - Bloqueie o tráfego malicioso detetado por assinaturas no Sistema de Inspeção de Rede (NIS).
+  - **Sim** *(padrão)*- Bloqueie o tráfego malicioso detetado por assinaturas no Sistema de Inspeção de Rede (NIS).
   - **Não configurado**
 
 - **Scaneie todos os ficheiros e anexos descarregados**  
   CSP: [Defender/AllowioAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
 
-  - **Sim** *(predefinido)* - Todos os ficheiros e anexos descarregados são digitalizados. A definição é devolvida ao padrão do cliente, que está ligado, mas o utilizador pode troco. Para desativar esta definição, utilize um URI personalizado.
+  - **Sim** *(predefinido)*- Todos os ficheiros e anexos descarregados são digitalizados. A definição é devolvida ao padrão do cliente, que está ligado, mas o utilizador pode troco. Para desativar esta definição, utilize um URI personalizado.
   - **Não configurado** - A definição é devolvida ao padrão do cliente, que está ligado, mas o utilizador pode troco.pode mudá-la. Para desativar esta definição, utilize um URI personalizado.
+
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Bloquear a proteção de acesso**  
+  CSP: [Proteção de Acessos defensor/permitir](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Sim**
+  - **Não configurado** *(predefinido)*
+
+::: zone-end
+::: zone pivot="atp-march-2020"
 
 - **Bloquear a proteção de acesso**  
   CSP: [Proteção de Acessos defensor/permitir](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Sim** *(padrão)*
   - **Não configurado**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Scan scripts de navegador**  
   CSP: [Defender/PermitirScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -645,7 +684,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Bloqueie o acesso dos utilizadores à aplicação Microsoft Defender**  
   CSP: [Defender/Permitir acesso userui](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
 
-  - **Sim** *(padrão)* - A Interface de Utilizador do Microsoft Defender (UI) é inacessível e as notificações são surpreendidas
+  - **Sim** *(padrão)*- A Interface de Utilizador do Microsoft Defender (UI) é inacessível e as notificações são surpreendidas
   - **Não configurado** Quando definido para Sim, a Interface de Utilizador do Windows Defender (UI) será inacessível e as notificações ficarão surpreendidas. Quando definido para Não configurado, a definição voltará ao padrão do cliente em que UI e notificações serão permitidas
 
 - **Máximo permitido uso de CPU (0-100 por cento) por digitalização**  
@@ -656,10 +695,10 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Tipo de digitalização**  
   CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
 
-  - **Definido pelo utilizador**
-  - **Deficientes**
+  - **Utilizador definido**
+  - **Desativado**
   - **Digitalização rápida** *(padrão)*
-  - **Digitalização completa**
+  - **Análise completa**
 
 - **Insira quantas vezes (0-24 horas) para verificar se há atualizações de inteligência de segurança**  
   CSP: [Intervalo de atualização de defender/assinatura](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
@@ -690,13 +729,13 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Analisar ficheiros de arquivo**  
   CSP: [Defender/PermitirArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
 
-  - **Sim** *(padrão)* - A digitalização de ficheiros de arquivo, tais como ficheiros ZIP ou CAB, é executada.
+  - **Sim** *(padrão)*- A digitalização de ficheiros de arquivo, tais como ficheiros ZIP ou CAB, é executada.
   - **Não configurado** - A definição será devolvida ao padrão do cliente, que é digitalizar ficheiros arquivados, no entanto o utilizador pode desativar a digitalização.
 
 - **Ativar a monitorização do comportamento**  
   CSP: [Monitorização de Comportamento de Defesa/Permitir](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
 
-  - **Sim** (*predefinido)* - A monitorização do comportamento é executada e o utilizador não pode desativá-lo.
+  - **Sim** (*predefinido)*- A monitorização do comportamento é executada e o utilizador não pode desativá-lo.
   - **Não configurado** - A definição é devolvida ao padrão do cliente, que está ligado, mas o utilizador pode troco.pode mudá-la. Para desativar a monitorização em tempo real, utilize um URI personalizado.
   
 - **Digitalizar unidades amovíveis durante a varredura completa**  
@@ -708,7 +747,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Scan ficheiros de rede**  
   CSP: [Defender/Permitirficheiros de Redes de Digitalização](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
 
-  - **Sim** *(padrão)* - O Microsoft Defender digitaliza ficheiros de rede.
+  - **Sim** *(padrão)*- O Microsoft Defender digitaliza ficheiros de rede.
   - **Não configurado** - O cliente retorna ao seu padrão, o que desativa a digitalização de ficheiros de rede.
   
 - **Defender ação de aplicação potencialmente indesejada**  
@@ -724,7 +763,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   Por padrão, o Defender nos dispositivos de desktop do Windows 10 envia informações à Microsoft sobre quaisquer problemas que encontre. A Microsoft analisa essa informação para saber mais sobre problemas que afetam o seu e outros clientes, para oferecer soluções melhoradas.
 
-  - **Sim** (*padrão)* - A proteção entregue em nuvem é ligada.  Os utilizadores do dispositivo não podem alterar esta definição.
+  - **Sim** (*padrão)*- A proteção entregue em nuvem é ligada.  Os utilizadores do dispositivo não podem alterar esta definição.
   - **Não configurado** - A definição é restaurada à defeito do sistema.
 
 - **Bloqueio de pedidos de injeção de código em outros processos**  
@@ -755,9 +794,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
   - **Não configurado** - A definição volta à predefinição do Windows, que está desativada.
-  - **Definido pelo utilizador**
+  - **Utilizador definido**
   - **Ativar** - A proteção da rede está ativada para todos os utilizadores do sistema.
-  - **Modo** de auditoria *(predefinido)* - Os utilizadores não estão bloqueados de domínios perigosos e os eventos windows são levantados.
+  - **Modo** de auditoria *(predefinido)*- Os utilizadores não estão bloqueados de domínios perigosos e os eventos windows são levantados.
 
 - **Bloqueie processos não confiáveis e não assinados que vão a partir de USB**  
   [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=874502)
@@ -772,8 +811,8 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
   Esta regra ASR é controlada através do seguinte GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Não configurado** - A definição volta ao predefinido do Windows, que está desligado.
-  - **Definido pelo utilizador**
-  - **Ativar** (*padrão)* - As tentativas de roubar credenciais através de lsass.exe estão bloqueadas.
+  - **Utilizador definido**
+  - **Ativar** (*padrão)*- As tentativas de roubar credenciais através de lsass.exe estão bloqueadas.
   - **Modo** de auditoria - Os utilizadores não estão bloqueados de domínios perigosos e os eventos windows são levantados.
 
 - **Bloquear o download de conteúdo executável a partir de clientes de e-mail e webmail**  
@@ -815,13 +854,13 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Sim** *(predefinido*) - Evite que os utilizadores epretem alterações na área de definições de proteção de exploração no Microsoft Defender Security Center.
   - **Não configurado** - Os utilizadores locais podem fazer alterações na área de definições de proteção de exploração.
 
-## <a name="smart-screen"></a>Smart Screen
+## <a name="smart-screen"></a>Tela Inteligente
 
 - **Bloqueie os utilizadores de ignorar os avisos do SmartScreen**  
   CSP: [SmartScreen/PreventoverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
    Esta definição requer a definição 'Impor o SmartScreen para aplicações e ficheiros'.
-  - **Sim** (*predefinido)* - O SmartScreen não apresentará uma opção para o utilizador ignorar o aviso e executar a aplicação. O aviso será apresentado, mas o utilizador poderá contorná-lo.
+  - **Sim** (*predefinido)*- O SmartScreen não apresentará uma opção para o utilizador ignorar o aviso e executar a aplicação. O aviso será apresentado, mas o utilizador poderá contorná-lo.
   - **Não configurado** - Devolve a definição à predefinição do Windows, o que permite que o utilizador se sobressea.
 
 - **Exigir aplicações apenas da loja**  
@@ -835,7 +874,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Sim** *(predefinido*) - Impor a utilização do SmartScreen para todos os utilizadores.
   - **Não configurado** - Devolva a definição para o predefinido do Windows, que é para ativar o SmartScreen, no entanto os utilizadores podem alterar esta definição. Para desativar o SmartScreen, utilize um URI personalizado.
 
-## <a name="windows-hello-for-business"></a>Windows Hello para Empresas
+## <a name="windows-hello-for-business"></a>Windows Hello para empresas
 
 Para mais informações, consulte [o PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) na documentação do Windows.
 
@@ -844,28 +883,30 @@ Para mais informações, consulte [o PassportForWork CSP](https://docs.microsoft
    O Windows Hello for Business é um método alternativo para iniciar sessão no Windows substituindo palavras-passe, Smart Cards e Cartões Inteligentes Virtuais.
 
   - **Não configurado** - Dispositivos de fornecimento de dispositivos Windows Hello for Business, que é o predefinido do Windows.
-  - **Desativado** *(predefinido)* - Fornecimento de dispositivos Windows Hello for Business.
+  - **Desativado** *(predefinido)*- Fornecimento de dispositivos Windows Hello for Business.
   - **Ativado** - Os dispositivos não disponibilizam o Windows Hello for Business para qualquer utilizador.
 
   Quando definido para *desativar,* pode configurar as seguintes definições:
 
-  - **Letras minúsculas em PIN**  
+  - **Letras em minúsculas no PIN**  
     - **Não permitido**
     - **Necessário**
     - **Permitido** *(padrão)*
 
-  - **Caracteres especiais em PIN**
+  - **Carateres especiais no PIN**
     - **Não permitido**
     - **Necessário**
     - **Permitido** *(padrão)*
 
-  - **Letras maiúsculas em PIN**
+  - **Letras em maiúsculas no PIN**
     - **Não permitido**
     - **Necessário**
     - **Permitido** *(padrão)*
 
-## <a name="next-steps"></a>Próximos passos
+::: zone-end
+
+## <a name="next-steps"></a>Passos seguintes
 
 - [Conheça as linhas de base de segurança](security-baselines.md)
 - [Evitar conflitos](security-baselines.md#avoid-conflicts)
-- [Políticas e perfis de resolução de problemas em Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Resolução de problemas de políticas e perfis no Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

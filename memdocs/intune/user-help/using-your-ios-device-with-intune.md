@@ -19,19 +19,19 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 07d0d807a9d675d7eef0a3910a50d547dc6be872
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 764c04e130f206e77a99e557d0397a329865c2ab
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324169"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605087"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Utilizar o dispositivo iOS com o Portal da Empresa do Intune
 Este artigo apresenta uma lista de tarefas e informações específicas do Portal da Empresa para iOS. Utilize-o para ajudar a resolver problemas e gerir o seu dispositivo iOS. Clique em qualquer ligação para ver mais detalhes, passos e capturas de ecrã.
 
 ## <a name="supported-versions"></a>Versões suportadas
 
-O Portal da Empresa para iOS suporta atualmente o iOS 10.0 e posterior.  
+O Portal da Empresa para o iOS suporta atualmente o iOS 11.0 e posteriormente.  
 
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Inscrever-se no Intune e instalar o Portal da Empresa
@@ -45,7 +45,7 @@ O Portal da Empresa para iOS suporta atualmente o iOS 10.0 e posterior.
 - [Utilizar aplicações geridas no dispositivo](use-managed-apps-on-your-device-ios.md)
 - [Definir ou alterar o código de acesso](set-or-change-your-passcode-ios.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
-- [Repor (apagar) o dispositivo perdido ou roubado](reset-erase-your-device-cpwebsite.md)
+- [Repor (apagar) o seu dispositivo perdido ou roubado](reset-erase-your-device-cpwebsite.md)
 - [Desativar a recolha de dados da Microsoft](turn-off-microsoft-usage-data-collection-ios.md)
 - [Anular a inscrição do dispositivo no Intune](unenroll-your-device-from-intune-ios.md)
 - [O que acontece se anular a inscrição do dispositivo no Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)

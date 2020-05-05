@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: MT
+ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329617"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729327"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorizar as políticas de conformidade do Dispositivo do Intune
 
@@ -38,7 +38,7 @@ Abra o **dashboard de conformidade do Dispositivo do Intune**:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **visão geral** > separador de **conformidade.**
+2. Selecione o separador de estado de**conformidade** de**visão geral** > dos **dispositivos.** > 
 
 > [!IMPORTANT]
 > Os dispositivos têm de ser inscritos no Intune para receberem políticas de conformidade do dispositivo.
@@ -68,7 +68,7 @@ Descrições dos diferentes estados de política de conformidade do dispositivo:
 
 - **Conforme**: o dispositivo aplicou com êxito uma ou mais definições de política de conformidade do dispositivo.
 
-- **Período de tolerância**: o dispositivo é visado com uma ou mais definições de política de conformidade do dispositivo. Porém, o utilizador ainda não aplicou as políticas. Isto significa que o dispositivo não está em conformidade embora se encontre no período de tolerância definido pelo administrador.
+- **Período de tolerância**: o dispositivo é visado com uma ou mais definições de política de conformidade do dispositivo. Mas o utilizador ainda não aplicou as apólices. Isto significa que o dispositivo não é compatível, mas está no período de graça definido pelo administrador.
 
   - Saiba mais sobre [Ações para dispositivos não conformes](actions-for-noncompliance.md).
 
@@ -81,7 +81,7 @@ Descrições dos diferentes estados de política de conformidade do dispositivo:
     - Quiosque Android ou dispositivos android enterprise dedicados
   - Dispositivos matriculados com uma conta de gestor de inscrição de dispositivos (DEM)
 
-- **Não conforme**: o dispositivo não aplicou com êxito uma ou mais definições de política de conformidade do dispositivo ou o utilizador não respeitou as políticas.
+- **Não conforme**: o dispositivo não aplicou com êxito uma ou mais definições de política de conformidade do dispositivo Ou, o utilizador não cumpriu as políticas.
 
 - **Dispositivo não sincronizado:** o dispositivo não comunicou o seu estado de política de conformidade do dispositivo devido a um dos motivos seguintes:
 
@@ -99,9 +99,14 @@ No gráfico **Estado de conformidade do dispositivo**, selecione um estado. Por 
 ![Selecionar o estado não conforme](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
 Esta ação abre a janela de conformidade do **Dispositivo** e exibe dispositivos num gráfico de **estado do Dispositivo.** O gráfico mostra-lhe mais detalhes sobre os dispositivos nesse estado, incluindo plataforma do sistema operativo, última data de check-in, e muito mais.
-![imagem do Dashboard mostra mais detalhes sobre o dispositivo nesse estado específico](./media/compliance-policy-monitor/drill-down-details.png)
+![Imagem do dashboard que mostra mais detalhes sobre o dispositivo nesse estado específico](./media/compliance-policy-monitor/drill-down-details.png)
 
-Se quiser ver todos os dispositivos pertencentes a um utilizador específico, também pode filtrar o relatório de gráfico ao escrever o e-mail do utilizador.
+Se quiser ver todos os dispositivos de um utilizador específico, também pode filtrar o relatório da tabela digitando o e-mail do utilizador.
+
+> [!TIP]
+> Se um utilizador não iniciar sessão no dispositivo, o dispositivo com a política de conformidade do dispositivo direcionado enviará um relatório de conformidade para Intune mostrando a **Conta do Sistema** como o nome principal do utilizador. Isto acontece porque uma política de conformidade do dispositivo foi direcionada para um grupo de utilizadores ou dispositivos, e nenhum utilizador foi assinado no dispositivo no momento em que a conformidade foi avaliada.
+>
+> Além disso, se houver vários utilizadores inscritos no mesmo dispositivo, e este dispositivo for direcionado para uma política de conformidade do dispositivo, e considerando que estes utilizadores fazem parte da mesma política de conformidade do dispositivo que precisa de ser avaliada, o relatório de conformidade pode mostrar o mesmo dispositivo várias vezes que cada utilizador que assinou no dispositivo tem de avaliar a política de conformidade do dispositivo e denunciá-lo de volta ao Intune.
 
 #### <a name="filter-and-columns"></a>Filtro e colunas
 
@@ -131,7 +136,7 @@ Quando selecionar o mosaico, serão apresentados todos os dispositivos que não 
 
 - Com a definição de segurança **Marcar os dispositivos sem política de conformidade atribuída como**, é importante identificar os dispositivos que não têm uma política de conformidade. Em seguida, pode atribuir pelo menos uma política de conformidade aos mesmos.
 
-  A definição de segurança é configurável no portal do Intune. Para **dispositivos** > políticas de **conformidade** > **definições**de política de conformidade . Em seguida, defina **Marcar os dispositivos sem política de conformidade atribuída como** para **Conforme** ou **Não conforme**.
+  A definição de segurança é configurável no portal do Intune. Para **dispositivos** > **políticas** > de conformidade**Definições de política**de conformidade . Em seguida, defina **Marcar os dispositivos sem política de conformidade atribuída como** para **Conforme** ou **Não conforme**.
 
   Saiba mais sobre esta [melhoria de segurança no serviço Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -151,11 +156,11 @@ O gráfico de conformidade de **Definição** mostra-lhe todas as definições d
 
 ## <a name="view-compliance-reports"></a>Ver relatórios de conformidade
 
-Além de utilizar as tabelas sobre o estado de *Conformidade,* pode ir ao **Reports** > **conformidade com**o Dispositivo .
+Além de utilizar as tabelas sobre o estado de *Conformidade,* pode ir ao **Reports** > **Device compliance**.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **Monitor**, e depois a partir de baixo **A conformidade** selecione o relatório que pretende ver. Alguns dos relatórios de conformidade disponíveis incluem:
+2. Selecione **Monitor de Dispositivos** > **e,** em seguida, a partir de **baixo,** selecione o relatório que pretende ver. Alguns dos relatórios de conformidade disponíveis incluem:
 
    - Conformidade do dispositivo
    - Dispositivos não conformes
@@ -173,7 +178,7 @@ Pode verificar os diferentes estados das suas políticas por plataforma. Por exe
 
 Esta funcionalidade está incluída no relatório de estado do dispositivo:
 
-1. Selecione **Dispositivos** > políticas de **conformidade** > **Políticas**. É apresentada uma lista de políticas, incluindo a plataforma, se a política estiver atribuída, e mais detalhes.
+1. Selecione**Políticas** > **Policies**de conformidade de **dispositivos** > . É apresentada uma lista de políticas, incluindo a plataforma, se a política estiver atribuída, e mais detalhes.
 2. Selecione uma política > **Descrição Geral**. Nesta vista, a atribuição de política inclui os seguintes estados:
 
     - **Sucesso**: A política é aplicada
@@ -192,6 +197,6 @@ Se forem aplicadas múltiplas políticas do Intune a um dispositivo, podem ocorr
 
 - Se tiver implementado múltiplas políticas de conformidade, o Intune utiliza a mais segura destas políticas.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Visão geral das políticas de conformidade](device-compliance-get-started.md)
