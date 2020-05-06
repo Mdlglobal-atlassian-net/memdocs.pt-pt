@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: af842bbb9c8dcb133bfe0d52f49948761f968c71
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842262"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos iOS e iPadOS para permitir ou restringir funcionalidades usando Intune
 
@@ -591,7 +591,7 @@ Para adicionar aplicações, pode:
 
   A partir do iOS/iPadOS 13.0, esta definição requer dispositivos supervisionados.
 
-## <a name="autonomous-single-app-mode"></a>Modo de aplicação single autónomo
+## <a name="autonomous-single-app-mode-asam"></a>Modo de aplicação single autónomo (ASAM)
 
 Utilize estas definições para configurar dispositivos iOS/iPadOS para executar aplicações específicas no modo de aplicação single autónomo (ASAM). Quando este modo está configurado e os utilizadores iniciam uma das aplicações configuradas, o dispositivo está bloqueado a essa aplicação. A comutação de aplicações/tarefas é desativada até que os utilizadores saiam da aplicação permitida.
 
@@ -599,6 +599,8 @@ Por exemplo, em ambiente escolar ou universitário, adicione uma aplicação que
 
 > [!NOTE]
 > Nem todas as aplicações suportam o modo de aplicação single autónomo. Para colocar uma aplicação no modo de aplicação single autónomo, um pacote id ou um par de valor chave entregue por uma política de config de aplicação são normalmente necessários. Para mais informações, consulte a [ `autonomousSingleAppModePermittedAppIDs` restrição](https://developer.apple.com/documentation/devicemanagement/restrictions) na documentação do MDM da Apple. Para obter mais informações sobre as definições específicas necessárias para a aplicação que está a configurar, consulte a documentação do fornecedor.
+
+Por exemplo, para configurar zoom rooms em modo de `us.zoom.zpcontroller` aplicação única autónoma, zoom diz para usar o ID do pacote. Neste caso, você também faz uma alteração no portal web Zoom. Para mais informações, consulte o centro de [ajuda zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 

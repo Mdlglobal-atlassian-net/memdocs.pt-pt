@@ -52,7 +52,7 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 
     | Valor | Descrição |
     |--------------|------------------------------------------------|
-    | Nome | O nome desta política de proteção de aplicações. |
+    | Name | O nome desta política de proteção de aplicações. |
     | Descrição | [Opcional] A descrição desta política de proteção de aplicações. |
 
 
