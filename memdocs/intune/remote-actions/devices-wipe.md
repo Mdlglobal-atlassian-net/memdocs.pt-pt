@@ -39,7 +39,7 @@ A ação **Limpar** restaura um dispositivo para as predefinições de fábrica.
 |Ação Limpar|**Reter estado de inscrição e conta de utilizador**|Removido da gestão do Intune|Descrição|
 |:-------------:|:------------:|:------------:|------------|
 |**Eliminação**| Opção não selecionada | Sim | Apaga todas as contas, dados, políticas de MDM e definições do utilizador. Repõe as definições e estado predefinidos do sistema operativo.|
-|**Eliminação**| Assinalado | Não | Apaga todas as políticas de MDM. Mantém os dados e as contas do utilizador. Repõe as definições predefinidas do utilizador. Repõe as definições e estado predefinidos do sistema operativo.|
+|**Eliminação**| Assinalado | No | Apaga todas as políticas de MDM. Mantém os dados e as contas do utilizador. Repõe as definições predefinidas do utilizador. Repõe as definições e estado predefinidos do sistema operativo.|
 
 
 > [!NOTE]

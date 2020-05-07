@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af842bbb9c8dcb133bfe0d52f49948761f968c71
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: f1b183d960f3413e59d29cfb18c5aa0be35ae590
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842262"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862399"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos iOS e iPadOS para permitir ou restringir funcionalidades usando Intune
 
@@ -95,6 +95,10 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 - **Bloqueio de ativação**: **Permitir ativa** o bloqueio de ativação em dispositivos iOS/iPadOS supervisionados. O Bloqueio de Ativação dificulta que um dispositivo perdido ou roubado seja reativado. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Remoção de aplicativos de blocos**: **Bloco** impede a remoção de aplicações. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir que os utilizadores removam as aplicações dos dispositivos.
 - **Permitir acessórios USB enquanto o dispositivo estiver bloqueado:** **Permitir que** os acessórios USB troquem dados com dispositivos que estejam bloqueados durante mais de uma hora. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode não atualizar o modo RESTRITO USB nos dispositivos, e os acessórios USB estão bloqueados da transferência de dados dos dispositivos se estiverem bloqueados durante mais de uma hora.
+
+  Esta funcionalidade aplica-se a:  
+  - iOS/iPadOS 11.4.1 e mais recente
+
 - **Forçar a data e a hora automáticas**: **Exigir** que as forças comandadas estabeleçam automaticamente a data & hora. O fuso horário do dispositivo é atualizado quando o dispositivo está ligado à rede móvel ou ao Wi-Fi com os serviços de localização ativados. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Exigir que os alunos solicitem autorização para deixar**o curso de sala de aula : **Exigir** que os alunos matriculados num curso não gerido utilizem a app sala de aula para solicitar autorização ao professor para deixar o curso. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por defeito, o SO pode não forçar o aluno a pedir permissão.
 

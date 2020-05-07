@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086276"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802026"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Definições para a política antivírus do Microsoft Defender do Windows 10 no Microsoft Intune
 
@@ -82,7 +82,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Sim** - Impor o uso da monitorização em tempo real. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Ativar a proteção do acesso**  
-  CSP: [Permitir a proteção de acessos](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [Permitir a proteção de acessos](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Configure a proteção contra vírus que seja continuamente ativa, em oposição à procura.
 
@@ -90,8 +90,16 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Não** - Bloquear a proteção de acesso nos dispositivos. Os utilizadores do dispositivo não podem alterar esta definição.
   - **Sim** - A Proteção de Acesso está ativa em dispositivos.
 
+- **Monitorização de ficheiros de entrada e saída**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Configure esta definição para determinar qual o ficheiro NTFS e a atividade do programa monitorizadas.
+  - **Monitorize todos os ficheiros** *(predefinido)*
+  - **Só monitorizar os ficheiros de entrada**
+  - **Só monitorizar ficheiros de saída**
+
 - **Ativar a monitorização do comportamento**  
-  CSP: [Permitir a Monitorização do Comportamento](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [Permitir a Monitorização do Comportamento](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Por predefinição, os dispositivos de desktop Do Windows 10 utilizam a funcionalidade De Monitorização de Comportamentos.
 
@@ -109,7 +117,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Sim** - A proteção da rede está ligada. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Scaneie todos os ficheiros e anexos descarregados**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Configure o Defender para digitalizar todos os ficheiros e anexos descarregados.
 
@@ -118,7 +126,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Sim** - O Defender digitaliza todos os ficheiros e anexos descarregados. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Scanscripts que são usados nos navegadores da Microsoft**  
-  CSP: [Permitir a digitalização](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409) do ScriptS
+  CSP: [Permitir a digitalização](https://go.microsoft.com/fwlink/?linkid=2114054) do ScriptS
 
   Configure defender para digitalizar scripts.
 
@@ -127,7 +135,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Sim** - Defender digitaliza guiões. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Scan ficheiros de rede**  
-  CSP: [Permitir Ficheiros de Redes](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409) de Digitalização
+  CSP: [Permitir Ficheiros de Redes](https://go.microsoft.com/fwlink/?linkid=2114049&) de Digitalização
 
   Configure o Defender para digitalizar ficheiros de rede.
 
@@ -136,7 +144,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Sim** - Ligue a digitalização dos ficheiros da rede. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **E-mails de digitalização**  
-  CSP: [Permitir emailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [Permitir emailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Configure defender para digitalizar o e-mail de entrada.
 
@@ -147,7 +155,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
 ## <a name="remediation"></a>Remediação
 
 - **Número de dias (0-90) para manter malware em quarentena**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Especifique alguns dias de zero a 90 que o sistema armazena itens em quarentena antes de serem removidos automaticamente. Um valor de zero mantém os itens em quarentena e não os remove automaticamente.
 
@@ -160,7 +168,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Enviar todas as amostras automaticamente**
 
 - **Ação para assumir aplicações potencialmente indesejadas**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Especifique o nível de deteção de aplicações potencialmente indesejadas (APA). O Defender alerta os utilizadores quando o software potencialmente indesejado está a ser descarregado ou tenta instalar-se num dispositivo.
 
@@ -170,7 +178,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   - **Modo** de auditoria - Defender deteta aplicações potencialmente indesejadas, mas não toma medidas. Pode rever informações sobre as aplicações que o Defender teria tomado medidas contra a procura de eventos criados pela Defender no Observador de Eventos.
 
 - **Ações para ameaças detetadas**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Especifique a ação que o Defender toma para o malware detetado com base no nível de ameaça do malware.
   
@@ -193,7 +201,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
 ## <a name="scan"></a>Digitalizar
 
 - **Analisar ficheiros de arquivo**  
-  CSP: [Permitir a digitalização do Arquivo](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [Permitir a digitalização do Arquivo](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configure o Defender para digitalizar ficheiros de arquivo, como ficheiros ZIP ou CAB.
 
@@ -203,7 +211,7 @@ Saiba mais
   - **Sim** - Ativar digitalizações de ficheiros de arquivo. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Use baixa prioridade da CPU para exames agendados**  
-  CSP: [EnablelowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnablelowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configure a prioridade do CPU para as digitalizações programadas.
   - **Não configurado** *(predefinido*) - A definição retorna à predefinição do sistema, na qual não são feitas alterações à prioridade do CPU.
@@ -211,7 +219,7 @@ Saiba mais
   - **Sim** - A baixa prioridade da CPU será usada durante as verificações programadas. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Desativar a captura completa**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Configure as tomografias para os exames completos programados. Uma tomografia é uma tomografia que é iniciada porque uma varredura regular foi perdida. Normalmente, estas tomografias programadas são perdidas porque o computador foi desligado na hora programada.
 
@@ -220,7 +228,7 @@ Saiba mais
   - **Sim** - As tomografias de atualização para exames completos programados são executadas e o utilizador não pode desativá-los. Se um computador estiver offline para duas varreduras programadas consecutivas, uma varredura de recuperação é iniciada da próxima vez que alguém entrar no computador. Se não houver uma varredura programada configurada, não haverá nenhuma varredura de recuperação. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Desativar a sondagem rápida da catchup**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Configure as análises de recuperação para exames rápidos programados. Uma tomografia é uma tomografia que é iniciada porque uma varredura regular foi perdida. Normalmente, estas tomografias programadas são perdidas porque o computador foi desligado na hora programada.
 
@@ -229,12 +237,12 @@ Saiba mais
   - **Sim** - As análises de recuperação para exames rápidos programados são executadas e o utilizador não pode desativá-los. Se um computador estiver offline para duas varreduras programadas consecutivas, uma varredura de recuperação é iniciada da próxima vez que alguém entrar no computador. Se não houver uma varredura programada configurada, não haverá nenhuma varredura de recuperação. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Limite de utilização do CPU por digitalização**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Especifique como um por cento de zero a 100, o fator médio de carga cpu para a varredura do Defender.
 
 - **Scan mapeado unidades de rede durante a varredura completa**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Configure defender para digitalizar unidades de rede mapeadas.
 
@@ -243,13 +251,13 @@ Saiba mais
   - **Sim** - Ative digitalizações de unidades de rede mapeadas. Os utilizadores do dispositivo não podem alterar esta definição.
 
 - **Executar varredura rápida diária em**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Selecione a hora do dia que o Defender faz exames rápidos.
   Por padrão, isto não está **configurado**
 
 - **Tipo de digitalização**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Selecione o tipo de digitalização que o Defender executa.
 
@@ -271,14 +279,14 @@ Saiba mais
 ## <a name="updates"></a>Atualizações
 
 - **Insira quantas vezes (0-24 horas) para verificar se há atualizações de inteligência de segurança**  
-  CSP: [Intervalo de Atualização de Assinaturas](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [Intervalo de Atualização de Assinaturas](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Especifique o intervalo de zero a 24 (em horas) que é utilizado para verificar se há assinaturas. Um valor de zero resulta em nenhum cheque para novas assinaturas. Um valor de 2 verificará a cada duas horas, e assim por diante.
 
 ## <a name="user-experience"></a>Experiência de utilizador
 
 - **Permitir o acesso do utilizador à aplicação Microsoft Defender**  
-  CSP: [Permitir o acesso userui](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [Permitir o acesso userui](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Não configurado** *(predefinido)*- A definição devolve ao padrão do cliente em que ui e notificações são permitidas.
   - **Não** - A Interface de Utilizador do Defender (UI) é inacessível e os produtos de notificação suprimidos.

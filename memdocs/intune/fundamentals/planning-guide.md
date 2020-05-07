@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080101"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802043"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Guia de planeamento, estruturação e implementação do Intune
 
@@ -53,7 +53,10 @@ Este guia inclui secções que o irão orientar ao longo de todo o processo de i
 
 Este guia fornece também mais informações técnicas e modelos de tabelas que pode utilizar como auxílio no processo de planeamento, estruturação e implementação do Intune.
 
-- [Recursos adicionais: ligações e modelos de tabela](planning-guide-resources.md)
+### <a name="additional-resources"></a>Recursos adicionais
+
+- Guia Microsoft [Endpoint Manager Proof of Concept (PoC):](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) este destina-se a fornecer uma estrutura e orientação técnica sobre como executar um PoC de sucesso dentro da sua organização.
+- [Links e modelos de mesa](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Pressupostos
 

@@ -139,9 +139,9 @@ Os valores predefinidos para a definição são pré-povoados para novas atribui
 |tipo de aplicativo iOS | Definição predefinida para "Desinstalar na remoção do dispositivo" |
 |--------------------|----------------|
 | App de linha de negócios | Sim |
-| Aplicação da loja | Não |
-| Aplicativo VPP | Não |
-| Aplicação incorporada | Não |
+| Aplicação da loja | No |
+| Aplicativo VPP | No |
+| Aplicação incorporada | No |
 
 >[!NOTE]
 >Tipos de **atribuição "disponíveis":** Se estiver a atualizar esta definição para "disponíveis para dispositivos matriculados" ou "disponíveis com ou sem matrícula", os utilizadores que já tenham a app gerida não receberão a definição atualizada até sincronizarem o dispositivo com o Intune e reinstalarem a app. 

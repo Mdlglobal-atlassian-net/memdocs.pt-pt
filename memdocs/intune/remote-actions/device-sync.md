@@ -54,17 +54,17 @@ Quando um administrador executa a ação do dispositivo **Sync,** as aplicaçõe
 
 | Código de erro  | Descrição sugerida | Repetível |
 |---|---|---|
-| 2016330898 | Ocorreu um erro desconhecido. | Não |
+| 2016330898 | Ocorreu um erro desconhecido. | No |
 | 2016330897 | A sua ligação com intune cronometrada. Reponha a sua ligação. | Sim |
 | 2016330896 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
 | 2016330895 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
 | 2016330894 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
 | 2016330893 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim|
-| 2016330892 | O roaming internacional está desativado. | Não|
+| 2016330892 | O roaming internacional está desativado. | No|
 | 2016330891 | A ligação de dados celulares para este dispositivo não pode ser acedida enquanto uma chamada telefónica está sendo feita. Aguarde a conclusão da chamada. | Sim|
-| 2016330890 | A rede móvel deste dispositivo. Estes dispositivos não podiam ser usados neste momento. | Não|
+| 2016330890 | A rede móvel deste dispositivo. Estes dispositivos não podiam ser usados neste momento. | No|
 | 2016330889 | A ligação segura falhou. Reinicie a sua ligação. | Sim|
-| 2016330888 | A avaliação da fidedignidade do servidor falhou. | Não|
+| 2016330888 | A avaliação da fidedignidade do servidor falhou. | No|
 
 ## <a name="next-steps"></a>Passos seguintes
 
