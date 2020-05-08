@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210251"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943880"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Definições de dispositivos iOS e iPadOS para utilizar funcionalidades comuns do iOS/iPadOS em Intune
 
@@ -107,7 +107,7 @@ Pode adicionar até **seis** itens (apps e pastas combinadas) para a doca do dis
       Pode adicionar até **20** páginas para a doca do dispositivo.
 
 > [!NOTE]
-> Quando adiciona ícones utilizando as definições da Doca, os ícones no Ecrã Principal e as páginas estão bloqueadas e não podem ser movidos. Isto pode ser por design com as políticas do iOS/iPadOS e do MDM da Apple.
+> Quando utiliza as definições de Layout do Ecrã Inicial para adicionar páginas, ou adicionar páginas e aplicações à Doca, os ícones no Ecrã Principal e páginas estão bloqueados. Não podem ser movidos ou apagados. Este comportamento pode ser por design com as políticas do iOS/iPadOS e do MDM da Apple.
 
 #### <a name="example"></a>Exemplo
 
