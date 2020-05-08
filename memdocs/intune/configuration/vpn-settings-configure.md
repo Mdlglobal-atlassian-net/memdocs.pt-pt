@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70b0c5693c22b6504016d85e35977c5f99935742
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587203"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943829"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Criar perfis VPN para ligar aos servidores VPN em Intune
 
@@ -185,6 +185,10 @@ Quando cria o perfil da VPN, pode escolher um perfil de certificado SCEP ou PKCS
 Se utilizar a autenticação baseada em certificados para o seu perfil VPN, implante o perfil VPN, perfil de certificado e perfil de raiz fidedigno para os mesmos grupos para garantir que cada dispositivo pode reconhecer a legitimidade da sua autoridade de certificado.
 
 Para obter mais informações sobre como criar e utilizar perfis de certificado no Intune, veja [Como configurar certificados com o Microsoft Intune](../protect/certificates-configure.md).
+
+> [!NOTE]
+> Os certificados adicionados com o tipo de perfil **de certificado importado PKCS** não são suportados para autenticação VPN. Os certificados adicionados com o tipo de perfil dos **certificados PKCS** são suportados para autenticação VPN.
+
 
 ### <a name="user-name-and-password"></a>Nome de utilizador e palavra-passe
 

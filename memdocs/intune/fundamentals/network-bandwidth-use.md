@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331113"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943846"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Largura de banda e requisitos de configuração de rede do Intune
 
@@ -74,14 +74,6 @@ Seguem-se as definições típicas para utilizar um servidor proxy que coloca co
 
 Para obter informações sobre como utilizar um servidor proxy para colocar conteúdos em cache, consulte a documentação da sua solução de servidor proxy.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Utilizar o Serviço de Transferência Inteligente em Segundo Plano (BITS) nos computadores
-
-Durante as horas que configurar, pode utilizar o BITS num computador Windows para reduzir a largura de banda da rede. Pode configurar uma política do BITS na página **Largura de banda de rede** da política do Agente do Intune.
-
-> [!NOTE]
-> Para a gestão do MDM no Windows, apenas a interface de gestão do OS para o tipo de aplicação MobileMSI utiliza BITS para descarregar. O AppX/MsiX utiliza a sua própria pilha de transferência não BITS e as aplicações Win32 através do agente do Intune utilizam a Otimização de Entrega em vez do BITS.
-
-Para saber mais sobre o BITS e computadores Windows, veja [Background Intelligent Transfer Service (Serviço de Transferência Inteligente em Segundo Plano)](https://technet.microsoft.com/library/bb968799.aspx) na Biblioteca TechNet.
 
 ### <a name="delivery-optimization"></a>Otimização de Entrega
 
@@ -91,7 +83,22 @@ Para ver a lista completa de versões e tipos de conteúdos do Windows 10 suport
 
 Pode [configurar](../configuration/delivery-optimization-settings.md) a Otimização de Entrega como parte dos perfis de configuração do seu dispositivo.
 
-### <a name="use-branchcache-on-computers"></a>Utilizar o BranchCache nos computadores
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Serviço de Transferência Inteligente de Fundo (BITS) e BranchCache 
+
+Pode utilizar o Microsoft Intune para gerir os PCs do Windows, quer [como dispositivos móveis com gestão de dispositivos móveis (MDM)](../enrollment/windows-enroll.md) quer como computadores com o cliente do software Intune. A Microsoft recomenda que os clientes utilizem a solução de [gestão do MDM](../enrollment/windows-enroll.md) sempre que possível. Quando geridos desta forma, branchCache e BITS não são suportados. Para obter mais informações, consulte [Compare gerindo computadores windows como computadores ou dispositivos móveis](pc-management-comparison.md).
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>Utilização (BITS) em computadores (requer cliente de software Intune)
+
+Durante as horas que configurar, pode utilizar o BITS num computador Windows para reduzir a largura de banda da rede. Pode configurar uma política do BITS na página **Largura de banda de rede** da política do Agente do Intune.
+
+> [!NOTE]
+> Para a gestão do MDM no Windows, apenas a interface de gestão do OS para o tipo de aplicação MobileMSI utiliza BITS para descarregar. O AppX/MsiX utiliza a sua própria pilha de transferência não BITS e as aplicações Win32 através do agente do Intune utilizam a Otimização de Entrega em vez do BITS.
+
+Para saber mais sobre o BITS e computadores Windows, veja [Background Intelligent Transfer Service (Serviço de Transferência Inteligente em Segundo Plano)](https://technet.microsoft.com/library/bb968799.aspx) na Biblioteca TechNet.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Utilizar branchCache em computadores (requer cliente de software Intune)
 
 Os clientes Intune podem utilizar o BranchCache para reduzir o tráfego da rede alargada (WAN). O BranchCache é suportado pelos seguintes sistemas operativos:
 
@@ -106,8 +113,6 @@ Quando o cliente do Intune é instalado nos computadores, o BranchCache e o modo
 
 Se utiliza o BranchCache, trabalhe em conjunto com outros administradores na sua organização para gerir a Política de Grupo e a política de Firewall do Intune. Confirme que não implementam políticas que desativem o BranchCache ou exceções da Firewall. Para obter mais informações sobre o BranchCache, consulte [Descrição Geral do BranchCache](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> Pode utilizar o Microsoft Intune para gerir os PCs do Windows, quer [como dispositivos móveis com gestão de dispositivos móveis (MDM)](../enrollment/windows-enroll.md) quer como computadores com o cliente do software Intune. A Microsoft recomenda que os clientes utilizem a solução de [gestão do MDM](../enrollment/windows-enroll.md) sempre que possível. Quando gerido desta forma, a BranchCache não é apoiada. Para obter mais informações, consulte [Compare gerindo computadores windows como computadores ou dispositivos móveis](pc-management-comparison.md).
 
 ## <a name="next-steps"></a>Passos seguintes
 

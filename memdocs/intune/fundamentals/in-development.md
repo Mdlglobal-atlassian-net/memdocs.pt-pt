@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0098ff8f7916dd08b32fbc4acc9289a403a860ef
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 7827c85585d630f64ba9c6d342b6275fca506b1d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881065"
+ms.locfileid: "82906963"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Em desenvolvimento para microsoft Intune
 
@@ -152,8 +152,6 @@ Os scripts PowerShell suportarão dispositivos registados em Intune. Para obter 
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>O Log Analytics incluirá o registo de detalhes do dispositivo<!--6014987  -->
 Os registos de detalhes do dispositivo insintonizem os registos disponíveis na análise de **registode** > **relatórios**. Pode correlacionar detalhes do dispositivo para construir consultas personalizadas e livros de trabalho azure.
 
-### <a name="new-details-for-the-autopilot-report--5405786---"></a>Novos detalhes para o relatório autopiloto<!--5405786 -->
-Para ver os novos detalhes sobre o estado de instalação de App e Policy, vá ao [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), escolha implementações de Monitor**Monitor** > de **Dispositivos** > **Autopilot**.
 
 ### <a name="macos-script-support---6376978----"></a>suporte para script saos<!-- 6376978  -->
 O suporte para o script para macOS está agora geralmente disponível. Além disso, vamos adicionar suporte tanto para scripts atribuídos ao utilizador como para dispositivos macOS que foram matriculados com a Inscrição automática de dispositivos da Apple (anteriormente Programa de Inscrição de Dispositivos). Para mais informações, consulte [Utilize scripts de concha em dispositivos macOS em Intune](../apps/macos-shell-scripts.md).

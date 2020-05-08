@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bafe9f564519e597e0bcc84350de3bb17dc646e1
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906905"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 10 e posteriordefinições para marcar dispositivos como conformes ou não conformes usando Intune
 
@@ -192,7 +192,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
   [DispositivoStatus CSP - DispositivoStatus/Antivírus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > O DispositivoStatus CSP para Antivírus não é suportado para *o Windows 10 Home* e reporta um estado de Não *aplicável*. Esta limitação será abordada numa futura atualização mensal para o Intune. Para contornar esta limitação, considere utilizar as definições [do Windows Defender](#defender) na sua política de conformidade do dispositivo. As definições do Windows Defender são suportadas com o Windows 10 Home.  
+  > O DispositivoStatus CSP para Antivírus não é suportado para *o Windows 10 Home* e reporta um estado de Não *aplicável*. A equipa intune está a trabalhar numa correção. Para contornar esta limitação, considere utilizar as definições [do Windows Defender](#defender) na sua política de conformidade do dispositivo. As definições do Windows Defender são suportadas com o Windows 10 Home.  
 
 - **Antispyware:**  
   - **Não configurado** *(predefinido)*- Intune não verifica se existem soluções antispyware instaladas no dispositivo.
@@ -201,7 +201,7 @@ Aplica-se apenas a dispositivos cogeridos que executam o Windows 10 e posteriorm
   [DispositivoStatus CSP - DispositivoStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > O DeviceStatus CSP para Antispyware não é suportado para *o Windows 10 Home* e reporta um estado de Não *aplicável*. Esta limitação será abordada numa futura atualização mensal para o Intune. Para contornar esta limitação, considere utilizar as definições [do Windows Defender](#defender) na sua política de conformidade do dispositivo. As definições do Windows Defender são suportadas com o Windows 10 Home. 
+  > O DeviceStatus CSP para Antispyware não é suportado para *o Windows 10 Home* e reporta um estado de Não *aplicável*. A equipa intune está a trabalhar numa correção. Para contornar esta limitação, considere utilizar as definições [do Windows Defender](#defender) na sua política de conformidade do dispositivo. As definições do Windows Defender são suportadas com o Windows 10 Home. 
 
 ### <a name="defender"></a>Defender
 
