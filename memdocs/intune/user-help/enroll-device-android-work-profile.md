@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328249"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991554"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Inscreva dispositivo com perfil de trabalho Android
 
@@ -74,6 +74,15 @@ Saiba mais sobre [o que acontece quando cria um perfil de trabalho](what-happens
 9. Quando a configuração estiver concluída, toque em **DONE**.  
 
     ![Imagem de exemplo do Portal da Empresa, ecrã de configuração de acesso da empresa, mostrando configuração completa e realce botão Feito.](./media/work-profile-done-1911.png)  
+
+10. Quando solicitado a visualizar as aplicações sugeridas pela sua organização no Google Play, selecione **OPEN**. 
+
+    ![Imagem de exemplo do Portal da Empresa pronta a abrir versão com crachá do Google Play.](./media/get-apps-banner-android-2005.png) 
+
+    Se não estiver pronto para instalar apps, pode sempre acessá-las mais tarde, indo diretamente para a versão com insígnias da aplicação Google Play. Também pode selecionar **Apps** do menu Portal da Empresa.  
+
+    ![Imagem de exemplo do menu Do Portal da Empresa, destacando o link Get Apps.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Passos seguintes  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326970"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991711"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Implemente dispositivos híbridos de AD com a utilização de Intune e Windows Autopilot
 Pode utilizar dispositivos intune e Windows Autopilot para configurar dispositivos híbridos azure Ative Directory (Azure AD). Para tal, siga os passos deste artigo.
@@ -108,6 +108,8 @@ A unidade organizacional que concedeu os direitos de criar computadores deve cor
 ## <a name="install-the-intune-connector"></a>Instalar o Conector do Intune
 
 O Conector Intune para Diretório Ativo deve ser instalado num computador que esteja a executar o Windows Server 2016 ou mais tarde. O computador também deve ter acesso à internet e ao seu Diretório Ativo. Para aumentar o dimensionamento e a disponibilidade ou suportar múltiplos domínios do Azure Active Directory, pode instalar múltiplos conectores no seu ambiente. Recomendamos a instalação do Conector num servidor que não esteja a executar outros conectores Intune.
+
+O Conector Intune requer os [mesmos pontos finais que](../fundamentals/intune-endpoints.md)o Intune .
 
 1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **dispositivos** > **Windows** > **Windows inscrição** > **Intune Connector para** > **Add**'Diretório Ativo . 
 2. Siga as instruções para descarregar o Conector.

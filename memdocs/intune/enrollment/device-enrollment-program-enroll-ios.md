@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 994ab31e2a06b0d2ef570fcfbb4f9d8c6ea7cca4
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023355"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991766"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscreva automaticamente dispositivos iOS/iPadOS com inscrição automática de dispositivos da Apple
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Registo Automatizado de Dispositivos da Apple
 
 > [!IMPORTANT]
 > A Apple mudou recentemente de utilização do Programa de Inscrição de Dispositivos da Apple (DEP) para a Apple Automated Device Registration (ADE). A Intune está em processo de atualização da interface de utilizador Intune para refletir isso. Até que tais alterações estejam completas, continuará a ver o Programa de Inscrição de *Dispositivos* no portal Intune. Onde quer que isso seja mostrado, agora utiliza inscrição automática de dispositivos.
@@ -148,8 +148,7 @@ Agora que instalou o seu símbolo, pode criar um perfil de inscrição para disp
 
     ![Crie uma captura de ecrã de perfil.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Na página **Basics,** introduza um **Nome** e **Descrição** para o perfil para fins administrativos. Os utilizadores não verão estes detalhes. Pode utilizar este campo **Nome** para criar um grupo dinâmico no Diretório Ativo Azure. Utilize o nome de perfil para definir o parâmetro enrollmentProfileName para atribuir dispositivos com este perfil de inscrição. No caso dos dispositivos matriculados com a Inscrição automática de Dispositivos com a Finção do Utilizador, o alvo Grupos de Utilizadores AAD onde o utilizador inscrito é membro antes da configuração do dispositivo garantirá a entrega de política mais rápida aos dispositivos. Direcionar aplicações e políticas para grupos Dinâmicos com base nos perfis de Inscrição resultará em algum atraso na aplicação aos dispositivos após completar o fluxo de inscrição.
-Saiba mais sobre [os grupos dinâmicos do Azure Ative Diretório.](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)
+3. Na página **Basics,** introduza um **Nome** e **Descrição** para o perfil para fins administrativos. Os utilizadores não verão estes detalhes. 
 
     ![Nome do perfil e descrição.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Saiba mais sobre [os grupos dinâmicos do Azure Ative Diretório.](https://docs.
 16. Escolha **O Próximo** para ir à página Review + **Criar.**
 
 17. Para guardar o perfil, escolha **Criar**.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Grupos dinâmicos no Diretório Ativo Azure
+
+Você pode usar o campo **nome** de inscrição para criar um grupo dinâmico no Diretório Ativo Azure. Para mais informações, consulte os [grupos dinâmicos do Diretório Ativo Azure.](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md)
+
+Pode utilizar o nome do perfil para definir o [parâmetro 'Name' de inscrição](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) para atribuir dispositivos com este perfil de inscrição.
+
+Para obter a entrega de políticas mais rápida em dispositivos ADE com afinidade do utilizador, certifique-se de que o utilizador inscrito é membro, antes da configuração do dispositivo, de um grupo de utilizadores AAD. 
+
+A atribuição de grupos dinâmicos aos perfis de inscrição pode levar a algum atraso na entrega de aplicações e políticas aos dispositivos após a inscrição.
+
 
 ## <a name="sync-managed-devices"></a>Sincronizar dispositivos geridos
 Agora que o Intune tem permissão para gerir os seus dispositivos, pode sincronizar o Intune com a Apple para ver os seus dispositivos geridos no Intune no portal do Azure.
