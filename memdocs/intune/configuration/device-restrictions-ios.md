@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1b183d960f3413e59d29cfb18c5aa0be35ae590
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862399"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269019"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições de dispositivos iOS e iPadOS para permitir ou restringir funcionalidades usando Intune
 
@@ -151,21 +151,21 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 > Por exemplo, configura a definição de validade da **Palavra-passe** e empurra esta política para dispositivos inscritos pelo utilizador. Nos dispositivos, acontece o seguinte:
 >
 > - A definição de expiração da **palavra-passe** é ignorada.
-> - Não são permitidas `1111` `1234`senhas simples, tais como ou, não são permitidas.
+> - Não são permitidas senhas simples, tais como `1111` `1234` ou, não são permitidas.
 > - Um pino de 6 dígitos é imposto.
 
-- **Palavras-passe simples**: **O bloco** requer senhas mais complexas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode `0000` permitir `1234`senhas simples, tais como e .
+- **Palavras-passe simples**: **O bloco** requer senhas mais complexas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir senhas simples, tais como `0000` e `1234` .
 
 - Tipo de **palavra-passe necessário**: Introduza o nível de complexidade de senha exigido que a sua organização necessita. As opções são:
   - **Predefinição do dispositivo**
   - **Numérico:** A palavra-passe deve ser apenas números, como o 123456789.
   - **Alfanumérico:** Inclui letras maiúsculas, letras minúsculas e caracteres numéricos.
-- **Número de caracteres não alfanuméricos na palavra-passe**: `#` `@`Introduza o número de caracteres de símbolo, tais como ou , que devem ser incluídos na palavra-passe, a partir de 1-4. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Número de caracteres não alfanuméricos na palavra-passe**: Introduza o número de caracteres de símbolo, tais como `#` ou , que devem ser `@` incluídos na palavra-passe, a partir de 1-4. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
 - Comprimento mínimo da **palavra-passe**: Introduza o comprimento mínimo que a palavra-passe deve ter, de 4 a 16 caracteres. Nos dispositivos inscritos no utilizador, introduza um comprimento entre 4 e 6 caracteres.
   
   > [!NOTE]
-  > Para dispositivos inscritos no utilizador, os utilizadores podem definir um PIN superior a 6 dígitos. Mas, não são aplicados mais de 6 dígitos nos dispositivos. Por exemplo, um administrador define `8`o comprimento mínimo para . Nos dispositivos inscritos no utilizador, os utilizadores só são obrigados a definir um PIN de 6 dígitos. Intune não força um PIN superior a 6 dígitos em dispositivos matriculados pelo utilizador.
+  > Para dispositivos inscritos no utilizador, os utilizadores podem definir um PIN superior a 6 dígitos. Mas, não são aplicados mais de 6 dígitos nos dispositivos. Por exemplo, um administrador define o comprimento mínimo para `8` . Nos dispositivos inscritos no utilizador, os utilizadores só são obrigados a definir um PIN de 6 dígitos. Intune não força um PIN superior a 6 dígitos em dispositivos matriculados pelo utilizador.
 
 - **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de inscrições falhadas antes de o dispositivo ser limpo, de 4 a 11.
   
@@ -198,7 +198,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
   - **10**: Bloqueios de ecrã após 10 minutos de inatividade.
   - **15**: Bloqueios de ecrã após 15 minutos de inatividade.
 
-  Se um valor não se aplica ao iOS e iPadOS, então a Apple utiliza o valor *mais baixo* mais próximo. Por exemplo, se `4` introduzir minutos, os `2` dispositivos iPadOS utilizam minutos. Se introduzir `10` minutos, os dispositivos iOS utilizam `5` minutos. Esta é uma limitação da Apple.
+  Se um valor não se aplica ao iOS e iPadOS, então a Apple utiliza o valor *mais baixo* mais próximo. Por exemplo, se introduzir `4` minutos, os dispositivos iPadOS utilizam `2` minutos. Se introduzir `10` minutos, os dispositivos iOS utilizam `5` minutos. Esta é uma limitação da Apple.
   
   > [!NOTE]
   > O Intune UI para esta definição não separa os valores suportados pelo iOS e iPadOS. A UI pode ser atualizada num futuro lançamento.
@@ -296,7 +296,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
   A partir do iOS/iPadOS 13.0, esta definição requer dispositivos supervisionados.
 
   - **Instalar aplicações a partir da App Store**: O **Block** não mostra a loja de aplicações no ecrã principal do dispositivo. Os utilizadores podem continuar a utilizar o iTunes ou o Configurator Apple para instalar aplicações. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a loja de aplicações no ecrã principal.
-  - **Downloads automáticos de aplicações**: **O Bloco** impede o descarregamento automático de aplicações compradas noutros dispositivos. Não afeta a atualização das aplicações existentes. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o OS poderá permitir que as aplicações compradas em outros dispositivos iOS/iPadOS descarreguem no dispositivo.
+  - **Downloads automáticos de aplicações**: **O Bloco** impede o descarregamento automático de aplicações compradas noutros dispositivos e atualizações automáticas para novas apps. Não afeta a atualização das aplicações existentes. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o OS poderá permitir que as aplicações compradas em outros dispositivos iOS/iPadOS descarregem e atualizem no dispositivo.
 
 - Conteúdo explícito da **música, podcast ou notícias**do iTunes : **Block** previne conteúdos explícitos de música, podcast ou notícias do iTunes. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir que o dispositivo aceda a conteúdos classificados como adultos a partir da loja.
 
@@ -418,7 +418,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 Para adicionar aplicações a estas listas, pode:
 
-- **Adicionar** o URL do iTunes App Store da aplicação desejada. Por exemplo, para adicionar a aplicação `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`Microsoft Work Folders, insira ou .
+- **Adicionar** o URL do iTunes App Store da aplicação desejada. Por exemplo, para adicionar a aplicação Microsoft Work Folders, insira `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` ou `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` .
 
   Para localizar o URL de uma aplicação, abra o iTunes App Store e procure a aplicação. Por exemplo, procure `Microsoft Remote Desktop` ou `Microsoft Word`. Selecione a aplicação e copie o URL.
 
@@ -448,9 +448,9 @@ Esta funcionalidade aplica-se a:
 
 - **URL da aplicação**: Introduza o URL da aplicação da loja da app que pretende mostrar ou ocultar. Por exemplo:
 
-  - Para adicionar a aplicação Microsoft `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`Work Folders, insira ou . 
+  - Para adicionar a aplicação Microsoft Work Folders, insira `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` ou `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` . 
 
-  - Para adicionar a aplicação `https://itunes.apple.com/de/app/microsoft-word/id586447913` `https://apps.apple.com/de/app/microsoft-word/id586447913`Microsoft Word, insira ou .
+  - Para adicionar a aplicação Microsoft Word, insira `https://itunes.apple.com/de/app/microsoft-word/id586447913` ou `https://apps.apple.com/de/app/microsoft-word/id586447913` .
 
   Para localizar o URL de uma aplicação, abra o iTunes App Store e procure a aplicação. Por exemplo, procure `Microsoft Remote Desktop` ou `Microsoft Word`. Selecione a aplicação e copie o URL.
 
@@ -604,7 +604,7 @@ Por exemplo, em ambiente escolar ou universitário, adicione uma aplicação que
 > [!NOTE]
 > Nem todas as aplicações suportam o modo de aplicação single autónomo. Para colocar uma aplicação no modo de aplicação single autónomo, um pacote id ou um par de valor chave entregue por uma política de config de aplicação são normalmente necessários. Para mais informações, consulte a [ `autonomousSingleAppModePermittedAppIDs` restrição](https://developer.apple.com/documentation/devicemanagement/restrictions) na documentação do MDM da Apple. Para obter mais informações sobre as definições específicas necessárias para a aplicação que está a configurar, consulte a documentação do fornecedor.
 
-Por exemplo, para configurar zoom rooms em modo de `us.zoom.zpcontroller` aplicação única autónoma, zoom diz para usar o ID do pacote. Neste caso, você também faz uma alteração no portal web Zoom. Para mais informações, consulte o centro de [ajuda zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+Por exemplo, para configurar zoom rooms em modo de aplicação única autónoma, zoom diz para usar o ID do `us.zoom.zpcontroller` pacote. Neste caso, você também faz uma alteração no portal web Zoom. Para mais informações, consulte o centro de [ajuda zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -616,7 +616,7 @@ Também pode **importar** um ficheiro CSV com a lista de nomes de aplicações e
 
 ## <a name="kiosk"></a>Kiosk
 
-Intune, o modo quiosque também é conhecido como modo Single App. Na [documentação do MDM da Apple,](https://developer.apple.com/documentation/devicemanagement/applock)o modo de quiosque é conhecido como App Lock.
+[O modo aplicativo único](https://support.apple.com/guide/mdm/mdm80a981/web) é referido como modo quiosque em Intune.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
@@ -666,13 +666,13 @@ Intune, o modo quiosque também é conhecido como modo Single App. Na [documenta
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição do dispositivo, inscrição automática de dispositivos (supervisionado)
 
-- **Domínios de e-mail não marcados** > **Email Domain URL**: Adicione um ou mais URLs à lista. Quando os utilizadores recebem um e-mail de um domínio diferente dos domínios em que introduz, o e-mail é marcado como não confiável na aplicação iOS/iPadOS Mail.
+- **Domínios de e-mail não marcados**  >  URL de domínio de **e-mail**: Adicione um ou mais URLs na lista. Quando os utilizadores recebem um e-mail de um domínio diferente dos domínios em que introduz, o e-mail é marcado como não confiável na aplicação iOS/iPadOS Mail.
 
-- **Gerido sição** > web**domínios Web Domain URL;** Adicione um ou mais URLs à lista. Quando forem transferidos documentos dos domínios introduzidos, estes serão considerados geridos. Esta definição só se aplica a documentos transferidos através do browser Safari.
+- **Domínios web geridos**  >  **URL de domínio web;** Adicione um ou mais URLs à lista. Quando forem transferidos documentos dos domínios introduzidos, estes serão considerados geridos. Esta definição só se aplica a documentos transferidos através do browser Safari.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Definições aplicam-se a: Inscrição automática de dispositivos (supervisionado)
 
-- **Safari password autofill domínios Domínios** > **Domínio**: Adicione um ou mais URLs à lista. Os utilizadores só podem guardar as palavras-passe Web de URLs nesta lista. Esta definição aplica-se apenas ao navegador Safari e aos dispositivos em modo supervisionado. Se não introduzir urLs, as palavras-passe podem ser guardadas em todos os web sites.
+- Domínios de **auto-enchimento**  >  de senha safari **URL de domínio**: Adicione um ou mais URLs à lista. Os utilizadores só podem guardar as palavras-passe Web de URLs nesta lista. Esta definição aplica-se apenas ao navegador Safari e aos dispositivos em modo supervisionado. Se não introduzir urLs, as palavras-passe podem ser guardadas em todos os web sites.
 
   Esta definição aplica-se a:  
   - iOS 9.3 e mais recente
@@ -682,7 +682,7 @@ Intune, o modo quiosque também é conhecido como modo Single App. Na [documenta
 
 O modo supervisionado iOS/iPadOS só pode ser ativado durante a configuração inicial do dispositivo através do Programa de Inscrição de Dispositivos da Apple, ou utilizando o Configurador Apple. Depois de ativar o modo supervisionado, o Intune pode configurar um dispositivo com a seguinte funcionalidade:
 
-- Modo Quiosque (Modo App Único): Chamado "bloqueio de aplicações" na documentação do APPLE MDM.
+- Modo Quiosque (Modo De Aplicação Única): Referido como "bloqueio de aplicações" na [documentação](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)do desenvolvedor da Apple .
 - Desativar o Bloqueio de Ativação 
 - Modo de Aplicação Única Autónomo 
 - Filtro de Conteúdo Web 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254644"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343002"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Inscreva dispositivos em Intune utilizando uma conta de gestor de inscrição de dispositivos
 
@@ -47,13 +47,15 @@ As contas de utilizador DEM e os dispositivos que estão inscritos com uma conta
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>Métodos de inscrição suportados pelas contas DEM
 
+Pode utilizar os seguintes métodos para inscrever dispositivos utilizando contas DEM:
+
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Inscrições a granel dos dispositivos Windows](windows-bulk-enroll.md)
 - DEM iniciado via Portal da Empresa
 
 ## <a name="add-a-device-enrollment-manager"></a>Adicionar um gestor de inscrição de dispositivos
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**os gestores**de inscrição de **dispositivos** > **de dispositivos de inscrição** > de dispositivos .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os **gestores**de inscrição de  >  **dispositivos de dispositivos de**  >  **inscrição**de dispositivos .
 
 2. Selecione **Adicionar**.
 
@@ -73,6 +75,6 @@ A remoção de um gestor de inscrição de dispositivos não afeta os dispositiv
 
 **Para remover um gestor de inscrição de dispositivos**
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**os gestores**de inscrição de **dispositivos** > **de dispositivos de inscrição** > de dispositivos .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os **gestores**de inscrição de  >  **dispositivos de dispositivos de**  >  **inscrição**de dispositivos .
 2. No painel **Gestores de inscrições de dispositivos**, selecione o gestor de inscrição de dispositivos e selecione **Eliminar**.
 

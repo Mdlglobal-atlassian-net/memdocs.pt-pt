@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2517c9f548489e33488c2f4b37de3b5a910d8dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 019cd47a469f8a19713f56805350e0e99119013a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332465"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267863"
 ---
 # <a name="microsoft-intune-licensing"></a>Licenciamento Microsoft Intune
 O Microsoft Intune está disponível para diferentes necessidades de clientes e tamanhos de organização, desde uma experiência de gestão simples para escolas e pequenas empresas, até funcionalidades mais avançadas exigidas pelos clientes da empresa. A maioria das licenças que incluem o Microsoft Intune também concedem os direitos de utilização do Microsoft Endpoint Configuration Manager, desde que a subscrição permaneça ativa. Um administrador deve ter uma licença atribuída para administrar intune.
@@ -34,6 +34,7 @@ Intune está incluído nas seguintes licenças:
 - Enterprise Mobility + Security E5
 - Enterprise Mobility + Security E3
 - Microsoft 365 Empresas
+- Microsoft 365 F1
 - Microsoft 365 F3
 - Microsoft 365 Governo G5
 - Microsoft 365 Governo G3
