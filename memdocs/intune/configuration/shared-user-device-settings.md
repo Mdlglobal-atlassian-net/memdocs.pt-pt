@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1a11d9b41d17935d9c74490aabb5b983d04b4e1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333041"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401530"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Controle o acesso, contas e funcionalidades de potência em dispositivos de PC ou multiutilizadores partilhados utilizando o Intune
 
@@ -43,21 +43,42 @@ Quando o perfil é criado em Intune, implementa ou atribui o perfil a grupos de 
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
+
+   - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+   - **Perfil**: Selecione **dispositivo multiutilizador partilhado**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
    - **Nome**: introduza um nome descritivo para o novo perfil.
    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-   - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-   - **Tipo de perfil**: Selecione **dispositivo multiutilizador partilhado**.
 
-4. Configure as definições para [windows 10 e posteriormente](shared-user-device-settings-windows.md) ou [Windows Holographic para Negócios](shared-user-device-settings-windows-holographic.md).
+6. Selecione **Seguinte**.
+7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Escolha a sua plataforma para configurações detalhadas:
 
-5. Selecione **OK** > **Criar** para guardar as suas alterações.
+    - [Windows 10 e posterior](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-O teu perfil é criado e mostrado na lista, mas ainda não está a fazer nada. Certifique-se de [atribuir o perfil](device-profile-assign.md) a grupos de dispositivos na sua organização.
+8. Selecione **Seguinte**.
+
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Tarefas,** selecione o grupo de dispositivos que receberá o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+    > [!NOTE]
+    > Certifique-se de atribuir o perfil a grupos de dispositivos na sua organização.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+Da próxima vez que cada dispositivo entrar, a apólice é aplicada.
 
 ## <a name="next-steps"></a>Passos seguintes
 
 - Consulte todas as definições para [windows 10 e mais recente](shared-user-device-settings-windows.md) e Windows [Holographic para Negócios](shared-user-device-settings-windows-holographic.md).
-- [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
+- Depois de atribuído o [perfil,](device-profile-assign.md) [monitorize o seu estado](device-profile-monitor.md).

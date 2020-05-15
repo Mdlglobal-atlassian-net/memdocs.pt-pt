@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: a702532b08f199c561677785877195502455ebab
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022692"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406749"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Utilize as definições do Canal de Atualização e da Versão target para atualizar o Office 365 com modelos administrativos intune da Microsoft
 
@@ -44,7 +44,7 @@ Certifique-se de [ativar as atualizações automáticas das aplicações microso
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Defina o Canal de Atualização no modelo administrativo Intune
 
-1. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-the-template)vá à definição do **Canal de Atualização** e introduza o canal que deseja. Por exemplo, `Semi-Annual Channel`escolha:
+1. No seu [modelo administrativo Intune,](administrative-templates-windows.md#create-the-template)vá à definição do **Canal de Atualização** e introduza o canal que deseja. Por exemplo, `Semi-Annual Channel` escolha:
 
     > [!div class="mx-imgBorder"]
     > ![No modelo administrativo intune, defina a definição do Canal de Atualização para o Office](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
@@ -62,17 +62,17 @@ Certifique-se de [ativar as atualizações automáticas das aplicações microso
 Depois de atribuir a apólice e os sincronizados do dispositivo, pode confirmar a aplicação da política:
 
 1. No dispositivo, abra a aplicação **Registry Editor.**
-2. Ir para o caminho `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`político intune: .
+2. Ir para o caminho político intune: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates` .
 
     > [!TIP]
-    > A `<Provider ID>` chave do registo muda. Para encontrar o ID do fornecedor para o seu dispositivo, abra a aplicação **Registry Editor** e vá para `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled`. O ID do fornecedor é mostrado.
+    > A `<Provider ID>` chave do registo muda. Para encontrar o ID do fornecedor para o seu dispositivo, abra a aplicação **Registry Editor** e vá para `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled` . O ID do fornecedor é mostrado.
 
     Quando a apólice é aplicada, consulte as seguintes teclas de registo:
 
     - `L_UpdateBranch`
     - `L_UpdateTargetVersion`
 
-    Olhando para o exemplo `L_UpdateBranch` seguinte, vê-se que tem um valor semelhante ao `<enabled /><data id="L_UpdateBranchID" value="Deferred" />`de . Este valor significa que está definido para o Canal Semi-Anual:
+    Olhando para o exemplo seguinte, vê-se `L_UpdateBranch` que tem um valor semelhante ao de `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` . Este valor significa que está definido para o Canal Semi-Anual:
 
     > [!div class="mx-imgBorder"]
     > ![Modelo administrativo L_Updatebranch exemplo chave do registo](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
@@ -91,23 +91,23 @@ Neste momento, a política Intune é aplicada com sucesso ao dispositivo.
 ## <a name="check-the-office-registry-keys"></a>Verifique as chaves do registo do Escritório
 
 1. No dispositivo, abra a aplicação **Registry Editor.**
-2. Ir para o caminho `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`político do Escritório: .
+2. Ir para o caminho político do Escritório: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` .
 
     Veja as seguintes chaves de registo:
 
     - `UpdateChannel`: Uma chave dinâmica que muda, dependendo das definições configuradas.
     - `CDNBaseUrl`: Definir quando o Office 365 instalar no aparelho.
 
-3. Olhe `UpdateChannel` para o valor. O valor diz-lhe com que frequência o Office é atualizado. [Gerir as Aplicações Microsoft 365 com O Gestor](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) de Configuração lista os valores e o que estão definidos.
+3. Olhe para o `UpdateChannel` valor. O valor diz-lhe com que frequência o Office é atualizado. [Gerir as Aplicações Microsoft 365 com O Gestor](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) de Configuração lista os valores e o que estão definidos.
 
-    Olhando para o seguinte `UpdateChannel` exemplo, `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`vê-se definido para, que é **mensalmente:**
+    Olhando para o seguinte exemplo, `UpdateChannel` vê-se definido `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` para, que é **mensalmente:**
 
     > [!div class="mx-imgBorder"]
     > ![Modelo administrativo Office UpdateChannel exemplo de chave de registo](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Este exemplo significa que a política ainda não foi aplicada, uma vez que ainda está definida para **mensalmente**, em vez de **semi-anual**.
 
-Esta chave de registo é atualizada quando o Gabinete de **Tarefas** > Atualiza**ções automáticas 2.0,** ou quando um utilizador entra no dispositivo. Para confirmar, abra as **Atualizações Automáticas do Office 2.0** tarefa > **Gatilhos**. Dependendo dos seus gatilhos, pode demorar pelo menos `UpdateChannel` um dia e mais até que a chave de registo seja atualizada.
+Esta chave de registo é atualizada quando o Gabinete de **Tarefas**Atualiza  >  **ções automáticas 2.0,** ou quando um utilizador entra no dispositivo. Para confirmar, abra as **Atualizações Automáticas do Office 2.0** tarefa > **Gatilhos**. Dependendo dos seus gatilhos, pode demorar pelo menos um dia e mais até que a chave de `UpdateChannel` registo seja atualizada.
 
 ## <a name="force-office-automatic-updates-to-run"></a>Atualizações automáticas do Force Office para executar
 
@@ -116,22 +116,22 @@ Para testar a sua política, pode forçar as definições de política no dispos
 1. Limpe a chave do registo:
 
     1. Aceda a `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Updates`.
-    2. Selecione `UpdateDetectionLastRunTime` duas vezes a tecla, elimine os dados de valor > **OK**.
+    2. Selecione duas vezes a `UpdateDetectionLastRunTime` tecla, elimine os dados de valor > **OK**.
 
 2. Executar a tarefa de Atualizações Automáticas do Office:
 
     1. Abra a aplicação **'Agendar de Tarefas'** no dispositivo.
-    2. Expandir o Programador de **Tarefas Biblioteca** > **Microsoft** > **Office**.
-    3. Selecione **Atualizações Automáticas de Escritório 2.0** > **Executar:**
+    2. Expandir o Programador de **Tarefas Biblioteca**  >  **Microsoft**  >  **Office**.
+    3. Selecione **Atualizações Automáticas de Escritório 2.0**  >  **Executar:**
 
         > [!div class="mx-imgBorder"]
         > ![Agenda de tarefas abertas e executar atualizações automáticas do Office](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Aguarde a tarefa para terminar, o que pode levar alguns minutos.
 
-3. Na aplicação **Registry Editor,** vá a `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`. Verifique `UpdateChannel` o valor.
+3. Na aplicação **Registry Editor,** vá a `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` . Verifique o `UpdateChannel` valor.
 
-    Deve ser atualizado com o valor estabelecido na política. No nosso exemplo, o valor `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`deve ser fixado para .
+    Deve ser atualizado com o valor estabelecido na política. No nosso exemplo, o valor deve ser fixado para `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` .
 
 Neste ponto, o canal de atualização do Office é alterado com sucesso no dispositivo. Pode abrir uma aplicação office 365 para um utilizador que recebe esta atualização para verificar o estado.
 
@@ -162,7 +162,7 @@ Considere utilizar estes passos para testar a sua política antes de implementar
 
 1. Na aplicação **Registry Editor,** vá para`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`
 
-2. Olhe `L_UpdateTargetVersion` para o valor. Uma vez que a apólice se aplique, o valor `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />`é definido para a versão que introduziu, tais como .
+2. Olhe para o `L_UpdateTargetVersion` valor. Uma vez que a apólice se aplique, o valor é definido para a versão que introduziu, tais como `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />` .
 
     Neste momento, a política Intune é aplicada com sucesso ao dispositivo.
 
@@ -170,8 +170,8 @@ Considere utilizar estes passos para testar a sua política antes de implementar
 
     A atualização leva vários minutos. Pode confirmar que o Office está a tentar obter a versão em que entra:
 
-      1. No dispositivo, vá `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`para .
-      2. Abra `VersionDescriptor.xml` o ficheiro e `<Version>` vá para a secção. A versão disponível deve ser a mesma versão que inscreveu na política Intune, tais como:
+      1. No dispositivo, vá para `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version` .
+      2. Abra o `VersionDescriptor.xml` ficheiro e vá para a `<Version>` secção. A versão disponível deve ser a mesma versão que inscreveu na política Intune, tais como:
 
           > [!div class="mx-imgBorder"]
           > ![Verifique a secção de versão no ficheiro descritor do Office XML](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)

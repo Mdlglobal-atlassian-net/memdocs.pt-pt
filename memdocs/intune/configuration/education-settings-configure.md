@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 476f0c3ef058c1c051ce3b571adec5d48787ee0e
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333093"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401716"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Utilize a aplicação Take a Test em dispositivos Windows 10 no Microsoft Intune
-
-
 
 Os perfis de educação em Intune são projetados para que os alunos faça um teste ou exame em dispositivos. Esta funcionalidade inclui a aplicação **Take a Test** e as definições para adicionar um URL de teste, escolher como os utilizadores finais se inscrevem no teste, e muito mais. Esta funcionalidade suporta a seguinte plataforma:
 
@@ -39,24 +37,39 @@ Este artigo lista os passos para criar um perfil de configuração do dispositiv
 ## <a name="create-a-device-profile"></a>Criar um perfil de dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
+
+    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+    - **Perfil**: Selecione **avaliação segura (Educação)**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: introduza um nome descritivo para o novo perfil.
     - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: selecione **Windows 10 e posterior**.
-    - **Perfil**: Escolha **o perfil de Educação**.
 
-4. Introduza as definições que pretende configurar:
+6. Selecione **Seguinte**.
+7. Nas definições de **Configuração,** introduza as definições que pretende configurar:
 
     - [Windows 10 e posterior](education-settings-windows.md)
 
-5. Selecione **OK** > **Criar** para guardar as suas alterações.
+8. Selecione **Seguinte**.
 
-Após introduzir as suas definições e criar o perfil, este será apresentado na lista de perfis. Em seguida, [atribua este perfil a alguns grupos](device-profile-assign.md).
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupo de utilizadores que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+Da próxima vez que cada dispositivo entrar, a apólice é aplicada.
 
 ## <a name="next-steps"></a>Passos seguintes
 
 Consulte uma lista das definições de [educação do Windows 10](education-settings-windows.md) e respetivas descrições.
 
-[Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
+Depois de atribuído o [perfil,](device-profile-assign.md) [monitorize o seu estado](device-profile-monitor.md).

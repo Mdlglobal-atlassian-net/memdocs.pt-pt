@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3de08fd1b7369e2a7038bd6698af3d1608c006be
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086455"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401766"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Utilize um perfil de dispositivo personalizado para criar um perfil Wi-Fi com uma chave pré-partilhada no Intune
 
@@ -49,15 +49,20 @@ Esta funcionalidade suporta:
 ## <a name="create-a-custom-profile"></a>Criar um perfil personalizado
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
+
+    - **Plataforma**: Escolha a sua plataforma.
+    - **Perfil**: Selecione **Personalizado**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é definições de **perfil Wi-Fi Personalizado oMA-URI para dispositivos de administrador**de dispositivos Android .
     - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Escolha a sua plataforma.
-    - **Tipo de perfil**: Selecione **Personalizado**.
 
-4. Em **Definições,** **selecione Adicionar**. Introduza um novo cenário OMA-URI com as seguintes propriedades:
+6. Selecione **Seguinte**.
+7. Nas **definições de Configuração,** selecione **Adicionar**. Introduza um novo cenário OMA-URI com as seguintes propriedades:
 
     1. **Nome**: Introduza um nome para a definição OMA-URI.
     2. **Descrição**: Introduza uma descrição para a definição OMA-URI. Esta definição é opcional, mas recomendada.
@@ -69,15 +74,27 @@ Esta funcionalidade suporta:
         > [!NOTE]
         > Certifique-se de que inclui o caráter de ponto no início.
 
-        A SSID é a SSID para a qual estás a criar a apólice. Por exemplo, se o Wi-Fi for nomeado, `Hotspot-1`introduza `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        A SSID é a SSID para a qual estás a criar a apólice. Por exemplo, se o Wi-Fi for `Hotspot-1` nomeado, introduza `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings` .
 
     4. **Tipo de dados**: Selecione **string**.
 
     5. **Valor**: Colar o seu código XML. Veja os [exemplos](#android-or-windows-wi-fi-profile-example) deste artigo. Atualize cada valor para corresponder às suas definições de rede. A secção de comentários do código inclui algumas indicações.
+    6. Selecione **Adicionar** para guardar as suas alterações.
 
-5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
+8. Selecione **Seguinte**.
 
-O seu perfil está na lista de perfis. Em seguida, [atribua este perfil](device-profile-assign.md) aos seus grupos de utilizadores. Esta política só pode ser atribuída a grupos de utilizadores.
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupo de utilizadores que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    > [!NOTE]
+    > Esta política só pode ser atribuída a grupos de utilizadores.
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
 Da próxima vez que cada dispositivo for registado, a política será aplicada e será criado um perfil Wi-Fi no dispositivo. Assim, o dispositivo poderá ligar à rede automaticamente.
 
@@ -89,7 +106,7 @@ O seguinte exemplo inclui o código XML de um perfil Android ou Wi-Fi do Windows
 
 - `<protected>false</protected>` tem de ser definido como **falso**. Se estiver definido como **verdadeiro**, poderá fazer com que o dispositivo espere uma palavra-passe encriptada e, em seguida, tente decifrá-la, o que poderá resultar numa falha de ligação.
 
-- `<hex>53534944</hex>` deve estar definido para o valor hexadecimal de `<name><SSID of wifi profile></name>`. Os dispositivos do Windows `x87D1FDE8 Remediation failed` 10 podem devolver um erro falso, mas o dispositivo ainda contém o perfil.
+- `<hex>53534944</hex>` deve estar definido para o valor hexadecimal de `<name><SSID of wifi profile></name>`. Os dispositivos do Windows 10 podem devolver um `x87D1FDE8 Remediation failed` erro falso, mas o dispositivo ainda contém o perfil.
 
 - XML tem caracteres especiais, como o `&` (ampersand). A utilização de caracteres especiais pode impedir que o XML funcione como esperado. 
 
@@ -228,11 +245,11 @@ O exemplo seguinte inclui o código XML de um perfil de Wi-Fi baseado em EAP: o 
 Também pode criar um ficheiro XML a partir de uma ligação Wi-Fi existente. Num computador Windows, utilize os seguintes passos:
 
 1. Crie uma pasta local para os perfis W-Fi exportados, como c:\WiFi.
-2. Abra um pedido de comando como `cmd`  > administrador (clique direito **Executar como administrador**).
+2. Abra um pedido de comando como administrador (clique direito `cmd`  >  **Executar como administrador**).
 3. Execute `netsh wlan show profiles`. Os nomes de todos os perfis estão listados.
-4. Execute `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Este comando cria `Wi-Fi-YourProfileName.xml` um ficheiro chamado c:\Wifi.
+4. Execute `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Este comando cria um ficheiro chamado `Wi-Fi-YourProfileName.xml` c:\Wifi.
 
-    - Se estiver a exportar um perfil Wi-Fi que inclua `key=clear` uma chave pré-partilhada, adicione ao comando:
+    - Se estiver a exportar um perfil Wi-Fi que inclua uma chave pré-partilhada, adicione `key=clear` ao comando:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 

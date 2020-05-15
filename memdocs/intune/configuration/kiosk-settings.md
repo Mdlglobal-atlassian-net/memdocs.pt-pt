@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a56aa9f1953a1886b0736c5a3d1c0bfbd10853a1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359162"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401540"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Windows 10 e Windows Holographic para configurações de dispositivos empresariais funcionam como um quiosque dedicado usando Intune
 
@@ -42,33 +42,49 @@ Este artigo mostra-lhe como criar um perfil de configuração do dispositivo. Pa
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
+
+   - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+   - **Perfil**: Selecione **Quiosque**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
    - **Nome**: introduza um nome descritivo para o novo perfil.
    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
-   - **Plataforma**: selecione **Windows 10 e posterior**
-   - **Tipo de perfil**: Selecione **Quiosque**
 
-4. Em **Definições,** selecione um **modo de quiosque**. O **modo de quiosque** identifica o tipo de modo de quiosque suportado pela política. As opções incluem:
+6. Selecione **Seguinte**.
+7. Em **configurações de configuração**  >  **Selecione um modo de quiosque,** escolha o tipo de modo de quiosque suportado pela apólice. As opções incluem:
 
-    - **Não configurado** (predefinição): a política não ativa o modo de quiosque.
+    - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição. A apólice não permite o modo de quiosque.
     - **Quiosque de uma aplicação de ecrã inteiro**: o dispositivo é executado como uma única conta de utilizador e bloqueia-a para uma única aplicação da Loja. Quando o utilizador inicia sessão, é iniciada uma aplicação específica. Este modo também impede que o utilizador abra novas aplicações ou mude a aplicação em execução.
     - **Quiosque de várias aplicações**: o dispositivo executa várias aplicações da Loja, aplicações Win32 ou aplicações do Windows da caixa de entrada através do ID do Modelo de Utilizador da Aplicação (AUMID). Apenas as aplicações que adicionar estarão disponíveis no dispositivo.
 
         A vantagem de um quiosque de várias aplicações ou dispositivos de objetivo fixo é o facto de proporcionar uma experiência fácil de compreender pelos utilizadores através do acesso às aplicações de que precisam. E, removendo também da sua visão as aplicações de que não precisam.
 
     Para uma lista de todas as configurações, e o que fazem, veja:
+
       - [Definições de quiosque do Windows 10](kiosk-settings-windows.md)
       - [Windows Holographic para configurações de quiosque de negócios](kiosk-settings-holographic.md)
 
-5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
+8. Selecione **Seguinte**.
 
-O perfil é criado e mostrado na lista de perfis. Em seguida, [atribua](device-profile-assign.md) o perfil.
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupo de utilizadores que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+Da próxima vez que cada dispositivo entrar, a apólice é aplicada.
 
 ## <a name="next-steps"></a>Passos seguintes
 
-[Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
+Depois de atribuído o [perfil,](device-profile-assign.md) [monitorize o seu estado](device-profile-monitor.md).
 
 Pode criar perfis de quiosque para dispositivos que executem as seguintes plataformas:
 

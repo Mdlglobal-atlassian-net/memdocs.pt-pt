@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b7c75d75b6afef728b23093dd4313f1c028fc5c7
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333109"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401735"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Atualize as edições do Windows 10 ou desliga o modo S em dispositivos que utilizem o Microsoft Intune
-
-
 
 Como parte da sua solução de gestão de dispositivos móveis (MDM), poderá querer atualizar os seus dispositivos Windows 10. Por exemplo, pretende atualizar os seus dispositivos Profissionais windows 10 para o Windows 10 Enterprise. Ou, quer que o dispositivo desliga do modo S.
 
@@ -97,24 +95,40 @@ A seguinte tabela indica os caminhos de atualização suportados para o perfil d
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
-    - **Nome**: introduza um nome descritivo para o novo perfil. Por exemplo, insira algo como `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode`.
-    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
     - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil**: **Atualização Select Edition**.
-    - **Definições**: Introduza as definições que pretende configurar. Para uma lista de todas as configurações, e o que fazem, veja:
+    - **Perfil**: **Atualização selectedition**.
 
-        - [Atualização do Windows 10 e modo S](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
-4. Selecione **OK** > **Criar** para guardar as suas alterações.
+    - **Nome**: introduza um nome descritivo para o novo perfil. Por exemplo, insira algo como `Windows 10 edition upgrade profile` ou `Windows 10 switch off S mode` .
+    - **Descrição**: Introduza uma descrição para o perfil. Esta definição é opcional, mas recomendada.
 
-O perfil é criado e mostrado na lista. Certifique-se de [atribuir o perfil](device-profile-assign.md) e monitorizar [o seu estado](device-profile-monitor.md).
+6. Selecione **Seguinte**.
+7. Nas definições de **Configuração,** introduza as definições que pretende configurar. Para uma lista de todas as configurações, e o que fazem, veja:
+
+    - [Atualização do Windows 10 e modo S](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
+
+8. Selecione **Seguinte**.
+
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupo de utilizadores que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+Da próxima vez que cada dispositivo entrar, a apólice é aplicada.
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+Depois de atribuído o [perfil,](device-profile-assign.md) [monitorize o seu estado](device-profile-monitor.md).
 
-Ver as definições de upgrade e modo S para [windows 10](edition-upgrade-windows-settings.md) e [Windows Holographic para](holographic-upgrade.md) dispositivos Business.
+Consulte as definições de upgrade e modo S para [windows 10](edition-upgrade-windows-settings.md) e [Windows Holographic para](holographic-upgrade.md) dispositivos Business.

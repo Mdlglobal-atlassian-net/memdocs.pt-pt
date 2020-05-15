@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79e6f8c7b4501f0f15d00b094d7d90ad66225dd9
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086997"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401773"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurar perfis celulares eSIM no Intune – pré-visualização pública
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Configure perfis celulares eSIM em Intune (pré-visualização pública)
 
 O eSIM é um chip SIM incorporado e permite-lhe ligar-se à Internet através de uma ligação de dados celular num dispositivo compatível com eSIM, como o [Surface Pro LTE](https://www.microsoft.com/surface/business/surface-pro). Com um eSIM, não precisa de obter um cartão SIM junto do seu operador de rede móvel. Enquanto viajante global, pode também alternar entre operadores de redes móveis e planos de dados para estar sempre ligado.
 
@@ -75,7 +75,7 @@ Os seguintes dispositivos foram anunciados como sendo compatíveis com eSIM ou e
 Os códigos de ativação celulares são fornecidos pela sua operadora de rede móvel num ficheiro separado por vírgulas (CSV). Quando tiver este ficheiro, adicione-o ao Intune ao seguir os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **eSIM perfis celulares** > **Adicionar**.
+2. Selecione **Dispositivos**  >  **eSIM perfis celulares**  >  **Adicionar**.
 3. Selecione o ficheiro CSV que contém os seus códigos de ativação.
 4. Selecione **OK** para guardar as alterações.
 
@@ -97,11 +97,11 @@ Ao trabalhar com o ficheiro CSV que contém os códigos de ativação, certifiqu
     1. Na primeira coluna, encontra-se o ICCID exclusivo (o identificador do chip SIM)
     2. Na segunda coluna, encontra-se o ID Correspondente, com apenas uma vírgula a separá-los (e nenhuma vírgula no final). Veja o seguinte exemplo:
 
-        ![Ficheiro CSV de exemplo de códigos de ativação da operadora de rede móvel](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Ficheiro csv de código de ativação do operador móvel.":::
 
 3. O nome do ficheiro csv torna-se o nome da piscina de subscrição celular no centro de administração do Endpoint Manager. Na imagem anterior, o nome do ficheiro é `UnlimitedDataSkynet.csv`. Por isso, o Intune denomina o conjunto de subscrições `UnlimitedDataSkynet.csv`:
 
-    ![O nome do ficheiro CSV de exemplo de códigos de ativação torna-se o nome do conjunto de subscrições celulares](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="O pool de subscrição celular é nomeado o nome de ficheiro csv da amostra de código de ativação.":::
 
 ## <a name="step-2-create-an-azure-ad-device-group"></a>Passo 2: criar um grupo de dispositivos do Azure AD
 
@@ -116,11 +116,11 @@ Crie um grupo de Dispositivos que inclua os dispositivos compatíveis com eSIM. 
 Atribua o perfil ao grupo do Azure AD que inclui os seus dispositivos eSIM.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **eSIM perfis celulares**.
+2. Selecione **Dispositivos**  >  **eSIM perfis celulares**.
 3. Na lista de perfis, selecione o conjunto de subscrições celulares eSIM que pretende atribuir e, em seguida, selecione **Atribuições**.
 4. Opte por **Incluir** ou **Excluir** grupos e, em seguida, selecione os grupos.
 
-    ![Incluir o grupo de dispositivos para atribuir o perfil](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Inclua o grupo de dispositivos para atribuir o perfil no Microsoft Intune.":::
 
 5. Ao selecionar os seus grupos, estará a escolher um grupo do Azure AD. Para selecionar múltiplos grupos, utilize a tecla **Ctrl** e selecione os grupos.
 6. Quando terminar, selecione **Guardar** para guardar as suas alterações.
@@ -134,14 +134,14 @@ Os códigos de ativação eSIM são utilizados uma vez. Após o Intune instalar 
 Após atribuir o perfil, pode monitorizar o estado da implementação de um conjunto de subscrições.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **eSIM perfis celulares**. Estão listados todos os seus conjuntos de subscrições celulares eSIM.
+2. Selecione **Dispositivos**  >  **eSIM perfis celulares**. Estão listados todos os seus conjuntos de subscrições celulares eSIM.
 3. Selecione uma subscrição e reveja o **Estado da Implementação**.
 
 ### <a name="check-the-profile-status"></a>Verificar o estado do perfil
 
 Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes gráficos apresentam o estado de um perfil, como a atribuição com êxito a dispositivos ou se o perfil mostra um conflito.
 
-1. Selecione Os**perfis celulares eSIM** dos **Dispositivos** > > Selecione uma subscrição existente.
+1. Selecione **Os perfis**  >  **celulares eSIM** dos Dispositivos > Selecione uma subscrição existente.
 2. No separador **Descrição Geral**, o gráfico geográfico na parte superior mostra o número de dispositivos atribuídos à implementação específica do conjunto de subscrições celulares eSIM.
 
     Também mostra o número de dispositivos de outras plataformas que são atribuídos ao mesmo perfil do dispositivo.
@@ -157,7 +157,7 @@ Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes
 
 Pode monitorizar e ver uma lista detalhada dos dispositivos em Estado do Dispositivo.**
 
-1. Selecione Os**perfis celulares eSIM** dos **Dispositivos** > > Selecione uma subscrição existente.
+1. Selecione **Os perfis**  >  **celulares eSIM** dos Dispositivos > Selecione uma subscrição existente.
 2. Selecione **Estado do Dispositivo**. O Intune mostra detalhes adicionais sobre o dispositivo:
 
     - **Nome do Dispositivo**: o nome do dispositivo direcionado.
@@ -170,10 +170,10 @@ Pode monitorizar e ver uma lista detalhada dos dispositivos em Estado do Disposi
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorizar os detalhes do perfil eSIM no dispositivo real
 
 1. No seu dispositivo, abra as **Definições** > aceda a **Rede e Internet**.
-2. Selecione **perfis eSIM de** > **Gestão** Celular
+2. Selecione **perfis**  >  **eSIM de Gestão** Celular
 3. Os perfis eSIM estão listados:
 
-    ![Ver os perfis eSIM nas definições do seu dispositivo](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Veja os perfis eSIM nas definições do seu dispositivo.":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>Remover o perfil eSIM do dispositivo
 
@@ -197,4 +197,5 @@ O perfil eSIM também será removido quando o dispositivo for [extinto](../remot
   - **Cellular activation failure, contact mobile operator (Falha na ativação celular, contacte a operadora de rede móvel)**: o código de ativação poderá não estar ativado na rede. Também é possível que a ativação celular e a transferência do perfil tenham falhado.
 
 ## <a name="next-steps"></a>Passos seguintes
+
 [Configurar perfis de dispositivo](device-profiles.md)

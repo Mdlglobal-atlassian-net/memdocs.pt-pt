@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 71929e59e4447340d26516c8caec6beb2b3612f3
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327442"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406433"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Criar um perfil de dispositivo no Microsoft Intune
 
@@ -44,7 +44,7 @@ Os perfis são criados no centro de administração do [Microsoft Endpoint Manag
 - **Por plataforma**: Crie e veja políticas e perfis pela sua plataforma. Esta vista também pode mostrar funcionalidades específicas da plataforma. Por exemplo, selecione **Windows**. Verá funcionalidades específicas do Windows, tais como Os Anéis de **Atualização do Windows 10** e **os scripts PowerShell**.
 - **Política**: Criar perfis de dispositivos, carregar [scripts PowerShell personalizados](../apps/intune-management-extension.md) para executar em dispositivos e adicionar planos de dados aos dispositivos que utilizem [eSIM](esim-device-configuration.md).
 
-Quando criar um perfil **(Perfis** > de configuração**Criar perfil),** escolha a sua plataforma:
+Quando criar um perfil **(Perfis**de configuração  >  **Criar perfil),** escolha a sua plataforma:
 
 - **Administrador de dispositivos Android**
 - **Android Enterprise**
@@ -92,7 +92,7 @@ Por exemplo, se selecionar **iOS/iPadOS** para a plataforma, as opções do tipo
 
 ## <a name="scope-tags"></a>Scope tags (Etiquetas de âmbito)
 
-Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito ao perfil. As etiquetas de âmbito filtram perfis `US-NC IT Team` `JohnGlenn_ITDepartment`para grupos de TI específicos, tais como ou . E são usados em TI distribuídos.
+Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito ao perfil. As etiquetas de âmbito filtram perfis para grupos de TI específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment` . E são usados em TI distribuídos.
 
 Para obter mais informações sobre etiquetas de âmbito e o que pode fazer, veja [Utilizar RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
 
@@ -111,7 +111,7 @@ Para fazer esta tarefa, crie uma regra de **aplicabilidade.** Estas regras são 
 
 Para abordar estes cenários, você:
 
-- Crie um grupo de dispositivos que inclua todos os dispositivos no Bellows College. No perfil, adicione uma regra de aplicabilidade para que se `16299` aplique se `17134`a versão mínima do SO for e a versão máxima for . Atribuir este perfil ao grupo de dispositivos da Escola Bellows.
+- Crie um grupo de dispositivos que inclua todos os dispositivos no Bellows College. No perfil, adicione uma regra de aplicabilidade para que se aplique se a versão mínima do SO for `16299` e a versão máxima for `17134` . Atribuir este perfil ao grupo de dispositivos da Escola Bellows.
 
   Quando é atribuído, o perfil aplica-se a dispositivos entre as versões mínima seleções mínimas e máximas que introduz. Para dispositivos que não estejam entre as versões mínima seleção e o máximo que introduz, o seu estado mostra **que não**é aplicável .
 
@@ -144,7 +144,7 @@ Ao atribuir o perfil aos grupos, as regras de aplicabilidade funcionam como um f
     - **Edição OS**: Na lista, consulte as edições do Windows 10 que pretende incluir (ou excluir) na sua regra.
     - **Versão OS**: Introduza os números da versão **min** e **max** Windows 10 que pretende incluir (ou excluir) na sua regra. Ambos os valores são necessários.
 
-      Por exemplo, pode `10.0.16299.0` introduzir (RS3 ou 1709) para versão mínima e `10.0.17134.0` (RS4 ou 1803) para versão máxima. Ou, pode ser mais granular e `10.0.16299.001` `10.0.17134.319` entrar para versão mínima e para versão máxima.
+      Por exemplo, pode introduzir `10.0.16299.0` (RS3 ou 1709) para versão mínima e `10.0.17134.0` (RS4 ou 1803) para versão máxima. Ou, pode ser mais granular e entrar `10.0.16299.001` para versão mínima e para versão `10.0.17134.319` máxima.
 
 4. Selecione **Adicionar** para guardar as suas alterações.
 
@@ -163,7 +163,7 @@ Ao criar perfis, considere as seguintes recomendações:
   Alguns exemplos de perfil de configuração incluem:
 
   **Nome do perfil**: Modelo de administrador - perfil de configuração OneDrive para todos os utilizadores do Windows 10  
-  **Descrição do perfil**: Perfil de modelo de administrador OneDrive que inclui as definições mínimas e base para todos os utilizadores do Windows 10. Criado user@contoso.com para impedir que os utilizadores partilhem dados organizacionais para contas pessoais do OneDrive.
+  **Descrição do perfil**: Perfil de modelo de administrador OneDrive que inclui as definições mínimas e base para todos os utilizadores do Windows 10. Criado para user@contoso.com impedir que os utilizadores partilhem dados organizacionais para contas pessoais do OneDrive.
 
   **Nome do perfil**: Perfil VPN para todos os utilizadores iOS/iPadOS  
   **Descrição do perfil**: Perfil VPN que inclui as definições mínimas e base para todos os utilizadores iOS/iPadOS para ligar à VPN Contoso. Criado user@contoso.com si os utilizadores autenticam automaticamente a VPN, em vez de pedir em que os utilizadores se instem com o seu nome de utilizador e palavra-passe.
@@ -174,7 +174,7 @@ Ao criar perfis, considere as seguintes recomendações:
 
 - Separe as políticas de utilizador das políticas do dispositivo.
 
-  Por exemplo, os [modelos administrativos em Intune](administrative-templates-windows.md) têm centenas de configurações ADMX. Estes modelos mostram se uma definição se aplica aos utilizadores ou dispositivos. Ao criar modelos de administração, atribua as definições dos seus utilizadores a um grupo de utilizadores e atribua as definições do seu dispositivo a um grupo de dispositivos.
+  Por exemplo, os [modelos administrativos em Intune](administrative-templates-windows.md) têm milhares de configurações ADMX. Estes modelos mostram se uma definição se aplica aos utilizadores ou dispositivos. Ao criar modelos de administração, atribua as definições dos seus utilizadores a um grupo de utilizadores e atribua as definições do seu dispositivo a um grupo de dispositivos.
 
   A imagem que se segue mostra um exemplo de uma definição que pode aplicar-se aos utilizadores e/ou aplicar-se aos dispositivos:
 

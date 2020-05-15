@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc7718675ec408d15fe5c8dadc2d00f7d105d413
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536935"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401737"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Configurar a Rede Privada Virtual (VPN) por aplicação para dispositivos iOS/iPadOS em Intune
 
@@ -71,11 +71,11 @@ Crie ou escolha um grupo existente no Azure Ative Directory (Azure AD) para os u
 Importe o certificado de raiz do servidor VPN emitido pela AC para um perfil criado no Intune. O perfil de certificado fidedigno instrui o dispositivo iOS/iPadOS a confiar automaticamente no CA que o servidor VPN apresenta.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **iOS/iPadOS**.
-    - **Tipo de perfil**: Selecione **certificado fidedigno**.
+    - **Perfil**: Selecione **certificado fidedigno**.
 
 4. Selecione **Criar**.
 5. No Básico, insira as **seguintes**propriedades:
@@ -108,12 +108,12 @@ Certifique-se de configurar o certificado para autenticação do cliente. Pode d
 
 O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do cliente, as informações de ligação VPN e a bandeira VPN por app que permite a VPN por app utilizada pela aplicação iOS/iPadOS.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de configuração de **Devices**  >  **dispositivos**  >  **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **iOS/iPadOS**.
-    - **Tipo de perfil**: Selecione **VPN**.
+    - **Perfil**: Selecione **VPN**.
 
 4. Selecione **Criar**.
 5. No Básico, insira as **seguintes**propriedades:
@@ -135,7 +135,7 @@ O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do clie
 
     Para obter informações sobre as outras definições, consulte [as definições de VPN iOS/iPadOS](vpn-settings-ios.md).
 
-    - **Automatic VPN** > **VPN automática tipo de VPN automática VPN** > **Por app VPN**
+    - **VPN**  >  automática **Tipo de VPN**  >  automática **VPN por app**
 
       > [!div class="mx-imgBorder"]
       > ![Intune, defina vpn automática para VPN por app em dispositivos iOS/iPadOS](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
@@ -146,16 +146,16 @@ O perfil VPN inclui o certificado SCEP ou PKCS que possui as credenciais do clie
 
 Depois de adicionar o perfil VPN, associe a aplicação e o grupo do Azure AD ao perfil.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > **Todas as aplicações**.
-2. Selecione uma aplicação da lista > **Properties** > **Assignments** > **Add grupo**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps**Todas  >  **as aplicações**.
+2. Selecione uma aplicação da lista > **Properties**  >  **Assignments**  >  **Add grupo**.
 3. No **tipo de Atribuição,** selecione **Necessário** ou **Disponível para dispositivos matriculados**.
-4. Selecione **Grupos Incluídos** > **Selecione grupos para incluir** > Selecione o grupo que [criou](#create-a-group-for-your-vpn-users) (neste artigo) > **Selecione**.
+4. Selecione **grupos**  >  **incluídos Selecione grupos para incluir** > Selecione o grupo que [criou](#create-a-group-for-your-vpn-users) (neste artigo) > **Selecione**.
 5. Em **VPNs,** selecione o perfil VPN por app [que criou](#create-a-per-app-vpn-profile) (neste artigo).
 
     > [!div class="mx-imgBorder"]
     > ![Atribuir uma aplicação ao perfil VPN por app no Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
 
-6. Selecione **OK** > **Guardar**.
+6. Selecione **OK**  >  **Guardar**.
 
 Uma associação entre uma aplicação e um perfil é removida durante o check-in do próximo dispositivo, quando todas as seguintes condições existem:
 

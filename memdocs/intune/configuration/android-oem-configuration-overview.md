@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254848"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401591"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utilizar e gerir dispositivos Android Enterprise com OEMConfig no Microsoft Intune
 
@@ -79,11 +79,11 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
 ## <a name="create-an-oemconfig-profile"></a>Criar um perfil OEMConfig
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **empresa Android**.
-    - **Tipo de perfil**: Selecione **OEMConfig**.
+    - **Perfil**: Selecione **OEMConfig**.
 
 4. Selecione **Criar**.
 5. No Básico, insira as **seguintes**propriedades:
@@ -103,7 +103,7 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
 8. Nas **definições de Configuração,** selecione o designer de **configuração** ou **o editor JSON:**
 
     > [!TIP]
-    > Leia a documentação do OEM para se certificar de que está a configurar corretamente as propriedades. Estas propriedades da aplicação estão incluídas pelo OEM, não pelo Intune. Intune faz a validação mínima das propriedades, ou do que você entra. Por exemplo, se `abcd` introduzir um número de porta, o perfil economiza como está e é implantado nos seus dispositivos com os valores que configura. Certifique-se de introduzir a informação correta.
+    > Leia a documentação do OEM para se certificar de que está a configurar corretamente as propriedades. Estas propriedades da aplicação estão incluídas pelo OEM, não pelo Intune. Intune faz a validação mínima das propriedades, ou do que você entra. Por exemplo, se introduzir um número de `abcd` porta, o perfil economiza como está e é implantado nos seus dispositivos com os valores que configura. Certifique-se de introduzir a informação correta.
 
     - **Designer de configuração**: Quando selecionar esta opção, as propriedades disponíveis dentro do esquema da aplicação são mostradas para que possa configurar.
 
@@ -126,7 +126,7 @@ Certifique-se de que o dispositivo suporta o OEMConfig, a aplicação OEMConfig 
     Quaisquer alterações feitas no designer de configuração também são feitas automaticamente no editor da JSON. Da mesma forma, quaisquer alterações feitas no editor da JSON são feitas automaticamente no designer de configuração. Se a sua entrada contiver valores inválidos, não pode alternar entre o designer de configuração e o editor jSON até corrigir os problemas.
 
 9. Selecione **Seguinte**.
-10. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+10. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -169,7 +169,7 @@ Em comparação com as aplicações padrão, as aplicações OEMConfig expandem 
 
 -----------------
 
-Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na tabela acima, `IntuneOEMConfig@microsoft.com`ou não aparece na consola Intune, e-mail .
+Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na tabela acima, ou não aparece na consola Intune, e-mail `IntuneOEMConfig@microsoft.com` .
 
 > [!NOTE]
 > As aplicações OEMConfig devem embarcar pela Intune antes de poderem ser configuradas com perfis OEMConfig. Uma vez que uma aplicação é suportada, você não precisa contactar a Microsoft sobre a configuração no seu inquilino. Basta seguir as instruções nesta página.

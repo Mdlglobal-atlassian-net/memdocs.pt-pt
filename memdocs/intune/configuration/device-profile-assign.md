@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aac4bf355724194e55f55bd89b66426487d50427
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078282"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401677"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Atribuir perfis de utilizador e dispositivo no Microsoft Intune
 
@@ -44,11 +44,11 @@ Certifique-se de que tem o papel adequado para atribuir perfis. Para mais inform
 ## <a name="assign-a-device-profile"></a>Atribuir um perfil do dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração**de **dispositivos** > . Todos os perfis são apresentados.
+2. Selecione **perfis**de configuração de  >  **dispositivos**. Todos os perfis são apresentados.
 3. Selecione o perfil que quer atribuir > **Atribuições**.
 4. Escolha **Incluir** ou **Excluir** grupos e, em seguida, selecione os grupos. Ao selecionar os seus grupos, estará a escolher um grupo do Azure AD. Para selecionar vários grupos, mantenha premida a tecla **Ctrl** e selecione os grupos.
 
-    ![Captura de ecrã das opções para incluir ou excluir grupos de uma atribuição de perfis](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot de opções para incluir ou excluir grupos de uma atribuição de perfil no Microsoft Intune":::
 
 5. **Guarde** as suas alterações.
 
@@ -56,8 +56,8 @@ Certifique-se de que tem o papel adequado para atribuir perfis. Para mais inform
 
 Quando atribui o perfil, também pode **Avaliar** quantos utilizadores são afetados. Esta funcionalidade calcula os utilizadores, mas não calcula os dispositivos.
 
-1. No centro de administração, selecione perfis de**configuração**de **dispositivos** > .
-2. Selecione um perfil > **Atribuições** > **Avaliar**. É apresentada uma mensagem que mostra a quantidade de utilizadores visados por este perfil.
+1. No centro de administração, selecione **perfis**de configuração de  >  **dispositivos**.
+2. Selecione um perfil > **Atribuições**  >  **Avaliar**. É apresentada uma mensagem que mostra a quantidade de utilizadores visados por este perfil.
 
 Se o botão **Avaliar** ficar cinzento, verifique se o perfil foi atribuído a um ou mais grupos.
 
@@ -65,7 +65,7 @@ Se o botão **Avaliar** ficar cinzento, verifique se o perfil foi atribuído a u
 
 Quando cria ou atualiza um perfil, também pode adicionar etiquetas de âmbito e regras de aplicabilidade ao perfil.
 
-**As etiquetas** de âmbito são uma ótima maneira `US-NC IT Team` de `JohnGlenn_ITDepartment`filtrar perfis para grupos específicos, tais como ou . Para obter mais informações, veja [Utilizar o RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
+**As etiquetas** de âmbito são uma ótima maneira de filtrar perfis para grupos específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment` . Para obter mais informações, veja [Utilizar o RBAC e etiquetas de âmbito para TI distribuídas](../fundamentals/scope-tags.md).
 
 Nos dispositivos Windows 10, pode adicionar regras de **aplicabilidade** para que o perfil se aplique apenas a uma versão oS específica ou a uma edição específica do Windows. As regras de [aplicabilidade](device-profile-create.md#applicability-rules) têm mais informações.
 
@@ -109,7 +109,7 @@ Como uma boa prática, crie e atribua perfis especificamente para os seus grupos
 
 Ao atribuir os seus perfis, utilize a tabela seguinte ao incluir e excluir grupos. Uma marca de verificação significa que a atribuição é suportada:
 
-![Opções suportadas incluem ou excluem grupos de uma atribuição de perfil](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Opções suportadas incluem ou excluem grupos de uma atribuição de perfil":::
 
 ### <a name="what-you-should-know"></a>O que deve saber
 

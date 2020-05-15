@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333029"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401800"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Políticas e perfis de resolução de problemas e em Intune
 
@@ -39,12 +39,12 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
 
 1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Troubleshooting + suporte**:
 
-    ![Intune, vá para Ajuda e Suporte, e selecione Troubleshoot](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="No endpoint management administrador center e Intune, vá a Troubleshooting e suporte.":::
 
 2. **Escolha selecionar** o utilizador > selecione o utilizador com um problema > **Selecione**.
 3. Confirme que a **Licença Intune** e **o Status da Conta** mostram ambos cheques verdes:
 
-    ![Intune, selecione o utilizador e confirme o estado da conta e a licença Intune mostrar marcas de verificações verdes para o estado](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="Em Intune, selecione o utilizador e confirme o estado da conta e a licença Intune mostrar marcas de verificações verdes para o estado.":::
 
     **Links úteis:**
 
@@ -79,7 +79,7 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
             - No dispositivo Android, abra a aplicação do Portal da Empresa > **Dispositivos** > Escolha o dispositivo da lista > **verificar as definições**do dispositivo .
             - No dispositivo iOS/iPadOS, abra a aplicação portal da Empresa > **Dispositivos** > Escolha o dispositivo da lista > **Verificar Definições**.
 
-        - Num dispositivo Windows, abra **as** > **Contas** > de**Acesso a Trabalho ou > Escola** Selecione a conta ou inscrição do MDM > **Info** > **Sync**.
+        - Num dispositivo Windows, abra **as**Contas de  >  **Accounts**  >  **Acesso a Trabalho ou > Escola** Selecione a conta ou inscrição do MDM > **Info**  >  **Sync**.
 
     - Selecione o dispositivo para ver informações específicas da política.
 
@@ -104,7 +104,7 @@ Verifique o [Estado do Inquilino](../fundamentals/tenant-status.md) e confirme q
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Não tem a certeza se um perfil é corretamente aplicado
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **Todos os dispositivos** > selecione a **configuração**do dispositivo > dispositivo . 
+2. Selecione **Dispositivos**  >  **Todos os dispositivos** > selecione a **configuração**do dispositivo > dispositivo . 
 
     Todos os dispositivos listam os seus perfis. Cada perfil tem um **Status**. O estado aplica-se quando todos os perfis atribuídos, incluindo restrições e requisitos de hardware e SO, são considerados em conjunto. Os estatutos possíveis incluem:
 
@@ -142,7 +142,7 @@ Os dispositivos Windows 10 não podem remover as políticas de segurança quando
 
 Dependendo da plataforma do dispositivo, se quiser alterar a apólice para um valor menos seguro, poderá ter de redefinir as políticas de segurança.
 
-Por exemplo, no Windows 8.1, no ambiente de trabalho, passe pela direita para abrir a barra **de Charms.** Escolha as contas do utilizador**do Painel** > de Controlo de **Definições** > .**User Accounts** No lado esquerdo, selecione a ligação **Repor Políticas de Segurança** e escolha **Repor Políticas**.
+Por exemplo, no Windows 8.1, no ambiente de trabalho, passe pela direita para abrir a barra **de Charms.** Escolha **as**contas do utilizador do Painel de  >  **Controlo**de  >  **Definições**. No lado esquerdo, selecione a ligação **Repor Políticas de Segurança** e escolha **Repor Políticas**.
 
 Outras plataformas, como o Android, iOS/iPadOS e Windows Phone 8.1, poderão ter de ser reformadas e reinscritas para aplicar uma política menos restritiva.
 
@@ -155,7 +155,7 @@ Outras plataformas, como o Android, iOS/iPadOS e Windows Phone 8.1, poderão ter
 
 ### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Erros relacionados com políticas do Microsoft Intune no policyplatform.log
 
-No caso de PCs do Windows geridos com `policyplatform.log` o cliente de software Intune, os erros de política no ficheiro podem ser provenientes de definições não predefinidas no Controlo de Conta de Utilizador do Windows (UAC) no dispositivo. Algumas definições de UAC não predefinidas podem afetar as instalações de cliente do Microsoft Intune e a execução de políticas.
+No caso de PCs do Windows geridos com o cliente de software Intune, os erros de política no `policyplatform.log` ficheiro podem ser provenientes de definições não predefinidas no Controlo de Conta de Utilizador do Windows (UAC) no dispositivo. Algumas definições de UAC não predefinidas podem afetar as instalações de cliente do Microsoft Intune e a execução de políticas.
 
 #### <a name="resolve-uac-issues"></a>Resolver problemas de UAC
 

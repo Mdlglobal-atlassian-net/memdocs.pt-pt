@@ -1,11 +1,11 @@
 ---
 title: Utilizar modelos para dispositivos Windows 10 no Microsoft Intune - Azure Microsoft Docs
-description: Utilize modelos administrativos no Microsoft Intune e Endpoint Manager para criar grupos de definições para dispositivos Windows 10. Utilize estas definições num perfil de configuração do dispositivo para controlar os programas do Office, microsoft Edge, funcionalidades seguras no Internet Explorer, controlar o acesso ao OneDrive, utilizar funcionalidades remotas de ambiente de trabalho, ativar o Auto-Play, definir definições de gestão de energia, utilizar a impressão HTTP, utilizar diferentes opções de entrada do utilizador e controlar o tamanho do registo do evento.
+description: Utilize modelos administrativos no Microsoft Intune e Endpoint Manager para criar grupos de definições para dispositivos Windows 10. Utilize estas definições num perfil de configuração do dispositivo para controlar os programas do Office, Microsoft Edge, Secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use http printing, controle o registo do utilizador e altere o tamanho do registo do evento.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: b77f823d60871288505257fc1aaec5d7959165be
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254899"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406469"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Utilize os modelos do Windows 10 para configurar as definições de política de grupo no Microsoft Intune
 
 Ao gerir dispositivos na sua organização, pretende criar grupos de configurações que se aplicam a diferentes grupos de dispositivos. Por exemplo, tem vários grupos de dispositivos. Para o GrupoA, pretende atribuir um conjunto específico de definições. Para o GrupoB, pretende atribuir um conjunto diferente de configurações. Também deseja uma visão simples das definições que pode configurar.
 
-Pode completar esta tarefa utilizando **modelos administrativos** no Microsoft Intune. Os modelos administrativos incluem centenas de configurações que controlam funcionalidades na versão 77 do Microsoft Edge e posteriormente, O Internet Explorer, programas do Microsoft Office, desktop remoto, OneDrive, palavras-passe e PINs, e muito mais. Estas configurações permitem aos administradores do grupo gerir as políticas do grupo utilizando a nuvem.
+Pode completar esta tarefa utilizando **modelos administrativos** no Microsoft Intune. Os modelos administrativos incluem milhares de configurações que controlam funcionalidades na versão 77 do Microsoft Edge e posteriormente, O Internet Explorer, programas do Microsoft Office, desktop remoto, OneDrive, palavras-passe, PINs e muito mais. Estas configurações permitem aos administradores do grupo gerir as políticas do grupo utilizando a nuvem.
 
 Esta funcionalidade aplica-se a:
 
@@ -48,7 +48,7 @@ Este artigo lista os passos para criar um modelo para dispositivos Windows 10 e 
 ## <a name="create-the-template"></a>Criar o modelo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
@@ -62,27 +62,27 @@ Este artigo lista os passos para criar um modelo para dispositivos Windows 10 e 
 
 6. Selecione **Seguinte**.
 
-7. Nas definições de **configuração,** configure as definições que se aplicam ao dispositivo ( configuração do**computador)** e as definições que se aplicam aos utilizadores **(configuração do utilizador):**
+7. Nas definições de **Configuração,** selecione **Todas as definições** para ver uma lista alfabética de todas as definições. Ou configurar configurações que se aplicam aos dispositivos **(configuração do computador)** e definições que se aplicam aos utilizadores **(configuração do utilizador):**
 
     > [!div class="mx-imgBorder"]
     > ![Aplicar as definições do modelo ADMX aos utilizadores e dispositivos no Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. Quando selecionar a configuração do **Computador,** as categorias de definição são mostradas. Pode selecionar qualquer categoria para ver as definições disponíveis.
-
-    Por exemplo, selecione **a configuração** > do Computador**Windows Aplicações** > **Internet Explorer** para ver todas as definições do dispositivo que se aplicam ao Internet Explorer:
-
-    > [!div class="mx-imgBorder"]
-    > ![Consulte todas as definições do dispositivo que se aplicam ao Internet Explorer no Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. Também pode selecionar **Todas as definições** para ver todas as definições do dispositivo. Desloque-se para baixo para utilizar as setas antes e as próximas para ver mais definições:
+8. Quando selecionar **Todas as definições,** todas as definições estão listadas. Desloque-se para baixo para utilizar as setas antes e as próximas para ver mais definições:
 
     > [!div class="mx-imgBorder"]
     > ![Consulte uma lista de definições de amostrae use botões anteriores e próximos](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
-10. Selecione qualquer definição. Por exemplo, filtrar no **Office**, e selecionar **Ativar a navegação restrita**. É mostrada uma descrição detalhada da definição. Escolha **ativado,** **desativado,** ou deixe a definição como **Não configurada** (predefinido). A descrição detalhada também explica o que acontece quando escolhe **Ativado,** **Desativado**ou **Não configurado**.
+9. Selecione qualquer definição. Por exemplo, filtrar no **Office**, e selecionar **Ativar a navegação restrita**. É mostrada uma descrição detalhada da definição. Escolha **ativado,** **desativado,** ou deixe a definição como **Não configurada** (predefinido). A descrição detalhada também explica o que acontece quando escolhe **Ativado,** **Desativado**ou **Não configurado**.
 
     > [!TIP]
-    > As definições do Windows em Intune correlacionaram-se com o caminho`gpedit`de política do grupo no local que você vê no Editor de Política do Grupo Local ( )
+    > As definições do Windows em Intune correlacionaram-se com o caminho de política do grupo no local que você vê no Editor de Política do Grupo Local ( `gpedit` )
+
+10. Quando selecionar a **configuração** do Computador ou **a configuração**do Utilizador, as categorias de definição são mostradas. Pode selecionar qualquer categoria para ver as definições disponíveis.
+
+    Por exemplo, selecione **a configuração do Computador**Windows  >  **Windows components**  >  **Aplicações Internet Explorer** para ver todas as definições do dispositivo que se aplicam ao Internet Explorer:
+
+    > [!div class="mx-imgBorder"]
+    > ![Consulte todas as definições do dispositivo que se aplicam ao Internet Explorer no Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
 
 11. Selecione **OK** para guardar as alterações.
 
@@ -97,14 +97,14 @@ Este artigo lista os passos para criar um modelo para dispositivos Windows 10 e 
     - E muito mais...
 
 12. Selecione **Seguinte**.
-13. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](..//fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+13. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](..//fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
 14. Em **Atribuições,** selecione o utilizador ou grupos que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
 
-    Se o perfil for atribuído aos grupos de utilizadores, as definições de ADMX configuradas aplicam-se a qualquer dispositivo que o utilizador inscreva e instem. Se o perfil for atribuído a grupos de dispositivos, as definições de ADMX configuradas aplicam-se a qualquer utilizador que assine nesse dispositivo. Esta atribuição acontece se a definição`HKEY_LOCAL_MACHINE`ADMX for uma`HKEY_CURRENT_USER`configuração de computador ( ou uma configuração do utilizador ). Com algumas definições, uma definição de computador atribuída a um utilizador também pode ter impacto na experiência de outros utilizadores nesse dispositivo.
-    
+    Se o perfil for atribuído aos grupos de utilizadores, as definições de ADMX configuradas aplicam-se a qualquer dispositivo que o utilizador inscreva e instem. Se o perfil for atribuído a grupos de dispositivos, as definições de ADMX configuradas aplicam-se a qualquer utilizador que assine nesse dispositivo. Esta atribuição acontece se a definição ADMX for uma configuração de computador ( ou uma configuração do `HKEY_LOCAL_MACHINE` utilizador `HKEY_CURRENT_USER` ). Com algumas definições, uma definição de computador atribuída a um utilizador também pode ter impacto na experiência de outros utilizadores nesse dispositivo.
+
     Para mais informações, consulte [grupos de utilizadores vs. grupos de dispositivos](device-profile-assign.md#user-groups-vs-device-groups).
 
     Selecione **Seguinte**.
@@ -115,16 +115,22 @@ Da próxima vez que o dispositivo verificar as atualizações de configuração,
 
 ## <a name="find-some-settings"></a>Encontre algumas definições
 
-Existem centenas de configurações disponíveis nestes modelos. Para facilitar a procura de configurações específicas, utilize as características incorporadas:
+Existem milhares de configurações disponíveis nestes modelos. Para facilitar a procura de configurações específicas, utilize as características incorporadas:
 
-- No seu modelo, selecione as colunas **Definições**, **Estado**, **Definição**ou **Caminho** para classificar a lista. Por exemplo, selecione a coluna **Path** e utilize `Microsoft Excel` a seta seguinte para ver as definições no caminho:
+- No seu modelo, selecione as colunas **Definições**, **Estado**, **Definição**ou **Caminho** para classificar a lista. Por exemplo, selecione a coluna **Path** e utilize a seta seguinte para ver as definições no `Microsoft Excel` caminho.
 
-- No seu modelo, utilize a caixa **de pesquisa** para encontrar configurações específicas. Pode pesquisar por definição ou caminho. Por exemplo, procure `copy`. Todas as `copy` definições com são mostradas:
+- No seu modelo, utilize a caixa **de pesquisa** para encontrar configurações específicas. Pode pesquisar por definição ou caminho. Por exemplo, selecione **Todas as definições**, e procure `copy` por . Todas as definições com `copy` são mostradas:
 
   > [!div class="mx-imgBorder"]
   > ![Procure cópia para mostrar todas as definições do dispositivo em modelos administrativos em Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
-  Noutro exemplo, `microsoft word`procure. Veja as definições que pode definir para o programa Microsoft Word. Procure `explorer` ver as definições do Internet Explorer que pode adicionar ao seu modelo.
+  Noutro exemplo, `microsoft word` procure. Veja as definições que pode definir para o programa Microsoft Word. Procure `explorer` ver as definições do Internet Explorer que pode adicionar ao seu modelo.
+
+- Também pode reduzir a sua pesquisa selecionando apenas a **configuração** do Computador ou **do Utilizador**.
+
+  Por exemplo, para ver todas as definições de utilizador do Internet Explorer disponíveis, selecione **a configuração do Utilizador**, e procure por `Internet Explorer` . Apenas são apresentadas as definições IE aplicáveis aos utilizadores:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="No modelo ADMX, selecione a configuração do utilizador e procure ou filtre para o Internet Explorer no Microsoft Intune.":::
 
 ## <a name="next-steps"></a>Passos seguintes
 

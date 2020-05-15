@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 207b3983c214ad4e166ae58ea0ccd18ea23bf418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b2fd0bac1532b20aac35d36a24831c658f24761
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333113"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401646"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Configuração Domain Junte as definições para dispositivos híbridos Azure AD em Microsoft Intune
 
@@ -39,15 +39,20 @@ Este artigo mostra-lhe como criar um perfil de adesão de domínio para uma impl
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
+
+    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
+    - **Perfil**: Selecione **'Select Domain Join' (pré-visualização)**.
+
+4. Selecione **Criar**.
+5. No Básico, insira as **seguintes**propriedades:
 
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **Windows 10: Perfil de adesão de domínio do domínio do domínio que inclui informações de domínio no local para inscrever dispositivos híbridos ad com o Windows Autopilot**.
     - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
-    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil:** Selecione **'Selecionar A dispor de domínio' (pré-visualização)**.
 
-4. Selecione **Definições**. Introduza as seguintes propriedades:
+6. Selecione **Seguinte**.
+7. Nas definições de **Configuração,** introduza as seguintes propriedades:
 
     - **Prefixo de nome do computador**: Introduza um prefixo para o nome do dispositivo. Os nomes do computador têm 15 caracteres. Após o prefixo, os restantes 15 caracteres são gerados aleatoriamente.
     - **Nome de domínio**: Introduza o nome de domínio totalmente qualificado (FQDN) os dispositivos devem aderir. Por exemplo, inserir`americas.corp.contoso.com.`
@@ -55,12 +60,22 @@ Este artigo mostra-lhe como criar um perfil de adesão de domínio para uma impl
 
       Para obter mais informações e conselhos sobre esta definição, consulte [dispositivos híbridos azure ad- joined](../enrollment/windows-autopilot-hybrid.md).
 
-5. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
+8. Selecione **Seguinte**.
 
-O perfil é criado e mostrado na lista de perfis. Está agora pronto para [implementar dispositivos híbridos azure ad-join, utilizando Intune e Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+
+    Selecione **Seguinte**.
+
+10. Em **Atribuições,** selecione os utilizadores ou grupo de utilizadores que receberão o seu perfil. Para obter mais informações sobre a atribuição de perfis, consulte os perfis de [utilizador e dispositivo de atribuição](device-profile-assign.md).
+
+    Selecione **Seguinte**.
+
+11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
+
+Está agora pronto para [implementar dispositivos híbridos azure ad-join, utilizando Intune e Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Depois que o perfil é criado, está pronto para ser atribuído. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+Depois de [atribuído](device-profile-assign.md)o perfil, [monitorize o seu estado](device-profile-monitor.md).
 
 [Implemente dispositivos híbridos de AD com](../enrollment/windows-autopilot-hybrid.md)a utilização de Intune e Windows Autopilot .
