@@ -60,12 +60,51 @@
           href: actions-for-noncompliance.md
         - name: Monitorizar a conformidade do dispositivo
           href: compliance-policy-monitor.md
-    - name: Encriptar dispositivos
+    - name: Endpoint security (Segurança de pontos finais)
+      href: endpoint-security.md
       items:
-        - name: Encriptar Dispositivos
-          href: encrypt-devices.md
-        - name: Monitor device encryption (Monitorizar encriptação de dispositivos)
-          href: encryption-monitor.md
+        - name: Gerir dispositivos
+          href: endpoint-security-manage-devices.md
+        - name: Linhas de base de segurança
+          items:
+            - name: Linhas de base de segurança
+              href: security-baselines.md
+            - name: Monitorizar as linhas de base
+              href: security-baselines-monitor.md
+        - name: Tarefas de segurança
+          href: atp-manage-vulnerabilities.md
+        - name: Política de segurança
+          items:
+            - name: Manage security policies (Gerir políticas de segurança)
+              href: endpoint-security-policy.md
+            - name: Antivírus
+              href: endpoint-security-antivirus-policy.md
+            - name: Disk encryption (Encriptação de discos)
+              href: endpoint-security-disk-encryption-policy.md
+            - name: Firewall
+              href: endpoint-security-firewall-policy.md
+            - name: Endpoint detection and response (Deteção e resposta de pontos finais)
+              href: endpoint-security-edr-policy.md
+            - name: Attack surface reduction (Redução da superfície de ataque)
+              href: endpoint-security-asr-policy.md
+            - name: Account protection (Proteção de contas)
+              href: endpoint-security-account-protection-policy.md
+        - name: Microsoft Defender ATP
+          href: advanced-threat-protection.md
+        - name: Encriptar discos
+          items:
+            - name: Gerir a política BitLocker
+              href: encrypt-devices.md
+            - name: Manage FileVault policy (Gerir a política FileVault)
+              href: encrypt-devices-filevault.md
+            - name: Monitorizar encriptação de discos
+              href: encryption-monitor.md
+    - name: Proteção de identidade
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Proteção de identidade
+          href: identity-protection-configure.md
     - name: Acesso Condicional
       items:
         - name: Conditional Access overview (Descrição geral do Acesso Condicionado)
@@ -87,100 +126,76 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL e Intune
           href: app-modern-authentication-block.md
-        - name: Jamf Pro para macOS
-          items:
-            - name: Use the Jamf Cloud connector (Utilizar o Jamf Cloud Connector)
-              href: conditional-access-jamf-cloud-connector.md
-            - name: Manually integrate Jamf with Intune (Integrar manualmente o Jamf no Intune)
-              href: conditional-access-integrate-jamf.md
-            - name: Impor a conformidade em Macs geridos com o Jamf Pro
-              href: conditional-access-assign-jamf.md
-    - name: Proteção Contra Ameaças
-      items:
-        - name: Defesa Contra Ameaças para Dispositivos Móveis
-          href: mobile-threat-defense.md
-          items:
-            - name: MTD em dispositivos não inscritos
-              items:
-                - name: Adicionar aplicações MTD a dispositivos não inscritos
-                  href: mtd-add-apps-unenrolled-devices.md
-                - name: Criar uma política de proteção de aplicações MTD
-                  href: mtd-app-protection-policy.md
-                - name: Ativar a MTD em dispositivos não inscritos
-                  href: mtd-enable-unenrolled-devices.md
-            - name: MTD em dispositivos inscritos
-              items:
-                - name: Adicionar aplicações MTD a dispositivos inscritos
-                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
-                - name: Criar uma política de conformidade MTD do dispositivo
-                  href: mtd-device-compliance-policy-create.md
-                - name: Ativar a MTD em dispositivos inscritos
-                  href: mtd-connector-enable.md
-            - name: Aplicações MTD
-              items:
-                - name: Configurar o Better Mobile
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Better Mobile e do Intune
-                      href: better-mobile-mtd-connector-integration.md
-                      displayName: sso
-                - name: Configurar o Check Point
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Check Point e do Intune
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Configurar o Lookout
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Lookout e do Intune
-                      href: lookout-mtd-connector-integration.md
-                - name: Configurar o Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Pradeo e do Intune
-                      href: pradeo-mtd-connector-integration.md
-                - name: Configurar o Sophos Mobile
-                  href: sophos-mtd-connector.md
-                  items:
-                    - name: Integração do Sophos Mobile e do Intune
-                      href: sophos-mtd-connector-integration.md
-                - name: Configurar o Symantec
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Symantec e do Intune
-                      href: skycure-mtd-connector-integration.md
-                - name: Set up Wandera (Configurar o Wandera)
-                  href: wandera-mtd-connector.md
-                  items:
-                    - name: Wandera and Intune integration (Integração do Wandera e do Intune)
-                      href: wandera-mtd-connector-integration.md
-                - name: Configurar o Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integração do Zimperium e do Intune
-                      href: zimperium-mtd-connector-integration.md
-        - name: Microsoft Defender
-          items:
-            - name: Microsoft Defender ATP
-              href: advanced-threat-protection.md
-            - name: Tarefas de segurança
-              href: atp-manage-vulnerabilities.md
-    - name: Linhas de base de segurança
-      items:
-        - name: Linhas de base de segurança
-          href: security-baselines.md
-        - name: Monitorizar as linhas de base
-          href: security-baselines-monitor.md
+        - name: Integrar o Jamf Pro com o Intune para conformidade
+          href: conditional-access-integrate-jamf.md
+        - name: Impor a conformidade em Macs geridos com o Jamf Pro
+          href: conditional-access-assign-jamf.md
     - name: Proteção de ponto final
       href: endpoint-protection-configure.md
+    - name: Parceiros de Defesa Contra Ameaças a Dispositivos Móveis
+      href: mobile-threat-defense.md
+      items:
+        - name: MTD em dispositivos não inscritos
+          items:
+            - name: Adicionar aplicações MTD a dispositivos não inscritos
+              href: mtd-add-apps-unenrolled-devices.md
+            - name: Criar uma política de proteção de aplicações MTD
+              href: mtd-app-protection-policy.md
+            - name: Ativar a MTD em dispositivos não inscritos
+              href: mtd-enable-unenrolled-devices.md
+        - name: MTD em dispositivos inscritos
+          items:
+            - name: Adicionar aplicações MTD a dispositivos inscritos
+              href: mtd-apps-ios-app-configuration-policy-add-assign.md
+            - name: Criar uma política de conformidade MTD do dispositivo
+              href: mtd-device-compliance-policy-create.md
+            - name: Ativar a MTD em dispositivos inscritos
+              href: mtd-connector-enable.md
+        - name: Aplicações MTD
+          items:
+            - name: Configurar o Better Mobile
+              href: better-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Better Mobile e do Intune
+                  href: better-mobile-mtd-connector-integration.md
+                  displayName: sso
+            - name: Configurar o Check Point
+              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Check Point e do Intune
+                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Configurar o Lookout
+              href: lookout-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Lookout e do Intune
+                  href: lookout-mtd-connector-integration.md
+            - name: Configurar o Pradeo
+              href: pradeo-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Pradeo e do Intune
+                  href: pradeo-mtd-connector-integration.md
+            - name: Configurar o Sophos Mobile
+              href: sophos-mtd-connector.md
+              items:
+                - name: Integração do Sophos Mobile e do Intune
+                  href: sophos-mtd-connector-integration.md
+            - name: Configurar o Symantec
+              href: skycure-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Symantec e do Intune
+                  href: skycure-mtd-connector-integration.md
+            - name: Set up Wandera (Configurar o Wandera)
+              href: wandera-mtd-connector.md
+              items:
+                - name: Wandera and Intune integration (Integração do Wandera e do Intune)
+                  href: wandera-mtd-connector-integration.md
+            - name: Configurar o Zimperium
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Integração do Zimperium e do Intune
+                  href: zimperium-mtd-connector-integration.md
     - name: Controlo de acesso à rede
       href: network-access-control-integrate.md
-    - name: Windows Hello
-      items:
-        - name: Windows Hello
-          href: windows-hello.md
-        - name: Proteção de identidade
-          href: identity-protection-configure.md
     - name: Certificados
       items:
         - name: Utilizar certificados para autenticação
@@ -257,13 +272,8 @@
           href: troubleshoot-jamf.md
 - name: Referência
   items:
-    - name: Antivirus policy settings (Definições de política de antivírus)
-      items:
-        - name: macOS Defender Antivirus settings (Definições do Antivírus do Defender para macOS)
-          href: antivirus-microsoft-defender-settings-macos.md
-        - name: Windows 10 Microsoft Defender Antivirus settings (Definições do Antivírus do Microsoft Defender para Windows 10)
-          href: antivirus-microsoft-defender-settings-windows.md
     - name: API para adicionar uma autoridade de certificação de terceiros
+      href: scep-libraries-apis.md
     - name: Definições da política de conformidade
       items:
         - name: Definições de políticas de conformidade – Android
@@ -280,7 +290,26 @@
           href: compliance-policy-create-windows-8-1.md
         - name: Definições de políticas de conformidade – Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-      href: scep-libraries-apis.md
+    - name: Definições de políticas de segurança de pontos finais
+      items:
+        - name: Antivirus policy settings (Definições de política de antivírus)
+          items:
+            - name: macOS Defender Antivirus settings (Definições do Antivírus do Defender para macOS)
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender Antivirus settings (Definições do Antivírus do Microsoft Defender para Windows 10)
+              href: antivirus-microsoft-defender-settings-windows.md
+            - name: Windows Security experience settings (Definições da experiência de Segurança do Windows)
+              href: antivirus-security-experience-windows-settings.md
+        - name: Disk encryption profile settings (Definições de perfis de encriptação de discos)
+          href: endpoint-security-disk-encryption-profile-settings.md
+        - name: Firewall policy settings (Definições de políticas de firewall)
+          href: endpoint-security-firewall-profile-settings.md
+        - name: Endpoint detection and response profile settings (Definições de perfis de deteção e resposta de pontos finais)
+          href: endpoint-security-edr-profile-settings.md
+        - name: Attack surface reduction profile settings (Definições de perfis de redução da superfície de ataque)
+          href: endpoint-security-asr-profile-settings.md
+        - name: Account protection profile settings (Definições de perfis de proteção de contas)
+          href: endpoint-security-account-protection-profile-settings.md
     - name: Definições de linhas de base de segurança
       items:
         - name: Windows 10 MDM baseline settings (Definições de linha de base de MDM do Windows 10)

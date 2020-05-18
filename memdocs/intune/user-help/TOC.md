@@ -20,6 +20,7 @@
 #### Inscrever com credenciais derivadas
 ##### [Inscrever com o Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Inscrever com o Intercede](enroll-android-device-intercede.md)
+##### [Enroll with Disa Purebred (Inscrever com o Disa Purebred)](enroll-android-device-disa-purebred.md)
 ### [Mover para uma nova configuração de gestão de dispositivos](move-to-new-device-management-setup.md)
 ### [Utilizar aplicações geridas no dispositivo](use-managed-apps-on-your-device-android.md)
 ### [Encriptar o dispositivo](encrypt-your-device-android.md)

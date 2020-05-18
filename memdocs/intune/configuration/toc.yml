@@ -82,8 +82,12 @@
         - name: StageNow logs and common issues (Registos StageNow e problemas comuns)
           href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig on Android Enterprise (OEMConfig no Android Enterprise)
-      href: android-oem-configuration-overview.md
-      displayName: 'original equipment manufacturers, schema'
+      displayName: 'original equipment manufacturers, schema, zebra, order'
+      items:
+        - name: Introdução
+          href: android-oem-configuration-overview.md
+        - name: Perfis em dispositivos Zebra
+          href: oemconfig-zebra-android-devices.md
     - name: Quiosques e dispositivos dedicados
       href: kiosk-settings.md
       displayName: 'single app, multi app'
@@ -215,7 +219,7 @@
               href: kiosk-settings-holographic.md
             - name: Dispositivo multiutilizador partilhado
               href: shared-user-device-settings-windows-holographic.md
-        - name: 'Windows 8,1'
+        - name: Windows 8.1
           items:
             - name: Restrições de dispositivos
               href: device-restrictions-windows-8-1.md
