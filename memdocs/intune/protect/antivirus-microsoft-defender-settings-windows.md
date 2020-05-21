@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802026"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430099"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Definições para a política antivírus do Microsoft Defender do Windows 10 no Microsoft Intune
 
-Ver as definições da política Antivírus que pode configurar para o perfil Antivírus Microsoft Defender para windows 10 no Microsoft Intune.
+Ver as definições de política antivírus de segurança endpoint que pode configurar para o perfil Antivírus Microsoft Defender para windows 10 no Microsoft Intune como parte de uma política de [segurança endpoint](../protect/endpoint-security-policy.md).
 
 ## <a name="cloud-protection"></a>Proteção de nuvens
 
@@ -206,7 +206,7 @@ Para cada definição deste grupo, pode expandir a definição, selecionar **Adi
   Configure o Defender para digitalizar ficheiros de arquivo, como ficheiros ZIP ou CAB.
 
   - **Não configurado** *(predefinido*) - A definição retorna ao predefinido do cliente, que é digitalizar ficheiros arquivados, no entanto o utilizador pode desativar isto.
-Saiba mais
+Saber mais
   - **Não- Arquivos** não são digitalizados. Os utilizadores do dispositivo não podem alterar esta definição.
   - **Sim** - Ativar digitalizações de ficheiros de arquivo. Os utilizadores do dispositivo não podem alterar esta definição.
 
@@ -283,7 +283,7 @@ Saiba mais
 
   Especifique o intervalo de zero a 24 (em horas) que é utilizado para verificar se há assinaturas. Um valor de zero resulta em nenhum cheque para novas assinaturas. Um valor de 2 verificará a cada duas horas, e assim por diante.
 
-## <a name="user-experience"></a>Experiência de utilizador
+## <a name="user-experience"></a>Experiência do utilizador
 
 - **Permitir o acesso do utilizador à aplicação Microsoft Defender**  
   CSP: [Permitir o acesso userui](https://go.microsoft.com/fwlink/?linkid=2114043)  

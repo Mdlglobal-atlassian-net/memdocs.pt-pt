@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078061"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709371"
 ---
 # <a name="reference-for-devices-entities"></a>Referência para as entidades de dispositivos
 
@@ -50,7 +50,7 @@ A entidade **dispositivoTypes** representa o tipo de dispositivo referenciado po
 
 ### <a name="example"></a>Exemplo
 
-| deviceTypeID  | Nome | Descrição |
+| deviceTypeID  | Name | Descrição |
 |---------|------------|--------|
 | 0 |Ambiente de trabalho |Dispositivo de Ambiente de Trabalho do Windows |
 | 1 |WindowsRT |Dispositivo WindowsRT |
@@ -170,7 +170,7 @@ A entidade **de inscriçãoType** indica se um dispositivo é corporativo, propr
 | ownerTypeName |Representa o tipo de proprietário dos dispositivos:  <br>Corporate - dispositivo é propriedade da empresa. <br>Personal: o dispositivo é propriedade pessoal (BYOD).  <br>Unknown: não existem informações sobre este dispositivo. |Corporate Personal Unknown |
 
 > [!Note]  
-> Para `ownerTypeName` o in AzureAD ao criar Grupos Dinâmicos para `deviceOwnership` `Company`dispositivos, é necessário definir o valor do filtro como . Para mais informações, consulte [Regras para dispositivos](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Para o `ownerTypeName` in AzureAD ao criar Grupos Dinâmicos para dispositivos, é necessário definir o valor do filtro `deviceOwnership` como `Company` . Para mais informações, consulte [Regras para dispositivos](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,7 +184,7 @@ A entidade **ManagementStates** fornece detalhes sobre o estado do dispositivo. 
 
 ### <a name="example"></a>Exemplo
 
-| managementStateID  | Nome | Descrição |
+| managementStateID  | Name | Descrição |
 |---------|------------|--------|
 | 0 |Geridos | Gerido sem ações remotas pendentes. |
 | 1 |RetirePending | Existe um comando de extinção pendente para o dispositivo. |
@@ -211,7 +211,7 @@ A entidade **ManagementAgentType** representa os agentes utilizados para gerir u
 
 ### <a name="example"></a>Exemplo
 
-| ManagementAgentTypeID  | Nome | Descrição |
+| ManagementAgentTypeID  | Name | Descrição |
 |---------|------------|--------|
 | 1 |EAS | O dispositivo é gerido através do Exchange Active Sync |
 | 2 |MDM | O dispositivo é gerido através de um agente MDM |
@@ -263,6 +263,11 @@ A entidade de **dispositivos** lista todos os dispositivos matriculados sob gest
 | tecnologia celular         | Tecnologia de rede móvel do dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
 | ICCD                       | Identificador de cartão de circuito integrado                                                                                                                                                     |
+| windowsOsEdition           | Edição do Sistema Operativo Windows.                                                                                                                             |
+| ethernetMacAddress           | O identificador de rede único deste dispositivo.                                                                                                                                        |
+| model                      | O modelo do dispositivo.                                                                                                                                                                      |
+| office365Version           | A versão do Office 365 que está instalada no dispositivo.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
@@ -281,4 +286,6 @@ A entidade **do dispositivoPropertyHistory** tem as mesmas propriedades que a ta
 | OSVersion                  | Versão do SO.                                                                                                                                                                          |
 | prisãoQuebrado                 | Se o dispositivo está desbloqueado por jailbreak ou rooting.                                                                                                                                         |
 | deviceCategoryKey          | Chave do atributo da categoria do dispositivo para este dispositivo. 
+| físicoMemoryInBytes      | A memória física em bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Capacidade total de armazenamento em bytes.                                                                                                                                                                |
 

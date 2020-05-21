@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538165"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690506"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Definir regras em dispositivos para permitir o acesso a recursos na sua organização através do Intune
 
@@ -86,24 +86,24 @@ Pode implementar a política de conformidade a utilizadores em grupos de utiliza
 
 O Intune também inclui um conjunto de definições de políticas de conformidade incorporadas. As seguintes políticas incorporadas são avaliadas em todos os dispositivos inscritos no Intune:
 
-- **Marcar os dispositivos sem política de conformidade atribuída como**: esta propriedade tem dois valores:
+- **Marque dispositivos sem uma política**de conformidade atribuída como : Esta é uma ação padrão para o incumprimento. esta propriedade tem dois valores:
 
   - **Conformidade** *(predefinição*): função de segurança desligada
   - **Não conforme:** funcionalidade de segurança em
 
   Se um dispositivo não tiver uma política de conformidade atribuída, então este dispositivo é considerado conforme por padrão. Se utilizar o Acesso Condicional com as políticas de conformidade, recomendamos que altere a definição predefinida para **Não conforme**. Se um utilizador final não estiver em conformidade porque não foi atribuída uma política, a [aplicação do Portal da Empresa](../apps/company-portal-app.md) mostrará `No compliance policies have been assigned`.
 
-- **Deteção melhorada da jailbreak**: Quando ativada, esta definição faz com que o estado do dispositivo quebrado na cadeia aconteça com mais frequência nos dispositivos iOS/iPadOS. Esta definição apenas afeta dispositivos que são direcionados com uma política de conformidade que bloqueia dispositivos quebrados. Ativar esta propriedade utiliza os serviços de localização do dispositivo e pode afetar o uso da bateria. Os dados de localização do utilizador não são armazenados pela Intune e são usados apenas para desencadear a deteção de jailbreak com mais frequência em segundo plano. 
+- **Deteção melhorada de jailbreak** (*Aplica-se ao iOS/iPadOS*): Quando ativada, esta definição faz com que o estado do dispositivo quebrado na cadeia ocorra com mais frequência nos dispositivos iOS/iPadOS. Esta definição apenas afeta dispositivos que são direcionados com uma política de conformidade que bloqueia dispositivos quebrados. Ativar esta propriedade utiliza os serviços de localização do dispositivo e pode afetar o uso da bateria. Os dados de localização do utilizador não são armazenados pela Intune e são usados apenas para desencadear a deteção de jailbreak com mais frequência em segundo plano. 
 
   Ativar esta definição exige que os dispositivos:
   - Ativem os serviços de localização ao nível do SO.
   - Permita sempre que o Portal da Empresa utilize serviços de localização.
 
-  A avaliação é desencadeada pela abertura da app Portal da Empresa ou movendo fisicamente o dispositivo a uma distância significativa de aproximadamente 500 metros ou mais. No iOS 13 e acima, esta funcionalidade exigirá que os utilizadores selecionem Sempre permita sempre que o dispositivo os indique para continuar a permitir que o Portal da Empresa utilize a sua localização em segundo plano. Se os utilizadores nem sempre permitirem o acesso à localização e tiverem uma política com esta definição configurada, o seu dispositivo será marcado sem conformidade. Note que Intune não pode garantir que cada alteração significativa de localização garantirá uma verificação de deteção de jailbreak, uma vez que isso depende da ligação de rede de um dispositivo no momento.
+  A deteção reforçada funciona através dos serviços de localização. A avaliação é desencadeada pela abertura da app Portal da Empresa ou movendo fisicamente o dispositivo a uma distância significativa de aproximadamente 500 metros ou mais. No iOS 13 e acima, esta funcionalidade requer que os utilizadores selecionem Sempre Permita sempre que o dispositivo os insto para continuar a permitir que o Portal da Empresa utilize a sua localização em segundo plano. Se os utilizadores nem sempre permitirem o acesso à localização e tiverem uma política com esta definição configurada, o seu dispositivo será marcado sem conformidade. Note que Intune não pode garantir que cada alteração significativa de localização garantirá uma verificação de deteção de jailbreak, uma vez que isso depende da ligação de rede de um dispositivo no momento.
 
-- **Período de validade do estado de conformidade (dias)**: introduza o período de tempo durante o qual os dispositivos devem comunicar o estado para todas as políticas de conformidade recebidas. Os dispositivos que não devolvam o estado dentro deste período de tempo são tratados como não conformes. O valor predefinido é de 30 dias. O valor mínimo é 1 dia.
+- **Período de validade do estado de conformidade (dias)**: introduza o período de tempo durante o qual os dispositivos devem comunicar o estado para todas as políticas de conformidade recebidas. Os dispositivos que não devolvam o estado dentro deste período de tempo são tratados como não conformes. O valor predefinido é de 30 dias. O valor máximo é de 120 dias. O valor mínimo é 1 dia.
 
-  Esta definição mostra como a política de conformidade por defeito **ativo** (Conformidade de**Definição**de**Monitor** > **de Dispositivos** > ). A tarefa de fundo desta política funciona uma vez por dia.
+  Esta definição mostra como a política **de** conformidade por defeito ativo (Conformidade de Definição de**Monitor de Dispositivos**  >  **Monitor**  >  **Setting compliance**). A tarefa de fundo desta política funciona uma vez por dia.
 
 Pode utilizar estas políticas incorporadas para monitorizar as definições. O Intune também [atualiza ou verifica a existência de atualizações](create-compliance-policy.md#refresh-cycle-times) com diferentes intervalos, consoante a plataforma do dispositivo. O artigo [Perguntas comuns, problemas e resoluções relativas aos perfis e políticas dos dispositivos no Microsoft Intune](../configuration/device-profile-troubleshoot.md) poder ser útil.
 
@@ -134,7 +134,7 @@ O quadro seguinte descreve como as configurações não conformes são geridas q
 - Se uma política de acesso condicional se aplicar ao utilizador, o dispositivo está bloqueado.
 - A aplicação do Portal da Empresa notifica o utilizador sobre eventuais problemas de conformidade.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Criar uma política](create-compliance-policy.md) e ver os pré-requisitos.
 - Ver as definições de conformidade para as diferentes plataformas de dispositivos:

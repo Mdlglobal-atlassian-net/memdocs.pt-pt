@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 725bdbdfc7aad5afdf1914efde8f625eb8ec6875
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943863"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429263"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gerir o acesso à web utilizando o Microsoft Edge com o Microsoft Intune
 
@@ -34,7 +34,7 @@ A utilização de políticas de proteção de aplicações Intune com o Microsof
 - **Integração de Procuração de Aplicação Azure.** Pode controlar o acesso ao software como um serviço (SaaS) apps e aplicações web. Isto ajuda a garantir que as aplicações baseadas no navegador apenas funcionam no navegador Microsoft Edge seguro, quer os utilizadores finais se conectem a partir da rede corporativa ou se conectem a partir da internet.
 - **Configuração da aplicação.** Pode utilizar as definições de configuração da aplicação para fortalecer a postura de segurança da sua organização e configurar funcionalidades de facilidade de utilização para os utilizadores finais. Por exemplo, pode definir marcadores, um atalho de página inicial, sites permitidos ou bloqueados, e procuração de aplicação de Diretório Ativo Azure (Azure AD).
 
-As políticas de proteção do Microsoft Intune para o Microsoft Edge ajudam a proteger os dados e recursos da sua organização. A utilização destas políticas com o Microsoft Edge garante que os recursos da sua empresa estão protegidos não só dentro de aplicações instaladas de forma nativa, mas também quando acedidos através do navegador web.
+As políticas de proteção do Microsoft Intune para o Microsoft Edge ajudam a proteger os dados e recursos da sua organização. A utilização destas políticas com o Microsoft Edge garante que os recursos da sua organização estão protegidos não só dentro de aplicações instaladas de forma nativa, mas também quando acedidas através do navegador web.
 
 ## <a name="getting-started"></a>Introdução
 
@@ -65,14 +65,14 @@ Pode utilizar o Azure AD Conditional Access para redirecionar os seus utilizador
 
 Para restringir aplicações web ligadas a AD Azure para usar o Microsoft Edge no iOS e Android:
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Sob o nó Intune, selecione **Acesso Condicional** > **Nova política**.
+2. Sob o nó Intune, selecione **Acesso Condicional**  >  **Nova política**.
 3. **Selecione Grant** da secção de **controlos** de acesso do painel.
 4. Selecione **Requer aplicação aprovada do cliente**.
 5. Escolha **Selecione** no painel **Grant.** Esta política tem de ser atribuída às aplicações na cloud que pretende que sejam acessíveis apenas a partir da aplicação Intune Managed Browser.
 
     ![Screenshot da política de acesso condicional - Grant](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. Na secção De Atribuição, selecione**Aplicações** **Condições** > . O painel de **Apps** aparece.
+6. Na secção De Atribuição, selecione **Aplicações Condições**  >  **Apps**. O painel de **Apps** aparece.
 7. Em **Configuração, selecione** **Sim** para aplicar a política a aplicações específicas do cliente.
 8. Certifique-se de que a opção **Browser** está selecionada como uma aplicação cliente.
 
@@ -104,7 +104,7 @@ O SSO exige que o seu dispositivo seja registado pela aplicação Microsoft Auth
 Para criar a configuração da aplicação para o Microsoft Edge:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione políticas > de**configuração**de **apps** > **Adicionar**.
+2. Selecione **políticas**de  >  **configuração**de apps  >  **Adicionar**.
 3. No painel de política de **configuração Adicionar,** introduza um **Nome** e **uma descrição** opcional para as definições de configuração da aplicação.
 4. Para o tipo de **Inscrição de dispositivos**, selecione **Aplicações geridas**.
 5. Escolha **Selecione a aplicação necessária**. Em seguida, no painel de **aplicações direcionados,** escolha o **Navegador Ou** **Edge** Gerido para iOS/iPadOS, para Android, ou para ambos.
@@ -133,7 +133,7 @@ O Microsoft Edge pode ser usado como um navegador protegido por políticas. Para
 
 |    Chave    |    Valor    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    O `true` valor irá direcionar os seus utilizadores para o download e utilização do Microsoft Edge.<br>O `false` valor permitirá que os seus utilizadores utilizem o Navegador Gerido intune.    |
+|    `com.microsoft.intune.useEdge`    |    O valor `true` irá direcionar os seus utilizadores para o download e utilização do Microsoft Edge.<br>O valor `false` permitirá que os seus utilizadores utilizem o Navegador Gerido intune.    |
 
 Se este valor **de** configuração da aplicação não for definido, a seguinte lógica definirá qual o navegador que será usado para abrir links corporativos.
 
@@ -194,16 +194,16 @@ Da mesma forma, configurar um atalho inicial, pode configurar vários atalhos de
 
 |    Chave    |    Valor    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique o conjunto de URLs de valor. Cada atalho do site superior consiste num título e URL. Separe o título `|` e a URL com o personagem. Por exemplo: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Especifique o conjunto de URLs de valor. Cada atalho do site superior consiste num título e URL. Separe o título e a URL com o `|` personagem. Por exemplo: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Configure o logótipo da sua organização e a cor da marca para novas páginas de separadores no Microsoft Edge
 
 Estas definições permitem personalizar a Nova Página de Separadores para o Microsoft Edge para mostrar o logótipo e a cor da marca da sua organização como o fundo da página.
 
 Para fazer upload do logótipo e da cor da sua organização, complete primeiro os seguintes passos:
-- Dentro do portal Azure, navegue para o [Microsoft Endpoint Manager administrador centro](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> de personalização da empresa de personalização da empresa de**personalização** -> da empresa de**localização.**
-- Para definir o logótipo da sua marca, em "Display", escolha "Apenas logotipo da empresa". Recomenda-se a consumação de logotipos de fundo transparentes. 
-- Para definir a cor de fundo da sua marca, em "Display" escolha "Cor tema". O Microsoft Edge aplica um tom mais claro da cor na Página de Novos Separadores, que garante que a página tem uma alta legibilidade. 
+- Dentro do portal Azure, navegue para [o Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)administrador do centro de administração do tenant  ->  **Administration**  ->  **Personalizization**.
+- Para definir o logótipo da sua marca, ao lado do **Show em cabeçalho,** escolha "Apenas logotipo da organização". Recomenda-se a consumação de logotipos de fundo transparentes. 
+- Para definir a cor de fundo da sua marca, selecione uma **cor tema**. O Microsoft Edge aplica um tom mais claro da cor na Página de Novos Separadores, que garante que a página tem uma alta legibilidade. 
 
 Em seguida, utilize os seguintes pares chave/valor para puxar a marca das suas organizações para o Microsoft Edge:
 
@@ -236,7 +236,7 @@ Utilize o seguinte par chave/valor para configurar os marcadores geridos:
 
 |    Chave    |    Valor    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    O valor para esta configuração é uma lista de marcadores. Cada marcador é composto pelo título de marcador e pelo URL do marcador. Separe o título `|` e a URL com o personagem.      Exemplo:<br>`Microsoft Bing|https://www.bing.com`<br>Para configurar vários marcadores, separe `||`cada par com o carácter duplo .<p>Exemplo:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    O valor para esta configuração é uma lista de marcadores. Cada marcador é composto pelo título de marcador e pelo URL do marcador. Separe o título e a URL com o `|` personagem.      Exemplo:<br>`Microsoft Bing|https://www.bing.com`<br>Para configurar vários marcadores, separe cada par com o carácter duplo `||` .<p>Exemplo:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>Exiba MyApps dentro dos favoritos do Microsoft Edge
 
@@ -276,14 +276,14 @@ Os seguintes sites são sempre permitidos independentemente das definições def
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formatos URL para lista de site permitido e bloqueado 
 Pode utilizar vários formatos DE URL para construir as listas de sites permitidos/bloqueados. Estes padrões permitidos são detalhados na tabela seguinte. Algumas notas antes de começar: 
 - Certifique-se de que prefixa todos os URLs com **http://** ou **https://** ao inseri-los na lista.
-- Pode utilizar o símbolo\*wildcard ( ) de acordo com as regras na lista de padrões permitidas a seguir.
+- Pode utilizar o símbolo wildcard ( ) de acordo com as regras na lista de \* padrões permitidas a seguir.
 - Um wildcard só pode coincidir com um componente inteiro do nome de anfitrião (separado por períodos) ou partes inteiras do caminho (separados por cortes para a frente). Por exemplo, `http://*contoso.com` **não** é suportado.
 - Pode especificar os números da porta no endereço. Se não especificar um número da porta, os valores utilizados são:
   - Porta 80 para http
   - Porta 443 para https
 - A utilização de wildcards para o número da porta **não** é suportada. Por exemplo, `http://www.contoso.com:*` e `http://www.contoso.com:*/` não são suportados. 
 
-    |    do IdP    |    Detalhes    |    Correspondências    |    Não corresponde    |
+    |    URL    |    Detalhes    |    Correspondências    |    Não corresponde    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Corresponde a uma única página    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Corresponde a uma única página    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -320,7 +320,7 @@ Utilize o seguinte par chave/valor para configurar se estas transições suaves 
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Abrir links restritos diretamente nas páginas de separadores InPrivate
 
-Pode configurar se as ligações restritas devem ser abertas diretamente na navegação InPrivate, o que proporciona aos utilizadores uma experiência de navegação mais perfeita. Isto pouparia aos utilizadores o passo de terem de transitar para o seu contexto pessoal para verem um site. A navegação inPrivate é considerada não gerida, pelo que os utilizadores não poderão aceder ao modo de navegação InPrivate.  Nota: Para que esta definição faça efeito, também `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` deve ter configurado a definição acima **verdadeiramente**.
+Pode configurar se as ligações restritas devem ser abertas diretamente na navegação InPrivate, o que proporciona aos utilizadores uma experiência de navegação mais perfeita. Isto pouparia aos utilizadores o passo de terem de transitar para o seu contexto pessoal para verem um site. A navegação inPrivate é considerada não gerida, pelo que os utilizadores não poderão aceder ao modo de navegação InPrivate.  Nota: Para que esta definição faça efeito, também deve ter configurado a definição acima `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` **verdadeiramente**.
 
 |    Chave    |    Valor    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -374,7 +374,7 @@ Se a sua organização operar numa indústria altamente regulada ou utilizar uma
 Além de bloquear a navegação inPrivate e MSA, só pode permitir a utilização do Microsoft Edge quando o utilizador estiver a iniciar sessão com a sua conta AAD. Esta funcionalidade só está disponível para utilizadores inscritos no MDM. Pode saber mais sobre configurar esta configuração aqui:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disabledFeatures`pode ser usado para desativar várias funcionalidades simultaneamente. Por exemplo, para desativar tanto `inprivate|password`o InPrivate como a password, utilize .
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures`pode ser usado para desativar várias funcionalidades simultaneamente. Por exemplo, para desativar tanto o InPrivate como a password, utilize `inprivate|password` .
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Configure microsoft Edge como uma aplicação de quiosque em dispositivos Android
 
@@ -430,6 +430,6 @@ Pode saber mais sobre configurar a configuração do modo de definição de modo
 - [Configuração android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 - [definição de iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [O que são as políticas de proteção de aplicações?](app-protection-policy.md) 

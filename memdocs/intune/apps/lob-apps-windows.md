@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: ee69e70c243ae7016cbfa2e79a6f69ae2058000d
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166643"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690648"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Adicionar aplicações de linha de negócio Windows ao Microsoft Intune
 
@@ -37,7 +37,7 @@ Uma aplicação de linha de negócio (LOB) é uma aplicação que adiciona a par
 ## <a name="select-the-app-type"></a>Selecione o tipo de aplicativo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** sob os **outros** tipos de aplicações, selecione **app Line-of-business**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 
@@ -50,7 +50,7 @@ Uma aplicação de linha de negócio (LOB) é uma aplicação que adiciona a par
    Os detalhes da aplicação serão apresentados.
 
     > [!NOTE]
-    > As extensões de ficheiros para aplicações do Windows incluem **.msi**, **.appxbundle**, **.msix**, e **.msixbundle**. **.appxbundle**  
+    > As extensões de ficheiros para aplicações do Windows incluem **.msi**, **.appxbundle**, **.msix**, e **.msixbundle**. **.appxbundle** Para mais informações sobre **.msix,** consulte [documentação MSIX](https://docs.microsoft.com/windows/msix/) e [Distribuição de Aplicações MSIX.](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise)
 
 3. Quando terminar, selecione **OK** no painel de **ficheiros** do pacote app para adicionar a aplicação.
 
@@ -99,7 +99,7 @@ A aplicação criada agora aparece na lista de aplicações. Na lista, pode atri
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Para que o serviço Intune implemente com sucesso um novo `Version` ficheiro APPX para o dispositivo, tem de aumentar a cadeia no ficheiro AppxManifest.xml no seu pacote APPX.
+   > Para que o serviço Intune implemente com sucesso um novo ficheiro APPX para o dispositivo, tem de aumentar a `Version` cadeia no ficheiro AppxManifest.xml no seu pacote APPX.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Configurar uma aplicação MSI móvel de atualização automática para ignorar o processo de verificação da versão
 
@@ -109,7 +109,7 @@ Algumas aplicações baseadas em instaladores MSI são automaticamente atualizad
 
 Esta funcionalidade é útil para evitar que ocorra uma condição race. Por exemplo, pode ocorrer uma condição race quando a aplicação é atualizada automaticamente pelo programador e pelo Intune. Ambos podem tentar impor uma versão da aplicação num cliente Windows, o que cria um conflito.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - A aplicação criada aparece na lista de aplicações. Agora pode atribuí-la aos grupos que escolher. Para obter ajuda, veja [Como atribuir aplicações a grupos](apps-deploy.md).
 

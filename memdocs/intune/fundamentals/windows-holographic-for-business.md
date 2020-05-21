@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d33f642a564179b857afc214110cf098c695055c
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326629"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732932"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gerir e utilizar diferentes funcionalidades de gestão de dispositivos em dispositivos Holográficos e HoloLens do Windows com Intune
 
@@ -56,7 +56,7 @@ Com a aplicação Portal da Empresa, também pode realizar as seguintes ações:
 
 ## <a name="compliance-policy"></a>Política de conformidade
 
-**[Criar uma política de conformidade com dispositivos](../protect/compliance-policy-create-windows.md)**
+**[Criar uma política de conformidade do dispositivo](../protect/compliance-policy-create-windows.md)**
 
 As políticas de conformidade são regras e definições que os dispositivos têm de cumprir para estarem em conformidade. Utilize estas políticas com Acesso Condicional para bloquear o acesso aos recursos da empresa para dispositivos que não estejam em conformidade. No Intune, crie políticas de conformidade para permitir ou bloquear o acesso a dispositivos com o Windows Holographic for Business. Por exemplo, pode criar uma política que exija ativação do BitLocker.
 
@@ -117,6 +117,8 @@ Nos seus perfis, pode utilizar definições de OMA-URI para personalizar algumas
 
 Para configurar definições de OMA-URI (Open Mobile Alliance Uniform Resource Identifier), pode criar um perfil personalizado no Intune. Utilize as definições de OMA-URI para controlar diferentes funcionalidades nos seus dispositivos com o Windows Holographic for Business, tal como ativar a VPN ou procurar atualizações no Microsoft Update.
 
+Consulte um exemplo que utiliza o CSP de Controlo de [Aplicações do Windows Defender (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para permitir ou bloquear aplicações de abertura nos dispositivos HoloLens 2.
+
 ### <a name="configure-kiosk-mode"></a>[Configurar o modo de quiosque](../configuration/kiosk-settings-holographic.md)
 
 Com as funcionalidades de PC partilhadas ou de convidado disponíveis no Intune, pode configurar dispositivos com o Windows Holographic for Business para que sejam executados como um quiosque. Estes dispositivos podem executar uma aplicação (modo de quiosque de aplicação única) ou múltiplas aplicações (modo de quiosque de várias aplicações).
@@ -125,7 +127,7 @@ Com as funcionalidades de PC partilhadas ou de convidado disponíveis no Intune,
 
 As restrições de dispositivos permitem-lhe controlar diferentes definições e funcionalidades nos seus dispositivos, incluindo exigir uma palavra-passe, instalar aplicações da [Microsoft Store](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), ativar o Bluetooth, entre outros. Estas restrições são criadas num perfil do Intune. Este perfil pode ser aplicado a múltiplos dispositivos com o Windows Holographic for Business.
 
-### <a name="configure-vpn"></a>[Configurar a VPN](../configuration/vpn-settings-configure.md)
+### <a name="configure-vpn"></a>[Configurar o VPN](../configuration/vpn-settings-configure.md)
 
 As Redes Virtuais Privadas (VPN) permitem-lhe conceder aos seus utilizadores acesso remoto protegido à rede da sua empresa. No Intune, pode criar um perfil VPN que inclui definições específicas para os seus dispositivos com o Windows Holographic for Business. Por exemplo, pode criar um perfil VPN para que todos os dispositivos com o Windows Holographic for Business utilizem a VPN do Citrix como o tipo de ligação.
 
@@ -157,6 +159,6 @@ Antes de os utilizadores inscreverem dispositivos e acederem às aplicações da
 
 O Hello para Empresas é um método de início de sessão alternativo que utiliza uma conta do Azure Active Directory para substituir uma palavra-passe, um smart card ou um smart card virtual. Com o Hello para Empresas, os seus dispositivos com o Windows Holographic for Business podem iniciar sessão com um PIN com um comprimento mínimo definido por si.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Configurar Intune](setup-steps.md).

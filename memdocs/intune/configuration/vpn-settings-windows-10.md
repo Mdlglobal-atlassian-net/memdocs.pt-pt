@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086495"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429478"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Definições de dispositivos Holográficos windows 10 e Windows para adicionar ligações VPN usando Intune
 
@@ -66,7 +66,7 @@ Criar um perfil de configuração do [dispositivo VPN](vpn-settings-configure.md
   - **PPTP**
 
   Ao escolher um tipo de ligação de VPN, também poderão ser pedidas as seguintes definições:  
-  - **Sempre ligado**: Escolha **ativar** para ligar automaticamente à ligação VPN quando acontecerem os seguintes eventos:
+  - **Sempre ligado**: **Ativar** liga-se automaticamente à ligação VPN quando acontecerem os seguintes eventos:
     - Os utilizadores iniciarem sessão nos respetivos dispositivos
     - A rede no dispositivo for alterada
     - O ecrã do dispositivo se ligar novamente após o ter desligado
@@ -114,10 +114,11 @@ Para obter mais informações sobre a criação de XML de EAP, veja [Configuraç
 
   - **Associar um WIP a esta ligação**: introduza um **domínio WIP para esta ligação**
   - **Associar aplicações a esta ligação**: pode **Restringir a ligação VPN a estas aplicações** e, em seguida, adicionar **Aplicações Associadas**. As aplicações que introduzir automaticamente utilizam a ligação VPN. O tipo de aplicação determina o identificador de aplicação. Para uma aplicação universal, introduza o nome de família do pacote. Para uma aplicação de ambiente de trabalho, introduza o caminho do ficheiro da aplicação.
-  >[!IMPORTANT]
-  >Recomendamos a proteção de todas as listas de aplicação criadas para as VPN por aplicação. Se um utilizador não autorizado alterar esta lista e se esta lista for importada por si para a lista de aplicações VPN por aplicação, irá autorizar potencialmente o acesso VPN a aplicações que não devem ter acesso. Uma forma de proteger as listas de aplicação é utilizar uma lista de controlo de acesso (ACL).
 
-- **Regras de tráfego de rede para esta ligação VPN**: selecione os protocolos, as portas locais e remotas e os intervalos de endereços que estão ativados para a ligação VPN. Se não criar uma regra de tráfego de rede, todos os protocolos, portas e intervalos de endereços estarão ativados. Depois de criar uma regra, a ligação VPN apenas utiliza os protocolos, portas e intervalos de endereços que introduzir nessa regra.
+  > [!IMPORTANT]
+  > Recomendamos a proteção de todas as listas de aplicação criadas para as VPN por aplicação. Se um utilizador não autorizado alterar esta lista e se esta lista for importada por si para a lista de aplicações VPN por aplicação, irá autorizar potencialmente o acesso VPN a aplicações que não devem ter acesso. Uma forma de proteger as listas de aplicação é utilizar uma lista de controlo de acesso (ACL).
+
+- As regras de **tráfego de rede para esta ligação VPN**: Selecione os protocolos e as gamas de porta e endereço remoto seletivas & locais, estão ativadas para a ligação VPN. Se não criar uma regra de tráfego de rede, todos os protocolos, portas e intervalos de endereços estarão ativados. Depois de criar uma regra, a ligação VPN apenas utiliza os protocolos, portas e intervalos de endereços que introduzir nessa regra.
 
 ## <a name="conditional-access"></a>Acesso Condicional
 
@@ -150,7 +151,7 @@ Para obter mais informações sobre a criação de XML de EAP, veja [Configuraç
   - **Domínio**: Introduza o nome de domínio totalmente qualificado (FQDN) ou um sufixo DNS para aplicar a regra. Também pode entrar num período (.) no início para um sufixo DNS. Por exemplo, introduza: `contoso.com` ou `.allcontososubdomains.com`.
   - **Servidores DNS**: Introduza o endereço IP ou o servidor DNS que resolva o domínio. Por exemplo, introduza: `10.0.0.3` ou `vpn.contoso.com`.
   - **Proxy**: Introduza o servidor de procuração web que resolve o domínio. Por exemplo, introduza `http://proxy.com`.
-  - **Ligue-se automaticamente**: Quando **ativado,** o dispositivo liga-se automaticamente à VPN quando `contoso.com`um dispositivo se liga a um domínio em que entra, como . Quando **não está configurado** (predefinido), o dispositivo não se liga automaticamente à VPN
+  - **Ligue-se automaticamente**: Quando **ativado,** o dispositivo liga-se automaticamente à VPN quando um dispositivo se liga a um domínio em que entra, como `contoso.com` . Quando **não está configurado** (predefinido), o dispositivo não se liga automaticamente à VPN
   - **Persistente**: Quando programado para **ativado,** a regra permanece na tabela política de resolução de nomes (NRPT) até que a regra seja removida manualmente do dispositivo, mesmo depois de a VPN se desligar. Quando definido para **Não configurado** (predefinido), as regras de NRPT no perfil VPN são removidas do dispositivo quando a VPN se desliga.
 
 ## <a name="proxy-settings"></a>Definições de proxy
@@ -179,7 +180,7 @@ Por exemplo, se o utilizador já estiver ligado a um sufixo DNS fidedigno, entã
 - Gatilho baseado em aplicativos
 - Gatilho automático DNS
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md)e [monitorize o seu estado](device-profile-monitor.md).
 

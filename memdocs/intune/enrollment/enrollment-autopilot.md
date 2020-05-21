@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 299635d48097beb6e3d1d312a63003fb43a0a379
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327115"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430068"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Inscreva dispositivos Windows em Intune utilizando o Windows Autopilot  
 O Windows Autopilot simplifica os dispositivos de inscrição em Intune. A criação e manutenção de imagens personalizadas do sistema operativo são um processo moroso. Também poderá demorar a aplicar estas imagens personalizadas do sistema operativo a novos dispositivos para as preparar para utilização antes de as disponibilizar aos seus utilizadores finais. Com o Microsoft Intune e o Autopilot, pode fornecer novos dispositivos aos seus utilizadores finais sem ter de criar, manter e aplicar imagens de sistema operativo personalizadas aos dispositivos. Ao utilizar o Intune para gerir dispositivos do Autopilot, pode gerir políticas, perfis, aplicações, entre outros, após estes serem inscritos. Para uma visão geral dos benefícios, cenários e pré-requisitos, consulte a [visão geral do Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -34,6 +34,8 @@ Existem quatro tipos de implantação do Piloto Automático:
 - [A White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) permite aos parceiros ou funcionários de TI pré-fornecer um PC Windows 10 para que esteja totalmente configurado e pronto para o negócio
 - [O piloto automático para dispositivos existentes](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) permite-lhe facilmente implementar a versão mais recente do Windows 10 para os seus dispositivos existentes
 - [Modo acionado pelo utilizador](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) para utilizadores tradicionais.
+
+Este artigo explica como configurar o Autopilot para pc windows. Para obter mais informações sobre o Autopilot e hololens, consulte [o Windows Autopilot para HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -51,7 +53,7 @@ Para mais informações, consulte a compreensão da powershell cmdlet.
 
 Pode adicionar dispositivos Windows Autopilot ao importar um ficheiro CSV com as informações dos dispositivos.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha > **Windows** >  > **dispositivos** de**inscrição**do Windows Windows (no âmbito da**Importação**do Programa **Devices** > de **Implementação do Autopilot Windows**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**de  >  inscrição do**Windows**Windows (no âmbito da Importação do Programa de  >  **Windows enrollment**  >  **Devices** **Implementação do Autopilot Windows**  >  **Import**.
 
     ![Captura de ecrã dos dispositivos Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -67,13 +69,13 @@ Pode adicionar dispositivos Windows Autopilot ao importar um ficheiro CSV com as
 
 3. Escolha **Importar** para iniciar a importação das informações do dispositivo. A importação poderá demorar alguns minutos.
 
-4. Depois de concluída a importação, escolha >  **dispositivos**de**inscrição** > **Devices** **do Windows Windows** > (no âmbito do **Windows Autopilot Deployment Program** > **Sync**. Uma mensagem mostra que a sincronização está em andamento. O processo poderá demorar alguns minutos a concluir, consoante o número de dispositivos em sincronização.
+4. Depois de concluída a importação, escolha **dispositivos**de  >  **Windows**  >  **inscrição**do Windows Windows  >  **Devices** (no **âmbito**do Windows Autopilot Deployment Program  >  **Sync**. Uma mensagem mostra que a sincronização está em andamento. O processo poderá demorar alguns minutos a concluir, consoante o número de dispositivos em sincronização.
 
 5. Atualize a vista para ver os novos dispositivos.
 
 ## <a name="create-an-autopilot-device-group"></a>Criar um grupo de dispositivos do Autopilot
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **grupos** > **novos grupos**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **grupos**  >  **novos grupos**.
 2. No painel **Grupo**:
     1. Para **Tipo de grupo**, selecione **Segurança**.
     2. Introduza um **Nome do grupo** e uma **Descrição do grupo**.
@@ -90,7 +92,7 @@ Pode adicionar dispositivos Windows Autopilot ao importar um ficheiro CSV com as
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Criar um perfil de implementação do Autopilot
 Os perfis de implementação do Autopilot são utilizados para configurar os dispositivos Autopilot. Você pode criar até 350 perfis por inquilino.
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **os perfis** > **Windows** > de**implementação**de > **implementação**do Windows > Windows**Create Profile**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **os perfis**de implementação de  >  **Windows**  >  **implementação**do Windows Windows Create  >  **Deployment Profiles**  >  **Profile**Windows  >  **PC** ou **HoloLens**. Este artigo explica como configurar o Autopilot para pc windows. Para obter mais informações sobre o Autopilot e hololens, consulte [o Windows Autopilot para HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. Na página **Basics,** digite um **nome** e **descrição**opcional.
 
     ![Screenshot da página Basics](./media/enrollment-autopilot/create-profile-basics.png)
@@ -117,8 +119,8 @@ Os perfis de implementação do Autopilot são utilizados para configurar os dis
     - **Tipo de conta de utilizador**: selecione o tipo de conta de utilizador (**Administrador** ou utilizador **Padrão**). Permitimos que o utilizador que se junte ao dispositivo seja um Administrador local, adicionando-o ao grupo de administração local. Não ativamos o utilizador como administrador predefinido no dispositivo.
     - **Permitir luva branca OOBE** (requer o Windows 10, versão 1903 ou mais tarde; [requisitos físicos adicionais):](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)Escolha **Sim** para permitir suporte à luva branca.
     - **Aplicar o modelo** de nome do dispositivo (requer o Windows 10, a versão 1809 ou mais tarde, e o tipo de adesão do Azure AD): Escolha **Sim** para criar um modelo para usar ao nomear um dispositivo durante a inscrição. Os nomes têm de ter 15 carateres ou menos e podem conter letras, números e hífenes. Não podem conter apenas números. Utilize a [macro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) para adicionar um número de série específico de hardware. Em alternativa, utilize a [macro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) para adicionar uma cadeia de números aleatória na qual x corresponde ao número de dígitos a adicionar. Só é possível fornecer uma pré-correcção para dispositivos híbridos num perfil de [adesão](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)de domínio . 
-    - **Língua (Região)**\*: Escolha o idioma a utilizar para o dispositivo. Esta opção só está disponível se tiver optado pela **Implementação personalizada** no **Modo de implementação**.
-    - **Configurar automaticamente o teclado**\*: Se for selecionada uma **Língua (Região),** escolha **Sim** para saltar a página de seleção do teclado. Esta opção só está disponível se tiver optado pela **Implementação personalizada** no **Modo de implementação**.
+    - **Língua (Região)** \* : Escolha o idioma a utilizar para o dispositivo. Esta opção só está disponível se tiver optado pela **Implementação personalizada** no **Modo de implementação**.
+    - **Configurar automaticamente o teclado** \* : Se for selecionada uma Língua **(Região),** escolha **Sim** para saltar a página de seleção do teclado. Esta opção só está disponível se tiver optado pela **Implementação personalizada** no **Modo de implementação**.
 8. Selecione **Seguinte**.
 9. Na página scope **tags,** adicione opcionalmente as etiquetas de âmbito que pretende aplicar a este perfil. Para obter mais informações sobre etiquetas de âmbito, consulte [Utilize o controlo de acesso baseado em papéis e as etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 10. Selecione **Seguinte**.
@@ -134,12 +136,12 @@ Os perfis de implementação do Autopilot são utilizados para configurar os dis
     ![Screenshot da página de revisão](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune verificará periodicamente se há novos dispositivos nos grupos designados e, em seguida, iniciará o processo de atribuição de perfis a esses dispositivos. Este processo pode levar vários minutos para ser concluído. Antes de implementar um dispositivo, certifique-se de que este processo está concluído.  Pode verificar > em **dispositivos** > de**inscrição**do Windows**Windows** > (no âmbito do Programa de Implementação do **Piloto Automático windows,** onde deverá ver a alteração do estado do perfil de "Não atribuído" para "Atribuição" e, finalmente, para "Assi).**Devices**
+> Intune verificará periodicamente se há novos dispositivos nos grupos designados e, em seguida, iniciará o processo de atribuição de perfis a esses dispositivos. Este processo pode levar vários minutos para ser concluído. Antes de implementar um dispositivo, certifique-se de que este processo está concluído.  Pode verificar em **dispositivos**de inscrição do Windows Windows (no âmbito do Programa de Implementação do  >  **Windows**  >  **Windows enrollment**  >  **Devices** Piloto **Automático windows,** onde deverá ver a alteração do estado do perfil de "Não atribuído" para "Atribuição" e, finalmente, para "Assi).
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Editar um perfil de implementação do Autopilot
 Após ter criado um perfil de implementação do Autopilot, poderá editar determinadas partes do perfil de implementação.   
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os perfis de**implementação**de **matrículas** > **Windows** > **Windows enrollment** > do Windows Windows .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os perfis de implementação de **Devices**  >  **Windows**  >  **matrículas do**Windows Windows  >  **Deployment profiles**.
 2. Selecione o perfil que pretende editar.
 3. Selecione **Propriedades** à esquerda para alterar o nome ou descrição do perfil de implementação. Após ter efetuado as alterações, clique em **Guardar**.
 5. Clique em **Definições** para efetuar alterações às definições da OOBE. Após ter efetuado as alterações, clique em **Guardar**.
@@ -150,7 +152,7 @@ Após ter criado um perfil de implementação do Autopilot, poderá editar deter
 ## <a name="edit-autopilot-device-attributes"></a>Editar atributos do dispositivo Autopilot
 Depois de ter carregado um dispositivo Autopilot, pode editar certos atributos do dispositivo.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione > **Windows** > **Windows enrollment** > **Dispositivos** de inscrição do Windows Windows (no âmbito do **Programa de Implementação do Piloto Automático windows**. **Devices**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos**de  >  inscrição do**Windows**Windows (no âmbito do  >  **Windows enrollment**  >  **Devices** Programa **de Implementação do Piloto Automático windows**.
 2. Selecione o dispositivo que pretende editar.
 3. No painel à direita do ecrã, pode editar o nome do dispositivo, etiqueta de grupo ou Nome Amigável do Utilizador (se tiver atribuído um utilizador).
 4. Selecione **Guardar**.
@@ -162,11 +164,11 @@ Depois de ter carregado um dispositivo Autopilot, pode editar certos atributos d
 
 Os alertas irão indicar quantos dispositivos do programa Autopilot não têm perfis de implementação do Autopilot. Utilize as informações no alerta para criar perfis e atribui-los aos dispositivos não atribuídos. Quando clica no alerta, é-lhe apresentada uma lista completa dos dispositivos Windows Autopilot e informações detalhadas sobre os mesmos.
 
-Para ver alertas para dispositivos não atribuídos, no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha dispositivos de inscrição de**visão geral** > dos **Devices** > **dispositivos** > **não atribuídos**.  
+Para ver alertas para dispositivos não atribuídos, no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**de inscrição de visão geral dos  >  **Overview**  >  **Enrollment alerts**  >  **dispositivos não atribuídos**.  
 
 ## <a name="autopilot-deployments-report"></a>Relatório de implementações de piloto automático
 Pode ver detalhes em cada dispositivo implementado através do Windows Autopilot.
-Para ver o relatório, vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha as implementações do Autopilot do**Monitor** >  **de Dispositivos** > .**Autopilot deployments**
+Para ver o relatório, vá ao centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha as implementações do Autopilot do **Monitor de**  >  **Monitor**  >  **Dispositivos**.
 Os dados estão disponíveis durante 30 dias após a implantação.
 
 Este relatório está em pré-visualização. Os registos de implantação do dispositivo são atualmente apenas desencadeados por novos eventos de inscrição intune. Isto significa que qualquer implantação que não desencadeie uma nova inscrição intune não será captada por este relatório. Isto inclui qualquer tipo de reset que mantenha a inscrição e a parte do utilizador da luva Branca Autopilot.
@@ -180,7 +182,7 @@ Pré-requisitos: O Portal da Empresa de DirectórioActivo Azure foi configurado 
 > [!NOTE]
 > Atribuir um utilizador a um dispositivo Autopilot específico não funciona se estiver a utilizar a ADFS.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha > **Windows** > **Windows enrollment** > **dispositivos** de inscrição do Windows Windows (no âmbito do Programa de **Implementação** do Piloto Automático windows > escolha o dispositivo > **utilizador atribuir**. **Devices**
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**de  >  inscrição do Windows**Windows**(no âmbito do  >  **Windows enrollment**  >  **Devices** **Programa de Implementação** do Piloto Automático windows > escolha o dispositivo > **utilizador de atribuição**.
 
     ![Captura de ecrã de Atribuir utilizador](./media/enrollment-autopilot/assign-user.png)
 
@@ -199,15 +201,15 @@ Pré-requisitos: O Portal da Empresa de DirectórioActivo Azure foi configurado 
 
 Pode eliminar dispositivos do Windows Autopilot que não estão inscritos no Intune:
 
-- Elimine os dispositivos do Windows Autopilot > nos **dispositivos** > de**inscrição**do Windows**Windows** > (no âmbito do Programa de **Implementação do Piloto Automático windows**.**Devices** Escolha os dispositivos que pretende eliminar e, em seguida, escolha **Apagar**. A eliminação do dispositivo Do Piloto Automático do Windows pode demorar alguns minutos a ser concluída.
+- Elimine os dispositivos do Windows Autopilot nos **dispositivos**de inscrição do Windows Windows (no âmbito do Programa de  >  **Windows**  >  **Windows enrollment**  >  **Devices** **Implementação do Piloto Automático windows**. Escolha os dispositivos que pretende eliminar e, em seguida, escolha **Apagar**. A eliminação do dispositivo Do Piloto Automático do Windows pode demorar alguns minutos a ser concluída.
 
 A remoção completa de um dispositivo do seu inquilino requer que você elimine o dispositivo Intune, o dispositivo De Diretório Ativo Azure e os registos do dispositivo Do Maautopilot do Windows. Tudo isto pode ser feito a partir de Intune:
 
 1. Se os dispositivos estiverem matriculados no Intune, tem primeiro de [os eliminar da lâmina Intune All.](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal)
 
-2. Elimine os dispositivos em dispositivos De Diretório Ativo Azure nos **dispositivos Devices** > **Azure AD**.
+2. Elimine os dispositivos em dispositivos **Devices**De Diretório Ativo Azure nos  >  **dispositivos Devices Azure AD**.
 
-3. Elimine os dispositivos do Windows Autopilot > nos **Dispositivos** > de**inscrição**do Windows**Windows** > (no âmbito do Programa de **Implementação do Piloto Automático do Windows** >.**Devices** Escolha os dispositivos que pretende eliminar e, em seguida, escolha **Apagar**. A eliminação do dispositivo Do Piloto Automático do Windows pode demorar alguns minutos a ser concluída.
+3. Elimine os dispositivos do Windows Autopilot nos **Dispositivos**de inscrição do Windows Windows (no âmbito do Programa de  >  **Windows**  >  **Windows enrollment**  >  **Devices** **Implementação do Piloto Automático windows** >. Escolha os dispositivos que pretende eliminar e, em seguida, escolha **Apagar**. A eliminação do dispositivo Do Piloto Automático do Windows pode demorar alguns minutos a ser concluída.
 
 ## <a name="using-autopilot-in-other-portals"></a>Utilizar o Autopilot noutros portais
 Se não estiver interessado na gestão de dispositivos móveis, pode utilizar o Autopilot noutros portais. Embora a utilização de outros portais seja uma opção, recomendamos-lhe que apenas utilize o Intune para gerir as suas implementações do Autopilot. Se utilizar o Intune e outro portal, o Intune não será capaz de:  
@@ -227,5 +229,5 @@ Pode agrupar dispositivos Windows por um ID de correlacionador ao inscrevê-los 
 > - Crie sempre regras de grupos dinâmico que correspondam a *todo* o valor enrollmentProfileName
 > - Nunca nomeie os perfis autopiloto ou Apple ADE começando com "OfflineAutopilotprofile-".
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Após ter configurado o Windows Autopilot para dispositivos Windows 10 registados, saiba como gerir esses dispositivos. Para obter mais informações, veja [O que é a gestão de dispositivos do Microsoft Intune?](../remote-actions/device-management.md)

@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 9875e394fb72e1c190bcc57da5e6ba4db04c1051
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401591"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690573"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utilizar e gerir dispositivos Android Enterprise com OEMConfig no Microsoft Intune
 
@@ -31,6 +31,8 @@ No Microsoft Intune, pode utilizar o OEMConfig para adicionar, criar e personali
 Esta funcionalidade aplica-se a:  
 
 - Android Enterprise
+
+Para dispositivos de administrador de dispositivos Android, utilize [extensões móveis (MX)](android-zebra-mx-overview.md).
 
 Este artigo descreve o OEMConfig, lista os pré-requisitos, mostra como criar um perfil de configuração, e lista as aplicações oEMConfig suportadas em Intune.
 
@@ -56,7 +58,9 @@ Ao utilizar a OEMConfig, esteja atento às seguintes informações:
 - Intune expõe o esquema da aplicação OEMConfig para que possa configurá-lo. Intune não valida nem altera o esquema fornecido pela app. Portanto, se o esquema estiver incorreto, ou tiver dados imprecisos, então estes dados ainda são enviados para dispositivos. Se encontrar um problema que tenha origem no esquema, contacte o OEM para obter orientação.
 - Intune não influencia nem controla o conteúdo do esquema da aplicação. Por exemplo, Intune não tem qualquer controlo sobre cordas, linguagem, as ações permitidas, e assim por diante. Recomendamos contactar o OEM para obter mais informações sobre a gestão dos seus dispositivos com a OEMConfig.
 - A qualquer momento, os OEMs podem atualizar as suas funcionalidades e esquemas suportados e enviar uma nova aplicação para o Google Play. Intune sincroniza sempre a versão mais recente da aplicação OEMConfig do Google Play. Intune não mantém versões mais antigas do esquema ou da app. Se encontrar conflitos de versão, recomendamos que contacte o OEM para obter mais informações.
-- Designar um perfil OEMConfig para um dispositivo. Se vários perfis forem atribuídos ao mesmo dispositivo, poderá ver um comportamento inconsistente. O modelo OEMConfig suporta apenas uma única política por dispositivo.
+- Nos dispositivos Zebra, pode criar vários perfis e atribuí-los ao mesmo dispositivo. Para mais informações, consulte [a OEMConfig nos dispositivos Zebra](oemconfig-zebra-android-devices.md).
+
+  O modelo OEMConfig em dispositivos não-Zebra suporta apenas uma única política por dispositivo. Se vários perfis forem atribuídos ao mesmo dispositivo, poderá ver um comportamento inconsistente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -153,6 +157,7 @@ Em comparação com as aplicações padrão, as aplicações OEMConfig expandem 
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cifra | com.cipherlab.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
@@ -176,6 +181,6 @@ Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na ta
 >
 > Se sentir que uma aplicação OEMConfig se comporta mal, contacte os desenvolvedores da aplicação OEMConfig. Intune não é responsável por problemas técnicos com as aplicações individuais da OEMConfig.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Monitorize o estado do perfil](device-profile-monitor.md).

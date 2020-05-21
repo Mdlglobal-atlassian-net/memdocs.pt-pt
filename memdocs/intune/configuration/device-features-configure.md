@@ -1,11 +1,11 @@
 ---
 title: Crie o perfil do iOS/iPadOS ou do dispositivo macOS com o Microsoft Intune - Azure [ Microsoft Docs
-description: Adicione ou crie um perfil de dispositivo iOS, iPadOS ou macOS e, em seguida, configure as definições para o AirPrint, layout do ecrã principal, notificações de aplicações, dispositivo partilhado, definição de inscrição única e filtro de conteúdo web no Microsoft Intune.
+description: Adicione ou crie um perfil de iOS, iPadOS ou macOS. Configure as definições para o AirPrint, o layout do ecrã principal, notificações de aplicações, dispositivo partilhado, definições de inscrição única e filtro de conteúdo web no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 0c50b43f2bad7b357c9f10a198c177a0ba47e1eb
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943812"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427752"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Adicione as definições de funcionalidades do iOS, iPadOS ou macOS em Intune
 
@@ -54,7 +54,7 @@ Aplica-se a:
 
 ## <a name="app-notifications"></a>Notificações de aplicação
 
-Escolha como as aplicações dos seus dispositivos iOS e iPadOS recebem notificações. Por exemplo, a partir de Intune, envie notificações de aplicativos para que apareçam no centro de notificação, mostrem no ecrã de bloqueio ou reproduzissem um som.
+Escolha como as aplicações dos seus dispositivos iOS e iPadOS recebem notificações. Por exemplo, envie notificações de aplicativos para que apareçam no centro de notificação, mostrem no ecrã de bloqueio ou reproduzisem um som.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte notificações da [App no iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
@@ -67,7 +67,7 @@ Aplica-se a:
 
 ## <a name="associated-domains"></a>Domínios associados
 
-Os domínios associados permitem criar uma relação entre `contoso.com`os seus domínios, como , e as suas apps. Esta funcionalidade permite-lhe:
+Os domínios associados permitem criar uma relação entre os seus domínios, como `contoso.com` , e as suas apps. Esta funcionalidade permite-lhe:
 
 - Partilhe dados e assine credenciais entre apps e websites da sua organização.
 - Utilize funcionalidades de aplicações baseadas no seu website, tais como extensão de aplicação de entrada única, links universais e preenchimento automático de palavra-passe.
@@ -194,7 +194,7 @@ Aplica-se a:
 
 ## <a name="web-content-filter"></a>Filtro de conteúdo web
 
-Estas definições usam o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só `contoso` pode permitir que os web sites se abram.
+Estas definições usam o algoritmo autofilter incorporado da Apple para avaliar páginas web e bloquear conteúdo adulto e linguagem adulta. Também pode criar uma lista de links web permitidos e links web restritos. Por exemplo, só pode permitir que `contoso` os web sites se abram.
 
 Para obter uma lista das definições que pode configurar em Intune, consulte o filtro de [conteúdo web no iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
@@ -206,7 +206,7 @@ Aplica-se a:
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -230,7 +230,7 @@ Aplica-se a:
     - [macOS](macos-device-features-settings.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -240,7 +240,7 @@ Aplica-se a:
 
 11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 

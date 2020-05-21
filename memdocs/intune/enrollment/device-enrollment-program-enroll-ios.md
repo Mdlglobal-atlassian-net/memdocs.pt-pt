@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269070"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732963"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Registo Automatizado de Dispositivos da Apple
 
@@ -235,29 +235,33 @@ Agora que instalou o seu símbolo, pode criar um perfil de inscrição para disp
 
     | Definições do ecrã Assistente de Configuração | Se selecionar **Mostrar** durante a configuração, o dispositivo irá… |
     |------------------------------------------|------------------------------------------|
-    | <strong>Código de Acesso</strong> | Pedir um código de acesso ao utilizador. Solicite sempre um código de acesso para os dispositivos não protegidos, a menos que o acesso seja controlado de outra forma (ou seja, modo de quiosque que restringe o dispositivo a uma aplicação). |
-    | <strong>Serviços de Localização</strong> | Pedir ao utilizador a respetiva localização. |
-    | <strong>Restauro</strong> | Exiba as Aplicações & ecrã data. Este ecrã permite que o utilizador opte por restaurar ou transferir os dados da Cópia de Segurança do iCloud quando configurar o dispositivo. |
-    | <strong>iCloud e Apple ID</strong> | Apresentar ao utilizador as opções para iniciar sessão com o respetivo ID Apple e utilizar o iCloud.                         |
-    | <strong>Terms and Conditions</strong> | Pedir ao utilizador para aceitar os termos e condições da Apple. |
-    | <strong>Touch ID</strong> | Apresentar ao utilizador a opção para configurar a identificação através de impressão digital no dispositivo. |
-    | <strong>Apple Pay</strong> | Apresentar ao utilizador a opção para configurar o Apple Pay no dispositivo. |
-    | <strong>Zoom</strong> | Apresentar ao utilizador a opção para aumentar o zoom quando este configurar o dispositivo. |
-    | <strong>Siri</strong> | Apresentar ao utilizador a opção para configurar o Siri. |
-    | <strong>Dados de Diagnóstico</strong> | Apresentar o ecrã Diagnósticos ao utilizador. Este ecrã permite que o utilizador opte por enviar dados de diagnóstico para a Apple. |
-    | <strong>Sinal de Exibição</strong> | Apresentar ao utilizador a opção para ativar o Sinal de Apresentação. |
-    | <strong>Privacidade</strong> | Apresentar o ecrã Privacidade ao utilizador. |
-    | <strong>Migração do Android</strong> | Apresentar ao utilizador a opção para migrar os dados de um dispositivo Android. |
-    | <strong>iMessage e FaceTime</strong> | Dê ao utilizador a opção de configurar o iMessage e o FaceTime. |
-    | <strong>Inclusão</strong> | Apresentar ecrãs informativos de integração para formação do utilizador, como a Folha de Capa, o Multitasking e o Centro de Controlo. |
-    | <strong>Migração de Relógio</strong> | Apresentar ao utilizador a opção para migrar os dados de um dispositivo de relógio. |
-    | <strong>Tempo do Ecrã</strong> | Apresentar o ecrã Tempo do Ecrã. |
-    | <strong>Atualização de Software</strong> | Apresentar o ecrã de atualização de software obrigatório. |
-    | <strong>Configuração do SIM</strong> | Apresentar ao utilizador a opção para adicionar um plano de dados móveis. |
-    | <strong>Aspeto</strong> | Apresentar o ecrã Aspeto ao utilizador. |
+    | <strong>Código de Acesso</strong> | Pedir um código de acesso ao utilizador. Solicite sempre um código de acesso para os dispositivos não protegidos, a menos que o acesso seja controlado de outra forma (ou seja, modo de quiosque que restringe o dispositivo a uma aplicação). Para iOS/iPadOS 7.0 e posteriormente. |
+    | <strong>Serviços de Localização</strong> | Pedir ao utilizador a respetiva localização. Para macOS 10.11 e posteriormente iOS/iPadOS 7.0 e posteriormente. |
+    | <strong>Restauro</strong> | Exiba as Aplicações & ecrã data. Este ecrã permite que o utilizador opte por restaurar ou transferir os dados da Cópia de Segurança do iCloud quando configurar o dispositivo. Para macOS 10.9 e posteriormente, e iOS/iPadOS 7.0 e mais tarde. |
+    | <strong>iCloud e Apple ID</strong> | Apresentar ao utilizador as opções para iniciar sessão com o respetivo ID Apple e utilizar o iCloud. Para macOS 10.9 e posteriormente, e iOS/iPadOS 7.0 e mais tarde.   |
+    | <strong>Terms and Conditions</strong> | Pedir ao utilizador para aceitar os termos e condições da Apple. Para macOS 10.9 e posteriormente, e iOS/iPadOS 7.0 e mais tarde. |
+    | <strong>Touch ID</strong> | Apresentar ao utilizador a opção para configurar a identificação através de impressão digital no dispositivo. Para macOS 10.12.4 e posteriormente, e iOS/iPadOS 8.1 e posteriormente. |
+    | <strong>Apple Pay</strong> | Apresentar ao utilizador a opção para configurar o Apple Pay no dispositivo. Para macOS 10.12.4 e posteriormente, e iOS/iPadOS 7.0 e posteriormente. |
+    | <strong>Zoom</strong> | Apresentar ao utilizador a opção para aumentar o zoom quando este configurar o dispositivo. Para iOS/iPadOS 8.3 e posteriormente. |
+    | <strong>Siri</strong> | Apresentar ao utilizador a opção para configurar o Siri. Para macOS 10.12 e posteriormente, e iOS/iPadOS 7.0 e posteriormente. |
+    | <strong>Dados de Diagnóstico</strong> | Apresentar o ecrã Diagnósticos ao utilizador. Este ecrã permite que o utilizador opte por enviar dados de diagnóstico para a Apple. Para macOS 10.9 e posteriormente, e iOS/iPadOS 7.0 e mais tarde. |
+    | <strong>Sinal de Exibição</strong> | Apresentar ao utilizador a opção para ativar o Sinal de Apresentação. Para macOS 10.13.6 e posteriormente, e iOS/iPadOS 9.3.2 e posteriormente. |
+    | <strong>Privacidade</strong> | Apresentar o ecrã Privacidade ao utilizador. Para macOS 10.13.4 e posteriormente, e iOS/iPadOS 11.3 e posteriormente. |
+    | <strong>Migração do Android</strong> | Apresentar ao utilizador a opção para migrar os dados de um dispositivo Android. Para iOS/iPadOS 9.0 e posteriormente.|
+    | <strong>iMessage e FaceTime</strong> | Dê ao utilizador a opção de configurar o iMessage e o FaceTime. Para iOS/iPadOS 9.0 e posteriormente. |
+    | <strong>Inclusão</strong> | Apresentar ecrãs informativos de integração para formação do utilizador, como a Folha de Capa, o Multitasking e o Centro de Controlo. Para iOS/iPadOS 11.0 e posteriormente. |
+    | <strong>Migração de Relógio</strong> | Apresentar ao utilizador a opção para migrar os dados de um dispositivo de relógio. Para iOS/iPadOS 11.0 e posteriormente.|
+    | <strong>Tempo do Ecrã</strong> | Apresentar o ecrã Tempo do Ecrã. Para macOS 10.15 e posteriormente, e iOS/iPadOS 12.0 e posteriormente. |
+    | <strong>Atualização de Software</strong> | Apresentar o ecrã de atualização de software obrigatório. Para iOS/iPadOS 12.0 e posteriormente. |
+    | <strong>Configuração do SIM</strong> | Apresentar ao utilizador a opção para adicionar um plano de dados móveis. Para iOS/iPadOS 12.0 e posteriormente. |
+    | <strong>Aspeto</strong> | Apresentar o ecrã Aspeto ao utilizador. Para macOS 10.14 e posteriormente, e iOS/iPadOS 13.0 e mais tarde. |
     | <strong>Idioma Expressa</strong>| Exiba o ecrã Express Language ao utilizador. |
     | <strong>Língua Preferida</strong> | Dê ao utilizador a opção de escolher o seu **Idioma Preferido**. |
-    | <strong>Dispositivo para migração de dispositivos</strong> | Dê ao utilizador a opção de migrar dados do seu antigo dispositivo para este dispositivo.|
+    | <strong>Dispositivo para migração de dispositivos</strong> | Dê ao utilizador a opção de migrar dados do seu antigo dispositivo para este dispositivo. Para iOS/iPadOS 13.0 e posteriormente. |
+    | <strong>Registo</strong> | Mostrar o ecrã de registo ao utilizador. Para macOS 10.9 e mais tarde. |
+    | <strong>FileVault</strong> | Exiba o ecrã de encriptação FileVault 2 ao utilizador. Para macOS 10.10 e mais tarde. |
+    | <strong>diagnósticos iCloud</strong> | Exiba o ecrã iCloud Analaytics ao utilizador. Para macOS 10.12.4 e posteriormente. |
+    | <strong>Armazenamento do iCloud</strong> | Exiba o ecrã iCloud Documents e Desktop ao utilizador. Para macOS 10.13.4 e posteriormente. |
     
 
 16. Escolha **O Próximo** para ir à página Review + **Criar.**
@@ -282,7 +286,7 @@ Agora que o Intune tem permissão para gerir os seus dispositivos, pode sincroni
 
    Para seguir os termos da Apple para o tráfego aceitável do programa de inscrição, intune impõe as seguintes restrições:
    - As sincronizações completas não podem ser executadas mais do que uma vez a cada sete dias. Durante uma sincronização completa, o Intune obtém a lista atualizada completa de números de série atribuídos ao servidor de MDM da Apple ligado ao Intune. Se um dispositivo ADE for eliminado do portal Intune, este deve não ser atribuído a partir do servidor Apple MDM no portal ADE. Se a atribuição não for anulada, não será importado novamente para o Intune até que a sincronização completa seja executada.   
-   - É executa automaticamente uma sincronização a cada 24 horas. Também pode sincronizar ao clicar no botão **Sincronizar** (não mais do que uma vez a cada 15 minutos). Todos os pedidos de sincronização têm 15 minutos para serem concluídos. O botão **Sincronizar** está desativado até a sincronização ser concluída. Esta sincronização irá atualizar o estado do dispositivo existente e importar novos dispositivos atribuídos ao servidor de MDM da Apple.   
+   - Uma sincronização é executada automaticamente a cada 12 horas. Também pode sincronizar ao clicar no botão **Sincronizar** (não mais do que uma vez a cada 15 minutos). Todos os pedidos de sincronização têm 15 minutos para serem concluídos. O botão **Sincronizar** está desativado até a sincronização ser concluída. Esta sincronização irá atualizar o estado do dispositivo existente e importar novos dispositivos atribuídos ao servidor de MDM da Apple.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Atribuir um perfil de inscrição a dispositivos

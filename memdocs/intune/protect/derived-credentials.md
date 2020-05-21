@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 5/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 01965b2760ed9e4036f12b8c2c0d75e5a85e89b2
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881031"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633424"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Use credenciais derivadas no Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune suporta credenciais derivadas nas seguintes plataformas:
 
 Intune apoia um único emitente de credencial derivado por inquilino. Pode configurar insintonização para trabalhar com os seguintes emitentes:
 
-- **DISA Purebred** (apenas iOS): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (apenas iOS):https://public.cyber.mil/pki-pke/purebred/
 - **Cartão de dados de confiar:**https://www.entrustdatacard.com/
 - **Interceto:**https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Seguem-se considerações fundamentais para cada parceiro apoiado.  Familiarize-
 Reveja o fluxo de trabalho específico do utilizador para os dispositivos que utilizará com credenciais derivadas.
 
 - [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Dispositivos geridos pela Android Enterprise](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **Os requisitos-chave incluem:**
 
@@ -188,7 +189,7 @@ Evite exigir a utilização de uma credencial derivada para aceder a um processo
 Antes de criar políticas que exijam a utilização de uma credencial derivada, crie um emitente credencial na consola Intune. Um emitente credencial derivado é um cenário em todo o inquilino. Os inquilinos apoiam apenas um único emitente de cada vez.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione > **Conectores e** > **fichas**de **administração do Inquilino.**
+2. Selecione **Tenant administration**  >  **Conectores e fichas**de administração do  >  **Derived Credentials**Inquilino.
 
     > [!div class="mx-imgBorder"]
     > ![Configure credenciais derivadas na consola](./media/derived-credentials/configure-provider.png)
@@ -224,9 +225,12 @@ Além da implementação da aplicação com Intune, configure uma VPN intune por
 
 **Complete as seguintes tarefas:**
   
-1. Descarregue a aplicação DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.
+1. Descarregue a aplicação DISA Purebred: https: \/ /cyber.mil/pki-pke/purebred/.
 
-2. Implementar a aplicação DISA Purebred em Intune. Consulte [adicionar uma aplicação iOS de linha de negócio sintetizador a Microsoft Intune](../apps/lob-apps-ios.md).
+2. Implementar a aplicação DISA Purebred em Intune. 
+
+   - Consulte [adicionar uma aplicação iOS de linha de negócio sintetizador a Microsoft Intune](../apps/lob-apps-ios.md).
+   - Ver [Adicionar uma aplicação de linha de negócios Android à Microsoft Intune](../apps/lob-apps-android.md)
 
 3. [Crie uma VPN por app](../configuration/vpn-settings-configure.md) para a aplicação DISA Purebred.
 
@@ -256,7 +260,7 @@ Pode especificar **a credencial derivada** para os seguintes tipos e propósitos
 Utilize credenciais derivadas para autenticação baseada em certificados em web sites e aplicações. Para entregar uma credencial derivada para autenticação de aplicações:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes definições:
 
    Para iOS e iPadOS:
@@ -272,7 +276,7 @@ Utilize credenciais derivadas para autenticação baseada em certificados em web
    - **Tipo de perfil**: Apenas no *proprietário do dispositivo,* selecione **credencial derivada**.
 
 4. Selecione **OK** para guardar as alterações.
-5. Quando terminar, selecione **OK** > **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
+5. Quando terminar, selecione **OK**  >  **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
 6. Selecione o seu novo perfil > **Atribuições**. Selecione os grupos que devem receber a apólice.
 
 Os utilizadores recebem a aplicação ou notificação de e-mail dependendo das definições especificadas quando configurar o emitente credencial derivado. A notificação informa o utilizador para o lançamento do Portal da Empresa para que as políticas de credenciais derivadas possam ser processadas.
@@ -297,7 +301,7 @@ Depois de alterar o emitente, os utilizadores são solicitados a obter uma nova 
 > Se eliminar um emitente e reconfigurar imediatamente o mesmo emitente, ainda deve atualizar perfis e dispositivos para utilizar credenciais derivadas desse emitente. As credenciais derivadas que foram obtidas antes de eliminar o emitente já não são válidas.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione > **Conectores e** > **fichas**de **administração do Inquilino.**
+2. Selecione **Tenant administration**  >  **Conectores e fichas**de administração do  >  **Derived Credentials**Inquilino.
 3. **Selecione Eliminar** para remover o emitente credencial derivado da corrente.
 4. Configure um novo emitente.
 
@@ -309,6 +313,6 @@ Depois de apagar um emitente e, em seguida, adicionar um novo, editar cada perfi
 
 Depois de apagar um emitente e depois adicionar um novo, os utilizadores do dispositivo devem solicitar uma nova credencial derivada. Esta regra aplica-se mesmo quando adiciona o mesmo emitente que removeu. O processo de solicitação da nova credencial derivada é o mesmo que para a inscrição de um novo dispositivo ou a renovação de uma credencial existente.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Criar perfis de configuração do [dispositivo.](../configuration/device-profile-create.md)

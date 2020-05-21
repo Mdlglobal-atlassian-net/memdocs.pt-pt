@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332249"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429494"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Windows 10 e configurações posteriores para gerir dispositivos partilhados usando Intune
 
@@ -42,37 +42,62 @@ Para obter mais informações sobre esta funcionalidade em Intune, consulte o ac
 
 Estas definições utilizam o [CSP SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
 
-- **Modo para PC partilhado**: Escolha **ativar** o modo PC partilhado. Neste modo, apenas um utilizador entra no dispositivo de cada vez. Outro utilizador não pode iniciar sessão até que o primeiro utilizador se inscreva. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
+- **Modo para PC partilhado**: **Ativar** as ligações no modo PC partilhado. Neste modo, apenas um utilizador entra no dispositivo de cada vez. Outro utilizador não pode iniciar sessão até que o primeiro utilizador se inscreva. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Conta de hóspedes**: Escolha criar uma opção de Hóspede no ecrã de iniciar sessão. As contas dos hóspedes não requerem credenciais de utilizador ou autenticação. Esta definição cria uma nova conta local cada vez que é usada. As opções são:
   - **Hóspede**: Cria uma conta de hóspedes localmente no dispositivo.
   - **Domínio**: Cria uma conta de hóspedes no Diretório Ativo Azure (AD).
   - **Hóspede e domínio**: Cria uma conta de hóspedes localmente no dispositivo, e no Diretório Ativo Azure (AD).
-- **Gestão de conta**: Definir para **permitir** a eliminação automática de contas locais criadas pelos hóspedes e contas em AD e Azure AD. Quando um utilizador assina fora do dispositivo, ou quando a manutenção do sistema é executado, estas contas são eliminadas. Quando ativado, também definido:
-  - **Eliminação da conta**: Escolha quando as contas são eliminadas: **No limiar**do espaço de armazenamento , no limiar do espaço de armazenamento e no **limiar inativo,** ou imediatamente após o **log-out**. Também insira:
+- **Gestão da conta**: Escolha se as contas são automaticamente eliminadas. As opções são:
+  - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+  - **Ativado**: As contas criadas pelos hóspedes e as contas em AD e Azure AD são automaticamente eliminadas. Quando um utilizador assina fora do dispositivo, ou quando a manutenção do sistema é executado, estas contas são eliminadas.
+
+    Introduza também:
+
+    - **Eliminação da conta**: Escolha quando as contas são eliminadas:
+      - **No limiar do espaço de armazenamento**
+      - **No limiar do espaço de armazenamento e limiar inativo**
+      - **Imediatamente após o log-out**
+
+    Introduza também:
+
     - **Comece a eliminar o limiar(%)**: Introduza uma percentagem (0-100) de espaço em disco. Quando o espaço total de disco/armazenamento cai abaixo do valor que introduz, as contas em cache são eliminadas. Elimina continuamente as contas para recuperar o espaço do disco. As contas que estão inativas há mais tempo são eliminadas primeiro.
     - **Parar de eliminar limiar(%)**: Insira uma percentagem (0-100) do espaço do disco. Quando o espaço total de disco/armazenamento corresponde ao valor que introduz, a apagar para.
+    - Limiar de **conta inativa**: Insira o número de dias consecutivos antes de apagar a conta que não assinou, de 0 a 60 dias.
 
-  Configurado para **Desativar** para manter as contas ad locais, AD e Azure criadas pelos hóspedes.
+  - **Desativado**: As contas ad locais, AD e Azure criadas pelos hóspedes permanecem no dispositivo e não são eliminadas.
 
-- **Armazenamento Local**: Escolha **ativado** para evitar que os utilizadores guardem e visualizam ficheiros no disco rígido do dispositivo. Escolha **o Desativado** para permitir que os utilizadores vejam e guardem ficheiros localmente utilizando o File Explorer. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
-- **Políticas de potência**: Quando definido para **Ativado,** os utilizadores não podem desligar a hibernação, não podem anular todas as ações de sono (como fechar a tampa), e não podem alterar as definições de energia. Quando programado para **Desativar,** os utilizadores podem hibernar o dispositivo, podem fechar a tampa para dormir o dispositivo e alterar as definições de energia. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
+- **Armazenamento local**: Com o armazenamento local, os utilizadores podem guardar e ver ficheiros no disco rígido do dispositivo. As opções são:
+  - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+  - **Ativado**: Impede que os utilizadores guardem e visualizam ficheiros no disco rígido do dispositivo.
+  - **Desativado**: Permite que os utilizadores vejam e guardem ficheiros localmente utilizando o File Explorer.
+
+- **Políticas de alimentação**: Permitir ou impedir que os utilizadores mudem as definições de energia. As opções são:
+  - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+  - **Ativado**: Os utilizadores não podem desligar a hibernação, não podem anular todas as ações de sono (como fechar a tampa) e não podem alterar as definições de energia.
+  - **Desativado:** Os utilizadores podem hibernar o dispositivo, podem fechar a tampa para dormir o dispositivo e alterar as definições de energia.
+
 - Tempo de **sono (em segundos)**: Introduza o número de segundos inativos (0-18000) antes de o dispositivo entrar em modo de sono. `0`significa que o dispositivo nunca dorme. Se não fixar um tempo, o aparelho dorme após 3600 segundos (60 minutos).
-- **Iniciar sessão quando o PC acordar**: Ajuste para o **Ativado** para exigir que os utilizadores insinuem com uma palavra-passe quando o dispositivo sair do modo de sono. Escolha **O Desativado** para que os utilizadores não tenham de introduzir o seu nome de utilizador e palavra-passe. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
-- Tempo de **início de manutenção (em minutos a partir da meia-noite)**: Introduza o tempo em minutos (0-1440) quando as tarefas de manutenção automática, como o Windows Update, funcionarem. A hora de início padrão`0`é meia-noite, ou zero () minutos. Mude a hora de início entrando na hora de início em minutos a partir da meia-noite. Por exemplo, se quiser que a manutenção `120`comece às 2 da manhã, introduza . Se quiser que a manutenção comece `1200`às 20h, entre .
-- Políticas de **educação**: Escolha **habilitado** a utilizar as definições recomendadas para dispositivos utilizados nas escolas, que são mais restritivas. Escolha **deficientes** para que as políticas de educação padrão e recomendada não sejam usadas. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
+
+- **Iniciar sessão quando o PC acordar**: Escolha se os utilizadores devem iniciar sessão após o dispositivo sair do modo de sono. As opções são:
+  - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+  - **Ativado**: Requer que os utilizadores insinuem com uma palavra-passe quando o dispositivo sai do modo de sono.
+  - **Desativado**: Os utilizadores não têm de introduzir o seu nome de utilizador e palavra-passe.
+
+- Tempo de **início de manutenção (em minutos a partir da meia-noite)**: Introduza o tempo em minutos (0-1440) quando as tarefas de manutenção automática, como o Windows Update, funcionarem. A hora de início padrão é meia-noite, ou zero `0` () minutos. Mude a hora de início entrando na hora de início em minutos a partir da meia-noite. Por exemplo, se quiser que a manutenção comece às 2 da manhã, introduza `120` . Se quiser que a manutenção comece às 20h, entre `1200` .
+
+  Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+- **Políticas de educação**: Escolha se as políticas para o ambiente educativo estão habilitadas. As opções são:
+  - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
+  - **Ativado**: Utiliza as definições recomendadas para dispositivos utilizados nas escolas, que são mais restritivos.
+  - **Deficientes**: As políticas de educação por defeito e recomendadas não são utilizadas.
 
   Para obter mais informações sobre o que as políticas de educação fazem, consulte as recomendações de [configuração do Windows 10 para os clientes de educação.](https://docs.microsoft.com/education/windows/configure-windows-for-education)
-
-- **Início rápido de início de sessão** (depreciado): Escolha **Ativado para** que os utilizadores tenham uma experiência rápida de primeiro início de sessão. Quando **ativado,** o dispositivo liga automaticamente novas contas adinárias não-admin a contas locais pré-configuradas. Escolha **Desativado** para evitar a experiência rápida de primeiro início de sessão. **Não configurado** (predefinido) deixa esta definição desgerida por Intune, e não pressiona nenhuma política para controlar esta definição num dispositivo.
-
-  Esta definição é removida numa próxima versão. Não utilize esta definição.
-
-  [Autenticação/EnableFastFirstSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Criar um PC partilhado ou convidado](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (abre outro site docs) é um grande recurso nesta funcionalidade do Windows 10, incluindo conceitos e políticas de grupo que podem ser definidas em modo partilhado.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 - Consulte as definições para [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).

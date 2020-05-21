@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079319"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633308"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementação de aplicações do Windows 10 utilizando o Microsoft Intune 
 
@@ -44,7 +44,7 @@ As aplicações de linha de negócio (LOB) e as aplicações da Microsoft Store 
 
 Os tipos de aplicações específicos são suportados com base na versão do Windows 10 que os seus utilizadores estão a executar. A tabela seguinte fornece o tipo de aplicação e a capacidade de suporte do Windows 10.
 
-| Tipo de aplicação | Casa | Pro | Empresa | Enterprise | Education | Modo S | Hololens<sup>1 | Surface Hub | WCOS | Telemóvel |
+| Tipo de aplicação | Home Page | Pro | Empresa | Enterprise | Education | Modo S | Hololens <sup> 1 | Surface Hub | WCOS | Móvel |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . MSI | Não | Sim | Sim | Sim | Sim | Não | Não | Não | Não | Não |
 | . IntuneWin | Não | Sim | Sim | Sim | Sim | 19H2+ | Não | Não | Não | Não |
@@ -54,7 +54,7 @@ Os tipos de aplicações específicos são suportados com base na versão do Win
 | MSFB Online | Sim | Sim | Sim | Sim | Sim | Sim | RS4+ | Não | Sim | Sim |
 | Aplicações Web | Sim | Sim | Sim | Sim | Sim | Sim | Sim<sup>2 | Sim<sup>2 | Sim | Sim<sup>2 |
 | Link da loja | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
-| Microsoft Edge | Não | Sim | Sim | Sim | Sim | 19H2+<sup>3 | Não | Não | Não | Não |
+| Microsoft Edge | Não | Sim | Sim | Sim | Sim | 19H2+ <sup> 3 | Não | Não | Não | Não |
 
 <sup>1</sup> Para desbloquear a gestão de aplicações, atualize o seu dispositivo HoloLens para [Holographic for Business](../fundamentals/windows-holographic-for-business.md).<br />
 <sup>2</sup> Lançamento apenas do Portal da Empresa.<br />
@@ -75,8 +75,8 @@ As aplicações microsoft Store for Business são aplicações modernas, comprad
 Para categorizar as aplicações da Microsoft Store para as empresas: 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações.** 
-3. Selecione uma aplicação Microsoft Store for Business. Em seguida, selecione **Properties** > **App Information** > **Category**. 
+2. Selecione **Apps**  >  **Todas as aplicações.** 
+3. Selecione uma aplicação Microsoft Store for Business. Em seguida, selecione **Properties**  >  **App Information**  >  **Category**. 
 4. Selecione uma categoria.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Instale aplicações em dispositivos Windows 10
@@ -92,7 +92,9 @@ Dependendo do tipo de aplicação, pode instalar a aplicação num dispositivo W
 > [!NOTE]
 > Para aplicações Win32 construídas como aplicações dual mode, o administrador deve escolher se a aplicação funcionará como uma aplicação modo utilizador ou modo máquina para todas as atribuições associadas a essa instância. O contexto de implantação não pode ser alterado por atribuição.  
 
-As aplicações só podem ser instaladas no contexto do dispositivo quando suportadas pelo dispositivo e pelo tipo de aplicação Intune. Pode instalar os seguintes tipos de aplicações no contexto do dispositivo e atribuir estas aplicações a um grupo de dispositivos:
+As aplicações só podem ser instaladas no contexto do dispositivo quando suportadas pelo dispositivo e pelo tipo de aplicação Intune. As instalações de contexto do dispositivo são suportadas em desktops e dispositivos Equipas do Windows 10, como o Surface Hub. Não são suportados em dispositivos que executam o Windows Holographic para negócios, como o Microsoft HoloLens.
+
+Pode instalar os seguintes tipos de aplicações no contexto do dispositivo e atribuir estas aplicações a um grupo de dispositivos:
 
 - Aplicações Win32
 - Microsoft Store licenciada offline para aplicações empresariais
@@ -115,7 +117,7 @@ Se houver um conflito nas políticas num único utilizador ou dispositivo, aplic
 
 Para obter mais informações, veja [Incluir e excluir atribuições de aplicações no Microsoft Intune](apps-inc-exl-assignments.md). Para obter mais informações sobre tipos de aplicações no Intune, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Atribuir aplicações a grupos com o Microsoft Intune](apps-deploy.md)
 - [Como monitorizar aplicações](apps-monitor.md)

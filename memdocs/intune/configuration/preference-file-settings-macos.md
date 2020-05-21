@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b46e6dbb5d8693f055abe6b20ef731522792324f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551498"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428487"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Adicione um ficheiro de lista de propriedades a dispositivos macOS usando o Microsoft Intune
 
@@ -33,7 +34,7 @@ Esta funcionalidade aplica-se a:
 
 Os ficheiros da lista de propriedades incluem informações sobre aplicações macOS. Para mais informações, consulte [sobre ficheiros](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) de lista de propriedades de informação (site da Apple) e [definições de carga personalizada](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-Este artigo lista e descreve as diferentes definições de ficheiros da lista de propriedades que pode adicionar aos dispositivos macOS. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para adicionar o pacote de aplicações ID ()`com.company.application`e adicione o ficheiro .plist da aplicação.
+Este artigo lista e descreve as diferentes definições de ficheiros da lista de propriedades que pode adicionar aos dispositivos macOS. Como parte da sua solução de gestão de dispositivos móveis (MDM), utilize estas definições para adicionar o pacote de aplicações ID `com.company.application` () e adicione o ficheiro .plist da aplicação.
 
 Estas definições são adicionadas a um perfil de configuração do dispositivo no Intune e, em seguida, atribuídas ou implementadas nos dispositivos macOS.
 
@@ -44,13 +45,10 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 - Apenas algumas aplicações funcionam com preferências geridas, e podem não permitir-lhe gerir todas as definições.
 - Certifique-se de que faz o upload de ficheiros da lista de propriedades que visam as definições do canal do dispositivo, e não as definições do canal do utilizador. Os ficheiros da lista de propriedades visam todo o dispositivo.
 
-> [!NOTE]
-> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
-
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Selecione **macOS**
@@ -66,11 +64,15 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 7. Nas definições de **Configuração,** configure as definições:
 
-    - **Nome**de domínio preferencial : Os ficheiros da lista de propriedades são normalmente utilizados para navegadores web (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)e aplicações personalizadas. Quando se cria um domínio preferencial, também é criado um pacote de IDENTIFICAção. Introduza o ID `com.company.application`do pacote, como . Por exemplo, `com.Contoso.applicationName` `com.Microsoft.Edge`introduza, ou `com.microsoft.wdav`.
-    - **Ficheiro da lista de propriedades**: Selecione o ficheiro da lista de propriedades associado à sua aplicação. Certifique-se de `.plist` que `.xml` é um ou arquivo. Por exemplo, `YourApp-Manifest.plist` faça `YourApp-Manifest.xml` upload de um ou ficheiro.
-    - **Conteúdo**do ficheiro : A informação chave no ficheiro da lista de propriedades é mostrada. Se precisar de alterar as informações chave, abra o ficheiro da lista noutro editor e, em seguida, recarregue o ficheiro em Intune.
+    - **Nome**de domínio preferencial : Introduza o ID do pacote, tais como `com.company.application` . Por exemplo, `com.Contoso.applicationName` `com.Microsoft.Edge` introduza, ou `com.microsoft.wdav` .
 
-    Certifique-se de que o seu ficheiro está devidamente formatado. O ficheiro deve ter apenas pares de valor-chave, `<plist>`e `<xml>` não deve ser embrulhado em `<dict>`etiquetas. Por exemplo, o ficheiro da sua lista de propriedades deve ser semelhante ao seguinte ficheiro:
+      Os ficheiros da lista de propriedades são normalmente utilizados para navegadores web (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)e aplicações personalizadas. Quando se cria um domínio preferencial, também é criado um pacote de IDENTIFICAção.
+
+    - **Ficheiro da lista de propriedades**: Selecione o ficheiro da lista de propriedades associado à sua aplicação. Certifique-se de que é um `.plist` `.xml` ou arquivo. Por exemplo, faça upload de um `YourApp-Manifest.plist` ou `YourApp-Manifest.xml` ficheiro.
+
+      A informação chave no ficheiro da lista de propriedades é mostrada. Se precisar de alterar as informações chave, abra o ficheiro da lista noutro editor e, em seguida, recarregue o ficheiro em Intune.
+
+    Certifique-se de que o seu ficheiro está devidamente formatado. O ficheiro deve ter apenas pares de valor-chave, e não deve ser embrulhado `<dict>` em `<plist>` `<xml>` etiquetas. Por exemplo, o ficheiro da sua lista de propriedades deve ser semelhante ao seguinte ficheiro:
 
     ```xml
     <key>SomeKey</key>
@@ -81,7 +83,7 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
     ```
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -91,8 +93,8 @@ Estas definições são adicionadas a um perfil de configuração do dispositivo
 
 11. Em **Review + criar,** reveja as suas definições. Quando selecionar **Criar,** as suas alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+[Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 
 Para obter mais informações sobre os ficheiros preferenciais do Microsoft Edge, consulte as definições de política do [Microsoft Edge no macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

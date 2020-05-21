@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 919c285366f44a208c1c8d803770b9cbaeb00c5c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078180"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429271"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guia para programadores do SDK da Aplicação do Microsoft Intune para iOS
 
@@ -97,19 +97,19 @@ O objetivo do SDK da Aplicação do Intune para iOS consiste em adicionar capaci
 
 Para ativar o SDK da Aplicação Intune, siga estes passos:
 
-1. **Opção 1 - Quadro (recomendado)**: Se estiver a utilizar o Xcode 10.2+ e a sua aplicação/extensão contiver código Swift, `IntuneMAMSwift.framework` link `IntuneMAMSwiftStub.framework` e ao seu alvo: Arraste `IntuneMAMSwift.framework` e `IntuneMAMSwiftStub.framework` para a lista de **Binários Incorporados** do alvo do projeto.
+1. **Opção 1 - Quadro (recomendado)**: Se estiver a utilizar o Xcode 10.2+ e a sua aplicação/extensão contiver código Swift, link `IntuneMAMSwift.framework` e ao seu `IntuneMAMSwiftStub.framework` alvo: Arraste `IntuneMAMSwift.framework` e para a lista de `IntuneMAMSwiftStub.framework` **Binários Incorporados** do alvo do projeto.
 
-    Caso contrário, `IntuneMAM.framework` ligue-se `IntuneMAM.framework` ao seu alvo: Arraste para a lista **de Binários Incorporados** do alvo do projeto.
+    Caso contrário, `IntuneMAM.framework` ligue-se ao seu alvo: Arraste `IntuneMAM.framework` para a lista de **Binários Incorporados** do alvo do projeto.
 
    > [!NOTE]
    > Se utilizar a estrutura, terá de retirar manualmente as arquiteturas do simulador da estrutura universal antes de submeter a sua aplicação na App Store. Veja [Enviar a aplicação à App Store](#submit-your-app-to-the-app-store) para obter mais detalhes.
 
-   **Opção 2 - Biblioteca Estática**: Esta opção só está disponível para apps/extensões que não contenham código Swift, ou foram construídas com Xcode < 10.2. Ligação `libIntuneMAM.a` para a biblioteca. Arraste a biblioteca `libIntuneMAM.a` para a lista **Estruturas e Bibliotecas Ligadas** do destino do projeto.
+   **Opção 2 - Biblioteca Estática**: Esta opção só está disponível para apps/extensões que não contenham código Swift, ou foram construídas com Xcode < 10.2. Ligação para a `libIntuneMAM.a` biblioteca. Arraste a biblioteca `libIntuneMAM.a` para a lista **Estruturas e Bibliotecas Ligadas** do destino do projeto.
 
     ![SDK da Aplicação do Intune para iOS: estruturas e bibliotecas ligadas](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     Adicione `-force_load {PATH_TO_LIB}/libIntuneMAM.a` a qualquer um dos seguintes, substituindo `{PATH_TO_LIB}` pela localização do SDK da Aplicação do Intune:
-   * A configuração `OTHER_LDFLAGS` de configuração de construção do projeto.
+   * A configuração de configuração de construção do `OTHER_LDFLAGS` projeto.
    * As **Outras Bandeiras**de Linker do Xcode UI.
 
      > [!NOTE]
@@ -122,7 +122,7 @@ Para ativar o SDK da Aplicação Intune, siga estes passos:
 2. Adicione estas estruturas de iOS ao projeto:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -194,7 +194,7 @@ Recomenda-se que a sua aplicação se ligue ao mais recente lançamento da [ADAL
 
 1. Se a sua aplicação não tiver quaisquer grupos de acesso ao keychain definidos, adicione o ID da aplicação como o primeiro grupo.
 
-2. Ativar o sinal único ADAL/MSAL (SSO) adicionando `com.microsoft.adalcache` aos grupos de acesso à porta-chaves.
+2. Ativar o sinal único ADAL/MSAL (SSO) adicionando aos grupos de `com.microsoft.adalcache` acesso à porta-chaves.
 
 3. Caso esteja explicitamente a definir o grupo de keychain da cache partilhada da ADAL, certifique-se de que está definido como `<appidprefix>.com.microsoft.adalcache`. A ADAL define isto automaticamente, a menos que efetue uma substituição. Se quiser especificar um grupo de keychain personalizado para substituir o `com.microsoft.adalcache`, especifique-o no ficheiro Info.plist, em IntuneMAMSettings, com a chave `ADALCacheKeychainGroupOverride`.
 
@@ -210,7 +210,7 @@ Se a sua aplicação já utilizar a ADAL ou a MSAL para autenticação e tiver a
 
 Se a sua aplicação já utilizar a ADAL ou a MSAL, são necessárias as seguintes configurações:
 
-1. No ficheiro Info.plist do projeto, no dicionário **IntuneMAMSettings** `ADALClientId`com o nome chave, especifique o ID do cliente a ser utilizado para chamadas ADAL.
+1. No ficheiro Info.plist do projeto, no dicionário **IntuneMAMSettings** com o nome `ADALClientId` chave, especifique o ID do cliente a ser utilizado para chamadas ADAL.
 
 2. Também no dicionário **IntuneMAMSettings** com o nome de chave `ADALAuthority`, especifique a autoridade do Azure AD.
 
@@ -229,12 +229,12 @@ Como mencionado anteriormente, o Intune App SDK pode utilizar a Biblioteca de [A
 
 ADAL - Intune App SDK fornecerá valores predefinidos para parâmetros ADAL e manuseie a autenticação contra a AD Azure. Os desenvolvedores não precisam de especificar quaisquer valores para as definições ADAL anteriormente mencionadas. 
 
-MSAL - Os desenvolvedores precisam criar um registo de aplicação em AAD com um URI de redirecionamento personalizado no formato [aqui](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)especificado . Os desenvolvedores `ADALClientID` `ADALRedirectUri` devem definir as definições `aadClientIdOverride` `aadRedirectUriOverride` e configurações anteriormente mencionadas, ou o equivalente e propriedades na `IntuneMAMPolicyManager` instância. Os desenvolvedores também devem garantir que seguem o passo 4 na secção anterior, para dar à sua app acesso ao serviço de proteção de aplicações Intune.
+MSAL - Os desenvolvedores precisam criar um registo de aplicação em AAD com um URI de redirecionamento personalizado no formato [aqui](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)especificado . Os desenvolvedores devem definir as `ADALClientID` definições e `ADALRedirectUri` configurações anteriormente mencionadas, ou o equivalente `aadClientIdOverride` e propriedades na `aadRedirectUriOverride` `IntuneMAMPolicyManager` instância. Os desenvolvedores também devem garantir que seguem o passo 4 na secção anterior, para dar à sua app acesso ao serviço de proteção de aplicações Intune.
 
 ### <a name="special-considerations-when-using-msal"></a>Considerações especiais ao utilizar o MSAL 
 
-1. **Consulte o seu Webview** - Recomenda-se que as aplicações não utilizem o SFSafariViewController, O SFAuthSession ou o ASWebAuthSession como o seu webview para quaisquer operações interativas de Auth MSAL iniciadas por aplicações. Se, por alguma razão, a sua aplicação tiver de utilizar uma destas `SafariViewControllerBlockedOverride` webviews para quaisquer operações interativas de auth MSAL, então também deve ser definida sob `true` o `IntuneMAMSettings` dicionário na lista info.plist da aplicação. AVISO: Isto desligará os ganchos SafariViewController da Intune para ativar a sessão de auth. Isto arrisca fugas de dados em outros lugares da aplicação se a aplicação usar o SafariViewController para visualizar dados corporativos, pelo que a aplicação não deve apresentar dados corporativos em nenhum desses tipos de webview.
-2. **Ligando tanto a ADAL como a MSAL** - Os desenvolvedores devem optar se quiserem que a Intune prefira a MSAL em vez da ADAL neste cenário. Por padrão, a Intune prefere versões ADAL suportadas a versões MSAL suportadas, se ambas estiverem ligadas no prazo de execução. Intune só prefere uma versão MSAL suportada quando, no momento da `IntuneMAMUseMSALOnNextLaunch` primeira `true` `NSUserDefaults`operação de autenticação de Intune, estiver em . Se `IntuneMAMUseMSALOnNextLaunch` `false` estiver ou não definido, Intune recue para o comportamento padrão. Como o nome sugere, `IntuneMAMUseMSALOnNextLaunch` uma mudança entrará em vigor no próximo lançamento.
+1. **Consulte o seu Webview** - Recomenda-se que as aplicações não utilizem o SFSafariViewController, O SFAuthSession ou o ASWebAuthSession como o seu webview para quaisquer operações interativas de Auth MSAL iniciadas por aplicações. Se, por alguma razão, a sua aplicação tiver de utilizar uma destas webviews para quaisquer operações interativas de auth MSAL, então também deve ser definida `SafariViewControllerBlockedOverride` sob o dicionário na lista `true` `IntuneMAMSettings` info.plist da aplicação. AVISO: Isto desligará os ganchos SafariViewController da Intune para ativar a sessão de auth. Isto arrisca fugas de dados em outros lugares da aplicação se a aplicação usar o SafariViewController para visualizar dados corporativos, pelo que a aplicação não deve apresentar dados corporativos em nenhum desses tipos de webview.
+2. **Ligando tanto a ADAL como a MSAL** - Os desenvolvedores devem optar se quiserem que a Intune prefira a MSAL em vez da ADAL neste cenário. Por padrão, a Intune prefere versões ADAL suportadas a versões MSAL suportadas, se ambas estiverem ligadas no prazo de execução. Intune só prefere uma versão MSAL suportada quando, no momento da primeira operação de autenticação de Intune, `IntuneMAMUseMSALOnNextLaunch` estiver `true` em `NSUserDefaults` . Se `IntuneMAMUseMSALOnNextLaunch` estiver ou não `false` definido, Intune recue para o comportamento padrão. Como o nome sugere, uma mudança `IntuneMAMUseMSALOnNextLaunch` entrará em vigor no próximo lançamento.
 
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Configurar as definições para o SDK da Aplicação do Intune
@@ -274,7 +274,7 @@ MAMTelemetryUsePPE | Booleano | Especifica se o SDK de MAM envia dados para o ba
 MaxFileProtectionLevel | String | Opcional. Permite que a aplicação especifique o `NSFileProtectionType` máximo que pode suportar. Este valor irá substituir a política enviada pelo serviço se o nível for superior ao que a aplicação consegue suportar. Valores possíveis: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Booleano | Defina como YES para extensões de Ação Abrir em. Veja a secção Partilhar dados através de UIActivityViewController para obter mais informações. |
 WebViewHandledURLSchemes | Matriz de Cadeias | Especifica os esquemas de URL processados pela WebView da sua aplicação. | Necessário se a sua aplicação utilizar uma WebView que processa URLs através de ligações e/ou javascript. |
-DocumentbrowserFileCachePath | String | Se a sua [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) aplicação utilizar a aplicação para navegar através de ficheiros em vários fornecedores de ficheiros, pode definir este caminho em relação ao diretório inicial na caixa de areia da aplicação para que o Intune SDK possa deixar cair ficheiros geridos desencriptados nessa pasta. | Opcional. Incumprimentos no `/Documents/` diretório. |
+DocumentbrowserFileCachePath | String | Se a sua aplicação utilizar a aplicação para navegar através de [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) ficheiros em vários fornecedores de ficheiros, pode definir este caminho em relação ao diretório inicial na caixa de areia da aplicação para que o Intune SDK possa deixar cair ficheiros geridos desencriptados nessa pasta. | Opcional. Incumprimentos no `/Documents/` diretório. |
 VerboseLoggingEnabled | Booleano | Se definido para SIM, Intune iniciará o seu login no modo verbose. | Opcional. Incumprimentos a NO |
 
 ## <a name="receive-app-protection-policy"></a>Receber a política de proteção de aplicações
@@ -288,7 +288,7 @@ Para receber a política de proteção de aplicações do Intune, as aplicaçõe
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Aplicativos que já usam ADAL ou MSAL
 
-As aplicações que já utilizam a ADAL ou a MSAL devem ligar para o `registerAndEnrollAccount` método na `IntuneMAMEnrollmentManager` ocorrência depois de o utilizador ter sido autenticado com sucesso:
+As aplicações que já utilizam a ADAL ou a MSAL devem ligar para o `registerAndEnrollAccount` método na ocorrência depois de o utilizador ter sido `IntuneMAMEnrollmentManager` autenticado com sucesso:
 
 ```objc
 /*
@@ -336,7 +336,7 @@ Exemplo:
 
 ### <a name="let-intune-handle-authentication-and-enrollment-at-launch"></a>Permitir que o Intune processe a autenticação e a inscrição na iniciação
 
-Se quiser que o Intune SDK manuseie toda a autenticação utilizando a ADAL/MSAL e a inscrição `loginAndEnrollAccount` antes do lançamento da sua aplicação, e a sua aplicação requer sempre a política de APP, não precisa de usar API. Pode simplesmente configurar as duas definições abaixo como YES no dicionário IntuneMAMSettings no ficheiro Info.plist.
+Se quiser que o Intune SDK manuseie toda a autenticação utilizando a ADAL/MSAL e a inscrição antes do lançamento da sua aplicação, e a sua aplicação requer sempre a política de APP, não precisa de usar `loginAndEnrollAccount` API. Pode simplesmente configurar as duas definições abaixo como YES no dicionário IntuneMAMSettings no ficheiro Info.plist.
 
 Definição  | Tipo  | Definição |
 --       |  --   |   --       |  
@@ -374,7 +374,7 @@ Antes de o utilizador terminar a sessão, a aplicação deve chamar o seguinte m
 
 Este método deve ser chamado antes de serem suprimidas as fichas adatos da conta de utilizador. O SDK necessita do token(s) da conta de utilizador para fazer pedidos específicos ao serviço Intune MAM em nome do utilizador.
 
-Se a aplicação eliminar os dados corporativos `doWipe` do utilizador por si só, a bandeira pode ser configurada como falsa. Caso contrário, a aplicação pode indicar ao SDK para iniciar uma eliminação seletiva. Isto resultará numa chamada para o delegado de eliminação seletiva da aplicação.
+Se a aplicação eliminar os dados corporativos do utilizador por si só, a `doWipe` bandeira pode ser configurada como falsa. Caso contrário, a aplicação pode indicar ao SDK para iniciar uma eliminação seletiva. Isto resultará numa chamada para o delegado de eliminação seletiva da aplicação.
 
 Exemplo:
 
@@ -475,18 +475,18 @@ IntuneMAMDataProtectionManager.h | A classe IntuneMAMDataProtectionManager expõ
 
 Intune permite que os administradores de TI especifiquem quais as contas que podem ser registadas pelo utilizador. As aplicações podem consultar o Intune App SDK para a lista especificada de contas permitidas e, em seguida, garantir que apenas contas permitidas são assinadas no dispositivo.
 
-Para consultar as contas permitidas, a `allowedAccounts` App `IntuneMAMEnrollmentManager`deve verificar a propriedade no . A `allowedAccounts` propriedade é ou um conjunto contendo as contas permitidas ou nulo. Se a propriedade for nula, então não foram especificadas contas permitidas.
+Para consultar as contas permitidas, a App deve verificar a `allowedAccounts` propriedade no `IntuneMAMEnrollmentManager` . A `allowedAccounts` propriedade é ou um conjunto contendo as contas permitidas ou nulo. Se a propriedade for nula, então não foram especificadas contas permitidas.
 
-As aplicações também podem `allowedAccounts` reagir a `IntuneMAMAllowedAccountsDidChangeNotification` alterações da propriedade observando a notificação. A notificação é `allowedAccounts` publicada sempre que o imóvel muda de valor.
+As aplicações também podem reagir a alterações da `allowedAccounts` propriedade observando a `IntuneMAMAllowedAccountsDidChangeNotification` notificação. A notificação é publicada sempre que o `allowedAccounts` imóvel muda de valor.
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Implementar controlos de poupança e de abertura
 
-Intune permite que os administradores de TI selecionem quais locais de armazenamento uma aplicação gerida pode guardar dados ou abrir dados a partir de. As aplicações podem consultar o Intune MAM SDK para `isSaveToAllowedForLocation` locais de `IntuneMAMPolicy.h`armazenamento autorizados utilizando a API, definida em . As aplicações também podem consultar o Intune MAM SDK para `isOpenFromAllowedForLocation` locais de `IntuneMAMPolicy.h`armazenamento abertos permitidos através da API, definida em .
+Intune permite que os administradores de TI selecionem quais locais de armazenamento uma aplicação gerida pode guardar dados ou abrir dados a partir de. As aplicações podem consultar o Intune MAM SDK para locais de armazenamento autorizados utilizando a `isSaveToAllowedForLocation` API, definida em `IntuneMAMPolicy.h` . As aplicações também podem consultar o Intune MAM SDK para locais de armazenamento abertos permitidos através da `isOpenFromAllowedForLocation` API, definida em `IntuneMAMPolicy.h` .
 
 Antes de as aplicações poderem guardar dados geridos em localizações locais ou de armazenamento na cloud, estas têm de verificar a API `isSaveToAllowedForLocation` para saber se o administrador de TI permitiu que os dados fossem guardados nessas localizações.
-Antes de abrir dados para uma aplicação a partir de `isOpenFromAllowedForLocation` um armazenamento em nuvem ou local, a aplicação deve consultar a API para saber se o administrador de TI permitiu que os dados fossem abertos a partir daí.
+Antes de abrir dados para uma aplicação a partir de um armazenamento em nuvem ou local, a aplicação deve consultar a API para saber se o administrador de `isOpenFromAllowedForLocation` TI permitiu que os dados fossem abertos a partir daí.
 
-Quando as `isSaveToAllowedForLocation` aplicações utilizam as APIs ou `isOpenFromAllowedForLocation` APIs, devem passar na UPN para o local de armazenamento, se estiver disponível.
+Quando as aplicações utilizam as `isSaveToAllowedForLocation` APIs ou `isOpenFromAllowedForLocation` APIs, devem passar na UPN para o local de armazenamento, se estiver disponível.
 
 ### <a name="supported-save-locations"></a>Localizações para guardar suportadas
 
@@ -502,11 +502,11 @@ As aplicações devem utilizar as constantes na API `isSaveToAllowedForLocation`
 
 A constante `IntuneMAMSaveLocationLocalDrive` deve ser utilizada quando a aplicação guarda dados numa localização no dispositivo local.
 
-Se a conta para o `nil` local de destino for desconhecida, deve ser passada. A `IntuneMAMSaveLocationLocalDrive` localização deve ser sempre `nil` emparelhada com uma conta.
+Se a conta para o local de destino for desconhecida, `nil` deve ser passada. A `IntuneMAMSaveLocationLocalDrive` localização deve ser sempre emparelhada com uma `nil` conta.
 
 ### <a name="supported-open-locations"></a>Locais abertos suportados
 
-A `isOpenFromAllowedForLocation` API fornece constantes para verificar se o administrador de TI permite a `IntuneMAMPolicy.h`abertura de dados a partir dos seguintes locais definidos em .
+A `isOpenFromAllowedForLocation` API fornece constantes para verificar se o administrador de TI permite a abertura de dados a partir dos seguintes locais definidos em `IntuneMAMPolicy.h` .
 
 * IntuneMAMOpenLocationOther
 * IntuneMAMOpenLocationOneDriveForBusiness
@@ -515,7 +515,7 @@ A `isOpenFromAllowedForLocation` API fornece constantes para verificar se o admi
 * IntuneMAMOpenLocationLocalStorage
 * IntuneMAMOpenLocationAccountDocument
 
-As aplicações devem `isOpenFromAllowedForLocation` utilizar as constantes para verificar se os dados podem ser abertos a partir de locais considerados "geridos", como o OneDrive para Negócios, ou "pessoal". Além disso, a API deve ser utilizada quando a aplicação não pode verificar se um local é "gerido" ou "pessoal".
+As aplicações devem utilizar as constantes `isOpenFromAllowedForLocation` para verificar se os dados podem ser abertos a partir de locais considerados "geridos", como o OneDrive para Negócios, ou "pessoal". Além disso, a API deve ser utilizada quando a aplicação não pode verificar se um local é "gerido" ou "pessoal".
 
 A `IntuneMAMOpenLocationCamera` constante deve ser usada quando a aplicação está a abrir dados da câmara ou do álbum de fotografias.
 
@@ -523,19 +523,19 @@ A `IntuneMAMOpenLocationLocalStorage` constante deve ser utilizada quando a apli
 
 A `IntuneMAMOpenLocationAccountDocument` constante deve ser utilizada quando a aplicação está a abrir um documento que tenha uma identidade de conta gerida (ver a secção "Dados Partilhados" abaixo)
 
-Se a conta para a `nil` localização da fonte for desconhecida, deve ser passada. Os `IntuneMAMOpenLocationLocalStorage` `IntuneMAMOpenLocationCamera` locais e locais devem `nil` ser sempre emparelhados com uma conta.
+Se a conta para a localização da fonte for desconhecida, `nil` deve ser passada. Os `IntuneMAMOpenLocationLocalStorage` `IntuneMAMOpenLocationCamera` locais e locais devem ser sempre emparelhados com uma `nil` conta.
 
 ### <a name="unknown-or-unlisted-locations"></a>Locais desconhecidos ou não listados
 
-Quando a localização desejada `IntuneMAMSaveLocation` não `IntuneMAMOpenLocation` estiver listada nos enums ou for desconhecida, deve ser utilizado um dos dois locais.
-* Se o local de salvamento estiver a ser `IntuneMAMSaveLocationAccountDocument` acedido com`IntuneMAMOpenLocationAccountDocument` uma conta gerida, então a localização deve ser utilizada (para abrir).
-* Caso contrário, `IntuneMAMSaveLocationOther` utilize`IntuneMAMOpenLocationOther` a localização (para abrir).
+Quando a localização desejada não estiver listada nos `IntuneMAMSaveLocation` `IntuneMAMOpenLocation` enums ou for desconhecida, deve ser utilizado um dos dois locais.
+* Se o local de salvamento estiver a ser acedido com uma conta gerida, então a `IntuneMAMSaveLocationAccountDocument` localização deve ser utilizada `IntuneMAMOpenLocationAccountDocument` (para abrir).
+* Caso contrário, utilize a `IntuneMAMSaveLocationOther` localização `IntuneMAMOpenLocationOther` (para abrir).
 
-É importante tornar a distinção clara entre a conta gerida e uma conta que partilha a UPN da conta gerida. Por exemplo, uma conta geridauser@contoso.comcom UPN " assinada no OneDrive nãouser@contoso.comé a mesma que uma conta com UPN " assinada no Dropbox. Se um serviço desconhecido ou não listado for acedido através dauser@contoso.comassinatura na conta gerida (por exemplo, `AccountDocument` " " assinado no OneDrive), este deve ser representado pela localização. Se o serviço desconhecido ou não listado entrar atravésuser@contoso.comde outra conta (por exemplo, " " assinado no Dropbox), não `Other` está a aceder ao local com uma conta gerida e deve ser representado pela localização.
+É importante tornar a distinção clara entre a conta gerida e uma conta que partilha a UPN da conta gerida. Por exemplo, uma conta gerida com UPN user@contoso.com " assinada no OneDrive não é a mesma que uma conta com UPN user@contoso.com " assinada no Dropbox. Se um serviço desconhecido ou não listado for acedido através da assinatura na conta gerida (por exemplo, user@contoso.com " " assinado no OneDrive), este deve ser representado pela `AccountDocument` localização. Se o serviço desconhecido ou não listado entrar através de outra conta (por exemplo, user@contoso.com " " assinado no Dropbox), não está a aceder ao local com uma conta gerida e deve ser representado pela `Other` localização.
 
 ### <a name="sharing-blocked-alert"></a>Partilhar alerta bloqueado
 
-Uma função de ajudante de UI pode ser usada quando a `isSaveToAllowedForLocation` Ou `isOpenFromAllowedForLocation` API é chamada e encontrada para bloquear a ação de salvamento/abertura. Se a aplicação quiser notificar o utilizador de que `showSharingBlockedMessage` a ação `IntuneMAMUIHelper.h` foi bloqueada, pode ligar para a API definida para apresentar uma visão de alerta com uma mensagem genérica.
+Uma função de ajudante de UI pode ser usada quando a Ou `isSaveToAllowedForLocation` `isOpenFromAllowedForLocation` API é chamada e encontrada para bloquear a ação de salvamento/abertura. Se a aplicação quiser notificar o utilizador de que a ação foi bloqueada, pode ligar para a API definida para apresentar uma visão de `showSharingBlockedMessage` alerta com uma mensagem `IntuneMAMUIHelper.h` genérica.
 
 ## <a name="share-data-via-uiactivityviewcontroller"></a>Partilhar dados através de UIActivityViewController
 
@@ -543,9 +543,9 @@ A partir da versão 8.0.2, o SDK da Aplicação do Intune poderá filtrar açõe
 
 ### <a name="copy-to-actions"></a>Ações 'Copy To'
 
-Ao partilhar documentos através do `UIActivityViewController` iOS, `UIDocumentInteractionController`o iOS exibe ações 'Copy to' para cada aplicação que suporta a abertura do documento que está a ser partilhada. As aplicações declaram os tipos de documentos que suportam através da definição `CFBundleDocumentTypes` no ficheiro Info.plist. Este tipo de partilha já não estará disponível se a política proibir a partilha com aplicações não geridas. Em substituição, o utilizador terá de adicionar uma extensão de Ação que não faça parte da IU à aplicação e ligá-la ao SDK da Aplicação do Intune. A extensão de Ação é apenas um stub. O SDK implementará o comportamento de partilha de ficheiros. Siga os passos abaixo:
+Ao partilhar documentos através do `UIActivityViewController` `UIDocumentInteractionController` iOS, o iOS exibe ações 'Copy to' para cada aplicação que suporta a abertura do documento que está a ser partilhada. As aplicações declaram os tipos de documentos que suportam através da definição `CFBundleDocumentTypes` no ficheiro Info.plist. Este tipo de partilha já não estará disponível se a política proibir a partilha com aplicações não geridas. Em substituição, o utilizador terá de adicionar uma extensão de Ação que não faça parte da IU à aplicação e ligá-la ao SDK da Aplicação do Intune. A extensão de Ação é apenas um stub. O SDK implementará o comportamento de partilha de ficheiros. Siga os passos abaixo:
 
-1. A sua aplicação deve ter pelo menos um `CFBundleURLTypes` esquemaURL `-intunemam` definido no seu Info.plist juntamente com a sua congénere. Por exemplo:
+1. A sua aplicação deve ter pelo menos um esquemaURL definido no seu Info.plist juntamente com a `CFBundleURLTypes` sua `-intunemam` congénere. Por exemplo:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -554,9 +554,9 @@ Ao partilhar documentos através do `UIActivityViewController` iOS, `UIDocumentI
     </array>
     ```
 
-2. Tanto a sua aplicação como a extensão de ação devem partilhar `AppGroupIdentifiers` pelo menos um Grupo de Aplicações, e o Grupo app deve ser listado sob a matriz sob os dicionários IntuneMAMSettings da aplicação e da extensão.
+2. Tanto a sua aplicação como a extensão de ação devem partilhar pelo menos um Grupo de Aplicações, e o Grupo app deve ser listado sob `AppGroupIdentifiers` a matriz sob os dicionários IntuneMAMSettings da aplicação e da extensão.
 
-3. Tanto a sua aplicação como a extensão de `com.microsoft.intune.mam` ação devem ter a capacidade de partilha de keychain e partilhar o grupo keychain.
+3. Tanto a sua aplicação como a extensão de ação devem ter a capacidade de partilha de keychain e partilhar o `com.microsoft.intune.mam` grupo keychain.
 
 4. Nomeie a extensão de ação "Open in" seguida do nome da aplicação. Localize o ficheiro Info.plist conforme necessário.
 
@@ -566,9 +566,9 @@ Ao partilhar documentos através do `UIActivityViewController` iOS, `UIDocumentI
     IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory
     ```
 
-6. Em IntuneMAMSettings na lista info.plist da extensão, `OpenInActionExtension` adicione uma definição Boolean com o valor SIM.
+6. Em IntuneMAMSettings na lista info.plist da extensão, adicione uma definição Boolean com `OpenInActionExtension` o valor SIM.
 
-7. Configure `NSExtensionActivationRule` o para suportar um único ficheiro e `CFBundleDocumentTypes` todos `com.microsoft.intune.mam`os tipos da aplicação pré-fixado com . Por exemplo, se a aplicação suportar public.text e public.image, a regra de ativação será:
+7. Configure o `NSExtensionActivationRule` para suportar um único ficheiro e todos os tipos da aplicação `CFBundleDocumentTypes` pré-fixado com `com.microsoft.intune.mam` . Por exemplo, se a aplicação suportar public.text e public.image, a regra de ativação será:
 
     ```objc
     SUBQUERY (
@@ -707,7 +707,7 @@ Em alternativa, as aplicações podem definir a identidade de proprietário do f
 
 Se a aplicação criar ficheiros que possuam dados de utilizadores geridos e não geridos, a aplicação é responsável por encriptar os dados do utilizador gerido. Pode encriptar dados com as APIs `protect` e `unprotect` no `IntuneMAMDataProtectionManager`.
 
-O método `protect` aceita uma identidade que pode ser um utilizador gerido ou não gerido. Se o utilizador for gerido, os dados serão encriptados. Se o utilizador for não gerido, será adicionado um cabeçalho aos dados a codificar a identidade, mas os dados não serão encriptados. Pode utilizar `protectionInfo` o método para recuperar o proprietário dos dados.
+O método `protect` aceita uma identidade que pode ser um utilizador gerido ou não gerido. Se o utilizador for gerido, os dados serão encriptados. Se o utilizador for não gerido, será adicionado um cabeçalho aos dados a codificar a identidade, mas os dados não serão encriptados. Pode utilizar o `protectionInfo` método para recuperar o proprietário dos dados.
 
 ### <a name="share-extensions"></a>Extensões de partilha
 
@@ -745,10 +745,10 @@ Por predefinição, as aplicações são consideradas de identidade única. O SD
     Tenha em atenção que este método é chamado a partir de um thread de segundo plano. A aplicação não deve devolver um valor até que todos os dados para o utilizador tenham sido removidos (com a exceção dos ficheiros, se a aplicação devolver FALSE).
 
 ## <a name="siri-intents"></a>Intenções Siri
-Se a sua aplicação se integrar com a Siri `areSiriIntentsAllowed` Intents, certifique-se de ler os comentários para `IntuneMAMPolicy.h` obter instruções sobre o apoio a este cenário. 
+Se a sua aplicação se integrar com a Siri Intents, certifique-se de ler os comentários para `areSiriIntentsAllowed` `IntuneMAMPolicy.h` obter instruções sobre o apoio a este cenário. 
     
 ## <a name="notifications"></a>Notificações
-Se a sua aplicação receber notificações, certifique-se `IntuneMAMPolicy.h` de ler os comentários para `notificationPolicy` obter instruções sobre o suporte a este cenário.  Recomenda-se que as `IntuneMAMPolicyDidChangeNotification` aplicações se registem para descrever e `IntuneMAMPolicyManager.h`comuniquem este valor através `UNNotificationServiceExtension` do porta-chaves.
+Se a sua aplicação receber notificações, certifique-se de ler os comentários `notificationPolicy` `IntuneMAMPolicy.h` para obter instruções sobre o suporte a este cenário.  Recomenda-se que as aplicações se registem para `IntuneMAMPolicyDidChangeNotification` descrever `IntuneMAMPolicyManager.h` e comuniquem este valor através `UNNotificationServiceExtension` do porta-chaves.
 ## <a name="displaying-web-content-within-application"></a>Exibindo conteúdo web dentro da aplicação
 Se a sua aplicação tiver a capacidade de exibir websites dentro de uma visão web e as páginas web exibidas tiverem a capacidade de navegar para sites arbitrários, a aplicação é ressonável para definir a identidade atual para que os dados geridos não possam ser vazados através da visão web. Exemplos disso são páginas web 'Suggest a Feature' ou 'Feedback' que têm ligações diretas ou indiretas a um motor de busca.
 As aplicações multi-identidade devem ligar para intuneMAMPolicyManager setUIPolicyIdentity passando na corda vazia antes de exibir a vista web. Após a demissão da vista web, o pedido deve chamar setUIPolicyIdentity passando na identidade atual.
@@ -795,7 +795,7 @@ A anulação do registo de um utilizador notifica o SDK que o utilizador deixar�
 
 ### <a name="should-i-set-the-dowipe-flag-to-true-in-the-deregister-method"></a>Devo definir o sinalizador doWipe como True no método de anulação do registo?
 
-Este método deve ser chamado antes de o utilizador terminar a sessão na aplicação.  Se os dados do utilizador forem eliminados da aplicação como parte do sign-out, `doWipe` podem ser definidos como falsos. Mas se a aplicação não remover `doWipe` os dados do utilizador, deve ser definido como verdadeiro para que o SDK possa apagar os dados.
+Este método deve ser chamado antes de o utilizador terminar a sessão na aplicação.  Se os dados do utilizador forem eliminados da aplicação como parte do sign-out, `doWipe` podem ser definidos como falsos. Mas se a aplicação não remover os dados do utilizador, deve ser definido como verdadeiro para `doWipe` que o SDK possa apagar os dados.
 
 ### <a name="are-there-any-other-ways-that-an-application-can-be-un-enrolled"></a>Existem outras formas de anular o registo de uma aplicação?
 

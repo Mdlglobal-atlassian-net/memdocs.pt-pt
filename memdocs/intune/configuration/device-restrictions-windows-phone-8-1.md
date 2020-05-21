@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24fd2085839df35a486fcfa4cf817944b0d19944
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407650"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556256"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Definições de restrição de dispositivos Windows Phone 8.1 no Microsoft Intune
 
 Este artigo mostra-lhe as definições de restrição de dispositivos do Microsoft Intune que pode configurar para dispositivos Windows Phone 8.1.
+
+## <a name="before-you-begin"></a>Antes de começar
+
+Criar um perfil de restrições de [dispositivos Windows Phone 8.1](device-restrictions-configure.md).
 
 ## <a name="general"></a>Geral
 
@@ -48,16 +52,16 @@ Este artigo mostra-lhe as definições de restrição de dispositivos do Microso
     - **Predefinição do dispositivo:** A palavra-passe pode incluir números e letras.
     - **Alfanumérico:** A palavra-passe deve ser uma mistura de números e letras.
     - **Numérico:** A palavra-passe só deve ser números.
-  - Comprimento mínimo da **palavra-passe**: Introduza o número mínimo de caracteres necessários, de 4 a 16. Por exemplo, `6` introduza para exigir pelo menos seis caracteres no comprimento da palavra-passe.
-  - **Palavras-passe simples**: **O bloco** impede os `1234` `1111`utilizadores de criarem senhas simples, tais como ou . Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+  - Comprimento mínimo da **palavra-passe**: Introduza o número mínimo de caracteres necessários, de 4 a 16. Por exemplo, introduza `6` para exigir pelo menos seis caracteres no comprimento da palavra-passe.
+  - **Palavras-passe simples**: **O bloco** impede os utilizadores de criarem senhas simples, tais como `1234` ou `1111` . Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
   - **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de os dispositivos serem limpos.
-  - **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o tempo de tempo em que um dispositivo deve ficar inativo antes de o ecrã estar automaticamente bloqueado. Por exemplo, `5` introduza os dispositivos de bloqueio após 5 minutos de inatividade. Quando definido para **Não configurado** ou deixado em branco, Intune não altera nem atualiza esta definição.
+  - **Minutos máximos de inatividade até que o ecrã bloqueie**: Introduza o tempo de tempo em que um dispositivo deve ficar inativo antes de o ecrã estar automaticamente bloqueado. Por exemplo, introduza os dispositivos de `5` bloqueio após 5 minutos de inatividade. Quando definido para **Não configurado** ou deixado em branco, Intune não altera nem atualiza esta definição.
   - **Expiração da palavra-passe (dias)**: Introduza o tempo de tempo nos dias em que a palavra-passe do dispositivo deve ser alterada, de 1 a 255. Por exemplo, `90` introduza para expirar a palavra-passe após 90 dias. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-  - **Evite a reutilização de senhas anteriores**: Introduza o número de senhas anteriormente utilizadas que não podem ser utilizadas, de 1 a 24. Por exemplo, `5` introduza para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+  - **Evite a reutilização de senhas anteriores**: Introduza o número de senhas anteriormente utilizadas que não podem ser utilizadas, de 1 a 24. Por exemplo, introduza para que `5` os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
 - **Encriptação**: **Requer** encriptação no dispositivo, incluindo ficheiros. Nem todos os dispositivos suportam encriptação. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Para configurar esta definição e reportar corretamente a conformidade, configurar também:
   - **Requerer a palavra-passe**: Definir a **Requerer**.
   - **Tipo de palavra-passe requerida**: Definir para pelo menos **numérico**.
-  - **Comprimento mínimo da palavra-passe**: Definir para pelo menos `4`.
+  - **Comprimento mínimo da palavra-passe**: Definir para pelo menos `4` .
 
 ## <a name="app-store"></a>App Store
 
@@ -99,6 +103,6 @@ Também pode clicar **em Importar** para preencher a lista a partir de um fichei
 - **NFC**: **Bloquear** desativa operações que utilizam comunicações de campo (NFC) em dispositivos que o suportam. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Bluetooth**: **O bloco** impede os utilizadores de ativarem bluetooth. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para uma visão geral do perfil de restrições do dispositivo, consulte as definições de restrição do [dispositivo Configure no Microsoft Intune](device-restrictions-configure.md).

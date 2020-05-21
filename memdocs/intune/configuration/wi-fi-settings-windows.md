@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61d84b0d1f5047df23e9571a0330768ed37eb921
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80862827"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429776"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Adicionar definições de Wi-Fi para dispositivos Windows 10 e posteriores no Intune
 
@@ -69,8 +69,6 @@ Este artigo descreve estas definições.
   - **Configurar manualmente**: introduza o **endereço IP do servidor proxy** e o respetivo **Número de porta**.
   - **Configurar automaticamente:** Introduza o URL apontando para um script de configuração automática proxy (PAC). Por exemplo, introduza `http://proxy.contoso.com/proxy.pac`.
 
-Selecione **OK** > **Criar** para guardar as suas alterações. O perfil é criado e é apresentado na lista de perfis.
-
 ## <a name="enterprise-profile"></a>Perfil empresarial
 
 - **Tipo de Wi-Fi**: escolha **Empresarial**.
@@ -116,7 +114,7 @@ Selecione **OK** > **Criar** para guardar as suas alterações. O perfil é cria
   - **PEAP Protegido** (PEAP)
 
     **Definições adicionais de EAP-TLS, EAP-TTLS e PEAP**:
-    
+
     > [!NOTE]
     > Atualmente, apenas os perfis de certificado SCEP são suportados quando utiliza um tipo de EAP. Os perfis de certificado PKCS não são suportados. Sempre que for pedido a um utilizador para introduzir um certificado, certifique-se de que seleciona um certificado SCEP.
 
@@ -151,13 +149,11 @@ Selecione **OK** > **Criar** para guardar as suas alterações. O perfil é cria
 
 - **Forçar o perfil Wi-Fi para que esteja em conformidade com a norma FIPS (Federal Information Processing Standard)**: selecione **Sim** ao validar relativamente à norma FIPS 140-2. Esta norma é necessária para todas as agências governamentais federais dos EUA que utilizem sistemas de segurança baseados em criptografia para proteger informações confidenciais, mas não classificadas, armazenadas digitalmente. Selecione **Não** se não pretender a conformidade com a norma FIPS.
 
-Selecione **OK** > **Criar** para guardar as suas alterações. O perfil é criado e é apresentado na lista de perfis.
-
 ## <a name="use-an-imported-settings-file"></a>Utilizar um ficheiro de definições importadas
 
 Para as definições não disponíveis no Intune, pode exportar definições de Wi-Fi de outro dispositivo com Windows. Esta exportação cria um ficheiro XML com todas as definições. Em seguida, importe este ficheiro para o Intune e utilize-o como o perfil de Wi-Fi. Veja [Exportar e importar definições de Wi-Fi para dispositivos com Windows](wi-fi-settings-import-windows-8-1.md).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O perfil é criado, mas não faz nada. Em seguida, [atribua este perfil](device-profile-assign.md).
 

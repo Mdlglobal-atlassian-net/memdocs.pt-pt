@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef2c4593ad9809614b7e0d497745065fef12df69
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d17614424cdb20d2d88d818fcdd015c229150d66
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086377"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556341"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importar definições de Wi-Fi para dispositivos Windows no Intune
 
 Para dispositivos com Windows, pode importar um perfil de configuração de Wi-Fi que tenha sido anteriormente exportado para um ficheiro. **Para dispositivos com o Windows 10 e posterior, também pode [criar um perfil Wi-Fi](wi-fi-settings-windows.md) diretamente no Intune**.
 
-Aplica-se a:  
+Esta funcionalidade aplica-se a:
+
 - Windows 8.1 e posterior
 - Windows 10 e posterior
 - Computadores ou dispositivos móveis com o Windows 10
@@ -49,17 +50,21 @@ No Windows, utilize `netsh wlan` para exportar um perfil Wi-Fi existente para um
 Num computador Windows que já tenha o perfil Wi-Fi necessário instalado, siga estes passos:
 
 1. Crie uma pasta local para os perfis Wi-Fi exportados, tais como **c:\WiFi**.
-2. Abra uma Linha de Comandos como administrador.
+2. Abra uma linha de comandos como administrador.
 3. Execute o comando `netsh wlan show profiles`. Repare o nome do perfil que gostaria de exportar. Neste exemplo, o nome do perfil é **WiFiName**.
 4. Execute o comando `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Este comando o cria um ficheiro do perfil Wi-Fi com o nome **Wi-Fi-WiFiName.xml** na sua pasta de destino.
 
 > [!IMPORTANT]
-> - Se estiver a exportar um perfil Wi-Fi que inclua uma chave pré-partilhada, **tem** de adicionar `key=clear` ao comando. Por exemplo, introduza: `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+>
+> - Se estiver a exportar um perfil Wi-Fi que inclua uma chave pré-partilhada, **deve** adicionar `key=clear` ao comando. Por exemplo, introduza: 
+>
+>   `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`
+>
 > - A utilização de uma chave pré-partilhada com o Windows 10 provoca um erro de reparação a mostrar em Intune. Quando isto acontece, o perfil Wi-Fi é atribuído corretamente ao dispositivo e funciona conforme esperado.
 > - Se exportar um perfil Wi-Fi que inclua uma chave pré-partilhada, certifique-se de que o ficheiro está protegido. Como a chave se encontra em texto simples, é sua responsabilidade protegê-la.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-O perfil é criado, mas não faz nada. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+[Atribuir o perfil,](device-profile-assign.md) [e monitorizar o seu estado](device-profile-monitor.md).
 
 Consulte a visão geral das [definições de Wi-Fi,](wi-fi-settings-configure.md)incluindo outras plataformas disponíveis.

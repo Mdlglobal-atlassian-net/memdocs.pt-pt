@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3cb279677f3693200112f663b1c5c538a3426dc9
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739899"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690622"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configure Exchange on-presacesso para Intune
 
@@ -66,7 +66,10 @@ Antes de configurar o Acesso Condicional, verifique se existem as seguintes conf
 - **Aplicativo de e-mail nativo no iOS/iPadOS** - Para criar política de acesso condicional, consulte [Criar políticas de acesso condicional](../protect/create-conditional-access-intune.md)
 - Clientes de **correio eletrónico EAS como o Gmail no Android 4 ou mais tarde** - Para criar a política de acesso condicional, consulte Criar políticas de Acesso [Condicional](../protect/create-conditional-access-intune.md)
 
+- Clientes de **correio eletrónico EAS em administrador de dispositivos Android** - Para criar política de acesso condicional, consulte Criar políticas de Acesso [Condicional](../protect/create-conditional-access-intune.md)
+
 - Clientes de **correio eletrónico EAS em dispositivos** de perfil de trabalho Android - Apenas o *Gmail* e o Nine Work para *Android Enterprise* são suportados em dispositivos de perfil de trabalho Android. Para o Acesso Condicional ao trabalho com perfis de trabalho Android, você deve implementar um perfil de e-mail para a aplicação *Gmail* ou *Nine Work para Android Enterprise,* e também implementar essas aplicações como uma instalação necessária. Depois de implementar a aplicação, pode configurar o Acesso Condicional baseado no dispositivo.
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Para configurar o Acesso Condicional para dispositivos de perfil de trabalho Android
 
@@ -74,13 +77,13 @@ Antes de configurar o Acesso Condicional, verifique se existem as seguintes conf
   
   2. Implemente a aplicação Gmail ou Nine Work conforme **necessário**.
 
-  3. Selecione Perfis de**configuração** > de **dispositivos** > **Criar perfil,** introduzir **nome** e **descrição** para o perfil.
+  3. Selecione **Perfis**de configuração de  >  **dispositivos**  >  **Criar perfil,** introduzir **nome** e **descrição** para o perfil.
 
   4. Selecione **empresa Android** na **Plataforma**, selecione **Email** no **tipo perfil**.
 
   5. Configure as definições de perfil de [e-mail](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
-  6. Quando terminar, selecione **OK** > **Create** para guardar as suas alterações.
+  6. Quando terminar, selecione **OK**  >  **Create** para guardar as suas alterações.
 
   7. Depois de criar o perfil de e-mail, [atribua-o a grupos](https://docs.microsoft.com/intune/device-profile-assign).
 
@@ -99,7 +102,7 @@ Antes de poder utilizar o seguinte procedimento para configurar o controlo de ac
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vá à **administração** > do Inquilino**Trocar de acesso**e, em seguida, selecione exchange **on-presacesso**.
+2. Vá à **administração do Inquilino**  >  **Trocar de acesso**e, em seguida, selecione exchange **on-presacesso**.
 
 3. No painel **de acesso exchange on-local,** escolha **Sim** para permitir o controlo de acesso ao exchange *no local*.
 
@@ -117,7 +120,7 @@ Antes de poder utilizar o seguinte procedimento para configurar o controlo de ac
 
    Selecione **Guardar** para salvar a sua configuração e volte ao painel de acesso ao **Exchange.**
 
-6. Em seguida, configure as definições para o conector de troca intune on-premises. Na consola, selecione o**conector** de acesso ao câmbio do **Inquilino** > **Exchange**> Access ActiveSync no local e, em seguida, selecione o conector para a organização Exchange que pretende configurar.
+6. Em seguida, configure as definições para o conector de troca intune on-premises. Na consola, selecione o conector de acesso ao câmbio do **Inquilino**  >  **Exchange** >  **Access ActiveSync no local** e, em seguida, selecione o conector para a organização Exchange que pretende configurar.
 
 7. Para **notificações do Utilizador,** selecione **Editar** para abrir o fluxo de trabalho da **Organização editar** onde pode modificar a mensagem de notificação do *Utilizador.*
 
@@ -152,7 +155,7 @@ Antes de poder utilizar o seguinte procedimento para configurar o controlo de ac
 
 10. Selecione **Review + guardar,** e, em seguida, **guardar** para salvar a política de acesso condicional de troca.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Em seguida, crie uma política de conformidade e atribua-a aos utilizadores para que a Intune avalie os seus dispositivos móveis, o See [Get começou com](device-compliance-get-started.md)a conformidade do dispositivo .
 

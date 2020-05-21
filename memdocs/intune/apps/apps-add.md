@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: d8745c06cabb2bc90236aa2ed5c9076b03e1e2f0
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023253"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633192"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Adicionar aplicações ao Microsoft Intune 
 
@@ -43,6 +43,7 @@ O Intune suporta uma grande variedade de tipos de aplicações. As opções disp
 | Aplicações escritas internamente (linha de negócio) | O Intune instala a aplicação no dispositivo (o ficheiro de instalação é disponibilizado por si). | Tem de atualizar a aplicação. |
 | Aplicações que estão incorporadas (aplicações incorporadas) | O Intune instala a aplicação no dispositivo.  | As atualizações das aplicações são automáticas. |
 | Aplicações na Web (ligação Web) | O Intune cria um atalho para a aplicação Web no ecrã principal do dispositivo. | As atualizações das aplicações são automáticas. |
+| Apps de outros serviços da Microsoft  | Intune cria um atalho para a app no Portal da Empresa. Para mais informações, consulte as opções de [definição de fonte da App](../apps/company-portal-app.md#app-source-setting-options). | As atualizações das aplicações são automáticas. |
 
 ### <a name="specific-app-type-details"></a>Detalhes específicos do tipo de aplicação
  
@@ -71,10 +72,9 @@ A tabela seguinte apresenta uma lista dos tipos de aplicações específicos e c
 | Aplicação do Windows (Win32)  | Aplicação LOB  | Selecione **Aplicação do Windows (Win32)** como o **tipo de aplicação**, selecione o **Ficheiro de pacote de aplicação** e, em seguida, selecione um ficheiro de instalação com a extensão **.intunewin**.  |
 | Aplicações LOB macOS | Aplicação LOB  | Selecione **Line-of-business** como o tipo de **aplicação,** selecione o ficheiro de **pacote**app , e, em seguida, selecione um ficheiro de instalação com a extensão **.intunemac**.  |
 
-
 <sup>1</sup> Para obter mais informações sobre o Android Enterprise e os perfis de trabalho Android, veja [Compreender as aplicações licenciadas](apps-add.md#understanding-licensed-apps) abaixo.
 
-Pode adicionar uma aplicação no Microsoft Intune selecionando **apps** > **Todas as aplicações** > **Add**. O painel do tipo select o tipo de **aplicação Select** é apresentado e permite-lhe selecionar o **tipo de App**. 
+Pode adicionar uma aplicação no Microsoft Intune selecionando **apps**  >  **Todas as aplicações**  >  **Add**. O painel do tipo select o tipo de **aplicação Select** é apresentado e permite-lhe selecionar o **tipo de App**. 
 
 >[!TIP]
 > Uma aplicação LOB é uma aplicação que adiciona a partir de um ficheiro de instalação da aplicação. Por exemplo, para instalar uma aplicação iOS/iPadOS LOB, adiciona a aplicação selecionando a **aplicação Line-of-business** como o tipo de **App** no painel do **tipo select.** Em seguida, selecione o ficheiro de pacote de aplicação (extensão .ipa). Normalmente, estes tipos de aplicações são escritos internamente.
@@ -112,6 +112,7 @@ Pode selecionar de entre os seguintes tipos de aplicações:
 - **Apps da loja**: Apps que foram enviadas para a loja microsoft, a loja iOS/iPadOS ou a loja Android são aplicações de loja. O fornecedor da aplicação da loja encarrega-se da manutenção e disponibiliza atualizações à aplicação. Tem de selecionar a aplicação na lista da loja e adicioná-la com o Intune como uma aplicação disponível para os seus utilizadores.
 - **Aplicações escritas internamente (linha de negócio)**: as aplicações criadas internamente são aplicações de linha de negócio (LOB). A funcionalidade deste tipo de aplicações foi criada para uma das plataformas suportadas pelo Intune, como windows, iOS/iPadOS, macOS ou Android. A sua organização cria e fornece atualizações como um ficheiro separado. Tem de fornecer atualizações da aplicação aos utilizadores ao adicionar e implementar as atualizações com o Intune.
 - **Aplicações na Web**: são aplicações de servidor de cliente. O servidor proporciona a aplicação Web, que inclui a IU, conteúdos e funcionalidades. Além disso, normalmente as plataformas de alojamento na Web modernas oferecem segurança, balanceamento de carga e outras vantagens. A manutenção deste tipo de aplicação é feita separadamente na Web. Tem de utilizar o Intune para apontar para este tipo de aplicação. Também tem de designar que grupos de utilizadores podem aceder à aplicação. Tenha em atenção que o Android não suporta aplicações Web.
+- **Apps de outros serviços da Microsoft**: Apps que tenham sido provenientes de Azure AD ou Office Online. As **aplicações da Azure AD Enterprise** são registadas e atribuídas através do [portal Azure.](https://portal.azure.com) **As aplicações Office Online** são atribuídas utilizando os controlos de licenciamento disponíveis no [Centro de Administração M365.](https://admin.microsoft.com) Pode ocultar ou mostrar aplicações Azure AD Enterprise e Office Online aos utilizadores finais no Portal da Empresa. A partir do centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione a personalização da **administração do Inquilino**para encontrar esta  >  **Customization** definição de configuração. Selecione para **Ocultar** ou **mostrar** **aplicações da Azure AD Enterprise** ou **aplicações Do Office Online** no Portal da Empresa para cada utilizador final. Cada utilizador final verá todo o seu catálogo de aplicações a partir do serviço da Microsoft escolhido. Por predefinição, cada fonte adicional de aplicação será definida para **Ocultar**. Para mais informações, consulte as opções de [definição de fonte da App](../apps/company-portal-app.md#app-source-setting-options). 
 
 Ao determinar as aplicações necessárias para a sua organização, tenha em consideração a forma como estas aplicações se integram com serviços cloud, os dados aos quais as aplicações podem aceder, se as aplicações estão disponíveis para utilizadores BYOD e se as aplicações precisam de acesso à Internet.
 
@@ -162,7 +163,7 @@ As categorias de aplicações podem ser utilizadas para o ajudar a ordenar as ap
 Quando adiciona uma aplicação ao Intune, é-lhe dada a opção de selecionar a categoria que quiser. Utilize os tópicos das plataformas específicas para adicionar uma aplicação e atribuir categorias. Para criar e editar as suas próprias categorias, utilize o seguinte procedimento:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione**as categorias**de **apps** > .  
+3. Selecione **Apps**  >  **as categorias**de apps .  
     O painel **Categorias de aplicações** apresenta uma lista de categorias atuais. 
 5. Efetue um dos seguintes procedimentos:
     - Para adicionar uma categoria, no painel **Criar categoria**, selecione **Adicionar** e, em seguida, introduza um nome para a categoria.  
@@ -191,7 +192,7 @@ O Intune irá reinstalar, atualizar ou remover automaticamente uma aplicação n
 
 Para obter detalhes sobre os erros de instalação da aplicação Intune, veja [Erros de instalação da aplicação](troubleshoot-app-install.md).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para saber como adicionar aplicações para cada plataforma ao Intune, veja:
 
@@ -202,11 +203,11 @@ Para saber como adicionar aplicações para cada plataforma ao Intune, veja:
 - [Aplicações LOB macOS](lob-apps-macos.md)
 - [Aplicações Web (para todas as plataformas)](web-app.md)
 - [Aplicações da loja Windows Phone 8.1](store-apps-windows-phone-8-1.md)
-- [Aplicações LOB para Windows Phone](lob-apps-windows-phone.md)
+- [Aplicações LOB Windows Phone](lob-apps-windows-phone.md)
 - [Aplicações da Microsoft Store](store-apps-windows.md)
 - [Aplicação LOB do Windows](lob-apps-windows.md)
-- [Aplicações do Office 365 para Windows 10](apps-add-office365.md)
-- [Office 365 apps para macOS](apps-add-office365-macos.md)
+- [Aplicações do Office 365 para Windows 10](apps-add-office365.md)
+- [Aplicações do Office 365 para macOS](apps-add-office365-macos.md)
 - [Aplicações geridas do Google Play](apps-add-android-for-work.md)
 - [Microsoft Edge para Windows 10](apps-windows-edge.md)
 - [Microsoft Edge para macOS](apps-edge-macos.md)

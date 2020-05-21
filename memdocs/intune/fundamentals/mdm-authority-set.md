@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c719c14ba51826c644a68360bacf192cce3cf796
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077908"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709473"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Definir a autoridade de gestão de dispositivos móveis
 
@@ -36,9 +36,9 @@ As configurações possíveis são:
 
 - **Intune co-management** - integração da solução de nuvem Intune com O Gestor de Configuração para dispositivos Windows 10. Configura o Intune com a consola do Configuration Manager. [Configure a inscrição automática dos dispositivos para Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Gestão de Dispositivos Móveis para o Office 365** – integração do Office 365 com a solução cloud do Intune. Deve configurar o Intune no centro de administração do Microsoft 365. Inclui um subconjunto das funcionalidades que estão disponíveis com o Intune Autónomo. Defina a autoridade de MDM no centro de administração do Microsoft 365.
+- **Gestão de Dispositivos Móveis para o Office 365** – integração do Office 365 com a solução cloud do Intune. Deve configurar o Intune no centro de administração do Microsoft 365. Inclui um subconjunto das funcionalidades que estão disponíveis com o Intune Autónomo. Consulte a Configuração da [Gestão de Dispositivos Móveis (MDM) no Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-- **Escritório 365 MDM Coexistência** Pode ativar e utilizar o MDM para o Office 365 e intune simultaneamente no seu inquilino e definir a autoridade de gestão para Intune ou MDM para o Office 365 para que cada utilizador dite qual o serviço que será utilizado para gerir os seus dispositivos móveis. A autoridade de gestão do utilizador é definida com base na licença atribuída ao utilizador. Para mais informações, consulte [a Co-existência da Microsoft Intune com o MDM para o Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365)
+- **Escritório 365 MDM Coexistência** Pode ativar e utilizar simultaneamente o MDM para o Office e o Intune em simultâneo com o seu inquilino e definir a autoridade de gestão para intune ou MDM para que cada utilizador dite qual o serviço que será utilizado para gerir os seus dispositivos matriculados no MDM. A autoridade de gestão de cada utilizador é definida com base na licença atribuída ao utilizador: Se o utilizador tiver apenas uma licença para o Microsoft 365 Basic ou Standard, os seus dispositivos serão geridos pelo MDM para o Office. Se o utilizador tiver uma licença que cintuse intune, os seus dispositivos serão geridos pela Intune. Se adicionar uma licença que cativa o Intune a um utilizador anteriormente gerido pelo MDM para o Office, os seus dispositivos serão transferidos para a gestão intune. Certifique-se de que as configurações Intune são atribuídas aos utilizadores para substituir o MDM no Office antes de mudar os utilizadores para Intune, caso contrário os seus dispositivos perderão MDM para a configuração do Office e não receberão qualquer substituição do Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Definir a autoridade de MDM como o Intune
 
@@ -70,14 +70,6 @@ Depois de mudar para a nova autoridade de MDM, provavelmente haverá um tempo de
 - Depois da alteração, os dispositivos têm de se ligar ao serviço para que as definições da nova autoridade de MDM (Intune autónomo) substituam as definições existentes no dispositivo.
 - Depois de alterar a autoridade do MDM, algumas das definições básicas (tais como perfis) da autoridade anterior do MDM permanecerão no dispositivo por um período máximo de sete dias ou até que o dispositivo se ligue ao serviço pela primeira vez. Recomenda-se que configure aplicações e configurações (políticas, perfis, apps, etc.) na nova autoridade do MDM o mais rapidamente possível e implemente a definição para os grupos de utilizadores que contenham utilizadores que tenham dispositivos inscritos existentes. Assim que um dispositivo se ligar ao serviço após a alteração da autoridade de MDM, irá receber as novas definições da nova autoridade de MDM e impedir lacunas na gestão e proteção.
 - Os dispositivos que não tenham utilizadores associados (normalmente quando tem o Programa de Inscrição de Dispositivos iOS/iPadOS ou cenários de inscrição a granel) não são migrados para a nova autoridade do MDM. Para mover estes dispositivos para a nova autoridade de MDM, terá de contactar o suporte para obter assistência.
-
-## <a name="change-mdm-authority-to-office-365"></a>Mudar a autoridade de MDM para o Office 365
-
-Para ativar o Office 365 MDM (ou para ativar a coexistência [https://protection.office.com](https://protection.office.com)de MDM para além do seu serviço Intune existente), escolha , escolha**políticas** > de segurança de dispositivos de **prevenção** > de perda de dados**Ver lista de dispositivos geridos** > **Vamos começar**.
-
-Para obter mais informações, veja [Set up Mobile Device Management (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) (Configurar a Gestão de Dispositivos Móveis [MDM] no Office 365).
-
-Se quiser que os utilizadores finais sejam geridos apenas pela MDM do Office 365, remova todas as licenças do Intune e/ou Enterprise Mobility + Security atribuídas após ativar a MDM do Office 365.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Limpeza de dispositivos móveis após a expiração do certificado MDM
 
@@ -115,6 +107,6 @@ A autoridade de MDM não pode ser novamente alterada para Desconhecida. A autori
   - Execute uma ação para o dispositivo, como o Bloqueio Remoto, a partir da consola de administração. Se tiver êxito, significa que o dispositivo está a ser gerido pela nova autoridade de MDM.
 - Se tiver problemas com dispositivos específicos, pode anular a inscrição e inscrever novamente os dispositivos para ligá-los à nova autoridade e geri-los o mais rapidamente possível.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Com a autoridade de MDM definida, pode começar a [inscrever dispositivos](../enrollment/device-enrollment.md).

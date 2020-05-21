@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59af48b36cb9c76ce7587457d4921356f542493f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36a74e503f15fe982eeaf1addfed40d0c599cb2c
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407674"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556239"
 ---
 # <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Microsoft Intune Windows 8.1 definições de restrição de dispositivos
 
 Este artigo mostra-lhe que o dispositivo Microsoft Intune configura as definições que pode configurar para dispositivos que executam o Windows 8.1.
+
+## <a name="before-you-begin"></a>Antes de começar
+
+Criar um perfil de configuração de restrições de [dispositivos Windows 8.1](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Geral
 
@@ -44,17 +48,21 @@ Este artigo mostra-lhe que o dispositivo Microsoft Intune configura as definiç�
   - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
   - **Alfanumérico:** A palavra-passe deve ser uma mistura de números e letras.
   - **Numérico:** A palavra-passe só deve ser números.
-- Comprimento mínimo da **palavra-passe**: Introduza o número mínimo de caracteres necessários, de 6 a 16. Por exemplo, `6` introduza para exigir pelo menos seis números ou caracteres no comprimento da palavra-passe.
+- Comprimento mínimo da **palavra-passe**: Introduza o número mínimo de caracteres necessários, de 6 a 16. Por exemplo, introduza `6` para exigir pelo menos seis números ou caracteres no comprimento da palavra-passe.
 - **Número de falhas de entrada antes de limpar o dispositivo**: Introduza o número de senhas erradas permitidas antes de o dispositivo ser limpo, de 1 a 14.
-- **Minutos máximos de inatividade até que o ecrã bloqueie (em minutos)**: Introduza o tempo de tempo em que um dispositivo deve ficar inativo antes de o ecrã estar automaticamente bloqueado, a partir de 1-60 minutos. Por exemplo, `5` introduza para bloquear o dispositivo após 5 minutos de inativo. Quando definido para **Não configurado**, Intune não altera nem atualiza esta definição.
+- **Minutos máximos de inatividade até que o ecrã bloqueie (em minutos)**: Introduza o tempo de tempo em que um dispositivo deve ficar inativo antes de o ecrã estar automaticamente bloqueado, a partir de 1-60 minutos. Por exemplo, introduza `5 Minutes` para bloquear o dispositivo após 5 minutos de inativo. Quando definido para **Não configurado**, Intune não altera nem atualiza esta definição.
 - **Expiração da palavra-passe (dias)**: Introduza o tempo de tempo nos dias em que a palavra-passe do dispositivo deve ser alterada, de 1 a 255. Por exemplo, `90` introduza para expirar a palavra-passe após 90 dias. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-- **Evite a reutilização de senhas anteriores**: Introduza o número de senhas anteriormente utilizadas que não podem ser utilizadas, de 1 a 24. Por exemplo, `5` introduza para que os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
-- **Imagem palavra-passe e PIN**: **Bloquear** impede a utilização de uma imagem ou PIN como palavra-passe. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Uma palavra-passe por imagem permite ao utilizador iniciar sessão com gestos numa imagem. Um PIN permite aos utilizadores iniciar sessão rapidamente com um código de quatro dígitos.
+- **Evite a reutilização de senhas anteriores**: Introduza o número de senhas anteriormente utilizadas que não podem ser utilizadas, de 1 a 24. Por exemplo, introduza para que `5` os utilizadores não possam definir uma nova senha para a sua senha atual ou qualquer uma das suas quatro senhas anteriores. Quando o valor está em branco, o Intune não altera nem atualiza esta definição.
+- **Imagem palavra-passe e PIN**: Uma palavra-passe de imagem permite ao utilizador iniciar sessão com gestos numa imagem. Um PIN permite aos utilizadores iniciar sessão rapidamente com um código de quatro dígitos.
+
+  **O bloco** impede a utilização de uma imagem ou PIN como palavra-passe. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
 - **Encriptação**: **Requer** encriptação em dispositivos, incluindo ficheiros. Nem todos os dispositivos suportam encriptação. Quando definido para **Não configurado**, Intune não altera nem atualiza esta definição.
 
   Para configurar esta definição e reportar corretamente a conformidade, configurar também:
+
   - **Tipo de palavra-passe requerida**: Definir para pelo menos **numérico**.
-  - **Comprimento mínimo da palavra-passe**: Definir para pelo menos `4`.
+  - **Comprimento mínimo da palavra-passe**: Definir para pelo menos `6` .
 
   Para impor a encriptação nos dispositivos que executam o Windows 8.1, tem de instalar a [atualização de cliente MDM para Windows de dezembro de 2014](https://support.microsoft.com/kb/3013816) em cada dispositivo.
 
@@ -69,17 +77,17 @@ Este artigo mostra-lhe que o dispositivo Microsoft Intune configura as definiç�
 - **Preenchimento automático**: **O bloco** impede que os utilizadores alterem as definições autocompletas no navegador e que povoem automaticamente os campos de formulários. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode permitir a auto-enchimento.
 - **Avisos de fraude**: **Requer** avisos de fraude no navegador para potenciais sites fraudulentos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **SmartScreen para Microsoft Edge**: **O bloco** desliga o Microsoft Defender SmartScreen. O SmartScreen procura potenciais esquemas de phishing e software malicioso ao aceder a sites e downloads de ficheiros. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode ligar o SmartScreen.
-- **JavaScript**: **Bloco** impede que scripts, como javaScript, sejam executados no navegador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- **Permitir o JavaScript**: **Bloquear** impede que scripts, como o JavaScript, sejam executados no navegador. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o SISTEMA pode permitir o JavaScript.
 - **Pop-ups**: **Block** liga O Blocker Pop-up para evitar pop-ups no navegador web. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Cabeçalhos não-rastreados**: **O bloco** impede que os dispositivos enviem cabeçalhos de não-rastrepara sites que solicitem informações de rastreio. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Plugins**: **O bloco** impede que os utilizadores adicionem plug-ins no Internet Explorer. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
-- Entrada de palavra única **no site da intranet**: A entrada de palavra única `hr` permite `benefits`que os utilizadores se desloque a um site intranet, inserindo uma única palavra, como ou . **Bloquear** impede esta funcionalidade. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+- Entrada de palavra única **no site da intranet**: A entrada de palavra única permite que os utilizadores se desloque a um site intranet, inserindo uma única palavra, como ou `hr` `benefits` . **Bloquear** impede esta funcionalidade. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Deteção automática do site intranet**: **O bloco** impede que o navegador detete automaticamente os sites intranet. As regras de mapeamento intranet estão bloqueadas. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Nível de segurança**na Internet : Define o nível de segurança dos sites da Internet. As opções são:
   - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
-  - **Medium**
-  - **Médio-alto**
   - **Alto**
+  - **Médio-alto**
+  - **Medium**
 - **Nível de segurança intranet**: Define o nível de segurança para os sites intranet. As opções são:
   - **Não configurado** (predefinido): Intune não altera nem atualiza esta definição.
   - **Baixa**
@@ -95,8 +103,12 @@ Este artigo mostra-lhe que o dispositivo Microsoft Intune configura as definiç�
   - **Médio-alto**
   - **Alto**
 - **Alta segurança para sites restritos**: Configura o nível de segurança para a zona de sites restritos. **Configurado** impõe alta segurança para sites restritos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
-- **Acesso ao menu do modo enterprise**: O **bloco** impede que os utilizadores acedam às opções do menu do Modo Empresarial no Internet Explorer. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Quando estiver definido para **bloquear,** introduza também:
+- **Acesso ao menu do modo enterprise**: O **bloco** impede que os utilizadores acedam às opções do menu do Modo Empresarial no Internet Explorer. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+  Quando definido para **Não configurado,** introduza também:
+
   - **URL**de localização do relatório de registo : Insira um local de URL onde obter relatórios que mostrem os websites com acesso ao Modo Empresarial ligado.
+
 - Localização da lista de sites do **modo enterprise (apenas desktop)**: Introduza a localização da lista de websites que podem ser abertos no Modo Enterprise.
 
 ## <a name="cellular"></a>Rede móvel
@@ -108,6 +120,6 @@ Este artigo mostra-lhe que o dispositivo Microsoft Intune configura as definiç�
 - URL das **pastas**de trabalho : Introduza o URL da pasta de trabalho para permitir que os documentos sejam sincronizados entre os dispositivos. Quando definido para **Não configurado** (predefinido) ou deixado em branco, Intune não altera nem atualiza esta definição.
 - **Acesso à aplicação Windows Mail sem conta Microsoft**: **O Bloco** impede o acesso à aplicação Windows Mail sem uma conta Microsoft. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Criar um perfil de restrições de dispositivos no [Windows 10 e mais recente](device-restrictions-windows-10.md).

@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881048"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709337"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registo de alterações da API do Armazém de Dados do Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Mantenha-se a par das atualizações do Armazém de Dados do Intune.
+
+## <a name="2004"></a>2004 
+_Lançado abril de 2020_
+
+### <a name="beta-changes"></a>Alterações beta
+
+A tabela seguinte lista o imóvel adicionado à entidade do **dispositivo** no Intune Data Warehouse.
+
+|    Coleção                          |    Alterar     |    Informação de descrição                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Adicionou    |    Edição do Sistema Operativo Windows.                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Lançado março de 2020_
+
+### <a name="beta-changes"></a>Alterações beta
+
+A tabela seguinte lista as propriedades adicionadas à entidade do **dispositivo** no Intune Data Warehouse.
+
+|    Coleção                          |    Alterar     |    Informação de descrição                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Adicionou    |    O identificador de rede único deste dispositivo.                                                                                                                                                                                                                                                                     |
+|    model    |    Adicionou    |    O modelo do dispositivo.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Adicionou    |    A versão do Office 365 que está instalada no dispositivo.                                                                                                                                                                                                                                                                     |
+
+A tabela seguinte lista as propriedades adicionadas à entidade **do dispositivoPropertyHistory** no Intune Data Warehouse.
+
+|    Coleção                          |    Alterar     |    Informação de descrição                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    físicoMemoryInBytes    |    Adicionou    |    A memória física em bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Adicionou    |    Armazenamento Total em bytes.                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (Parte 2)
 _Lançado abril de 2019_
@@ -43,7 +74,7 @@ A tabela seguinte lista as recentes recolhas removidas e as coleções de substi
 |    mobileAppDeviceUserInstallInstallStatus    |    Removido    |    Utilize [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) em vez disso.                                                                                                                                                                                                                                                                     |
 |    inscriçõesTipos                     |    Removido    |    Utilize o [dispositivoNúmeros de inscrição.](intune-data-warehouse-collections.md#deviceenrollmenttypes)                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    Removido    |    Use [complianceStates](intune-data-warehouse-collections.md#compliancestates) em vez disso.                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Removido    |    Utilize `azureAdRegistered` a propriedade nas coleções de [dispositivos](intune-data-warehouse-collections.md#devices) e [dispositivosPropertyHistories.](intune-data-warehouse-collections.md#devicepropertyhistories)                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    Removido    |    Utilize a propriedade nas coleções de `azureAdRegistered` [dispositivos](intune-data-warehouse-collections.md#devices) e [dispositivosPropertyHistories.](intune-data-warehouse-collections.md#devicepropertyhistories)                                                                                                                                                                                                             |
 |    clientesRegistrationStateTypes        |    Removido    |    Utilize o [dispositivoRegistrationStates.](intune-data-warehouse-collections.md#deviceregistrationstates)                                                                                                                                                                                                                                                                             |
 |    atualUser                         |    Removido    |    Utilize a coleção de [utilizadores](intune-data-warehouse-collections.md#users) em vez disso.                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventárioHistories         |    Removido    |    Muitas das propriedades foram redundantes ou podem agora ser encontradas no [dispositivoPropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) ou coleções de [dispositivos.](intune-data-warehouse-collections.md#devices) Quaisquer propriedades **do mdmDeviceInventoryHistories** que ainda não estão listadas com estas duas coleções já não estão disponíveis. Veja os detalhes abaixo.    |
@@ -263,6 +294,6 @@ Agora pode criar relatórios e visualizações de dados com as informações de 
 - A entidade [**UserDeviceAssociation**](reports-ref-user-device.md) foi adicionada. A entidade **UserDeviceAssociation** contém associações de dispositivos do utilizador na sua organização. Agora pode criar relatórios e visualizações de dados com as informações de associação de dispositivos do utilizador que associam o utilizador às coleções de dispositivos de entidades.  
 - A entidade [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md) foi adicionada. **IntuneManagementExtension** contém entidades para dispositivos móveis que controlam informações como o estado da versão e da instalação.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 - Saiba [o que há de novo a cada semana em Intune.](../fundamentals/whats-new.md) Também pode descobrir quais são as alterações futuras, os avisos importantes sobre o serviço e as informações sobre versões anteriores.
 - Leia o [Blogue do Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).

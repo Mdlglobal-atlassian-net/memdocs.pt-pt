@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f48fb487df6a1b20e333ee6a2154490a59d220a9
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616003"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551951"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Configurar dispositivo Android com Portal da Empresa e Intercede
 
@@ -135,7 +135,7 @@ Nesta secção, você vai digitalizar o seu código QR fornecido pela empresa.  
 ### <a name="token-enrollment"></a>Inscrição em Token  
 Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando terminar, vamos redirecioná-lo de volta para as etapas de inscrição do dispositivo.  
 
-1. No ecrã de entrada do Google, no Email ou na cabine **telefónica,** **digite afw#setup**. Toque **em Seguida**. 
+1. No ecrã de entrada do Google, no Email ou na cabine **telefónica,** **digite afw#setup**. Em seguida, toque **em Seguida.** 
 
    ![Exemplo da imagem do ecrã de entrada do Google, mostrando que "afw#setup" é dactilografado no campo.](./media/token-intune-app-01.png)   
 
@@ -162,7 +162,7 @@ Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando 
 
    1. Toque no link para as instruções de configuração da sua organização. Se a sua organização não fornecer instruções adicionais, será enviado para este artigo.
 
-   2. Toque **começar**.  
+   2. Toque NO **BEGIN**.  
 
    > [!div class="mx-imgBorder"]
    > ![Exemplo de screenshot do Portal da Empresa Configurar ecrã de acesso a cartões inteligentes móveis.](./media/smart-card-open-entrust-android.png)
@@ -173,7 +173,7 @@ Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando 
 
 5. Quando lhe perguntarem qual o perfil que pretende utilizar, selecione a opção de ativar com uma credencial móvel. Aparece um código QR.  
 
-6. Volte ao seu dispositivo Android. No Portal da Empresa > obter ecrã **de código QR,** toque **em Next**.
+6. Volte ao seu dispositivo Android. No Portal da Empresa > obter ecrã **de código QR,** toque em **NEXT**.
 
     > [!div class="mx-imgBorder"]
     > ![Exemplo de screenshot do portal da empresa Obter ecrã de código QR.](./media/get-qr-code-entrust-android.png)
@@ -192,7 +192,7 @@ Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando 
     > [!div class="mx-imgBorder"]
     > ![Exemplo de imagem do ecrã "You're all set"](./media/all-set-android.png)
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Após a inscrição estar concluída, terá acesso a recursos de trabalho, como e-mail, Wi-Fi e quaisquer aplicações que a sua organização disponibilize. Para mais informações sobre como obter, procure, instale e desinstale aplicações na aplicação Intune ver:
 

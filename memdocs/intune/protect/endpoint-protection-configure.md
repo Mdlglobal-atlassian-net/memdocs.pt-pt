@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6f1f262c3ef2d7f2ca363057055fa22a018498ec
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551584"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429789"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Adicionar definições de proteção de ponto final no Intune
 
@@ -39,14 +39,11 @@ Antes de criar um perfil, reveja os seguintes artigos que detalham as definiçõ
 - [Definições do macOS](endpoint-protection-macos.md)
 - [Definições do Windows 10](endpoint-protection-windows-10.md)
 
-> [!NOTE]
-> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
-
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Criar um perfil de dispositivo com as definições de proteção de ponto final
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
 
@@ -60,8 +57,9 @@ Antes de criar um perfil, reveja os seguintes artigos que detalham as definiçõ
 4. Selecione **Criar**.
 5. No Básico, insira as **seguintes**propriedades:
 
-    - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **macOS: Perfil de proteção de ponto final que configura a Firewall para todos os dispositivos macOS**.
-    - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
+   - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política pode incluir o tipo de perfil e plataforma.
+
+   - **Descrição**: Insira uma descrição para a apólice. Esta definição é opcional, mas recomendada.
 
 6. Selecione **Seguinte**.
 
@@ -71,7 +69,7 @@ Antes de criar um perfil, reveja os seguintes artigos que detalham as definiçõ
    - [Definições do Windows 10](endpoint-protection-windows-10.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -99,7 +97,7 @@ As regras de Firewall que o Intune pode gerir são detalhadas no fornecedor de s
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 
 3. Para *a Plataforma*, selecione o Windows **10 e, posteriormente,** e, em seguida, para selecionar a **proteção de ponto final**do *Perfil* .
 
@@ -117,6 +115,6 @@ As regras de Firewall que o Intune pode gerir são detalhadas no fornecedor de s
 
 7. Selecione **Em seguida** até começar a **Rever + criar**. Quando selecionar **Criar,** as alterações são guardadas e o perfil é atribuído. A política também está na lista de perfis.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O perfil é criado, mas pode ainda não estar a fazer nada. Em seguida, [atribua o perfil](../configuration/device-profile-assign.md) e [monitorize o estado](../configuration/device-profile-monitor.md).

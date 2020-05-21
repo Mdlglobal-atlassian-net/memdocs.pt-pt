@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7e608ea7a5d37e8093cdac0345d2e873c9c2b334
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328905"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709524"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Adicione políticas de atualização de software iOS/iPadOS em Intune
 
@@ -34,10 +34,14 @@ Esta funcionalidade aplica-se a:
 
 Por predefinição, os dispositivos check-in com Intune a cada 8 horas. Se uma atualização estiver disponível através de uma política de atualização, o dispositivo descarrega a atualização. Em seguida, o dispositivo instala a atualização após o check-in seguinte dentro da configuração de horário. Embora o processo de atualização não envolva normalmente qualquer interação do utilizador, se o dispositivo tiver uma senha, o utilizador deve inseri-lo para iniciar uma atualização de software. Os perfis não impedem os utilizadores de atualizar manualmente o SO. Os utilizadores podem ser impedidos de atualizar manualmente o S com uma política de configuração de dispositivos para restringir a visibilidade das atualizações de software.
 
+> [!NOTE]
+> Se utilizar o [Modo de Aplicação Única Autónoma (ASAM),](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam)o impacto das atualizações de SO deve ser considerado como o comportamento resultante pode ser indesejável.
+Considere testar para avaliar o impacto das atualizações de OS na aplicação que está a executar na ASAM.
+
 ## <a name="configure-the-policy"></a>Configurar a política
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **Atualização políticas para iOS/iPadOS** > **Criar perfil**.
+2. Selecione **Dispositivos**  >  **Atualização políticas para iOS/iPadOS**  >  **Criar perfil**.
 3. No separador **Basics,** especifique um nome para esta política, especifique uma descrição (opcional) e, em seguida, selecione **Next**.
 
    ![Separador básico](./media/software-updates-ios/basics-tab.png)
@@ -70,7 +74,9 @@ Por predefinição, os dispositivos check-in com Intune a cada 8 horas. Se uma a
        Se não configurar os horários para iniciar ou terminar, a configuração não resulta em restrições e as atualizações podem ser instaladas a qualquer momento.  
 
        > [!NOTE]
-       > Para atrasar a visibilidade das atualizações de software durante um período específico de tempo nos seus dispositivos iOS/iPadOS supervisionados, configure essas definições nas [Restrições](../configuration/device-restrictions-ios.md#general)do Dispositivo . As políticas de atualização de software sobrepõem-se a quaisquer restrições ao dispositivo. Quando definiu uma política de atualização de software e restrição para atrasar a visibilidade das atualizações de software, o dispositivo força uma atualização de software de acordo com a política. A restrição aplica-se para que os utilizadores não vejam a opção de atualizar o dispositivo em si, e a atualização é impulsionada conforme definido pela sua política de atualização iOS.
+       > Pode configurar as definições nas [Restrições](../configuration/device-restrictions-ios.md#general) do Dispositivo para ocultar uma atualização dos utilizadores do dispositivo durante um período de tempo nos seus dispositivos iOS/iPadOS supervisionados. Um período de restrição pode dar-lhe tempo para testar uma atualização antes de ser visível para os utilizadores instalarem. Após o termo do prazo de restrição do dispositivo, a atualização torna-se visível para os utilizadores. Os utilizadores podem então optar por instalá-lo, ou as suas políticas de atualização de Software podem instalá-lo automaticamente logo depois.
+       >
+       > Quando utilizar uma restrição do dispositivo para ocultar uma atualização, reveja as suas políticas de atualização de software para garantir que não programara a instalação da atualização antes do fim desse período de restrição. As políticas de atualização de software instalam atualizações com base na sua própria programação, independentemente da atualização estar escondida ou visível para o utilizador do dispositivo.
 
    Depois de configurar as definições da *política de atualização,* selecione **Next**.
 
@@ -95,13 +101,13 @@ Para obter orientações da equipa de suporte Intune, consulte [A visibilidade d
 
 Pode editar uma política existente, incluindo alterar os tempos restritos:
 
-1. Selecione as políticas de atualização de **dispositivos** > **para iOS**. Selecione a política que pretende editar.
+1. Selecione as políticas de atualização de **dispositivos**  >  **para iOS**. Selecione a política que pretende editar.
 
 2. Ao visualizar as políticas **Propriedades**, selecione **Editar** para a página de política que pretende modificar.
 
    ![Editar uma política](./media/software-updates-ios/edit-policy.png)
 
-3. Depois de introduzir uma alteração, selecione **Review +** > **poupe** para guardar as suas edificações e volte às políticas *Propriedades*.
+3. Depois de introduzir uma alteração, selecione **Review +**  >  **poupe** para guardar as suas edificações e volte às políticas *Propriedades*.
 
 > [!NOTE]
 > Se o tempo de **início** e **o tempo** de fim estiverem definidos para as 12 da manhã, o Intune não verifica as restrições sobre quando instalar atualizações. Isto significa que quaisquer configurações que tenha para **Tempos Select para evitar** que as instalações da atualização sejam ignoradas, e as atualizações podem ser instaladas a qualquer momento.
@@ -109,8 +115,8 @@ Pode editar uma política existente, incluindo alterar os tempos restritos:
 ## <a name="monitor-device-installation-failures"></a>Monitorizar as falhas de instalação em dispositivos
 
 <!-- 1352223 -->
-**Atualizações de** > software**Falhas de instalação para dispositivos iOS** mostram uma lista de dispositivos iOS/iPadOS supervisionados visados por uma política de atualização, tentaram uma atualização e não puderam ser atualizados. Pode ver o estado com o motivo pelo qual cada um dos dispositivos não foi atualizado automaticamente. Os dispositivos atualizados e em bom estado de funcionamento não são apresentados na lista. Os dispositivos atualizados incluem as atualizações mais recentes suportadas pelos mesmos.
+**Atualizações de**  >  software **Falhas de instalação para dispositivos iOS** mostram uma lista de dispositivos iOS/iPadOS supervisionados visados por uma política de atualização, tentaram uma atualização e não puderam ser atualizados. Pode ver o estado com o motivo pelo qual cada um dos dispositivos não foi atualizado automaticamente. Os dispositivos atualizados e em bom estado de funcionamento não são apresentados na lista. Os dispositivos atualizados incluem as atualizações mais recentes suportadas pelos mesmos.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Monitorize o seu estado](../configuration/device-profile-monitor.md).

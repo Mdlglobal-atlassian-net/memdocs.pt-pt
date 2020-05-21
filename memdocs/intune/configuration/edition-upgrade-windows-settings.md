@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333085"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429647"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para atualizar edições ou ativar o modo S em Intune
 
@@ -44,12 +44,14 @@ Para mais informações sobre esta funcionalidade, consulte [as edições do Upg
 
 ## <a name="mode-switch"></a>Interruptor de modo
 
-- **Sem configuração**: Um dispositivo de modo S permanece no modo S. Um utilizador final pode retirar o dispositivo do modo S.
-- **Manter no modo S**: não permite ao utilizador final retirar o dispositivo do modo S.
-- **Alterar**: retira o dispositivo do modo S.
+- **Desligar do modo S**: Muda o dispositivo do modo S. As opções são:
 
-## <a name="next-steps"></a>Passos seguintes
+  - **Sem configuração**: Intune não altera nem atualiza esta definição. Por predefinição, o dispositivo de modo S pode permanecer no modo S. O utilizador pode mudar o dispositivo do modo S.
+  - **Mantenha no modo S**: Impede que os utilizadores alterem o dispositivo do modo S.
+  - **Switch**: Permite que os utilizadores destroem o dispositivo do modo S.
 
-O perfil é criado, mas pode ainda não estar a fazer nada. Certifique-se de [atribuir o perfil](device-profile-assign.md)e monitorizar [o seu estado](device-profile-monitor.md).
+## <a name="next-steps"></a>Próximos passos
+
+[Atribuir o perfil,](device-profile-assign.md) [e monitorizar o seu estado](device-profile-monitor.md).
 
 Também pode criar perfis de upgrade de edição para [dispositivos Windows Holographic para](holographic-upgrade.md) dispositivos Business.

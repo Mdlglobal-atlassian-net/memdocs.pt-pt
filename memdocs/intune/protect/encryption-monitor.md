@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5e90cb7ad97ce3fc0fe728a3d8b7d7c122605751
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255001"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429851"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorizar encriptação do dispositivo com Intune
 
 O relatório de encriptação Microsoft Intune é um local centralizado para visualizar detalhes sobre o estado de encriptação de um dispositivo e encontrar opções para gerir as chaves de recuperação do dispositivo. As opções-chave de recuperação disponíveis dependem do tipo de dispositivo que está a ver.
 
-Para encontrar o relatório, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Monitor de Dispositivos** > **,** e, em seguida, sob *configuração,* selecione **relatório de encriptação**.
+Para encontrar o relatório, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Selecione **Monitor de Dispositivos**  >  **Monitor**, e, em seguida, sob *configuração,* selecione **relatório de encriptação**.
 
 ## <a name="view-encryption-details"></a>Ver detalhes de encriptação
 
@@ -96,7 +96,7 @@ Quando seleciona um dispositivo a partir do relatório de encriptação, intune 
 
 - **Resumo** do estado de perfil – Um resumo dos perfis que se aplicam a este dispositivo. O resumo representa a condição menos favorável entre os perfis aplicáveis. Por exemplo, se apenas um em cada vários perfis aplicáveis resultar num erro, o *resumo do estado do Perfil* mostrará *Erro*.
 
-  Para ver mais detalhes de um estado, vá aos**Perfis**de**Configuração** > do Dispositivo **Intune,** > e selecione o perfil. Opcionalmente, selecione **o estado do Dispositivo** e, em seguida, selecione um dispositivo.
+  Para ver mais detalhes de um estado, vá aos Perfis de Configuração do Dispositivo **Intune,**  >  **Device configuration**  >  **Profiles**e selecione o perfil. Opcionalmente, selecione **o estado do Dispositivo** e, em seguida, selecione um dispositivo.
 
 - **Detalhes** do estado – Detalhes avançados sobre o estado de encriptação do dispositivo.
 
@@ -169,68 +169,20 @@ Ao visualizar o painel de relatórios de encriptação, pode selecionar **export
 
 Este relatório pode ser utilizado na identificação de problemas para grupos de dispositivos. Por exemplo, pode utilizar o relatório para identificar uma lista de dispositivos macOS que todos os ficheiros do *relatório FileVault já estão ativados pelo utilizador*, o que indica dispositivos que devem ser desencriptados manualmente antes que intune possa gerir as suas definições de FileVault.
 
-## <a name="filevault-recovery-keys"></a>Chaves de recuperação fileVault
+## <a name="manage-recovery-keys"></a>Gerir chaves de recuperação
 
-Quando a Intune encripta pela primeira vez um dispositivo macOS com fileVault, é criada uma chave de recuperação pessoal. Após a encriptação, o dispositivo apresenta a chave pessoal uma única vez para o utilizador final.
+Para mais detalhes sobre a gestão das chaves de recuperação, consulte o seguinte na documentação Intune:
 
-Para dispositivos geridos, o Intune pode esquendar uma cópia da chave de recuperação pessoal. O depósito de teclas permite que os administradores intune rodem as teclas para ajudar a proteger os dispositivos, e os utilizadores recuperem uma chave de recuperação pessoal perdida ou rotativa.
+macOS FileVault:
+- [Recuperar a chave de recuperação pessoal](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Teclas de recuperação rotativas](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Recuperar chaves de recuperação](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune suporta múltiplas opções para rodar e recuperar chaves de recuperação pessoal. Uma das razões para rodar uma chave é se a chave pessoal atual estiver perdida ou se pensa estar em risco.
+Windows 10 BitLocker:
+- [Teclas de recuperação BitLocker rotativas](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
-> [!IMPORTANT]
-> Os dispositivos encriptados pelos utilizadores, e não pelo Intune, não podem ser geridos pela Intune. Isto significa que Intune não pode caucionar a recuperação pessoal destes dispositivos, nem gerir a rotação da chave de recuperação. Antes de a Intune poder gerir o FileVault e as chaves de recuperação do dispositivo, o utilizador deve desencriptar o dispositivo e, em seguida, deixar o Intune encriptar o dispositivo.
+## <a name="next-steps"></a>Próximos passos
 
-### <a name="rotate-recovery-keys"></a>Teclas de recuperação rotativas
+[Gerir a política BitLocker](../protect/encrypt-devices.md)
 
-- **Rotação automática**: Como administrador, pode configurar a rotação da chave de recuperação pessoal do FileVault para gerar automaticamente a nova chave de recuperação periodicamente. Quando uma nova tecla é gerada para um dispositivo, a chave não é apresentada ao utilizador. Em vez disso, o utilizador deve obter a chave quer a partir de um administrador, quer através da aplicação portal da empresa.
-
-- **Rotação manual**: Como administrador, pode visualizar informações para um dispositivo que gere com o Intune e que está encriptado com fileVault. Em seguida, pode optar por rodar manualmente a chave de recuperação para dispositivos corporativos. Não se pode rodar as chaves de recuperação para dispositivos pessoais.
-
-  Para rodar uma chave de recuperação:
-
-  1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Selecione **Dispositivos** > **Todos os dispositivos**.
-  
-  3. A partir da lista de dispositivos, selecione o dispositivo encriptado e para o qual pretende rodar a sua chave. Em seguida, sob o Monitor, selecione **Teclas de recuperação**.
-  
-  4. No painel das teclas recovery, **selecione Rotação fileVault chave**de recuperação .
-
-     Da próxima vez que o dispositivo fizer o check-in com Intune, a chave pessoal é girada. Quando necessário, a nova chave pode ser obtida pelo utilizador final através do portal da empresa.
-
-### <a name="recover-recovery-keys"></a>Recuperar chaves de recuperação
-
-- **Administrador**: Os administradores não podem ver chaves de recuperação pessoais para dispositivos encriptados com FileVault.
-
-- **Utilizador final**: Os utilizadores finais utilizam o website do Portal da Empresa a partir de qualquer dispositivo para visualizar a chave de recuperação pessoal atual para qualquer um dos seus dispositivos geridos. Não é possível ver chaves de recuperação da aplicação Portal da Empresa.
-
-  Para ver uma chave de recuperação:
-  
-  1. Inscreva-se no site do *Intune Company Portal* a partir de qualquer dispositivo.
-
-  2. No portal, vá a **Dispositivos** e selecione o dispositivo macOS que está encriptado com fileVault.
-
-  3. Selecione **Obter tecla de recuperação**. A chave de recuperação atual é apresentada.
-
-## <a name="bitlocker-recovery-keys"></a>Chaves de recuperação BitLocker
-
-Intune fornece acesso à lâmina AD Azure para BitLocker para que possa ver IDs de chave BitLocker e chaves de recuperação para os seus dispositivos Windows 10, a partir do portal Intune. Para ser acessível, o aparelho deve ter as chaves depositadas na AD Azure.
-
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selecione **Dispositivos** > **Todos os dispositivos**.
-
-3. Selecione um dispositivo da lista e, em seguida, sob *o Monitor,* selecione **teclas recovery**.
-  
-   Quando as chaves estiverem disponíveis em Azure AD, as seguintes informações estão disponíveis:
-   - Id da chave BitLocker
-   - Chave de recuperação bitLocker
-   - Tipo de Unidade
-
-   Quando as teclas não estiverem em Azure AD, intune apresentará *nenhuma tecla BitLocker encontrada para este dispositivo*.
-
-A informação para o BitLocker é obtida utilizando o fornecedor de serviços de [configuração BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). O BitLocker CSP é suportado na versão 1709 do Windows 10 e posteriormente, e para a versão 1809 do Windows 10 Pro.
-
-## <a name="next-steps"></a>Passos seguintes
-
-Crie uma política de [conformidade com o dispositivo.](compliance-policy-create-windows.md)
+[Manage FileVault policy (Gerir a política FileVault)](encrypt-devices-filevault.md)

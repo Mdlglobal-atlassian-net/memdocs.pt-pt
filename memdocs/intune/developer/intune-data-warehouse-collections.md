@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022742"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709456"
 ---
 # <a name="intune-data-warehouse-collections"></a>Coleções do Armazém de Dados do Intune
 
@@ -38,7 +38,7 @@ A entidade **appRevision** apresenta uma lista de todas as versões das aplicaç
 | ApplicationID              | Identificador exclusivo da Aplicação – semelhante à AppKey, mas esta é uma chave natural.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revisão                   | A versão como mencionada pelo administrador durante o carregamento do binário.                   | 2                                    |
 | Título                      | Nome da aplicação.                                                                     | Excel                                |
-| Publicador                  | Publicador da aplicação.                                                                 | Microsoft                            |
+| Publisher                  | Publicador da aplicação.                                                                 | Microsoft                            |
 | UploadState                | Estado de carregamento da aplicação.                                                              | 1                                    |
 | AppTypeKey                 | Referência ao AppType descrito na secção seguinte.                            | 1                                    |
 | VppProgramTypeKey          | Referência ao VppProgramType descrito abaixo.                                        | 30876                                |
@@ -61,7 +61,7 @@ A entidade **appType** apresenta uma lista da origem da instalação de uma apli
 
 ### <a name="example"></a>Exemplo
 
-| AppTypeID |                Nome               |                     Descrição                     |
+| AppTypeID |                Name               |                     Descrição                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | Aplicação da loja Android               | Uma aplicação da loja Android.                             |
 | 1         | Aplicação LOB Android                 | Uma aplicação de linha de negócios Android.                  |
@@ -193,6 +193,8 @@ A entidade **DeviceConfigurationProfileUserActivity** apresenta uma lista do nú
 | OSVersion                  | Versão do SO.                                                                                                                                                                          |
 | JailBroken                 | Se o dispositivo está desbloqueado por jailbreak ou rooting.                                                                                                                                         |
 | DeviceCategoryKey          | Chave do atributo da categoria do dispositivo para este dispositivo.                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 A entidade **DeviceRegistrationState** representa o tipo de registo referenciado por outras coleções do armazém de dados. 
 
@@ -222,7 +224,6 @@ A entidade **device** lista todos os dispositivos inscritos sob gestão e as pro
 | DeviceRegistrationState    | Chave do atributo de estado do registo do cliente para este dispositivo.                                                                                                                      |
 | OwnerTypeKey               | Chave do atributo de tipo de proprietário para este dispositivo: corporate, personal ou unknown.                                                                                                    |
 | EnrolledDateTime           | A data e hora em que o dispositivo foi inscrito.                                                                                                                                         |
-| EthernetMacAddress           | O identificador de rede único deste dispositivo.                                                                                                                                        |
 | LastSyncDateTime           | Última entrada de dispositivo conhecida com o Intune.                                                                                                                                              |
 | ManagementAgentKey         | Chave do agente de gestão associado a este dispositivo.                                                                                                                             |
 | ManagementStateKey         | Chave do estado de gestão associado a este dispositivo a indicar o estado mais recente de uma ação remota ou se foi desbloqueado por jailbreak/rooting.                                                |
@@ -244,16 +245,12 @@ A entidade **device** lista todos os dispositivos inscritos sob gestão e as pro
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Estado supervisionado do dispositivo                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Armazenamento gratuito em bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Capacidade total de armazenamento em bytes.                                                                                                                                                                |
 | EncryptionState            | Estado de encriptação no dispositivo.                                                                                                                                                      |
 | SubscriberCarrier          | Operadora subscritora do dispositivo                                                                                                                                                       |
 | PhoneNumber                | Número de telefone do dispositivo                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Tecnologia de rede móvel do dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
-| Modelo                      | O modelo do dispositivo.                                                                                                                                                                      |
-| Office365Version           | A versão do Office 365 que está instalada no dispositivo.                                                                                                                             |
-| PhysicalMemoryInBytes      | A memória física em bytes.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -267,7 +264,7 @@ A entidade **deviceType** representa o tipo de dispositivo referenciado por outr
 
 ### <a name="example"></a>Exemplo
 
-| deviceTypeID |        Nome       |                      Descrição                      |
+| deviceTypeID |        Name       |                      Descrição                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Não disponível   | O tipo de dispositivo não está disponível.                     |
 | 0            | Ambiente de trabalho           | Dispositivo de Ambiente de Trabalho do Windows                              |
@@ -304,7 +301,7 @@ A entidade **deviceEnrollmentType** indica como um dispositivo foi inscrito. O t
 
 ### <a name="example"></a>Exemplo
 
-| enrollmentTypeID |                Nome                |                                        Descrição                                       |
+| enrollmentTypeID |                Name                |                                        Descrição                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Desconhecido                            | Não foi recolhido o tipo de inscrição                                                      |
 | 1                | UserEnrollment                     | Inscrição controlada pelo utilizador através do canal BYOD.                                           |
@@ -462,7 +459,7 @@ A entidade **MamApplicationInstance** lista aplicações geridas da Gestão de A
 |        CreatedDate         |                                                                 Data em que este registo da instância da aplicação MAM foi criado. O valor pode ser nulo.                                                                 |        11/23/2016 12:00:00 AM        |
 |          Plataforma          |                                                                          Plataforma do dispositivo no qual esta aplicação MAM está instalada.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Versão de plataforma do dispositivo no qual esta aplicação MAM está instalada.                                                                       |                 2,2                  |
-|         SdkVersion         |                                                                            A versão de SDK MAM com a qual esta aplicação MAM foi encapsulada.                                                                            |                 3,2                  |
+|         SdkVersion         |                                                                            A versão de SDK MAM com a qual esta aplicação MAM foi encapsulada.                                                                            |                 3.2                  |
 | mamDeviceId | Id do dispositivo com o qual a MAM Application Instance está associada.   | 11/23/2016 12:00:00 AM   |
 | mamDeviceType | Tipo de dispositivo do dispositivo com o qual a MAM Application Instance está associada.   | 11/23/2016 12:00:00 AM   |
 | nome do dispositivo mamdevice | Nome do dispositivo com o qual a MAM Application Instance está associada.   | 11/23/2016 12:00:00 AM   |
@@ -508,7 +505,7 @@ A entidade **MamPlatform** lista os nomes e tipos de plataformas em que uma apli
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Identificador exclusivo da plataforma no armazém de dados – chave de substituição.      |                           123                           |
 |          Plataforma          | Identificador exclusivo da plataforma, semelhante a PlatformKey, mas é uma chave natural. |                           123                           |
-|        PlatformName        |                                   Nome da plataforma                                   | Não Disponível <br>Nenhuma <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Nome da plataforma                                   | Não Disponível <br>Nenhum <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Data e hora em UTC em que esta plataforma foi modificada pela última vez no armazém de dados.  |                 11/23/2016 12:00:00 AM                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
@@ -522,7 +519,7 @@ A entidade **managementAgentType** representa os agentes utilizados para gerir u
 
 ### <a name="example"></a>Exemplo
 
-| ManagementAgentTypeID |                Nome               |                                  Descrição                                 |
+| ManagementAgentTypeID |                Name               |                                  Descrição                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | O dispositivo é gerido através do Exchange Active Sync                         |
 | 2                     | MDM                               | O dispositivo é gerido através de um agente MDM                                   |
@@ -547,7 +544,7 @@ A entidade **ManagementState** disponibiliza detalhes sobre o estado do disposit
 
 ### <a name="example"></a>Exemplo
 
-| managementStateID |      Nome      |                                                   Descrição                                                   |
+| managementStateID |      Name      |                                                   Descrição                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | Geridos        | Gerido sem ações remotas pendentes.                                                                       |
 | 1                 | RetirePending  | Existe um comando de extinção pendente para o dispositivo.                                                             |
@@ -593,7 +590,7 @@ A entidade **ownerType** indica se um dispositivo é empresarial, pessoal ou des
 | ownerTypeName | Representa o tipo proprietário dos dispositivos: Corporate - Device is enterprise owned.  Personal – o dispositivo é propriedade pessoal (BYOD).   Unknown – não existem informações sobre este dispositivo. | Corporate Personal Unknown |
 
 > [!Note]  
-> Para `ownerTypeName` o filtro em AzureAD ao criar Grupos Dinâmicos `deviceOwnership` `Company`para dispositivos, é necessário definir o valor como . Para mais informações, consulte [Regras para dispositivos](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Para o `ownerTypeName` filtro em AzureAD ao criar Grupos Dinâmicos para dispositivos, é necessário definir o valor `deviceOwnership` como `Company` . Para mais informações, consulte [Regras para dispositivos](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>políticas
 A entidade **Policy** apresenta uma lista de perfis de configuração de dispositivos, perfis de configuração de aplicações e políticas de conformidade. Pode atribuir as políticas com a Gestão de Dispositivos Móveis (MDM) a um grupo na sua empresa.
@@ -670,7 +667,7 @@ A entidade **termsAndConditions** representa os metadados e o conteúdo de uma d
 |    termsAndConditionsKey    |    Uma chave correspondente a uma entrada na coleção 'userTermsAndConditionsAccepts'    |    123    |
 |    termsAndCondidionsId    |    O ID para esta entrada termsAndConditions    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    A versão da entrada destes termos e condições    |    1    |
-|    nome    |    O nome da entrada destes termos e condições.        |    Termos de utilização do Intune     |
+|    name    |    O nome da entrada destes termos e condições.        |    Termos de utilização do Intune     |
 |    descrição    |    A descrição para estes termos e condições.     |         |
 |    título    |    O título para estes termos e condições.     |    Política empresarial da gestão de dispositivos        |
 |    summaryOfTerms    |    O resumo dos termos que o utilizador recebeu.     |    Concordo com os termos e condições.    |
@@ -682,7 +679,7 @@ A entidade **termsAndConditions** representa os metadados e o conteúdo de uma d
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 A entidade **UserDeviceAssociation** contém associações de dispositivos do utilizador na sua organização.
 
-|        Nome        |                                             Descrição                                            |     Exemplo     |
+|        Name        |                                             Descrição                                            |     Exemplo     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Identificador exclusivo do utilizador no armazém de dados.   (Chave de substituição).                            | 123             |
 | DeviceKey          | Identificador exclusivo do dispositivo no armazém de dados.                                             | 123             |
@@ -728,12 +725,12 @@ A entidade **vppProgramType** apresenta uma lista de tipos de programas VPP poss
 
 ### <a name="example"></a>Exemplo
 
-|             VppProgramID             |         Nome        | Descrição                |
+|             VppProgramID             |         Name        | Descrição                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Programa VPP da Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Ainda não está disponível | Valor predefinido, Sem VPP.   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Programa VPP da Apple.     |
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para obter mais informações sobre o Armazém de Dados do Intune, veja [Modelo de dados do Armazém de Dados](reports-ref-data-model.md).

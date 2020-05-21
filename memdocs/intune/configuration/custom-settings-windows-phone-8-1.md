@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1bea9047d65faf449c77e1a677000d32e883a76
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce8433ee87c0f5e4b397003b78c0ceb751eb46b7
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333153"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556273"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Utilizar definições personalizadas para dispositivos Windows Phone 8.1 no Intune
 
@@ -31,38 +31,30 @@ Os perfis personalizados do Windows Phone 8.1 utilizam definições Open Mobile 
 
 Este artigo mostra-lhe como criar um perfil personalizado para dispositivos Windows Phone 8.1. 
 
-## <a name="create-the-profile"></a>Criar o perfil
+## <a name="before-you-begin"></a>Antes de começar
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
-3. Introduza as seguintes definições:
+[Crie um perfil personalizado do Windows Phone 8.1](custom-settings-configure.md).
 
-    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil personalizado do Windows Phone**.
-    - **Descrição**: introduza uma descrição que lhe permita obter uma descrição geral da definição e outros detalhes importantes.
-    - **Plataforma**: Selecione **Windows Phone 8.1**.
-    - **Tipo de perfil**: Selecione **Personalizado**.
+## <a name="custom-oma-uri-settings"></a>Definições oMA-URI personalizadas
 
-4. Em **Definições OMA-URI Personalizadas**, selecione **Adicionar**. Introduza as seguintes definições:
+- **Definições OMA-URI**: **Adicione** as seguintes definições:
 
-    - **Nome** – introduza um nome exclusivo para a definição OMA-URI para o ajudar a identificá-la na lista de definições.
-    - **Descrição**: introduza uma descrição geral da definição e quaisquer outras informações relevantes para o ajudar a localizar o perfil.
-    - **OMA-URI** (sensível a maiúsculas e minúsculas): introduza a definição OMA-URI que pretende utilizar.
-    - Tipo de **dados:** Selecione o tipo de dados que utilizará para esta definição OMA-URI. As opções são:
+  - **Nome** – introduza um nome exclusivo para a definição OMA-URI para o ajudar a identificá-la na lista de definições.
+  - **Descrição**: introduza uma descrição geral da definição e quaisquer outras informações relevantes para o ajudar a localizar o perfil.
+  - **OMA-URI** (sensível a maiúsculas e minúsculas): introduza a definição OMA-URI que pretende utilizar.
+  - Tipo de **dados:** Selecione o tipo de dados que utilizará para esta definição OMA-URI. As opções são:
 
-        - String
-        - Cadeia (ficheiro XML)
-        - Data e hora
-        - Número inteiro
-        - Vírgula flutuante
-        - Booleano
-        - Base64 (ficheiro)
+    - String
+    - Cadeia (ficheiro XML)
+    - Data e hora
+    - Número inteiro
+    - Vírgula flutuante
+    - Booleano
+    - Base64 (ficheiro)
 
-    - **Valor**: introduza o valor de dados que pretende associar à definição OMA-URI que introduziu. O valor depende do tipo de dados que selecionou. Por exemplo, se selecionar **Data e Hora,** selecione o valor de um apanhador de datas.
+  - **Valor**: introduza o valor de dados que pretende associar à definição OMA-URI que introduziu. O valor depende do tipo de dados que selecionou. Por exemplo, se selecionar **Data e Hora,** selecione o valor de um apanhador de datas.
 
-    Depois de adicionar algumas definições, pode selecionar **Exportar**. A opção **Exportar** cria uma lista de todos os valores que adicionou num ficheiro de valores separados por vírgulas (.csv).
-
-5. Selecione **OK** para guardar as alterações. Continue a adicionar mais definições conforme necessário.
-6. Quando terminar, selecione **OK** > **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
+  Depois de adicionar algumas definições, pode selecionar **Exportar**. A opção **Exportar** cria uma lista de todos os valores que adicionou num ficheiro de valores separados por vírgulas (.csv).
 
 ## <a name="example"></a>Exemplo
 
@@ -74,8 +66,8 @@ No exemplo seguinte, os dispositivos telefónicos do Windows 8.1 estão impedido
 - **Tipo**de dados : Inteiro
 - **Valor**: 0
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+[Atribuir o perfil,](device-profile-assign.md) [e monitorizar o seu estado](device-profile-monitor.md).
 
 Criar um [perfil personalizado nos dispositivos windows 10](custom-settings-windows-10.md).

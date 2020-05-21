@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aeaa184717f96def1b84447d9ded207c93d8b423
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359315"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429818"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Aplicar definições e funcionalidades nos dispositivos com perfis de dispositivo no Microsoft Intune
 
@@ -55,7 +55,7 @@ Os [certificados](../protect/certificates-configure.md) configuram certificados 
 
 Esta funcionalidade suporta:
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ As [definições personalizadas](custom-settings-configure.md) permitem que os a
 
 Esta funcionalidade suporta:
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -77,7 +77,7 @@ Esta funcionalidade suporta:
 
 ## <a name="delivery-optimization"></a>Otimização da entrega
 
-A [otimização da entrega](delivery-optimization-windows.md) oferece uma melhor experiência na entrega de atualizações de software. Estas definições estão **a** > substituir as definições de anel de**atualização do Windows 10.**
+A [otimização da entrega](delivery-optimization-windows.md) oferece uma melhor experiência na entrega de atualizações de software. Estas definições estão **a**substituir as definições de anel de  >  **atualização do Windows 10.**
 
 Utilize estas definições para controlar a forma como as atualizações de software são transferidas para os dispositivos na sua organização. Por exemplo, pode permitir que os utilizadores obtenham as suas próprias atualizações ou obtenham as atualizações através dos serviços cloud de otimização de entrega num perfil de dispositivo.
 
@@ -117,7 +117,7 @@ As [restrições de dispositivos](device-restrictions-configure.md) controlam a 
 
 Esta funcionalidade suporta:
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -146,19 +146,19 @@ As [definições de educação para Windows 10](education-settings-configure.md)
 
 [Definições de educação - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) utiliza a aplicação iOS/iPadOS Classroom para orientar a aprendizagem e controlar os dispositivos estudantis na sala de aula. Pode configurar dispositivos iPad para que vários estudantes possam partilhar um único dispositivo.
 
-## <a name="email"></a>Email
+## <a name="email"></a>E-mail
 
 As [definições de e-mail](email-settings-configure.md) criam, atribuem e monitorizam as definições de e-mail do Exchange ActiveSync nos dispositivos. Os perfis de e-mail ajudam na consistência, reduzem as chamadas de suporte e permitem que os utilizadores finais acedam ao e-mail da empresa nos seus dispositivos pessoais sem precisarem de efetuar qualquer configuração. 
 
 Esta funcionalidade suporta:
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
 - Windows 10 e posterior
 
-## <a name="endpoint-protection"></a>Endpoint protection
+## <a name="endpoint-protection"></a>Proteção de ponto final
 
 [A proteção endpoint](../protect/endpoint-protection-configure.md) configura as definições bitLocker e Microsoft Defender para dispositivos Windows 10. E, configure a firewall, gateway e outros recursos em dispositivos macOS.
 
@@ -179,7 +179,7 @@ Esta funcionalidade suporta:
 
 ## <a name="extensions"></a>Extensões
 
-[As extensões kernel](kernel-extensions-overview-macos.md) permitem que os administradores adicionem funcionalidades ou programas ao nível do kernel em dispositivos macOS. Configure estas definições para confiar em todas as extensões de um programador ou parceiro específico, ou permitir extensões específicas de kernel.
+As extensões do [sistema macOS e](kernel-extensions-overview-macos.md) as extensões de kernel permitem que os administradores adicionem funcionalidades ou programas que alargam as capacidades nativas do sistema operativo. Configure estas definições para confiar em todas as extensões de um programador ou parceiro específico, ou permitir extensões específicas.
 
 Esta funcionalidade suporta:
 
@@ -194,7 +194,7 @@ Esta funcionalidade suporta:
 - Windows 10 e posterior
 - Windows Holographic for Business  
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk"></a>Modo de Local Público
 
 O perfil [Definições de quiosque](kiosk-settings.md) configura um dispositivo para que execute uma aplicação ou execute várias aplicações. Também pode personalizar outras funcionalidades no modo de quiosque, incluindo o menu Iniciar e um browser.
 
@@ -266,7 +266,7 @@ As redes virtuais privadas (VPN) permitem-lhe conceder aos utilizadores acesso r
 
 Esta funcionalidade suporta: 
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -280,7 +280,7 @@ As [definições de Wi-Fi](wi-fi-settings-configure.md) atribuem definições de
 
 Esta funcionalidade suporta: 
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -299,6 +299,6 @@ Esta funcionalidade suporta:
 
 [Faça a gestão dos seus perfis](device-profile-monitor.md) para verificar o estado dos dispositivos e os perfis atribuídos. Ver as definições que causam um conflito e os perfis que incluem essas definições também poderá ajudá-lo a resolver conflitos. [Problemas comuns e resoluções](device-profile-troubleshoot.md) ajuda os administradores a trabalhar com perfis. Descreve o que acontece quando se elimina um perfil, o que faz com que sejam enviadas notificações para os dispositivos e muito mais.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Escolher a plataforma e começar.

@@ -1,11 +1,11 @@
 ---
-title: Definições de otimização de entrega para windows 10 no Microsoft Intune - Azure Microsoft Docs
-description: Configure como os dispositivos do Windows 10 gere com a otimização da entrega de utilização intune. Em Intune, crie um perfil de configuração do dispositivo para instalar atualizações a partir da internet. Consulte também como substituir os anéis de atualização existentes por um perfil de otimização de entrega.
+title: Definições de Otimização de Entrega para windows 10 no Microsoft Intune - Azure Microsoft Docs
+description: Configure como os dispositivos do Windows 10 gere com a Otimização de Entrega intune. Em Intune, crie um perfil de configuração do dispositivo para instalar atualizações a partir da internet. Consulte também como substituir os anéis de atualização existentes por um perfil de Otimização de Entrega.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,20 +15,20 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 77f32f5fae6d6bc3bf7b4fe667be54ef248daa2f
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 91989d2d8c5c68be9c560e306ea24cd33052a22c
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401688"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551864"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Definições de otimização de entrega no Microsoft Intune
 
-Com o Intune, utilize as definições de Otimização de Entrega para os dispositivos Windows 10 para reduzir o consumo de largura de banda quando esses dispositivos descarregarem aplicações e atualizações. Configure a otimização da entrega como parte dos perfis de configuração do seu dispositivo.  
+Com o Intune, utilize as definições de Otimização de Entrega para os dispositivos Windows 10 para reduzir o consumo de largura de banda quando esses dispositivos descarregarem aplicações e atualizações. Configure a Otimização da Entrega como parte dos perfis de configuração do seu dispositivo.  
 
-Este artigo descreve como configurar as definições de otimização de entrega como parte de um perfil de configuração do dispositivo. Depois de criar um perfil, atribui ou implementa esse perfil para os seus dispositivos Windows 10.
+Este artigo descreve como configurar as definições de Otimização de Entrega como parte de um perfil de configuração do dispositivo. Depois de criar um perfil, atribui ou implementa esse perfil para os seus dispositivos Windows 10.
 
-Para ver uma lista das definições de otimização de entrega que o Intune suporta, consulte as definições de [Otimização de Entrega para Intune](delivery-optimization-settings.md).  
+Para ver uma lista das definições de Otimização de Entrega que o Intune suporta, consulte as definições de [Otimização de Entrega para Intune](delivery-optimization-settings.md).  
 
 Para saber mais sobre a Otimização de Entregas no Windows 10, consulte [as atualizações](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) de Otimização de Entrega na documentação do Windows.  
 
@@ -52,7 +52,7 @@ Para saber mais sobre a Otimização de Entregas no Windows 10, consulte [as atu
 
 6. Selecione **Seguinte**.
 
-7. Na página de definições de **Configuração,** defina como pretende que as atualizações e aplicações descarreguem. Para obter informações sobre as definições disponíveis, consulte [as definições de otimização da entrega para Intune](delivery-optimization-settings.md).
+7. Na página de definições de **Configuração,** defina como pretende que as atualizações e aplicações descarreguem. Para obter informações sobre as definições disponíveis, consulte [as definições de Otimização de Entrega para Intune](delivery-optimization-settings.md).
 
    Quando terminar as definições de configuração, selecione **Next**.
 
@@ -72,7 +72,7 @@ Da próxima vez que cada dispositivo entrar, a apólice é aplicada.
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Remover otimização de entrega dos anéis de atualização do Windows 10
 
-A Otimização da Entrega foi previamente configurada como parte dos Anéis de Atualização de Software. A partir de fevereiro de 2019, as definições de Otimização de Entrega são configuradas como parte de um perfil de configuração de dispositivo de otimização de deliver, que inclui configurações adicionais que afetam mais do que a entrega de Atualizações de Software para dispositivos. Se ainda não o fez, remova a definição de otimização de entrega dos seus Anéis de Atualização, definindo-a para *Não configurada,* e depois utilize um perfil de Otimização de Entrega para gerir a maior gama de opções disponíveis.
+A Otimização da Entrega foi previamente configurada como parte dos Anéis de Atualização de Software. A partir de fevereiro de 2019, as definições de Otimização de Entrega são configuradas como parte de um perfil de configuração de dispositivo de otimização de deliver, que inclui configurações adicionais que afetam mais do que a entrega de Atualizações de Software para dispositivos. Se ainda não o fez, remova a definição de Otimização de Entrega dos seus Anéis de Atualização, definindo-a para *Não configurada,* e depois utilize um perfil de Otimização de Entrega para gerir a maior gama de opções disponíveis.
 
 1. Criar um perfil de configuração do dispositivo de otimização de entrega:
 
@@ -80,7 +80,7 @@ A Otimização da Entrega foi previamente configurada como parte dos Anéis de A
     2. Introduza as seguintes propriedades:
 
         - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-        - **Perfil**: **Selecione otimização de entrega**.
+        - **Perfil**: **Selecione Otimização de Entrega**.
 
     3. Selecione **Criar**.
     4. No Básico, insira as **seguintes**propriedades:
@@ -110,8 +110,8 @@ A Otimização da Entrega foi previamente configurada como parte dos Anéis de A
     3. Nas definições, desajuste o modo de transferência de **otimização** da entrega para **Não configurado**.
     4. **OK**  >  **Guarde** as suas alterações.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Depois de [atribuir o perfil,](device-profile-assign.md) [monitorize o seu estado.](device-profile-monitor.md)
 
-Consulte as definições de [otimização](delivery-optimization-settings.md) da entrega para Intune.
+Consulte as definições de [Otimização de Entrega](delivery-optimization-settings.md) para Intune.

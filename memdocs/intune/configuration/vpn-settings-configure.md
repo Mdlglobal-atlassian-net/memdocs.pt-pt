@@ -1,6 +1,6 @@
 ---
 title: Adicione as definições vpN aos dispositivos no Microsoft Intune - Azure [ Microsoft Docs
-description: Para administrador de dispositivos Android, Android Enterprise, iOS, iPadOS, macOS e dispositivos Windows, utilize configurações incorporadas para criar ligações de rede privada virtual (VPN) no Microsoft Intune.
+description: No administrador de dispositivos Android, Android Enterprise, iOS, iPadOS, macOS e dispositivos Windows, utilizam configurações incorporadas para criar ligações de rede privada virtual (VPN) no Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 3d078f813b334806adb9e62054efc1fe844cea21
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943829"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429164"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Criar perfis VPN para ligar aos servidores VPN em Intune
 
-As redes privadas virtuais (VPNs) dão aos utilizadores acesso remoto seguro à sua rede de organização. Os dispositivos utilizam um perfil de ligação VPN para iniciar uma ligação com o servidor VPN. **Os perfis VPN** no Microsoft Intune atribuem definições de VPN a utilizadores e dispositivos na sua organização, para que possam ligar-se de forma fácil e segura à sua rede organizacional.
+As redes privadas virtuais (VPNs) dão aos utilizadores acesso remoto seguro à sua rede de organização. Os dispositivos utilizam um perfil de ligação VPN para iniciar uma ligação com o servidor VPN. **Os perfis VPN** no Microsoft Intune atribuem definições de VPN a utilizadores e dispositivos da sua organização. Utilize estas definições para que os utilizadores possam ligar-se de forma fácil e segura à sua rede organizacional.
 
 Por exemplo, pretende configurar todos os dispositivos iOS/iPadOS com as definições necessárias para se ligar a uma partilha de ficheiros na rede da organização. Cria um perfil VPN que inclui estas definições. Em seguida, atribui este perfil a todos os utilizadores que possuam dispositivos iOS/iPadOS. Os utilizadores veem a ligação VPN na lista de redes disponíveis e podem ligar-se sem esforço.
 
@@ -47,7 +47,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
   - Windows 10
 
 - Check Point Capsule VPN
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho android Enterprise
   - iOS/iPadOS
   - macOS
@@ -56,7 +56,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
   - Windows Phone 8.1
 
 - Cisco AnyConnect
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho android Enterprise
   - Dono de dispositivo Android Enterprise (totalmente gerido)
   - iOS/iPadOS
@@ -66,7 +66,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
   - iOS/iPadOS
 
 - Citrix SSO
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho Android Enterprise: Use a política de [configuração de aplicativos](../apps/app-configuration-policies-use-android.md)
   - Dono de dispositivo Android Enterprise (totalmente gerido): Utilize a política de configuração de [aplicações](../apps/app-configuration-policies-use-android.md)
   - iOS/iPadOS
@@ -79,7 +79,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
   Crie perfis VPN personalizados utilizando definições URI em [Criar um perfil com configurações personalizadas](custom-settings-configure.md).
 
 - F5 Access
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho android Enterprise
   - Dono de dispositivo Android Enterprise (totalmente gerido)
   - iOS/iPadOS
@@ -104,17 +104,16 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
   - Windows 10
 
 - Pulse Secure
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho android Enterprise
   - Dono de dispositivo Android Enterprise (totalmente gerido)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
 
 - SonicWall Mobile Connect
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Perfis de trabalho android Enterprise
   - iOS/iPadOS
   - macOS
@@ -132,13 +131,13 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:
-      - **Administrador de dispositivos Android**
-      - **Android Enterprise** > **Device proprietário apenas**
-      - **Perfil android enterprise** > **work apenas**
+      - **Android device administrator (Administrador de dispositivos Android)**
+      - **Android Enterprise**  >  **Proprietário do dispositivo apenas**
+      - **Android Enterprise**  >  **Perfil de trabalho apenas**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 e posterior**
@@ -155,7 +154,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
 6. Selecione **Seguinte**.
 7. Nas definições de **Configuração**, dependendo da plataforma que escolheu, as definições que pode configurar são diferentes. Selecione a sua plataforma para configurações detalhadas:
 
-    - [Administrador de dispositivos Android](vpn-settings-android.md)
+    - [Android device administrator (Administrador de dispositivos Android)](vpn-settings-android.md)
     - [Android Enterprise](vpn-settings-android-enterprise.md)
     - [iOS/iPadOS](vpn-settings-ios.md)
     - [macOS](vpn-settings-macos.md)
@@ -164,7 +163,7 @@ Pode criar perfis VPN com os seguintes tipos de ligação:
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -182,7 +181,7 @@ Os perfis da VPN podem utilizar vários tipos de ligação e protocolos diferent
 
 Quando cria o perfil da VPN, pode escolher um perfil de certificado SCEP ou PKCS que tenha criado anteriormente no Intune. Este perfil é conhecido como certificado de identidade. É usado para autenticar contra um perfil de certificado fidedigno (ou *certificado raiz)* que cria para permitir a ligação do dispositivo do utilizador. O certificado fidedigno é atribuído ao computador que irá autenticar a ligação VPN (normalmente, o servidor VPN).
 
-Se utilizar a autenticação baseada em certificados para o seu perfil VPN, implante o perfil VPN, perfil de certificado e perfil de raiz fidedigno para os mesmos grupos para garantir que cada dispositivo pode reconhecer a legitimidade da sua autoridade de certificado.
+Se utilizar a autenticação baseada em certificados para o seu perfil VPN, em seguida, implemente o perfil VPN, o perfil de certificado e o perfil de raiz fidedigno para os mesmos grupos. Esta atribuição garante que cada dispositivo reconhece a legitimidade da sua autoridade de certificados.
 
 Para obter mais informações sobre como criar e utilizar perfis de certificado no Intune, veja [Como configurar certificados com o Microsoft Intune](../protect/certificates-configure.md).
 
@@ -194,7 +193,7 @@ Para obter mais informações sobre como criar e utilizar perfis de certificado 
 
 O utilizador é autenticado no servidor VPN ao fornecer um nome de utilizador e uma palavra-passe.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O perfil não estará ativo assim que for criado. Em seguida, [atribua o perfil](device-profile-assign.md) a alguns dispositivos e [monitorize o seu estado](device-profile-monitor.md).
 

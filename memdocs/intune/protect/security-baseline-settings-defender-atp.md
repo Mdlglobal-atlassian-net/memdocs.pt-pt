@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693402"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429345"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -596,7 +596,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Proteger dispositivos de explorações](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   Esta regra ASR é controlada através do seguinte GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Não configurado** - O predefinido do Windows é restaurado, é para não bloquear a criação de processos infantis.
+  - **Não configurado** - O predefinido do Windows é restaurado, o que é não bloquear a criação de processos infantis.
   - **Utilizador definido**
   - **Ativar** (*padrão*) - As aplicações de comunicação do escritório estão bloqueadas de criar processos infantis.
   - **Modo** de auditoria - Os eventos windows são levantados em vez de bloquear processos infantis.
@@ -905,7 +905,7 @@ Para mais informações, consulte [o PassportForWork CSP](https://docs.microsoft
 
 ::: zone-end
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Conheça as linhas de base de segurança](security-baselines.md)
 - [Evitar conflitos](security-baselines.md#avoid-conflicts)

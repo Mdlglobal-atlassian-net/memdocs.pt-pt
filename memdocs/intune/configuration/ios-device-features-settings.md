@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943880"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551932"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Definições de dispositivos iOS e iPadOS para utilizar funcionalidades comuns do iOS/iPadOS em Intune
 
@@ -46,7 +46,7 @@ Criar um perfil de [funcionalidades de dispositivoiOS/iPadOS](device-features-co
 > Certifique-se de adicionar todas as impressoras ao mesmo perfil. A Apple impede que vários perfis airPrint direcionem o mesmo dispositivo.
 
 - **Endereço IP**: Introduza o endereço IPv4 ou IPv6 da impressora. Se utilizar nomes de anfitriões para identificar impressoras, pode obter o endereço IP pingando a impressora no terminal. Obtenha o endereço IP e o caminho (neste artigo) fornece mais detalhes.
-- **Caminho**: O caminho `ipp/print` é normalmente para impressoras na sua rede. Obtenha o endereço IP e o caminho (neste artigo) fornece mais detalhes.
+- **Caminho**: O caminho é normalmente `ipp/print` para impressoras na sua rede. Obtenha o endereço IP e o caminho (neste artigo) fornece mais detalhes.
 - **Porta**: Introduza a porta de escuta do destino AirPrint. Se deixar esta propriedade em branco, o AirPrint utiliza a porta predefinida. Disponível no iOS 11.0+, e iPadOS 13.0+.
 - **TLS**: **Ativar** as ligações AirPrint com a Segurança da Camada de Transporte (TLS). Disponível no iOS 11.0+, e iPadOS 13.0+.
 
@@ -60,15 +60,15 @@ Para adicionar servidores AirPrint, pode:
 Para adicionar servidores AirPrinter, precisa do endereço IP da impressora, do caminho dos recursos e da porta. Os seguintes passos mostram-lhe como obter esta informação.
 
 1. Num Mac que esteja ligado à mesma rede local (subnet) que as impressoras AirPrint, **terminal** aberto (de **/Aplicações/Utilitários).**
-2. No Terminal, `ippfind`digite e selecione entrar.
+2. No Terminal, `ippfind` digite e selecione entrar.
 
-    Repare na informação da impressora. Por exemplo, pode devolver `ipp://myprinter.local.:631/ipp/port1`algo semelhante a . A primeira parte é o nome da impressora. A última`ipp/port1`parte () é o caminho dos recursos.
+    Repare na informação da impressora. Por exemplo, pode devolver algo semelhante a `ipp://myprinter.local.:631/ipp/port1` . A primeira parte é o nome da impressora. A última parte `ipp/port1` () é o caminho dos recursos.
 
-3. No Terminal, `ping myprinter.local`digite e selecione entrar.
+3. No Terminal, `ping myprinter.local` digite e selecione entrar.
 
-   Note o endereço IP. Por exemplo, pode devolver `PING myprinter.local (10.50.25.21)`algo semelhante a .
+   Note o endereço IP. Por exemplo, pode devolver algo semelhante a `PING myprinter.local (10.50.25.21)` .
 
-4. Utilize os valores do endereço IP e do caminho dos recursos. Neste exemplo, o endereço `10.50.25.21`IP é , `/ipp/port1`e o caminho dos recursos é .
+4. Utilize os valores do endereço IP e do caminho dos recursos. Neste exemplo, o endereço IP é `10.50.25.21` , e o caminho dos recursos é `/ipp/port1` .
 
 ## <a name="home-screen-layout"></a>Esquema do ecrã principal
 
@@ -210,10 +210,10 @@ Esta funcionalidade aplica-se a:
 
 - **Nota**de rodapé do ecrã de bloqueio : Se os dispositivos forem perdidos ou roubados, introduza uma nota que possa ajudar a retornar o dispositivo. Pode introduzir qualquer texto que quiser. Por exemplo, introduza algo como `If found, call Contoso at ...`.
 
-  As fichas do dispositivo também podem ser usadas para adicionar informações específicas do dispositivo a estes campos. Por exemplo, para mostrar o `Serial Number: {{serialnumber}}`número de série, insira . No ecrã de bloqueio, o `Serial Number 123456789ABC`texto mostra semelhante a . Ao introduzir variáveis, certifique-se de `{{ }}`que utiliza suportes encaracolados . [Os tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) de configuração da aplicação incluem uma lista de variáveis que podem ser usadas. Também pode `deviceName` utilizar ou qualquer outro valor específico do dispositivo.
+  As fichas do dispositivo também podem ser usadas para adicionar informações específicas do dispositivo a estes campos. Por exemplo, para mostrar o número de série, insira `Serial Number: {{serialnumber}}` . No ecrã de bloqueio, o texto mostra semelhante a `Serial Number 123456789ABC` . Ao introduzir variáveis, certifique-se de que utiliza suportes encaracolados `{{ }}` . [Os tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) de configuração da aplicação incluem uma lista de variáveis que podem ser usadas. Também pode utilizar `deviceName` ou qualquer outro valor específico do dispositivo.
 
   > [!NOTE]
-  > As variáveis não são validadas na UI, e são sensíveis ao caso. Como resultado, pode ver perfis guardados com entrada incorreta. Por exemplo, se `{{DeviceID}}` introduzir `{{deviceid}}`em vez de , então a corda literal é mostrada em vez do ID único do dispositivo. Certifique-se de introduzir a informação correta.
+  > As variáveis não são validadas na UI, e são sensíveis ao caso. Como resultado, pode ver perfis guardados com entrada incorreta. Por exemplo, se introduzir `{{DeviceID}}` em vez ou `{{deviceid}}` '{{DEVICEID}}', então a corda literal é mostrada em vez do ID único do dispositivo. Certifique-se de introduzir a informação correta. Todas as minúsculas ou todas as variáveis maiúsculas são suportadas, mas não uma mistura. 
 
 ## <a name="single-sign-on"></a>Início de sessão único
 
@@ -230,7 +230,7 @@ Esta funcionalidade aplica-se a:
 
     Também pode substituir o âmbito pelo texto que introduzir na caixa de texto **Âmbito**.
 
-    Por exemplo, Contoso tem várias regiões, incluindo a Europa, Ásia e América do Norte. Contoso quer que os seus utilizadores asiáticos utilizem O SSO, e a aplicação requer a UPN no `username@asia.contoso.com` formato. Quando seleciona o Nome Principal do **Utilizador,** o reino para `contoso.com`cada utilizador é retirado do Azure AD, que é . Assim, para os utilizadores na Ásia, `asia.contoso.com`selecione User Principal **Name**, e introduza . A UPN do `username@asia.contoso.com`utilizador torna-se, em vez de `username@contoso.com`.
+    Por exemplo, Contoso tem várias regiões, incluindo a Europa, Ásia e América do Norte. Contoso quer que os seus utilizadores asiáticos utilizem O SSO, e a aplicação requer a UPN no `username@asia.contoso.com` formato. Quando seleciona o Nome Principal do **Utilizador,** o reino para cada utilizador é retirado do Azure AD, que é `contoso.com` . Assim, para os utilizadores na Ásia, selecione **User Principal Name**, e introduza `asia.contoso.com` . A UPN do utilizador torna-se, `username@asia.contoso.com` em vez de `username@contoso.com` .
 
   - **ID do dispositivo insintonizado**: Insinto automaticamente seleciona o ID do dispositivo intune.
 
@@ -245,7 +245,7 @@ Esta funcionalidade aplica-se a:
 
 - **Apps**: **Adicione** aplicações em dispositivos utilizadores que podem usar um único sinal.
 
-  A `AppIdentifierMatches` matriz deve incluir cordas que correspondam a iDs de pacote de aplicativos. Estas cordas podem ser correspondências `com.contoso.myapp`exatas, tais como, ou introduzir \* uma correspondência de prefixo no id do pacote utilizando o caracteres wildcard. O carácter wildcard deve aparecer após um carácter de período (.), e pode `com.contoso.*`aparecer apenas uma vez, no final da corda, como . Quando um caráter universal é incluído, todas as aplicações cujo ID da coleção de pacotes começa com o prefixo têm acesso à conta.
+  A `AppIdentifierMatches` matriz deve incluir cordas que correspondam a iDs de pacote de aplicativos. Estas cordas podem ser correspondências exatas, tais como, ou introduzir uma correspondência de `com.contoso.myapp` prefixo no id do pacote utilizando o \* caracteres wildcard. O carácter wildcard deve aparecer após um carácter de período (.), e pode aparecer apenas uma vez, no final da corda, como `com.contoso.*` . Quando um caráter universal é incluído, todas as aplicações cujo ID da coleção de pacotes começa com o prefixo têm acesso à conta.
 
   Utilize o **Nome da Aplicação** para introduzir um nome simples, para o ajudar a identificar o ID do pacote.
 
@@ -254,9 +254,9 @@ Esta funcionalidade aplica-se a:
   Por exemplo, quando um utilizador se conecta a qualquer um destes sites, o dispositivo iOS/iPadOS utiliza as credenciais de inscrição únicas. Os utilizadores não precisam de introduzir credenciais adicionais. Se a autenticação de vários fatores estiver ativada, então os utilizadores são obrigados a introduzir a segunda autenticação.
 
   > [!NOTE]
-  > Estes URLs têm de ter um FQDN formatado adequadamente. A Apple exige que `http://<yourURL.domain>` estes estejam no formato.
+  > Estes URLs têm de ter um FQDN formatado adequadamente. A Apple exige que estes estejam no `http://<yourURL.domain>` formato.
 
-  Os padrões de correspondências do URL têm de começar com `http://` ou `https://`. Uma simples combinação de cordas `http://www.contoso.com/` é executada, por `http://www.contoso.com:80/`isso o prefixo URL não corresponde a . Com iOS 10.0+ e iPadOS 13.0+, um único wildcard \* pode ser usado para introduzir todos os valores correspondentes. Por exemplo, `http://*.contoso.com/` `http://store.contoso.com/` corresponde `http://www.contoso.com`tanto a ambos como .
+  Os padrões de correspondências do URL têm de começar com `http://` ou `https://`. Uma simples combinação de cordas é executada, por isso o `http://www.contoso.com/` prefixo URL não corresponde `http://www.contoso.com:80/` a . Com iOS 10.0+ e iPadOS 13.0+, um único wildcard \* pode ser usado para introduzir todos os valores correspondentes. Por exemplo, `http://*.contoso.com/` corresponde tanto a ambos como `http://store.contoso.com/` `http://www.contoso.com` .
 
   Os `http://.com` `https://.com` padrões e padrões combinam com todos os URLs HTTP e HTTPS, respectivamente.
 
@@ -283,7 +283,7 @@ Esta funcionalidade aplica-se a:
     - **Bookmark Path**: A Apple alterou esta definição. Todos os marcadores vão para a pasta **Sites Aprovados.** Os marcadores não entram no caminho do marcador.
     - **Título**: Introduza um título descritivo para o marcador.
 
-    Se não introduzir nenhum URLs, então os utilizadores não `microsoft.com`podem `microsoft.net`aceder `apple.com`a nenhum website exceto , e . Estes URLs são automaticamente permitidos pela Intune.
+    Se não introduzir nenhum URLs, então os utilizadores não podem aceder a nenhum website exceto `microsoft.com` `microsoft.net` , e `apple.com` . Estes URLs são automaticamente permitidos pela Intune.
 
 ## <a name="single-sign-on-app-extension"></a>Extensão única da aplicação de inscrição
 
@@ -315,15 +315,15 @@ Esta funcionalidade aplica-se a:
 
   Para obter mais informações sobre o modo de dispositivo partilhado e como o ativar, consulte a [visão geral do modo de dispositivo partilhado](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) e o modo de dispositivo partilhado para [dispositivos iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
 
-- **ID de extensão** (Redirecionamento e Credencial): Introduza o identificador `com.apple.extensiblesso`de pacote que identifica a extensão da sua aplicação SSO, como .
+- **ID de extensão** (Redirecionamento e Credencial): Introduza o identificador de pacote que identifica a extensão da sua aplicação SSO, como `com.apple.extensiblesso` .
 
-- **ID da equipa** (Redirecionamento e Credencial): Introduza o identificador de equipa da extensão da sua aplicação SSO. Um identificador de equipa é uma cadeia alfanumérica de 10 caracteres `ABCDE12345`(números e letras) gerada pela Apple, como . A identificação da equipa não é necessária.
+- **ID da equipa** (Redirecionamento e Credencial): Introduza o identificador de equipa da extensão da sua aplicação SSO. Um identificador de equipa é uma cadeia alfanumérica de 10 caracteres (números e letras) gerada pela Apple, como `ABCDE12345` . A identificação da equipa não é necessária.
 
   [Localizar o seu Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (abre o site da Apple) tem mais informações.
 
-- **Reino** (Credencial e Kerberos): Introduza o nome do seu reino de autenticação. O nome do reino deve ser `CONTOSO.COM`capitalizado, como. Tipicamente, o seu nome de reino é o mesmo que o seu nome de domínio DNS, mas em todas as maiúsculas.
+- **Reino** (Credencial e Kerberos): Introduza o nome do seu reino de autenticação. O nome do reino deve ser capitalizado, `CONTOSO.COM` como. Tipicamente, o seu nome de reino é o mesmo que o seu nome de domínio DNS, mas em todas as maiúsculas.
 
-- **Domínios** (Credential e Kerberos): Introduza o domínio ou nomes de anfitriões dos sites que podem autenticar através do SSO. Por exemplo, se `mysite.contoso.com`o `mysite` seu website é `contoso.com` , então é o nome do anfitrião, e é o nome de domínio. Quando os utilizadores se ligam a qualquer um destes sites, a extensão da aplicação trata do desafio de autenticação. Esta autenticação permite que os utilizadores utilizem o Face ID, touch ID ou Apple pincode/código de acesso para iniciar sessão.
+- **Domínios** (Credential e Kerberos): Introduza o domínio ou nomes de anfitriões dos sites que podem autenticar através do SSO. Por exemplo, se o seu website é `mysite.contoso.com` , então `mysite` é o nome do anfitrião, e `contoso.com` é o nome de domínio. Quando os utilizadores se ligam a qualquer um destes sites, a extensão da aplicação trata do desafio de autenticação. Esta autenticação permite que os utilizadores utilizem o Face ID, touch ID ou Apple pincode/código de acesso para iniciar sessão.
 
   - Todos os domínios da sua única extensão de aplicação de início de sessão Os perfis Intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações de início de sessão, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
   - Estes domínios não são sensíveis a casos.
@@ -331,14 +331,14 @@ Esta funcionalidade aplica-se a:
 - **URLs** (apenas redirecionamento): Introduza os prefixos URL dos seus fornecedores de identidade em nome de quem a extensão da aplicação de redirecionamento utiliza SSO. Quando os utilizadores são redirecionados para estes URLs, a extensão da aplicação SSO intervém e solicita sSO.
 
   - Todos os URLs nos seus perfis de extensão de aplicações intune devem ser únicos. Não é possível repetir um domínio em qualquer perfil de extensão de aplicações SSO, mesmo que esteja a utilizar diferentes tipos de extensões de aplicações SSO.
-  - Os URLs devem `http://` `https://`começar com ou .
+  - Os URLs devem começar com `http://` ou `https://` .
 
 - **Configuração adicional** (Microsoft Azure AD, Redirect e Credential): Introduza dados adicionais específicos de extensão para passar para a extensão da aplicação SSO:
-  - **Chave**: Introduza o nome do item `user name`que pretende adicionar, como .
+  - **Chave**: Introduza o nome do item que pretende adicionar, como `user name` .
   - **Tipo**: Introduza o tipo de dados. As opções são:
 
     - String
-    - Boolean: No valor `True` de `False` **configuração,** insira ou .
+    - Boolean: No valor de **configuração,** insira `True` ou `False` .
     - Integer: No valor de **configuração,** introduza um número.
 
   - **Valor**: Introduza os dados.
@@ -354,10 +354,10 @@ Esta funcionalidade aplica-se a:
   > - **Ative** esta definição se estiver a utilizar vários reinos. Define o valor do **Reino** que introduziu como o reino padrão.
   > - Se tiver apenas um reino, deixe-o **não configurado** (predefinido).
 
-- **Nome principal** (apenas Kerberos): Introduza o nome de utilizador do diretor kerberos. Não precisas de incluir o nome do reino. Por exemplo, `user@contoso.com` `user` em , é `contoso.com` o nome principal, e é o nome do reino.
+- **Nome principal** (apenas Kerberos): Introduza o nome de utilizador do diretor kerberos. Não precisas de incluir o nome do reino. Por exemplo, em `user@contoso.com` , é o nome `user` principal, e é o nome do `contoso.com` reino.
 
   > [!TIP]
-  > - Também pode utilizar variáveis no nome principal, entrando em suportes `{{ }}`encaracolados . Por exemplo, para mostrar o `Username: {{username}}`nome de utilizador, introduza . 
+  > - Também pode utilizar variáveis no nome principal, entrando em suportes encaracolados `{{ }}` . Por exemplo, para mostrar o nome de utilizador, introduza `Username: {{username}}` . 
   > - No entanto, tenha cuidado com a substituição variável porque as variáveis não são validadas na UI e são sensíveis ao caso. Certifique-se de introduzir a informação correta.
 
 - Código de **site de Diretório Ativo** (apenas Kerberos): Introduza o nome do site Ative Directory que a extensão Kerberos deve utilizar. Pode não precisar de alterar este valor, uma vez que a extensão Kerberos pode automaticamente encontrar o código do site do Ative Directory.
@@ -382,7 +382,7 @@ Pode experimentar um comportamento inesperado quando um perfil sem imagem é atr
 > [!TIP]
 > Para exibir diferentes imagens no ecrã de bloqueio e no ecrã principal, crie um perfil com a imagem do ecrã de bloqueio. Crie outro perfil com a imagem do ecrã principal. Atribua ambos os perfis aos grupos de utilizadores ou dispositivos iOS/iPadOS.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
 

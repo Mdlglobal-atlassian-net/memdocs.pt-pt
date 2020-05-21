@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 861d7f526711f2169e8fd03b3df09659440523b9
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693448"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556324"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -47,7 +47,6 @@ Ver as definições de linha de base do navegador Web do Microsoft Edge que são
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*Esta nova linha de base vai ser lançada para os inquilinos nas próximas semanas. Esperamos que todos os inquilinos tenham esta nova linha de base no início de maio.*
 Para entender o que mudou com esta versão da linha de base de versões anteriores, use a ação [compare baselines](../protect/security-baselines.md#compare-baseline-versions) que está disponível ao visualizar o painel *veras versões* para esta linha de base. Para entender o que mudou com esta versão da linha de base de versões anteriores, use a ação [compare baselines](../protect/security-baselines.md#compare-baseline-versions) que está disponível ao visualizar o painel *veras versões* para esta linha de base.
 
 ::: zone-end
@@ -307,7 +306,7 @@ Para entender o que mudou com esta versão da linha de base de versões anterior
 
 ::: zone-end
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Conheça as linhas de base de segurança](security-baselines.md)
 - [Evitar conflitos](security-baselines.md#avoid-conflicts)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 97566b4c14e0d5cb63847547822ce1908a33bb8a
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326946"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633377"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Como obter suporte para o Microsoft Intune
 
@@ -53,7 +53,7 @@ Quando você usa um inquilino recém-criado para Intune, é possível que *a Aju
 
 Os detalhes do erro incluem um ID de *sessão,* detalhes de *extensão,* e muito mais.
 
-Este problema ocorre quando não autenticou a sua nova conta de https://admin.microsoft.cominquilino sem o Centro de **Administração M365** em , ou o **portal Office 365** em https://portal.office.com. Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou visite, https://portal.office.come inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
+Este problema ocorre quando não autenticou a sua nova conta de inquilino sem o **Centro de Administração M365** em https://admin.microsoft.com , ou o portal Office **365** em https://portal.office.com . Para resolver este problema, selecione o link para *M365 Admin Center* na mensagem, ou https://portal.office.com visite, e inscreva-se. Após a autenticação em qualquer dos locais, *a Ajuda e suporte* para Intune torna-se acessível.
 
 **Ajuda de acesso e suporte:**
 
@@ -68,7 +68,7 @@ Este problema ocorre quando não autenticou a sua nova conta de https://admin.mi
 
   - De qualquer nó no centro de administração do Microsoft Endpoint Manager, selecione o **?** ícone no canto superior direito do portal e, em seguida, use o drop-down para selecionar o tipo de gestão com o que deseja ajuda. O centro de administração do Microsoft Endpoint Manager suporta os seguintes tipos de gestão, e deve selecionar aquele para quem deseja assistência, como intune:
 
-    - Configure Manager (inclui Desktop Analytics)
+    - Gestor de Configuração (inclui Desktop Analytics)
     - Intune
     - Cogestão  
 
@@ -82,7 +82,7 @@ Este problema ocorre quando não autenticou a sua nova conta de https://admin.mi
     > [!div class="mx-imgBorder"]
     > ![Confirme o seu tipo de gestão](./media/get-support/confirm-management-selection.png)
 
-  - Se abrir ajuda e suporte de **Troubleshooting + suporte** > **Ajuda e suporte,** não verá o tipo de gestão selecionado listado abaixo *Ajuda e suporte*.
+  - Se abrir ajuda e suporte de **Troubleshooting + suporte**  >  **Ajuda e suporte,** não verá o tipo de gestão selecionado listado abaixo *Ajuda e suporte*.
 
   - Se perfurar qualquer outro nó como *Dispositivos,* *Apps,* ou *Utilizadores,* e depois selecionar *Ajuda e suporte,* não terá a oportunidade de selecionar um tipo de gestão nem o tipo abaixo do ecrã *de ajuda e suporte*. Neste caso, *Intune* é assumido. Se não quer que o contexto seja Intune, use **o?** opção para que possa selecionar um tipo de gestão diferente.
 
@@ -94,7 +94,7 @@ Este problema ocorre quando não autenticou a sua nova conta de https://admin.mi
 
   No canto superior esquerdo existem três ícones que pode selecionar para abrir diferentes vidraças da janela *Need Help?* O painel da sua visualização é identificado pelo sublinhado.
 
-  Os clientes com um contrato de suporte **Premier** ou **Unificado** têm [opções adicionais](#premier-and-unified-support-customers) de ![apoio, e vêem um banner em Need *help?*](./media/get-support/premier-banner.png)
+  Os clientes com um contrato de suporte **Premier** ou **Unificado** têm [opções adicionais](#premier-and-unified-support-customers) de apoio, e vêem um banner em *Need help?* ![](./media/get-support/premier-banner.png)
 
   *Precisa de ajuda?* abre para o painel *Find Solutions.* No entanto, se tiver um caso de suporte ativo, a janela abre-se para o painel de pedidos do *Serviço* onde pode ver detalhes sobre os seus casos de suporte ativos e fechados.
 

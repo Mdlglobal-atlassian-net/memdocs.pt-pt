@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5eb1c69ed3a3a2b1671b6bec95a77cb627004ecf
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084036"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556086"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Utilizar definições personalizadas para dispositivos com o Windows Holographic for Business no Intune
 
@@ -35,38 +35,30 @@ Se estiver à procura de uma definição específica, lembre-se de que o [perfil
 
 Este artigo mostra-lhe como criar um perfil personalizado para dispositivos com o Windows Holographic for Business. Inclui também uma lista de definições OMA-URI recomendadas.
 
-## <a name="create-the-profile"></a>Criar o perfil
+## <a name="before-you-begin"></a>Antes de começar
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
-3. Introduza as seguintes definições:
+[Criar um perfil personalizado do Windows 10.](custom-settings-configure.md#create-the-profile)
 
-    - **Nome**: Introduza um nome descritivo para o perfil. Atribua nomes aos perfis de forma que possa identificá-los facilmente mais tarde. Por exemplo, um bom nome de perfil é **perfil personalizado Hololens.**
-    - **Descrição**: introduza uma descrição que lhe permita obter uma descrição geral da definição e outros detalhes importantes.
-    - **Plataforma**: Selecione **o Windows 10 e mais tarde**.
-    - **Tipo de perfil**: Selecione **Personalizado**.
+## <a name="custom-oma-uri-settings"></a>Definições oma-URI personalizadas
 
-4. Em **Definições OMA-URI Personalizadas**, selecione **Adicionar**. Introduza as seguintes definições:
+**Adicionar**: Introduza as seguintes definições:
 
-    - **Nome** – introduza um nome exclusivo para a definição OMA-URI para o ajudar a identificá-la na lista de definições.
-    - **Descrição**: introduza uma descrição que lhe permita obter uma descrição geral da definição e outros detalhes importantes.
-    - **OMA-URI** (sensível a maiúsculas e minúsculas): introduza a definição OMA-URI que pretende utilizar.
-    - Tipo de **dados:** Selecione o tipo de dados que utilizará para esta definição OMA-URI. As opções são:
+- **Nome** – introduza um nome exclusivo para a definição OMA-URI para o ajudar a identificá-la na lista de definições.
+- **Descrição**: introduza uma descrição que lhe permita obter uma descrição geral da definição e outros detalhes importantes.
+- **OMA-URI** (sensível a maiúsculas e minúsculas): introduza a definição OMA-URI que pretende utilizar.
+- Tipo de **dados:** Selecione o tipo de dados que utilizará para esta definição OMA-URI. As opções são:
 
-        - String
-        - Cadeia (ficheiro XML)
-        - Data e hora
-        - Número inteiro
-        - Vírgula flutuante
-        - Booleano
-        - Base64 (ficheiro)
+  - String
+  - Cadeia (ficheiro XML)
+  - Data e hora
+  - Número inteiro
+  - Vírgula flutuante
+  - Booleano
+  - Base64 (ficheiro)
 
-    - **Valor**: introduza o valor de dados que pretende associar à definição OMA-URI que introduziu. O valor depende do tipo de dados que selecionou. Por exemplo, se selecionar **Data e Hora,** selecione o valor de um apanhador de datas.
+- **Valor**: introduza o valor de dados que pretende associar à definição OMA-URI que introduziu. O valor depende do tipo de dados que selecionou. Por exemplo, se selecionar **Data e Hora,** selecione o valor de um apanhador de datas.
 
-    Depois de adicionar algumas definições, pode selecionar **Exportar**. A opção **Exportar** cria uma lista de todos os valores que adicionou num ficheiro de valores separados por vírgulas (.csv).
-
-5. Selecione **OK** para guardar as alterações. Continue a adicionar mais definições conforme necessário.
-6. Quando terminar, selecione **OK** > **Criar** para criar o perfil Intune. Quando estiver concluído, o seu perfil é mostrado na lista de perfis de configuração - **Configuração.**
+Depois de adicionar algumas definições, pode selecionar **Exportar**. A opção **Exportar** cria uma lista de todos os valores que adicionou num ficheiro de valores separados por vírgulas (.csv).
 
 ## <a name="recommended-custom-settings"></a>Definições personalizadas recomendadas
 
@@ -126,7 +118,7 @@ As seguintes definições são úteis para dispositivos com o Windows Holographi
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Tipo de dados|
 > |----|---|
-> |./Fornecedor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Importante**<br/>O artigo AppLocker CSP utiliza exemplos de XML de escape. Para configurar as definições com os perfis personalizados do Intune, tem de utilizar XML simples.|String<br/>Para mais informações, veja [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> |./Fornecedor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping* / *Grouping ApplicationType*/Policy<br/><br/>**Importante**<br/>O artigo AppLocker CSP utiliza exemplos de XML de escape. Para configurar as definições com os perfis personalizados do Intune, tem de utilizar XML simples.|String<br/>Para mais informações, veja [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ### <a name="deletionpolicy"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
@@ -149,7 +141,6 @@ As seguintes definições são úteis para dispositivos com o Windows Holographi
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Número inteiro<br/>O valor predefinido é 30.|
 
-
 ### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
@@ -170,8 +161,10 @@ Pode consultar a lista completa de todos os fornecedores de serviços de configu
 
 Além disso, o Intune não suporta todas as definições apresentadas em [CSPs supported in Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) (CSPs suportados no Windows Holographic). Para saber se o Intune suporta a definição que pretende, abra o artigo referente a essa definição. Cada página de definição mostra a respetiva operação suportada. Para trabalhar com o Intune, a definição tem de suportar as operações **Adicionar** ou **Substituir**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
+[Atribuir o perfil,](device-profile-assign.md) [e monitorizar o seu estado](device-profile-monitor.md).
 
 Criar um [perfil personalizado nos dispositivos windows 10](custom-settings-windows-10.md).
+
+Saiba mais sobre [perfis personalizados](custom-settings-configure.md) em Intune.

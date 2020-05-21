@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326637"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556290"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Windows Holographic para configurações de Negócios para gerir dispositivos partilhados usando Intune
 
@@ -36,24 +36,33 @@ Para obter mais informações sobre esta funcionalidade em Intune, consulte o ac
 
 ## <a name="before-your-begin"></a>Antes do seu início
 
-[Criar o perfil.](shared-user-device-settings.md)
+[Crie um perfil de configuração de dispositivo multiutilizador partilhado do Windows 10](shared-user-device-settings.md).
+
+Quando cria um perfil de configuração de dispositivo de utilizador partilhado do Windows 10, existem mais definições do que as listadas neste artigo. As definições deste artigo são suportadas no Windows Holographic para dispositivos Empresariais.
 
 ## <a name="shared-multi-user-device-settings"></a>Definições partilhadas de dispositivos multiutilizadores
 
 > [!NOTE]
 > Os dispositivos que executam o Windows Holographic para negócios, incluindo os Microsoft HoloLens, apenas suportam as definições de gestão da **Conta.** Se configurar qualquer uma das outras definições mostradas no Intune, incluindo o **modo de PC partilhado,** não tem qualquer impacto nestes dispositivos.
 
-- **Gestão de conta**: Definir para **permitir** a eliminação automática de contas locais criadas pelos hóspedes e contas em AD e Azure AD. Quando um utilizador assina fora do dispositivo, ou quando a manutenção do sistema é executado, estas contas são eliminadas. Quando ativado, também definido:
-  - **Eliminação da conta**: Escolha quando as contas são eliminadas: **No limiar**do espaço de armazenamento , no limiar do espaço de armazenamento e no **limiar inativo,** ou imediatamente após o **log-out**. Também insira:
+- **Gestão da conta**: Escolha se as contas são automaticamente eliminadas. As opções são:
+  - **Não configurado** (predefinido): Elimina automaticamente as contas locais criadas pelos hóspedes e as contas em AD e Azure AD. Quando um utilizador assina fora do dispositivo, ou quando a manutenção do sistema é executado, estas contas são eliminadas.
+
+    Introduza também:
+
+    - **Eliminação da conta**: Escolha quando as contas são eliminadas:
+      - **No limiar do espaço de armazenamento**
+      - **No limiar do espaço de armazenamento e limiar inativo**
+      - **Imediatamente após o log-out**
+
+    Introduza também:
+
     - **Comece a eliminar o limiar(%)**: Introduza uma percentagem (0-100) de espaço em disco. Quando o espaço total de disco/armazenamento cai abaixo do valor que introduz, as contas em cache são eliminadas. Elimina continuamente as contas para recuperar o espaço do disco. As contas que estão inativas há mais tempo são eliminadas primeiro.
     - **Parar de eliminar limiar(%)**: Insira uma percentagem (0-100) do espaço do disco. Quando o espaço total de disco/armazenamento corresponde ao valor que introduz, a apagar para.
 
-  Configurado para **Desativar** para manter as contas ad locais, AD e Azure criadas pelos hóspedes.
+  - **Desativação**: As contas ad locais, AD e Azure criadas pelos hóspedes permanecem no dispositivo e não são eliminadas.
 
-  > [!NOTE]
-  > Os dispositivos Microsoft HoloLens apenas suportam as definições de gestão da **Conta.**
-
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Atribua o perfil](device-profile-assign.md) e [monitorize o respetivo estado](device-profile-monitor.md).
-- Consulte as definições para [o Windows 10 e mais recente](shared-user-device-settings-windows.md).
+- Consulte as definições do dispositivo de utilizador partilhado para [o Windows 10 e mais recente](shared-user-device-settings-windows.md).

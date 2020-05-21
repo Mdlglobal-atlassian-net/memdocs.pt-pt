@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: e4c8ee2e25d14d6b39cea91255ed955eeb27174d
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771421"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690699"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Como personalizar as aplicações intune Company Portal, site do Portal da Empresa e app Intune
 
@@ -31,7 +31,7 @@ As aplicações do Portal da Empresa, o website do Portal da Empresa e a aplica�
 
 ## <a name="customizing-the-user-experience"></a>Personalizando a experiência do utilizador
 
-Ao personalizar a experiência do utilizador final, irá ajudar a fornecer uma experiência familiar e útil para os seus utilizadores finais. Para isso, navegue para o centro de [administração do Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), e selecione A**Personalização**da **Administração** > de Inquilinos, onde pode editar a política predefinida ou criar até 10 políticas direcionadas para o grupo. Estas configurações aplicar-se-ão às aplicações do Portal da Empresa, ao website do Portal da Empresa e à aplicação Intune no Android.
+Ao personalizar a experiência do utilizador final, irá ajudar a fornecer uma experiência familiar e útil para os seus utilizadores finais. Para isso, navegue para o centro de [administração do Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), e selecione A Personalização da **Administração**de  >  **Customization**Inquilinos, onde pode editar a política predefinida ou criar até 10 políticas direcionadas para o grupo. Estas configurações aplicar-se-ão às aplicações do Portal da Empresa, ao website do Portal da Empresa e à aplicação Intune no Android.
 
 ## <a name="branding"></a>Imagem corporativa
 
@@ -42,7 +42,7 @@ A tabela seguinte fornece os detalhes de personalização da marca para a experi
 | **Nome da organização** | Este nome é apresentado ao longo das mensagens na experiência do utilizador final. Pode ser programado para exibir também em cabeçalhos usando o Show na definição do **cabeçalho.** O comprimento máximo é de 40 caracteres. |
 | **Cor** | Escolha **standard** para escolher entre cinco cores padrão. Escolha **o Costume** para selecionar uma cor específica com base num valor de código hex. |
 | **Cor do tema** | Dete tede a cor do tema para mostrar através da experiência do utilizador final. Vamos automaticamente definir a cor do texto para preto ou branco para que seja mais visível em cima da sua cor temática selecionada. |
-| **Mostrar no cabeçalho** | Selecione se o cabeçalho nas experiências do utilizador final deve exibir o logótipo e o **nome da Empresa,** apenas o **logótipo da Empresa,** ou **apenas**o nome da Empresa . As caixas de pré-visualização abaixo só mostrarão os logótipos, não o nome.  |
+| **Mostrar no cabeçalho** | Selecione se o cabeçalho nas experiências do utilizador final deve exibir o logótipo e o nome da **Organização,** apenas o logótipo da **Organização,** ou **apenas**o nome da Organização . As caixas de pré-visualização abaixo só mostrarão os logótipos, não o nome.  |
 | **Carregar logotipo para fundo de cor tema** | Faça upload do logótipo que pretende mostrar em cima da cor temática selecionada. Para a melhor aparência, faça upload de um logotipo com um fundo transparente. Pode ver como isto ficará na caixa de pré-visualização abaixo da definição.<p>Tamanho máximo da imagem: 400 x 400 px<br>Tamanho máximo do ficheiro: 750KB<br>Tipo de ficheiro: PNG, JPG ou JPEG |
 | **Carregar logotipo para fundo branco ou claro** | Faça upload do logótipo que pretende mostrar em cima de fundos brancos ou de cor clara. Para a melhor aparência, faça upload de um logotipo com um fundo transparente. Pode ver como isto ficará num fundo branco na caixa de pré-visualização abaixo da definição.<p>Tamanho máximo da imagem: 400 x 400 px<br>Tamanho máximo do ficheiro: 750 KB<br>Tipo de ficheiro: PNG, JPG ou JPEG |
 | **Carregar imagem da marca** | Faça upload de uma imagem que reflita a marca da sua organização.<p><ul><li>Largura de imagem recomendada: Superior a 1125 px (necessário para ser pelo menos 650 px)</li><li>Tamanho máximo da imagem: 1,3 MB</li><li>Tipo de ficheiro: PNG, JPG ou JPEG</li><li>É exibido nestes locais:</li><ul><li>portal da empresa iOS/iPadOS: Imagem de fundo na página de perfil do utilizador.</li><li>Website do Portal da Empresa: Imagem de fundo na página de perfil do utilizador.</li><li>Aplicativo Android Intune: Na gaveta e como imagem de fundo na página de perfil do utilizador.</li></ul></ul> |
@@ -81,21 +81,22 @@ Insira as informações de apoio da sua organização, para que os colaboradores
 | Número de telefone | 20 | Este número permite que os utilizadores requisiem o suporte. |
 | Endereço de e-mail | 40 | Este endereço de e-mail é onde os utilizadores podem enviar e-mails para suporte. Tem de inserir um endereço de e-mail válido no formato `alias@domainname.com`. |
 | Nome do site | 40 | Este é o nome amigável que é exibido em alguns locais para o URL para o site de suporte. Se especificar um URL do site de suporte e nenhum nome amigável, então o URL em si é apresentado nas experiências do utilizador final.  |
-| URL do Site | 150 | O site de suporte que os utilizadores devem utilizar. O URL deve estar `https://www.contoso.com`no formato .  |
+| URL do Site | 150 | O site de suporte que os utilizadores devem utilizar. O URL deve estar no formato `https://www.contoso.com` .  |
 | Informações adicionais | 120 | Inclua quaisquer mensagens adicionais relacionadas com o suporte para os utilizadores aqui. |
 
 ## <a name="configuration"></a>Configuração
 
-A tabela seguinte fornece detalhes adicionais de configuração:
+Pode configurar a experiência do Portal da Empresa especificamente para inscrições, privacidade, notificações, fontes de aplicações e ações de self-service.
+
+### <a name="enrollment"></a>Inscrição
+
+O quadro seguinte fornece detalhes específicos de configuração da inscrição:
 
 | Nome do campo | Comprimento máximo | Mais informações |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URL de declaração de privacidade | 79 | Detete a declaração de privacidade da sua organização para aparecer quando os utilizadores clicarem em links de privacidade. Tem de introduzir um URL válido no formato `https://www.contoso.com`. |
-| Mensagem de privacidade no Portal da Empresa para iOS/iPadOS | 520 | Mantenha o Padrão ou detetete uma mensagem Personalizada para listar os itens que a sua organização pode ou não ver em dispositivos geridos para iOS/iPadOS. Pode usar o markdown para adicionar balas, arrojados, itálicos e ligações. |
-| Inscrição de dispositivos | N/D | Especifique se e como os utilizadores devem ser solicitados a inscreverem-se na gestão de dispositivos móveis. Detalhes abaixo. |
-| Notificação de propriedade do dispositivo | N/D | Envie uma notificação push aos utilizadores do Portal do Portal do Android e iOS quando o seu tipo de propriedade do dispositivo tiver sido alterado de pessoal para corporativo. Por predefinição, esta notificação push está programada para ser cancelada. Quando a propriedade do dispositivo é definida para a propriedade corporativa, intune tem um maior acesso ao dispositivo, que inclui o inventário completo da aplicação, rotação de chave FileVault, recuperação de númerode telefone e algumas ações remotas selecionadas. Para mais informações, consulte alterar a [propriedade do dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Inscrição de dispositivos | N/D | Especifique se e como os utilizadores devem ser solicitados a inscreverem-se na gestão de dispositivos móveis. Para mais informações, consulte as opções de definição de [inscrição do Dispositivo.](../apps/company-portal-app.md#device-enrollment-setting-options) |
 
-### <a name="device-enrollment-setting-options"></a>Opções de definição de inscrição do dispositivo
+#### <a name="device-enrollment-setting-options"></a>Opções de definição de inscrição do dispositivo
 
 > [!NOTE]
 > O suporte para a definição de inscrição do dispositivo requer que os utilizadores finais tenham estas versões do Portal da Empresa:
@@ -110,11 +111,51 @@ A tabela seguinte fornece detalhes adicionais de configuração:
 
 <sup>(1)</sup> **Problema conhecido:** Se definir aplicações para exigir a inscrição para instalação e também definir a inscrição do dispositivo para "Indisponível", a aplicação Portal da Empresa no Android continuará a orientar os utilizadores a inscreverem-se. Isto será removido em breve.
 
-> [!NOTE]
-> Se estiver a utilizar o Azure Government, os registos de aplicações estão disponíveis para o utilizador final decidir como pretende partilhar ao iniciar o processo para obter ajuda com um problema. No entanto, caso não esteja a utilizar o Governo do Azure, o Portal da Empresa enviará registos de aplicações diretamente para a Microsoft quando o utilizador iniciar o processo para obter ajuda com um problema. O envio dos registos de aplicações para a Microsoft irá facilitar a resolução dos problemas.
+### <a name="privacy"></a>Privacidade
+
+A tabela seguinte fornece detalhes específicos de configuração de privacidade:
+
+| Nome do campo | Comprimento máximo | Mais informações |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URL de declaração de privacidade | 79 | Detete a declaração de privacidade da sua organização para aparecer quando os utilizadores clicarem em links de privacidade. Tem de introduzir um URL válido no formato `https://www.contoso.com`. |
+| Mensagem de privacidade no Portal da Empresa para iOS/iPadOS | 520 | Mantenha o **Padrão** ou detetete uma mensagem **Personalizada** para listar os itens que a sua organização não consegue ver em dispositivos geridos para iOS/iPadOS. Pode usar o markdown para adicionar balas, arrojados, itálicos e ligações. Os utilizadores também verão uma lista de coisas que a sua organização pode ver e fazer, mas essa lista é automaticamente gerada por Intune e não personalizável. |
+
+### <a name="device-ownership-notification"></a>Notificação de propriedade do dispositivo
+
+O quadro seguinte fornece detalhes específicos de configuração de notificação:
+
+| Nome do campo | Comprimento máximo | Mais informações |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Envie uma notificação push aos utilizadores quando o seu tipo de propriedade do dispositivo muda de pessoal para corporativo (apenas Android e iOS/iPadOS) | N/D | Envie uma notificação push aos utilizadores do Portal do Portal do Android e iOS quando o seu tipo de propriedade do dispositivo tiver sido alterado de pessoal para corporativo. Por predefinição, esta notificação push está programada para ser cancelada. Quando a propriedade do dispositivo é definida para a propriedade corporativa, intune tem um maior acesso ao dispositivo, que inclui o inventário completo da aplicação, rotação de chave FileVault, recuperação de númerode telefone e algumas ações remotas selecionadas. Para mais informações, consulte alterar a [propriedade do dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+
+### <a name="app-sources"></a>Fontes de aplicativos
+
+Pode escolher quais fontes adicionais de aplicações serão mostradas no Portal da Empresa. A tabela seguinte fornece detalhes específicos de configuração da fonte da aplicação:
+
+| Nome do campo | Comprimento máximo | Mais informações |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Aplicações empresariais azure AD | N/D | Selecione **Ocultar** ou **Mostrar** para exibir **aplicações Azure AD Enterprise** no Portal da Empresa para cada utilizador final. Para mais informações, consulte as opções de [definição de fonte da App](../apps/company-portal-app.md#app-source-setting-options). |
+| Aplicações online do escritório | N/D | Selecione **Ocultar** ou **Mostrar** para exibir **aplicações Do Office Online** no Portal da Empresa para cada utilizador final. Para mais informações, consulte as opções de [definição de fonte da App](../apps/company-portal-app.md#app-source-setting-options). |
+
+#### <a name="app-source-setting-options"></a>Opções de definição de fonte de aplicativo
 
 > [!NOTE]
-> De acordo com a política da Microsoft e da Apple, não vendemos quaisquer dados recolhidos pelo nosso serviço a terceiros por qualquer motivo.
+> O website do Portal da Empresa irá inicialmente apoiar a exibição de aplicações de outros serviços da Microsoft.
+
+Pode ocultar ou mostrar aplicações da **Azure AD Enterprise** e **aplicações Office Online** no Portal da Empresa para cada utilizador final. **O show** fará com que o Portal da Empresa exiba todo o catálogo de aplicações a partir do ou serviço s da Microsoft escolhido satribuído ao utilizador. As **aplicações da Azure AD Enterprise** são registadas e atribuídas através do [portal Azure.](https://portal.azure.com) **As aplicações Office Online** são atribuídas utilizando os controlos de licenciamento disponíveis no [Centro de Administração M365.](https://admin.microsoft.com) No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione a personalização da **administração do Inquilino**para encontrar esta  >  **Customization** definição de configuração. Por predefinição, cada fonte adicional de aplicação será definida para **Ocultar**. 
+
+### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Personalização de ações de self-service do utilizador para o Portal da Empresa
+
+Pode personalizar as ações de dispositivos self-service disponíveis que são mostradas aos utilizadores finais na aplicação e website do Portal da Empresa. Para ajudar a prevenir as ações não intencionais do dispositivo, pode configurar as definições para a aplicação Portal da Empresa selecionando a Personalização **da**  >  **Administração**de Inquilinos . 
+
+Estão disponíveis as seguintes ações:
+- Ocultar o botão **Remover** em dispositivos windows corporativos.
+- Ocultar o botão **Reset** em dispositivos windows corporativos.
+- Ocultar o botão **Remover** em dispositivos corporativos iOS/iPadOS.
+- Ocultar o botão **Reset** em dispositivos corporativos iOS/iPadOS.
+
+> [!NOTE]
+> Estas ações podem ser usadas para restringir as ações do dispositivo na aplicação e website do Portal da Empresa e não implementar quaisquer políticas de restrição de dispositivos. Para restringir os utilizadores de realizar em definições a reposição da fábrica ou a remoção do MDM, tem de configurar as políticas de restrição do dispositivo. 
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Empresa Portal derivado de credenciais para dispositivos iOS/iPadOS
 
@@ -138,7 +179,7 @@ Os atalhos de teclado seguintes estão disponíveis na aplicação Portal da Emp
 | Área | Descrição | Atalho de teclado |
 |:------------------:|:--------------:|:-----------------:|
 | Menu de navegação | Navegação | Alt+M |
-|  | Casa | Alt+H |
+|  | Home Page | Alt+H |
 |  | Todas as aplicações | Alt+A |
 |  | Aplicações instaladas | Alt+I |
 |  | Enviar comentários | Alt+F |
@@ -159,7 +200,9 @@ Os utilizadores finais também poderão ver os atalhos disponíveis na aplicaç�
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Ações de dispositivo de self-service do utilizador a partir do Portal da Empresa
 
-Os utilizadores podem realizar ações nos seus dispositivos locais ou remotos através da aplicação ou website do Portal da Empresa ou da aplicação Intune no Android. As ações que um utilizador pode executar variam em função da plataforma e configuração do dispositivo. Em todos os casos, as ações do dispositivo remoto só podem ser executadas pelo Utilizador Primário do dispositivo.
+Os utilizadores podem realizar ações nos seus dispositivos locais ou remotos através da aplicação Portal da Empresa, do website do Portal da Empresa ou da aplicação Intune no Android. As ações que um utilizador pode executar variam em função da plataforma e configuração do dispositivo. Em todos os casos, as ações do dispositivo remoto só podem ser executadas pelo Utilizador Primário do dispositivo.  
+
+As ações disponíveis do dispositivo self-service incluem:
 
 - **Aposentador** – Remove o dispositivo da Intune Management. Na aplicação e website do portal da empresa, isto mostra como **Remover**.
 - **Limpeza** – Esta ação inicia um reset do dispositivo. No portal da empresa este é mostrado como **Reset**, ou **Reset de Fábrica** na Aplicação portal iOS/iPadOS Company.
@@ -168,6 +211,8 @@ Os utilizadores podem realizar ações nos seus dispositivos locais ou remotos a
 - **Bloqueio remoto** – Este bloqueia o dispositivo, exigindo um PIN para desbloqueá-lo.
 - **Redefinir a código de acesso** – Esta ação é utilizada para redefinir a senha do dispositivo. Nos dispositivos iOS/iPadOS, a senha será removida e o utilizador final será obrigado a introduzir um novo código nas definições. Em dispositivos Android suportados, uma nova senha é gerada pela Intune e exibida temporariamente no Portal da Empresa.
 - **Recuperação chave** – Esta ação é usada para recuperar uma chave de recuperação pessoal para dispositivos macOS encriptados a partir do website do Portal da Empresa. 
+
+Para personalizar as ações de self-service do utilizador disponíveis, consulte a personalização das [ações de self-service](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal)do utilizador para o Portal da Empresa .
 
 ### <a name="self-service-actions"></a>Ações de Self-Service
 
@@ -192,6 +237,14 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 <sup>(7)</sup> **A reforma** e a **limpeza** não estão disponíveis nos cenários do Proprietário do Dispositivo Empresarial Android (COPE, COBO, COSU).<br>
 <sup>(8)</sup> O código de acesso de **reset** não é suportado nos dispositivos iOS/iPadOS inscritos pelo utilizador.
 
-## <a name="next-steps"></a>Passos seguintes
+### <a name="app-logs"></a>Registos de aplicativos
 
-- [Adicionar aplicativos](apps-add.md)
+Se estiver a utilizar o Azure Government, os registos de aplicações estão disponíveis para o utilizador final decidir como pretende partilhar ao iniciar o processo para obter ajuda com um problema. No entanto, caso não esteja a utilizar o Governo do Azure, o Portal da Empresa enviará registos de aplicações diretamente para a Microsoft quando o utilizador iniciar o processo para obter ajuda com um problema. O envio dos registos de aplicações para a Microsoft irá facilitar a resolução dos problemas.
+
+> [!NOTE]
+> De acordo com a política da Microsoft e da Apple, não vendemos quaisquer dados recolhidos pelo nosso serviço a terceiros por qualquer motivo.
+
+## <a name="next-steps"></a>Próximos passos
+
+- [Configure o logótipo da sua organização e a cor da marca para novas páginas de separadores no Microsoft Edge](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
+- [Adicionar aplicações](apps-add.md)
