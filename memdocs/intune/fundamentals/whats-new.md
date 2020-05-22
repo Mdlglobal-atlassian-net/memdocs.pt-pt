@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb23c67fa4a750728987122a44cbcf7a6f04df05
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709541"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791849"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -71,7 +71,7 @@ As aplicações que forem publicadas como Programa de Compra de Volume (VPP) ser
 
 
 #### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Entrega unificada de aplicações Azure AD Enterprise e Office Online no Portal da Empresa<!-- 4404429   -->
-*Esta funcionalidade está em andamento e será lançada ao longo das próximas semanas. Pode ver os controlos de funcionalidade na interface do utilizador, mas as definições não produzirão efeito até algumas semanas.*
+*Esta funcionalidade foi adiada.*
 No painel de **personalização** de Intune, pode selecionar para **Ocultar** ou **mostrar** tanto **as aplicações Da Azure AD Enterprise** como as **aplicações Office Online** no Portal da Empresa. Cada utilizador final verá todo o seu catálogo de aplicações a partir do serviço da Microsoft escolhido. Por predefinição, cada fonte adicional de aplicação será definida para **Ocultar**. Esta funcionalidade entrará primeiro em vigor no site do Portal da Empresa, com suporte nos Portais windows, iOS/iPadOS e macOS Company. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione a personalização da **administração do Inquilino**para encontrar esta  >  **Customization** definição de configuração. Para obter informações relacionadas, consulte [como personalizar as aplicações intune Company Portal, website do Portal da Empresa e aplicação Intune](../apps/company-portal-app.md).
 
 #### <a name="android-company-portal-user-experience---5736084----"></a>Experiência de utilizador do Portal da Empresa Android<!-- 5736084  -->
@@ -169,6 +169,7 @@ Quando os utilizadores selecionam a notificação push no seu dispositivo, o Por
 #### <a name="endpoint-security-content-and-new-features---5720009-5892558-7130145-5653324-7140602----"></a>Conteúdo de segurança endpoint e novas funcionalidades<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
 
 A documentação para Intune [Endpoint Security](../protect/endpoint-security.md) já está disponível. No nó de segurança final do centro de administração do Microsoft Endpoint Manager pode:
+
 - Crie e implemente políticas de segurança focadas nos seus dispositivos geridos
 - Configure a integração com a Microsoft Defender Advanced Threat Protection e gereas tarefas de segurança ajudam a remediar os riscos para dispositivos de risco identificados pela sua equipa ATP
 - Configurar as linhas de base de segurança
@@ -182,13 +183,15 @@ Além da disponibilidade de conteúdos, os seguintes são novidade para a Endpoi
   - Numa nova *pré-visualização pública,* pode utilizar o perfil de [ **regras do Microsoft Defender Firewall** ](../protect/endpoint-security-firewall-policy.md#firewall-profiles) para a política de Firewall do Windows 10. A cada instância deste perfil pode configurar até 150 regras de firewall para complementar os perfis do Microsoft Defender Firewall. 
   - A política de segurança da proteção de contas permanece em pré-visualização. 
 
-- Agora pode [**criar uma duplicação de políticas de segurança**](../protect/endpoint-security-policy.md#duplicate-a-policy)de ponto final. Os duplicados mantêm a configuração de configurações da política original, mas obtêm um novo nome, e não incluem quaisquer atribuições a grupos, até que as edite para as adicionar.  
+- Agora pode [**criar uma duplicação de políticas de segurança**](../protect/endpoint-security-policy.md#duplicate-a-policy)de ponto final. Os duplicados mantêm a configuração de configurações da política original, mas obtêm um novo nome. Em seguida, a nova instância política não inclui quaisquer atribuições a grupos até editar a nova instância política para adicioná-las. Pode duplicar as seguintes políticas:
   - Antivírus
   - Disk encryption (Encriptação de discos)
   - Firewall
   - Endpoint detection and response (Deteção e resposta de pontos finais)
   - Attack surface reduction (Redução da superfície de ataque)
   - Account protection (Proteção de contas)
+
+- Agora pode [**criar uma duplicação de uma linha de base de segurança.**](../protect/security-baselines.md#duplicate-a-security-baseline) Os duplicados mantêm a configuração das configurações da linha de base original, mas obtêm um novo nome. A nova instância de base não inclui quaisquer atribuições a grupos até editar a nova instância de base para adicioná-las.
 
 - Está disponível um novo relatório para a política antivírus de segurança final: [**Windows 10 pontos finais pouco saudáveis**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Este relatório é uma nova página que pode selecionar ao visualizar a sua política de antivírus de segurança final. O relatório apresenta o estado antivírus dos seus dispositivos Windows 10 geridos pelo MDM.  
 

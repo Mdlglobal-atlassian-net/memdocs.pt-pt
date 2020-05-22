@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 33e4f36afce9b8a2f296697623cd7031edf0fa74
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624921"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791789"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Mover dispositivos Android de administrador de dispositivo para gestão de perfis de trabalho
 
@@ -45,28 +45,28 @@ Quando os utilizadores virem que estão fora de conformidade por esta razão, po
 
 ## <a name="create-device-compliance-policy"></a>Criar a política de conformidade do dispositivo
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione As**Compliance policies** > **políticas** > de conformidade dos **dispositivos** > criam políticas de**criação de políticas**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione As políticas de conformidade dos **dispositivos**criam políticas de  >  **Compliance policies**  >  **Policies**  >  **criação de políticas**.
 
     ![Criar política](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. Na página **Criar uma página de política,** definir **Plataforma** para **administrador** > de dispositivos Android**Criar**.
-3. Na página **Basics,** digite o **nome** e **a descrição** > **seguinte**.
+2. Na página **Criar uma página de política,** definir **Plataforma** para administrador **de dispositivos Android**  >  **Criar**.
+3. Na página **Basics,** digite o **nome** e **a descrição**  >  **seguinte**.
 
     ![Página básica](./media/android-move-device-admin-work-profile/basics.png)
     
-4. Na página de **definições** de Conformidade, na secção **Saúde** do Dispositivo, delineie **os dispositivos Block geridos com o administrador** do dispositivo para **Yes** > **Next**.
+4. Na página de definições de **Conformidade,** na secção Saúde do **Dispositivo,** delineie **os dispositivos Block geridos com o administrador** do dispositivo para **Yes**  >  **Next**.
 
     ![Dispositivos de bloco](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Na página **Locais,** pode adicionar localizações se quiser > **Seguinte**.
-6. Nas **Ações de incumprimento,** pode definir o email enviar para fim da ação **do utilizador.**
 
-    ![Enviar e-mail](./media/android-move-device-admin-work-profile/send-email.png)
+6. Nas **Ações de incumprimento,** pode configurar as [ações disponíveis para o incumprimento](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) para personalizar a experiência final do utilizador para este fluxo. Estas são algumas ações a considerar.
 
-
-    No e-mail, pode incluir o URL abaixo nas suas mensagens para os utilizadores. O URL lançará o Portal da Empresa Android para a página de definições do **dispositivo Update.** Esta página começa o seu fluxo para passar para a gestão de perfis de trabalho.
+- **Marque**o dispositivo sem conformidade : Por defeito, esta ação está definida para zero (0) dias, marcando os dispositivos como não conformes imediatamente. A alteração desta situação para um maior número de dias proporciona aos utilizadores um período de carência no qual podem ver o fluxo para passar para a gestão do perfil de trabalho sem ainda serem marcados como incompatíveis. Por exemplo, defini-lo para 14 dias daria aos utilizadores duas semanas para passarem de administrador de dispositivo para gestão de perfil de trabalho sem o risco de perder o acesso aos recursos.
+- **Envie notificação push ao utilizador final**: Configure isto para enviar notificações push para os dispositivos de administrador do dispositivo. Quando um utilizador seleciona a notificação, lançará o Portal da Empresa Android para a página de **definições** do dispositivo Update onde pode iniciar o fluxo para passar para a gestão de perfis de trabalho.
+- **Envie e-mail para o utilizador final**: Configure isto para enviar e-mails aos utilizadores sobre a mudança do administrador do dispositivo para a gestão do perfil de trabalho. No e-mail, pode incluir o URL abaixo , que quando selecionado, lançará o Portal da Empresa Android para a página de definições do dispositivo Update onde podem iniciar o fluxo para passar para a gestão de perfis de trabalho.
     - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Para o governo dos EUA, `https://portal.manage.microsoft.us/UpdateSettings.aspx`pode utilizar este link: .
+    - Para o governo dos EUA, pode utilizar este link: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
     > [!NOTE]
     > - Claro que pode utilizar hipertexto simesmo para os links na sua comunicação com os utilizadores. No entanto, não utilize os encurtadores de URL porque as ligações podem não funcionar se alteradas dessa forma.
@@ -104,5 +104,5 @@ Os utilizadores podem ver uma página de erro no navegador quando tocarem no URL
 - O dispositivo Android utiliza o Android 6 ou mais cedo. 
 
 ## <a name="next-steps"></a>Passos seguintes
-[Ver o fluxo](../user-help/move-to-new-device-management-setup.md)
-final do utilizador Gerir dispositivos de perfil de[trabalho Android com Intune](android-enterprise-overview.md)
+[Ver o fluxo](../user-help/move-to-new-device-management-setup.md) 
+ de utilizador final [Gerir dispositivos](android-enterprise-overview.md) de perfil de trabalho Android com Intune

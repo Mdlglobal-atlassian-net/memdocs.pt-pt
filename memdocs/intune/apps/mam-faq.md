@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 73d34424d9263378e92f1c2c888f6b79bb30ce55
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183019"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764310"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Perguntas mais frequentes sobre a MAM e a proteção de aplicações
 
@@ -78,7 +78,7 @@ Qualquer aplicação que tenha sido integrada com o [SDK da Aplicação Intune](
 
 A equipa de desenvolvimento intune SDK testa e mantém ativamente o suporte para aplicações construídas com as plataformas nativas android, iOS/iPadOS (Obj-C, Swift), Xamarin e Xamarin.Forms. Embora alguns clientes tenham tido sucesso com a integração do Intune SDK com outras plataformas, como o React Native e o NativeScript, não fornecemos orientação explícita ou plugins para desenvolvedores de aplicações usando qualquer outra coisa que não as nossas plataformas suportadas.
 
-**O SDK da APLICAÇÃO Intune suporta a Biblioteca de Autenticação da Microsoft (MSAL) ou contas de redes sociais?**<br></br>
+**O Intune APP SDK suporta a Microsoft Authentication Library (MSAL)?**<br></br>
 O Intune App SDK pode utilizar a Biblioteca de Autenticação de DirectórioActivo Azure ou a Biblioteca de Autenticação da Microsoft para a sua autenticação e cenários de lançamento condicional. Conta ainda com a ADAL/MSAL para registar a identidade do utilizador junto do serviço MAM para gestão sem cenários de inscrição de dispositivos.
 
 **Quais são os requisitos adicionais para utilizar a [aplicação Outlook para dispositivos móveis](https://products.office.com/outlook)?**
@@ -219,7 +219,7 @@ As políticas de proteção de aplicações do Intune para acesso serão aplicad
 Ao lidar com diferentes tipos de configurações, um requisito de versão SDK intune app teria precedência, então um requisito de versão de aplicação, seguido pelo requisito da versão do sistema operativo iOS/iPadOS. Em seguida, são verificados os avisos de todos os tipos de definições na mesma ordem. Recomendamos que o requisito de versão do SDK da Aplicação Intune só seja configurado após receber orientações sobre cenários de bloqueio essenciais por parte da equipa de produto do Intune.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 - [Implementar o plano do Intune](../fundamentals/planning-guide-onboarding.md)
 - [Teste e validação do Intune](../fundamentals/planning-guide-test-validation.md)
 - [Definições de políticas de gestão de aplicações móveis para Android no Microsoft Intune](../apps/app-protection-policy-settings-android.md)

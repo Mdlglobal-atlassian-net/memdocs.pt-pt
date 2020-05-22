@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 578c1c5dc3b6eff9508f7b252fa99a0f8bfcd9c5
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693423"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791792"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Utilize linhas de base de segurança para configurar dispositivos Windows 10 em Intune
 
@@ -54,8 +54,8 @@ As seguintes instâncias de base de segurança estão disponíveis para utiliza�
   - [Base de Segurança do MDM para maio de 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Pré-visualização: Base de Segurança do MDM para outubro de 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
-- **Linha de base**
-  ATP microsoft Defender *(Para utilizar esta linha de base o seu ambiente deve satisfazer os pré-requisitos para a utilização de [Proteção avançada de ameaças do Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
+- **Linha de base** 
+   ATP do Microsoft Defender *(Para utilizar esta linha de base, o seu ambiente deve satisfazer os pré-requisitos para a utilização da [Proteção avançada de ameaças do Microsoft Defender)](advanced-threat-protection.md#prerequisites)*.
   - [Linha de base ATP microsoft Defender para abril de 2020 - versão 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Linha de base ATP microsoft Defender para março de 2020 - versão 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
@@ -68,23 +68,27 @@ As seguintes instâncias de base de segurança estão disponíveis para utiliza�
 
 Pode continuar a utilizar e editar perfis que criou anteriormente com base num modelo de pré-visualização, mesmo quando esse modelo de pré-visualização já não está disponível para criar novos perfis.
 
-Quando estiver pronto para passar para uma versão mais recente de uma linha de base que utiliza, consulte [alterar a versão base para um perfil](#change-the-baseline-version-for-a-profile) neste artigo. 
+Quando estiver pronto para avançar para uma versão mais recente de uma linha de base que utiliza, consulte [alterar a versão base para um perfil](#change-the-baseline-version-for-a-profile) neste artigo. 
 
 ## <a name="about-baseline-versions-and-instances"></a>Sobre versões e instâncias de base
 
 Cada nova versão de uma linha de base pode adicionar ou remover definições ou introduzir outras alterações. Por exemplo, à medida que as novas definições do Windows 10 ficam disponíveis com novas versões do Windows 10, o MDM Security Baseline poderá receber uma nova versão que inclui as definições mais recentes.
 
-No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)sob as**linhas** de segurança >  **endpoint,** verá uma lista das linhas de base disponíveis. A lista inclui o nome do modelo de base, quantos perfis tem que usam esse tipo de linha de base, quantas instâncias separadas (versões) do tipo de linha de base estão disponíveis, e uma última data *publicada* que identifica quando a versão mais recente do modelo de base ficou disponível.
+No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)sob as linhas de **segurança endpoint,** verá uma lista das linhas de base  >  **Security baselines** disponíveis. A lista inclui:
+- o nome do modelo de linha de base
+- quantos perfis você tem que usar que tipo de linha de base
+- quantas instâncias separadas (versões) do tipo de linha de base estão disponíveis
+- uma última data *publicada* que identifica quando a versão mais recente do modelo de base ficou disponível
 
-Para ver mais informações sobre as versões de base que utiliza, selecione um azulejo de base para abrir o seu painel de *visão geral* e, em seguida, selecione **Versões**. Intune apresenta detalhes sobre as versões dessa linha de base que estão a ser utilizadas pelos seus perfis, incluindo a versão base mais recente e atual.  Pode selecionar uma única versão para visualizar detalhes mais profundos sobre os perfis que utilizam essa versão.
+Para ver mais informações sobre as versões de base que utiliza, selecione uma linha de base para abrir o seu painel de *visão geral* e, em seguida, selecione **Versões**. Intune apresenta detalhes sobre as versões dessa linha de base que estão a ser utilizadas pelos seus perfis. Os detalhes incluem a versão base mais recente e atual. Pode selecionar uma única versão para visualizar detalhes mais profundos sobre os perfis que utilizam essa versão.
 
-Pode optar por [alterar a versão](#change-the-baseline-version-for-a-profile) de uma linha de base que está em uso com um determinado perfil. Isto significa que quando uma nova versão sai, não é preciso criar um novo perfil de base para aproveitar. Em vez disso, quando estiver pronto, pode selecionar um perfil de base e, em seguida, usar a opção incorporada para mudar a versão por exemplo para esse perfil para um novo.
+Pode optar por [alterar a versão](#change-the-baseline-version-for-a-profile) de uma linha de base que está em uso com um determinado perfil. Quando muda a versão, não precisa de criar um novo perfil de base para tirar partido das versões atualizadas. Em vez disso, pode selecionar um perfil de base e utilizar a opção incorporada para alterar a versão por exemplo desse perfil para um novo.
 
 ### <a name="compare-baseline-versions"></a>Comparar versões de base
 
 No painel **versões** para uma linha de base de segurança está uma lista de cada versão desta linha de base que implementou. Esta lista também inclui a versão mais recente e ativa da linha de base. Quando cria um novo *perfil*de base de segurança, o perfil utiliza a versão mais recente da linha de base de segurança.  Pode continuar a utilizar e editar perfis que criou anteriormente que utilizam uma versão de base anterior, incluindo linhas de base criadas utilizando uma versão Preview.
 
-Para entender o que mudou entre versões, selecione as caixas de verificação para duas versões diferentes e, em seguida, selecione **Compare linhas** de base para descarregar um ficheiro CSV que detalha essas diferenças. 
+Para entender o que mudou entre versões, selecione as caixas de verificação para duas versões diferentes e, em seguida, selecione **Compare as linhas**de base . Em seguida, é-lhe pedido que descarregue um ficheiro CSV que detalha essas diferenças.
 
 O download identifica cada definição nas duas versões de base, e observa se esta definição mudou (*não igual*) ou se permaneceu a mesma *(igual).* Os detalhes também incluem o valor padrão para a definição por versão, e se a definição foi *adicionada* à versão mais recente, ou *removida* da versão mais recente.
 
@@ -122,7 +126,7 @@ As tarefas comuns quando trabalha com linhas de base de segurança incluem:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione**bases** de segurança de **endpoint** > para ver a lista de linhas de base disponíveis.
+2. Selecione bases de segurança de **endpoint**  >  **Security baselines** para ver a lista de linhas de base disponíveis.
 
    ![Selecione uma linha de base de segurança para configurar](./media/security-baselines/available-baselines.png)
 
@@ -159,7 +163,7 @@ As tarefas comuns quando trabalha com linhas de base de segurança incluem:
 
    ![Rever a linha de base](./media/security-baselines/review.png)
 
-9. Depois de criar um perfil, edite-o indo para as linhas de > **segurança**de **segurança endpoint,** selecione o tipo de linha de base que configurae e, em seguida, selecione **Perfis**. Selecione o perfil na lista de perfis disponíveis e, em seguida, selecione **Propriedades**. Pode editar as definições de todos os separadores de configuração disponíveis e selecionar **Rever + guardar** para comprometer as suas alterações.
+9. Depois de criar um perfil, edite-o indo para as linhas de segurança de **segurança endpoint,**  >  **Security baselines**selecione o tipo de linha de base que configurae e, em seguida, selecione **Perfis**. Selecione o perfil na lista de perfis disponíveis e, em seguida, selecione **Propriedades**. Pode editar as definições de todos os separadores de configuração disponíveis e selecionar **Rever + guardar** para comprometer as suas alterações.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Alterar a versão de base para um perfil
 
@@ -181,7 +185,7 @@ Após a poupança, após a conversão estar concluída, a linha de base é imedi
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Selecione**as linhas**de segurança de **endpoint** > e, em seguida, selecione o azulejo para o tipo de linha de base que tem o perfil que pretende alterar.
+2. Selecione as linhas de segurança de **endpoint**e, em  >  **Security baselines**seguida, selecione o azulejo para o tipo de linha de base que tem o perfil que pretende alterar.
 
 3. Em seguida, selecione **Perfis**, e, em seguida, selecione a caixa de verificação para o perfil que pretende editar e, em seguida, selecione **Versão Change**.
 
@@ -206,6 +210,36 @@ Após a poupança, após a conversão estar concluída, a linha de base é imedi
 Quando uma definição de base de segurança já não se aplica a um dispositivo, ou as definições numa linha de base são definidas para *Não configuradas,* essas definições num dispositivo não revertem para uma configuração pré-gerida. Em vez disso, as configurações anteriormente geridas no dispositivo mantêm as suas últimas configurações recebidas da linha de base até que algum outro processo atualize essas definições no dispositivo.
 
 Outros processos que poderão alterar posteriormente as definições no dispositivo incluem uma linha de base de segurança diferente ou nova, perfil de configuração do dispositivo, configurações de Política de Grupo ou edição manual da definição no dispositivo.
+
+### <a name="duplicate-a-security-baseline"></a>Duplicar uma linha de base de segurança
+
+Pode criar duplicados das suas linhas de base de segurança. Um cenário quando duplicar uma linha de base é útil é quando se pretende atribuir uma linha de base semelhante, mas distinta, a um subconjunto de dispositivos. Ao criar um duplicado, não precisará recriar manualmente toda a linha de base. Em vez disso, pode duplicar qualquer uma das suas linhas de base atuais e, em seguida, introduzir apenas as alterações que a nova instância requer. Só pode alterar uma definição específica e o grupo a que a linha de base é atribuída.
+
+Quando criar um duplicado, dará à cópia um novo nome. A cópia é feita com as mesmas configurações de definição e etiquetas de âmbito que a original, mas não terá nenhuma atribuição. Terá de editar a nova linha de base para adicionar atribuições.
+
+Todas as bases de segurança suportam a criação de uma duplicação.
+
+Depois de duplicar uma linha de base, reveja e edite a nova instância para fazer alterações na sua configuração.
+
+#### <a name="to-duplicate-a-baseline"></a>Para duplicar uma linha de base
+
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vá para as linhas de segurança de **endpoint,**  >  **Security baselines**selecione o tipo de linha de base que pretende duplicar e, em seguida, selecione **Perfis**.
+3. Clique à direita no perfil que pretende duplicar e selecionar **Duplicate,** ou selecione a elipse **(...**) à direita da linha de base e selecione **Duplicato**.
+4. Forneça um **novo nome** para a linha de base e, em seguida, selecione **Guardar**.
+
+Depois de um *Refresh,* o novo perfil de base aparece no centro de administração.
+
+#### <a name="to-edit-a-baseline"></a>Para editar uma linha de base
+
+1. Selecione a linha de base e, em seguida, selecione **Propriedades**.
+2. Selecione **Definições** para expandir a lista de categorias de definições na linha de base. Não é possível modificar as definições desta vista, mas pode rever a forma como estão configuradas.
+3. Para modificar as definições, selecione **Editar** para cada categoria onde pretende fazer uma alteração:
+   - Noções básicas
+   - Atribuições
+   - Scope tags (Etiquetas de âmbito)
+   - Definições de configuração
+4. Depois de ter feito alterações, selecione **Guardar** para guardar as suas edições.  Tem de guardar edites para uma categoria antes de poder introduzir edites em categorias adicionais.
 
 ### <a name="older-baseline-versions"></a>Versões de base mais antigas
 

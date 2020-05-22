@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023202"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764140"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Cenário guiado - Desktop Moderno gerido pela Nuvem
 
@@ -80,7 +80,7 @@ Os utilizadores irão configurar manualmente e inscrever os seus novos dispositi
 O passo final permite-lhe rever um resumo das definições configuradas. Depois de ter revisto as suas escolhas clique em **Implementar** para completar o cenário guiado. Uma vez concluído o cenário guiado, é apresentada uma tabela de recursos. Pode editar estes recursos mais tarde, no entanto, uma vez que saia da vista sumária, a mesa não será salva.
 
 > [!IMPORTANT]
-> Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estas resouces não será guardada.
+> Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estes recursos não será guardada.
 
 ### <a name="verification"></a>Verificação
 

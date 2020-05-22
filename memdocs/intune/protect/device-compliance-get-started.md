@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 116ce7aa024afff5665fa3f09bfca56b54a1c452
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690506"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764293"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Definir regras em dispositivos para permitir o acesso a recursos na sua organização através do Intune
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>As políticas de conformidade de dispositivos funcionam com o Microsoft Azure AD
 
-Intune usa O [Acesso Condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) do Diretório Ativo Azure (AD) (abre outro site docs) para ajudar a impor a conformidade. Quando um dispositivo se inscreve no Intune, é iniciado o processo de registo do Microsoft Azure AD e a informação do dispositivo é atualizada no Microsoft Azure AD. Uma das principais informações do dispositivo é o estado de conformidade do dispositivo. Este estado de conformidade é utilizado pelas políticas de Acesso Condicional para bloquear ou permitir o acesso a e-mails e outros recursos da organização.
+Intune usa [acesso condicional](../protect/conditional-access.md) para ajudar a impor o cumprimento. O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD).
 
-- [O que é a gestão de dispositivos no Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) é um excelente recurso sobre o porquê e a forma como os dispositivos são registados no Microsoft Azure AD.
+Quando um dispositivo se inscreve no Intune, é iniciado o processo de registo do Microsoft Azure AD e a informação do dispositivo é atualizada no Microsoft Azure AD. Uma das principais informações do dispositivo é o estado de conformidade do dispositivo. Este estado de conformidade é utilizado pelas políticas de Acesso Condicional para bloquear ou permitir o acesso a e-mails e outros recursos da organização.
 
-- [O Acesso Condicional](conditional-access.md) e [as formas comuns de utilização](conditional-access-intune-common-ways-use.md) do Acesso Condicional descrevem esta funcionalidade no que diz respeito ao Intune.
+Saiba mais sobre acesso condicional e Insintonização:
+
+- [Formas comuns de usar o Acesso Condicional com Intune](conditional-access-intune-common-ways-use.md)
+
+Conheça o Acesso Condicional na documentação da AD Azure:
+  - [O que é acesso condicional](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [O que é uma identidade de dispositivo](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Formas de utilizar as políticas de conformidade de dispositivos
 
@@ -134,7 +140,7 @@ O quadro seguinte descreve como as configurações não conformes são geridas q
 - Se uma política de acesso condicional se aplicar ao utilizador, o dispositivo está bloqueado.
 - A aplicação do Portal da Empresa notifica o utilizador sobre eventuais problemas de conformidade.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Criar uma política](create-compliance-policy.md) e ver os pré-requisitos.
 - Ver as definições de conformidade para as diferentes plataformas de dispositivos:

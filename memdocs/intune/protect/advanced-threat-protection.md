@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: e158edfcb622f7a6e614b767ab05633f0a5151c7
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166621"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764174"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Impor cumprimento do Microsoft Defender ATP com acesso condicional em Intune
 
@@ -74,12 +74,12 @@ Só precisa de permitir ao Defender ATP uma única vez por inquilino.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **segurança** > endpoint Microsoft Defender**ATP**, e, em seguida, selecione **Abra o Microsoft Defender Security Center**.
+2. Selecione **segurança endpoint**  >  **Microsoft Defender ATP**, e, em seguida, selecione **Abra o Microsoft Defender Security Center**.
 
    ![Selecione para abrir o Microsoft Defender Security Center](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
 3. No **Microsoft Defender Security Center:**
-   1. Selecione **Definições** > **Características avançadas**.
+   1. Selecione **Settings**  >  **Definições Características avançadas**.
    2. Em **Ligação do Microsoft Intune**, escolha **Ligado**:
 
       ![Ativar a ligação ao Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
@@ -104,7 +104,7 @@ Só precisa de permitir ao Defender ATP uma única vez por inquilino.
 > - São diferentes das políticas de acesso condicional que pode criar para ajudar a gerir o MTD.
 > - Por defeito, não interaja com outras políticas de acesso condicional que utiliza para avaliação.
 >
-> Para ver as políticas clássicas de acesso condicional, em [Azure,](https://portal.azure.com/#home)vá às**políticas clássicas**de**acesso** > condicional do >  **Diretório Ativo Azure.**
+> Para ver as políticas clássicas de acesso condicional, em [Azure,](https://portal.azure.com/#home)vá às políticas clássicas de acesso condicional do **Diretório Ativo Azure.**  >  **Conditional Access**  >  **Classic policies**
 
 ## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Dispositivos Windows a bordo utilizando um perfil de configuração 
 
@@ -115,7 +115,7 @@ Quando estabeleceu a ligação ao Microsoft Defender ATP, intune recebeu um paco
 ### <a name="create-the-device-configuration-profile"></a>Criar o perfil de configuração do dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza um **Nome** e uma **Descrição**.
 4. Para **plataforma**, selecione **Windows 10 e mais tarde** 
 5. Para **o tipo de perfil,** selecione Microsoft Defender **ATP (Windows 10 Desktop)**.
@@ -142,7 +142,7 @@ Se não estiver familiarizado com a criação de uma política de conformidade, 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione Políticas de**conformidade** > **Policies** > de **dispositivos** > **Criar política**.
+2. Selecione Políticas de conformidade de **dispositivos**  >  **Compliance policies**  >  **Policies**  >  **Criar política**.
 
 3. Para **a Plataforma** selecione Windows *10 e mais tarde*, administrador de **dispositivos Android**, e/ou Android **Enterprise**. Em seguida, selecione **Criar** para abrir a janela de configuração da **política Criar.**
 
@@ -168,7 +168,7 @@ A política de Acesso Condicional bloqueia o acesso a recursos para dispositivos
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **segurança** > de fim de**ponta** > Acesso condicional**Nova política**.
+2. Selecione **segurança de fim de**ponta Acesso  >  **condicional**  >  **Nova política**.
 
 3. Introduza um **Nome** para a política e selecione **Utilizadores e grupos**. Utilize as opções Incluir ou Excluir para adicionar os grupos à política e selecione **Concluído**.
 
@@ -176,11 +176,11 @@ A política de Acesso Condicional bloqueia o acesso a recursos para dispositivos
 
    Selecione **Concluído** para guardar as alterações.
 
-5. Selecione **Condições** > **Aplicações cliente** para aplicar a política a apps e navegadores. Por exemplo, selecione **Sim** e, em seguida, ative **Browser** e **Aplicações móveis e clientes de ambiente de trabalho**.
+5. Selecione **Conditions**  >  **Condições Aplicações cliente** para aplicar a política a apps e navegadores. Por exemplo, selecione **Sim** e, em seguida, ative **Browser** e **Aplicações móveis e clientes de ambiente de trabalho**.
 
    Selecione **Concluído** para guardar as alterações.
 
-6. Selecione **Grant** para aplicar acesso condicional com base na conformidade do dispositivo. Por exemplo, selecione **Acesso de concessão** > Exigir que**o dispositivo seja marcado como conforme**.
+6. Selecione **Grant** para aplicar acesso condicional com base na conformidade do dispositivo. Por exemplo, selecione **Acesso de concessão**Exigir que  >  **o dispositivo seja marcado como conforme**.
 
     Escolha **Selecionar** para guardar as alterações.
 
@@ -192,19 +192,19 @@ Em seguida, monitorize o estado dos dispositivos que têm a política de conform
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **Monitor** > **De conformidade**com a política .
+2. Selecione **Dispositivos**  >  **Monitor**  >  **De conformidade**com a política .
 
 3. Encontre a sua política ATP microsoft Defender na lista e veja quais os dispositivos conformes ou não conformes.
 
 Também pode utilizar o relatório *operacional* para dispositivos não conformes a partir do mesmo local:
 
-1. Selecione **dispositivos** > **Monitor de** > **dispositivos não conformes**.
+1. Selecione **dispositivos**  >  **Monitor de**  >  **dispositivos não conformes**.
 
 Para obter mais informações sobre relatórios, consulte [os relatórios Intune](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Ver estado de embarque
 
-Para ver o estado de embarque de todos os dispositivos do Windows 10 geridos por Intune, pode ir para a **administração** > do Tenant**Microsoft Defender ATP**. A partir desta página, também pode iniciar a criação de um perfil de configuração do dispositivo para embarcar mais dispositivos para o MICROSOFT Defender ATP.
+Para ver o estado de embarque de todos os dispositivos do Windows 10 geridos por Intune, pode ir para a **segurança Endpoint**  >  **Microsoft Defender ATP**. A partir desta página, também pode iniciar a criação de um perfil de configuração do dispositivo para embarcar mais dispositivos para o MICROSOFT Defender ATP.
 
 ## <a name="next-steps"></a>Passos seguintes
 

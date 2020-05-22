@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: add599a715d32eac84b2784de976de4caf17faa9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 5f50005ace235c66b26ed441169a62cf73bae6d9
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428797"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764106"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Como gerir aplicações iOS e macOS adquiridas através do Apple Volume Purchase Program com a Microsoft Intune
 
@@ -87,8 +87,8 @@ Migrar os conteúdos e fichas vPP adquiridos existentes para Apps e Livros no Ap
 1. Convide os compradores de VPP a juntarem-se à sua organização e direcione cada utilizador para selecionar uma localização única. 
 2. Certifique-se de que todos os compradores de VPP dentro da sua organização completaram o passo 1 antes de prosseguir.
 3. Verifique se todas as aplicações e licenças adquiridas migraram para Apps e Livros no Apple Business Manager ou Apple School Manager.
-4. Descarregue nova localização token indo para **Apple Business (ou School) Manager**  >  **Settings**Apps  >  **e Books**My Server  >  **Tokens**.
-5. Atualização da localização token no microsoft Endpoint Manager centro de administração indo para conectores de **administração de**  >  **inquilinos e tokens**  >  **Apple VPP tokens** e sincronizar o token.
+4. Descarregue o novo token de localização indo para **Apple Business (ou School) Manager**  >  **Settings**Apps  >  **and Books**My Server  >  **Tokens**.
+5. Atualize o token de localização no centro de administração do Microsoft Endpoint Manager, indo para conectores de **administração de**  >  **inquilinos e tokens**  >  **Apple VPP** e faça upload manual do token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Faça upload de um Apple VPP ou ficha de localização
 
@@ -211,9 +211,9 @@ A licença deverá ser atualizada dentro de algumas horas após a instalação o
 
 ### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>É possível exceder as capacidades de subscrição de uma aplicação e em que circunstâncias poderia isso acontecer?
 
-Yes. O administrador do Intune pode exceder as capacidades de subscrição de uma aplicação. Por exemplo, se o administrador adquirir 100 licenças para a aplicação XYZ e, em seguida, direcionar a aplicação para um grupo com 500 membros. Os primeiros 100 membros (utilizadores ou dispositivos) irão ter uma licença atribuída, mas a atribuição de licenças aos restantes membros falhará.
+Sim. O administrador do Intune pode exceder as capacidades de subscrição de uma aplicação. Por exemplo, se o administrador adquirir 100 licenças para a aplicação XYZ e, em seguida, direcionar a aplicação para um grupo com 500 membros. Os primeiros 100 membros (utilizadores ou dispositivos) irão ter uma licença atribuída, mas a atribuição de licenças aos restantes membros falhará.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Veja [Como monitorizar aplicações](apps-monitor.md) para obter informações que o ajudam a monitorizar as atribuições de aplicações.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 05/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e2b271c9dae03e5352f37404401f540fb78d6f7
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556178"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791772"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 e posteriores configurações do dispositivo para funcionar como um quiosque em Intune
 
@@ -85,7 +85,7 @@ Executa apenas uma aplicação no dispositivo.
 
     - **Sites permitidos**: utilize esta definição para permitir que determinados sites sejam abertos. Por outras palavras, utilize esta funcionalidade para restringir ou impedir determinados sites no dispositivo. Por exemplo, pode permitir que todos os sites em `http://contoso.com` sejam abertos. Por predefinição, todos os sites são permitidos.
 
-      Para permitir sites específicos, carregue um ficheiro que inclua uma lista dos sites permitidos em linhas separadas. Se não adicionar um ficheiro, todos os sites serão permitidos. Por defeito, Intune suporta wild card. Assim, quando entrar no domínio, tais `sharepoint.com` como, permitir que subdomínios sejam automaticamente permitidos, tais `contoso.sharepoint.com` como, `my.sharepoint.com` e assim por diante.
+      Para permitir sites específicos, carregue um ficheiro que inclua uma lista dos sites permitidos em linhas separadas. Se não adicionar um ficheiro, todos os sites serão permitidos. Por padrão, intune permite todos os subdomínios do site. Por exemplo, entra-se no `sharepoint.com` domínio. Insintonize automaticamente todos os subdomínios, tais `contoso.sharepoint.com` como, `my.sharepoint.com` e assim por diante. Não entre em wildcards, como o asterisco `*` .
 
       O seu ficheiro de exemplo deve ser semelhante à seguinte lista:
 
@@ -209,7 +209,7 @@ As aplicações neste modo estão disponíveis no menu Iniciar. Estas aplicaçõ
 
   [Gestão de Aplicações/AgendaForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Atribuir o perfil,](device-profile-assign.md) [e monitorizar o seu estado](device-profile-monitor.md).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732963"
+ms.locfileid: "83764225"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Registo Automatizado de Dispositivos da Apple
 
@@ -44,9 +44,6 @@ As matrículas do ADE não são compatíveis com a versão da app store da aplic
 Para permitir a autenticação moderna durante a inscrição, empurre a app para o dispositivo utilizando o Portal da **Empresa de Instalação com VPP** (Programa de Compra de Volume) no perfil ADE. Para mais informações, consulte Automaticamente a inscrição de [dispositivos iOS/iPadOS com o ADE da Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Para permitir que o Portal da Empresa atualize automaticamente e forneça a aplicação Portal da Empresa em dispositivos já matriculados com a ADE, implemente a aplicação Portal da Empresa através do Intune como uma aplicação de Programa de Compra de Volume (VPP) necessária com uma política de configuração de [aplicações](../apps/app-configuration-policies-use-ios.md) aplicada.
-
-> [!NOTE]
-> Durante a inscrição automática do dispositivo, enquanto o Portal da Empresa está a funcionar no modo de aplicação única, clicar no link **Saiba mais,** resulta numa mensagem de erro devido ao modo de aplicação única. Após a inscrição ser concluída, pode ver mais informações no CP quando o dispositivo já não se encontra no modo de aplicação. 
 
 ## <a name="what-is-supervised-mode"></a>O que é o modo supervisionado?
 

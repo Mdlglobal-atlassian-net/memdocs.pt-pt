@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 6d60d7f366159777548e61fdf52aadedfecb32ae
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587031"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764038"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Adicionar definições de e-mail a dispositivos com o Intune
 
@@ -29,9 +29,9 @@ O Microsoft Intune inclui várias definições de e-mail que pode implementar em
 
 Pode utilizar os perfis de e-mail para configurar as definições de e-mail incorporadas dos seguintes dispositivos:
 
-- Administrador de dispositivos Android na Samsung Knox Standard 4.0 e mais recente
+- Administrador de dispositivos Android na Samsung Knox Standard 5.0 e mais recente
 - Android Enterprise
-- iOS 8.0 e mais recente
+- iOS 11.0 e mais recente
 - iPadOS 13.0 e mais recente
 - Windows Phone 8.1 e mais recente
 - Windows 10 (desktop) e Windows 10 Mobile
@@ -41,7 +41,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
 ## <a name="create-the-profile"></a>Criar o perfil
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Plataforma**: Escolha a plataforma dos seus dispositivos. As opções são:  
@@ -71,7 +71,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. Selecione **Seguinte**.
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
     Selecione **Seguinte**.
 
@@ -85,7 +85,7 @@ Este artigo mostra-lhe como criar um perfil de e-mail no Microsoft Intune. Tamb�
 
 Os perfis de e-mail são atribuídos a grupos de dispositivos e não a grupos de utilizadores. Existem diferentes formas de remover um perfil de e-mail de um dispositivo, mesmo quando existe apenas um perfil de e-mail no dispositivo:
 
-- **Opção 1**: Abra o perfil de e-mail **(Perfis** > de configuração de**dispositivos** > selecione o seu perfil) e escolha **Atribuições**. O separador **Incluir** apresenta os grupos atribuídos ao perfil. Clique com o botão direito do rato no grupo e selecione **Remover**. Não se esqueça de **Guardar** as alterações.
+- **Opção 1**: Abra o perfil de e-mail **(Perfis**de  >  **configuração** de dispositivos > selecione o seu perfil) e escolha **Atribuições**. O separador **Incluir** apresenta os grupos atribuídos ao perfil. Clique com o botão direito do rato no grupo e selecione **Remover**. Não se esqueça de **Guardar** as alterações.
 
 - **Opção 2**: [elimine ou extinga o dispositivo](../remote-actions/devices-wipe.md). Pode utilizar estas ações para remover dados e definições de forma seletiva ou na totalidade.
 

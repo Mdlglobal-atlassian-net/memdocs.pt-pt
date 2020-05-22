@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7eb352e73a88f8da8eb927400b5db86356c10363
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331473"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764157"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Cenário guiado - Implementar Microsoft Edge para Mobile
 
@@ -86,7 +86,7 @@ O passo final permite-lhe rever um resumo das definições configuradas. Depois 
 > A borda pode demorar até 12 horas para receber a configuração. Para mais informações, consulte as políticas de [configuração da App para o Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
 > [!IMPORTANT]
-> Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estas resouces não será guardada.
+> Uma vez concluído o cenário guiado, apresentará um resumo. Pode modificar os recursos listados no resumo mais tarde, no entanto a tabela que exibe estes recursos não será guardada.
 
 ## <a name="next-steps"></a>Passos seguintes
 

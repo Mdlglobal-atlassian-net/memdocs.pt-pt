@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9875e394fb72e1c190bcc57da5e6ba4db04c1051
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 014608a5042f15ab9ef250b42ad816e8130e2960
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690573"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791696"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utilizar e gerir dispositivos Android Enterprise com OEMConfig no Microsoft Intune
 
@@ -157,7 +157,7 @@ Em comparação com as aplicações padrão, as aplicações OEMConfig expandem 
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cifra | com.cipherlab.oemconfig | |
-| Datalogic | com.datalogic.settings.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | [Guia oEMConfig datalógico](https://datalogic.github.io/oemconfig/overview) |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
@@ -181,6 +181,6 @@ Se existe uma aplicação OEMConfig para o seu dispositivo, mas não está na ta
 >
 > Se sentir que uma aplicação OEMConfig se comporta mal, contacte os desenvolvedores da aplicação OEMConfig. Intune não é responsável por problemas técnicos com as aplicações individuais da OEMConfig.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Monitorize o estado do perfil](device-profile-monitor.md).

@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: d546c92cb498a58c649ed0668dc254bbd6903699
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210320"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791837"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Que informações é que a minha organização pode ver quando inscrevo o meu dispositivo?
 
@@ -51,7 +51,14 @@ Quando inscreve um dispositivo no Microsoft Intune, a sua organização não con
 - IMEI
 
  > [!NOTE]
- > Para dispositivos android enterprise totalmente geridos e dedicados, você não será capaz de ver todo o inventário de aplicações.    
+ > Para dispositivos android enterprise totalmente geridos e dedicados, você não será capaz de ver todo o inventário de aplicações.
+ 
+ > [!NOTE]
+ > Uma aplicação é considerada **uma aplicação gerida** quando instalada de uma das seguintes formas:
+ > 1. Um utilizador instalá-lo a partir da aplicação Portal da Empresa depois de ser publicado **como disponível** por um administrador intune.
+ > 2. A aplicação é publicada conforme **exigido** por um administrador intune e está instalada no dispositivo. 
+ >
+ > Se você é um administrador de TI ou pessoa de suporte na sua organização e quer mais informações sobre gestão de aplicações em Intune, consulte [Compreender as capacidades de aplicações não geridas, aplicações geridas e aplicações MAM](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Informações que a sua organização poderá conseguir ver:**
 

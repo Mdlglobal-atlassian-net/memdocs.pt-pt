@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d33f642a564179b857afc214110cf098c695055c
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732932"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791752"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gerir e utilizar diferentes funcionalidades de gestão de dispositivos em dispositivos Holográficos e HoloLens do Windows com Intune
 
@@ -117,7 +117,7 @@ Nos seus perfis, pode utilizar definições de OMA-URI para personalizar algumas
 
 Para configurar definições de OMA-URI (Open Mobile Alliance Uniform Resource Identifier), pode criar um perfil personalizado no Intune. Utilize as definições de OMA-URI para controlar diferentes funcionalidades nos seus dispositivos com o Windows Holographic for Business, tal como ativar a VPN ou procurar atualizações no Microsoft Update.
 
-Consulte um exemplo que utiliza o CSP de Controlo de [Aplicações do Windows Defender (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para permitir ou bloquear aplicações de abertura nos dispositivos HoloLens 2.
+Consulte um [exemplo](../configuration/custom-profile-hololens.md) que utiliza o CSP de Controlo de [Aplicações do Windows Defender (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) para permitir ou bloquear aplicações de abertura nos dispositivos HoloLens 2.
 
 ### <a name="configure-kiosk-mode"></a>[Configurar o modo de quiosque](../configuration/kiosk-settings-holographic.md)
 
@@ -159,6 +159,6 @@ Antes de os utilizadores inscreverem dispositivos e acederem às aplicações da
 
 O Hello para Empresas é um método de início de sessão alternativo que utiliza uma conta do Azure Active Directory para substituir uma palavra-passe, um smart card ou um smart card virtual. Com o Hello para Empresas, os seus dispositivos com o Windows Holographic for Business podem iniciar sessão com um PIN com um comprimento mínimo definido por si.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Configurar Intune](setup-steps.md).
