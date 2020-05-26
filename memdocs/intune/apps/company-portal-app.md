@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4c8ee2e25d14d6b39cea91255ed955eeb27174d
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 6f22b2d87492d227b8a78859adb1debc504da8d5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690699"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824188"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Como personalizar as aplicações intune Company Portal, site do Portal da Empresa e app Intune
 
@@ -220,8 +220,8 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Extinguir | Disponível<sup>(1)</sup> | Disponível | Disponível | Disponível<sup>(7)</sup> |
-| Eliminação | Disponível | Disponível<sup>(5)</sup> | ND | Disponível<sup>(7)</sup> |
+| Extinguir | Disponível<sup>(1)</sup> | Disponível<sup>(9)</sup> | Disponível | Disponível<sup>(7)</sup> |
+| Eliminação | Disponível | Disponível<sup>(5)</sup><sup>(9)</sup> | ND | Disponível<sup>(7)</sup> |
 | Renome<sup>(4)</sup> | Disponível | Disponível | Disponível | Disponível |
 | Sync | Disponível | Disponível | Disponível | Disponível |
 | Bloqueio Remoto | Apenas windows Phone | Disponível | Disponível | Disponível |
@@ -235,7 +235,8 @@ Algumas plataformas e configurações não permitem ações de dispositivos self
 <sup>(5)</sup> **A limpeza** não está disponível nos dispositivos iOS/iPadOS inscritos pelo utilizador.<br>
 <sup>(6)</sup> **O Reset Passcode** não é suportado em algumas configurações do Android e Android Enterprise. Para mais informações, consulte [Reset ou remova uma senha do dispositivo no Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **A reforma** e a **limpeza** não estão disponíveis nos cenários do Proprietário do Dispositivo Empresarial Android (COPE, COBO, COSU).<br>
-<sup>(8)</sup> O código de acesso de **reset** não é suportado nos dispositivos iOS/iPadOS inscritos pelo utilizador.
+<sup>(8)</sup> O código de acesso de **reset** não é suportado nos dispositivos iOS/iPadOS inscritos pelo utilizador.<br>
+<sup>(9)</sup> Todos os dispositivos de inscrição automática de dispositivos iOS/iPadOS (anteriormente conhecidos como DEP) têm opções **de aposentadoria** e **limpeza** desativadas.
 
 ### <a name="app-logs"></a>Registos de aplicativos
 
@@ -244,7 +245,7 @@ Se estiver a utilizar o Azure Government, os registos de aplicações estão dis
 > [!NOTE]
 > De acordo com a política da Microsoft e da Apple, não vendemos quaisquer dados recolhidos pelo nosso serviço a terceiros por qualquer motivo.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Configure o logótipo da sua organização e a cor da marca para novas páginas de separadores no Microsoft Edge](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
 - [Adicionar aplicações](apps-add.md)

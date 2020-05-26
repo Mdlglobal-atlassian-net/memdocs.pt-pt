@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791849"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824171"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novidades do Microsoft Intune
 
@@ -53,6 +53,22 @@ Saiba quais são as novidades todas as semanas no Microsoft Intune no [Microsoft
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+## <a name="week-of-may-18-2020"></a>Semana de 18 de maio de 2020
+
+### <a name="device-security"></a>Segurança do dispositivo
+
+#### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Utilize a política de deteção e resposta de Endpoint para dispositivos de bordo para Defender ATP<!-- 7130165  -->
+
+Utilize a política de segurança do ponto final [para deteção e resposta](../protect/endpoint-security-edr-policy.md) de ponto final (EDR) a bordo e configure dispositivos para a sua implementação de Microsoft Defender Advanced Threat Protection (Defender ATP). O EDR suporta a política para dispositivos Windows geridos pela Intune (MDM) e uma política separada para dispositivos Windows geridos pelo Gestor de Configuração. 
+
+Para utilizar a política para dispositivos De Configuração Manager, tem de configurar o [Gestor de Configuração para suportar a política EDR](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). A configuração inclui:
+
+- Configure o seu gestor de configuração para anexação de *inquilinos*.
+- Instale uma atualização na consola para O Gestor de Configuração para permitir o suporte às políticas EDR. Esta atualização aplica-se apenas às hierarquias que permitiram *anexar o arrendatário.*
+- Sincronizar as suas coleções de dispositivos formam a sua hierarquia no centro de administração do Microsoft Endpoint Manager.
+
+
 ## <a name="week-of-may-11-2020-2005-service-release"></a>Semana de 11 de maio de 2020 (lançamento do Serviço de 2005)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

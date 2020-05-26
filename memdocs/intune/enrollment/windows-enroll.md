@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55d7be5d54d194ccd3a1f982f70f26ee8c829d4f
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326917"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824154"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurar a inscrição para dispositivos Windows
 
@@ -95,14 +95,14 @@ Os administradores de DNS da Contoso devem criar os seguintes CNAMEs:
 
 As alterações aos registos DNS podem demorar até 72 horas a serem propagadas. Não é possível verificar a alteração de DNS no Intune até o registo DNS ser propagado.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Suportados Pontos Finais adicionais, mas Não Recomendados
-Enterpriseenrollment-s.Manage.microsoft.com é o FQDN preferencial para a inscrição, mas existem dois outros pontos finais que foram utilizados pelos clientes no passado e que são suportados. EnterpriseEnrollment.manage.microsoft.com (sem o -s) e manage.microsoft.com ambos funcionam como o destino para o servidor de deteção automática, mas o utilizador vai ter de selecionar OK numa mensagem de confirmação. Se apontar para EnterpriseEnrollment-s.manage.microsoft.com, o utilizador não terá de fazer o passo de confirmação adicional, por isso esta é a configuração recomendada
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>São utilizados pontos finais adicionais, mas já não suportados
+EnterpriseEnrollment-s.manage.microsoft.com é o FQDN preferido para inscrição. Há dois outros pontos finais que foram usados pelos clientes no passado e ainda funcionam, mas já não são apoiados. EnterpriseEnrollment.manage.microsoft.com (sem o -s) e manage.microsoft.com ambos funcionam como o destino para o servidor de deteção automática, mas o utilizador vai ter de selecionar OK numa mensagem de confirmação. Se apontar para EnterpriseEnrollment-s.manage.microsoft.com, o utilizador não terá de fazer o passo de confirmação adicional, por isso esta é a configuração recomendada
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>Não São Suportados Métodos Alternativos de Redirecionamento
 Não é suportada a utilização de um método que não seja a configuração do CNAME. Por exemplo, não é suportada a utilização de um servidor proxy para redirecionar enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc para enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc ou para manage.microsoft.com/EnrollmentServer/Discovery.svc.
 
 **Passo 2: verificar o CNAME** (opcional)<br>
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **windows** > **windows inscrição** > **CNAME Validação**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**  >  **windows**  >  **windows**  >  **inscrição CNAME Validação**.
 2. Na caixa **Domínio**, introduza o site da empresa e, em seguida, selecione **Testar**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informar os utilizadores sobre como inscrever dispositivos Windows
@@ -114,7 +114,7 @@ Informe os seus utilizadores sobre como inscrever os dispositivos Windows e o qu
 Para obter instruções de inscrição do utilizador final, veja [Inscrever o seu dispositivo Windows no Intune](../user-help/windows-enrollment-company-portal.md). Também pode dizer aos utilizadores para consultarem [Que informações pode o administrador de TI ver no meu dispositivo](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
-> Se não tiver a Inscrição automática de MDM ativada, mas tiver dispositivos Windows 10 que foram associados ao Azure AD, serão visíveis dois registos na consola do Intune após a inscrição. Pode detê-lo certificando-se de que os utilizadores com AD Azure se juntam aos dispositivos que vão para**o trabalho de acesso** às **contas** > ou escola e o **Connect** utilizando a mesma conta. 
+> Se não tiver a Inscrição automática de MDM ativada, mas tiver dispositivos Windows 10 que foram associados ao Azure AD, serão visíveis dois registos na consola do Intune após a inscrição. Pode detê-lo certificando-se de que os utilizadores com AD Azure se juntam aos dispositivos que vão para **o**trabalho de acesso às contas  >  **ou escola** e o **Connect** utilizando a mesma conta. 
 
 Para obter mais informações sobre as tarefas do utilizador final, consulte [Recursos sobre a experiência do utilizador final com o Microsoft Intune](../fundamentals/end-user-educate.md).
 

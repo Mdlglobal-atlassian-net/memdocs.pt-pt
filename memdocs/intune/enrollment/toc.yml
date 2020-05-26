@@ -28,6 +28,8 @@
       href: terms-and-conditions-create.md
     - name: Restrições
       href: enrollment-restrictions-set.md
+    - name: Compreender os limites de dispositivos do Intune e Azure AD
+      href: device-limit-intune-azure.md
     - name: Certificado Push de MDM da Apple
       href: apple-mdm-push-certificate-get.md
     - name: Identificadores empresariais
