@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 706871d750c9061c6d18fa622fe7b868990b9eec
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80862844"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991199"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gerir o acesso Web através de um browser protegido por políticas do Microsoft Intune
 
@@ -98,7 +98,7 @@ Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Manag
 > O Acesso Condicional é uma tecnologia do Azure Active Directory (Azure AD). O nó de Acesso Condicional acessado a partir de *Intune* é o mesmo nó a que o Acesso a partir de *Azure AD*.  
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Dispositivos** > **Acesso** > Condicional**Nova política**.
+2. Selecione **Dispositivos**  >  **Acesso Condicional**Nova  >  **política**.
 3. Adicione o **nome**da política . 
 4. Na secção **Atribuições**, selecione **Condições** > **Aplicações do cliente**. O painel de **aplicações do Cliente** é apresentado.
 5. Clique em **Sim** em **Configurar** para aplicar a política a aplicações do cliente específicas.
@@ -109,7 +109,7 @@ Para impedir que as aplicações Web ligadas ao Azure AD utilizem o Intune Manag
     > [!NOTE]
     > Se quiser restringir as aplicações nativas (aplicações não baseadas no browser) que podem aceder a estas aplicações na cloud, também pode selecionar **Aplicações móveis e clientes de ambiente de trabalho**.
 
-7. Clique **em** > **Feito**.
+7. Clique **em**  >  **Feito**.
 8. Na secção **De Missões,** selecione **Utilizadores e grupos** e escolha os utilizadores ou grupos que pretende atribuir a esta política. Clique **em Fazer** para fechar o painel.
 9. Na secção **De Missões,** selecione **aplicações ou ações cloud** para escolher quais aplicações proteger com esta política. Clique **em Fazer** para fechar o painel.
 10. **Selecione Grant** da secção de **controlos** de acesso do painel. 
@@ -139,7 +139,7 @@ O SSO exige que o seu dispositivo seja registado pela aplicação Microsoft Auth
 >Para aplicar as configurações de aplicações, o browser protegido do utilizador ou outra aplicação no dispositivo já tem de ser gerido pela [política de proteção de aplicações do Intune](app-protection-policy.md).
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione políticas > de**configuração**de **apps** > **adicionar** > **aplicações geridas**.
+2. Selecione **políticas**de  >  **configuração**de apps  >  **adicionar**  >  **aplicações geridas**.
 3. Na página **Basics** do painel de definição de **aplicações Create,** introduza um **Nome** e **uma Descrição** opcional para as definições de configuração da aplicação.
 4. Escolha **selecione a aplicação pública** e escolha o **Navegador Gerido** e/ou **Edge** para iOS/iPadOS, para Android, ou para ambos.
 5. Clique **em Selecionar** para voltar ao painel de configuração da **aplicação Criar.**
@@ -271,7 +271,7 @@ Utilize as informações seguinte para saber mais sobre os formatos permitidos e
 
 - Utilize a tabela seguinte para saber mais sobre os padrões permitidos que pode utilizar ao especificar URLs:
 
-|                  do IdP                  |                     Detalhes                      |                                                Correspondências                                                |                                Não corresponde                                 |
+|                  URL                  |                     Detalhes                      |                                                Correspondências                                                |                                Não corresponde                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |        `http://www.contoso.com`         |              Corresponde a uma única página               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
 |          `http://contoso.com`           |              Corresponde a uma única página               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |

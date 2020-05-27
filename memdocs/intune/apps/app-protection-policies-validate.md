@@ -10,7 +10,7 @@ ms.date: 03/31/2020
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: how-to
 ms.technology: ''
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488007"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990465"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Como validar a configuração das políticas de proteção de aplicações no Microsoft Intune
 
@@ -44,7 +44,7 @@ Se os testes mostrarem que o comportamento da política de proteção de aplica�
 
 ### <a name="user-app-protection-status"></a>Estado da proteção de aplicações do utilizador
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **o** > estado de proteção da**aplicação****monitor** >  de apps e, em seguida, selecione o azulejo dos **utilizadores atribuídos.** 
+3. Selecione **o**estado de proteção da aplicação monitor de apps  >  **Monitor**  >   **App protection status**e, em seguida, selecione o azulejo dos **utilizadores atribuídos.** 
 4. Na página **Relatório da aplicação**, selecione **Selecionar utilizador** para abrir uma lista de utilizadores e grupos. 
 5. Procure e selecione um utilizador na lista e, em seguida, escolha **Selecionar utilizador**. No parte superior do painel **Relatório da aplicação**, pode ver se o utilizador tem uma licença a proteção de aplicações. Também pode ver se o utilizador tem uma licença do Office 365 e o estado da aplicação de todos os dispositivos do utilizador.
 

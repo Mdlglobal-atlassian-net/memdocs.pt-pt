@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fb8f9e4f779acc9f77327d3fdeee20ae02c6924
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dc7f16c1de015488ada01cba4c30044bac769114
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324112"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990687"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Adicionar aplicações de linha de negócio Android ao Microsoft Intune
 
@@ -39,7 +39,7 @@ Uma aplicação de linha de negócio (LOB) é uma aplicação que adiciona ao In
 ## <a name="select-the-app-type"></a>Selecione o tipo de aplicativo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** sob os **outros** tipos de aplicações, selecione **app Line-of-business**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 

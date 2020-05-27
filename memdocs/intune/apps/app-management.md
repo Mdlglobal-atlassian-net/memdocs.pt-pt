@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: aef549cc01ba0e45d61c16eb8489f8926f92276b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538147"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990512"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>O que é a gestão de aplicações do Microsoft Intune?
 
@@ -56,11 +56,11 @@ O Intune oferece várias funcionalidades para o ajudar a obter as aplicações d
 | Adicionar e atribuir aplicações a dispositivos e utilizadores | Sim | Sim | Sim | Sim | Sim |
 | Atribuir aplicações a dispositivos não inscritos no Intune | Sim | Sim | Não | Não | Não |
 | Utilizar políticas de configuração de aplicações para controlar o comportamento de arranque das aplicações | Sim | Sim | Não | Não | Não |
-| Utilizar políticas de aprovisionamento de aplicações móveis para renovar aplicações expiradas | Não | Sim | Não | Não | Não |
-| Proteger dados da empresa em aplicações com políticas de proteção | Sim | Sim | Não | N.º <sup>1</sup> | Não |
-| Remover apenas dados empresariais a partir de uma aplicação instalada (eliminação seletiva de aplicações) | Sim | Sim | Não | Sim | Sim |
+| Utilizar políticas de aprovisionamento de aplicações móveis para renovar aplicações expiradas | No | Yes | Não | Não | Não |
+| Proteger dados da empresa em aplicações com políticas de proteção | Sim | Sim | No | N.º <sup>1</sup> | No |
+| Remover apenas dados empresariais a partir de uma aplicação instalada (eliminação seletiva de aplicações) | Sim | Sim | No | Sim | Sim |
 | Monitorizar atribuições de aplicações | Sim | Sim | Sim | Sim | Sim |
-| Atribuir e controlar aplicações compradas em volume a partir de uma loja de aplicações | Não | Não | Não | Sim | Não |
+| Atribuir e controlar aplicações compradas em volume a partir de uma loja de aplicações | Não | Não | Não | Yes | No |
 | Instalação obrigatória de aplicações em dispositivos (obrigatório) <sup>2</sup> | Sim | Sim | Sim | Sim | Sim |
 | Instalação opcional em dispositivos a partir do Portal da Empresa (instalação disponível) | Sim <sup>3</sup> | Sim | Sim | Sim | Sim |
 | Instalar um atalho para uma aplicação na Web (ligação da Web) | Sim <sup>4</sup> | Sim | Sim | Sim | Sim |

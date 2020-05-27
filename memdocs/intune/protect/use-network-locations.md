@@ -6,7 +6,7 @@ author: Brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9974177b27d94b7ad058fe9f0fa188a62c3d2be6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990956"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Utilizar Localizações (barreira de rede) no Intune
 
@@ -50,7 +50,7 @@ Para criar uma política de conformidade com base na localização:
 
 ## <a name="create-a-location"></a>Criar uma localização
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **dispositivos** > As**políticas** > de conformidade As**localizações** > **criam**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **dispositivos**As políticas de  >  **conformidade**As  >  **localizações**  >  **criam**.
 
 2. Introduza as seguintes propriedades:  
 

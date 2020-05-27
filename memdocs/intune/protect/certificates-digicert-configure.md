@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50ea177f2d400d54869d02a461a69bb7b0115414
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551830"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990347"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configurar conector de certificado intune para a plataforma DigiCert PKI
 
@@ -333,6 +333,6 @@ Os registos de serviço do Conector de Certificado Intune estão disponíveis em
 | Alguns dispositivos de utilizador não estão a receber certificados PKCS da DigiCert CA. | Este problema acontece quando o utilizador UPN contém caracteres especiais como um sublinhado (exemplo: `global_admin@intune.onmicrosoft.com` ). <br><br> A DigiCert CA não suporta personagens especiais em **mail_firstname** e **mail_lastname.** <br><br> Os passos seguintes ajudam a resolver este problema: <br><br> 1. Inscreva-se no portal de administração digiCert CA. <br> 2. Ir gerir perfis de **certificados**. <br> 3. Selecione o perfil do certificado utilizado para o Intune. <br> 4. Selecione o link **Personalizar opções.** <br> 5. Selecione o botão **opções Avançadas.** <br> 6. Nos termos dos **campos de certificados – Objeto DN,** adicione um campo **de nome comum (CN)** e elimine o campo de **Nome Comum (CN)** existente. Adicionar e eliminar as operações devem ser efetuadas em conjunto. <br> 7. Selecione **Guardar**. <br><br> Com a alteração anterior, o perfil do certificado DigiCert solicita **"CN=" <upn> ** em vez de **mail_firstname** e **mail_lastname**. |
 | O utilizador eliminado manualmente já implementou o certificado do dispositivo. | Intune reimplanta o mesmo certificado durante o próximo check-in ou aplicação da política. Neste caso, o Conector NDES não recebe um pedido de certificado PKCS. |
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Utilize as informações deste artigo para além das informações nos perfis do [dispositivo Microsoft Intune?](../configuration/device-profiles.md)

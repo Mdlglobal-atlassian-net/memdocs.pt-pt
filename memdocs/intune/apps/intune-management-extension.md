@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605172"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990725"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Utilize scripts PowerShell em dispositivos Windows 10 em Intune
 
@@ -80,7 +80,7 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 ## <a name="create-a-script-policy-and-assign-it"></a>Crie uma política de scripte atribuí-la
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **dispositivos** > **PowerShell scripts** > **Adicionar**.
+2. Selecione **dispositivos**  >  **PowerShell scripts**  >  **Adicionar**.
 
     ![Adicione e use scripts PowerShell no Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 
@@ -97,8 +97,8 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 
       | Executar roteiro em anfitrião PS de 64 bits | Arquitetura cliente | Novo roteiro do PS | Roteiro ps política existente |
       | --- | --- | --- | --- | 
-      | Não | 32 bits  | Anfitrião ps de 32 bits apoiado | Funciona apenas em 32 bits de anfitrião ps, que trabalha em arquiteturas de 32 bits e 64 bits. |
-      | Sim | 64 bits | Executa o guião em 64 bits de anfitrião ps para arquiteturas de 64 bits. Quando correu em 32-bits, o guião corre num anfitrião ps de 32 bits. | Executa o guião em 32 bits anfitrião ps. Se esta definição mudar para 64-bits, o script abre (não funciona) num anfitrião ps de 64 bits, e reporta os resultados. Quando correu em 32-bits, o guião corre em 32 bits anfitrião PS. |
+      | No | 32 bits  | Anfitrião ps de 32 bits apoiado | Funciona apenas em 32 bits de anfitrião ps, que trabalha em arquiteturas de 32 bits e 64 bits. |
+      | Yes | 64 bits | Executa o guião em 64 bits de anfitrião ps para arquiteturas de 64 bits. Quando correu em 32-bits, o guião corre num anfitrião ps de 32 bits. | Executa o guião em 32 bits anfitrião ps. Se esta definição mudar para 64-bits, o script abre (não funciona) num anfitrião ps de 64 bits, e reporta os resultados. Quando correu em 32-bits, o guião corre em 32 bits anfitrião PS. |
 
 5. Selecione **etiquetas de âmbito**. As etiquetas de âmbito são opcionais. [Utilize o controlo de acesso baseado em funções (RBAC) e as etiquetas](../fundamentals/scope-tags.md) de âmbito para TI distribuídos têm mais informações.
 
@@ -108,7 +108,7 @@ A extensão de gestão Intune tem os seguintes pré-requisitos. Uma vez cumprido
 
     2. Quando terminar, selecione **Next**.
 
-6. Selecione **Tarefas** > **Selecione grupos para incluir**. É apresentada uma lista existente de grupos da AD Azure.
+6. Selecione **Tarefas**  >  **Selecione grupos para incluir**. É apresentada uma lista existente de grupos da AD Azure.
 
     1. Selecione um ou mais grupos que incluam os utilizadores cujos dispositivos recebem o script. Escolha **Selecionar**. Os grupos que escolheu estão na lista e receberão a sua política.
 
@@ -169,7 +169,7 @@ Em **Scripts do PowerShell**, selecione o script que pretende monitorizar, selec
 
 ## <a name="intune-management-extension-logs"></a>Registos de extensão de gestão insinados
 
-Os registos do agente na `\ProgramData\Microsoft\IntuneManagementExtension\Logs`máquina cliente estão normalmente dentro . Pode utilizar [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) para visualizar estes ficheiros de registo.
+Os registos do agente na máquina cliente estão normalmente dentro `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . Pode utilizar [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) para visualizar estes ficheiros de registo.
 
 ![Screenshot ou sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -190,10 +190,10 @@ Em **Scripts do PowerShell**, clique com o botão direito no script e selecione 
 
 Para ver se o dispositivo está matriculado automaticamente, pode:
 
-  1. Ir para **Definições** > **Accounts** > Contas**Aceder ao trabalho ou à escola.**
+  1. Ir **Settings**para  >  **Definições Contas**  >  **Aceder ao trabalho ou à escola.**
   2. Selecione a conta unida > **Info**.
   3. Em **relatório de diagnóstico avançado,** selecione Criar **Relatório**.
-  4. Abra `MDMDiagReport` o em um navegador web.
+  4. Abra o `MDMDiagReport` em um navegador web.
   5. Procure a propriedade **MDMDeviceWithAAD.** Se a propriedade existir, o dispositivo está matriculado automaticamente. Se esta propriedade não existe, então o dispositivo não está matriculado automaticamente.
 
 Ativar a [inscrição automática do Windows 10](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) inclui os passos para configurar a inscrição automática em Intune.
@@ -212,15 +212,15 @@ Ativar a [inscrição automática do Windows 10](../enrollment/windows-enroll.md
 
 - Certifique-se de que os dispositivos [estão unidos ao Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Os dispositivos que só estão unidos ao seu local de trabalho ou organização[(registados](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) em Azure AD) não receberão os scripts.
 - A extensão de gestão Intune verifica o cliente uma vez por hora para quaisquer alterações no script ou na política em Intune.
-- Confirme que a extensão `%ProgramFiles(x86)%\Microsoft Intune Management Extension`de gestão Intune é descarregada para .
+- Confirme que a extensão de gestão Intune é descarregada para `%ProgramFiles(x86)%\Microsoft Intune Management Extension` .
 - Os scripts não funcionam em Surface Hubs ou Windows 10 no modo S.
 - Reveja os registos para eventuais erros. Consulte os registos de [extensão de gestão Intune](#intune-management-extension-logs) (neste artigo).
-- Para possíveis problemas de permissão, certifique-se `Run this script using the logged on credentials`de que as propriedades do script PowerShell estão definidas para . Verifique também se o utilizador assinado tem as permissões adequadas para executar o script.
+- Para possíveis problemas de permissão, certifique-se de que as propriedades do script PowerShell estão definidas para `Run this script using the logged on credentials` . Verifique também se o utilizador assinado tem as permissões adequadas para executar o script.
 
 - Para isolar problemas de script, pode:
 
   - Reveja a configuração de execução powerShell nos seus dispositivos. Consulte a política de [execução da PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) para orientação.
-  - Executar um script de amostra utilizando a extensão de gestão Intune. Por exemplo, `C:\Scripts` crie o diretório e dê a todos o controlo total. Execute o seguintes script:
+  - Executar um script de amostra utilizando a extensão de gestão Intune. Por exemplo, crie o diretório e dê a `C:\Scripts` todos o controlo total. Execute o seguintes script:
 
     ```powershell
     write-output "Script worked" | out-file c:\Scripts\output.txt
@@ -240,9 +240,9 @@ Ativar a [inscrição automática do Windows 10](../enrollment/windows-enroll.md
     echo "Forced Fail" | out-file c:\temp\Fail.txt
     ```
 
-    Se o guião reportar um `AgentExecutor.log` sucesso, veja o que deve confirmar a saída do erro. Se o guião executar, o comprimento deve ser >2.
+    Se o guião reportar um sucesso, veja o que `AgentExecutor.log` deve confirmar a saída do erro. Se o guião executar, o comprimento deve ser >2.
 
-  - Para capturar os ficheiros .error e .output, o seguinte snippet executa o`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`script através do AgentExecutor para PSx86 (). Guarda os registos para a sua revisão. Lembre-se, a Extensão de Gestão Intune limpa os registos após a execução do script:
+  - Para capturar os ficheiros .error e .output, o seguinte snippet executa o script através do AgentExecutor para PSx86 `C:\Windows\SysWOW64\WindowsPowerShell\v1.0` (). Guarda os registos para a sua revisão. Lembre-se, a Extensão de Gestão Intune limpa os registos após a execução do script:
   
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"

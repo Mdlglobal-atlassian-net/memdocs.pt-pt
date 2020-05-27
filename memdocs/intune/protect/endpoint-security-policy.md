@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: reference
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 0e6a1f30d482e4811e02a8166e87aca4d1f23207
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431283"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990862"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Gerir a segurança do dispositivo com políticas de segurança de ponto final no Microsoft Intune
 
@@ -133,6 +133,6 @@ A informação nos seguintes links pode ajudá-lo a identificar e resolver confl
 - [Resolução de problemas de políticas e perfis no Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitorize as suas linhas de base de segurança](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Gerir a segurança do ponto final em Intune](../protect/endpoint-security.md)

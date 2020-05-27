@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329881"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990375"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Adicionar autoridades de certificação parceiras no Intune com o SCEP
 
@@ -74,7 +74,7 @@ Certifique-se de que tem as permissões obrigatórias para registar uma aplicaç
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Criar uma Aplicação no Azure Active Directory  
 
-1. No [portal Azure,](https://portal.azure.com)vá ao **Azure Ative Directory** > **App Registrations,** e depois selecione **New Registration**.  
+1. No [portal Azure,](https://portal.azure.com)vá ao **Azure Ative Directory**  >  **App Registrations,** e depois selecione **New Registration**.  
 
 2. No **Registo de uma** página de candidatura, especifique os seguintes detalhes:  
    - Na secção **Nome,** introduza um nome de aplicação significativo.  
@@ -89,7 +89,7 @@ Certifique-se de que tem as permissões obrigatórias para registar uma aplicaç
    > [!IMPORTANT]  
    > Antes de sair desta página, copie o valor para o segredo do cliente e grave-o para posterior utilização com a sua implementação de AC de terceiros. Este valor não é mostrado novamente. Certifique-se de rever as orientações para o seu CA de terceiros sobre como eles querem o ID de aplicação, chave de autenticação e ID do inquilino configurado.  
 
-6. Grave a sua **identificação do inquilino.** O ID do Inquilino é o texto de domínio após o sinal @ na sua conta. Por exemplo, se *admin@name.onmicrosoft.com*a sua conta for, então a sua identificação do inquilino é **name.onmicrosoft.com**.  
+6. Grave a sua **identificação do inquilino.** O ID do Inquilino é o texto de domínio após o sinal @ na sua conta. Por exemplo, se a sua conta *admin@name.onmicrosoft.com* for, então a sua identificação do inquilino é **name.onmicrosoft.com**.  
 
 7. No painel de navegação da aplicação, vá a **permissões API** ao abrigo **do Manage**, e, em seguida, selecione Adicionar **uma permissão**.  
 

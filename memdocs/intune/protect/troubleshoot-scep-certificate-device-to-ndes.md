@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c538236d57961298ff7caedd6d5e00e7cc78c4a6
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633372"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991088"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Dispositivo de resolução de problemas para comunicação do servidor NDES para perfis de certificadoS SCEP no Microsoft Intune
 
@@ -76,7 +76,7 @@ Reveja o [registo OMADM](troubleshoot-scep-certificate-profiles.md#logs-for-andr
 As entradas-chave incluem as seguintes cadeias de texto da amostra:
 
 - Há 1 pedidos
-- Recebido '200 OK' ao enviar GetCACaps(ca) para https:// \< servidor>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
+- Recebido '200 OK' ao enviar GetCACaps(ca) para https:// \< server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
 - Assinar pkiMessage utilizando a chave pertencente a [dn=CN= \< username>; serial=1]
 
 
@@ -364,6 +364,6 @@ Quando navega no URL do servidor SCEP, recebe o seguinte erro:
 
   16. Executar o comando **iisreset** para reiniciar o IIS.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Se o dispositivo chegar com sucesso ao servidor NDES para apresentar o pedido de certificado, o próximo passo é rever o módulo de [política de Conectores de Certificado Intune](troubleshoot-scep-certificate-ndes-policy-module.md).

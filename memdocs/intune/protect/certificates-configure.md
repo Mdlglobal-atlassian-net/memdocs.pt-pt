@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587299"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990390"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Utilize certificados para autenticação no Microsoft Intune
 
@@ -79,7 +79,7 @@ Quando utiliza uma Autoridade de Certificação de Terceiros (não Microsoft) (C
 
 | Plataforma              | Perfil de certificado fidedigno | Perfil de certificado PKCS | Perfil de certificado SCEP | Perfil de certificado importado pKCS  |
 |--|--|--|--|---|
-| Administrador de dispositivos Android | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png)|  ![Suportado](./media/certificates-configure/green-check.png) |
+| Android device administrator (Administrador de dispositivos Android) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png)|  ![Suportado](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> - Totalmente gerido (Proprietário do dispositivo)   | ![Suportado](./media/certificates-configure/green-check.png) |   | ![Suportado](./media/certificates-configure/green-check.png) |   |
 | Android Enterprise <br> - Dedicado (Proprietário de Dispositivos)   | ![Suportado](./media/certificates-configure/green-check.png)  |   | ![Suportado](./media/certificates-configure/green-check.png)  |   |
 | Android Enterprise <br> - Perfil de trabalho    | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) | ![Suportado](./media/certificates-configure/green-check.png) |
@@ -109,7 +109,7 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione e vá aos perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **Devices**e vá aos perfis de configuração de  >  **dispositivos**  >  **Criar perfil**.
 
    ![Navegue para Intune e crie um novo perfil para um certificado de confiança](./media/certificates-configure/certificates-configure-profile-new.png)
 
@@ -137,7 +137,7 @@ Crie um perfil de certificado fidedigno separado para cada plataforma de disposi
 
 8. Selecione **Seguinte**.
 
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
    Selecione **Seguinte**.
 

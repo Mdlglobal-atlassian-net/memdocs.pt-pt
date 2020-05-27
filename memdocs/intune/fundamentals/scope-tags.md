@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326672"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990740"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Utilizar o controlo de acesso baseado em funções (RBAC) e etiquetas de âmbito para TI distribuídos
 
@@ -43,14 +43,14 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 ## <a name="to-create-a-scope-tag"></a>Para criar uma etiqueta de âmbito
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração do Arrendatário** > **Scope (Tags)** > **Criar**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha funções de **administração do Arrendatário**  >  **Roles**  >  **Scope (Tags)**  >  **Criar**.
 2. Na página **Basics,** forneça um **Nome** e **uma Descrição**opcional. Escolha **Seguinte**.
 3. Na página **de Atribuição,** escolha os grupos que contêm os dispositivos que pretende atribuir esta etiqueta de âmbito. Escolha **Seguinte**.
 4. Na **página Review + criar,** escolha **Criar**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Para atribuir uma etiqueta de âmbito a uma função
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**funções** > de **administração** > do Inquilino Todas as**funções** > escolher um papel >**Atribuição**de **Atribuições** > .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha funções de **administração do Inquilino**Todas as  >  **Roles**  >  **funções** > escolher um papel > Atribuição de **Atribuições**  >  **Assign**.
 2. Na página **Basics,** forneça um nome de **atribuição** e **descrição.** Escolha **Seguinte**.
 3. Na página dos **Grupos De Administração,** escolha **grupos Select para incluir**, e selecione os grupos que deseja como parte desta atribuição. Os utilizadores deste grupo terão permissões para gerir utilizadores/dispositivos no Âmbito (Grupos). Escolha **Seguinte**.
 
@@ -70,10 +70,10 @@ A função de etiqueta de âmbito padrão é semelhante à funcionalidade de âm
 
 Para objetos que suportam etiquetas de mira, as etiquetas de âmbito geralmente aparecem em **Propriedades**. Por exemplo, para atribuir uma etiqueta de âmbito a um perfil de configuração, siga estes passos:
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os perfis de**configuração** de **dispositivos** > > escolha um perfil.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha os perfis de configuração de **Devices**  >  **dispositivos** > escolha um perfil.
 
-2. Escolha **Propriedades** > **Scope (Tags)** > **Editar Selecione** > **as etiquetas** de âmbito > escolha as etiquetas que pretende adicionar ao perfil. Pode atribuir um máximo de 100 etiquetas de mira a um objeto.
-4. Escolha **Selecionar** > **Rever + guardar**.
+2. Escolha **Propriedades**  >  **Scope (Tags)**  >  **Editar**  >  **As etiquetas** de âmbito > escolher as etiquetas que pretende adicionar ao perfil. Pode atribuir um máximo de 100 etiquetas de mira a um objeto.
+4. Escolha **Selecionar**  >  **Rever + guardar**.
 
 ## <a name="scope-tag-details"></a>Detalhes da etiqueta de âmbito
 Ao trabalhar com etiquetas de âmbito, lembre-se destes detalhes: 

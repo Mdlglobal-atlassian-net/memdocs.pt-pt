@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bb83a8e5b907ee55dd1c02d3af0dc04002790a18
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084851"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991109"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Adicionar e atribuir aplicações de MTD (Defesa Contra Ameaças para Dispositivos Móveis) com o Intune
 
@@ -82,7 +82,7 @@ Selecione a secção que corresponde ao seu fornecedor de MTD:
 
     3. Substitua o valor **com.lookout.enterprise.onomedasuaempresa** pelo ID de pacote de cliente que selecionou quando assinou o IPA.
 
-    4. Adicione uri redirecionamento adicional: ** &lt;companyportal://code/>** seguido de uma versão codificada de URL do seu URI redireccionador original.
+    4. Adicione uri redirecionamento adicional: ** &lt; companyportal://code/>** seguido de uma versão codificada de URL do seu URI redireccionador original.
 
     5. Adicione **Permissões Delegadas** à sua aplicação.
 
@@ -232,7 +232,7 @@ Consulte as instruções para utilizar as políticas de configuração da [aplic
 
 - Para configurações de **configuração,** selecione **os dados Do XML**.
 
-Inscreva-se no portal RADAR Wandera e navegue para **configurações** > **em configuração em inserção** > **app Push**. Selecione **Intune**, e, em seguida, copie o conteúdo abaixo e cole-o no corpo da política de configuração.  
+Inscreva-se no portal RADAR Wandera e navegue para **configurações**  >  **em configuração em inserção**  >  **app Push**. Selecione **Intune**, e, em seguida, copie o conteúdo abaixo e cole-o no corpo da política de configuração.  
 
   ```
   <dict><key>secretKey</key>

@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327488"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990841"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Configurar o conector Intune Exchange no local
 
@@ -85,7 +85,7 @@ Num servidor Windows que pode suportar o conector Intune Exchange:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Use uma conta que é um administrador no servidor de troca no local e que tem uma licença para usar o Exchange Server.
 
-2. Selecione **Administração** > de**InquilinoS Acesso de troca**.
+2. Selecione **Administração de**  >  **InquilinoS Acesso de troca**.
 
 3. Em **Configuração,** escolha **o conector Exchange ActiveSync no local** e, em seguida, selecione **Adicionar**.
 
@@ -174,7 +174,7 @@ Por padrão, a descoberta de CASs adicionais está ativada. Se precisar desligar
 
 2. Através de um editor de texto, abra **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 
-3. Change ** \<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** to ** \<IsCasFailoverEnabled>*falso*\</IsCasFailoverEnabled>**.
+3. Change ** \< IsCasFailoverEnabled>*true* \< /IsCasFailoverEnabled>** to ** \< IsCasFailoverEnabled>*falso* \< /IsCasFailoverEnabled>**.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Melodia de desempenho do conector De troca (opcional)
 
@@ -192,7 +192,7 @@ Para melhorar o desempenho do conector De troca:
 
 3. Localizar suporte de **comando sem paralelo** e definir o valor para **verdadeiro:**
 
-   \<Suporte de comando\<paralelo>verdadeiro /EnableParallelCommandSupport>
+   \<Suporte de comando paralelo>verdadeiro \< /EnableParallelCommandSupport>
 
 4. Guarde o ficheiro e, em seguida, reinicie o serviço de conector Microsoft Intune Exchange.
 
@@ -216,7 +216,7 @@ Depois de configurar com sucesso o conector Exchange, pode visualizar o estado d
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Administração** > de**InquilinoS Acesso de troca**.
+2. Selecione **Administração de**  >  **InquilinoS Acesso de troca**.
 
 3. Selecione **o conector**no local do Exchange ActiveSync e, em seguida, selecione o conector que pretende ver.
 
@@ -236,7 +236,7 @@ Pode forçar um conector a executar uma sincronização utilizando as opções *
 
    1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   2. Selecione **Administração** > de**InquilinoS Exchange Access** >  **Exchange ActiveSync on-premises conector**.
+   2. Selecione **Administração de**  >  **InquilinoS Exchange Access**Exchange  >   **ActiveSync on-premises conector**.
 
    3. Selecione o conector que pretende sincronizar e, em seguida, selecione Sincronização Rápida ou Sincronização Completa.
 

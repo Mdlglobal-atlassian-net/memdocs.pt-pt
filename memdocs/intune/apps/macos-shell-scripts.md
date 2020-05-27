@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8d290e038529a85a01de3bdb890b9f131ef8442
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 36b85fa6713af5679e59382efaeb354bb4949705
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430037"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990596"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Utilize scripts de concha em dispositivos macOS em Intune
 
@@ -169,6 +169,6 @@ Em alternativa, abra o **Terminal,** executar o `sudo killall IntuneMdmAgent` co
 ## <a name="known-issues"></a>Problemas conhecidos
 - **Sem estado de execução** de script: No caso improvável de um script ser recebido no dispositivo e o dispositivo ficar offline antes de o estado de execução ser reportado, o dispositivo não reportará o estado de execução do script na consola de administração.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Criar uma política de conformidade no Microsoft Intune](..\protect\create-compliance-policy.md)

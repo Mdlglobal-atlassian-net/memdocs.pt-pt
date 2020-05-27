@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aea6da1a0f163160719a7fcf028380e8372ad6cb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079098"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991024"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Implementação de um perfil de certificado SCEP para dispositivos no Microsoft Intune
 
@@ -36,7 +36,7 @@ Os perfis de certificado SCEP para Android resumem-se ao dispositivo como um Syn
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Valide que o dispositivo Android foi enviado a política
 
-Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support**  >  **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 
@@ -63,7 +63,7 @@ Exemplos de entradas-chave:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Validar que o dispositivo iOS/iPadOS foi enviado a política
 
-Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar um perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) vá para **Troubleshooting + Support**  >  **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 
@@ -90,7 +90,7 @@ Exemplos de entradas-chave:
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Validar que o dispositivo Windows foi enviado a política
 
-Para validar o perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)o[Microsoft Endpoint Manager vai](https://go.microsoft.com/fwlink/?linkid=2109431) para **Troubleshooting + Support** > **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
+Para validar o perfil foi enviado para o dispositivo que espera, no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)o[Microsoft Endpoint Manager vai](https://go.microsoft.com/fwlink/?linkid=2109431) para **Troubleshooting + Support**  >  **Troubleshoot**.  Na janela *Troubleshoot,* detete **as Atribuições** aos perfis de **Configuração** e, em seguida, valide as seguintes configurações:
 
 1. Especifique um Utilizador que deve receber o perfil do certificado SCEP.
 
@@ -102,13 +102,13 @@ Para validar o perfil foi enviado para o dispositivo que espera, no centro de ad
 
 ### <a name="validate-the-policy-reached-the-windows-device"></a>Validar a política chegou ao dispositivo Windows
 
-A chegada da política para o perfil está registada no registo de**administração** de administrador de um dispositivo Windows *Management-Enterprise-Diagnostics-Provider,* > com um ID de evento **306**. 
+A chegada da política para o perfil está registada no registo de administração de administrador de um dispositivo Windows *Management-Enterprise-Diagnostics-Provider,*  >  **Admin** com um ID de evento **306**. 
 
 Para abrir o tronco:
 
 1. No dispositivo, execute **eventvwr.msc** para abrir o Windows Event Viewer.
 
-2. Expandir **aplicações e serviços Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
+2. Expandir **aplicações e serviços Logs**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **Admin**.
 
 3. Procure o Evento **306,** que se assemelha ao seguinte exemplo:
 

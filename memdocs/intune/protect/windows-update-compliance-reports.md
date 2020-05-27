@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725645"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990919"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Intune relatórios de conformidade para atualizações
 
@@ -33,7 +33,7 @@ Para rever um relatório de política sobre o estado de implementação dos ané
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione o estado da**atualização**do software de**visão geral** > dos **dispositivos** > . Poderá ver informações gerais sobre o estado de qualquer cadência de atualizações que tenha atribuído.
+2. Selecione o estado da atualização do software de visão geral dos **dispositivos**  >  **Overview**  >  **Software update status**. Poderá ver informações gerais sobre o estado de qualquer cadência de atualizações que tenha atribuído.
 
 3. Para ver detalhes adicionais, selecione **Monitor**. Em seguida, abaixo das **atualizações do Software**, selecione o estado de implementação do **anel de atualização Per** e escolha o anel de implementação para rever.
 
@@ -61,7 +61,7 @@ Por exemplo, pode utilizar os seguintes valores na **Definição Adicionar ou ed
 - **Definição descrição**: Configurar id comercial para soluções Windows Analytics
 - **OMA-URI** (sensível a casos): *./Fornecedor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 - **Tipo de Dados:** cadeia
-- **Valor** \<: Utilize o GUIA mostrado no separador Telemetria Windows no seu espaço de trabalho OMS>
+- **Valor**: \< Utilize o GUIA mostrado no separador Telemetria Windows no seu espaço de trabalho OMS>
 
 > [!NOTE]
 > Para obter mais informações sobre o servidor de DM MS, veja [Fornecedor de serviço de configuração (CSP) do DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).

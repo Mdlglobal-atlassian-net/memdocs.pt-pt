@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d37bf060f11be9e295a9ef2743fa0ba33844df7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6460691ee80a5aed7571ebc2a4471a1d5099859f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325889"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990886"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Implementação de aplicações que utilizam o Intune nos Ambientes Altos e DoD da GCC 
 
@@ -41,10 +41,10 @@ Para adicionar uma aplicação de linha de negócio destinada a um ambiente GCC 
 Se precisar de [descarregar uma aplicação licenciada offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) a partir da Microsoft Store for Business, siga estes passos para descarregar a aplicação: 
 
 1. Inscreva-se na [Loja para Negócios.](https://businessstore.microsoft.com/)
-2. Selecione **Gerir** > **definições**.
+2. Selecione **Gerir**  >  **definições**.
 3. Under **Shopping Experience**, set Show offline **apps** to **On**.
 
-Ao comprar aplicativos, se estiver disponível uma versão offline, pode optar por alterar o tipo de licença para offline. Depois de obter a aplicação, pode então geri-la selecionando Produtos **de Gestão** > **& Serviços** na [Loja para Negócios](https://businessstore.microsoft.com/). Além disso, pode descarregar a app e as suas dependências. Em seguida, pode implementar esta aplicação descarregada (e as suas dependências) para utilizadores que utilizem O Intune.  
+Ao comprar aplicativos, se estiver disponível uma versão offline, pode optar por alterar o tipo de licença para offline. Depois de obter a aplicação, pode então geri-la selecionando Produtos **de Gestão**  >  **& Serviços** na [Loja para Negócios](https://businessstore.microsoft.com/). Além disso, pode descarregar a app e as suas dependências. Em seguida, pode implementar esta aplicação descarregada (e as suas dependências) para utilizadores que utilizem O Intune.  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Sincronização Intune à Loja para Negócios 
 

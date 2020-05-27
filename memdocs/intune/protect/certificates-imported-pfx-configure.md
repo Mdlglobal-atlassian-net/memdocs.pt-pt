@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8962ed0fe5fdba0879e13bd1abdb6253f555f9f0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709269"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990326"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configure e utilize certificados PKCS importados com Intune
 
@@ -272,6 +272,6 @@ Se utilizar o serviço digiCert PKI Platform, pode utilizar a Ferramenta de Impo
 
 Para saber mais sobre a ferramenta DigiCert Import, incluindo como obter a ferramenta, consulte https://knowledge.digicert.com/tutorials/microsoft-intune.html na base de conhecimento digiCert.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 O perfil está criado, mas ainda não está ativo. [Atribua](../configuration/device-profile-assign.md) o novo perfil do dispositivo.

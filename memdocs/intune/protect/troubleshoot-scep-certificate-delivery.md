@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d869f6129141b9e54058494260a45330fac29f8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325153"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991061"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>Resolução de problemas na entrega de certificados provisionados pela SCEP a dispositivos no Microsoft Intune
 
@@ -93,14 +93,14 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 No dispositivo Windows, verifique se o certificado foi entregue:
 
-- Corra **eventvwr.msc** para abrir o Espectador de Eventos. Aceda a **Aplicações e Serviços Logires** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin** e procure o Evento **39**. Este Evento deve ter uma descrição geral de: **SCEP: Certificado instalado com sucesso.**
+- Corra **eventvwr.msc** para abrir o Espectador de Eventos. Aceda a **Aplicações e Serviços Logires**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **Admin** e procure o Evento **39**. Este Evento deve ter uma descrição geral de: **SCEP: Certificado instalado com sucesso.**
 
    ![Evento 39 no registo de aplicações do Windows](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
 Para visualizar o certificado no dispositivo, faça a **certmgr.msc** para abrir os certificados MMC e verificar se os certificados raiz e SCEP estão instalados corretamente no dispositivo na loja pessoal:
 
-   1. Vá aos **Certificados (computador local)** > Certificados de > **Certificação de Raiz Fidedignas,** e verifique se o certificado de raiz da sua CA está presente.**Certificates** Os valores *para emitidos para* e *emitidos por* serão os mesmos.
-   2. Nos Certificados MMC, vá a **Certificados – Certificados** > **Pessoais do** > **Certificates**Utilizador Atual, e verifique se o certificado solicitado está presente, com *emitido por* igual ao nome da AC.
+   1. Vá aos **Certificados (computador local) Certificados**de  >  **Certificação de Raiz Fidedignas,**  >  **Certificates**e verifique se o certificado de raiz da sua CA está presente. Os valores *para emitidos para* e *emitidos por* serão os mesmos.
+   2. Nos Certificados MMC, vá a **Certificados – Certificados**  >  **Pessoais do**Utilizador  >  **Certificates**Atual, e verifique se o certificado solicitado está presente, com *emitido por* igual ao nome da AC.
 
 ## <a name="troubleshoot-failures"></a>Falhas de resolução de problemas
 
@@ -116,7 +116,7 @@ Para resolver este passo, reveja os erros que estão registados no registo de de
 
 Para problemas com problemas com o certificado não estar instalado no dispositivo, procure no registo do Windows Event erros que sugiram problemas:
 
-- No dispositivo, execute **eventvwr.msc** para abrir o Espectador de Eventos e, em seguida, vá para **Aplicações e Serviços Registos** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**.
+- No dispositivo, execute **eventvwr.msc** para abrir o Espectador de Eventos e, em seguida, vá para **Aplicações e Serviços Registos**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **Admin**.
 
 Os erros com a entrega e instalação do certificado no dispositivo estão tipicamente relacionados com as operações do Windows e não com o Intune.
 

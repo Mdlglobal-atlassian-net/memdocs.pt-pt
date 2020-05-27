@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/30/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80438775"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991172"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Pontos finais do governo dos EUA para a Microsoft Intune
 
@@ -48,18 +48,18 @@ As tabelas que se seguem listam as portas e os serviços a que o cliente do Intu
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## <a name="us-government-customer-designated-endpoints"></a>Cliente do Governo dos EUA designado pontos finais:
-- Portal Azure:\/https: /portal.azure.us/ 
-- Escritório 365:\/https: /portal.office365.us/ 
-- Intune Company Portal:\/https: /portal.manage.microsoft.us/ 
-- Microsoft Endpoint Manager centro de\/administração: https: /endpoint.microsoft.us/
+- Portal Azure: https: \/ /portal.azure.us/ 
+- Escritório 365: https: \/ /portal.office365.us/ 
+- Intune Company Portal: https: \/ /portal.manage.microsoft.us/ 
+- Microsoft Endpoint Manager centro de administração: https: \/ /endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Pontos finais do serviço parceiro que Intune depende:
-- Serviço AAD Sync:\/https: /syncservice.gov.us.microsoftonline.com/DirectoryService.svc
-- Evo STS:\/https: /login.microsoftonline.us
-- Procuração de diretório: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph:\/https: /directory.microsoftazure.us\/e https: /graph.microsoftazure.us
-- Gráfico mS:\/https: /graph.microsoft.us
-- ADRS: https:\//enterpriseregistration.microsoftonline.us
+- Serviço AAD Sync: https: \/ /syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Evo STS: https: \/ /login.microsoftonline.us
+- Procuração de diretório: https: \/ /directoryproxy.microsoftazure.us/DirectoryProxy.svc
+- AAD Graph: https: \/ /directory.microsoftazure.us e https: \/ /graph.microsoftazure.us
+- MS Graph: https: \/ /graph.microsoft.us
+- ADRS: https: \/ /enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Serviços de Notificação push do Windows
 Em dispositivos geridos pela Intune geridos através da utilização de Mobile Device Management (MDM), os Serviços de Notificação push do Windows (WNS) são necessários para ações do dispositivo e outras atividades imediatas. Para mais informações, consulte [Configurações de Firewall da Enterprise e Proxy para apoiar o tráfego wns](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)

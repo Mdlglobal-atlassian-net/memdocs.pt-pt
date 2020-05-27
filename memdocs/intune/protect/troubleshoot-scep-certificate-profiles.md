@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed98ca328bdd196cd9dd7005f5e2d5ac75ff7511
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328669"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991014"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Visão geral para resolução de perfis de certificadoS SCEP com microsoft Intune
 
@@ -125,14 +125,14 @@ Também pode enviar e enviar registos de [e-mail](../user-help/send-logs-to-your
 
 Para dispositivos que executam iOS/iPadOS, utilize registos de depuração e **Xcode** que são executados num computador Mac:
 
-1. Ligue o dispositivo iOS/iPadOS ao Mac e, em seguida, vá aos**Utilitários** de **Aplicações** > para abrir a aplicação Consola. 
+1. Ligue o dispositivo iOS/iPadOS ao Mac e, em seguida, vá aos Utilitários de **Aplicações**  >  **Utilities** para abrir a aplicação Consola. 
 
 2. Em **ação,** **selecione Incluir Mensagens de Informação** e incluir **Mensagens de Depuração**.
 
    ![Selecione opções de registo](../protect/media/troubleshoot-scep-certificate-profiles/message-options.png)
 
 3. Reproduza o problema e, em seguida, guarde os registos para um ficheiro de texto:
-   1. **Selecione** > **Editar Todos** para selecionar todas as mensagens no ecrã atual e, em seguida, selecione **Editar** > **Copy** para copiar as mensagens para a área de recortes. 
+   1. **Selecione**  >  **Editar Todos** para selecionar todas as mensagens no ecrã atual e, em seguida, selecione **Editar**  >  **Copy** para copiar as mensagens para a área de recortes. 
    2. Abra a aplicação TextEdit, colá os registos copiados num novo ficheiro de texto e, em seguida, guarde o ficheiro.
 
 
@@ -142,7 +142,7 @@ O registo do Portal da Empresa para dispositivos iOS e iPadOS não contém infor
 
 Para dispositivos que executam o Windows, utilize os registos do Windows Event para diagnosticar problemas de inscrição ou gestão de dispositivos para dispositivos que gere com o Intune.
 
-No dispositivo, abra**aplicações e serviços** > do Espectador > de **Eventos****Microsoft** > **Windows** > **Management-Enterprise-Diagnostics-Provider**
+No dispositivo, abra aplicações e serviços do **Espectador**de  >  **Eventos**  >  **Microsoft**  >  **Windows**  >  **Management-Enterprise-Diagnostics-Provider**
 
 ![Registos de eventos do Windows](../protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
 

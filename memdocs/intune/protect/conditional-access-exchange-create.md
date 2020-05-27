@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cb279677f3693200112f663b1c5c538a3426dc9
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690622"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990310"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configure Exchange on-presacesso para Intune
 
@@ -155,7 +155,7 @@ Antes de poder utilizar o seguinte procedimento para configurar o controlo de ac
 
 10. Selecione **Review + guardar,** e, em seguida, **guardar** para salvar a política de acesso condicional de troca.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Em seguida, crie uma política de conformidade e atribua-a aos utilizadores para que a Intune avalie os seus dispositivos móveis, o See [Get começou com](device-compliance-get-started.md)a conformidade do dispositivo .
 

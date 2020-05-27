@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536824"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990650"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Como adicionar aplicações de linha de negócio (LOB) macOS ao Microsoft Intune
 
@@ -52,7 +52,7 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 
 2. Marque a ferramenta descarregada como executável:
    - Inicie a aplicação de terminais.
-   - Mude o diretório para `IntuneAppUtil` o local onde está localizado.
+   - Mude o diretório para o local onde `IntuneAppUtil` está localizado.
    - Execute o seguinte comando para tornar a ferramenta executada:<br> 
        `chmod +x IntuneAppUtil`
 
@@ -60,13 +60,13 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 
     Comandos de exemplo a utilizar para a Ferramenta de Encapsulamento de Aplicações do Intune para Mac:
     > [!IMPORTANT]
-    > Certifique-se `<source_file>` de que o argumento `IntuneAppUtil` não contém espaços antes de executar os comandos.
+    > Certifique-se de que o argumento não contém espaços antes de `<source_file>` executar os `IntuneAppUtil` comandos.
 
     - `IntuneAppUtil -h`<br>
     Este comando mostra informações de utilização da ferramenta.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Este comando irá embrulhar o ficheiro de `<source_file>` aplicação *.pkg* LOB fornecido num ficheiro *.intunemac* com o mesmo nome e colocá-lo na pasta apontada por `<output_directory_path>`.
+    Este comando irá embrulhar o ficheiro de aplicação *.pkg* LOB fornecido `<source_file>` num ficheiro *.intunemac* com o mesmo nome e colocá-lo na pasta apontada por `<output_directory_path>` .
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Este comando extrai os parâmetros detetados e a versão do ficheiro *.intunemac* criado.
@@ -74,7 +74,7 @@ Tem de descarregar uma ferramenta externa, marcar a ferramenta descarregada como
 ## <a name="select-the-app-type"></a>Selecione o tipo de aplicativo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** sob os **outros** tipos de aplicações, selecione **app Line-of-business**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 

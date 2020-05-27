@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8045ac53369a471ce232f0eca3e185be2e3e85
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330665"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990783"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Envie dados de registo para armazenamento, centros de eventos ou análise de registo em Intune (pré-visualização)
 
@@ -60,7 +60,7 @@ Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa
 ## <a name="send-logs-to-azure-monitor"></a>Enviar registos para o monitor Azure
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione definições de diagnóstico **de relatórios** > **Diagnostics settings**. A primeira vez que o abrires, liga-o. Caso contrário, adicione uma definição.
+2. Selecione definições de diagnóstico **de**  >  **relatórios**. A primeira vez que o abrires, liga-o. Caso contrário, adicione uma definição.
 
     > [!div class="mx-imgBorder"]
     > ![Ligue as definições de Diagnóstico em Intune para enviar registos para o Monitor Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
@@ -85,18 +85,18 @@ Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa
 
             [O espaço de trabalho](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) de análise de registo azure fornece mais detalhes sobre estas configurações.
 
-    - **LOG** > **AuditLogs**: Escolha esta opção para enviar os registos de [auditoria Intune](monitor-audit-logs.md) para a sua conta de armazenamento, centro de eventos ou análise de registo. Os registos de auditoria mostram o histórico de cada tarefa que gera uma mudança no Intune, incluindo quem o fez e quando.
+    - **LOG**  >  **Registos de Auditoria**: Escolha esta opção para enviar os registos de [auditoria Intune](monitor-audit-logs.md) para a sua conta de armazenamento, centro de eventos ou análise de registo. Os registos de auditoria mostram o histórico de cada tarefa que gera uma mudança no Intune, incluindo quem o fez e quando.
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
 
-    - **Log** > **OperationalLogs**: Os registos operacionais (pré-visualização) mostram o sucesso ou falha dos utilizadores e dispositivos que se inscrevem no Intune, bem como detalhes sobre dispositivos não conformes. Escolha esta opção para enviar os registos de inscrição para a sua conta de armazenamento, centro de eventos ou análise de registo.
+    - **LOG**  >  **Registos Operacionais**: Registos operacionais (pré-visualização) mostram o sucesso ou falha dos utilizadores e dispositivos que se inscrevem em Intune, bem como detalhes sobre dispositivos não conformes. Escolha esta opção para enviar os registos de inscrição para a sua conta de armazenamento, centro de eventos ou análise de registo.
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
 
       > [!NOTE]
       > Os registos operacionais estão em pré-visualização. Para fornecer feedback, incluindo informações nos registos operacionais, aceda ao [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
-    - **LOG** > **DeviceComplianceOrg**: Registos organizacionais de conformidade do dispositivo (pré-visualização) mostram o relatório organizacional de conformidade do dispositivo em Intune, e detalhes de dispositivos não conformes. Escolha esta opção para enviar os registos de conformidade para a sua conta de armazenamento, centro de eventos ou análise de registo.
+    - **LOG**  >  **DispositivoComplianceOrg**: Registos organizacionais de conformidade com dispositivos (pré-visualização) mostram o relatório organizacional de conformidade do dispositivo em Intune e detalhes de dispositivos não conformes. Escolha esta opção para enviar os registos de conformidade para a sua conta de armazenamento, centro de eventos ou análise de registo.
 
       Se optar por utilizar uma conta de armazenamento, introduza também quantos dias pretende manter os dados (retenção). Para manter os dados para sempre, detete a **Retenção (dias)** para `0` (zero).
  
@@ -108,7 +108,7 @@ Dependendo de onde pretende encaminhar os dados do registo de auditoria, precisa
     > [!div class="mx-imgBorder"]
     > ![Imagem de amostra que envia registos de auditoria intune para uma conta de armazenamento Azure](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
-4. **Guarde** as suas alterações. A sua configuração está na lista. Uma vez criado, pode alterar as definições selecionando a **definição** > de Editar**Guardar**.
+4. **Guarde** as suas alterações. A sua configuração está na lista. Uma vez criado, pode alterar as definições selecionando a **definição**de Editar  >  **Guardar**.
 
 ## <a name="use-audit-logs-throughout-intune"></a>Utilize registos de auditoria em toda a Intune
 
