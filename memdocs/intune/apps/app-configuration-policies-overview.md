@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: b6e42049a7fef0646fa94bde1b42d62c1ef8c066
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023015"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853558"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Políticas de configuração de aplicações para o Microsoft Intune
 
@@ -99,7 +99,7 @@ Pode validar a política de configuração da aplicação utilizando os seguinte
 
       ![Segunda imagem do estado de instalação do dispositivo](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Além disso, em**dispositivos** ->  **Intune** -> **Todos os dispositivos** do lado esquerdo do ecrã, a opção **de configuração** da aplicação apresentará todas as políticas atribuídas e o seu estado:
+      Além disso, em dispositivos **Intune**  ->  **Devices**  ->  **Todos os dispositivos** do lado esquerdo do ecrã, a opção **de configuração** da aplicação apresentará todas as políticas atribuídas e o seu estado:
 
       ![Screenshot da configuração da aplicação](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -107,10 +107,10 @@ Pode validar a política de configuração da aplicação utilizando os seguinte
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>configuração iOS/iPadOS em dispositivos não geridos
 
-Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos não geridos para configuração de aplicações geridas. Além dos passos abaixo, pode aceder a registos de aplicações geridos através do Microsoft Edge. Para mais informações, consulte [Use Microsoft Edge no iOS/iPadOS para aceder a registos de aplicações geridos](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos não geridos para configuração de aplicações geridas. Além dos passos abaixo, pode aceder a registos de aplicações geridos através do Microsoft Edge. Para mais informações, consulte [o Use Edge para iOS e Android para aceder aos registos de aplicações geridos.](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)
 
 1. Caso ainda não estivesse instalado no dispositivo, descarregue e instale o **Microsoft Edge** a partir da App Store. Para mais informações, consulte [as aplicações protegidas microsoft Intune](apps-supported-intune-apps.md).
-2. Lance o **Microsoft Edge** e selecione **sobre** > **insinserção** a partir da barra de navegação.
+2. Lance o **Microsoft Edge** e selecione **sobre**  >  **insinserção** a partir da barra de navegação.
 3. Clique em **Começar**.
 4. Clique em **Registos de Partilha**.
 5. Utilize a aplicação de correio à sua escolha para enviar o registo para si mesmo para que possam ser vistos no seu PC. 
@@ -154,7 +154,7 @@ Os detalhes de configuração da sua aplicação devem corresponder às polític
 Pode validar a configuração do iOS/iPadOS com o **Intune Diagnostic Log** em dispositivos geridos para a configuração da aplicação gerida.
 
 1. Caso ainda não estivesse instalado no dispositivo, descarregue e instale o **Microsoft Edge** a partir da App Store. Para mais informações, consulte [as aplicações protegidas microsoft Intune](apps-supported-intune-apps.md).
-2. Lance **o Microsoft Edge** e selecione **sobre** > **insinserção** a partir da barra de navegação.
+2. Lance **o Microsoft Edge** e selecione **sobre**  >  **insinserção** a partir da barra de navegação.
 3. Clique em **Começar**.
 4. Clique em **Registos de Partilha**.
 5. Utilize a aplicação de correio à sua escolha para enviar o registo para si mesmo para que possam ser vistos no seu PC. 
@@ -168,8 +168,8 @@ Pode validar a configuração do Android com o **Intune Diagnostic Log** em disp
 Para recolher registos de um dispositivo Android, você ou o utilizador final devem descarregar os registos do dispositivo através de uma ligação USB (ou o equivalente do **File Explorer** no dispositivo). Eis os passos:
 
 1. Ligue o dispositivo Android ao seu computador com o cabo USB.
-2. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`encontre.
-3. Na `com.microsoft.windowsintune.companyportal` pasta, abra a pasta `OMADMLog_0`Ficheiros e abra .
+2. No computador, procure um diretório com o nome do seu dispositivo. Nesse diretório, `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` encontre.
+3. Na `com.microsoft.windowsintune.companyportal` pasta, abra a pasta Ficheiros e abra `OMADMLog_0` .
 3. Procure `AppConfigHelper` para encontrar mensagens relacionadas com a configuração da aplicação. Os resultados serão semelhantes ao seguinte bloco de dados:
 
     `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`

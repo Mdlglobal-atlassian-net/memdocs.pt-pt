@@ -1,12 +1,12 @@
 ---
-title: Quadro de proteção de dados utilizando políticas de proteção de aplicações
+title: Data protection framework using app protection policies (Arquitetura de proteção de dados com políticas de proteção de aplicações)
 titleSuffix: Microsoft Intune
 description: Saiba como as Políticas de Proteção de Aplicações (APP) garantem que os dados de uma organização permanecem seguros ou contidos numa aplicação gerida, independentemente de o dispositivo estar matriculado.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182298"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853575"
 ---
-# <a name="data-protection-framework-using-app-protection-policies"></a>Quadro de proteção de dados utilizando políticas de proteção de aplicações 
+# <a name="data-protection-framework-using-app-protection-policies"></a>Data protection framework using app protection policies (Arquitetura de proteção de dados com políticas de proteção de aplicações) 
 
 À medida que mais organizações implementam estratégias de dispositivos móveis para aceder a dados de trabalho ou escolares, a proteção contra fugas de dados torna-se primordial. A solução de gestão de aplicações móveis da Intune para proteger contra fugas de dados é políticas de proteção de aplicações (APP). A APP são regras que garantem que os dados de uma organização permanecem seguros ou contidos numa aplicação gerida, independentemente de o dispositivo estar matriculado. Para mais informações, consulte a visão geral das políticas de proteção de [aplicações](app-protection-policy.md).
 
@@ -48,14 +48,14 @@ A Microsoft recomenda a seguinte abordagem do anel de implementação para a est
 | Anel de implantação  | Inquilino  | Equipas de avaliação  | Saída  | Linha cronológica  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Garantia de Qualidade  | Inquilino de pré-produção  | Proprietários de capacidademóvel, Segurança, Avaliação de Risco, Privacidade, UX  | Validação do cenário funcional, projeto de documentação  | 0-30 dias  |
-| Pré-visualização  | Inquilino de produção  | Proprietários de capacidademóvel, UX  | Validação do cenário do utilizador final, documentação virada para o utilizador  | 7-14 dias, pós Garantia de Qualidade  |
+| Pré-visualizar  | Inquilino de produção  | Proprietários de capacidademóvel, UX  | Validação do cenário do utilizador final, documentação virada para o utilizador  | 7-14 dias, pós Garantia de Qualidade  |
 | Produção  | Inquilino de produção  | Proprietários de capacidade móvel, balcão de ajuda de TI  | N/D  | 7 dias a várias semanas, pós Pré-visualização  |
 
 Como indica o quadro acima indicado, todas as alterações às Políticas de Proteção de Aplicações devem ser realizadas primeiro num ambiente de pré-produção para compreender as implicações da definição de políticas. Uma vez concluídos os testes, as alterações podem ser transferidas para a produção e aplicadas a um subconjunto de utilizadores de produção, geralmente, ao departamento de TI e a outros grupos aplicáveis. E, finalmente, o lançamento pode ser concluído para o resto da comunidade de utilizadores móveis. O lançamento para a produção pode demorar mais tempo, dependendo da escala de impacto no que diz respeito à alteração. Se não houver impacto do utilizador, a alteração deve ser lançada rapidamente, enquanto que, se a alteração resultar no impacto do utilizador, o lançamento poderá ter de ser mais lento devido à necessidade de comunicar alterações à população utilizadora.
 
 Ao testar alterações numa APP, esteja ciente do tempo de [entrega](app-protection-policy-delivery.md). O estado da entrega de APP para um determinado utilizador pode ser monitorizado. Para mais informações, consulte como monitorizar as políticas de [proteção de aplicações](app-protection-policies-monitor.md).
 
-As definições individuais de APP para cada aplicação podem ser validadas em dispositivos que utilizem o Edge e o URL *sobre:Intunehelp*. Para mais informações, consulte os registos de proteção de [aplicações do cliente E](app-protection-policy-settings-log.md) [gerencie o acesso à Web utilizando](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)o Microsoft Edge com o Microsoft Intune .
+As definições individuais de APP para cada aplicação podem ser validadas em dispositivos que utilizem o Edge e o URL *sobre:Intunehelp*. Para mais informações, consulte os registos de proteção de [aplicações do cliente Review](app-protection-policy-settings-log.md) e use edge para [iOS e Android para aceder a registos de aplicações geridos](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Definições do quadro de proteção de dados da APP
 
@@ -120,7 +120,7 @@ As políticas no nível 1 impõem um nível razoável de acesso a dados, minimiz
 | Sobrepor biométrico em vez de PIN para acesso  | Requerer  | iOS/iPadOS, Android  |   |
 | Tempo limite (minutos de atividade)  | 720  | iOS/iPadOS, Android  |   |
 | Id do rosto em vez de PIN para acesso  | Permitir  | iOS/iPadOS  |   |
-| Reposição do PIN após número de dias  | Não  | iOS/iPadOS, Android  |   |
+| Reposição do PIN após número de dias  | No  | iOS/iPadOS, Android  |   |
 | PIN da aplicação quando o PIN do dispositivo estiver definido  | Requerer  | iOS/iPadOS, Android  | Se o dispositivo estiver matriculado no Intune, os administradores podem considerar a definição deste para "Não necessário" se estiverem a impor um PIN de dispositivo forte através de uma política de conformidade do dispositivo.  |
 | Credenciais da conta escolar ou profissional para acesso  | Não é necessária  | iOS/iPadOS, Android  |   |
 | Verificar novamente os requisitos de acesso após (minutos de inatividade)  | 30  | iOS/iPadOS, Android  |   |
@@ -140,7 +140,7 @@ As políticas no nível 1 impõem um nível razoável de acesso a dados, minimiz
 
 O nível 2 é a configuração de proteção de dados recomendada como padrão para dispositivos onde os utilizadores acedem a informações mais sensíveis. Estes dispositivos são um alvo natural nas empresas de hoje. Estas recomendações não assumem um grande pessoal de profissionais de segurança altamente qualificados, pelo que devem ser acessíveis à maioria das organizações empresariais. Esta configuração expande-se sobre a configuração no Nível 1, restringindo cenários de transferência de dados e exigindo uma versão mínima do sistema operativo.
 
-As definições de política aplicadas no nível 2 incluem todas as definições de política recomendadas para o nível 1 e apenas adiciona ou atualiza as definições de política abaixo para implementar mais controlos e uma configuração mais sofisticada do que o nível 1. Embora estas definições possam ter um impacto ligeiramente maior para os utilizadores ou para as aplicações, impõem um nível de proteção de dados mais proporcional aos riscos que os utilizadores enfrentam com acesso a informações sensíveis em dispositivos móveis.
+As definições de política aplicadas no nível 2 incluem todas as definições de política recomendadas para o nível 1, mas apenas lista as configurações abaixo que foram adicionadas ou alteradas para implementar mais controlos e uma configuração mais sofisticada do que o nível 1. Embora estas definições possam ter um impacto ligeiramente maior para os utilizadores ou para as aplicações, impõem um nível de proteção de dados mais proporcional aos riscos que os utilizadores enfrentam com acesso a informações sensíveis em dispositivos móveis.
 
 #### <a name="data-protection"></a>Proteção de dados
 
@@ -159,15 +159,15 @@ As definições de política aplicadas no nível 2 incluem todas as definições
 
 | Definição | Descrição da definição |          Valor / Ação  |          Plataforma        | Notas |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor.Build <br>Exemplo: 12.4.6* / Acesso ao bloco |          iOS/iPadOS        | A Microsoft recomenda configurar a versão principal do iOS mínimo para combinar com as versões suportadas para iOS para aplicações da Microsoft.   As aplicações da Microsoft suportam uma abordagem N-1 onde n é a versão atual do iOS. Para valores de versão menor estonteantes e de construção, a Microsoft recomenda garantir que os dispositivos estão atualizados com as respetivas atualizações de segurança. Consulte [as atualizações](https://support.apple.com/en-us/HT201222) de segurança da Apple para as mais recentes recomendações da Apple |
-| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor<br> Exemplo: 5.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
-| Condições do dispositivo  |       Versão de patch de min  |          *Formato: YYYY-MM-DD <br> Exemplo: 2020-01-01* / Acesso ao bloco  |          Android        | Os dispositivos Android podem receber patches de segurança mensais, mas o lançamento depende de OEMs e/ou transportadoras. As organizações devem garantir que os dispositivos Android implantados recebem atualizações de segurança antes de implementar esta definição. Consulte os [Boletims](https://source.android.com/security/bulletin/) de Segurança Android para ver os mais recentes lançamentos de patch.  |
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor.Build <br> Exemplo: 12.4.6* / Acesso ao bloco |          iOS/iPadOS        | A Microsoft recomenda configurar a versão principal do iOS mínimo para combinar com as versões suportadas para iOS para aplicações da Microsoft.   As aplicações da Microsoft suportam uma abordagem N-1 onde n é a versão atual do iOS. Para valores de versão menor estonteantes e de construção, a Microsoft recomenda garantir que os dispositivos estão atualizados com as respetivas atualizações de segurança. Consulte [as atualizações](https://support.apple.com/en-us/HT201222) de segurança da Apple para as mais recentes recomendações da Apple |
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor <br>   Exemplo: 5.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
+| Condições do dispositivo  |       Versão de patch de min  |          *Formato: Yyyy-MM-DD <br> Exemplo: acesso 2020-01-01* / Bloqueio  |          Android        | Os dispositivos Android podem receber patches de segurança mensais, mas o lançamento depende de OEMs e/ou transportadoras. As organizações devem garantir que os dispositivos Android implantados recebem atualizações de segurança antes de implementar esta definição. Consulte os [Boletims](https://source.android.com/security/bulletin/) de Segurança Android para ver os mais recentes lançamentos de patch.  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Alta proteção de dados da empresa de nível 3 
 
 O nível 3 é a configuração de proteção de dados recomendada como padrão para organizações com grandes e sofisticadas organizações de segurança, ou para utilizadores e grupos específicos que serão exclusivamente visados por adversários. Tais organizações são tipicamente alvo de adversários bem financiados e sofisticados, e como tal merecem os constrangimentos e controlos adicionais descritos. Esta configuração expande-se sobre a configuração no Nível 2, restringindo cenários adicionais de transferência de dados, aumentando a complexidade da configuração PIN e adicionando a deteção de ameaças móveis.  
 
-As definições de política aplicadas no nível 3 incluem todas as definições de política recomendadas para os níveis 2 e 1 e apenas adiciona ou atualiza as definições de política abaixo para implementar configuração e controlos rigorosos de proteção de dados. Estas definições políticas podem ter um impacto potencialmente significativo para os utilizadores ou para as aplicações, aplicando um nível de segurança proporcional aos riscos que as organizações-alvo enfrentam.  
+As definições de política aplicadas no nível 3 incluem todas as definições de política recomendadas para o nível 2, mas apenas lista as configurações abaixo que foram adicionadas ou alteradas para implementar mais controlos e uma configuração mais sofisticada do que o nível 2. Estas definições políticas podem ter um impacto potencialmente significativo para os utilizadores ou para as aplicações, aplicando um nível de segurança proporcional aos riscos que as organizações-alvo enfrentam.  
 
 #### <a name="data-protection"></a>Proteção de dados
 
@@ -185,14 +185,14 @@ As definições de política aplicadas no nível 3 incluem todas as definições
 |-----------------------------------------------------------|--------------------|---------------------------------|
 |       PIN simples  |          Bloquear  |          iOS/iPadOS, Android  |
 |       Selecione comprimento pin mínimo  |          6  |          iOS/iPadOS, Android  |
-|       PIN reset após o número de dias  |          Sim  |          iOS/iPadOS, Android  |
+|       PIN reset após o número de dias  |          Yes  |          iOS/iPadOS, Android  |
 |       Número de dias  |          365  |          iOS/iPadOS, Android  |
 
 #### <a name="conditional-launch"></a>Iniciação condicional
 
 | Definição | Descrição da definição |          Valor / Ação  |          Plataforma        | Notas |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor<br> Exemplo: 8.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
+| Condições do dispositivo  |       Versão Min OS  |          *Formato: Major.Minor <br>   Exemplo: 8.0* / Acesso ao bloco   |          Android        | A Microsoft recomenda configurar a versão principal do Android mínima para combinar com as versões Android suportadas para aplicações da Microsoft. Os OEMs e dispositivos que aderem ao Android Enterprise recomendam que os requisitos devem suportar o lançamento de envio atual + uma atualização de letra.   Atualmente, o Android recomenda o Android 8.0 e mais tarde para os trabalhadores do conhecimento.   Consulte [os requisitos recomendados](https://www.android.com/enterprise/recommended/requirements/) para android enterprise para as mais recentes recomendações do Android |
 |       Condições do dispositivo  |          Dispositivos com jailbreak/rooting  |        Dados de N/A / Limpeza  |          iOS/iPadOS, Android        |  |
 |       Condições do dispositivo  |          Max permitiu o nível de ameaça  |          Acesso seguro / Bloco  |          iOS/iPadOS, Android        | <p>Dispositivos não matriculados podem ser inspecionados para obter ameaças usando a Defesa de Ameaças Móveis. Para mais informações, consulte [mobile threat defense para dispositivos não matriculados](https://aka.ms/mtdmamdocs).      </p><p>     Se o dispositivo estiver matriculado, esta definição pode ser ignorada a favor da implementação da Defesa de Ameaças Móveis para dispositivos matriculados. Para mais informações, consulte [mobile threat defense para dispositivos matriculados](../protect/mtd-device-compliance-policy-create.md).</p> |
 

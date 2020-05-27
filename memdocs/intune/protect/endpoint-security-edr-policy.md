@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 063d7fbbd5572e1ff2399efc161d319c6c9c5c1b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: f17f781d95f5560e73cc7f55cddac3e5c8d5022e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824122"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864944"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Política de deteção e resposta de ponto final para segurança de ponto final em Intune
 
@@ -265,4 +265,4 @@ Pode visualizar detalhes sobre as políticas EDR que implementa no centro de adm
 ## <a name="next-steps"></a>Passos seguintes
 
 - [Configure políticas de segurança de Endpoint](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Saiba mais sobre [deteção e resposta](https://docs.microsoft.com/windows/security/-threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) de ponto final na documentação ATP do Microsoft Defender.
+- Saiba mais sobre [deteção e resposta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) de ponto final na documentação ATP do Microsoft Defender.

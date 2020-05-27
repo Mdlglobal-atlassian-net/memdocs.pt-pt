@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/12/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 533c0117b73883776e3dbdd4628fda7630a3a15a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327901"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881047"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Enviar registos dos dispositivos Android para os programadores do Portal da Empresa
 
@@ -37,7 +37,7 @@ Para enviar registos para a Microsoft:
 
 1. Abra a aplicação Portal da Empresa.
 
-2. Toque no **menu** > **Ajude suporte** > **de e-mail**.
+2. Toque no **menu**  >  **Ajude suporte**de  >  **e-mail**.
 
     > [!NOTE]
     > **Menu** pode ser um botão de software ou um botão de hardware, consoante o dispositivo Android que tem.
@@ -46,6 +46,6 @@ Para enviar registos para a Microsoft:
 
 4. Depois de o carregamento estar concluído, irá receber um ID do incidente. Guarde o ID dos seus registos.
 
-Para contactar diretamente a equipa do <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>Portal da Empresa para Android, envie um e-mail. 
+Para contactar diretamente a equipa do Portal da Empresa para Android, envie um <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a> e-mail. 
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

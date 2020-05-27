@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e6f8c7b4501f0f15d00b094d7d90ad66225dd9
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: be6958f36d15032d93cee49d19617fe5f2b04bc0
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401773"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880752"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Configure perfis celulares eSIM em Intune (pré-visualização pública)
 
@@ -54,21 +54,7 @@ Este artigo orienta-o ao longo destes passos.
 
 ## <a name="esim-capable-devices"></a>Dispositivos compatíveis com eSIM
 
-Os seguintes dispositivos foram anunciados como sendo compatíveis com eSIM ou encontram-se no mercado atualmente. Além disso, verifique se [o seu dispositivo suporta o eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
-- Acer Swift 7
-- Asus NovaGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP EliteBook G5
-- HP Envy x2
-- HP ProBook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+Se não tiver a certeza se os seus dispositivos suportam eSIM, contacte o fabricante do dispositivo. Nos dispositivos Windows, pode confirmar a capacidade de suporte do eSIM. Para mais informações, consulte [Utilize um eSIM para obter uma ligação de dados celulares no seu PC Windows 10](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## <a name="step-1-add-cellular-activation-codes"></a>Passo 1: adicionar códigos de ativação celulares
 

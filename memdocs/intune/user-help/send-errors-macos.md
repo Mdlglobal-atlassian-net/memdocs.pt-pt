@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/25/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb10a81f015b5ffa4b1d22d2afab1e8c4d40d05
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327913"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881423"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Submeter os erros do seu dispositivo macOS gerido às pessoas certas
 
@@ -38,7 +38,7 @@ Para enviar detalhes sobre um erro na aplicação Portal da Empresa:
 
 - Clique no menu **Ajuda** > **Guardar Relatório de Diagnóstico**. Selecione uma localização para guardar o ficheiro. Em seguida, envie por e-mail ou carregue este ficheiro para o responsável pelo suporte da sua empresa.
 
-- Se a sua aplicação de e-mail estiver configurada, pode enviar o relatório de diagnóstico indo **para ajudar a** > **enviar relatório de diagnóstico**. Depois de carregar os registos, clique em **Enviar detalhes por e-mail**.
+- Se a sua aplicação de e-mail estiver configurada, pode enviar o relatório de diagnóstico indo **para ajudar a**enviar relatório de  >  **diagnóstico**. Depois de carregar os registos, clique em **Enviar detalhes por e-mail**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Enviar erros para os programadores do Portal da Empresa para dispositivos macOS
 

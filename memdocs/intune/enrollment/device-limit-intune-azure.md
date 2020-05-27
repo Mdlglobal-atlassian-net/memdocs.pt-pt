@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749b648cb3527c75aac85fd7817b918a61f3a2a8
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83733644"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864859"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Compreender as restrições de limite de dispositivos da Intune e da Azure AD
 
@@ -54,15 +54,15 @@ Se tiver as restrições de limite do dispositivo Intune e Azure definidas, a ta
 | Administrador de dispositivos Android DEM | Não | | Não | 
 | iOS/macOS BYOD | Sim | Sim | Sim |
 | Inscrição de dispositivos automatizados iOS/macOS (ADE) | Sim | Sim | Sim |
-| iOS/macOS ADE | Não | Sim | Não |
+| iOS/macOS ADE | No | Yes | No |
 | Windows BYOD | Sim | Sim | Sim |
 | Apenas para O MD do Windows | | Sim | Sim |
-| AD do Windows Azure juntou-se| Sim | Sim | Não |
-| Windows Autopilot | Sim | Sim | Não |
-| AD Azure híbrido windows juntou-se | Não | Não | Sim |
-| Cogestão do Windows | Não | Sim | Não |
-| Windows DEM | Não | Sim | Não |
-| Inscrição a granel do Windows | Não | Sim | Não |
+| AD do Windows Azure juntou-se| Sim | Sim | No |
+| Windows Autopilot | Sim | Sim | No |
+| AD Azure híbrido windows juntou-se | Não | Não | Yes |
+| Cogestão do Windows | No | Yes | No |
+| Windows DEM | No | Yes | No |
+| Inscrição a granel do Windows | No | Yes | No |
 
 
 ## <a name="android-and-ios-devices"></a>Dispositivos Android e iOS
@@ -112,8 +112,8 @@ Para a restrição de limite de dispositivo seletiva em Azure, o **número máxi
 **Resultado:** Só pode sinuosar dois dispositivos antes de serem bloqueados. Pode registar até cinco dispositivos.
 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
-- [Crie uma restrição de limite de dispositivo em Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
+- [Crie uma restrição de limite de dispositivo em Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Configure as definições do dispositivo em Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Saiba mais sobre o registo e o domínio adeferido.](https://docs.microsoft.com/azure/active-directory/devices/overview.md#getting-devices-in-azure-ad)
+- [Saiba mais sobre o registo e o domínio adeferido.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/24/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324101"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881392"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Inscrição de dispositivos Windows no Portal da Empresa Intune  
 
@@ -39,7 +39,7 @@ Pode já ter a aplicação Portal da Empresa instalada no seu dispositivo. Consu
 
 2. No campo **de Pesquisa,** digite **portal da empresa.**
 
-3. Na lista de resultados, selecione **Instalado rportal** > da empresa **.**
+3. Na lista de resultados, selecione **Instalado rportal da empresa**  >  **Install**.
 
 4. Selecione **Instalar** ou **Gratuito**. Não há diferença entre estas duas opções; as palavras aparecem com base na forma como a sua organização criou a aplicação.  
 
@@ -62,18 +62,18 @@ Os passos de inscrição diferem para diferentes versões dos dispositivos Windo
 
 4. Se a sua versão é  
 
-    * __1607 ou mais tarde:__ Inscreva o seu dispositivo através do trabalho de acesso à [**conta** >  **de definições** > ou à rota**escolar** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 ou mais cedo:__ Inscreva o seu dispositivo através da Conta de [ **Definições** > **A sua** rota de**contas** > ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 ou mais tarde:__ Inscreva o seu dispositivo através do trabalho de acesso à conta [ **de definições**  >  **Account**  >  **ou** à rota escolar](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou mais cedo:__ Inscreva o seu dispositivo através da Conta de [ **Definições**A sua rota de  >  **Account**  >  **contas** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Dispositivos com o Windows 10 Mobile
 
 1. Vá a __Todas as aplicações__ e selecione a aplicação __Definições.__
-2. Selecione __sistema__ > __sobre__.
+2. Selecione __sistema__  >  __sobre__.
 3. Em __informações do Dispositivo,__ encontre a __versão__.  
 4. Se a sua versão é  
 
-    * __1607 ou mais tarde:__ Inscreva o seu dispositivo utilizando o trabalho de acesso [ **definições** > ou rota**escolar** ](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 ou mais cedo:__ Inscreva o seu dispositivo utilizando a rota [ **'Contas Definições'.** > **Accounts** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)  
+    * __1607 ou mais tarde:__ Inscreva o seu dispositivo utilizando o trabalho de acesso [ **definições**  >  **ou** rota escolar](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 ou mais cedo:__ Inscreva o seu dispositivo utilizando a [rota  >  **'Contas Definições'.** **Settings**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)  
 
 ## <a name="enroll-non-windows-10-devices"></a>Inscreva dispositivos não Windows 10  
 Utilize os seguintes artigos para inscrever outros dispositivos Windows suportados através do site do Portal da Empresa:   

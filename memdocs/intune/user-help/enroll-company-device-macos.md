@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4a20e1b26df1d07a80d8919f8e59e0d9117f891d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324909"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880269"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Inscrever um dispositivo macOS fornecido pela organização para gestão
 
@@ -70,12 +70,12 @@ Conclua os seguintes passos para inscrever o seu dispositivo macOS para gestão.
 
 Transfira a aplicação Portal da Empresa do Intune para macOS no seu dispositivo. A aplicação permite-lhe monitorizar, sincronizar, adicionar e remover o seu dispositivo da gestão, bem como instalar aplicações. Estes passos também descrevem a forma como pode registar o seu dispositivo com o Portal da Empresa.
 
-1. No seu dispositivo macOS, vá para [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
+1. No seu dispositivo macOS, vá para [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx) .
 2. Inicie sessão no site do Portal da Empresa com a sua conta escolar ou profissional. 
 3. Clique em **Get the App** (Obter a Aplicação) para transferir o instalador do Portal da Empresa para macOS.
 4. Quando lhe for pedido, abra o ficheiro .pkg e conclua os passos de instalação.
 5. Abra a aplicação Portal da Empresa e inicie sessão com a sua conta escolar ou profissional.
 6. Localize o seu dispositivo e clique em **Register** (Registar).
-7. Clique em **Continuar** > **Feito**. O seu dispositivo deverá agora aparecer na aplicação Portal da Empresa como um dispositivo empresarial e em conformidade.
+7. Clique em **Continuar**  >  **Feito**. O seu dispositivo deverá agora aparecer na aplicação Portal da Empresa como um dispositivo empresarial e em conformidade.
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

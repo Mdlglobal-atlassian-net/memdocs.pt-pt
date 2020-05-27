@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077789"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881536"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Configurar dispositivo iOS ou iPadOS com portal da empresa e cartão de dados de confiar
 
@@ -68,7 +68,7 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 
     ![Imagem de exemplo da aplicação Do Portal da Empresa com mensagem e código no ecrã.](./media/copy-code-intercede.png)   
 
-3. Mude para o seu dispositivo inteligente https://microsoft.com/deviceloginativado pelo cartão e vá para . 
+3. Mude para o seu dispositivo inteligente ativado pelo cartão e vá para https://microsoft.com/devicelogin . 
 4. Introduza o código que escreveu anteriormente.  
 
     ![Exemplo de screenshot do site do Portal da Empresa "Introduzir código".](./media/enter-code-intercede.png)   
@@ -99,7 +99,7 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 16. Volte ao seu dispositivo móvel. No Portal da Empresa > obter ecrã **de código QR,** toque **em Continuar**. 
 
     ![Exemplo de screenshot do portal da empresa Obter ecrã de código QR.](./media/get-qr-code-intercede.png)  
-17. Toque bem **na câmara** > de utilização **.**  
+17. Toque bem **na câmara de utilização**  >  **OK**.  
 
     ![Exemplo de imagem de um pedido do Portal da Empresa, pedindo permissão para permitir o acesso à câmara.](./media/allow-cp-camera-access-intercede.png)  
 18. Escaneie a imagem do código QR que está no seu dispositivo inteligente ativado pelo cartão.  

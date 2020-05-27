@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3ad6baf1ec1ed892495845e0b9fdaaa5583bba85
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078367"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853643"
 ---
 # <a name="app-protection-policies-overview"></a>Descrição geral das políticas de proteção de aplicações
 
@@ -84,6 +84,18 @@ O suporte da plataforma de políticas de proteção de aplicações intune alinh
 > [!IMPORTANT]
 > O Portal da Empresa Intune é necessário no dispositivo para receber Políticas de Proteção de Aplicações no Android. Para obter mais informações, veja os [Requisitos das aplicações de acesso ao Portal da Empresa do Intune](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Quadro de proteção de dados de proteção de aplicações
+
+As opções disponíveis nas políticas de proteção de aplicações (APP) permitem às organizações adaptar a proteção às suas necessidades específicas. Para alguns, pode não ser óbvio quais as definições de política necessárias para implementar um cenário completo. Para ajudar as organizações a priorizar o endurecimento do ponto final do cliente móvel, a Microsoft introduziu taxonomia para o seu quadro de proteção de dados APP para a gestão de aplicações móveis iOS e Android.
+
+O quadro de proteção de dados da APP é organizado em três níveis distintos de configuração, com cada nível de construção fora do nível anterior:
+
+- **A proteção básica de dados da empresa** (Nível 1) garante que as aplicações estão protegidas com um PIN e encriptadas e realizam operações de limpeza seletiva. Para dispositivos Android, este nível valida o atestado do dispositivo Android. Esta é uma configuração de nível de entrada que fornece um controlo de proteção de dados semelhante nas políticas de caixa de correio Exchange Online e introduz TI e a população utilizadora para APP.
+- **A empresa reforçada proteção de dados** (Nível 2) introduz mecanismos de prevenção de fugas de dados de APP e requisitos mínimos de SO. Esta é a configuração que é aplicável à maioria dos utilizadores móveis que acedem a dados do trabalho ou da escola.
+- **A alta proteção de dados** da empresa (Nível 3) introduz mecanismos avançados de proteção de dados, configuração PIN melhorada e APP Mobile Threat Defense. Esta configuração é desejável para os utilizadores que acedem a dados de alto risco.
+
+Para ver as recomendações específicas para cada nível de configuração e as aplicações mínimas que devem ser protegidas, reveja o quadro de proteção de dados utilizando políticas de proteção de [aplicações](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Como as políticas de proteção de aplicações protegem os dados das aplicações
 
 ### <a name="apps-without-app-protection-policies"></a>Aplicações sem políticas de proteção de aplicações
@@ -143,13 +155,13 @@ O [Intune SDK](../developer/app-sdk.md) utiliza algumas capacidades avançadas d
 
 A lista que se segue fornece os requisitos do utilizador final para utilizar as políticas de proteção de aplicações numa aplicação gerida pelo Intune:
 
-- O utilizador final tem de ter uma conta no Azure Active Directory (AAD). Veja [Adicionar utilizadores e conceder permissões administrativas no Intune](../fundamentals/users-add.md) para saber como criar utilizadores do Intune no Azure Active Directory.
+- O utilizador final deve ter uma conta Azure Ative Directory (Azure AD). Veja [Adicionar utilizadores e conceder permissões administrativas no Intune](../fundamentals/users-add.md) para saber como criar utilizadores do Intune no Azure Active Directory.
 
 - O utilizador final tem de ter uma licença para o Microsoft Intune atribuída à conta do Azure Active Directory dele. Veja [Gerir licenças do Intune](../fundamentals/licenses-assign.md) para saber como atribuir licenças do Intune aos utilizadores finais.
 
 - O utilizador final tem de pertencer a um grupo de segurança visado por uma política de proteção de aplicações. A mesma política de proteção de aplicações tem de abranger a aplicação específica em utilização. As políticas de proteção de aplicações podem ser criadas e implementadas na consola do Intune, no [portal do Azure](https://portal.azure.com). Atualmente, os grupos de segurança podem ser criados no centro de administração da [Microsoft 365](https://admin.microsoft.com).
 
-- O utilizador final tem de iniciar sessão na aplicação através da respetiva conta do AAD.
+- O utilizador final deve entrar na aplicação utilizando a sua conta Azure AD.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Políticas de proteção de aplicativos para aplicações do Microsoft Office
 
@@ -207,7 +219,7 @@ Para um exemplo de trabalho ou contexto "corporativo", considere um utilizador q
 O Outlook tem uma visão combinada de e-mail seletiva mente e-mail. Nesta situação, a aplicação Outlook solicita o Intune PIN no lançamento.
 
   >[!NOTE]
-  > Embora o Edge esteja em contexto "corporativo", o utilizador pode transferir intencionalmente ficheiros de contexto "corporativo" da OneDrive para um local desconhecido de armazenamento em nuvem pessoal. Para evitar isto, consulte [a lista de sites autorizados ou bloqueados para](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) o Microsoft Edge e configure a lista de sites permitida/bloqueada para o Edge.
+  > Embora o Edge esteja em contexto "corporativo", o utilizador pode transferir intencionalmente ficheiros de contexto "corporativo" da OneDrive para um local desconhecido de armazenamento em nuvem pessoal. Para evitar isto, consulte [Gerir web sites restritos](manage-microsoft-edge.md#manage-restricted-web-sites) e configurar a lista de sites permitida/bloqueada para Edge.
 
 Para obter mais informações sobre multi-identidade em Intune, consulte [MAM e multi-identidade.](apps-supported-intune-apps.md)
 

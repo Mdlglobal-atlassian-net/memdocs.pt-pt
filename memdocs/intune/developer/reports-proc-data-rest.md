@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331769"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864961"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Obter dados a partir da API do Armazém de Dados do Intune com um cliente REST
 
@@ -41,7 +41,7 @@ Utilize os passos seguintes para saber como autorizar e aceder à API com um cli
 
 Crie uma aplicação nativa no Azure. Esta aplicação nativa é a aplicação cliente. O cliente em execução no seu computador faz referência à API do Armazém de Dados do Intune quando o cliente local pede as credenciais.
 
-1. Inicie sessão no portal do Azure do seu inquilino. Escolha > **as inscrições** de aplicações de **diretório ativo Azure**para abrir o painel de registos da **App.**
+1. Inicie sessão no portal do Azure do seu inquilino. Escolha as inscrições de aplicações de **diretório ativo Azure**para abrir o painel de  >  **App Registrations** registos da **App.**
 2. Selecione **Novo registo de aplicação**.
 3. Escreva os detalhes da aplicação.
     1. Escreva um nome amigável, como Cliente do Armazém de Dados do Intune, em **Nome**.
@@ -66,7 +66,7 @@ Agora tem uma aplicação definida no Azure. Conceda acesso à API do Microsoft 
 7. Selecione **Selecionar**.
 8. Selecione a caixa **Permissões Delegadas** para adicionar a opção **Obter informações do armazém de dados do Microsoft Intune**.
 
-    ![Ativar o acesso – API do Microsoft Intune](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
+    ![Ativar o acesso - Microsoft Intune API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
 
 9. Selecione **Selecionar**.
 10. Selecione **Done** (Concluído).
@@ -155,7 +155,7 @@ O seguinte exemplo inclui um cliente REST simples. O código utiliza a classe **
 > Pode aceder ao seguinte [exemplo de código no GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Consulte o repositório do GitHub para obter as alterações e atualizações mais recentes ao exemplo.
 
 1. Abra o **Microsoft Visual Studio**.
-2. Escolha **arquivar** > **novo projeto**. Expanda o **Visual C#** e selecione **Aplicação de Consola (.Net Framework)**.
+2. Escolha **arquivar**  >  **novo projeto**. Expanda o **Visual C#** e selecione **Aplicação de Consola (.Net Framework)**.
 3. Atribua o nome `IntuneDataWarehouseSamples` ao projeto, navegue até à localização onde pretende guardar o projeto e, em seguida, selecione **OK**.
 4. Clique com o botão direito do rato no nome da solução no Explorador de Soluções e, em seguida, selecione **Manage NuGet Packages for Solution (Gerir Pacotes NuGet para Solução)**. Selecione **Procurar** e, em seguida, escreva `Microsoft.IdentityModel.Clients.ActiveDirectory` na caixa de pesquisa.
 5. Escolha o pacote, selecione o projeto **IntuneDataWarehouseSamples** em Gerir Pacotes da Sua Solução e, em seguida, selecione **Instalar**.
@@ -216,6 +216,7 @@ O seguinte exemplo inclui um cliente REST simples. O código utiliza a classe **
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```

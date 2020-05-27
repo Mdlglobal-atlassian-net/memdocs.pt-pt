@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,17 +20,17 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 7ccc310d69ef604ad0050d0acc5e225645123648
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 557894e9e4b915dd3b84b09abe6977b5ec063fa4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327489"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877205"
 ---
 # <a name="your-ios-device-doesnt-have-the-required-minimum-operating-system-version"></a>O seu dispositivo iOS não tem a versão mínima do sistema operativo necessária
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-Atualize o seu dispositivo iOS tocando em **Definições** > De**Atualização****geral** > de Software .
+Atualize o seu dispositivo iOS tocando em **Definições**  >  **De**  >  **Atualização**geral de Software .
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

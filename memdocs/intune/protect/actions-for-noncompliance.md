@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b74ea17e0fdadfbb6f7c1ec82e502f57187ba74e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615060"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864927"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configure ações para dispositivos não conformes em Intune
 
@@ -70,7 +70,7 @@ Quando o e-mail é enviado, intune inclui detalhes sobre o dispositivo não conf
 
   As seguintes plataformas apoiam esta ação:
   - Android:
-    - Administrador de dispositivos Android
+    - Android device administrator (Administrador de dispositivos Android)
     - Proprietário de dispositivo seleto de empresa android
     - Perfil de trabalho da empresa android
   - iOS/iPadOS
@@ -112,7 +112,7 @@ Para criar uma política de conformidade com o dispositivo, consulte as seguinte
 Para enviar um e-mail aos seus utilizadores, crie um modelo de mensagem de notificação. Quando um dispositivo não estiver em conformidade, os detalhes que introduzir no modelo são apresentados no e-mail enviado aos utilizadores.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione Políticas de**conformidade** > de **dispositivos** > **Notificações** > **Criar notificação**.
+2. Selecione **Políticas de**conformidade de  >  **Compliance policies**  >  **dispositivos**  >  **Notificações Criar notificação**.
 3. Em princípio, especifique as *seguintes*informações:
 
    - **Nome**
@@ -144,14 +144,14 @@ Pode adicionar ações opcionais quando criar uma política de conformidade, ou 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione**Políticas** > **Policies**de conformidade de **dispositivos,** > selecione uma das suas políticas e, em seguida, selecione **Propriedades**.
+2. Selecione Políticas de conformidade de **dispositivos,**  >  **Compliance policies**  >  **Policies**selecione uma das suas políticas e, em seguida, selecione **Propriedades**.
 
    Ainda não tem uma política? Crie uma política para [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) ou para outra plataforma.
 
    > [!NOTE]
    > Os dispositivos JAMF e dispositivos visados com grupos de dispositivos não conseguem receber ações de conformidade neste momento.
 
-3. Selecione **Ações para não conformidade** > **Adicionar**.
+3. Selecione **Ações para não conformidade**  >  **Adicionar**.
 
 4. Selecione a sua **Ação**:
 
@@ -161,7 +161,7 @@ Pode adicionar ações opcionais quando criar uma política de conformidade, ou 
 
    - **Bloquear remotamente o dispositivo em não conformidade**: quando o dispositivo não estiver em conformidade, bloqueie-o. Esta ação obriga o utilizador a introduzir um PIN ou uma senha para desbloquear o dispositivo.
 
-   - **Retire o dispositivo não conforme**: Quando o dispositivo não estiver em conformidade, retire todos os dados da empresa do dispositivo e retire o dispositivo da gestão intune. Para evitar a limpeza acidental de um dispositivo, esta ação suporta um horário mínimo de **30** dias.
+   - **Retire o dispositivo não conforme**: Quando o dispositivo não estiver em conformidade, retire todos os dados da empresa do dispositivo e retire o dispositivo da gestão intune.
 
    - **Envie notificação push ao utilizador final**: Configure esta ação para enviar uma notificação push sobre o incumprimento de um dispositivo através da aplicação Portal da Empresa ou da App Intune no dispositivo.
 
@@ -173,7 +173,7 @@ Pode adicionar ações opcionais quando criar uma política de conformidade, ou 
 
   Para obter mais informações sobre o cumprimento e as ações incorporadas, consulte a visão geral da [conformidade.](device-compliance-get-started.md)
 
-6. Quando terminar, selecione **Adicionar** > **OK** para guardar as suas alterações.
+6. Quando terminar, selecione **Adicionar**  >  **OK** para guardar as suas alterações.
 
 ## <a name="next-steps"></a>Passos seguintes
 

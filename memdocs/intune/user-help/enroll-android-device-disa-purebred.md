@@ -6,9 +6,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f92a23b117582ef40d236fe257917018431128e
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633401"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880626"
 ---
 # <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>Configurar dispositivo Android com a app Microsoft Intune e DISA Purebred
 
@@ -209,7 +210,7 @@ Nesta secção, você vai inserir o seu símbolo fornecido pela empresa. Quando 
     > [!div class="mx-imgBorder"]
     > ![Screenshot do ecrã "You're all set"](./media/all-set-android.png)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Após a inscrição estar concluída, terá acesso a recursos de trabalho, como e-mail, Wi-Fi e quaisquer aplicações que a sua organização disponibilize. Para mais informações sobre como obter, procure, instale e desinstale aplicações na aplicação Intune ver:
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/03/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 08a6cf6eed86836c8fe887265faddb1459918aea
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d844a6816392798fac5cd64d59029d6e8bcfc975
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074763"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881306"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Inscrever o seu dispositivo Windows Phone 8.1 no Intune  
 
@@ -35,7 +35,7 @@ Para inscrever o seu dispositivo em Intune, siga o conjunto de instruções que 
 ## <a name="enroll-through-company-portal"></a>Inscreva-se através do Portal da Empresa  
 Siga estes passos se puder instalar a aplicação Portal da Empresa a partir da Microsoft Store. 
 
-1. Toque na**loja** **start** > .  
+1. Toque na loja **start**  >  **Store**.  
 
 2. Toque em **Pesquisar** e, em seguida, escreva **portal da empresa**.  
 
@@ -81,7 +81,7 @@ Inscrever o dispositivo:
 ## <a name="enroll-through-settings-app"></a>Inscreva-se através da aplicação Definições  
 Siga estes passos se não conseguir aceder à Microsoft Store a partir do seu dispositivo Windows Phone, ou se não tiver uma Conta Microsoft.
 
-1. Toque **no local de trabalho** **Definições** &gt; .  
+1. Toque no local de trabalho **Definições** &gt; **workplace**.  
 
 2. Toque em **adicionar conta** e, em seguida, inicie sessão com a sua conta profissional.  
 

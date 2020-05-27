@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 268e1ab9b76cc214b7e755763ada6a2bd09ed80e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696267"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880578"
 ---
 # <a name="encrypting-your-android-device"></a>Encriptar o seu dispositivo Android
 
@@ -61,7 +61,7 @@ O nome e a localização da opção de arranque segura variarão consoante o fab
 
 1. Abra a aplicação **Definições**.
 2. Digite **startup segura** na barra de pesquisa da aplicação.
-3. Toque **no arranque** > **seguro, exija PIN quando o dispositivo ligar**.
+3. Toque **no arranque**  >  **seguro, exija PIN quando o dispositivo ligar**.
 4. Quando solicitado, introduza o PIN do seu dispositivo.   
 5. Para voltar a verificar as definições, abra o Portal da Empresa ou a aplicação Microsoft Intune.
     * Utilizadores do Portal da Empresa: Selecione o seu dispositivo e toque em **verificar as definições do dispositivo**. 

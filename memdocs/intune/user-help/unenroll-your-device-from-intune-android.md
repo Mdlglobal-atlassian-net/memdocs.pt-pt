@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66053bae197a74bf83a41b7ea400ffdc3d514b06
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0715cce163d999ef0c978f9c085ce9df10b5155a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077585"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881683"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Anular a inscrição do seu dispositivo Android na gestão  
 
@@ -52,14 +52,14 @@ Remova um dispositivo Android inscrito para que deixe de ser gerido pela sua org
 
 Para remover todos os dados que a aplicação Portal da Empresa para Android armazena no seu dispositivo:
 
-- Limpar os dados da aplicação tocando **em Aplicações** > **[ nome da*app*]** > Dados**claros**.
+- Limpar os dados da aplicação tocando **em Aplicações**  >  **[ nome da*app*]** Dados  >  **claros**.
 - Elimine a seguinte pasta: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Desinstalar a aplicação Portal da Empresa
 
 O Portal da Empresa é uma aplicação de gestão de dispositivos. Não pode ser desinstalado até desinstalar o seu dispositivo da sua gestão. Depois de concluir esse procedimento, toque sem soltar no ícone da aplicação Portal da Empresa, até surgir **Desinstalar**. Toque em **Desinstalar** para remover a aplicação do seu dispositivo.  
 
-Em alternativa, toque em **Definições** > **Apps** > **Portal empresa** > **Desinstalar**.  
+Em alternativa, toque em **Definições**  >  **Apps**  >  **Portal empresa**  >  **Desinstalar**.  
 
 ### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Remova a aplicação Portal da Empresa como administrador de dispositivos
 
@@ -71,12 +71,12 @@ Aqui está como desativar o Portal da Empresa como administrador de dispositivos
 
 **Opção 1:**  
 
-1. Selecione **Definições** > de**segurança** > **adicionais** > **Conselhos de**Segurança Administradores .  
+1. Selecione **Definições**de  >  **segurança**  >  **adicionais**  >  **Conselhos de**Segurança Administradores .  
 2. Limpe a seleção do Portal da **Empresa.**  
 
 **Opção 2**:
 
-1. Selecione **Definições** > **Bloquear ecrã e segurança** > **Outras definições** > de segurança**Aplicações de administração**do dispositivo .
+1. Selecione **Definições**  >  **Bloquear ecrã e segurança**  >  **Outras definições**de segurança  >  **Aplicações de administração**do dispositivo .
 2. Limpe a seleção do Portal da **Empresa.**
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto dele, verifique o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

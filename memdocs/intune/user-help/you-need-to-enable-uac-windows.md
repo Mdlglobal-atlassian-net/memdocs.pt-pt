@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3ff737d99a5d57e8e4a1f090e65e787f9b57c5e3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b0b18db54b83b0ccf4371f73918e4bc4b5c01ece
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324037"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880729"
 ---
 # <a name="how-to-enable-user-access-control"></a>Como ativar o Controlo de Acesso de Utilizadores
 
@@ -33,7 +33,7 @@ A sua empresa ou escola querem garantir que os dispositivos que acedem aos respe
 Eis como pode alterar as definições do Controlo de Acesso de Utilizadores:
 
 1. Aceda a **Iniciar** e abra o **Painel de Controlo**.
-2. Abrir as**definições**de controlo da conta do utilizador e de segurança de **segurança e manutenção.** > 
+2. Abrir as definições de controlo da conta do utilizador e de segurança de **segurança e manutenção.**  >  **Change User Account Control settings**
 3. Na página **Escolha quando pretende ser notificado de alterações ao seu computador**, mova o controlo de deslize para um dos dois entalhes superiores mais juntos a **Notificar-me sempre**.
 
 Ainda precisa de ajuda? Contacte o suporte da empresa. Para encontrar as informações de contacto, consulte o [site do Portal da Empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

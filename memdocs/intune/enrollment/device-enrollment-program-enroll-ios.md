@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 8b90d37737618d238597919b1baf5089758d1ca5
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764225"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864978"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscrever automaticamente dispositivos iOS/iPadOS com o Registo Automatizado de Dispositivos da Apple
 
@@ -209,7 +209,7 @@ Agora que instalou o seu símbolo, pode criar um perfil de inscrição para disp
 
      > [!NOTE]
      > Se o **Sync com computadores** estiver definido para **negar tudo,** a porta será limitada nos dispositivos iOS e iPadOS. A porta só pode ser utilizada para carregamento e nada mais. A porta será bloqueada da utilização do iTunes ou do Apple Configurator 2.
-     Se o **Sync com computadores** estiver definido para permitir o **Configurador Apple por certificado,** certifique-se de que guarda uma cópia local do certificado a que pode aceder mais tarde. Não poderá fazer alterações na cópia enviada. É importante manter este certificado acessível no futuro. 
+     Se o **Sync com computadores** estiver definido para permitir o **Configurador Apple por certificado,** certifique-se de que tem uma cópia local do certificado a que pode aceder mais tarde. Não poderá fazer alterações na cópia carregada e é importante reter este certificado para estar acessível no futuro. Para se ligar ao dispositivo iOS/iPadOS a partir de um dispositivo macOS ou PC, o mesmo certificado deve ser instalado no dispositivo que efeite a ligação ao dispositivo iOS/iPadOS que foi inscrito com o perfil de Inscrição de Dispositivoautomatizado com esta configuração e certificado.
 
 12. Se tiver escolhido **Permitir o Apple Configurator por certificado** no passo anterior, escolha um Certificado do Apple Configurator a importar.
 

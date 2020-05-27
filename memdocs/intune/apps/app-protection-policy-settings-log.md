@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007628"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853592"
 ---
 # <a name="review-client-app-protection-logs"></a>Rever registos de proteção de aplicações cliente
 
 Saiba mais sobre as definições que pode rever nos registos de proteção de aplicações. Aceda aos registos, permitindo o Intune Diagnostics a um cliente móvel. 
 
 O processo de ativação e recolha de registos varia por plataforma:
-- **dispositivos iOS/iPadOS** - Utilize o Microsoft Edge para iOS/iPadOS para recolher registos. Para mais detalhes, consulte Gerir o acesso à web utilizando o Microsoft Edge com o [Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **dispositivos iOS/iPadOS** - Utilize o Microsoft Edge para iOS/iPadOS para recolher registos. Para mais detalhes, consulte [o Use Edge para iOS e Android para aceder aos registos de aplicações geridos.](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)
 - **Dispositivos Windows 10** - Utilize *registos de MDMDiag* e eventos. Veja, [diagnostice falhas de MDM no Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) nos conteúdos de gestão de clientes do Windows e no blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Dispositivos Android** - Use o Microsoft Edge para Android para recolher registos. Para mais detalhes, consulte Gerir o acesso à web utilizando o Microsoft Edge com o [Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **Dispositivos Android** - Use o Microsoft Edge para Android para recolher registos. Para mais detalhes, consulte [o Use Edge para iOS e Android para aceder aos registos de aplicações geridos.](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)
 
   > [!Note]
   > Em dispositivos Android Totalmente Geridos, em certos casos a aplicação Intune Company Portal pode ser visível em todas as aplicações. Isto pode acontecer quando uma aplicação associada a uma política de proteção de aplicações não é instalada ou não é lançada. 
@@ -41,7 +41,7 @@ A tabela seguinte lista o nome da definição da política de proteção da App 
 
 ## <a name="app-protection-policy-settings"></a>Definições de políticas de proteção de aplicações
 
-| Nome                        | Detalhes de valor                                                                                                                                                                                                                                                                                            | Definição na Política de Proteção de Aplicações do Gestor de Pontofinal da Microsoft                                                                                                                            |
+| Name                        | Detalhes de valor                                                                                                                                                                                                                                                                                            | Definição na Política de Proteção de Aplicações do Gestor de Pontofinal da Microsoft                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x minutos                                                                                                                                                                                                                                                                                                   | **Secção**: Lançamento Condicional<br>**Definição**: Período de graça offline com acesso ao bloco de ação (minutos)           |
 | AccessRecheckOnlineTimeout  | _x_ minutos                                                                                                                                                                                                                                                                                                   | **Secção**: Requisitos de acesso<br>**Definição**: Volte a verificar os requisitos de acesso após (minutos de inatividade) |

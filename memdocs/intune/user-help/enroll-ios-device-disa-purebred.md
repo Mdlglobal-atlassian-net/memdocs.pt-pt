@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 50330bbdc61eeeada022c44f4d1f2f68b31f19a4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077806"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881546"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Configurar dispositivo iOS ou iPadOS com portal da empresa e DISA Purebred  
 
@@ -40,7 +40,7 @@ Durante a inscrição, também irá instalar uma credencial derivada no seu disp
 Neste artigo, vai:  
 
    * Inscreva um dispositivo iOS ou iPadOS móvel com o Intune Company Portal.  
-   * Obtenha uma credencial derivada do fornecedor credencial derivado da sua organização, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
+   * Obtenha uma credencial derivada do fornecedor credencial derivado da sua organização, DISA Purebred: https: \/ /cyber.mil/pki-pke/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>O que são credenciais derivadas?  
 Uma credencial derivada é um certificado derivado das credenciais do seu cartão inteligente e instalado no seu dispositivo. Concede-lhe acesso remoto a recursos de trabalho, ao mesmo tempo que impede que utilizadores não autorizados acedam a informações sensíveis.  
@@ -68,7 +68,7 @@ Também terá de contactar um agente ou representante da Purebred durante a inst
 2. Escreva o código no ecrã.  
 
     ![Imagem de exemplo da aplicação Do Portal da Empresa com mensagem e código no ecrã.](./media/copy-code-intercede.png)  
-3. Mude para o seu dispositivo inteligente https://microsoft.com/deviceloginativado pelo cartão e vá para . 
+3. Mude para o seu dispositivo inteligente ativado pelo cartão e vá para https://microsoft.com/devicelogin . 
 4. Introduza o código que escreveu anteriormente.  
 
     ![Exemplo de screenshot do site do Portal da Empresa "Introduzir código".](./media/enter-code-intercede.png)   
@@ -87,12 +87,12 @@ Também terá de contactar um agente ou representante da Purebred durante a inst
 
     ![Exemplo de screenshot do Portal da Empresa solicita-se a abertura da app DISA Purebred.](./media/open-app-prompt-disa-purbred.png)  
 10. Quando a aplicação funcionar, trabalhe com o agente Purebred da sua organização para configurar e descarregar o perfil de configuração pré-inscrição purebred.   
-11. Aceda à aplicação Definições > Perfis **Gerais** > **& De instalação** > de dispositivos**e** toque **na instalação**.  
+11. Aceda à aplicação Definições > **General**  >  **Perfis Gerais & Gestão de Dispositivos**  >  **Instalar perfil** e tocar na **instalação**.  
 12. Introduza a sua senha de dispositivo.  
 13. Instale o perfil. Pode ser necessário tocar para **instalar** mais de uma vez para iniciar a instalação. 
 14. Volte à aplicação Purebred Registration. Siga as instruções do seu agente Purebred para continuar.  
  
-15. Depois de descarregar o perfil de configuração, aceda à aplicação Definições > Perfis **Gerais** > & Perfil de**Instalação** de**Dispositivos** > e toque na **instalação**.   
+15. Depois de descarregar o perfil de configuração, aceda à aplicação Definições > Perfis **Gerais**& Perfil de Instalação de  >  **Dispositivos**  >  **Install Profile** e toque na **instalação**.   
 16.  Introduza a sua senha de dispositivo.
 17. Instale o perfil. Pode ser necessário tocar para **instalar** mais de uma vez para iniciar a instalação. 
 18. Depois de concluída a instalação, volte à aplicação Portal da Empresa.  
@@ -103,7 +103,7 @@ Também terá de contactar um agente ou representante da Purebred durante a inst
     a. Toque **em Continuar**.   
 
     ![Exemplo de screenshot do ecrã de certificados de importação do Portal da Empresa.](./media/import-certificate-disa-purebred.png)  
-    b. Vá ao iCloud Drive **Procurar** > **locais** e toque **em Mais Localizações**.  
+    b. Vá ao iCloud Drive **Procurar**  >  **locais** e toque **em Mais Localizações**.  
 
     ![Exemplo de screenshot do iCloud Drive, menu De navegação destacando a opção Mais Localizações.](./media/icloud-drive-more-locations.png)  
     c. Toque no interruptor para ativar a corrente de **tecla purebred**.  

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ad2583bb7cf4bf4c783dc244eaa9f7be0c9306
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429664"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864904"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Definições do dispositivo Windows 10 (e mais recentes) para permitir ou restringir funcionalidades usando Intune
 
@@ -234,11 +234,20 @@ Estas definições utilizam a política de [experiência CSP](https://docs.micro
   [Câmara CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
 - **Sincronização de ficheiros OneDrive**: **O bloco** impede que os utilizadores sincronizem ficheiros para o OneDrive a partir do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+  [Sistema/DesactivaçãoOneDriveFileSync CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+
 - **Armazenamento amovível**: **O bloco** impede os utilizadores de utilizarem dispositivos de armazenamento externos, como cartões SD com o dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Geolocalização**: **O bloco** impede que os utilizadores desligá-lo no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+  [Sistema/Permitir localização CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+
 - **Partilha de Internet**: **O bloco** impede a partilha de ligações à Internet no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Reset do telefone**: **O bloco** impede que os utilizadores limpem ou façam uma reinstalação de fábrica no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Ligação USB**: **O bloco** impede o acesso a dispositivos de armazenamento externos através de uma ligação USB no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. O carregamento USB não é afetado por esta definição.
+
+  [Conectividade/Permitir A Conexão CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
 - **Modo AntiTheft** (apenas móvel): **O bloco** impede que os utilizadores selecionem a preferência do modo AntiTheft no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Cortana**: **Bloquear** desativar o assistente de voz Cortana no dispositivo. Quando cortana está desligado, os utilizadores ainda podem pesquisar para encontrar itens no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por padrão, o Sistema Operativo pode permitir cortana.
 
@@ -249,6 +258,9 @@ Estas definições utilizam a política de [experiência CSP](https://docs.micro
 - **Adicionar pacotes**de provisionamento : **O bloco** impede o agente de configuração do tempo de execução que instala pacotes de fornecimento no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Remova as embalagens**de fornecimento : **O bloco** impede o agente de configuração do tempo de execução que remove as embalagens de fornecimento do dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - **Descoberta do dispositivo**: **O bloco** impede que o dispositivo seja descoberto por outros dispositivos. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
+
+  [Experiência/Permitir A Descoberta de Dispositivos](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+
 - **Comutador de tarefas** (apenas para dispositivo): **O bloco** impede a ligação da tarefa no dispositivo. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição.
 - Diálogo de erro do **cartão SIM** (apenas para dispositivos móveis): **Bloqueie** as mensagens de erro de aparecer no dispositivo se não for detetada nenhuma placa SIM. Quando definido para **Não configurado** (predefinido), Intune não altera nem atualiza esta definição. Por predefinição, o SISTEMA pode mostrar as mensagens de erro.
 - **Espaço de trabalho de tinta**: Escolha se e como o utilizador acede ao espaço de trabalho da tinta. As opções são:
@@ -1222,7 +1234,7 @@ Estas definições utilizam a política de [energia CSP](https://docs.microsoft.
 
   [Power/TurnOffHybridSleepPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para obter os detalhes técnicos adicionais de cada definição e quais as edições do Windows suportadas, veja [Windows 10 Policy CSP Reference](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (Referência de CSP de Políticas do Windows 10)
 

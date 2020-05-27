@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 01cb7cefc72619422f81a3c42c2964a8273d4f05
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323597"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853626"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Como criar e atribuir políticas de proteção de aplicações
 
@@ -33,9 +33,19 @@ Saiba como criar e atribuir políticas de proteção de aplicações (APP) da Mi
 
 ## <a name="before-you-begin"></a>Antes de começar
 
-As políticas de proteção de aplicações podem ser aplicadas às aplicações em execução nos dispositivos que podem ou não ser geridos pelo Intune. Para obter uma descrição mais detalhada acerca do funcionamento das políticas de proteção de aplicações e dos cenários que são suportados pelas políticas de proteção de aplicações do Intune, veja [O que são políticas de proteção de aplicações do Microsoft Intune?](app-protection-policy.md)
+As políticas de proteção de aplicações podem ser aplicadas às aplicações em execução nos dispositivos que podem ou não ser geridos pelo Intune. Para uma descrição mais detalhada de como as políticas de proteção de aplicações funcionam e os cenários que são apoiados por políticas de proteção de aplicações Intune, consulte a visão geral das políticas de proteção de [aplicações.](app-protection-policy.md)
 
-Se estiver a procurar uma lista de MAM com aplicações suportadas, veja as [Listas de aplicações de MAM](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+As opções disponíveis nas políticas de proteção de aplicações (APP) permitem às organizações adaptar a proteção às suas necessidades específicas. Para alguns, pode não ser óbvio quais as definições de política necessárias para implementar um cenário completo. Para ajudar as organizações a priorizar o endurecimento do ponto final do cliente móvel, a Microsoft introduziu taxonomia para o seu quadro de proteção de dados APP para a gestão de aplicações móveis iOS e Android.
+
+O quadro de proteção de dados da APP é organizado em três níveis distintos de configuração, com cada nível de construção fora do nível anterior:
+
+- **A proteção básica de dados da empresa** (Nível 1) garante que as aplicações estão protegidas com um PIN e encriptadas e realizam operações de limpeza seletiva. Para dispositivos Android, este nível valida o atestado do dispositivo Android. Esta é uma configuração de nível de entrada que fornece um controlo de proteção de dados semelhante nas políticas de caixa de correio Exchange Online e introduz TI e a população utilizadora para APP.
+- **A empresa reforçada proteção de dados** (Nível 2) introduz mecanismos de prevenção de fugas de dados de APP e requisitos mínimos de SO. Esta é a configuração que é aplicável à maioria dos utilizadores móveis que acedem a dados do trabalho ou da escola.
+- **A alta proteção de dados** da empresa (Nível 3) introduz mecanismos avançados de proteção de dados, configuração PIN melhorada e APP Mobile Threat Defense. Esta configuração é desejável para os utilizadores que acedem a dados de alto risco.
+
+Para ver as recomendações específicas para cada nível de configuração e as aplicações mínimas que devem ser protegidas, reveja o quadro de proteção de dados utilizando políticas de proteção de [aplicações](app-protection-framework.md).
+
+Se procura uma lista de aplicações que integraram o Intune SDK, consulte [aplicações protegidas](apps-supported-intune-apps.md)microsoft Intune .
 
 Para obter mais informações sobre como adicionar as aplicações de linha de negócio (LOB) da sua organização ao Microsoft Intune, para se preparar para as políticas de proteção de aplicações, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).
 
@@ -46,7 +56,7 @@ Ao criar uma política de proteção de aplicações para aplicações iOS/iPadO
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Criar uma política de proteção de aplicações iOS/iPadOS ou Android
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. No portal Intune, escolha políticas de**proteção**de **apps.** >  Esta seleção abre o painel **Políticas de proteção de aplicações**, onde pode criar novas políticas e editar as já existentes.
+2. No portal Intune, escolha políticas de proteção de **Apps**  >  **apps.** Esta seleção abre o painel **Políticas de proteção de aplicações**, onde pode criar novas políticas e editar as já existentes.
 3. Selecione **Criar a política** e selecione **iOS/iPadOS** ou **Android**. O painel **de política Create** é exibido.
 4. Na página Basics, adicione os **seguintes valores:**
 
@@ -169,7 +179,7 @@ Em muitas organizações, é comum permitir que os utilizadores finais utilizem 
 
 Uma vez que as políticas de proteção de aplicações Intune visam a identidade de um utilizador, as definições de proteção para um utilizador podem aplicar-se tanto a dispositivos matriculados (geridos pelo MDM) como a dispositivos não inscritos (sem MDM). Por isso, pode direcionar uma política de proteção de aplicações Intune para dispositivos intune ou iOS/iPadOS e Android. Pode ter uma política de proteção para dispositivos não geridos em que existem controlos rigorosos de prevenção da perda de dados (DLP) e uma política de proteção separada para dispositivos geridos pelo MDM, onde os controlos DLP podem ser um pouco mais relaxados. Para obter mais informações sobre como isto funciona em dispositivos pessoais do Android Enterprise, consulte políticas de proteção de [aplicações e perfis de trabalho.](android-deployment-scenarios-app-protection-work-profiles.md)
 
-Para criar estas políticas, navegue nas políticas de**proteção** de **Apps** > App na consola Intune e, em seguida, selecione **a política Create**. Também pode editar uma política de proteção de aplicações existente. Para que a política de proteção de aplicações se aplique tanto a dispositivos geridos como não geridos, navegue na página **apps** e confirme que **o Target para aplicações em todos os tipos de dispositivos** está definido para **Sim**, o valor padrão. Se quiser atribuir granularly com base no estado de gestão, detete **o Target para aplicações em todos os tipos de dispositivos** para **No**. 
+Para criar estas políticas, **Apps**navegue nas políticas de  >  **proteção** de Apps App na consola Intune e, em seguida, selecione **a política Create**. Também pode editar uma política de proteção de aplicações existente. Para que a política de proteção de aplicações se aplique tanto a dispositivos geridos como não geridos, navegue na página **apps** e confirme que **o Target para aplicações em todos os tipos de dispositivos** está definido para **Sim**, o valor padrão. Se quiser atribuir granularly com base no estado de gestão, detete **o Target para aplicações em todos os tipos de dispositivos** para **No**. 
 
 ### <a name="device-types"></a>Tipos de dispositivos
 

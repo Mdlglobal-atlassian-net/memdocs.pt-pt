@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bac9edcb91ef49cfa2252bd82e6e88bfd512d9ef
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077772"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881525"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Configurar dispositivo iOS ou iPadOS com Portal da Empresa e Intercede
 
@@ -67,7 +67,7 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 2. Escreva o código que aparece no ecrã.  
 
     ![Imagem de exemplo da aplicação Do Portal da Empresa com mensagem e código no ecrã.](./media/copy-code-intercede.png)  
-1. Mude para o seu dispositivo inteligente https://microsoft.com/deviceloginativado pelo cartão e vá para . 
+1. Mude para o seu dispositivo inteligente ativado pelo cartão e vá para https://microsoft.com/devicelogin . 
 
 1. Introduza o código que escreveu anteriormente.
  
@@ -91,7 +91,7 @@ As credenciais derivadas são uma implementação das diretrizes do Instituto Na
 
     ![Exemplo de screenshot do portal da empresa Obter ecrã de código QR.](./media/get-qr-code-intercede.png) 
  
-10. Toque bem **na câmara** > de utilização **.**  
+10. Toque bem **na câmara de utilização**  >  **OK**.  
 
     ![Exemplo de imagem de um pedido do Portal da Empresa, pedindo permissão para permitir o acesso à câmara.](./media/allow-cp-camera-access-intercede.png)  
 
