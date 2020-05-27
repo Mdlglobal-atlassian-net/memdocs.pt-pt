@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 978e74ab960c0d7f2f339092371a60249eaa0caf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 26baded3ebf12b770d8e1a70a3ab9251381afa03
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325850"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987875"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Adicionar aplicações da loja do Windows Phone 8.1 ao Microsoft Intune
 
@@ -35,7 +35,7 @@ Antes de atribuir uma aplicação a um dispositivo ou grupo de utilizadores, tem
 Pode adicionar uma aplicação da loja do Windows Phone 8.1 ao Intune a partir do portal do Azure ao fazer o seguinte:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo Select,** nos tipos de **aplicações da Loja** disponíveis, selecione a aplicação de loja Windows Phone **8.1**.
 4. Clique em **Selecionar**.<br>
    Os passos da **aplicação Add** são apresentados.

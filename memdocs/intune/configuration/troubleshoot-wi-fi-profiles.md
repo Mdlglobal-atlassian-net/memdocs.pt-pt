@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078214"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987846"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Perfis de configuração de dispositivowi-fi de resolução de problemas no Microsoft Intune
 
@@ -114,7 +114,7 @@ Após a instalação do perfil Wi-Fi no dispositivo, é mostrado no Perfil de **
 
 Nos dispositivos iOS/iPadOS, o registo de aplicações do Portal da Empresa não inclui informações sobre perfis Wi-Fi. Para ver detalhes de instalação dos seus perfis Wi-Fi, utilize os Registos consola/dispositivo:
 
-1. Ligue o dispositivo iOS/iPadOS ao Mac. Vá a**Utilitários**de **Aplicações** > e abra a aplicação Consola.
+1. Ligue o dispositivo iOS/iPadOS ao Mac. Vá a Utilitários de **Aplicações**  >  **Utilities**e abra a aplicação Consola.
 2. Em **ação,** **selecione Incluir Mensagens de Informação** e incluir **Mensagens de Depuração:**
 
     > [!div class="mx-imgBorder"]
@@ -122,8 +122,8 @@ Nos dispositivos iOS/iPadOS, o registo de aplicações do Portal da Empresa não
 
 3. Reproduza o cenário e guarde os registos para um ficheiro de texto:
 
-    1. Selecione todas as mensagens no ecrã atual: **Editar** > **Selecione Tudo**.
-    2. Copiar as mensagens: **Editar** > **Copiar**.
+    1. Selecione todas as mensagens no ecrã atual: **Editar**  >  **Selecione Tudo**.
+    2. Copiar as mensagens: **Editar**  >  **Copiar**.
     3. Colhe os dados de registo num editor de texto e guarde o ficheiro.
 
 4. Procure no ficheiro de registo guardado para ver informações detalhadas. Quando o perfil instala com sucesso, a sua saída é semelhante ao seguinte registo:
@@ -136,7 +136,7 @@ Nos dispositivos iOS/iPadOS, o registo de aplicações do Portal da Empresa não
 
 ## <a name="windows"></a>Windows
 
-Depois de instalado o perfil Wi-Fi no dispositivo, aceda ao trabalho de acesso às**Contas** >  **de Definições** > **Ou à escola**. Selecione a sua conta > **Info**:
+Depois de instalado o perfil Wi-Fi no dispositivo, aceda ao trabalho de acesso às Contas **de Definições**  >  **Accounts**  >  **Ou à escola**. Selecione a sua conta > **Info**:
 
 > [!div class="mx-imgBorder"]
 > ![Aceda ao trabalho ou à escola e selecione Informações sobre o dispositivo Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
@@ -146,7 +146,7 @@ Em **Áreas geridas pela Microsoft,** o **Wi-Fi** é mostrado:
 > [!div class="mx-imgBorder"]
 > ![Nas áreas geridas pela Microsoft, consulte que o Wi-Fi está listado no Windows](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Para ver a ligação Wi-Fi, vá à Rede **definições** > &**Wi-Fi**da**Internet:**  > 
+Para ver a ligação Wi-Fi, vá à Rede **definições**  >  **&**   >  **Wi-Fi**da Internet:
 
 > [!div class="mx-imgBorder"]
 > ![No Windows, consulte a ligação Wi-Fi como uma rede conhecida em definições](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
@@ -157,7 +157,7 @@ Nos dispositivos Windows, os detalhes sobre os perfis Wi-Fi estão registados no
 
 1. Abra a aplicação **Espectador de Eventos.**
 2. No menu **'Ver',** selecione **Registos Desalíticos e Debug**.
-3. Expandir **aplicações e serviços Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin**
+3. Expandir **aplicações e serviços Logs**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **Admin**
 
 A sua saída é semelhante aos seguintes registos:
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Confirme que o perfil Wi-Fi é atribuído ao grupo correto:
 
-    1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de**configuração**de **dispositivos** > .
+    1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de configuração de **Devices**  >  **dispositivos**.
     2. Selecione o seu perfil > **Atribuições**. Confirme que os grupos selecionados estão corretos.
     3. No Endpoint Manager, selecione **Troubleshooting + Suporte**. Reveja a informação de **Atribuição.**
 
@@ -191,7 +191,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - No Windows 10 e dispositivos mais recentes, reveja o registo de Informações de Diagnóstico do MDM:
 
-  1. Ir para **Definições** > **Accounts** > Contas**Aceder ao trabalho ou à escola.**
+  1. Ir **Settings**para  >  **Definições Contas**  >  **Aceder ao trabalho ou à escola.**
   2. Selecione o seu trabalho ou conta escolar > **Info**.
   3. Na parte inferior da página **Definições,** selecione **Criar relatório**.
   4. Abre-se uma janela que mostra o caminho para os ficheiros de registo. Selecione **Export** (Exportar).

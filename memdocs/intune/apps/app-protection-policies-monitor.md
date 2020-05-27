@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 831bc368553f4806c6bc734ac5697d2b81de38fe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323723"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988105"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Como monitorizar políticas de proteção de aplicações
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -43,7 +43,7 @@ O período de retenção para dados de proteção de aplicações é de 90 dias.
 ## <a name="summary-view"></a>Vista de resumo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione o**estado de proteção**da aplicação**monitor de** >  **apps** > .
+3. Selecione **o**estado de proteção da  >  **Monitor**  >  **aplicação**monitor de apps .
 
    ![Screenshot do azulejo resumo no painel de gestão de aplicações móveis Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -76,7 +76,7 @@ Os utilizadores com dispositivos sinalizados pela verificação de **ameaças De
 
 ## <a name="reporting-view"></a>Vista de relatórios
 
-Pode encontrar os mesmos relatórios no topo do painel de proteção da **App.** Para visualizar estes relatórios, selecione Relatórios de**proteção** > de apps**de** **aplicações** > . O painel **de relatórios** fornece vários relatórios baseados no utilizador e na app, incluindo o seguinte:
+Pode encontrar os mesmos relatórios no topo do painel de proteção da **App.** Para visualizar estes relatórios, selecione **Relatórios**de proteção de apps de  >  **aplicações**  >  **Reports**. O painel **de relatórios** fornece vários relatórios baseados no utilizador e na app, incluindo o seguinte:
 
 ### <a name="user-report"></a>Relatório do utilizador
 
@@ -173,7 +173,7 @@ Siga estes passos para gerar ficheiro App Protection .csv ou ficheiro App Config
     ![Captura de ecrã da caixa de confirmação Guardar relatório](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> A Intune fornece campos adicionais de reporte de dispositivos, incluindo id de registo de aplicações, fabricante android, modelo e versão de patch de segurança, bem como o modelo iOS/iPadOS. Intune, acede a estes campos selecionando o > estado de**proteção**de **apps** > **App Protection Report: iOS/iPadOS, Android**. Além disso, estes parâmetros ajudam a configurar a lista **de permitir** para o fabricante do dispositivo (Android), a lista **de permitir** o modelo do dispositivo (Android e iOS/iPadOS) e a definição mínima de patch de **segurança Android.**   
+> A Intune fornece campos adicionais de reporte de dispositivos, incluindo id de registo de aplicações, fabricante android, modelo e versão de patch de segurança, bem como o modelo iOS/iPadOS. Intune, acede a estes **Apps**campos selecionando o estado de  >  **proteção**de apps App  >  **Protection Report: iOS/iPadOS, Android**. Além disso, estes parâmetros ajudam a configurar a lista **de permitir** para o fabricante do dispositivo (Android), a lista **de permitir** o modelo do dispositivo (Android e iOS/iPadOS) e a definição mínima de patch de **segurança Android.**   
  
 ## <a name="see-also"></a>Consulte também
 - [Gerir a transferência de dados entre aplicações iOS/iPadOS](data-transfer-between-apps-manage-ios.md)

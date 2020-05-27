@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a66171d678ffd19e424fb399633c3fed3db9a588
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327201"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987003"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Obter um certificado push de MDM da Apple
 
@@ -41,7 +41,7 @@ Quando um certificado push expira, tem de renová-lo. Ao renovar, certifique-se 
 
 
 ## <a name="steps-to-get-your-certificate"></a>Passos para obter o seu certificado
-Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**dispositivos de inscrição** > de **dispositivos** > **Apple** > **MDM Push Certificate,** e siga estes passos.
+Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Devices**  >  **dispositivos de inscrição**de dispositivos  >  **Apple**MDM  >  **Push Certificate,** e siga estes passos.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Passo 1. conceder permissão à Microsoft para enviar informações sobre o utilizador e o dispositivo à Apple
 Selecione, **concordo.** para conceder permissão à Microsoft para enviar dados para a Apple.
@@ -68,12 +68,12 @@ O certificado push Apple MDM é válido por um ano e deve ser renovado anualment
 
 O certificado está associado ao ID Apple utilizado para criá-lo. Renove o certificado push de MDM com o mesmo ID Apple que utilizou para criá-lo.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha**dispositivos de inscrição** >  **dispositivos** > **Apple MDM** > **Push Certificate**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), escolha **Devices**  >  **dispositivos de inscrição dispositivos**  >  **Apple MDM**Push  >  **Certificate**.
 2. Escolha **o download da sua RSE** para descarregar e guardar o ficheiro de pedido localmente. O ficheiro é utilizado para pedir um certificado de relação de confiança a partir do Portal Apple Push Certificates.
 3. Selecione **Criar o seu certificado** de push MDM para ir ao Portal dos Certificados de Impulso da Apple. Encontre o certificado que pretende renovar e selecione **Renovar**.
 4. No ecrã **'Certificado 'Push' renovador,** forneça notas para o ajudar a identificar o certificado no futuro, selecione **Escolher File** para navegar no novo ficheiro de pedido que descarregou e escolher **upload**.
    > [!TIP]
-   > Os certificados podem ser identificados pelo Identificador de Utilizador. Examine o ID do **sujeito** nos dados do certificado para encontrar a parte GUID do UID. Ou, num dispositivo iOS/iPadOS matriculado, vá para **definições** > **De** > Perfil > de **Gestão** > **Management Profile**geral de**Dispositivos** **Mais Perfil** > de**Gestão**de Detalhes . O item da segunda linha, **Tópico,** contém o GUID único que pode comparar com o certificado no portal Apple Push Certificates.
+   > Os certificados podem ser identificados pelo Identificador de Utilizador. Examine o ID do **sujeito** nos dados do certificado para encontrar a parte GUID do UID. Ou, num dispositivo iOS/iPadOS matriculado, vá para **definições**De Perfil de  >  **General**  >  **Gestão**geral de**Dispositivos** Mais Perfil de  >  **Management Profile**  >  **More Details**  >  **Gestão**de Detalhes . O item da segunda linha, **Tópico,** contém o GUID único que pode comparar com o certificado no portal Apple Push Certificates.
  
 6. No ecrã **de Confirmação,** selecione **Download** e guarde o ficheiro .pem localmente.
 7. Intune , selecione o ícone de navegação do **apple MDM push,** selecione o ficheiro .pem descarregado da Apple e escolha **upload**. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0ef16ba62543092d3480e3c3747a1e67b5d01e6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 3a8c73b85ed4e21b543b691a18ae90747a747388
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428238"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986561"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Aplicações protegidas microsoft Intune  
 
@@ -111,7 +111,7 @@ As tabelas seguintes fornecem detalhes do parceiro suportado e aplicações da M
 | **Zero - e-mail para advogados**<p><img alt="Partner app - Zero - email for attorneys icon" src="./media/apps-supported-intune-apps/icon-p-zero.png" width="100"> | O cliente de e-mail da ZERØ foi projetado para ajudar os advogados a trabalhar menos e a cobrar mais. Com zerØ, os advogados podem:<ul><li>Envie previsivelmente mensagens para o seu sistema de gestão de documentos ou para as respetivas pastas de e-mail.</li><li>Orse as suas caixas de entrada por parâmetros como importância e remetente.</li><li>Receba um aviso em tempo real se estiver prestes a enviar uma mensagem a um potencial destinatário errado.</li><li>Captura automaticamente e contemporaneamente o tempo gasto a interagir com as mensagens dos clientes dos seus dispositivos móveis.</li></ul> | [Link App Store (iOS)](https://apps.apple.com/app/zero-email-for-attorneys/id1216474378) |  
 | **Zoom para Intune**<p><img alt="Partner app - Zoom for Intune icon" src="./media/apps-supported-intune-apps/icon-p-zoom.png" width="100"> | Zoom é o seu centro de comunicações para reuniões, webinars, chat e cloud phone. Inicie ou junte reuniões com vídeo impecável, áudio cristalino e partilha instantânea de ecrã a partir de salas de desktop, mobile ou conferência. | [Link Google Play (Android)](https://play.google.com/store/apps/details?id=us.zoom.videomeetings4intune),<br>[Link App Store (iOS)](https://apps.apple.com/us/app/zoom-for-intune/id1462818858?mt=8) |  
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Para saber como adicionar aplicações para cada plataforma ao Intune, veja:
 

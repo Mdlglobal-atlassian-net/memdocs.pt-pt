@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4d664d67041c4ef223f324d77efdbeb9e8a30db
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615446"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986882"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificar os dispositivos como pertencentes à empresa
 
@@ -85,7 +85,7 @@ Se visualizar este ficheiro .csv num editor de texto, este é apresentado como:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Carregar uma lista .csv de identificadores empresariais
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **de inscrição** > de dispositivos**corporate identificadores** > **Adicionar** > **ficheiro CSV de upload**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**de inscrição de  >  **dispositivos**  >  **corporate identificadores**  >  **Adicionar**  >  **ficheiro CSV de upload**.
 
 2. Na lâmina **de identificador adicionar,** especifique o tipo de identificador: **IMEI** ou **Serial**.
 
@@ -95,7 +95,7 @@ Se visualizar este ficheiro .csv num editor de texto, este é apresentado como:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Introduzir identificadores empresariais manualmente
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **de inscrição dispositivos** > **corporate identificadores** > **Adicionar** > **Enter manualmente**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**  >  **de inscrição dispositivos**  >  **corporate identificadores**  >  **Adicionar**  >  **Enter manualmente**.
 
 2. Na lâmina **de identificador adicionar,** especifique o tipo de identificador: **IMEI** ou **Serial**.
 
@@ -109,7 +109,7 @@ Os dispositivos importados não são necessariamente inscritos. Os dispositivos 
 
 ## <a name="delete-corporate-identifiers"></a>Eliminar identificadores empresariais
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > de inscrição de**dispositivos** > **corporativos**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**de inscrição de  >  **dispositivos**  >  **corporativos**.
 2. Selecione os identificadores de dispositivo que pretende eliminar e selecione **Eliminar**.
 3. Confirme a eliminação.
 
@@ -123,7 +123,7 @@ Para obter especificações detalhadas sobre os Identificadores Internacionais d
 As propriedades dos dispositivos apresentam a **Propriedade** para os registos de cada dispositivo no Intune. Enquanto administrador, pode especificar dispositivos como **Pessoal** ou **Empresarial**. Quando o tipo de propriedade de um dispositivo é alterado de Corporate para Personal, intune elimina todas as informações da aplicação previamente recolhidas desse dispositivo no prazo de 7 dias. Se aplicável, intune também eliminará o número de telefone registado. 
 
 **Para alterar a propriedade dos dispositivos:**
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**Dispositivos Todos os** **dispositivos** > > escolha o dispositivo.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Devices**  >  **Dispositivos Todos os dispositivos** > escolha o dispositivo.
 2. Escolha **Propriedades**.
 3. Especifique a **Propriedade do dispositivo** como **Pessoal** ou **Empresarial**.
 
@@ -133,4 +133,4 @@ Pode configurar uma notificação push para enviar para os utilizadores do Porta
 
 Quando o tipo de propriedade de um dispositivo é alterado de Corporate para Personal, intune elimina todas as informações da aplicação previamente recolhidas desse dispositivo no prazo de 7 dias. Se aplicável, intune também eliminará o número de telefone registado. A Intune ainda irá recolher um inventário de aplicações instaladas pelo administrador de TI no dispositivo e ainda irá recolher um número de telefone parcial para o dispositivo depois de ser marcado como pessoal.
 
-Esta definição pode ser encontrada no Microsoft Endpoint Manager selecionando a**personalização**da **administração** > do Inquilino. Para mais informações, consulte [Portal da Empresa - Configuração](../apps/company-portal-app.md#configuration).
+Esta definição pode ser encontrada no Microsoft Endpoint Manager selecionando a **personalização**da  >  **administração**do Inquilino. Para mais informações, consulte [Portal da Empresa - Configuração](../apps/company-portal-app.md#configuration).
