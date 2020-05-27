@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 4/24/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808190"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986387"
 ---
 # <a name="what-is-device-enrollment"></a>O que é a inscrição de dispositivos?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -38,46 +38,46 @@ Por predefinição, os dispositivos para todas as plataformas têm permissão pa
 | **Método** | **Reposição obrigatória** | [**Afinidade de Utilizador**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Bloqueado** | **Detalhes** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Os dispositivos são apagados durante a inscrição. | Associa cada dispositivo a um utilizador.| Se sim, os utilizadores não podem desinscrever dispositivos. | |
-|**[BYOD](#bring-your-own-device)** | Não| Sim | Não | [Mais informações](apple-mdm-push-certificate-get.md)|
+|**[BYOD](#bring-your-own-device)** | No| Yes | No | [Mais informações](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Não |Não |Não | [Mais informações](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Sim | Opcional | Opcional|[Mais informações](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Sim | Opcional | Não| [Mais informações](apple-configurator-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | Opcional | Opcional|[Mais informações](device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| Yes | Opcional | No| [Mais informações](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Não | Não | Não|[Mais informações](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Métodos de inscrição do macOS
 | **Método** |  **Reposição obrigatória** |  **Afinidade de Utilizador** | **Bloqueado** | **Detalhes**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Não| Sim | Não | [Mais informações](macos-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | No| Yes | No | [Mais informações](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Não |Não |Não  | [Mais informações](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Sim | Opcional | Opcional|[Mais informações](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | Opcional | Opcional|[Mais informações](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Métodos de inscrição do Windows
 
 | **Método** | **Reposição obrigatória** | **Afinidade de Utilizador** | **Bloqueado** | **Detalhes**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Não | Sim | Não | [Mais informações](windows-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | No | Yes | No | [Mais informações](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Não |Não |Não |[Mais informações](device-enrollment-manager-enroll.md)|
-|**Inscrição automática** | Não |Sim |Não | [Mais informações](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Piloto automático** |Sim |Sim |Não | [Mais informações](enrollment-autopilot.md)
+|**Inscrição automática** | No |Yes |No | [Mais informações](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Piloto automático** |Sim |Sim |No | [Mais informações](enrollment-autopilot.md)
 |**Inscrição em massa** |Não |Não |Não | [Mais informações](windows-bulk-enroll.md) |
-|**Cogestão** |Não |Sim |Não | [Mais informações](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |Não |Sim |Não | [Mais informações](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Cogestão** |No |Yes |No | [Mais informações](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |No |Sim |No | [Mais informações](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Métodos de inscrição do Android
 
 | **Pessoal** | **Métodos de Inscrição** | **Reposição obrigatória** | **Afinidade de Utilizador** | **Bloqueado** | **Detalhes**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Admin de dispositivos Android**|**Utilizador iniciado via Portal da Empresa** | Não | Sim | Não | [Mais informações](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
-|**Perfil de trabalho da empresa android**|**Utilizador iniciado via Portal da Empresa**| Não | Sim | Não | [Mais informações](android-work-profile-enroll.md)|
+|**Admin de dispositivos Android**|**Utilizador iniciado via Portal da Empresa** | No | Sim | No | [Mais informações](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Perfil de trabalho da empresa android**|**Utilizador iniciado via Portal da Empresa**| No | Sim | No | [Mais informações](android-work-profile-enroll.md)|
 
 
 | **Empresarial** | **Métodos de Inscrição** | **Reposição obrigatória** | **Afinidade de Utilizador** | **Bloqueado** | **Detalhes**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Admin de dispositivos Android**|**[DEM](#device-enrollment-manager) iniciado via Portal da Empresa**| Não | Não | Não |[Mais informações](device-enrollment-manager-enroll.md)|
-|**Admin de dispositivos Android**|**(IMEI ou SN pré-declarados) Utilizador iniciado via Portal da Empresa**| Não | Sim | Não | [Mais informações](corporate-identifiers-add.md)|
-|**Administrador de dispositivos Android com extensões de mobilidade da zebra**|**Utilizador ou [DEM](#device-enrollment-manager) iniciado via Portal da Empresa**| Não | Sim, se o utilizador iniciado, não se o [DEM](#device-enrollment-manager) iniciado | Não | [Mais informações](../configuration/android-zebra-mx-overview.md)|
-|**Android Enterprise Dedicado**|**NFC, Token, Código QR, Zero Touch**| Sim | Não | Configurável através da política | [Mais informações](android-kiosk-enroll.md)|
-|**Android Enterprise totalmente gerido**|**NFC, Token, Código QR, Zero Touch**| Sim | Sim, o que é que se está Não se [o DEM](device-enrollment.md#device-enrollment-manager) iniciado | Configurável através da política | [Mais informações](android-dedicated-devices-fully-managed-enroll.md)|
+|**Admin de dispositivos Android**|**(IMEI ou SN pré-declarados) Utilizador iniciado via Portal da Empresa**| No | Sim | No | [Mais informações](corporate-identifiers-add.md)|
+|**Administrador de dispositivos Android com extensões de mobilidade da zebra**|**Utilizador ou [DEM](#device-enrollment-manager) iniciado via Portal da Empresa**| No | Sim, se o utilizador iniciado, não se o [DEM](#device-enrollment-manager) iniciado | No | [Mais informações](../configuration/android-zebra-mx-overview.md)|
+|**Android Enterprise Dedicado**|**NFC, Token, Código QR, Zero Touch**| Sim | No | Configurável através da política | [Mais informações](android-kiosk-enroll.md)|
+|**Android Enterprise totalmente gerido**|**NFC, Token, Código QR, Zero Touch**| Yes | Sim, o que é que se está Não se [o DEM](device-enrollment.md#device-enrollment-manager) iniciado | Configurável através da política | [Mais informações](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Traga o seu próprio dispositivo

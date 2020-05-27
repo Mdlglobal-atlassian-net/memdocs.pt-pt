@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633308"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985937"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Implementação de aplicações do Windows 10 utilizando o Microsoft Intune 
 
@@ -46,15 +46,15 @@ Os tipos de aplicações específicos são suportados com base na versão do Win
 
 | Tipo de aplicação | Home Page | Pro | Empresa | Enterprise | Education | Modo S | Hololens <sup> 1 | Surface Hub | WCOS | Móvel |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . MSI | Não | Sim | Sim | Sim | Sim | Não | Não | Não | Não | Não |
-| . IntuneWin | Não | Sim | Sim | Sim | Sim | 19H2+ | Não | Não | Não | Não |
-| Escritório C2R | Não | Sim | Sim | Sim | Sim | RS4+ | Não | Não | Não | Não |
+|  . MSI | No | Sim | Sim | Sim | Sim | Não | Não | Não | Não | Não |
+| . IntuneWin | No | Sim | Sim | Sim | Sim | 19H2+ | Não | Não | Não | Não |
+| Escritório C2R | No | Sim | Sim | Sim | Sim | RS4+ | Não | Não | Não | Não |
 | LOB: APPX/MSIX | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
 | MSFB Offline | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
-| MSFB Online | Sim | Sim | Sim | Sim | Sim | Sim | RS4+ | Não | Sim | Sim |
-| Aplicações Web | Sim | Sim | Sim | Sim | Sim | Sim | Sim<sup>2 | Sim<sup>2 | Sim | Sim<sup>2 |
+| MSFB Online | Sim | Sim | Sim | Sim | Sim | Sim | RS4+ | No | Sim | Sim |
+| Aplicações Web | Sim | Sim | Sim | Sim | Sim | Sim | Sim<sup>2 | Sim<sup>2 | Yes | Sim<sup>2 |
 | Link da loja | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim | Sim |
-| Microsoft Edge | Não | Sim | Sim | Sim | Sim | 19H2+ <sup> 3 | Não | Não | Não | Não |
+| Microsoft Edge | No | Sim | Sim | Sim | Sim | 19H2+ <sup> 3 | Não | Não | Não | Não |
 
 <sup>1</sup> Para desbloquear a gestão de aplicações, atualize o seu dispositivo HoloLens para [Holographic for Business](../fundamentals/windows-holographic-for-business.md).<br />
 <sup>2</sup> Lançamento apenas do Portal da Empresa.<br />
@@ -117,7 +117,7 @@ Se houver um conflito nas políticas num único utilizador ou dispositivo, aplic
 
 Para obter mais informações, veja [Incluir e excluir atribuições de aplicações no Microsoft Intune](apps-inc-exl-assignments.md). Para obter mais informações sobre tipos de aplicações no Intune, veja [Adicionar aplicações ao Microsoft Intune](apps-add.md).
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - [Atribuir aplicações a grupos com o Microsoft Intune](apps-deploy.md)
 - [Como monitorizar aplicações](apps-monitor.md)

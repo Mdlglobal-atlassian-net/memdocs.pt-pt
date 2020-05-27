@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327110"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986097"
 ---
 # <a name="categorize-devices-into-groups"></a>Categorizar dispositivos em grupos
 
@@ -45,7 +45,7 @@ Pode criar as categorias de dispositivo que pretender. Por exemplo:
 ## <a name="how-to-configure-device-categories"></a>Como configurar as categorias de dispositivos
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Passo 1: criar categorias de dispositivos no painel do portal do Azure no Intune
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha as **categorias de** > **Dispositivos**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha as **categorias de**  >  **Dispositivos**.
 2. Na página **Categorias de dispositivos**, selecione **Criar** para adicionar uma nova categoria.
 3. No painel **Criar categoria de dispositivo**, introduza um **Nome** para a nova categoria e uma **Descrição** opcional.
 4. Quando concluir, selecione **Criar**. Agora, pode ver a nova categoria na lista de categorias.
@@ -63,15 +63,15 @@ Depois de configurar os grupos de dispositivos e os utilizadores inscreverem o d
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Ver as categorias de dispositivos que gere
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**Dispositivos Todos os** **dispositivos** > .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Devices**  >  **Dispositivos Todos os dispositivos**.
 
 2. Na lista de dispositivos, examine a coluna **Categoria de dispositivo**.
 
-Se a coluna da **categoria Dispositivo** não for mostrada, selecione**A categoria** > de **Colunas** > **Apply**.
+Se a coluna da **categoria Dispositivo** não for mostrada, selecione A categoria de **Colunas**  >  **Category**  >  **Apply**.
 
 ### <a name="change-the-category-of-a-device"></a>Alterar a categoria de um dispositivo
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Dispositivos** > **Todos os dispositivos** > escolha o dispositivo que deseja > **Propriedades**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **Devices**  >  **Dispositivos Todos os dispositivos** > escolha miná> **Propriedades**.
 2. No painel seguinte, pode alterar a **Categoria de dispositivo** do dispositivo selecionado para qualquer um dos nomes de categoria que configurou anteriormente.
 
 ## <a name="after-you-configure-device-groups"></a>Após configurar grupos de dispositivos

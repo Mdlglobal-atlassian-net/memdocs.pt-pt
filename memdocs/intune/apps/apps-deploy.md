@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324609"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984818"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Atribuir aplicações a grupos com o Microsoft Intune
 
@@ -39,13 +39,13 @@ A seguinte tabela indica as várias opções para atribuir as aplicações a uti
 |   | Dispositivos inscritos com o Intune | Dispositivos não inscritos com o Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Atribuir aos utilizadores | Sim | Sim |
-| Atribuir a dispositivos | Sim | Não |
+| Atribuir a dispositivos | Yes | Não |
 | Atribuir aplicações encapsuladas ou aplicações que incorporem o SDK do Intune (para políticas de proteção de aplicações) | Sim | Sim |
 | Atribuir aplicações como Disponíveis | Sim | Sim |
-| Atribuir aplicações como Obrigatórias | Sim | Não |
-| Desinstalar aplicações | Sim | Não |
-| Receber atualizações de aplicações a partir do Intune | Sim | Não |
-| Os utilizadores finais instalam as aplicações disponíveis a partir da aplicação Portal da Empresa | Sim | Não |
+| Atribuir aplicações como Obrigatórias | Yes | Não |
+| Desinstalar aplicações | Yes | Não |
+| Receber atualizações de aplicações a partir do Intune | Yes | Não |
+| Os utilizadores finais instalam as aplicações disponíveis a partir da aplicação Portal da Empresa | Yes | Não |
 | Os utilizadores finais instalam as aplicações disponíveis a partir do Portal da Empresa baseado na Web | Sim | Sim |
 
 > [!NOTE]
@@ -56,7 +56,7 @@ A seguinte tabela indica as várias opções para atribuir as aplicações a uti
 ## <a name="assign-an-app"></a>Atribuir uma aplicação
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações.**
+2. Selecione **Apps**  >  **Todas as aplicações.**
 3. No painel **Aplicações**, selecione a aplicação que quer atribuir.
 4. Na secção **Gerir** do menu, selecione **Atribuições**.
 5. Selecione **Adicionar Grupo** para abrir o painel **Adicionar grupo** que está relacionado com a aplicação.
@@ -138,7 +138,7 @@ Os valores predefinidos para a definição são pré-povoados para novas atribui
 
 |tipo de aplicativo iOS | Definição predefinida para "Desinstalar na remoção do dispositivo" |
 |--------------------|----------------|
-| App de linha de negócios | Sim |
+| App de linha de negócios | Yes |
 | Aplicação da loja | No |
 | Aplicativo VPP | No |
 | Aplicação incorporada | No |

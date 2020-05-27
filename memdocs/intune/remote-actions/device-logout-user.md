@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e151110a39e28d00a2a98cd6ea3c3fc9214ef4a0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326567"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983475"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Inicie o logout do utilizador atual em dispositivos iOS/iPadOS geridos por Intune
 
@@ -41,8 +41,8 @@ A ação **Terminar sessão do utilizador atual** termina a sessão do utilizado
 
 ## <a name="how-to-log-out-the-current-user"></a>Como terminar a sessão do utilizador atual
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione Dispositivos Todos os **dispositivos** > **All devices**.
-2. Escolha um dispositivo iOS/iPadOS > **...**  > Utilizador atual de **logout**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione Dispositivos Todos os **Devices**  >  **dispositivos**.
+2. Escolha um dispositivo iOS/iPadOS > **...**  >  Utilizador atual de **logout**.
 
 ## <a name="next-steps"></a>Passos seguintes
 

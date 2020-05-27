@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254610"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986031"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune Autónomo - Gestão de aplicações Win32
 
@@ -100,7 +100,7 @@ Tal como uma aplicação de linha de negócio (LOB), pode adicionar uma aplicaç
 Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplicação Windows ao Intune.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo select,** sob os **outros** tipos de aplicações, selecione **a aplicação Windows (Win32)**.
 
     > [!IMPORTANT]
@@ -140,10 +140,10 @@ Os seguintes passos fornecem orientação para ajudá-lo a adicionar uma aplica�
 
         Por exemplo, se o nome de ficheiro da aplicação for **MyApp123**, adicione o seguinte: <br>
         `msiexec /p "MyApp123.msp"`<p>
-        E, se a `ApplicationName.exe`aplicação for, o comando seria o nome da aplicação seguido pelos argumentos de comando (switches) suportados pelo pacote. <br>
+        E, se a aplicação `ApplicationName.exe` for, o comando seria o nome da aplicação seguido pelos argumentos de comando (switches) suportados pelo pacote. <br>
         Por exemplo:<br>
         `ApplicationName.exe /quiet`<br>
-        No comando acima, `ApplicationName.exe` o pacote `/quiet` suporta o argumento do comando.<p> 
+        No comando acima, o `ApplicationName.exe` pacote suporta o argumento do `/quiet` comando.<p> 
         Para obter os argumentos específicos suportados pelo pacote de aplicações, contacte o seu fornecedor de aplicações.
 
         > [!IMPORTANT]
@@ -298,7 +298,7 @@ O utilizador final verá notificações do Windows Toast indicando que as aplica
 - 1 ou mais requisitos de aplicação dependentes não cumpridos
 - 1 ou mais aplicações dependentes estão pendentes de um reboot do dispositivo
 
-Se optar por não **instalar automaticamente** uma dependência, a instalação da aplicação Win32 não será tentada. Além disso, o relatório de aplicações `failed` mostrará que a dependência foi sinalizada como e também fornecerá uma razão de falha. Pode ver a falha de instalação da dependência clicando numa falha (ou aviso) fornecida nos detalhes de [instalação](troubleshoot-app-install.md#win32-app-installation-troubleshooting)da aplicação Win 32 .
+Se optar por não **instalar automaticamente** uma dependência, a instalação da aplicação Win32 não será tentada. Além disso, o relatório de aplicações mostrará que a dependência foi sinalizada como `failed` e também fornecerá uma razão de falha. Pode ver a falha de instalação da dependência clicando numa falha (ou aviso) fornecida nos detalhes de [instalação](troubleshoot-app-install.md#win32-app-installation-troubleshooting)da aplicação Win 32 .
 
 Cada dependência irá aderir à lógica de retry da aplicação Intune Win32 (tente instalar 3 vezes depois de esperar 5 minutos) e ao calendário global de reavaliação. Além disso, as dependências só são aplicáveis no momento da instalação da aplicação Win32 no dispositivo. As dependências não são aplicáveis para desinstalar uma aplicação Win32. Para eliminar uma dependência, deve clicar nas elipses (três pontos) à esquerda da app dependente localizada no final da linha da lista de dependência. 
 
@@ -365,9 +365,9 @@ Pode configurar o tempo de início e prazo para uma aplicação Win32. Na hora d
 Detete a disponibilidade da aplicação com base numa data e hora para uma aplicação necessária utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações.**
+2. Selecione **Apps**  >  **Todas as aplicações.**
 3. Selecione uma aplicação Windows existente **(Win32)** da lista. 
-4. A partir do painel de aplicações, selecione **Properties** > **Edit** ao lado da secção de **Atribuiçãos** > Adicionar **grupo** abaixo do tipo de atribuição **exigido.** 
+4. A partir do painel de aplicações, selecione **Properties**  >  **Edit** ao lado da secção **de Atribuições** > **Adicionar grupo** abaixo do tipo de atribuição **exigido.** 
    Note que a disponibilidade da aplicação pode ser definida com base no tipo de atribuição. O **tipo de Atribuição** pode ser **exigido,** **disponível para dispositivos matriculados,** ou **desinstalar**.
 5. Selecione um grupo no painel do **grupo Select** para especificar qual o grupo de utilizadores que será atribuído à aplicação. 
 
@@ -391,7 +391,7 @@ Detete a disponibilidade da aplicação com base numa data e hora para uma aplic
 11. Clique em **Rever + salvar**.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Notificações de brindes para aplicações Win32 
-Se necessário, pode suprimir a apresentação de notificações de torradas finais por aplicação. A partir de Intune, selecione **Apps** > **Todas as aplicações** > selecionar a aplicação > Atribuições**Incluem** **Grupos** > . 
+Se necessário, pode suprimir a apresentação de notificações de torradas finais por aplicação. A partir de Intune, selecione **Apps**  >  **Todas as aplicações** > selecionar a aplicação > **Atribuições**  >  **Incluem Grupos**. 
 
 > [!NOTE]
 > As aplicações Win32 instaladas da extensão de gestão do Intune não serão desinstaladas em dispositivos não inscritos. Os administradores podem tirar partido da exclusão de atribuição para não oferecer aplicações Win32 em dispositivos BYOD.
@@ -435,7 +435,7 @@ exit 1
 }
 ```
 
-No comando PowerShell acima, `<path to binary file>` substitua a cadeia pelo caminho para o ficheiro da aplicação Win32. Um caminho de exemplo seria semelhante ao seguinte:<br>
+No comando PowerShell acima, substitua a cadeia pelo caminho para o ficheiro da `<path to binary file>` aplicação Win32. Um caminho de exemplo seria semelhante ao seguinte:<br>
 `C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
 
 Além disso, substitua a `<file version of successfully detected file>` cadeia pela versão do ficheiro que precisa de detetar. Uma cadeia de versão de ficheiro de exemplo seria semelhante à seguinte:<br>

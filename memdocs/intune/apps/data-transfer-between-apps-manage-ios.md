@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 41be99c94b31c166622ee497d08de438ee59cf23
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254984"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985703"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Como gerir a transferência de dados entre aplicações iOS no Microsoft Intune
 
@@ -53,7 +53,7 @@ Configurar a definição UPN do utilizador é **necessária** para dispositivos 
 
       **chave** = IntuneMAMUPN, **valor** = <username@company.com>
 
-      Exemplo: ['IntuneMAMUPN',janellecraig@contoso.com']
+      Exemplo: ['IntuneMAMUPN', janellecraig@contoso.com ']
       
      > [!NOTE]
      > Em Intune, o tipo de inscrição da política de configuração da aplicação deve ser definido para **Dispositivos Geridos**.
@@ -74,11 +74,11 @@ Configurar a definição UPN do utilizador é **necessária** para dispositivos 
 
    |Fornecedor de MDM de terceiros| Chave de Configuração | Tipo de Valor | Valor de Configuração|
    | ------- | ---- | ---- | ---- |
-   |Microsoft Intune| IntuneMAMUPN | String | {{UserPrincipalName}}|
-   |VMware AirWatch| IntuneMAMUPN | String | {UserPrincipalName}|
-   |MobileIron | IntuneMAMUPN | String | ${userUPN} **ou** ${userEmailAddress} |
-   |Gestão de Pontos Finais de Citrix | IntuneMAMUPN | String | ${user.userprincipalname} |
-   |Gestor de Dispositivos Móveis ManageEngine | IntuneMAMUPN | String | %upn% |
+   |Microsoft Intune| IntuneMAMUPN | Cadeia | {{UserPrincipalName}}|
+   |VMware AirWatch| IntuneMAMUPN | Cadeia | {UserPrincipalName}|
+   |MobileIron | IntuneMAMUPN | Cadeia | ${userUPN} **ou** ${userEmailAddress} |
+   |Gestão de Pontos Finais de Citrix | IntuneMAMUPN | Cadeia | ${user.userprincipalname} |
+   |Gestor de Dispositivos Móveis ManageEngine | IntuneMAMUPN | Cadeia | %upn% |
 
 > [!NOTE]  
 > Para o Outlook para iOS/iPadOS, se implementar uma Política de Configuração de Aplicações gerida com a opção "Utilizar o designer de configuração" e permitir permitir apenas contas de **trabalho ou de escola,** a chave de configuração IntuneMAMUPN está configurada automaticamente nos bastidores da apólice. Mais detalhes podem ser encontrados na secção FAQ em [New Outlook para iOS e Android App Configuração De Política de Política de Configuração – Configuração Geral](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481)de Aplicações . 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/08/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 92aa9705fc1a59a288db08a5583bc5b83de111e2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324362"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985907"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Ativar aplicações Win32 em dispositivos de modo S
 
@@ -49,7 +49,7 @@ As etapas para permitir que as aplicações Win32 sejam executadas num dispositi
    - Intune aplica o catálogo de aplicações assinado para instalar a aplicação Win32 no dispositivo de modo S utilizando a extensão de [gestão Intune](intune-management-extension.md).
 
 > [!NOTE]
-> A linha de negócios `.appx` `.appx` (LOB) e os pacotes no modo Windows 10 S serão suportados através da assinatura da Microsoft Store for Business (MSFB).
+> A linha de negócios (LOB) `.appx` e `.appx` os pacotes no modo Windows 10 S serão suportados através da assinatura da Microsoft Store for Business (MSFB).
 >
 > **A política suplementar** do modo S para aplicações deve ser entregue através da Extensão de Gestão Intune.
 >
@@ -58,7 +58,7 @@ As etapas para permitir que as aplicações Win32 sejam executadas num dispositi
 Para criar uma política suplementar de modo Windows 10 S, utilize os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Políticas** >  > **suplementares do modo Apps S**Criar**política**.
+2. Selecione **Apps**  >  **Políticas suplementares do modo Apps S**Criar  >  **política**.
 3. Antes de adicionar o **ficheiro Política,** deve criá-lo e assiná-lo. Para obter mais informações, consulte:
     - [Crie uma política WDAC usando ferramentas PowerShell e converta-a num formato binário](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Assine usando o Serviço](https://go.microsoft.com/fwlink/?linkid=2095629) de Assinatura de Guarda de Dispositivo **(recomendado)**
@@ -68,7 +68,7 @@ Para criar uma política suplementar de modo Windows 10 S, utilize os seguintes 
     | Valor | Descrição |
     |--------------|------------------------------------------------|
     | Arquivo de política | O ficheiro que contém a política do WDAC. |
-    | Nome | O nome desta apólice. |
+    | Name | O nome desta apólice. |
     | Descrição | [Opcional] A descrição desta política. |
 
 5. Clique **em Seguir: Etiquetas**de âmbito .<br>

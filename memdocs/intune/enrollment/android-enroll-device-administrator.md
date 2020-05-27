@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 07/23/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5200f0476e3f692b02cbac9b0934c35e522ee906
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80438800"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983624"
 ---
 # <a name="android-device-administrator-enrollment"></a>Inscrição de administrador de dispositivos Android
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre as funcionalidades do Android Enterprise da 
 ## <a name="set-up-device-administrator-enrollment"></a>Configurar a inscrição do administrador do dispositivo
 
 1. Para se preparar para gerir dispositivos móveis, tem de definir a autoridade de gestão de dispositivos móveis (MDM) para o **Microsoft Intune**. Veja [Set the MDM authority (Definir a autoridade de MDM)](../fundamentals/mdm-authority-set.md) para obter instruções. Este item só é definido uma vez, quando está a configurar pela primeira vez o Intune para a gestão de dispositivos móveis.
-2. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha > **dispositivos** > Android**de inscrição** > **Android** > **Dispositivos pessoais e corporativos com privilégios** > de administração de dispositivos**Utilize o administrador do dispositivo para gerir dispositivos.**
+2. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e escolha > **dispositivos**Android de  >  **Android**  >  **inscrição Android**  >  **Dispositivos pessoais e corporativos com privilégios**de administração de dispositivos Utilize o administrador do dispositivo para gerir  >  **dispositivos.**
 3. [Indique aos seus utilizadores como devem inscrever os dispositivos](../user-help/enroll-device-android-company-portal.md).  
 
 Depois de um utilizador concluir a inscrição, pode começar a gerir os respetivos dispositivos no Intune, incluindo [atribuir políticas de conformidade](../protect/compliance-policy-create-android.md), [gerir aplicações](../apps/app-management.md) e mais.

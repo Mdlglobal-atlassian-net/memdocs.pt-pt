@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2af62dd8480c1e804e1ab8558d270b95fe97bbd4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079795"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985043"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Criar uma política de acesso condicional baseada em dispositivos
 
@@ -37,7 +37,7 @@ Uma política de Acesso Condicional especifica a app ou serviços que pretende p
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **Políticas** > **de acesso** > condicional**Nova política**.
+2. Selecione **Dispositivos**Políticas  >  **de acesso condicional**  >  **Policies**  >  **Nova política**.
   ![Criar uma nova política de acesso condicional](./media/create-conditional-access-intune/create-ca.png)
 
 3. Em **Atribuições**, selecione **Utilizadores e grupos**.
