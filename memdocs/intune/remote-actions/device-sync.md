@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077823"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983030"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Sincronizar dispositivos para obter as políticas e ações mais recentes com o Intune
 
@@ -39,11 +39,11 @@ A ação **Sincronizar** dispositivo força o dispositivo selecionado a registar
 ## <a name="sync-a-device"></a>Sincronizar um dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
-3. Selecione **Dispositivos** > **Todos os dispositivos**.
+3. Selecione **Dispositivos**  >  **Todos os dispositivos**.
 4. Na lista de dispositivos que gere, selecione um dispositivo para abrir o seu painel de *visão geral* e, em seguida, selecione **Sync**.
 5. Para confirmar, selecione **Sim**.
 
-Para ver o estado da ação de sincronização, escolha**as ações**do Dispositivo**de Monitorização** > de **Dispositivos** > .
+Para ver o estado da ação de sincronização, escolha as ações do **Dispositivo**  >  **de Monitorização**de Dispositivos  >  **Device actions**.
 
 Pode encontrar frequências padrão de check-in política Intune nos [tempos](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)do ciclo Refresh .
 
@@ -55,18 +55,18 @@ Quando um administrador executa a ação do dispositivo **Sync,** as aplicaçõe
 | Código de erro  | Descrição sugerida | Repetível |
 |---|---|---|
 | 2016330898 | Ocorreu um erro desconhecido. | No |
-| 2016330897 | A sua ligação com intune cronometrada. Reponha a sua ligação. | Sim |
-| 2016330896 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
-| 2016330895 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
-| 2016330894 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim |
-| 2016330893 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Sim|
+| 2016330897 | A sua ligação com intune cronometrada. Reponha a sua ligação. | Yes |
+| 2016330896 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Yes |
+| 2016330895 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Yes |
+| 2016330894 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Yes |
+| 2016330893 | Perdeu a ligação à Internet. Reinicie a sua ligação. | Yes|
 | 2016330892 | O roaming internacional está desativado. | No|
-| 2016330891 | A ligação de dados celulares para este dispositivo não pode ser acedida enquanto uma chamada telefónica está sendo feita. Aguarde a conclusão da chamada. | Sim|
+| 2016330891 | A ligação de dados celulares para este dispositivo não pode ser acedida enquanto uma chamada telefónica está sendo feita. Aguarde a conclusão da chamada. | Yes|
 | 2016330890 | A rede móvel deste dispositivo. Estes dispositivos não podiam ser usados neste momento. | No|
-| 2016330889 | A ligação segura falhou. Reinicie a sua ligação. | Sim|
-| 2016330888 | A avaliação da fidedignidade do servidor falhou. | No|
+| 2016330889 | A ligação segura falhou. Reinicie a sua ligação. | Yes|
+| 2016330888 | A avaliação da fidedignidade do servidor falhou. | Não|
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Pode [verificar os detalhes](device-inventory.md) do dispositivo.
  

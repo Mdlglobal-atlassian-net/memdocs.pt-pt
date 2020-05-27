@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0e46e0578205c57c91680154112c917876fba4a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 891e1f1e5263c748082b83b4694169948c02922e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325950"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983901"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Adicionar aplicações da loja Android ao Microsoft Intune
 
@@ -36,7 +36,7 @@ Antes de atribuir uma aplicação a um dispositivo ou grupo de utilizadores, tem
 Pode adicionar uma aplicação da loja Android ao Intune a partir do portal do Azure ao fazer o seguinte:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel de **aplicativos Select,** sob os tipos de **aplicativos da Loja** disponíveis, selecione **aplicativo de loja Android**.
 4. Clique em **Selecionar**.<br>
    Os passos da **aplicação Add** são apresentados.

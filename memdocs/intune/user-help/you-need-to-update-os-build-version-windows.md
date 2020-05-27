@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,19 +19,19 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e44a6d3ad1fe0b3666ba4684169aeda7f31b5d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7c81381c88ece6cc41f6e03a1f27b7927f76ab5f
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327497"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882475"
 ---
 # <a name="update-your-windows-10-device"></a>Atualizar o seu dispositivo Windows 10
 
 A sua empresa ou escola querem garantir que os dispositivos que acedem aos respetivos recursos estão protegidos. Uma das formas que a entidade escolheu para se certificar de que o seu dispositivo está configurado para aceder a esses recursos consiste em assegurar-se de que os seus dispositivos estão atualizados. No seu dispositivo, esta opção chama-se "Compilação do SO". Eis como pode atualizar o seu dispositivo Windows 10:
 
 1. Em **Iniciar**, abra as **Definições**.
-2. Ir para o**sistema** >  **de definições** > **sobre** > a**construção de OS**.
+2. Ir para o sistema **de definições**sobre a  >  **System**  >  **About**  >  **construção de OS**.
 3. Se a Compilação do SO for inferior à que a sua empresa pretende que utilize, selecione **Atualizar** para atualizar para uma versão mais recente do Windows.
 
 Se a sua versão do Windows for mais recente do que a versão que a sua empresa suporta, terá de [experimentar alguns passos diferentes para corrigir o problema](your-windows-version-isnt-yet-supported.md)

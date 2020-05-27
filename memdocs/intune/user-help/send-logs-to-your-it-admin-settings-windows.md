@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,19 +19,19 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c32be14ed453d7afd9b91e1c637a6c0484a872a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef75b3a678c60fd2683feb269210d70baed9c46a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327873"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881969"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Enviar registos ao suporte da empresa a partir da aplicação Definições para Windows 10
 
 Utilize a aplicação Definições para resolver problemas no Portal da Empresa para o Windows 10. Se tiver um problema ao utilizar a aplicação no seu dispositivo Windows 10, pode enviar um e-mail à sua equipa de suporte para obter ajuda. Os eventos e erros que ocorrem na aplicação Portal da Empresa são guardados no seu dispositivo num documento especial chamado _registo de diagnóstico_. Podem conter informações adicionais sobre o erro, e quando exportadas são úteis para apoiar as equipas.
 
 1. Para abrir a aplicação **Definições,** vá ao menu **Iniciar** > **Definições**. Pode também pesquisar *definições* na barra de pesquisa.
-2. Ir ao trabalho de acesso às **Contas** > **ou à escola.**
+2. Ir ao trabalho de acesso às **Contas**  >  **ou à escola.**
 3. Selecione **Exportar os seus ficheiros**de registo de gestão .
 
    ![O “ecrã Acesso profissional ou escolar”, que apresenta a opção Exportar sob o cabeçalho “Definições relacionadas”.](./media/w10-export-logs.png)

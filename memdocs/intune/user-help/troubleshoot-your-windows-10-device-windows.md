@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/11/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077721"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881761"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Resolver problemas de inscrição no dispositivo Windows 10
 Se inscreveu o seu dispositivo, mas ainda não consegue aceder ao seu trabalho ou e-mail escolar e ficheiros, experimente estes passos de resolução de problemas.  
@@ -43,7 +43,7 @@ Se inscreveu o seu dispositivo, mas ainda não consegue aceder ao seu trabalho o
 
 1. Se seguiu os passos acima, mas ainda não consegue aceder ao seu trabalho ou e-mail escolar e ficheiros, volte ao **access work ou à escola**.
 
-2. Efetue uma das seguintes ações:
+2. Faça um dos seguintes:
 
    - Se vir uma ligação que tem um aspeto semelhante à imagem abaixo, toque na mesma e, em seguida, confira se vê as opções Gerir, Informações e Desligar. Se vires estas opções, estás agora matriculado e conectado.
 

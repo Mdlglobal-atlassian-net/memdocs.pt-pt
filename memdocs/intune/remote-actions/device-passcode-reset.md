@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9d7e5fc7d16212c40fbbe5c1486ed3be76d2738f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078979"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983105"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Repor ou remover um código de acesso do dispositivo no Intune
 
@@ -33,14 +33,14 @@ Este documento discute tanto o reset de código de acesso do dispositivo como o 
 
 | Plataforma | Suportada? |
 | ---- | ---- |
-| Dispositivos Android com a versão 6.X ou anterior | Sim |
-| Dispositivos empresariais Android matriculados como Proprietário de Dispositivos | Sim |
-| dispositivos iOS/iPadOS | Sim |
-| dispositivos iOS/iPadOS matriculados com inscrição do utilizador | Não |
-| Dispositivos Android matriculados com um perfil de trabalho | Não |
-| Dispositivos Android com a versão 7.0 ou posterior | Não |
-| macOS | Não |
-| Windows | Não |
+| Dispositivos Android com a versão 6.X ou anterior | Yes |
+| Dispositivos empresariais Android matriculados como Proprietário de Dispositivos | Yes |
+| dispositivos iOS/iPadOS | Yes |
+| dispositivos iOS/iPadOS matriculados com inscrição do utilizador | No |
+| Dispositivos Android matriculados com um perfil de trabalho | No |
+| Dispositivos Android com a versão 7.0 ou posterior | No |
+| macOS | No |
+| Windows | No |
 
 Para dispositivos Android, isto significa que o reset da código de acesso ao nível do dispositivo só é suportado em dispositivos com 6.x ou anteriores, ou em dispositivos empresariais Android que executam no modo Quiosque. Isto porque a Google removeu o suporte para redefinir a senha/senha de um dispositivo Android 7 a partir de uma aplicação de Administrador de Dispositivos e aplica-se a todos os fornecedores de MDM.
 
@@ -48,9 +48,9 @@ Para dispositivos Android, isto significa que o reset da código de acesso ao n�
 
 | Plataforma | Suportada? |
 | ---- | ---- |
-| Dispositivos Android Enterprise inscritos com um perfil de trabalho e com a versão 8.0 e posterior | Sim |
-| Dispositivos Android Enterprise inscritos com um perfil de trabalho e com a versão 7.X e anterior | Não |
-| Dispositivos Android com a versão 7.X e anterior | Não |
+| Dispositivos Android Enterprise inscritos com um perfil de trabalho e com a versão 8.0 e posterior | Yes |
+| Dispositivos Android Enterprise inscritos com um perfil de trabalho e com a versão 7.X e anterior | No |
+| Dispositivos Android com a versão 7.X e anterior | No |
 
 Para criar um novo código de acesso de perfil de trabalho, utilize a ação Repor Código de Acesso. Esta ação solicita uma reposição do código de acesso e cria um código de acesso novo e temporário apenas para o perfil de trabalho. 
 

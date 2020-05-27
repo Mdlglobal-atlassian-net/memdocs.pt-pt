@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322436"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984919"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Ativar o conector de defesa de ameaças móveis em Intune para dispositivos não matriculados
 
@@ -52,13 +52,13 @@ Políticas clássicas de acesso condicional para aplicações MTD:
 
 - Por defeito, não interaja com outras políticas de acesso condicional que utiliza para avaliação.
 
-Para ver as políticas clássicas de acesso condicional, em [Azure,](https://portal.azure.com/#home)vá às**políticas clássicas**de**acesso** > condicional do >  **Diretório Ativo Azure.**
+Para ver as políticas clássicas de acesso condicional, em [Azure,](https://portal.azure.com/#home)vá às políticas clássicas de acesso condicional do **Diretório Ativo Azure.**  >  **Conditional Access**  >  **Classic policies**
 
 ## <a name="to-enable-the-mtd-connector"></a>Para ativar o conector da MTD
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione > **Conectores de** >  **administração de inquilinos**e fichas**mobile threat defense**.
+2. Selecione **Tenant administration**  >  **Conectores de**administração de inquilinos e fichas  >  **mobile threat defense**.
 
 3. No painel **Defesa Contra Ameaças para Dispositivos Móveis**, selecione **Adicionar**.
 
@@ -74,9 +74,9 @@ Pode decidir quais as opções de alternância da MTD que necessita de ativar de
 
 **Definições de política de proteção de aplicativos**
 
-- **Conecte os dispositivos Android * \<* da versão 4.4 e acima do nome do parceiro MTD>para avaliação**da política de proteção de aplicações : Quando ativar esta opção, as políticas de proteção de aplicações utilizando a regra do Nível de Ameaça de Dispositivo avaliarão dispositivos, incluindo dados deste conector.
+- **Conecte os dispositivos Android da versão 4.4 e acima do nome do * \< parceiro MTD>* para avaliação**da política de proteção de aplicações : Quando ativar esta opção, as políticas de proteção de aplicações utilizando a regra do Nível de Ameaça de Dispositivo avaliarão dispositivos, incluindo dados deste conector.
 
-- **Conecte os dispositivos iOS versão 11 e superior ao * \<nome do parceiro MTD>* para avaliação**da política de proteção de aplicações : Quando ativar esta opção, as políticas de proteção de aplicações utilizando a regra do Nível de Ameaça de Dispositivo avaliarão dispositivos, incluindo dados deste conector.
+- Ligue os **dispositivos iOS versão 11 e superior ao nome do * \< parceiro MTD>* para avaliação**da política de proteção de aplicações : Quando ativar esta opção, as políticas de proteção de aplicações utilizando a regra do Nível de Ameaça de Dispositivo avaliarão os dispositivos, incluindo dados deste conector.
 
 **Definições comuns partilhadas**
 

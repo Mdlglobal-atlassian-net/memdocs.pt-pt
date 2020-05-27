@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 44fa8860380c2059be9feb0ceac3a4b749423ae9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324495"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984103"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorizar informações e atribuições da aplicação com o Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "80324495"
 O Intune fornece várias formas de monitorizar as propriedades de aplicações que gere e de gerir o estado de atribuição da aplicação.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações.**
+2. Selecione **Apps**  >  **Todas as aplicações.**
 3. Na lista de aplicações, selecione uma aplicação a monitorizar. Em seguida, verá o painel de aplicações, que inclui uma descrição geral do estado dos dispositivos e dos utilizadores.
 
 > [!NOTE]
@@ -49,8 +49,8 @@ A secção **Essentials** contém as seguintes informações sobre a aplicação
 
  | **Detalhes da aplicação**            | **Descrição**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **Editora**          | O publicador da aplicação.                                            |
-| **Sistema Operativo**   | O sistema operativo da aplicação (Windows, iOS/iPadOS, Android, e assim por diante). |
+| **Publisher**          | O publicador da aplicação.                                            |
+| **Sistema operativo**   | O sistema operativo da aplicação (Windows, iOS/iPadOS, Android, e assim por diante). |
 | **Criado**             | A data e hora em que esta revisão foi criada. <b>**Nota**: Este valor de data é atualizado quando um administrador de TI altera os metadados da aplicação, tais como alterar a categoria de aplicação ou descrição da aplicação.                        |
 | **Atribuído**           | Se a aplicação foi atribuída (**Sim** ou **Não**).                  |
 

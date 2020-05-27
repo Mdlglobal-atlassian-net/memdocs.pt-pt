@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: d7f35f3f7f1d3deb607e4f5b0da7b8ffcf5d536f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4cc6b1e5f96ff68ac9b73c5e050ff587bdb21506
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327501"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882514"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Tem de desativar a depuração de USB
 
 A _depuração de USB_ é um modo que permite que os dispositivos Android comuniquem com computadores com o propósito de tornar as aplicações Android mais fáceis para os programadores. Permite um nível de acesso a determinadas áreas especializadas do telefone com as quais a maioria das pessoas não precisa de interagir regularmente. Embora seja útil, ter este acesso ativo pode colocar o dispositivo num risco adicional de as informações ficarem comprometidas quando este está ligado a um computador. O suporte da empresa solicitou que esta definição seja desativada para proteger os dados da empresa no dispositivo.
 
-Pode desligar a depuração USB indo para**as opções**de **desenvolvedorde definições** > e desligando **a depuração USB**.
+Pode desligar a depuração USB indo para as opções de **desenvolvedorde definições**  >  **Developer options**e desligando **a depuração USB**.
 
 Após desativar a **Depuração de USB**, aguarde alguns minutos e, em seguida, poderá continuar a utilizar o dispositivo Android para aceder aos dados da empresa ou da escola como habitual.
 

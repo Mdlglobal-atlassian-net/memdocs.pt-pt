@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c288ea474fde9466b4b66056445ec93b572b29d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327893"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881999"
 ---
 # <a name="upload-and-email-logs"></a>Carregar e enviar registos por e-mail  
 
@@ -38,7 +38,7 @@ Os detalhes reais de erro são mantidos no seu dispositivo num documento especia
 ## <a name="upload-and-email-logs-from-company-portal"></a>Upload e registos de e-mail do Portal da Empresa  
 
 1. Na aplicação Portal da Empresa, existem duas formas de iniciar o suporte por e-mail.
-    * Do ecrã principal: Toque no **menu** > **Ajude suporte** > **de e-mail**.  
+    * Do ecrã principal: Toque no **menu**  >  **Ajude suporte**de  >  **e-mail**.  
     * A partir de uma mensagem de erro: Toque em **AJUDA** ou **ENVIE INFORMAÇÃO,** se disponível.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Os detalhes reais de erro são mantidos no seu dispositivo num documento especia
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Upload e registos de e-mail da aplicação Microsoft Intune   
 
 1. Na aplicação Microsoft Intune, existem duas formas de iniciar o suporte de e-mail.  
-    * A partir do ecrã principal: Toque no **menu** > **Ajude a** > **obter suporte**.  
+    * A partir do ecrã principal: Toque no **menu**  >  **Ajude a**obter  >  **suporte**.  
     * A partir de uma mensagem de erro: Toque em **AJUDA** ou **ENVIE INFORMAÇÃO,** se disponível.  
 
     > [!NOTE]

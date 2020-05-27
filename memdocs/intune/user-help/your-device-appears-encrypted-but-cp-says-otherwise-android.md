@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/14/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327481"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882259"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Dispositivo encriptado mas aplicações dizem o contrário
 
@@ -32,7 +32,7 @@ Se o Portal da Empresa ou a aplicação Microsoft Intune disserem que o seu disp
 
 ## <a name="add-a-startup-pin"></a>Adicionar um PIN de arranque
 
-Determinados dispositivos Android exigem que crie um PIN de arranque para garantir que o dispositivo está seguro. A localização desta definição estará na aplicação **Definições** do seu dispositivo. O nome e a localização da definição podem variar. Por exemplo, no Samsung Galaxy S7, a definição é referida como **Secure Startup**. Para o ativar e criar uma senha, aceda ao 'Bloqueio de >  **definições'** > e ao**Arranque seguro**de**segurança**.  
+Determinados dispositivos Android exigem que crie um PIN de arranque para garantir que o dispositivo está seguro. A localização desta definição estará na aplicação **Definições** do seu dispositivo. O nome e a localização da definição podem variar. Por exemplo, no Samsung Galaxy S7, a definição é referida como **Secure Startup**. Para o ativar e criar uma senha, aceda ao **'Bloqueio**de  >  **definições' e**  >  **ao Arranque seguro**de segurança .  
 
 ## <a name="encrypt-the-entire-device"></a>Encriptar todo o dispositivo
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4088185da2c01cfa7fd343203f7452d2796c4466
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 59555c8bb9a35d5b70b46836f2298bf3ed342b2d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324321"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881824"
 ---
 # <a name="sign-in-to-company-portal"></a>Inscreva-se no Portal da Empresa  
 
@@ -80,7 +80,7 @@ Se a sua empresa utilizar smartcards para aceder aos seus computadores, é prov�
 
    ![As instruções indicam para ir para a página https://microsoft.com/devicelogin com um código de acesso exclusivo a partir do computador de trabalho e, em seguida, para utilizar o código para iniciar sessão.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. No outro dispositivo (o que está a usar para autenticar), [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin)abra o seu navegador e vá para . Insira ou colhe o código.  
+3. No outro dispositivo (o que está a usar para autenticar), abra o seu navegador e vá para [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) . Insira ou colhe o código.  
 
    ![Uma imagem do browser do utilizador no computador de trabalho em vez da aplicação Portal da Empresa. A página “Início de sessão do dispositivo” apresentada solicita ao utilizador o código que recebeu na aplicação Portal da Empresa.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 

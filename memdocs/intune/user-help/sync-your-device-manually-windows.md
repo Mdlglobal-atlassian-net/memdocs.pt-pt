@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254814"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881862"
 ---
 # <a name="sync-your-windows-device-manually"></a>Sincronizar o seu dispositivo Windows manualmente
 
@@ -44,7 +44,7 @@ Complete estes passos para sincronizar manualmente qualquer dispositivo do Windo
 
 1. Abra a aplicação Portal da Empresa no dispositivo.
 
-2. Selecione > **'Sincronização** **de Definições**' .
+2. Selecione **'Sincronização de Definições**  >  **Sync**' .
 
     ![Captura de ecrã da home page da aplicação Portal da Empresa, com a opção Definições realçada](./media/RS1_homePage_settings_04.png)  
     
@@ -65,7 +65,7 @@ Também pode aceder ao controlo de sincronização fora da aplicação, a partir
 Conclua estes passos para sincronizar manualmente os seus dispositivos Microsoft HoloLens, Windows 10, Windows 10 Mobile ou Windows Phone 8.1 a partir da aplicação Definições.  
 
 ### <a name="windows-10-desktop"></a>Windows 10 Desktop
-1. No seu dispositivo, selecione**Definições** **de Início** > .
+1. No seu dispositivo, selecione **Definições de Início**  >  **Settings**.
 
 2. Selecione **Contas**.
 
@@ -112,7 +112,7 @@ Conclua estes passos para sincronizar manualmente os seus dispositivos Microsoft
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
 
-   1. No seu dispositivo, vá a Todas as**contas**de**definições** > de **aplicações** > .
+   1. No seu dispositivo, vá a **Todas as contas**de  >  **definições**de aplicações  >  **Accounts**.
 
        ![Selecionar Contas no ecrã Definições](./media/win10m-sync-1-settings-accounts.png)
 
@@ -131,14 +131,14 @@ Conclua estes passos para sincronizar manualmente os seus dispositivos Microsoft
 Estas instruções aplicam-se a dispositivos HoloLens a executar a Atualização de Aniversário do Windows 10 (também conhecido como RS1). 
 1. Abra a aplicação Definições no seu dispositivo.  
 
-2. Selecione Acesso**ao trabalho**das **Contas** > .  
+2. Selecione Acesso ao trabalho das **Contas**  >  **Work Access**.  
     ![Captura de ecrã da aplicação Definições do HoloLens com a ligação Contas realçada](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
 3. Selecione a sua conta conectada > **Sync**.  ![Screenshot HoloLens definição app, botão de sincronização realçado](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 
-1. Ir a **Todas as aplicações** > **Configurações** > **local de trabalho**.
+1. Ir a **Todas as aplicações**  >  **Configurações**  >  **local de trabalho**.
 
     ![Lista de definições](./media/wp81-1-sync-settings-workplace.png)
 

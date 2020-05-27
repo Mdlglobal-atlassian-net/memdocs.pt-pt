@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b0df9499d79ff7773266326d5b0e1347413f88dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327889"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881970"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Envie um e-mail ao suporte da sua empresa sobre o problema do Portal da Empresa para Windows
 
@@ -46,7 +46,7 @@ Os eventos e erros que ocorrem na aplicação Portal da Empresa são guardados n
 ## <a name="steps-to-get-help"></a>Passos para obter ajuda  
 
 1. Abra a aplicação Portal da **Empresa.**
-2. Selecione **Ajuda & suporte** > **Obter ajuda**.  
+2. Selecione **Ajuda & suporte**Obter  >  **ajuda**.  
 
    ![Screenshot da página de suporte da Ajuda &, destacando a barra de navegação esquerda e a secção Obter Ajuda.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 

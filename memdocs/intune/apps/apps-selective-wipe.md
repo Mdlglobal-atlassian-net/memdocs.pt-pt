@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2d5e73961daae140a039ba243e7364ffd6b06502
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078350"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984102"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Como eliminar apenas dados empresariais de aplicações geridas pelo Intune
 
@@ -40,12 +40,12 @@ Para remover seletivamente os dados de aplicações da empresa, utilize os passo
 > Os contactos sincronizados diretamente da aplicação para o livro de endereços nativo são removidos. Não é possível eliminar contactos que sejam sincronizados do livro de endereços nativo para outra origem externa. Atualmente, é aplicável apenas à aplicação Microsoft Outlook.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Políticas WIP implementadas sem inscrição do utilizador 
-As políticas de Proteção de Informação do Windows (WIP) podem ser implementadas sem exigir que os utilizadores de MDM insuem o seu dispositivo Windows 10. Esta configuração permite que as empresas protejam os seus documentos empresariais com base na configuração do WIP, o que permite que o utilizador mantenha a gestão dos seus próprios dispositivos Windows. Uma vez protegidos os documentos com uma política wip, os dados protegidos podem ser limpos seletivamente por um administrador intune (administrador global ou administrador de[serviço intune).](../fundamentals/users-add.md#types-of-administrators) Ao selecionar o utilizador e o dispositivo, e ao enviar um pedido de eliminação de dados, todos os dados protegidos através da política WIP ficarão inutilizáveis. A partir do Intune no portal Azure, selecione **app** > cliente**app limpeza seletiva**. Para obter mais informações, veja [Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Intune](windows-information-protection-policy-create.md).
+As políticas de Proteção de Informação do Windows (WIP) podem ser implementadas sem exigir que os utilizadores de MDM insuem o seu dispositivo Windows 10. Esta configuração permite que as empresas protejam os seus documentos empresariais com base na configuração do WIP, o que permite que o utilizador mantenha a gestão dos seus próprios dispositivos Windows. Uma vez protegidos os documentos com uma política wip, os dados protegidos podem ser limpos seletivamente por um administrador intune (administrador global ou administrador de[serviço intune).](../fundamentals/users-add.md#types-of-administrators) Ao selecionar o utilizador e o dispositivo, e ao enviar um pedido de eliminação de dados, todos os dados protegidos através da política WIP ficarão inutilizáveis. A partir do Intune no portal Azure, selecione **app cliente**app  >  **limpeza seletiva**. Para obter mais informações, veja [Criar e implementar a política de proteção de aplicações do Windows Information Protection (WIP) com o Intune](windows-information-protection-policy-create.md).
 
 ## <a name="create-a-device-based-wipe-request"></a>Criar um pedido de limpeza baseado em dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **App limpeza seletiva Criar pedido** > de**limpeza**.<br>
+2. Selecione **Apps**  >  **App limpeza seletiva Criar pedido**de  >  **limpeza**.<br>
    O painel de pedido de **limpeza Create** é apresentado.
 3. Clique em **Selecionar utilizador,** escolha o utilizador cujos dados da aplicação pretende limpar e clique em **Selecionar** na parte inferior do painel de **utilizadores Select.**
 
@@ -66,7 +66,7 @@ O serviço cria e controla um pedido de eliminação separado para cada aplicaç
 Ao adicionar mos um utilizador à limpeza ao nível do Utilizador, emitemos automaticamente comandos de limpeza a todas as aplicações em todos os dispositivos do utilizador.  O utilizador continuará a receber comandos de limpeza em todos os check-ins de todos os dispositivos.  Para voltar a ativar um utilizador, deve removê-lo da lista.  
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **App limpeza seletiva Criar pedido** > de**limpeza**.<br>
+2. Selecione **Apps**  >  **App limpeza seletiva Criar pedido**de  >  **limpeza**.<br>
    **Selecione a limpeza ao nível do utilizador**
 3. Clique em **Adicionar** e **Selecione** painel de utilizador.
 4. Escolheu o utilizador cujos dados da aplicação gostaria de limpar e clicar em **Select**.
@@ -75,7 +75,7 @@ Ao adicionar mos um utilizador à limpeza ao nível do Utilizador, emitemos auto
 
 Pode obter um relatório resumido que mostra o estado geral do pedido de eliminação e inclui o número de pedidos pendentes e de falhas. Para obter mais detalhes, siga estes passos:
 
-1. No painel**de limpeza seletivo** da App **Apps,** > pode ver a lista dos seus pedidos agrupados pelos utilizadores. Uma vez que o sistema cria um pedido de eliminação para cada aplicação protegida em execução no dispositivo, poderá ver múltiplos pedidos para um utilizador. O estado indica se um pedido de eliminação está **pendente**, **falhou** ou se teve **êxito**.
+1. No painel de limpeza seletivo da **App**  >  **Apps,** pode ver a lista dos seus pedidos agrupados pelos utilizadores. Uma vez que o sistema cria um pedido de eliminação para cada aplicação protegida em execução no dispositivo, poderá ver múltiplos pedidos para um utilizador. O estado indica se um pedido de eliminação está **pendente**, **falhou** ou se teve **êxito**.
 
     ![Captura de ecrã do estado do pedido de eliminação no painel Eliminação seletiva de aplicações](./media/apps-selective-wipe/wipe-request-status-1.png)
 

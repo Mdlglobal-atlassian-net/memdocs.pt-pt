@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ab0674cdf584aac2fe3b0f8284eadf544778e5b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80900478"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984632"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Adicione o Microsoft Edge aos dispositivos macOS utilizando o Microsoft Intune
 
 Antes de poder implementar, configurar, monitorizar ou proteger aplicações, deve adicioná-las ao Intune. Um dos tipos de [aplicações](apps-add.md#app-types-in-microsoft-intune) disponíveis é o Microsoft Edge *versão 77 e mais tarde.* Ao selecionar este tipo de aplicação em Intune, pode atribuir e instalar a versão 77 do Microsoft Edge *e, mais tarde,* aos dispositivos que gere o macOS. Este tipo de aplicação facilita a atribuição do Microsoft Edge aos dispositivos macOS sem que utilize a ferramenta de embrulho da aplicação macOS. Para ajudar a manter as aplicações mais seguras e atualizadas, a aplicação vem com o Microsoft AutoUpdate (MAU).
 
 > [!IMPORTANT]
-> Este tipo de aplicação oferece canais de desenvolvimento e beta para macOS. A implementação é apenas em inglês (EN), no entanto os utilizadores finais podem alterar o idioma de exibição no navegador em **Configurações** > **Idiomas**. 
+> Este tipo de aplicação oferece canais de desenvolvimento e beta para macOS. A implementação é apenas em inglês (EN), no entanto **Settings**os utilizadores finais podem alterar o idioma de exibição no navegador em  >  **Configurações Idiomas**. 
 
 > [!NOTE]
 > O Microsoft Edge *versão 77 e mais tarde* está disponível para o Windows 10 também.
@@ -43,7 +43,7 @@ Antes de poder implementar, configurar, monitorizar ou proteger aplicações, de
 Pode adicionar a versão 77 do Microsoft Edge e, mais tarde, a Intune utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. Na lista do **tipo App** no **Microsoft Edge, versão 77 e posterior**, selecione **macOS**.
 
 ## <a name="configure-app-information"></a>Configurar as informações da aplicação
@@ -80,10 +80,10 @@ Neste passo, configure as opções de instalação para a aplicação.
 
 ## <a name="select-scope-tags-optional"></a>Selecione etiquetas de âmbito (opcional)
 Pode utilizar etiquetas de âmbito para determinar quem pode ver informações sobre aplicações do cliente no Intune. Para mais detalhes sobre etiquetas de âmbito, consulte Use o controlo de acesso baseado em funções e etiquetas de âmbito para TI distribuídos.
-1.    Selecione **Scope (Tags)** > **Adicionar**.
+1.    Selecione **Scope (Tags)**  >  **Adicionar**.
 2.    Utilize a caixa **Select** para procurar etiquetas de mira.
 3.    Selecione a caixa de verificação junto às etiquetas de âmbito que pretende atribuir a esta aplicação.
-4.    Clique em **Selecione** > **OK**.
+4.    Clique em **Selecione**  >  **OK**.
 
 ## <a name="add-the-app"></a>Adicionar a aplicação
 Quando tiver concluído a configuração, selecione **Adicionar** a partir do painel de aplicações da **App.** 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/16/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075919"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882425"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Inscreva o seu dispositivo macOS utilizando a app Portal da Empresa  
 
@@ -74,7 +74,7 @@ Utilize os seguintes passos para inscrever o seu dispositivo macOS na sua organi
 5. No ecrã de gestão do **dispositivo Confirmar,** selecione **Preferências**do Sistema Aberto .  
 
     ![Exemplo de screenshot do ecrã de gestão do dispositivo Confirm, destacando o botão "Preferências do Sistema Aberto".](./media/confirm-device-management-macos-1912.PNG)  
-6. As preferências do sistema do seu dispositivo serão abertas. Selecione o Perfil de **Gestão** da lista de perfis do dispositivo e, em seguida, selecione **Aprovar** > **Approve**.  
+6. As preferências do sistema do seu dispositivo serão abertas. Selecione o Perfil de **Gestão** da lista de perfis do dispositivo e, em seguida, selecione **Approve**  >  **Aprovar**.  
     ![Exemplo de screenshot das preferências do sistema, ecrã de perfil de gestão, realçando o botão "Aprovar".](./media/management-profile-approve-macos-1912.PNG)   
 1. Volte ao Portal da Empresa e selecione **Continuar**.    
 2. A sua organização poderá necessitar de atualizar as definições do seu dispositivo. Quando terminar de atualizar as definições, selecione **'Verificar definições**' .  
@@ -85,15 +85,15 @@ Utilize os seguintes passos para inscrever o seu dispositivo macOS na sua organi
 
  ## <a name="troubleshooting-and-feedback"></a>Resolução de problemas e feedback   
 
-Se tiver problemas durante a inscrição, vá **ao Help** > **Send Diagnostic Report** para reportar o problema aos desenvolvedores de aplicações da Microsoft. Esta informação é usada para ajudar a melhorar a aplicação. Também usarão esta informação para ajudar a resolver o problema se a sua pessoa de suporte de TI os pedir ajuda.  
+Se tiver problemas durante a inscrição, vá **ao Help**Send  >  **Diagnostic Report** para reportar o problema aos desenvolvedores de aplicações da Microsoft. Esta informação é usada para ajudar a melhorar a aplicação. Também usarão esta informação para ajudar a resolver o problema se a sua pessoa de suporte de TI os pedir ajuda.  
 
 Depois de reportar o problema à Microsoft, pode enviar os detalhes da sua experiência para a sua pessoa de suporte de TI. Selecione **Detalhes do e-mail**. Digite o que experimentou no corpo do e-mail. Para encontrar o endereço de e-mail da pessoa de suporte, dirija-se à aplicação portal da empresa > **Contact**. Ou consulte o site do [Portal da Empresa.](https://go.microsoft.com/fwlink/?linkid=2010980)  
  
 
-Além disso, a equipa do Portal da Microsoft Intune Company adoraria ouvir o seu feedback. Vá para **ajudar a** > **Enviar Feedback** para partilhar os seus pensamentos e ideias.  
+Além disso, a equipa do Portal da Microsoft Intune Company adoraria ouvir o seu feedback. Vá para **ajudar a**  >  **Enviar Feedback** para partilhar os seus pensamentos e ideias.  
 
 ## <a name="unverified-profiles"></a>Perfis não verificados  
-Quando visualiza os perfis instalados de gestão de dispositivos móveis (MDM) nos**Perfis**de **Preferências** > do Sistema, alguns perfis podem mostrar um estado não verificado. Desde que o perfil de gestão mostre um estatuto verificado, não precisa de se preocupar.  
+Quando visualiza os perfis instalados de gestão de dispositivos móveis (MDM) nos Perfis de **Preferências**do  >  **Profiles**Sistema, alguns perfis podem mostrar um estado não verificado. Desde que o perfil de gestão mostre um estatuto verificado, não precisa de se preocupar.  
 
 O perfil de gestão é o que define a ligação de canal MDM. Enquanto o perfil de gestão for verificado, quaisquer outros perfis entregues à máquina através desse canal herdam os traços de segurança do perfil de gestão.  
 
