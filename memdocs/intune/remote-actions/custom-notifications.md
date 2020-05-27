@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7130ca265ec60a1fb9ca72c3a264b1b5cdbeae2c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078996"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989326"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Enviar notificações personalizadas em Intune
 
@@ -65,8 +65,8 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 
 **Permissões:**
 
-- Para enviar notificações a grupos, a sua conta deve ter a seguinte permissão RBAC em Intune: *Organization* > **Update**.
-- Para enviar notificações para um dispositivo, a sua conta deve ter a seguinte permissão RBAC em Intune: *Tarefas remotas* > **Enviar notificações personalizadas**.
+- Para enviar notificações a grupos, a sua conta deve *Organization*ter a seguinte permissão RBAC em Intune:  >  **Organization Update**.
+- Para enviar notificações para um dispositivo, a sua conta deve ter a seguinte permissão RBAC em Intune: *Tarefas remotas*  >  **Enviar notificações personalizadas**.
 
 **Criação de notificações:**
  
@@ -89,7 +89,7 @@ Se tem a aplicação Portal da Empresa aberta num dispositivo Android, a notific
 
 ## <a name="send-a-custom-notification-to-groups"></a>Enviar uma notificação personalizada a grupos
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir para**notificações personalizadas**da **administração** > do Inquilino.  
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações, e ir para notificações personalizadas da **administração do**  >  **Custom notifications**Inquilino.  
 
 2. No separador Basics, especifique o seguinte e, em seguida, selecione **Next** para continuar.  
    - **Título** – Especifique um título para esta notificação. Os títulos estão limitados a 50 caracteres.  
@@ -109,7 +109,7 @@ Intune não rastreia as notificações personalizadas que envia, e os dispositiv
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Envie uma notificação personalizada para um único dispositivo
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações e, em seguida, ir para **Dispositivos** > **Todos os dispositivos**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) com uma conta que tem permissões para criar e enviar notificações e, em seguida, ir para **Dispositivos**  >  **Todos os dispositivos**.
 
 2. Clique duas vezes no nome do dispositivo gerido para o qual pretende enviar uma notificação, para abrir a página *de Visualização geral* dos dispositivos.
 

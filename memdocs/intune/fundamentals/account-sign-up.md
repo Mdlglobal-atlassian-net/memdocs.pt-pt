@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80401447"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988878"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Inscrever-se ou iniciar sessão no Microsoft Intune
 
@@ -68,7 +68,7 @@ Portal Intune Azure:https://portal.azure.com/#blade/Microsoft_Intune_DeviceSetti
 
 Insintonpara a Educação:https://intuneeducation.portal.azure.com
 
-Intune classic https://manage.microsoft.com portal: O portal clássico Intune é usado apenas para gerir dispositivos matriculados com o cliente de software Intune PC
+Intune classic portal: https://manage.microsoft.com O portal clássico Intune é usado apenas para gerir dispositivos matriculados com o cliente de software Intune PC
 
 ### <a name="urls-for-intune-services-provided-by-office-365"></a>URLs para serviços Intune prestados pelo Office 365
 

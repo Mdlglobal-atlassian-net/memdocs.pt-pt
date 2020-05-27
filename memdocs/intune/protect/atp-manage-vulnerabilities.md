@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5464e70d915dceb9cf2c6a3b2385419cfc11e38b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077840"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989755"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Utilizar o Intune para remediar vulnerabilidades identificadas pelo Microsoft Defender ATP
 
@@ -81,7 +81,7 @@ Exemplo de fluxo de trabalho:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione > **tarefas**de **segurança endpoint**.
+2. Selecione tarefas de **segurança endpoint**  >  **Security tasks**.
 
 3. Selecione uma tarefa da lista para abrir uma janela de recursos que apresente detalhes adicionais para essa tarefa de segurança.
 

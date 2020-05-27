@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 18a26bcf282b7b586c7cd0209b0381f31c44ac2f
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551749"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989683"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Utilize encriptação de disco FileVault para macOS com Intune
 
@@ -180,7 +180,7 @@ Intune suporta múltiplas opções para rodar e recuperar chaves de recuperaçã
 
   3. Selecione **Obter tecla de recuperação**. A chave de recuperação atual é apresentada.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 [Gerir a política BitLocker](../protect/encrypt-devices.md)
 

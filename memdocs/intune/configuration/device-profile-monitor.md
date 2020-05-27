@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3de0b0a6302bd53384bd492aaf9377c0e5653384
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078265"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988448"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorizar perfis de dispositivos no Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune inclui algumas funcionalidades para ajudar a monitorizar e gerir os perfi
 ## <a name="view-existing-profiles"></a>Ver perfis existentes
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração**de **dispositivos** > .
+2. Selecione **perfis**de configuração de  >  **dispositivos**.
 
 Todos os perfis existentes estão listados e incluem detalhes como a plataforma e se o perfil está atribuído a algum dispositivo.
 
@@ -73,9 +73,9 @@ Depois de criar o perfil do dispositivo, o Intune disponibiliza gráficos. Estes
 
 ## <a name="view-conflicts"></a>Ver os conflitos
 
-Em **Dispositivos** > **Todos os dispositivos,** pode ver quaisquer configurações que estejam a causar um conflito. Quando há um conflito, você também vê todos os perfis de configuração que contêm esta configuração. Os administradores podem utilizar esta funcionalidade para ajudar a resolver problemas e corrigir discrepâncias com os perfis.
+Em **Dispositivos**  >  **Todos os dispositivos,** pode ver quaisquer configurações que estejam a causar um conflito. Quando há um conflito, você também vê todos os perfis de configuração que contêm esta configuração. Os administradores podem utilizar esta funcionalidade para ajudar a resolver problemas e corrigir discrepâncias com os perfis.
 
-1. Em Intune, selecione Todos os **dispositivos** > **All Devices** > selecione um dispositivo existente na lista. Um utilizador final pode obter o nome do dispositivo a partir da aplicação Portal da Empresa.
+1. Em Intune, selecione **Todos**  >  **os Dispositivos** > selecione um dispositivo existente na lista. Um utilizador final pode obter o nome do dispositivo a partir da aplicação Portal da Empresa.
 2. Selecione **Configuração do dispositivo**. É apresentada uma lista de todas as políticas de configuração que se aplicam ao dispositivo.
 3. Selecione a política. São apresentadas todas as definições existentes nessa política que se aplicam ao dispositivo. Se um dispositivo apresentar o estado **Conflito**, selecione essa linha. Na nova janela, pode ver todos os perfis e os nomes dos perfis que têm a definição a causar o conflito.
 

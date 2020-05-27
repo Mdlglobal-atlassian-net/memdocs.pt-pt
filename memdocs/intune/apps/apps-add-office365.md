@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d411950dce117aa9c99f806d2ef80796a2a2fc50
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: f8a0fba0f342995070b3408f4edc6b06d2012e7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023270"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989537"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Adicione 365 aplicações do Office aos dispositivos windows 10 com microsoft Intune
 
@@ -52,7 +52,7 @@ Antes de poder atribuir, monitorizar, configurar ou proteger aplicações, tem d
 ## <a name="select-microsoft-365-apps"></a>Selecione Aplicações Microsoft 365
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. Selecione o **Windows 10** na secção aplicações da **Microsoft 365** do painel do **tipo Select.**
 4. Clique em **Selecionar**. Os passos **add Microsoft 365 Apps** são apresentados.
 
@@ -111,7 +111,7 @@ Quando escolher o designer de **configuração,** o painel de **aplicações Adi
     - **Utilizar a ativação de computadores partilhados**:selecione esta opção quando existirem múltiplos utilizadores a partilhar um computador. Para mais informações, consulte a [visão geral da ativação de computador partilhado para aplicações microsoft 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Aceitar automaticamente o contrato de licença do utilizador final**: selecione esta opção se não precisar que os utilizadores finais aceitem o contrato de licença. O Intune irá aceitar automaticamente o contrato.
     - **Idiomas**: o Office é instalado automaticamente em qualquer dos idiomas suportados que vierem instalados com o Windows no dispositivo dos utilizadores finais. Selecione esta opção se quiser instalar idiomas adicionais no conjunto de aplicações. <p></p>
-        Pode implementar idiomas adicionais para aplicações do Office 365 Pro Plus geridas através do Intune. A lista de idiomas disponíveis inclui o **Tipo** do pacote de idiomas (núcleo, parcial e verificação). No portal Azure, selecione **Microsoft Intune** > **Apps** > **Todas as aplicações** > **Add**. Na lista do **tipo app** do painel de **aplicações Add,** selecione **o Windows 10** em **aplicações Microsoft 365**. Selecione **Idiomas** no painel de definições da **Suite app.** Para obter informações adicionais, consulte a [visão geral da implementação de idiomas nas Aplicações Microsoft 365](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Pode implementar idiomas adicionais para aplicações do Office 365 Pro Plus geridas através do Intune. A lista de idiomas disponíveis inclui o **Tipo** do pacote de idiomas (núcleo, parcial e verificação). No portal Azure, selecione **Microsoft Intune**  >  **Apps**  >  **Todas as aplicações**  >  **Add**. Na lista do **tipo app** do painel de **aplicações Add,** selecione **o Windows 10** em **aplicações Microsoft 365**. Selecione **Idiomas** no painel de definições da **Suite app.** Para obter informações adicionais, consulte a [visão geral da implementação de idiomas nas Aplicações Microsoft 365](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Clique em **Seguir** para exibir a página **de tags scope.**
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Passo 2 -**(Opção 2**) Configure app suite usando dados XML 
@@ -123,7 +123,7 @@ Se tiver selecionado a opção **de dados Enter XML** sob a caixa de dropdown do
 1. Adicionei a sua configuração XML.
 
     > [!NOTE]
-    > O ID do produto`O365BusinessRetail`pode ser Business`O365ProPlusRetail`( ) ou Proplus ( ). No entanto, só é possível configurar o conjunto de aplicações das Aplicações Microsoft 365 Apps para edição de negócios utilizando dados XML. Note que o Microsoft Office 365 ProPlus foi renomeado para **microsoft 365 Apps para empresa**.
+    > O ID do produto pode ser Business ( `O365BusinessRetail` ) ou Proplus `O365ProPlusRetail` ( ). No entanto, só é possível configurar o conjunto de aplicações das Aplicações Microsoft 365 Apps para edição de negócios utilizando dados XML. Note que o Microsoft Office 365 ProPlus foi renomeado para **microsoft 365 Apps para empresa**.
 
 2. Clique em **Seguir** para exibir a página **de tags scope.**
 
@@ -190,7 +190,7 @@ Uma vez que você pode concluir que tanto intune como a infraestrutura de rede f
 - As versões MSI existentes do Office foram corretamente removidas do dispositivo. Intune utiliza o Office Click-to-Run que não é compatível com o Office MSI. Este comportamento é ainda mencionado neste documento:<br>
   [O escritório instalado com click-to-run e o instalador do Windows no mesmo computador não é suportado](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
 - O utilizador de sessão deve ter permissão para instalar aplicações no dispositivo.
-- Confirme que não existem problemas baseados nas**aplicações**de **registo** -> do Windows Event Viewer Windows .
+- Confirme que não existem problemas **Windows Logs**baseados nas  ->  **aplicações**de registo do Windows Event Viewer Windows .
 - Capturar registos verbosos de instalação do Office durante a instalação. Para tal, siga estes passos:<br>
     1. Ative a exploração verbosa para a instalação do Office nas máquinas-alvo. Para tal, execute o seguinte comando para modificar o registo:<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
@@ -210,7 +210,7 @@ A seguinte tabela lista códigos de erro comuns que poderá encontrar e o seu si
 
 | Estado | Fase | Descrição |
 |--------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1460 (ERROR_TIMEOUT) | Transferência | Falha ao transferir a Ferramenta de Implementação do Office |
+| 1460 (ERROR_TIMEOUT) | Download | Falha ao transferir a Ferramenta de Implementação do Office |
 | 13 (ERROR_INVALID_DATA) | - | Não foi possível verificar a assinatura da Ferramenta de Implementação do Office transferida |
 | Código de erro de CertVerifyCertificateChainPolicy | - | Falha na verificação de certificação da Ferramenta de Implementação do Office transferida |
 | 997 | WIP | Instalar o |

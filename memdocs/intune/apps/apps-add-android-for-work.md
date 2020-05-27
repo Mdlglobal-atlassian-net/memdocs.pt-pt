@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615511"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989575"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Adicionar aplicações do Managed Google Play a dispositivos Android Enterprise com o Intune
 
@@ -62,7 +62,7 @@ Existem duas formas de navegar e aprovar aplicações geridas da Google Play sto
 ### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Adicione uma aplicação gerida da Google Play store diretamente na consola Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada.
 
@@ -116,7 +116,7 @@ Existem duas formas de adicionar aplicações LOB ao Managed Google Play:
 ### <a name="managed-google-play-private-lob-app-publishing-directly-in-the-intune-console"></a>Aplicação privada (LOB) gerida do Google Play publicada diretamente na consola Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada dentro do Intune.
 5. Selecione **aplicativos Privados** (ao lado do ícone de *bloqueio)* na janela Google Play. 
@@ -155,7 +155,7 @@ As ligações web geridas pelo Google Play são instaladas e geríveis tal como 
 As ligações web serão abertas com o Microsoft Edge ou qualquer outra aplicação de navegador que escolha implementar. Certifique-se de que implementa pelo menos uma aplicação de navegador para dispositivos para que as ligações web possam abrir corretamente. No entanto, todas as opções de **Display** disponíveis para links web (ecrã completo, autónomo e UI mínimo) funcionarão apenas com o navegador Chrome. 
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo de aplicação Select,** nos tipos de **aplicações da Loja** disponíveis, selecione **aplicação Managed Google Play**.
 4. Clique em **Selecionar**. A loja de aplicações **Managed Google Play** é apresentada dentro do Intune.
 5. Selecione **aplicações Web** (ao lado do ícone *Globe)* na janela Google Play.
@@ -173,10 +173,10 @@ As ligações web serão abertas com o Microsoft Edge ou qualquer outra aplicaç
 Se aprovou uma aplicação da loja e não a vê na carga de trabalho das **Apps,** force uma sincronização imediata da seguinte forma:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Apps** > **Administração** > de**inquilinos Conectores e fichas Geridos** > **Google Play**.
+3. Selecione **Apps**  >  **Administração de**  >  **inquilinos Conectores e fichas**  >  **Geridos Google Play**.
 5. No painel **Google Play Gerido**, selecione **Atualizar**.  
     A página atualizará a hora e o estado da última sincronização.
-6. No centro de administração do Microsoft Endpoint Manager selecione **Apps** > **Todas as aplicações**.  
+6. No centro de administração do Microsoft Endpoint Manager selecione **Apps**  >  **Todas as aplicações**.  
     É apresentada a aplicação Google Play Store Gerida que ficou recentemente disponível.
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Atribuir uma aplicação do Managed Google Play aos dispositivos de perfil de trabalho do Android Enterprise
@@ -222,7 +222,7 @@ Para aplicações geridas do Google Play implementadas para dispositivos de perf
 Pode distribuir uma versão não-produção de uma aplicação gerida do Google Play para dispositivos matriculados num cenário Android Enterprise (**Android Enterprise Work Profile**, Full **Managed**, e **Dedicado**) para realizar testes. Em Intune, você pode ver se uma aplicação tem uma pista de teste de construção pré-produção publicada para ela, bem como ser capaz de atribuir essa faixa a grupos de utilizadores aAD ou grupos de dispositivos. O fluxo de trabalho para atribuir uma versão de produção a um grupo que existe atualmente é o mesmo que atribuir um canal de não produção. Após a implementação, o estado de instalação de cada faixa corresponderá ao número da versão da faixa no Managed Google Play. Para mais informações, consulte [as faixas de teste fechadas do Google Play para testes de pré-lançamento de aplicações](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Eliminar aplicações do Managed Google Play
-Quando necessário, pode eliminar as aplicações do Managed Google Play do Microsoft Intune. Para eliminar uma aplicação gerida pelo Google Play, abra o Microsoft Intune no portal Azure e selecione **Apps** > **Todas as aplicações**. Na lista de aplicações, selecione as reticências (...) à direita da aplicação do Managed Google Play e, em seguida, selecione **Eliminar** na lista apresentada. Quando elimina uma aplicação do Managed Google Play da lista de aplicações, essa aplicação passa automaticamente a não aprovada.
+Quando necessário, pode eliminar as aplicações do Managed Google Play do Microsoft Intune. Para eliminar uma aplicação gerida pelo Google Play, abra o Microsoft Intune no portal Azure e selecione **Apps**  >  **Todas as aplicações**. Na lista de aplicações, selecione as reticências (...) à direita da aplicação do Managed Google Play e, em seguida, selecione **Eliminar** na lista apresentada. Quando elimina uma aplicação do Managed Google Play da lista de aplicações, essa aplicação passa automaticamente a não aprovada.
 
 > [!NOTE]
 > Se uma aplicação não for aprovada ou eliminada da loja gerida do Google Play, esta não será removida da lista de aplicações do cliente Intune. Isto permite-lhe ainda direcionar uma política de desinstalação para os utilizadores mesmo que a aplicação não esteja aprovada.

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33e4f36afce9b8a2f296697623cd7031edf0fa74
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791789"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989064"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Mover dispositivos Android de administrador de dispositivo para gestão de perfis de trabalho
 
@@ -60,13 +60,17 @@ Quando os utilizadores virem que estão fora de conformidade por esta razão, po
 
 5. Na página **Locais,** pode adicionar localizações se quiser > **Seguinte**.
 
-6. Nas **Ações de incumprimento,** pode configurar as [ações disponíveis para o incumprimento](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) para personalizar a experiência final do utilizador para este fluxo. Estas são algumas ações a considerar.
+6. No separador **Ações para o incumprimento,** pode configurar as [ações disponíveis para o incumprimento](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) para personalizar a experiência final do utilizador para este fluxo.
 
-- **Marque**o dispositivo sem conformidade : Por defeito, esta ação está definida para zero (0) dias, marcando os dispositivos como não conformes imediatamente. A alteração desta situação para um maior número de dias proporciona aos utilizadores um período de carência no qual podem ver o fluxo para passar para a gestão do perfil de trabalho sem ainda serem marcados como incompatíveis. Por exemplo, defini-lo para 14 dias daria aos utilizadores duas semanas para passarem de administrador de dispositivo para gestão de perfil de trabalho sem o risco de perder o acesso aos recursos.
-- **Envie notificação push ao utilizador final**: Configure isto para enviar notificações push para os dispositivos de administrador do dispositivo. Quando um utilizador seleciona a notificação, lançará o Portal da Empresa Android para a página de **definições** do dispositivo Update onde pode iniciar o fluxo para passar para a gestão de perfis de trabalho.
-- **Envie e-mail para o utilizador final**: Configure isto para enviar e-mails aos utilizadores sobre a mudança do administrador do dispositivo para a gestão do perfil de trabalho. No e-mail, pode incluir o URL abaixo , que quando selecionado, lançará o Portal da Empresa Android para a página de definições do dispositivo Update onde podem iniciar o fluxo para passar para a gestão de perfis de trabalho.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Para o governo dos EUA, pode utilizar este link: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
+    ![Ações de incumprimento](media/android-move-device-admin-work-profile/noncompliance-actions.png)
+
+    Estas são algumas ações a considerar:
+
+    - **Marque**o dispositivo sem conformidade : Por defeito, esta ação está definida para zero (0) dias, marcando os dispositivos como não conformes imediatamente. A alteração desta situação para um maior número de dias proporciona aos utilizadores um período de carência no qual podem ver o fluxo para passar para a gestão do perfil de trabalho sem ainda serem marcados como incompatíveis. Por exemplo, defini-lo para 14 dias daria aos utilizadores duas semanas para passarem de administrador de dispositivo para gestão de perfil de trabalho sem o risco de perder o acesso aos recursos.
+    - **Envie notificação push ao utilizador final**: Configure isto para enviar notificações push para os dispositivos de administrador do dispositivo. Quando um utilizador seleciona a notificação, lançará o Portal da Empresa Android para a página de **definições** do dispositivo Update onde pode iniciar o fluxo para passar para a gestão de perfis de trabalho.
+    - **Envie e-mail para o utilizador final**: Configure isto para enviar e-mails aos utilizadores sobre a mudança do administrador do dispositivo para a gestão do perfil de trabalho. No e-mail, pode incluir o URL abaixo , que quando selecionado, lançará o Portal da Empresa Android para a página de definições do dispositivo Update onde podem iniciar o fluxo para passar para a gestão de perfis de trabalho.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - Para o governo dos EUA, pode utilizar este link: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
     > [!NOTE]
     > - Claro que pode utilizar hipertexto simesmo para os links na sua comunicação com os utilizadores. No entanto, não utilize os encurtadores de URL porque as ligações podem não funcionar se alteradas dessa forma.

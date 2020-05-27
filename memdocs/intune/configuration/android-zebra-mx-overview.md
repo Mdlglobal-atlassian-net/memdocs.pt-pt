@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084012"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990143"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Utilizar e gerir dispositivos Zebra com as Extensões de Mobilidade Zebra no Microsoft Intune
 
@@ -34,7 +34,7 @@ Este artigo mostra-lhe como utilizar as Extensões de Mobilidade (MX) Zebra em d
 
 Esta funcionalidade aplica-se a:
 
-- Administrador de dispositivos Android
+- Android device administrator (Administrador de dispositivos Android)
 
 Para dispositivos Android Enterprise, utilize [o OEMConfig](android-oem-configuration-overview.md).
 
@@ -134,7 +134,7 @@ Depois de testar o ficheiro, o próximo passo é implementar o perfil nos dispos
 No Intune, crie um perfil de configuração de dispositivos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **perfis**de configuração de  >  **dispositivos**  >  **Criar perfil**.
 3. Introduza as seguintes propriedades:
 
     - **Nome**: introduza um nome descritivo para o novo perfil.
@@ -143,14 +143,14 @@ No Intune, crie um perfil de configuração de dispositivos:
     - **Tipo de perfil:** Selecione **o perfil MX (apenas zebra)**.
 
 4. Em **Perfil MX no formato .xml**, adicione o ficheiro XML do perfil que [exportou do StageNow](#step-4-create-a-device-management-profile-in-stagenow) (neste artigo).
-5. Selecione **OK** > **Criar** para guardar as suas alterações. A política é criada e apresentada na lista.
+5. Selecione **OK**  >  **Criar** para guardar as suas alterações. A política é criada e apresentada na lista.
 
     > [!TIP]
     > Por razões de segurança, não verá o texto xml de perfil depois de o guardar. O texto é encriptado e apenas verá asteriscos (`****`). Para sua referência, é recomendado guardar cópias dos perfis MX antes de os adicionar ao Intune.
 
 O perfil está criado, mas ainda não está ativo. Em seguida, [atribua o perfil](device-profile-assign.md) e [monitorize o estado](device-profile-monitor.md).
 
-Da próxima vez que o dispositivo verificar se existem atualizações de configuração, o perfil MX será implementado no dispositivo. Os dispositivos são sincronizados com o Intune quando são inscritos e, depois, aproximadamente a cada 8 horas. Também pode [forçar uma sincronização no Intune](../remote-actions/device-sync.md). Ou, no dispositivo, abra a **aplicação** > Do Portal da Empresa**Definições** > **Sync**. 
+Da próxima vez que o dispositivo verificar se existem atualizações de configuração, o perfil MX será implementado no dispositivo. Os dispositivos são sincronizados com o Intune quando são inscritos e, depois, aproximadamente a cada 8 horas. Também pode [forçar uma sincronização no Intune](../remote-actions/device-sync.md). Ou, no dispositivo, abra a **aplicação Do Portal**da Empresa  >  **Definições**  >  **Sync**. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Atualizar uma configuração Zebra MX depois de ser atribuído
 

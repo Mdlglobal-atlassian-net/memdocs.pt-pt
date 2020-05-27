@@ -7,7 +7,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a0db0c43d60b2b42d35e397924c8555b1ac3d64a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086950"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988623"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configurar um serviço de gestão de despesas de telecomunicações no Intune
 
@@ -73,7 +73,7 @@ Intune integra-se com o seguinte prestador de gestão de despesas de telecomunic
 
 3. Selecione **Desbloquear**. Desbloquear o **desbloqueio** permite-lhe alterar ou atualizar as definições na página.
 
-4. Intune **/ Datalert Connection** > **Server MDM,** selecione **Microsoft Intune**.
+4. Intune **/ Datalert Connection**  >  **Server MDM,** selecione Microsoft **Intune**.
 
 5. Para **o domínio Azure AD,** insira a sua identificação de inquilino Azure. Selecione **Ligação**.
 
@@ -114,7 +114,7 @@ Depois de completar o Passo 1, a sua ligação está ativada automaticamente. Em
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione**Conectores e Tokens** > **Telecom Gestão**de Despesas da **Administração** > de Inquilinos. Procure o estado de ligação **Ativa:**
+2. Selecione **Tenant administration**  >  **Conectores e Tokens**Telecom Gestão de  >  **Despesas**da Administração de Inquilinos. Procure o estado de ligação **Ativa:**
 
     > [!div class="mx-imgBorder"]
     > ![Página do Intune a mostrar o estado de ligação Ativo do Datalert](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
@@ -143,7 +143,7 @@ Estas categorias são mostradas aos utilizadores durante a inscrição[(matricul
 
 Os seguintes passos adicionam a aplicação Datalert. Como exemplo, é utilizado o iOS/iPadOS. [Adicione aplicativos](../apps/apps-add.md) e [use tags](../fundamentals/scope-tags.md) de âmbito têm informações mais específicas sobre estes passos.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps** > **Todas as aplicações** > **Add**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Apps**  >  **Todas as aplicações**  >  **Add**.
 
 2. Selecione o seu **tipo de app**. Por exemplo, para iOS/iPadOS, selecione **App de loja - iOS/iPadOS**.
 
@@ -159,13 +159,13 @@ Os seguintes passos adicionam a aplicação Datalert. Como exemplo, é utilizado
     > [!div class="mx-imgBorder"]
     > ![Insira as propriedades da aplicação, incluindo o nome, descrição, escolha o S, e mais configurações para a app em Intune](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
-6. Selecione **OK** > **Adicionar** para guardar as suas alterações. A aplicação Datalert está na lista.
+6. Selecione **OK**  >  **Adicionar** para guardar as suas alterações. A aplicação Datalert está na lista.
 
 #### <a name="assign-the-datalert-app-to-the-corporate-device-group"></a>Atribuir a aplicação Datalert ao grupo de dispositivos da empresa
 
-1. Em **Apps** > **Todas as aplicações**, selecione a aplicação Datalert que adicionou no passo anterior.
+1. Em **Apps**  >  **Todas as aplicações**, selecione a aplicação Datalert que adicionou no passo anterior.
 
-2. Selecione **Atribuições** > **Adicionar grupo**. Escolha como a aplicação é atribuída. [Atribuir aplicativos a grupos em Intune](../apps/apps-deploy.md) tem mais detalhes sobre estas configurações.
+2. Selecione **Atribuições**  >  **Adicionar grupo**. Escolha como a aplicação é atribuída. [Atribuir aplicativos a grupos em Intune](../apps/apps-deploy.md) tem mais detalhes sobre estas configurações.
 
     Nestes passos, optará por tornar a instalação da aplicação necessária ou opcional para o grupo. O exemplo seguinte mostra a instalação conforme necessário. Quando necessário, os utilizadores devem instalar a aplicação Datalert depois de matricularem o seu dispositivo.
 
@@ -192,7 +192,7 @@ Para a experiência do utilizador final, os seguintes artigos podem ajudar:
 
 ## <a name="turn-off-the-datalert-service"></a>Desligue o serviço Datalert
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione**Conectores de** >  **administração** > de inquilinos e tokens**Telecom Expense Management**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione Conectores de **administração de**  >  **inquilinos e tokens**  >  **Telecom Expense Management**.
 2. Configurar **a Gestão de Despesas de Telecomunicações e bloquear dados celulares ou de roaming em dispositivos que excedam as quotas** de utilização que configura para **desativar**.
 3. **Guarde** as suas alterações.
 

@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 060fa4af918df05588a858a3883d0bbb96a99334
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254678"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989387"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gerir atualizações de software do Windows 10 no Intune
 
@@ -63,7 +63,7 @@ Os seguintes pré-requisitos devem ser cumpridos para utilizar as atualizações
   > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. O Windows Update for Business (WUfB) não suporta atualmente lançamentos do Canal de Serviço de *Longo Prazo.* Planeie utilizar métodos alternativos de correção, como WSUS ou Gestor de Configuração.
 
-- Nos dispositivos Windows, **feedback & diagnósticos** > Os dados de**diagnóstico e de utilização** devem ser definidos para **Básico,** **Melhorado**ou **Completo**.
+- Nos dispositivos Windows, **feedback & diagnósticos**Os dados de  >  **diagnóstico e de utilização** devem ser definidos para **Básico,** **Melhorado**ou **Completo**.
 
   Pode configurar manualmente a definição de dados de *Diagnóstico e utilização* para dispositivos Windows 10 ou utilizar um perfil de restrição de dispositivos Intune para o Windows 10 e posteriormente. Se utilizar um perfil de restrição do dispositivo, defina a definição de [restrição](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) do dispositivo dos dados de **utilização** do Share para, pelo **menos, Basic**. Esta definição encontra-se na categoria **Reporting and Telemettry** quando configura uma política de restrição de dispositivos para o Windows 10 ou mais tarde.
 
@@ -79,7 +79,7 @@ Os anéis de atualização do Windows 10 suportam [etiquetas](../fundamentals/sc
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **dispositivos** > **Windows** > **10 Update Rings** > **Criar**.
+2. Selecione **dispositivos**  >  **Windows**  >  **10 Update Rings**  >  **Criar**.
 
 3. Em *Basics,* especifique um nome, uma descrição (opcional) e, em seguida, selecione **Next**.
   ![Criar um anel de atualização](./media/windows-update-for-business-configure/basics-tab.png)
@@ -96,7 +96,7 @@ Os anéis de atualização do Windows 10 suportam [etiquetas](../fundamentals/sc
 
 ### <a name="manage-your-windows-10-update-rings"></a>Gerencie os seus anéis de atualização do Windows 10
 
-No portal, navegue para **dispositivos** > **Windows** > **10 Update Rings** e selecione a política que pretende gerir.  A política abre-se para a sua página **de visão geral.**
+No portal, navegue para **dispositivos**  >  **Windows**  >  **Windows 10 Update Rings** e selecione a política que pretende gerir.  A política abre-se para a sua página **de visão geral.**
 
 A partir desta página, pode visualizar o estado de atribuição de anéis e selecionar as seguintes ações a partir do topo do painel de visão geral para gerir o anel de atualização:
 
@@ -177,7 +177,7 @@ Considere o seguinte quando utilizar Desinstalar:
 
 - A utilização de desinstalada para atualizações de funcionalidades ou qualidade desencadeia uma política para restaurar a atualização anterior nas suas máquinas Windows 10.
 
-- Num dispositivo Windows 10, depois de uma atualização de qualidade ser relançada com sucesso, os utilizadores do dispositivo continuam a ver a atualização listada nas **atualizações** > do Windows**Updates** > **History**.
+- Num dispositivo Windows 10, depois de uma atualização de qualidade ser relançada com sucesso, os utilizadores do dispositivo continuam a ver a atualização listada nas **atualizações do Windows**  >  **Updates**  >  **Updates History**.
 
 - Para atualizações de funcionalidades especificamente, o tempo que pode desinstalar a atualização é limitado de 2 a 60 dias. Este período é configurado pelos anéis de atualização Definição de definição de funcionalidades de **desinstalação (2 - 60 dias)**. Não é possível reverter uma atualização de funcionalidade seletiva que tenha sido instalada num dispositivo depois de a atualização ter sido instalada por mais tempo do que o período de desinstalação configurado.
 
@@ -226,7 +226,7 @@ Os seguintes pré-requisitos devem ser cumpridos para utilizar as atualizações
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Dispositivos** > **Windows** > **10 Funcionalidades** > **Criar**.
+2. Selecione **Dispositivos**  >  **Windows**  >  **Windows 10 Funcionalidades**  >  **Criar**.
 
 3. Em **Basics,** especifique um nome, uma descrição (opcional) e para a atualização de **funcionalidades ser implementada,** selecione a versão do Windows com o conjunto de funcionalidades que deseja e, em seguida, selecione **Next**.
 
@@ -236,7 +236,7 @@ Os seguintes pré-requisitos devem ser cumpridos para utilizar as atualizações
 
 ### <a name="manage-windows-10-feature-updates"></a>Gerir atualizações de funcionalidades do Windows 10
 
-No centro de administração, vá **às** > atualizações do**Windows** > **10 e** selecione a política que pretende gerir. A política abre-se ao seu painel **de visão geral.**
+No centro de administração, vá **às**atualizações do  >  **Windows**  >  **Windows 10 e** selecione a política que pretende gerir. A política abre-se ao seu painel **de visão geral.**
 
 A partir deste painel, pode:
 

@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696293"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989900"
 ---
 # <a name="see-device-details-in-intune"></a>Consultar os detalhes do dispositivo no Intune
 
@@ -34,7 +34,7 @@ Este artigo mostra como ver todos os seus dispositivos e as respetivas proprieda
 ## <a name="view-the-device-details"></a>Ver os detalhes do dispositivo
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selecione **Dispositivos** > **Todos os dispositivos** > selecione um dos seus dispositivos listados para abrir os seus dados:
+3. Selecione **Dispositivos**  >  **Todos os dispositivos** > selecione um dos seus dispositivos listados para abrir os seus dados:
 
    - **A visão geral** mostra o nome do dispositivo e lista algumas propriedades chave do dispositivo, como se é um dispositivo pessoal ou corporativo, número de série, utilizador primário, e muito mais. Pode fazer o seguinte no dispositivo:
       - [Extinguir](devices-wipe.md#retire)
@@ -68,9 +68,9 @@ Dependendo da transportadora utilizada pelos dispositivos, nem todos os detalhes
 > [!Note]  
 > O inventário de hardware e software é atualizado no serviço Intune a cada 7 dias.
 
-|Detalhe|Descrição|Plataforma| 
+|Detalhes|Descrição|Plataforma| 
 |--------------|----------------------|----|  
-|Nome|O nome do dispositivo.|Windows, iOS|
+|Name|O nome do dispositivo.|Windows, iOS|
 |Nome da gestão|O nome do dispositivo utilizado apenas na consola. Alterar este nome não irá alterar o nome no dispositivo.|Windows, iOS|
 |UDID|O Identificador de Dispositivo Exclusivo do dispositivo.|Windows, iOS|
 |ID de Dispositivo do Intune|Um GUID que identifica exclusivamente o dispositivo.|Windows, iOS|

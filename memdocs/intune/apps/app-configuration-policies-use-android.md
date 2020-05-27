@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397786"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988752"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos Android Enterprise geridos
 
@@ -35,7 +35,7 @@ As políticas de configuração de aplicações nas definições de fornecimento
 > Nem todas as aplicações suportam a configuração de aplicações. Consulte o desenvolvedor de aplicações para ver se a sua aplicação suporta as políticas de configuração de aplicações.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **Apps** > as políticas > de**configuração**da app apps**Adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Escolha **Apps**as políticas de  >  **configuração**da app apps  >  **Adicionar**  >  **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. Na página **Basics,** delineie os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -134,7 +134,7 @@ Também pode configurar permissões de aplicações para aceder às funcionalida
 
 Por exemplo, uma aplicação utiliza o microfone do dispositivo. O utilizador é solicitado a conceder a permissão da aplicação para usar o microfone.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione políticas >  de**configuração**de **apps** > **Adicionar** > **dispositivos geridos**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **políticas**de  >  **configuração**de apps  >   **Adicionar**  >  **dispositivos geridos**.
 2. Adicione as seguintes propriedades:
 
     - **Nome**: Introduza um nome descritivo para a apólice. Atribua nomes às políticas de forma que possa identificá-las facilmente mais tarde. Por exemplo, um bom nome de política é **Android Enterprise prontament e permissões políticas de aplicações para toda**a empresa .
@@ -143,12 +143,12 @@ Por exemplo, uma aplicação utiliza o microfone do dispositivo. O utilizador é
     - **Plataforma**: Selecione **Android**.
 
 3. Selecione **App Associada**. Escolha a aplicação que pretende definir uma política de configuração. Selecione na lista de aplicações de perfil de trabalho do Android que aprovou e sincronizou com intune.
-4. Selecione **Permissões** > **Adicionar**. Na lista, selecione as permissões disponíveis > **OK**.
+4. Selecione **Permissões**  >  **Adicionar**. Na lista, selecione as permissões disponíveis > **OK**.
 5. Selecione uma opção para cada permissão a conceder com esta política:
     - **Rápido.** Solicitar o utilizador a aceitar ou recusar.
     - **Conceder automaticamente**. Aprovar automaticamente sem notificar o utilizador.
     - **Negar automaticamente**. Negar automaticamente sem notificar o utilizador.
-6. Para atribuir a política de configuração da aplicação, selecione a política de configuração da aplicação > grupos De **supor** > **tarefas**. Escolha os grupos de utilizador para atribuir > **Selecione**.
+6. Para atribuir a política de configuração da **Assignment**aplicação, selecione a política de configuração da aplicação >  >  **grupos De supor tarefas**. Escolha os grupos de utilizador para atribuir > **Selecione**.
 7. Escolha **Guardar** para atribuir a política.
 
 ## <a name="additional-information"></a>Informações adicionais

@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74ea17e0fdadfbb6f7c1ec82e502f57187ba74e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864927"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989305"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configure ações para dispositivos não conformes em Intune
 
@@ -55,11 +55,25 @@ Quando o e-mail é enviado, intune inclui detalhes sobre o dispositivo não conf
 
 - **Bloqueie remotamente o dispositivo não conforme**: Utilize esta ação para emitir um bloqueio remoto de um dispositivo. Em seguida, é pedido ao utilizador um PIN ou palavra-passe para desbloquear o dispositivo. Saiba mais sobre a funcionalidade [Bloqueio Remoto](../remote-actions/device-remote-lock.md).
 
+  As seguintes plataformas apoiam esta ação:
+  - Android:
+    - Android device administrator (Administrador de dispositivos Android)
+    - Proprietário de dispositivo seleto de empresa android
+    - Perfil de trabalho da empresa android
+    - Dispositivos de quiosque Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 e posterior
+
 - **Retire o dispositivo não conforme**: Esta ação remove todos os dados da empresa do dispositivo e remove o dispositivo da gestão intune. Para evitar a limpeza acidental de um dispositivo, esta ação suporta um horário mínimo de **30** dias.
 
   As seguintes plataformas apoiam esta ação:
-  - Android
-  - iOS
+  - Android:
+    - Android device administrator (Administrador de dispositivos Android)
+    - Proprietário de dispositivo seleto de empresa android
+    - Perfil de trabalho da empresa android
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 e posterior

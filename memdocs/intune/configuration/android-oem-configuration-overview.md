@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 014608a5042f15ab9ef250b42ad816e8130e2960
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791696"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990188"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Utilizar e gerir dispositivos Android Enterprise com OEMConfig no Microsoft Intune
 
@@ -32,7 +32,7 @@ Esta funcionalidade aplica-se a:
 
 - Android Enterprise
 
-Para dispositivos de administrador de dispositivos Android, utilize [extensões móveis (MX)](android-zebra-mx-overview.md).
+Para gerir os dispositivos zebra Technologies utilizando o administrador de dispositivos Android, utilize [extensões móveis zebra (MX)](android-zebra-mx-overview.md).
 
 Este artigo descreve o OEMConfig, lista os pré-requisitos, mostra como criar um perfil de configuração, e lista as aplicações oEMConfig suportadas em Intune.
 
@@ -149,7 +149,7 @@ Da próxima vez que o dispositivo verificar as atualizações de configuração,
 
 ## <a name="supported-oemconfig-apps"></a>Aplicativos OEMConfig suportados
 
-Em comparação com as aplicações padrão, as aplicações OEMConfig expandem os privilégios de configurações geridas concedidos pela Google para suportar esquemas mais complexos. Intune suporta atualmente as seguintes aplicações OEMConfig:
+Em comparação com as aplicações padrão, as aplicações OEMConfig expandem os privilégios de configurações geridas concedidos pela Google para suportar esquemas e funções mais complexos. Os OEMs devem registar as suas aplicações OEMConfig com a Google. Se não se registar, estas funcionalidades podem não funcionar como esperado. Intune suporta atualmente as seguintes aplicações OEMConfig:
 
 -----------------
 
@@ -157,7 +157,7 @@ Em comparação com as aplicações padrão, as aplicações OEMConfig expandem 
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cifra | com.cipherlab.oemconfig | |
-| Datalogic | com.datalogic.settings.oemconfig | [Guia oEMConfig datalógico](https://datalogic.github.io/oemconfig/overview) |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f529a80403d27cf9d12c03c6090670095bf569fa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 662b0ab94004bf54d793d9a913157c53f36d0dcc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329969"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989768"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Bloquear aplicações que não utilizam a autenticação moderna (ADAL)
 
@@ -33,7 +33,7 @@ O Acesso Condicional baseado em aplicativos com políticas de proteção de apli
 
 ## <a name="block-access-to-apps"></a>Bloquear o acesso a aplicações
 
-Para bloquear o acesso às aplicações que não utilizam a autenticação moderna, utilize as políticas de proteção de aplicações do Intune para implementar o acesso condicional. Para mais informações, consulte o [Acesso Condicional baseado em Aplicativos com Intune](app-based-conditional-access-intune.md).
+Para bloquear o acesso a apps que não utilizem a autenticação moderna, utilize políticas de proteção de aplicações Intune para implementar o acesso condicional. Para mais informações, consulte o [Acesso Condicional baseado em Aplicativos com Intune](app-based-conditional-access-intune.md).
 
 ## <a name="additional-information"></a>Informações adicionais
 

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326185"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988227"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Encontre o utilizador principal de um dispositivo Intune
 
@@ -39,7 +39,7 @@ O utilizador principal, também conhecido como User Device Affinity, é uma prop
 O utilizador principal de um dispositivo pode ser atualizado para dispositivos Windows 10 dispositivos que sejam Azure AD Joined ou Hybrid Azure AD Joined.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **dispositivos** > **Todos os dispositivos** > escolha um dispositivo > **Propriedades** > **Alterem**o utilizador primário .
+2. Escolha **dispositivos**  >  **Todos os dispositivos** > escolha um dispositivo > **Propriedades**  >  **Alterem**o utilizador primário .
 3. Selecione um novo utilizador e escolha **Selecionar**.
 
 Após a atualização do utilizador principal, será também atualizado nas lâminas do dispositivo Intune e Azure AD.
@@ -88,7 +88,7 @@ Intone automaticamente o utilizador primário aos dispositivos durante ou logo a
 | Android | Dispositivos Android Corporate-Owned, dedicados | Nenhuma | Não aplicável |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Utilizador primário e proprietário de dispositivo saqueado do Azure
-Em alguns casos, o utilizador primário intune pode ser diferente da propriedade do **Dispositivo** AD Azure (visível em **dispositivos** > **AD Devices Azure**). O proprietário do Dispositivo AD Azure é adicionado durante a inscrição de um dispositivo no Diretório Ativo Azure.
+Em alguns casos, o utilizador primário intune pode ser diferente da propriedade do **Dispositivo** AD Azure (visível em **Devices**  >  **dispositivos AD Devices Azure**). O proprietário do Dispositivo AD Azure é adicionado durante a inscrição de um dispositivo no Diretório Ativo Azure.
 
 ## <a name="next-steps"></a>Passos seguintes
 [Gerencie os seus dispositivos Intune.](device-management.md)

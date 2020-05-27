@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/23/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126159"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988932"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Inscreva dispositivos iOS/iPadOS em Intune
 
@@ -59,7 +59,7 @@ Para as organizações que compram dispositivos para os seus utilizadores, a Int
 
 Também pode inscrever dispositivos iOS/iPadOS da empresa com uma conta de gestor de [inscrição](device-enrollment-manager-enroll.md) de dispositivos.
 
-## <a name="automated-device-enrollment"></a>Inscrição automática de dispositivos
+## <a name="automated-device-enrollment"></a>Automated Device Enrollment (Inscrição de Dispositivos Automatizada)
 
 As organizações podem adquirir dispositivos iOS/iPadOS através da Inscrição automática de Dispositivos da Apple (ADE). A ADE permite-lhe implementar um perfil de inscrição "sobre o ar" para trazer dispositivos para a gestão. Para mais informações, consulte [o Programa de Inscrição de Dispositivos.](device-enrollment-program-enroll-ios.md)
 

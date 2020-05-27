@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551373"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988821"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Criar uma política de conformidade no Microsoft Intune
 
@@ -47,7 +47,7 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 - Utilize uma plataforma suportada:
 
-  - Administrador de dispositivos Android
+  - Android device administrator (Administrador de dispositivos Android)
   - Android Enterprise
   - iOS
   - macOS
@@ -59,17 +59,14 @@ Para utilizar as políticas de conformidade de dispositivos:
 
 - Inscreva os dispositivos para um utilizador ou inscreva sem um utilizador primário. Os dispositivos inscritos para vários utilizadores não são suportados.
 
-> [!NOTE]
-> A interface de utilizador Intune (UI) está a atualizar-se para uma experiência completa de ecrã, podendo demorar várias semanas. Até que o seu inquilino receba esta atualização, terá um fluxo de trabalho ligeiramente diferente quando criar ou editar configurações descritas neste artigo.
-
 ## <a name="create-the-policy"></a>Criar a política
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione Políticas de**conformidade** > **Policies** > de **dispositivos** > **Criar política**.
+2. Selecione Políticas de conformidade de **dispositivos**  >  **Compliance policies**  >  **Policies**  >  **Criar política**.
 
 3. Selecione uma **Plataforma** para esta política a partir das seguintes opções:
-   - *Administrador de dispositivos Android*
+   - *Android device administrator (Administrador de dispositivos Android)*
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
@@ -88,7 +85,7 @@ Para utilizar as políticas de conformidade de dispositivos:
    Também pode optar por especificar uma **Descrição**.
   
 5. No separador definições de **conformidade,** expanda as categorias disponíveis e configure as definições para a sua apólice.  Os seguintes artigos descrevem as definições para cada plataforma:
-   - [Administrador de dispositivos Android](compliance-policy-create-android.md)
+   - [Android device administrator (Administrador de dispositivos Android)](compliance-policy-create-android.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
@@ -107,7 +104,7 @@ Para utilizar as políticas de conformidade de dispositivos:
 
    Outro exemplo inclui a utilização de Locais onde se adiciona pelo menos um local a uma política de conformidade. Neste caso, a ação por incumprimento aplica-se quando seleciona pelo menos um local. Se o dispositivo não estiver ligado a nenhum dos locais selecionados, considera-se que não está em conformidade. Pode configurar a programação para dar aos seus utilizadores um período de carência, como um dia.
 
-8. No separador **'Etiquetas Scope',** selecione etiquetas `US-NC IT Team` para `JohnGlenn_ITDepartment`ajudar a filtrar políticas para grupos específicos, tais como ou . Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito às políticas de conformidade. 
+8. No separador **'Etiquetas Scope',** selecione etiquetas para ajudar a filtrar políticas para grupos específicos, tais como `US-NC IT Team` ou `JohnGlenn_ITDepartment` . Depois de adicionar as definições, também pode adicionar uma etiqueta de âmbito às políticas de conformidade. 
 
    Para obter informações sobre a utilização de etiquetas de âmbito, consulte [Utilize etiquetas de mira para filtrar as políticas](../fundamentals/scope-tags.md).
 

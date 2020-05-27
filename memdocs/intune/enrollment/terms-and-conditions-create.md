@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/20/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326978"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988984"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Termos e condições do acesso dos utilizadores
 
@@ -46,7 +46,7 @@ Para saber qual o melhor método para si, confira a [solução de Termos certos 
 ## <a name="create-terms-and-conditions"></a>Criar termos e condições
 Conclua estes passos para criar os termos e condições. O nome a apresentar e a descrição são para utilização administrativa enquanto as propriedades dos termos são apresentadas aos utilizadores no Portal da Empresa.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**termos e condições**da **administração do** > Arrendatário .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha termos e condições da **administração do Arrendatário**  >  **Terms and Conditions**.
 2. Escolha **Criar**.
 3. Na página **Basics,** especifique as seguintes informações:
 
@@ -69,7 +69,7 @@ Conclua estes passos para criar os termos e condições. O nome a apresentar e a
     - **Todos os utilizadores**: Escolha esta opção para atribuir estes termos e condições a todos os utilizadores.
     - **Selecione grupos**: Escolha esta opção para atribuir estes termos e condições a todos os grupos que identifica, escolhendo **grupos Select para incluir**.
 
-8. Escolha **Next** > **Create**.
+8. Escolha **Next**  >  **Create**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Ver como os termos são apresentados para os utilizadores
 O exemplo a seguir mostra o **Título** e o **Resumo de Termos** na consola de administração e no Portal da Empresa.
@@ -83,7 +83,7 @@ O exemplo a seguir mostra os termos e as condições na consola de administraç�
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorizar os termos e as condições
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**termos e condições**da **administração do** > Arrendatário .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha termos e condições da **administração do Arrendatário**  >  **Terms and Conditions**.
 2. Na lista de termos e condições, selecione os termos cuja aceitação pretende ver > **Relatórios de Aceitação**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Trabalhar com múltiplas versões de termos e condições
@@ -93,10 +93,10 @@ Pode editar os seus termos e condições e gerir as respetivas versões. Sempre 
 
 Mantenha o número da versão atual se, por exemplo, estiver a corrigir tipografias ou a mudar de formatação.
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha**termos e condições** da **administração** > do Arrendatário > escolha os termos e condições que pretende modificar > **Propriedades**.
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha termos e condições da **administração do Inquilino**> escolha os termos e  >  **Terms and Conditions** condições que pretende modificar > **Propriedades**.
 
 2. No painel **Propriedades**, selecione **Termos e Condições** e, em seguida, modifique o **Título**, **Resumo dos Termos** e **Termos e Condições**, conforme necessário. Se os utilizadores tiverem de voltar a aceitar os novos termos devido às alterações que fez, selecione **Exigir que os utilizadores voltem a aceitar e incrementem o número da versão para**
 
-3. Escolha **OK** > **Guardar**.
+3. Escolha **OK**  >  **Guardar**.
 
 Os utilizadores só precisam de aceitar os termos e as condições atualizados uma vez. Os utilizadores com vários dispositivos não precisam de aceitar os termos e condições em cada dispositivo.

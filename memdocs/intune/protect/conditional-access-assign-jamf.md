@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525683"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989206"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Impor a conformidade em Macs geridos com o Jamf Pro
 
@@ -43,7 +43,7 @@ Intune suporta dois métodos para integrar o Jamf Pro, que configura separadamen
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione**as políticas**de conformidade dos **dispositivos** > . Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
+2. Selecione as políticas de conformidade dos **dispositivos**  >  **Compliance policies**. Se estiver a utilizar uma política previamente criada, selecione essa política na consola e, em seguida, vá para o próximo passo deste procedimento. Para criar uma nova política, selecione **Create Policy** e, em seguida, especifique detalhes para uma política com uma *Plataforma* de **macOS**. Configure *Configurar Definições* e *Ações para o incumprimento* do cumprimento dos seus requisitos organizacionais e, em seguida, selecione **Criar** para salvar a apólice.
 
 3. Sobre as políticas *Painel de visão geral,* selecione **Atribuições**. Utilize as opções disponíveis para configurar quais os utilizadores e grupos de segurança do Azure Ative Directory (Azure AD) que recebem esta política. **A integração do Jamf com a Intune não suporta a política de conformidade que visa grupos de dispositivos.**
 
@@ -67,11 +67,11 @@ Para completar o seguinte procedimento, precisa de acesso a um dispositivo macOS
 
 1. Num dispositivo macOS, descarregue mas não instale a versão atual da aplicação Portal da [Empresa para o macOS.](https://go.microsoft.com/fwlink/?linkid=862280) Só precisa de uma cópia da aplicação para que possa fazer o upload da aplicação para o Jamf Pro.  
 
-2. Abra o Jamf Pro e vá a Pacotes de **Gestão** > de**Computadores.**
+2. Abra o Jamf Pro e vá a Pacotes de **Gestão de**  >  **Computadores.**
 
 3. Crie um novo pacote com a aplicação Portal da Empresa para o macOS e, em seguida, selecione **Save**.
 
-4. Abra**as políticas** **dos computadores** > e, em seguida, selecione **New**.
+4. Abra as políticas **dos computadores**  >  **Policies**e, em seguida, selecione **New**.
 
 5. Utilize o payload **Geral** para configurar as definições da política. Estas definições deverão ser:
    - Acionador: selecione **Inscrição Completa** e **Inscrição Periódica**
@@ -97,7 +97,7 @@ O registo do dispositivo requer que um utilizador do dispositivo selecione manua
 
 ### <a name="to-create-the-registration-policy"></a>Para criar a política de registo  
 
-1. No Jamf Pro, vá às**Políticas** **de Computadores** > e, em seguida, crie uma nova política para o registo de dispositivos.
+1. No Jamf Pro, vá às Políticas **de Computadores**  >  **Policies**e, em seguida, crie uma nova política para o registo de dispositivos.
 
 2. Configure o payload **Integração do Microsoft Intune**, incluindo o acionamento e a frequência de execução.
 
@@ -109,7 +109,7 @@ O registo do dispositivo requer que um utilizador do dispositivo selecione manua
 
 Utilize a consola Jamf Pro para confirmar que a comunicação entre o Jamf Pro e o Microsoft Intune é bem sucedida. 
 
-- No Jamf Pro, vá a **Definições** > **Global Management** > **Microsoft Intune Integration**, e, em seguida, selecione **Test**.
+- No Jamf Pro, vá a **Definições**  >  **Global Management**Microsoft  >  **Intune Integration**, e, em seguida, selecione **Test**.
 
     A consola exibe uma mensagem com o sucesso ou falha da ligação.  
 
@@ -118,7 +118,7 @@ Se o teste de ligação da consola Jamf Pro falhar, reveja a configuração do J
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Remover um dispositivo gerido por Jamf do Intune
 
-Para remover um dispositivo gerido pelo Jamf, abra o centro de administração do Microsoft Endpoint Manager e selecione **Dispositivos** > **Todos os dispositivos,** selecione o dispositivo e, em seguida, selecione **Delete**.  A eliminação de dispositivos em massa pode ser ativada ao selecionar múltiplos dispositivos e clicar em **Eliminar**.
+Para remover um dispositivo gerido pelo Jamf, abra o centro **Devices**de administração do Microsoft Endpoint Manager e selecione  >  **Dispositivos Todos os dispositivos,** selecione o dispositivo e, em seguida, selecione **Delete**.  A eliminação de dispositivos em massa pode ser ativada ao selecionar múltiplos dispositivos e clicar em **Eliminar**.
 
 Obtenha informações sobre como remover um dispositivo gerido pelo [Jamf nos docs Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Também pode apresentar um bilhete de apoio com suporte ao [Jamf](https://www.jamf.com/support/) para obter ajuda adicional. 
 

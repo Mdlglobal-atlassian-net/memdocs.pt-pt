@@ -7,7 +7,7 @@ author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/19/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326752"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989988"
 ---
 # <a name="intune-reports"></a>Relatórios do Intune
 Os relatórios Microsoft Intune permitem-lhe monitorizar de forma mais eficaz e proativa a saúde e atividade dos pontos finais em toda a sua organização, e também fornece outros dados de reporte em toda a Intune. Por exemplo, poderá ver relatórios sobre a conformidade do dispositivo, a saúde do dispositivo e as tendências do dispositivo. Além disso, pode criar relatórios personalizados para obter dados mais específicos. 
@@ -54,12 +54,12 @@ Os dispositivos não conformes reportam dados normalmente utilizados por funçõ
 Pode ver o relatório de **dispositivos não conformes** utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **dispositivos** > **Monitor de** > **dispositivos não conformes**.
+2. Selecione **dispositivos**  >  **Monitor de**  >  **dispositivos não conformes**.
 
     ![Relatório de dispositivos não conformes](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Se já utilizou anteriormente intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando**dispositivos não conformes**com o **dispositivo.** > 
+    > Se já utilizou anteriormente intune no portal Azure, encontrou os detalhes acima referidos no portal Azure, inserindo-se no [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e selecionando **Device compliance**  >  **dispositivos não conformes**com o dispositivo.
 
 ## <a name="device-compliance-report-organizational"></a>Relatório de conformidade com dispositivos (Organizacional)
 
@@ -98,7 +98,7 @@ Um relatório de tendência de conformidade do dispositivo para as tendências d
 Pode ver o relatório **Tendências** utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Relatórios** > **Tendências** para ver a conformidade do dispositivo ao longo de uma tendência de 60 dias.
+2. Selecione **Relatórios**  >  **Tendências** para ver a conformidade do dispositivo ao longo de uma tendência de 60 dias.
 
     ![Relatório de tendências insintonizado](./media/intune-reports/intune-reports-03.png)
 
@@ -113,7 +113,7 @@ Um relatório especializado de exemplo iria corelate dados de propriedade do dis
 Pode criar e ver relatórios personalizados utilizando os seguintes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Relatórios** > **As definições de** diagnóstico adicionam uma [definição de diagnóstico](reports.md#diagnostic-settings).
+2. Selecione **Relatórios**  >  **As definições de** diagnóstico adicionam uma [definição de diagnóstico](reports.md#diagnostic-settings).
 
     ![Resumo dos Relatórios Intune](./media/intune-reports/intune-reports-04.png)
 

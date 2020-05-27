@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
-ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.openlocfilehash: d73ad9a962042fb06da26c2a03509d4e484a9274
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82745195"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989242"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorizar as políticas de conformidade do Dispositivo do Intune
 
@@ -38,7 +38,7 @@ Abra o **dashboard de conformidade do Dispositivo do Intune**:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione o separador de estado de**conformidade** de**visão geral** > dos **dispositivos.** > 
+2. Selecione o separador de estado de conformidade de visão geral dos **dispositivos.**  >  **Overview**  >  **Compliance status**
 
 > [!IMPORTANT]
 > Os dispositivos têm de ser inscritos no Intune para receberem políticas de conformidade do dispositivo.
@@ -136,7 +136,7 @@ Quando selecionar o mosaico, serão apresentados todos os dispositivos que não 
 
 - Com a definição de segurança **Marcar os dispositivos sem política de conformidade atribuída como**, é importante identificar os dispositivos que não têm uma política de conformidade. Em seguida, pode atribuir pelo menos uma política de conformidade aos mesmos.
 
-  A definição de segurança é configurável no portal do Intune. Para **dispositivos** > **políticas** > de conformidade**Definições de política**de conformidade . Em seguida, defina **Marcar os dispositivos sem política de conformidade atribuída como** para **Conforme** ou **Não conforme**.
+  A definição de segurança é configurável no portal do Intune. Para **dispositivos**políticas de  >  **conformidade**  >  **Definições de política**de conformidade . Em seguida, defina **Marcar os dispositivos sem política de conformidade atribuída como** para **Conforme** ou **Não conforme**.
 
   Saiba mais sobre esta [melhoria de segurança no serviço Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -156,11 +156,11 @@ O gráfico de conformidade de **Definição** mostra-lhe todas as definições d
 
 ## <a name="view-compliance-reports"></a>Ver relatórios de conformidade
 
-Além de utilizar as tabelas sobre o estado de *Conformidade,* pode ir ao **Reports** > **Device compliance**.
+Além de utilizar as tabelas sobre o estado de *Conformidade,* pode ir ao **Reports**  >  **Device compliance**.
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione **Monitor de Dispositivos** > **e,** em seguida, a partir de **baixo,** selecione o relatório que pretende ver. Alguns dos relatórios de conformidade disponíveis incluem:
+2. Selecione **Monitor de Dispositivos**e, em  >  **Monitor**seguida, a partir de **baixo,** selecione o relatório que pretende ver. Alguns dos relatórios de conformidade disponíveis incluem:
 
    - Conformidade do dispositivo
    - Dispositivos não conformes
@@ -178,7 +178,7 @@ Pode verificar os diferentes estados das suas políticas por plataforma. Por exe
 
 Esta funcionalidade está incluída no relatório de estado do dispositivo:
 
-1. Selecione**Políticas** > **Policies**de conformidade de **dispositivos** > . É apresentada uma lista de políticas, incluindo a plataforma, se a política estiver atribuída, e mais detalhes.
+1. Selecione Políticas de conformidade de **dispositivos**  >  **Compliance policies**  >  **Policies**. É apresentada uma lista de políticas, incluindo a plataforma, se a política estiver atribuída, e mais detalhes.
 2. Selecione uma política > **Descrição Geral**. Nesta vista, a atribuição de política inclui os seguintes estados:
 
     - **Sucesso**: A política é aplicada

@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 5/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01965b2760ed9e4036f12b8c2c0d75e5a85e89b2
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633424"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989813"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Use credenciais derivadas no Microsoft Intune
 
@@ -313,6 +313,6 @@ Depois de apagar um emitente e, em seguida, adicionar um novo, editar cada perfi
 
 Depois de apagar um emitente e depois adicionar um novo, os utilizadores do dispositivo devem solicitar uma nova credencial derivada. Esta regra aplica-se mesmo quando adiciona o mesmo emitente que removeu. O processo de solicitação da nova credencial derivada é o mesmo que para a inscrição de um novo dispositivo ou a renovação de uma credencial existente.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Criar perfis de configuração do [dispositivo.](../configuration/device-profile-create.md)

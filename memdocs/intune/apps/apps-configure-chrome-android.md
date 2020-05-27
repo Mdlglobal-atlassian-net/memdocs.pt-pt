@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6ea52297e75a7373adc8b3b3c9603541581097c1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324834"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990002"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Configure o Google Chrome para dispositivos Android usando o Intune 
 
@@ -37,7 +37,7 @@ Pode utilizar uma política de configuração de aplicações Intune para config
 ## <a name="add-the-google-chrome-app-to-intune"></a>Adicione a aplicação do Google Chrome ao Intune
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar** e adicionar a aplicação **Managed Google Play.**
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar** e adicionar a aplicação **Managed Google Play.**
 3. Vá ao Google Play gerido, procure no **Google Chrome** e aprove.
 
     ![Pesquisar e aprovar o Google Chrome](./media/apps-configure-chrome-android/search.png)
@@ -48,7 +48,7 @@ Para mais detalhes sobre a adição de uma aplicação gerida do Google Play ao 
 
 ## <a name="add-app-configuration-for-managed-ae-devices"></a>Adicione a configuração da aplicação para dispositivos AE geridos
 
-1. A partir do centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **políticas**de > **configuração** > de apps**Adicionar** > **dispositivos geridos**.
+1. A partir do centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **políticas**de  >  **configuração**de apps  >  **Adicionar**  >  **dispositivos geridos**.
 2. Defina os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -75,7 +75,7 @@ Para mais detalhes sobre a adição de uma aplicação gerida do Google Play ao 
 
     ![Definições comuns](./media/apps-configure-chrome-android/common-settings.png)
 
-    As definições acima criam marcadores e bloqueiam `chromium.org`o `chrome://`acesso a todos os URLs exceto, `baidu.com` `yahoo.com`e .
+    As definições acima criam marcadores e bloqueiam o acesso a todos os URLs `baidu.com` `yahoo.com` exceto, `chromium.org` e `chrome://` .
 
 5. Clique em **OK** e **Adicione** para adicionar a sua política de configuração ao Intune.
 6. Atribuir esta política de configuração a um grupo de utilizadores. Para obter mais informações, veja [Atribuir aplicações a grupos com o Microsoft Intune](apps-deploy.md).

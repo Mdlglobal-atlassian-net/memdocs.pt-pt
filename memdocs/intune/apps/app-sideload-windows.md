@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078343"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989579"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Assine aplicações de linha de negócio para que possam ser implementadas nos dispositivos Windows com o Intune
 
@@ -34,7 +34,7 @@ Como administrador intune, pode implementar aplicações universais de linha de 
 
 No Windows 10, o sideloading é diferente do que nas versões anteriores do Windows:
 
-- Pode desbloquear um dispositivo para asideloading utilizando uma política de empresa. Intune fornece uma política de config de dispositivo chamada "Instalação de aplicações fidedignas". Defini-lo <allow> é tudo o que é necessário para dispositivos que já confiam no certificado usado para assinar a appapp appx.
+- Pode desbloquear um dispositivo para asideloading utilizando uma política de empresa. Intune fornece uma política de config de dispositivo chamada "Instalação de aplicações fidedignas". Defini-lo é tudo o <allow> que é necessário para dispositivos que já confiam no certificado usado para assinar a appapp appx.
 
 - Não são necessários certificados telefónicos symantec e chaves de licença de carregamento lateral. No entanto, se não estiver disponível uma autoridade de certificados no local, poderá ter de obter um certificado de assinatura de código junto de uma autoridade de certificação pública. Para mais informações, consulte [Introdução à Assinatura de Código](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
@@ -53,7 +53,7 @@ Se implementar a aplicação conforme necessário aos utilizadores ou dispositiv
 Se o seu dispositivo Windows 10 ainda não confiar na autoridade do certificado, depois de ter assinado o seu pacote appx e o ter enviado para o serviço Intune, tem de enviar o certificado de assinatura de código para o portal Intune:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Clique em**Conectores de** >  **administração** > do Inquilino e fichas a**empresa do Windows certifcates**.
+2. Clique em Conectores de **administração do Inquilino**e  >  **fichas**a  >  **empresa do Windows certifcates**.
 3. Selecione um ficheiro sob **o ficheiro de certificado de assinatura de Código**.
 4. Selecione o ficheiro *.cer* e clique em **Abrir**.
 5. Clique em **Carregar** para adicionar o seu ficheiro de certificado ao Intune.
@@ -122,7 +122,7 @@ Se a aplicação Portal da Empresa do Windows 10 estiver assinada e implementad
 
 Eis como assina e implementa a aplicação desta forma:
 
-1. Descarregue o Microsoft Intune Windows 10 Company Portal Signing Script a partir de [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Este script requer que o Windows SDK para o Windows 10 esteja instalado no computador anfitrião. Para baixar o Windows SDK para [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296)windows 10, visite .
+1. Descarregue o Microsoft Intune Windows 10 Company Portal Signing Script a partir de [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript) .  Este script requer que o Windows SDK para o Windows 10 esteja instalado no computador anfitrião. Para baixar o Windows SDK para windows 10, visite [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296) .
 2. Transfira a aplicação Portal da Empresa do Windows 10 na Loja Microsoft para Empresas, conforme detalhado acima.  
 3. Execute o script com os parâmetros de entrada detalhados no cabeçalho do script para assinar a aplicação Portal da Empresa do Windows 10 (extraída abaixo). As dependências não precisam de ser transmitidas para o script. Só são precisas quando a aplicação está a ser carregada para a Consola de Administração do Intune.
 

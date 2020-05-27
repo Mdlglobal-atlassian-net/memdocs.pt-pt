@@ -9,17 +9,17 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 3b4c02e366f4778e65b4fe4c853ed147fcdb1df3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8443ca01a0ca1647e8069fdccf1d71aef74c23d8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072757"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989465"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Implementação da política de proteção de aplicações de resolução de problemas em Intune
 
@@ -80,7 +80,7 @@ Para obter mais informações sobre como permitir as configurações híbridas e
 Para verificar o estado de proteção da aplicação, siga estes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **o** > estado de proteção da**aplicação****monitor** > de apps e, em seguida, selecione o azulejo dos **utilizadores atribuídos.**
+2. Selecione **o**estado de proteção da aplicação monitor de apps  >  **Monitor**  >  **App protection status**e, em seguida, selecione o azulejo dos **utilizadores atribuídos.**
 3. Na página **Relatório da aplicação**, selecione **Selecionar utilizador** para abrir uma lista de utilizadores e grupos.
 4. Procure e selecione um dos utilizadores afetados da lista e, em seguida, **selecione Selecione o utilizador**. No topo do painel de relatórios da App, pode ver se o utilizador está licenciado para proteção de aplicações e tem uma licença para O365. Também pode ver o estado da aplicação para todos os dispositivos do utilizador.
 5. Tome nota de informações tão importantes como as aplicações direcionadas, tipos de dispositivos, políticas, estado de check-in do dispositivo e última hora de sincronização.
@@ -105,7 +105,7 @@ As políticas de proteção de aplicações intonizadas devem ser direcionadas a
 Para verificar se a política é aplicada ao utilizador visado, siga estas etapas:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione o estado de proteção da**aplicação****do Monitor** > de **Aplicações** > , e, em seguida, selecione o azulejo do **estado do utilizador** (com base na plataforma OS do dispositivo).
+2. Selecione o estado de proteção da aplicação do Monitor de **Aplicações**  >  **Monitor**  >  **App protection status**, e, em seguida, selecione o azulejo do **estado do utilizador** (com base na plataforma OS do dispositivo).
 No painel de **relatórios** da App que se abre, **selecione Selecione selecione** o utilizador para procurar um utilizador.
 3. Selecione o utilizador na lista. Pode ver os detalhes para esse utilizador.
 
@@ -168,7 +168,7 @@ Além disso, alterações e atualizações da política de proteção de aplica�
 Para verificar o estado de proteção da aplicação, siga estes passos:
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **o** > estado de proteção da**aplicação****monitor** > de apps e, em seguida, selecione o azulejo dos **utilizadores atribuídos.**
+2. Selecione **o**estado de proteção da aplicação monitor de apps  >  **Monitor**  >  **App protection status**e, em seguida, selecione o azulejo dos **utilizadores atribuídos.**
 3. Na página de relatórios da App, selecione **Selecione o utilizador para** abrir uma lista de utilizadores e grupos.
 4. Procure e selecione um dos utilizadores afetados da lista e, em seguida, **selecione Selecione o utilizador**.
 5. Reveja as políticas que são atualmente aplicadas, incluindo o estado e o último tempo de sincronização.
@@ -180,7 +180,7 @@ Para verificar o estado de proteção da aplicação, siga estes passos:
 A política de proteção de aplicações intune inclui suporte multi-identidade. Intune pode aplicar políticas de proteção de aplicativos apenas para o trabalho ou conta escolar que está inscrito na app. No entanto, apenas uma conta de trabalho ou escola por dispositivo é suportada.
 
 ### <a name="scenario-the-policy-is-applied-but-ios-users-can-still-transfer-work-files-to-unmanaged-apps"></a>Cenário: A política é aplicada, mas os utilizadores do iOS ainda podem transferir ficheiros de trabalho para aplicações não geridas
-A funcionalidade **de gestão open-in** (botão ![](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) Open-in) para dispositivos iOS pode limitar as transferências de ficheiros entre aplicações que são implementadas através do canal MDM. O utilizador poderá transferir ficheiros de trabalho de locais geridos, como o OneDrive e o Exchange, para aplicações ou locais não geridos, dependendo da configuração. A funcionalidade de gestão do iOS **Open-in** funciona fora de outros métodos de transferência de dados. Portanto, não é afetado pelas definições **de Save as** e **Copy/Paste.**
+A funcionalidade **de gestão open-in** ![ (botão Open-in) ](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) para dispositivos iOS pode limitar as transferências de ficheiros entre aplicações que são implementadas através do canal MDM. O utilizador poderá transferir ficheiros de trabalho de locais geridos, como o OneDrive e o Exchange, para aplicações ou locais não geridos, dependendo da configuração. A funcionalidade de gestão do iOS **Open-in** funciona fora de outros métodos de transferência de dados. Portanto, não é afetado pelas definições **de Save as** e **Copy/Paste.**
 
 Pode utilizar políticas de proteção de aplicações Intune juntamente com a funcionalidade **de gestão iOS Open-in** para proteger os dados da empresa da seguinte forma:
 
@@ -201,7 +201,7 @@ Para abrir um pedido de suporte para a equipa de suporte ao produto Microsoft In
 
 Para obter mais informações sobre a política de proteção de aplicações Intune, consulte os seguintes artigos:
 
-- [Resolver problemas da gestão de aplicações móveis](../apps/troubleshoot-mam.md)
+- [Resolução de problemas de gestão de aplicações móveis](../apps/troubleshoot-mam.md)
 - [Perguntas mais frequentes sobre a MAM e a proteção de aplicações](../apps/mam-faq.md)
 - [Dica de suporte: Resolução de problemas Na política de proteção de aplicações Intune utilizando ficheiros de registo em dispositivos locais](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 

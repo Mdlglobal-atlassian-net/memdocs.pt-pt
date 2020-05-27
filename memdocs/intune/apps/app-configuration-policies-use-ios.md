@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233452"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988742"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Adicione políticas de configuração de aplicativos para dispositivos geridos iOS/iPadOS
 
@@ -51,7 +51,7 @@ Depois de selecionar os grupos a incluir na sua política de configuração da a
 ## <a name="create-an-app-configuration-policy"></a>Criar uma política de configuração de aplicação
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **Apps** > as políticas > de**configuração**da app apps**Adicionar** > **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Escolha **Apps**as políticas de  >  **configuração**da app apps  >  **Adicionar**  >  **dispositivos geridos**. Note que pode escolher entre **dispositivos geridos** e **aplicações geridas.** Para mais informações consulte apps que suportam a [configuração da aplicação](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. Na página **Basics,** delineie os seguintes detalhes:
     - **Nome** – o nome do perfil que é apresentado no portal do Azure.
     - **Descrição** – a descrição do perfil que é apresentada no portal do Azure.
@@ -174,23 +174,23 @@ O Intune suporta os seguintes tipos de dados numa lista de propriedades:
 ### <a name="tokens-used-in-the-property-list"></a>Tokens utilizados na lista de propriedades
 
 Além disso, o Intune suporta os seguintes tipos de tokens na lista de propriedades:
-- \{\{userprincipalname\}\}— por exemplo, **John\@contoso.com**
-- \{\{correio\}\}— por exemplo, **John\@contoso.com**
+- \{\{userprincipalname \} \} — por exemplo, **John \@ contoso.com**
+- \{\{correio \} \} — por exemplo, **John \@ contoso.com**
 - \{\{partialupn\}\} – por exemplo, **João**
-- \{\{accountid\}\}— por exemplo, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
+- \{\{accountid \} \} — por exemplo, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\} – por exemplo, **b9841cd9-9843-405f-be28-b2265c59ef97**
-- \{\{userid\}\}— por exemplo, **3ec2c00f-b125-4519-acf0-302ac3761822**
-- \{\{nome\}\}de utilizador — por exemplo, **John Doe**
-- \{\{número\}\}de série — por exemplo, **F4KN99ZUG5V2** (para dispositivos iOS/iPadOS)
-- \{\{serialnumberlast4digits\}\}— por exemplo, **G5V2** (para dispositivos iOS/iPadOS)
+- \{\{userid \} \} — por exemplo, **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{nome de utilizador \} \} — por exemplo, **John Doe**
+- \{\{número de série \} \} — por exemplo, **F4KN99ZUG5V2** (para dispositivos iOS/iPadOS)
+- \{\{serialnumberlast4digits \} \} — por exemplo, **G5V2** (para dispositivos iOS/iPadOS)
 - \{\{aaddeviceid\}\} – por exemplo, **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Configure a app Portal da Empresa para apoiar dispositivos iOS e iPadOS DEP
 
 As inscrições do DEP (Programa de Inscrição de Dispositivos da Apple) não são compatíveis com a versão da app store da aplicação Portal da Empresa. No entanto, pode configurar a aplicação Portal da Empresa para suportar dispositivos iOS/iPadOS DEP utilizando os seguintes passos.
 
-1. Intune, adicione a aplicação Intune Company Portal, se necessário, indo para **Intune** > **Apps** > **Todas as aplicações** > **Add**.
-2. Vá às políticas de configuração de **Apps** > **App,** para criar uma política de configuração de apps para a aplicação Portal da Empresa.
+1. Intune, adicione a aplicação Intune Company Portal, se necessário, indo para **Intune**  >  **Apps**  >  **Todas as aplicações**  >  **Add**.
+2. Vá **Apps**às políticas de configuração de  >  **Apps App,** para criar uma política de configuração de apps para a aplicação Portal da Empresa.
 3. Crie uma política de configuração de aplicativos com o XML abaixo. Mais informações sobre como criar uma política de configuração de apps e introduzir dados XML podem ser encontradas em Políticas de configuração de [aplicações Add para dispositivos iOS/iPadOS geridos](app-configuration-policies-use-ios.md).
 
     ``` xml

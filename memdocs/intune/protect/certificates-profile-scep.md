@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862382"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988643"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Criar e atribuir perfis de certificado SCEP em Intune
 
@@ -34,7 +34,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selecione e vá aos perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+2. Selecione **Devices**e vá aos perfis de configuração de  >  **dispositivos**  >  **Criar perfil**.
 
 3. Introduza as seguintes propriedades:
    - **Plataforma**: Escolha a plataforma dos seus dispositivos.
@@ -76,7 +76,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
      Selecione como Intune cria automaticamente o nome do assunto no pedido de certificado. As opções para o formato de nome de assunto dependem do tipo de Certificado que selecionar, seja **utilizador** ou **dispositivo**.
 
      > [!NOTE]
-     > Existe uma [questão conhecida](#avoid-certificate-signing-requests-with-escaped-special-characters) para a utilização de SCEP para obter certificados quando o nome do assunto no pedido de assinatura \\de certificado (CSR) inclui um dos seguintes caracteres como um personagem escapado (procededo por um backslash ):
+     > Existe uma [questão conhecida](#avoid-certificate-signing-requests-with-escaped-special-characters) para a utilização de SCEP para obter certificados quando o nome do assunto no pedido de assinatura de certificado (CSR) inclui um dos seguintes caracteres como um personagem escapado (procededo por um backslash \\ ):
      > - \+
      > - ;
      > - ,
@@ -95,7 +95,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
        - **Personalizado**: ao selecionar esta opção, é também apresentada a caixa de texto **Personalizado**. Utilize este campo para introduzir um formato de nome de requerente personalizado, incluindo variáveis. O formato personalizado suporta duas variáveis: **Nome Comum (CN)** e **E-mail (E)**. O **Nome Comum (CN)** pode ser definido para qualquer uma das seguintes variáveis:
 
          - **CN={{{UserName}}**: O nome de utilizador do utilizador, como o janedoe.
-         - **CN={{{{UserPrincipalName}}**: O nome principal janedoe@contoso.comdo utilizador, tais como .\*
+         - **CN={{{{UserPrincipalName}}**: O nome principal do utilizador, tais como janedoe@contoso.com .\*
          - **CN={{AAD_Device_ID}}**: um ID atribuído ao registar um dispositivo no Azure Active Directory (AD). Este ID é normalmente utilizado na autenticação com o Azure AD.
          - **CN={{{SERIALNUMBER}}**: O número de série único (SN) normalmente utilizado pelo fabricante para identificar um dispositivo.
          - **CN={{{IMEINumber}}**: O número único de identidade de equipamento móvel internacional (IMEI) utilizado para identificar um telemóvel.
@@ -112,7 +112,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
 
          Este exemplo inclui um formato de nome de assunto que utiliza as variáveis CN e E, e cordas para valores da Unidade Organizacional, Organização, Localização, Estado e País. O artigo [função CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) descreve esta função e as cadeias suportadas da mesma.
          
-         \*Para os perfis apenas do Proprietário do Dispositivo Android, a definição **CN={{UserPrincipalName}}** não funcionará. Android Dispositivo Owner Apenas os perfis podem ser utilizados para dispositivos sem Utilizador, pelo que este perfil não será capaz de obter o nome principal do utilizador do utilizador. Se realmente precisa desta opção para dispositivos com utilizadores, pode utilizar uma suticultura como esta: **CN={{UserName}}\@contoso.com** fornecerá o Nome do Utilizador e o domínio que adicionou manualmente, comojanedoe@contoso.com
+         \*Para os perfis apenas do Proprietário do Dispositivo Android, a definição **CN={{UserPrincipalName}}** não funcionará. Android Dispositivo Owner Apenas os perfis podem ser utilizados para dispositivos sem Utilizador, pelo que este perfil não será capaz de obter o nome principal do utilizador do utilizador. Se realmente precisa desta opção para dispositivos com utilizadores, pode utilizar uma suticultura como esta: **CN={{UserName}} \@ contoso.com** Fornecerá o Nome do Utilizador e o domínio que adicionou manualmente, comojanedoe@contoso.com
 
       - **Tipo de certificado Dispositivo**
 
@@ -170,11 +170,11 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
         - **{{FullQualifiedDomainName}}**
         - **{{MEID}}**
 
-        Para especificar um valor para um atributo, inclua o nome variável com parênteses encaracolados, seguido do texto para essa variável. Por exemplo, um valor para o atributo DNS pode ser adicionado **{{AzureADDeviceId}.domain.com** onde *.domain.com* é o texto. Para um utilizador chamado *User1,* um endereço de e-mail pode aparecer como {{FullQualifiedDomainName}}User1@Contoso.com.
+        Para especificar um valor para um atributo, inclua o nome variável com parênteses encaracolados, seguido do texto para essa variável. Por exemplo, um valor para o atributo DNS pode ser adicionado **{{AzureADDeviceId}.domain.com** onde *.domain.com* é o texto. Para um utilizador chamado *User1,* um endereço de e-mail pode aparecer como {{FullQualifiedDomainName}} User1@Contoso.com .
 
         > [!IMPORTANT]
         > - Quando utilizar uma variável de certificado de dispositivo, encerre o nome variável em suportes encaracolados { }.
-        > - Não utilize suportes encaracolados **{**} **|**, símbolos de tubos, e pontos evícolas; no texto que segue a variável. **;**
+        > - Não utilize suportes encaracolados **{ }**, símbolos de **|** tubos, e pontos evícolas; no texto que segue a variável. **;**
         > - As propriedades do dispositivo utilizadas no *assunto* ou *SAN* de um certificado de dispositivo, como **IMEI,** **SerialNumber**, e **FullQualifiedDomainName,** são propriedades que podem ser falsificadas por uma pessoa com acesso ao dispositivo.
         > - Um dispositivo deve suportar todas as variáveis especificadas num perfil de certificado para que esse perfil seja instalado nesse dispositivo.  Por exemplo, se **{{IMEI}}** for utilizado no SAN de um perfil SCEP e for atribuído a um dispositivo que não tenha um número IMEI, o perfil não é instalado.
 
@@ -230,7 +230,7 @@ Depois de [configurar](certificates-scep-configure.md) a sua infraestrutura para
 
 8. Selecione **Seguinte**.
 
-9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para `US-NC IT Team` `JohnGlenn_ITDepartment`filtrar o perfil a grupos de TI específicos, tais como ou . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
+9. Nas **etiquetas de âmbito** (opcional), atribua uma etiqueta para filtrar o perfil a grupos de TI específicos, tais como ou `US-NC IT Team` `JohnGlenn_ITDepartment` . Para obter mais informações sobre etiquetas de âmbito, consulte [Use RBAC e etiquetas](../fundamentals/scope-tags.md)de âmbito para TI distribuídos .
 
    Selecione **Seguinte**.
 
@@ -266,7 +266,7 @@ Quando o seu nome de assunto incluir um dos caracteres especiais, utilize uma da
 
  No entanto, as tentativas de escapar da vírem utilizando um personagem backslash falharão com um erro nos registos de CRP:
  
-- **Víramida escapada**: *CN=Utilizador\\de teste (TestCompany, LLC,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Víramida escapada**: *CN=Utilizador de teste (TestCompany, \\ LLC,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
 O erro é semelhante ao seguinte erro:
 

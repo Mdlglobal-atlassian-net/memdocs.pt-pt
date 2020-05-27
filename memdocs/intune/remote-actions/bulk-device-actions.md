@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 3/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3c1b9a695830380c00900d0fe94ec075b21def0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325374"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989345"
 ---
 # <a name="use-bulk-device-actions"></a>Utilize ações de dispositivos a granel
 
@@ -38,7 +38,7 @@ Pode utilizar ações de dispositivos a granel para as seguintes ações remotas
 ## <a name="use-a-bulk-device-action"></a>Utilize uma ação de dispositivo a granel
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Escolha **dispositivos** > **Todas as** > ações**do dispositivo**a granel .
+2. Escolha **dispositivos**Todas as ações do dispositivo a  >  **All devices**  >  **granel**.
 ![Ações de dispositivos a granel](./media/bulk-device-actions/bulk-device-actions.png)
 3. Na página de ação do **dispositivo Bulk,** selecione uma ação **DE Os** e **Dispositivo**. Algumas ações do dispositivo têm opções ou campos adicionais para povoar. Escolha **Seguinte**.
 4. Na página **dispositivos,** selecione de 1 a 100 dispositivos > **Seguinte**.

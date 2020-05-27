@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d34424d9263378e92f1c2c888f6b79bb30ce55
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764310"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989973"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Perguntas mais frequentes sobre a MAM e a proteção de aplicações
 
@@ -170,7 +170,7 @@ O Intune pode eliminar os dados da aplicação de três formas diferentes: elimi
 A proteção de aplicações do Intune depende da identidade do utilizador para ser consistente entre a aplicação e o SDK da Aplicação Intune. A única forma de o garantir é através da autenticação moderna. Existem cenários onde aplicações podem funcionar com uma configuração no local, mas não é garantido e nem consistente.
 
 **Existe uma forma segura de abrir ligações Web a partir de aplicações geridas?**<br></br>
-Sim! O administrador de TI pode implementar e definir a política de proteção de aplicações para a [aplicação Intune Managed Browser](../apps/app-configuration-managed-browser.md), um browser desenvolvido pelo Microsoft Intune que pode ser gerido facilmente com o Intune. O administrador de TI pode exigir que todas as ligações Web nas aplicações geridas pelo Intune sejam abertas através da aplicação Managed Browser.
+Sim! O administrador de TI pode implementar e definir a política de proteção de aplicações para a aplicação Microsoft Edge. O administrador de TI pode exigir que todas as ligações web em aplicações geridas pelo Intune sejam abertas através da aplicação Microsoft Edge.
 
 ## <a name="app-experience-on-android"></a>Experiência de aplicação em Android
 
@@ -219,7 +219,7 @@ As políticas de proteção de aplicações do Intune para acesso serão aplicad
 Ao lidar com diferentes tipos de configurações, um requisito de versão SDK intune app teria precedência, então um requisito de versão de aplicação, seguido pelo requisito da versão do sistema operativo iOS/iPadOS. Em seguida, são verificados os avisos de todos os tipos de definições na mesma ordem. Recomendamos que o requisito de versão do SDK da Aplicação Intune só seja configurado após receber orientações sobre cenários de bloqueio essenciais por parte da equipa de produto do Intune.
 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 - [Implementar o plano do Intune](../fundamentals/planning-guide-onboarding.md)
 - [Teste e validação do Intune](../fundamentals/planning-guide-test-validation.md)
 - [Definições de políticas de gestão de aplicações móveis para Android no Microsoft Intune](../apps/app-protection-policy-settings-android.md)

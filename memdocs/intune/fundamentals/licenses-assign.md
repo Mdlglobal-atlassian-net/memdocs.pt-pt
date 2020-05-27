@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/12/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fe2625a7e13cc3082c156fcbf802c88d095b9859
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210354"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989817"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Atribuir licenças aos utilizadores para que estes possam inscrever dispositivos no Intune
 
@@ -34,9 +34,9 @@ Quer adicione utilizadores manualmente ou sincronize a partir do Active Director
 
 Pode utilizar o centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) para adicionar manualmente utilizadores baseados na nuvem e atribuir licenças tanto a contas de utilizadores baseados na nuvem como a contas sincronizadas desde o seu Diretório Ativo no local até à AD Azure.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores** > **Todos os Utilizadores** > escolham um utilizador > Missões de **Licenças** > **Assignments**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Utilizadores**  >  **Todos os Utilizadores** > escolham um utilizador > Missões de **Licenses**  >  **Licenças**.
 
-2. Escolha a caixa para **Intune** > **Save**. Se pretender utilizar a Enterprise Mobility + Security E5 ou outra licença, escolha essa caixa.
+2. Escolha a caixa para **Intune**  >  **Save**. Se pretender utilizar a Enterprise Mobility + Security E5 ou outra licença, escolha essa caixa.
 
    ![Screenshot da secção de licenças de produto do centro de administração Microsoft 365.](./media/licenses-assign/mem-assign-license.png)
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/02/2020
-ms.topic: reference
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b754ce98dfafd6eefb9346561268db1e4b32ed3b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078163"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989863"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Descrição geral do SDK da Aplicação Microsoft Intune
 O Intune App SDK, disponível tanto para iOS como Android, permite que a sua aplicação suporte as políticas de proteção de [aplicações](../apps/app-protection-policy.md)Intune . Quando a sua aplicação tem políticas de proteção de aplicações aplicadas, pode ser gerida pela Intune e é reconhecida pela Intune como uma aplicação gerida. O SDK esforça-se por minimizar a quantidade de alterações de código exigidas pelo desenvolvedor de aplicações. Você vai descobrir que você pode ativar a maioria das funcionalidades do SDK sem alterar o comportamento da sua aplicação. Para uma experiência melhorada de utilizador final e administrador de TI, pode utilizar as APIs do SDK para personalizar o comportamento da sua aplicação para suportar funcionalidades que requerem a participação da sua app.

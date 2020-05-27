@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac718ee2351260f79ae91882c71373111900d8fd
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: d7003bf0aa943eab6d884b55c511fea5dddeae8e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254746"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989920"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Utilizar a funcionalidade Começar do Zero para repor dispositivos Windows 10 com o Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "82254746"
 
 A ação do dispositivo **Fresh Start** remove todas as aplicações instaladas num PC que executa o Windows 10, versão 1709 ou posterior. A funcionalidade Começar do Zero ajuda a remover aplicações que vêm geralmente pré-instaladas (OEM) num PC novo. 
 
-1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione**Dispositivos Todos os** **dispositivos** > .
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selecione **Devices**  >  **Dispositivos Todos os dispositivos**.
 2. Na lista dos dispositivos que gere, selecione um computador com o Windows 10.
 3. Clique em **Começar de Novo**. 
 4. Selecione **Manter os dados de utilizador neste dispositivo** para:

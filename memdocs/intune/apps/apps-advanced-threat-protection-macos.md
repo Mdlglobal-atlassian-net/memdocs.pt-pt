@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1447dc0409665f281490e31e1bb385a5fe245d4
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709422"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989448"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Adicione o Microsoft Defender ATP aos dispositivos macOS utilizando o Microsoft Intune
 
@@ -75,7 +75,7 @@ A aplicação criada é apresentada na lista de aplicações, onde a pode atribu
 > [!NOTE]
 > Atualmente, a Apple não fornece uma forma de a Intune desinstalar o Microsoft Defender ATP em dispositivos macOS.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 - Para aprender sobre a aplicação de uma política antivírus para a segurança de pontofinal em Intune, consulte [a política antivírus para a segurança](../protect/endpoint-security-antivirus-policy.md) do ponto final em Intune 
 - Para saber mais sobre como incluir e excluir atribuições de aplicações a partir de grupos de utilizadores, veja [Incluir e excluir atribuições de aplicações](apps-inc-exl-assignments.md).
 - Para aprender a atribuir aplicações a grupos em Intune, consulte [as aplicações de atribuição a grupos](apps-deploy.md).

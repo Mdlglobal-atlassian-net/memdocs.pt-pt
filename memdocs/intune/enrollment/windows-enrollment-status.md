@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022709"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988893"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurar uma página de estado de inscrição
  
@@ -64,25 +64,25 @@ Também pode definir a ordem prioritária para que cada perfil tenha a responsab
 
 Para ligar a Página de Estado de Inscrição, siga os passos abaixo.
  
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha**a página de estado de  >  **Windows**  >  **Windows enrollment**  >  **inscrição**do Windows Windows .
 2. No painel **Página de Estado de Inscrição**, selecione **Predefinição** > **Definições**.
 3. Para **Mostrar progresso de instalação de aplicações e perfis**, selecione **Sim**.
 4. Selecione as outras definições que pretende ativar e, em seguida, selecione **Guardar**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Criar perfil de página de estado de inscrição e atribuir a um grupo
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos** > **Windows** > Windows página de**inscrição** > **Enrollment Status Page** > **Criar perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)escolha **dispositivos**Windows Windows página de  >  **Windows**  >  **Windows enrollment**  >  **inscrição**  >  **Criar perfil**.
 2. Forneça um **Nome** e uma **Descrição**.
 3. Escolha **Criar**.
 4. Selecione o novo perfil na lista **Página de Estado de Inscrição**.
-5. Escolha **Tarefas** > **Selecione grupos** > escolha os grupos que pretende adotar este perfil > **Selecione** > **Guardar**.
+5. Escolha **Tarefas**  >  **Selecione grupos** > escolha os grupos que pretende adotar este perfil > **Selecione**  >  **Guardar**.
 6. Selecione **Definições** > selecione as definições que pretende aplicar a este perfil > **Guardar**.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Definir a prioridade de página de estado de inscrição
 
 Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Estado de Inscrição. Para lidar com tais conflitos, pode definir as prioridades para cada perfil. Durante a inscrição, se alguém tiver mais do que um perfil de Página de Estado de Inscrição, apenas o perfil de prioridade mais elevado é aplicado ao dispositivo de inscrição.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha**a página de estado de  >  **Windows**  >  **Windows enrollment**  >  **inscrição**do Windows Windows .
 2. Paire o cursor sobre o perfil na lista.
 3. Utilize os três pontos verticais para arrastar o perfil para a posição pretendida na lista.
 
@@ -90,7 +90,7 @@ Um utilizador pode estar em muitos grupos e ter muitos perfis de Página de Esta
 
 Pode especificar que aplicações têm de ser instaladas para o utilizador poder aceder à área de trabalho.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha** > a página de estado de**inscrição** > do**Windows** > **Windows**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431) **escolha**a página de estado de  >  **Windows**  >  **Windows enrollment**  >  **inscrição**do Windows Windows .
 2. Escolha um perfil > **Definições**.
 3. Escolha **Sim** para **Mostrar progresso de instalação de aplicações e perfis**.
 4. Escolha **Sim** para **Bloquear a utilização de dispositivos até que todas as aplicações e perfis sejam instalados**.
@@ -203,7 +203,7 @@ Abaixo estão as questões conhecidas.
     - o utilizador deve voltar a introduzir as credenciais antes de proceder da fase de configuração do dispositivo para a fase de configuração da Conta
 - A ESP está presa durante muito tempo ou nunca completa a fase de "Identificação". Intune calcula as políticas do ESP durante a fase de identificação. Um dispositivo pode nunca completar as políticas de ESP de computação se o utilizador atual não tiver um Intune licenciado atribuído.  
 - Configurar o Controlo de Aplicações do Microsoft Defender provoca uma rápida reinicialização durante o Autopilot. Configurar a aplicação Microsoft Defender (AppLocker CSP) requer um reboot. Quando esta política estiver configurada, pode fazer com que um dispositivo reinicie durante o Autopilot. Atualmente, não há como suprimir ou adiar o reboot.
-- Quando a políticahttps://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) DeviceLock ( ativada como parte de um perfil ESP, o autologon OOBE ou do ambiente de trabalho do utilizador pode falhar sem expectante por duas razões.
+- Quando a política DeviceLock ( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) ativada como parte de um perfil ESP, o autologon OOBE ou do ambiente de trabalho do utilizador pode falhar sem expectante por duas razões.
   - Se o dispositivo não tiver sido reiniciado antes de sair da fase de configuração do Dispositivo ESP, o utilizador poderá ser solicitado a introduzir as suas credenciais De AD Azure. Esta solicitação ocorre em vez de um autologon bem sucedido onde o utilizador vê a primeira animação de login do Windows.
   - O autologon falhará se o dispositivo tiver sido reiniciado após o utilizador ter introduzido as suas credenciais De AD Azure, mas antes de sair da fase de configuração do Dispositivo ESP. Esta falha ocorre porque a fase de configuração do Dispositivo ESP nunca foi concluída. A supõeção é redefinir o dispositivo.
 

@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e32b61af0df5ad960ff40f369af74877eb189d7
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2227face347e6d82cf7807bea241eda4856c1d67
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431275"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988686"
 ---
 # <a name="deploy-multiple-oemconfig-profiles-to-zebra-devices-in-microsoft-intune"></a>Implemente vários perfis oEMConfig para dispositivos Zebra no Microsoft Intune
 
@@ -77,7 +77,7 @@ Implementa um perfil e é executado pela aplicação Zebra OEMConfig no disposit
 
     Selecione uma linha falhada. São mostrados detalhes que têm mais informações sobre o porquê de ter falhado.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 - Saiba mais sobre os perfis de [configuração da OEMConfig](android-oem-configuration-overview.md).
 - No administrador de dispositivos Android, configure extensões de [mobilidade (MX)](android-zebra-mx-overview.md).

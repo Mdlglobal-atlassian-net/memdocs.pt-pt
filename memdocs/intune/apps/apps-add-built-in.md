@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9ee40dc9feb9b66b6267fc91448cc7265296597f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324934"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989557"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Adicionar aplicações incorporadas ao Microsoft Intune
 
@@ -38,7 +38,7 @@ Nas versões anteriores da consola do Intune, o Intune disponibilizava várias a
 
 Para adicionar uma aplicação incorporada às suas aplicações disponíveis no Microsoft Intune, faça o seguinte:
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. No painel do **tipo select,** sob os tipos de **aplicativos da Loja** disponíveis, selecione app **Built-In**.
 4. Clique em **Selecionar**. Os passos da **aplicação Add** são apresentados.
 5. Na página **de aplicações Select Built-in,** clique em Selecionar a **aplicação** Para selecionar as aplicações que pretende incluir.
@@ -56,7 +56,7 @@ Para adicionar uma aplicação incorporada às suas aplicações disponíveis no
 ## <a name="configure-app-information"></a>Configurar as informações da aplicação
 
 Pode modificar as informações da aplicação incorporada. Estas informações ajudam-no a identificar a aplicação no Intune e também ajudam os utilizadores a encontrá-la no portal da empresa.
-1. Selecione **Apps** > **Todas as aplicações** e selecione a aplicação incorporada que pretende modificar.  
+1. Selecione **Apps**  >  **Todas as aplicações** e selecione a aplicação incorporada que pretende modificar.  
    É apresentado um painel da aplicação incorporada.
 2. Selecione **Propriedades**.
 3. **Selecione Editar** ao lado de **informações**da App .

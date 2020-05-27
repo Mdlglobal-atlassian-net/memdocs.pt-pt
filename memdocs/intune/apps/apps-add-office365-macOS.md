@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023236"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989513"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Atribuir o Office 365 a dispositivos macOS com o Microsoft Intune
 
@@ -43,7 +43,7 @@ Antes de começar a adicionar aplicações do Office 365 aos dispositivos macOS,
 ## <a name="select-microsoft-365-apps"></a>Selecione Aplicações Microsoft 365
 
 1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selecione **Apps** > **Todas as aplicações** > **Adicionar**.
+2. Selecione **Apps**  >  **Todas as aplicações**  >  **Adicionar**.
 3. Selecione **o macOS** na secção aplicações microsoft **365** do painel do **tipo select.**
 4. 4. Clique em **Selecionar**. Os passos **add Microsoft 365 Apps** são apresentados.
 

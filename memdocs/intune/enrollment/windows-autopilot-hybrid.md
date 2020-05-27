@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 07/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: 91a63011b16a05387f09f4cc5b3fe74b9c30891e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991711"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988981"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Implemente dispositivos híbridos de AD com a utilização de Intune e Windows Autopilot
 Pode utilizar dispositivos intune e Windows Autopilot para configurar dispositivos híbridos azure Ative Directory (Azure AD). Para tal, siga os passos deste artigo.
@@ -78,7 +78,7 @@ A unidade organizacional que concedeu os direitos de criar computadores deve cor
 
     ![O comando de Controlo de Delegados](./media/windows-autopilot-hybrid/delegate-control.png)
 
-1. Na **delegação do** assistente de controlo, selecione **Next** > **Add** > Object**Types**.
+1. Na **delegação do** assistente de controlo, selecione **Next**  >  **Add**  >  **Object Types**.
 
 1. No painel **'Tipos de Objectos',** selecione a caixa de verificação **de computadores** e, em seguida, selecione **OK**.
 
@@ -90,7 +90,7 @@ A unidade organizacional que concedeu os direitos de criar computadores deve cor
 
 1. Selecione **'Verificar Nomes'** para validar a sua entrada, selecione **OK**, e depois selecione **Next**.
 
-1. Selecione **Criar uma tarefa personalizada para delegar** > A**seguir**.
+1. Selecione **Criar uma tarefa personalizada para delegar**A  >  **seguir**.
 
 1. Selecione os **seguintes objetos na** caixa de verificação da pasta e, em seguida, selecione os **objetos do Computador**, **Crie objetos selecionados nesta pasta**e **elimine os objetos selecionados nesta pasta** verifique as caixas de verificação.
 
@@ -111,14 +111,14 @@ O Conector Intune para Diretório Ativo deve ser instalado num computador que es
 
 O Conector Intune requer os [mesmos pontos finais que](../fundamentals/intune-endpoints.md)o Intune .
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **dispositivos** > **Windows** > **Windows inscrição** > **Intune Connector para** > **Add**'Diretório Ativo . 
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **dispositivos**  >  **Windows**  >  **Windows inscrição**  >  **Intune Connector para Add 'Diretório Ativo**  >  **Add**. 
 2. Siga as instruções para descarregar o Conector.
 3. Abra o ficheiro de configuração do Connector descarregado, *ODJConnectorBootstrapper.exe,* para instalar o Conector.
 4. No final da configuração, **selecione Configurar**.
 5. Selecione **Iniciar sessão**.
 6. Introduza as credenciais de função de Administrador Global do Utilizador ou Administrador Intune.  
    A conta de utilizador deve ter uma licença Intune atribuída.
-7. Vá ao **DispositivoS** > **Windows** > **Inscrição** > **Intune Connector para Diretório Ativo**, e depois confirme que o estado de ligação está **Ativo**.
+7. Vá **Devices**ao  >  **DispositivoS**  >  **Windows Inscrição**  >  **Intune Connector para Diretório Ativo**, e depois confirme que o estado de ligação está **Ativo**.
 
 > [!NOTE]
 > Depois de iniciar sessão no Connector, pode levar alguns minutos a aparecer no centro de administração do [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Só aparece se conseguir comunicar com sucesso com o serviço Intune.
@@ -132,7 +132,7 @@ Se tiver um representante web no seu ambiente de networking, certifique-se de qu
 
 
 ## <a name="create-a-device-group"></a>Criar um grupo de dispositivos
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Grupos** > **Novo grupo**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Grupos**  >  **Novo grupo**.
 
 1. No painel do **Grupo,** faça o seguinte:
 
@@ -143,9 +143,9 @@ Se tiver um representante web no seu ambiente de networking, certifique-se de qu
     c. Selecione um **tipo de Membro**.
 
 1. Se selecionou **Dispositivos Dinâmicos** para o tipo de membro, no painel **do Grupo,** selecione **membros** do dispositivo Dynamic e, em seguida, na caixa de **regras Avançada,** faça um dos seguintes:
-    - Para criar um grupo que inclua `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`todos os seus dispositivos Autopilot, introduza .
+    - Para criar um grupo que inclua todos os seus dispositivos Autopilot, introduza `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")` .
     - Os mapas de campo do Grupo Tag intune para o atributo OrderID em dispositivos AD Azure. Se pretender criar um grupo que inclua todos os seus dispositivos Autopilot com uma etiqueta de grupo específica (OrderID) deve digitar:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - Para criar um grupo que inclua todos os seus `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`dispositivos Autopilot com um ID de Encomenda de Compra específico, introduza .
+    - Para criar um grupo que inclua todos os seus dispositivos Autopilot com um ID de Encomenda de Compra específico, introduza `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")` .
     
 1. Selecione **Guardar**.
 
@@ -171,15 +171,15 @@ Se os seus dispositivos ainda não estiverem inscritos, pode registá-los. Para 
 Se comprar novos dispositivos, alguns OEMs podem registar os dispositivos por si. Para obter mais informações, veja a [página do Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Quando os seus dispositivos Autopilot estão *registados,* antes de serem matriculados em Intune, são apresentados em três locais (com nomes definidos para os seus números de série):
-- O painel **de dispositivos autopiloto** no Intune no portal Azure. Selecione**dispositivos**de > **inscrição** >  **do Dispositivo**Windows .
-- Os **dispositivos Azure AD** painelam no Intune no portal Azure. Selecione **Dispositivos** > **AD Azure**.
-- O painel **Azure AD All Devices** no Azure Ative Directory no portal Azure selecionando **Dispositivos** > **Todos os Dispositivos**.
+- O painel **de dispositivos autopiloto** no Intune no portal Azure. Selecione dispositivos de **inscrição do Dispositivo**  >  **Windows**  >  **Devices**.
+- Os **dispositivos Azure AD** painelam no Intune no portal Azure. Selecione **Devices**  >  **Dispositivos AD Azure**.
+- O painel **Azure AD All Devices** no Azure Ative Directory no portal Azure selecionando **Dispositivos**  >  **Todos os Dispositivos**.
 
 Depois de *matriculados*os seus dispositivos Autopilot, são apresentados em quatro locais:
-- O painel **de dispositivos autopiloto** no Intune no portal Azure. Selecione**dispositivos**de > **inscrição** >  **do Dispositivo**Windows .
-- Os **dispositivos Azure AD** painelam no Intune no portal Azure. Selecione **Dispositivos** > **AD Azure**.
-- O **painel Azure AD All Devices** pane in Azure Ative Directory no portal Azure. Selecione **Dispositivos** > **Todos os Dispositivos**.
-- O painel **All Devices** no Intune no portal Azure. Selecione **Dispositivos** > **Todos os Dispositivos**.
+- O painel **de dispositivos autopiloto** no Intune no portal Azure. Selecione dispositivos de **inscrição do Dispositivo**  >  **Windows**  >  **Devices**.
+- Os **dispositivos Azure AD** painelam no Intune no portal Azure. Selecione **Devices**  >  **Dispositivos AD Azure**.
+- O **painel Azure AD All Devices** pane in Azure Ative Directory no portal Azure. Selecione **Devices**  >  **Dispositivos Todos os Dispositivos**.
+- O painel **All Devices** no Intune no portal Azure. Selecione **Devices**  >  **Dispositivos Todos os Dispositivos**.
 
 Depois de matriculados os seus dispositivos Autopilot, os seus nomes tornam-se o nome de anfitrião do dispositivo. Por predefinição, o nome de anfitrião começa com *DESKTOP-*.
 
@@ -187,7 +187,7 @@ Depois de matriculados os seus dispositivos Autopilot, os seus nomes tornam-se o
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Criar e atribuir um perfil de implementação do Autopilot
 Os perfis de implementação do Autopilot são utilizados para configurar os dispositivos Autopilot.
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos** > **Windows** > **Windows implementação** > De perfis > de**implementação****Criar perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Dispositivos**  >  **Windows**  >  **Windows Windows implementação**De perfis de  >  **implementação**Criar  >  **perfil**.
 2. Na página **Basics,** digite um **nome** e **descrição**opcional.
 3. Se pretender que todos os dispositivos nos grupos atribuídos sejam convertidos automaticamente no Autopilot, defina **Converter todos os dispositivos visados para o Piloto Automático** para **Sim**. Todos os dispositivos corporativos e não autopilotos em grupos designados registar-se-ão no serviço de implementação do Autopilot. Os dispositivos pessoais não serão convertidos para Piloto Automático. O processo de registo demora até 48 horas, pelo que deverá aguardar. Quando a inscrição do dispositivo for anulada e o dispositivo for reposto, o Autopilot irá inscrevê-lo. Após registar um dispositivo desta forma, desativar esta opção ou remover a atribuição de perfil não irá remover o dispositivo do serviço de implementação do Autopilot. Em alternativa, tem de [remover o dispositivo diretamente](enrollment-autopilot.md#delete-autopilot-devices).
 4. Selecione **Seguinte**.
@@ -198,21 +198,21 @@ Os perfis de implementação do Autopilot são utilizados para configurar os dis
 9. Na página **scope tags,** selecione [etiquetas](../fundamentals/scope-tags.md) de âmbito para este perfil.
 10. Selecione **Seguinte**.
 11. Na página **de Tarefas,** selecione **Select grupos para incluir** > procurar e selecionar o grupo do dispositivo > **Selecione**.
-12. Selecione **Next** > **Create**.
+12. Selecione **Next**  >  **Create**.
 
 Leva cerca de 15 minutos para que o estado do perfil do dispositivo mude de *Não atribuído* a *Atribuir* e, finalmente, para *Designado*.
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Opcional) Ligue a página de estado da inscrição
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Devices** > **Windows** > **Windows's Registration Status** > **Page**.
-1. No painel da página de estado de **inscrição,** selecione**Definições** **predefinidas** > .
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione **Devices**  >  **Windows**  >  **Windows Windows's Registration Status**  >  **Page**.
+1. No painel da página de estado de **inscrição,** selecione Definições **predefinidas**  >  **Settings**.
 1. Na **app Show e** na caixa de progresso de instalação de perfil, selecione **Sim**.
 1. Configure as outras opções conforme seja necessário.
 1. Selecione **Guardar**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Criar e atribuir um perfil de Associação a um Domínio
 
-1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de**configuração** > de **dispositivos** > **Criar perfil**.
+1. No centro de administração do [Microsoft Endpoint Manager,](https://go.microsoft.com/fwlink/?linkid=2109431)selecione perfis de configuração de **Devices**  >  **dispositivos**  >  **Criar perfil**.
 2. Introduza as seguintes propriedades:
    - **Nome**: introduza um nome descritivo para o novo perfil.
    - **Descrição**: Introduza uma descrição para o perfil.
@@ -234,7 +234,7 @@ Leva cerca de 15 minutos para que o estado do perfil do dispositivo mude de *Nã
      
    > [!NOTE]
    > Não utilize aspas em torno do valor da **unidade organizacional**.
-5. Selecione **OK** > **Criar**.  
+5. Selecione **OK**  >  **Criar**.  
     O perfil é criado e exibido na lista.
 6. Para atribuir o perfil, siga os passos sob o [perfil de Atribuir um dispositivo](../configuration/device-profile-assign.md#assign-a-device-profile) e atribua o perfil ao mesmo grupo utilizado nesta fase Criar um grupo de [dispositivos](windows-autopilot-hybrid.md#create-a-device-group). Alternativamente, diferentes grupos podem ser usados se houver necessidade de juntar dispositivos a diferentes domínios ou UA.
 
