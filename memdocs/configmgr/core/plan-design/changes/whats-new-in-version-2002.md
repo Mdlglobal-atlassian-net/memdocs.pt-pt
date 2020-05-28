@@ -2,7 +2,7 @@
 title: Novidades na versão 2002
 titleSuffix: Configuration Manager
 description: Obtenha detalhes sobre alterações e novas capacidades introduzidas na versão 2002 do ramo atual do Gestor de Configuração.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381558"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126486"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novidades na versão 2002 do ramo atual do Gestor de Configuração
 
@@ -328,6 +328,15 @@ Para mais informações, consulte [as atualizações do Synchronize Office 365 a
 
 <!-- 5229962 -->
 O Gestor de Configuração expandiu o seu suporte para dispositivos de embarque para o Microsoft Defender ATP. Para mais informações, consulte a [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Clientes do Gestor de Configuração a bordo do Microsoft Defender ATP através do centro de administração do Microsoft Endpoint Manager
+<!--5691658-->
+Pode agora implementar políticas de deteção e resposta de deteção e resposta do Microsoft Defender ATP Endpoint (EDR) para clientes geridos pelo Gestor de Configuração. Estes clientes não necessitam de inscrição em Azure AD ou MDM, e a política é direcionada para coleções ConfigMgr em vez de Grupos AD Azure.
+
+Esta capacidade permite que os clientes gerem tanto o CLIENTE INTune MDM como o Cliente DE Configuração EDR/ATP a partir de uma única experiência de gestão - o centro de administração do Microsoft Endpoint Manager. Para obter mais informações, consulte a política de [deteção e resposta de Endpoint para segurança de pontofinal no Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Você precisará do rollup hotfix, [KB4563473,](https://support.microsoft.com/help/4563473)instalado no seu ambiente para esta funcionalidade.
 
 ### <a name="improvements-to-bitlocker-management"></a>Melhorias na gestão bitLocker
 
