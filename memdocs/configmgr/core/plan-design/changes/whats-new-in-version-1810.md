@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906254"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novidades na versão 1810 do ramo atual do Gestor de Configuração
 
@@ -43,7 +43,7 @@ Saiba mais sobre as alterações de suporte antes de serem implementadas em [ite
 
 A partir de 14 de agosto de 2018, a funcionalidade de gestão de dispositivos móveis híbridos é depreciada. Para mais informações, veja [o que aconteceu ao MDM híbrido.](../../../mdm/understand/what-happened-to-hybrid.md)<!--Intune feature 2683117-->  
 
-Suporte para System Center Endpoint Protection (SCEP) para Mac e Linux (todas as versões) termina em 31 de dezembro de 2018. A disponibilidade de novas definições de vírus para SCEP para Mac e SCEP para Linux pode ser descontinuada após o fim do suporte. Para mais informações, consulte [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
+Suporte para System Center Endpoint Protection (SCEP) para Mac e Linux (todas as versões) termina em 31 de dezembro de 2018. A disponibilidade de novas definições de vírus para SCEP para Mac e SCEP para Linux pode ser descontinuada após o fim do suporte. Para mais informações, consulte [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 As implementações clássicas de serviço em Azure estão agora depreciadas no Gestor de Configuração. Comece a utilizar as implementações do Gestor de Recursos Azure para o gateway de gestão de nuvem e o ponto de distribuição da nuvem. Para mais informações, consulte [Plano para CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
@@ -219,7 +219,7 @@ Para mais informações, consulte [Aprovar aplicações.](../../../apps/deploy-u
 ### <a name="detection-methods-dont-load-windows-powershell-profiles"></a>Os métodos de deteção não carregam perfis do Windows PowerShell
 
 <!--3607762, fka 1359239-->
-Pode utilizar scripts Windows PowerShell para métodos de deteção em aplicações e configurações em itens de configuração. Quando estes scripts funcionam em clientes, o cliente do `-NoProfile` Gestor de Configuração chama agora powerShell com o parâmetro. Esta opção inicia a PowerShell sem perfis.
+Pode utilizar scripts Windows PowerShell para métodos de deteção em aplicações e configurações em itens de configuração. Quando estes scripts funcionam em clientes, o cliente do Gestor de Configuração chama agora powerShell com o `-NoProfile` parâmetro. Esta opção inicia a PowerShell sem perfis.
 
 Um perfil PowerShell é um script que corre quando o PowerShell começa. Pode criar um perfil PowerShell para personalizar o seu ambiente e adicionar elementos específicos da sessão a todas as sessões da PowerShell que iniciar.
 
@@ -395,7 +395,7 @@ As seguintes melhorias de desempenho e resolução de problemas aplicam-se tanto
 
 - Registos adicionais para resolução de problemas  
 
-Para obter mais informações, veja os artigos seguintes:  
+Para obter mais informações, veja os seguintes artigos:  
 
 - [Criar e executar scripts PowerShell a partir da consola De Configuração Manager](../../../apps/deploy-use/create-deploy-scripts.md)  
 
@@ -435,14 +435,14 @@ O rollup de atualização seguinte (4488598) está disponível na consola a part
 
 Estão disponíveis os seguintes hotfixes adicionais para abordar questões específicas:
 
-| ID | Título | Date | Na consola |
+| ID | Título | Data | Na consola |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Certificado de conector Microsoft Intune não renova no Gestor de Configuração | 18 janeiro 2019 | Sim |
 | [4490434](https://support.microsoft.com/help/4490434) | As colunas duplicadas de descoberta de utilizadores são criadas no Gestor de Configuração | 22 fevereiro 2019 | Sim |
 | [4490575](https://support.microsoft.com/help/4490575) | As instalações de atualização deixam de responder ou nunca mostram a conclusão no Diretor de Configuração, versão 1810 | 22 fevereiro 2019 | Sim |
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Quando estiver pronto para instalar esta versão, consulte [a instalação de atualizações para O Gestor](../../servers/manage/updates.md) de Configuração e lista de [verificação para instalar a atualização 1810](../../servers/manage/checklist-for-installing-update-1810.md).
 

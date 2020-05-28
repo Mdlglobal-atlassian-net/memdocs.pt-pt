@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906655"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Criar linhas de base de configuração no Gestor de Configuração
 
@@ -23,6 +23,9 @@ ms.locfileid: "81712926"
 
 
 As linhas de base de configuração no Gestor de Configuração contêm itens de configuração predefinidos e, opcionalmente, outras linhas de base de configuração. Depois de criar uma linha de base de configuração, pode implementá-la numa coleção, para que os dispositivos nessa coleção a transfiram e avaliem a compatibilidade com a mesma.  
+
+> [!TIP]
+> Não há como especificar a ordem que o cliente do Gestor de Configuração avalia os itens de configuração numa linha de base. Não é determinista.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Linhas de base de configuração
 
@@ -38,7 +41,7 @@ As linhas de base de configuração no Gestor de Configuração contêm itens de
 
 Para criar uma linha de base de configuração utilizando a caixa de diálogo **Create Configuration Baseline,** utilize o seguinte procedimento:  
 
-1. Na consola do Gestor de Configuração, clique em **Ativos e** > **Definições** > de Conformidade **.**  
+1. Na consola do Gestor de Configuração, clique em **Ativos e**  >  **Definições**de Conformidade  >  **.**  
 
 2. No separador **Base** , no grupo **Criar** , clique em **Criar Linha de Base de Configuração**.  
 
@@ -95,19 +98,19 @@ Para incluir as linhas de base de configuração personalizadas como parte da av
 
 Quando um utilizador faz parte de uma coleção direcionada a uma política de conformidade que inclua a condição de regra **Inclua linhas de base configuradas na avaliação**da política de conformidade, quaisquer linhas de base com a **Avaliação desta linha de base como parte da** opção de avaliação da política de conformidade selecionada que são implementadas para o utilizador ou o dispositivo do utilizador são avaliados para o cumprimento. Por exemplo:
 
-- `User1`faz parte `User Collection 1`de .
-- `User1`utilizações `Device1`, `Device Collection 1` que `Device Collection 2`está dentro e .
-- `Compliance Policy 1`tem as **linhas de base configuradas incluir na** condição `User Collection 1`da regra da avaliação da política de conformidade e é implantada para .
-- `Configuration Baseline 1`tem **Avaliar esta linha de base como parte da avaliação da política de conformidade** selecionada e está implantada para `Device Collection 1`.
-- `Configuration Baseline 2`tem **Avaliar esta linha de base como parte da avaliação da política de conformidade** selecionada e está implantada para `Device Collection 2`.
+- `User1`faz parte de `User Collection 1` .
+- `User1`utilizações `Device1` , que está dentro e `Device Collection 1` `Device Collection 2` .
+- `Compliance Policy 1`tem as **linhas de base configuradas incluir na** condição da regra da avaliação da política de conformidade e é implantada para `User Collection 1` .
+- `Configuration Baseline 1`tem **Avaliar esta linha de base como parte da avaliação da política de conformidade** selecionada e está implantada para `Device Collection 1` .
+- `Configuration Baseline 2`tem **Avaliar esta linha de base como parte da avaliação da política de conformidade** selecionada e está implantada para `Device Collection 2` .
 
-Neste cenário, `Compliance Policy 1` quando avalia `User1` `Device1`para `Configuration Baseline 1` utilização , tanto e `Configuration Baseline 2` são avaliados também.
+Neste cenário, quando `Compliance Policy 1` avalia para `User1` utilização , tanto e `Device1` são `Configuration Baseline 1` `Configuration Baseline 2` avaliados também.
 
-- `User1`às `Device2`vezes usa.
-- `Device2`é membro `Device Collection 2` do `Device Collection 3`e .
-- `Device Collection 3`tem `Configuration Baseline 3` implantado para ele, mas **Avaliar esta linha de base como parte da avaliação da política de conformidade** não é selecionado.
+- `User1`às vezes `Device2` usa.
+- `Device2`é membro do `Device Collection 2` e `Device Collection 3` .
+- `Device Collection 3``Configuration Baseline 3`tem implantado para ele, mas Avaliar esta linha de base como parte da **avaliação da política de conformidade** não é selecionado.
 
-Quando `User1` `Device2`as `Configuration Baseline 2` utilizações , `Compliance Policy 1` só é avaliada quando avalia.
+Quando `User1` as utilizações `Device2` , só é avaliada quando `Configuration Baseline 2` `Compliance Policy 1` avalia.
 
 > [!NOTE]
 ><!--5582516-->
@@ -148,6 +151,6 @@ Quando `User1` `Device2`as `Configuration Baseline 2` utilizações , `Complianc
 - DCMAgent.log
 - CIAgent.log
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Importar dados de configuração](import-configuration-data.md)

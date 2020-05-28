@@ -10,12 +10,13 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.reviewer: acabello
+ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126009"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268203"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Tutorial: Implementar o Windows 10 para piloto
 
@@ -29,7 +30,7 @@ Neste tutorial, ficará a saber como:
 > * Criar um plano de implementação desktop Analytics para o Windows 10  
 > * Utilize o Gestor de Configuração para implementar o Windows 10 no grupo piloto  
 
-Se não tiver uma subscrição Azure, crie uma [conta gratuita](https://azure.microsoft.com/free) antes de começar. Quando configurado corretamente, a utilização do Desktop Analytics não incorre em nenhum custo Azure.
+Se não tiver uma subscrição do Azure, crie uma [conta gratuita](https://azure.microsoft.com/free) antes de começar. Quando configurado corretamente, a utilização do Desktop Analytics não incorre em nenhum custo Azure.
 
 O Desktop Analytics utiliza um espaço de *trabalho de Log Analytics* na subscrição do Azure. Uma área de trabalho é essencialmente um contentor que inclui informações da conta e informações de configuração simples para a conta. Para mais informações, consulte Gerir espaços de [trabalho.](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)
 
@@ -243,7 +244,7 @@ Utilize este procedimento para criar um plano de implementação no Desktop Anal
 
         - **Os meus computadores obtêm automaticamente os controladores a partir do Windows Update**: A definição predefinida está **desligada**, o que é recomendado ao ser implementado com o 'Gestor de Configuração'.  
 
-        - **Defina um limiar de contagem de instalação baixo para as suas aplicações**: A definição predefinida é `2%`. As aplicações abaixo deste limiar são automaticamente definidas para *a contagem de instalações low*. O Desktop Analytics não valida estes add-ins durante o piloto.  
+        - **Defina um limiar de contagem de instalação baixo para as suas aplicações**: A definição predefinida é `2%` . As aplicações abaixo deste limiar são automaticamente definidas para *a contagem de instalações low*. O Desktop Analytics não valida estes add-ins durante o piloto.  
 
             Se uma aplicação for instalada numa percentagem mais elevada de computadores do que este limiar, o plano de implementação marca a aplicação como *Noteworthy*. Depois pode decidir a sua importância para testar durante a fase piloto.  
 
@@ -387,7 +388,7 @@ Em seguida, distribua o pacote de upgrade do SO para pontos de distribuição.
 -->
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Avance para o próximo artigo para saber mais sobre os planos de implementação do Desktop Analytics.
 > [!div class="nextstepaction"]  

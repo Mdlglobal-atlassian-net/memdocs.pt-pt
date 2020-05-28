@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720745"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903946"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Atualizações e manutenção para Gestor de Configuração
 
@@ -60,11 +60,13 @@ As seguintes versões suportadas do Gestor de Configuração estão atualmente d
 
 | Versão | Data de disponibilidade | [Data de fim do suporte](current-branch-versions-supported.md) | Linha de base | Atualização in-consola |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | maio de 2020 | 1 de outubro de 2021 | Nota sim<sup>[1](#bkmk_note1)</sup> | Sim |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 de abril de 2020 | 1 de outubro de 2021 | Nota sim<sup>[1](#bkmk_note1)</sup> | Sim |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 de novembro de 2019 | 29 de maio de 2021 | Não | Sim |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 de julho de 2019 | 26 de janeiro de 2021 | Não | Sim |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 de março de 2019 | 27 de setembro de 2020 | Nota sim<sup>[1](#bkmk_note1)</sup> | Sim |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 de novembro de 2018 | 1 de dezembro de 2020 | Não | Sim |
+
+A **data de disponibilidade** é quando o anel de [atualização precoce](checklist-for-installing-update-2002.md#early-update-ring) é lançado. Os meios de base estarão disponíveis no Centro de Serviços de Licença de Volume após a atualização estar disponível globalmente.
 
 <a name="bkmk_note1"></a>
 
@@ -75,7 +77,7 @@ As seguintes versões suportadas do Gestor de Configuração estão atualmente d
 > - Centro de Sistema2016 Datacenter
 > - System Center 2016 Standard  
 >
-> Por exemplo, procure no VLSC . `System Center Config Mgr (current branch)` Encontre os meios de base na lista de ficheiros e descarregue para esse lançamento.  
+> Por exemplo, procure no VLSC `System Center Config Mgr (current branch)` . Encontre os meios de base na lista de ficheiros e descarregue para esse lançamento.  
 
 #### <a name="historical-versions"></a>Versões históricas
 
@@ -196,11 +198,11 @@ Este método é utilizado para correções que utilizam a seguinte estrutura de 
 
 Para mais informações, consulte [Utilize o instalador de hotfix para instalar atualizações](use-the-hotfix-installer-to-install-updates.md).  
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Os seguintes artigos podem ajudá-lo a entender como encontrar e instalar os diferentes tipos de atualização para O Gestor de Configuração:  
 
-- [Instale atualizações na consola](install-in-console-updates.md)  
+- [Instalar atualizações na consola](install-in-console-updates.md)  
 
 - [Utilizar a ferramenta de ligação de serviços](use-the-service-connection-tool.md)  
 

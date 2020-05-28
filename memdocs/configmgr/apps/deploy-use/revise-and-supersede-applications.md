@@ -2,7 +2,7 @@
 title: Rever e substituir aplicações
 titleSuffix: Configuration Manager
 description: Saiba como trabalhar com versões de aplicação do Gestor de Configuração e aplicações de supersede.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710070"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343138"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Revise e substitui aplicações no Gestor de Configuração
 
@@ -28,7 +28,7 @@ Neste tópico, aprenderá a trabalhar com versões de aplicação do Gestor de C
 
 ### <a name="to-display-an-application-revision-history"></a>Para visualizar um histórico de revisão da aplicação  
 
-1.  Na consola de Configuração Manager, escolha aplicações de**gestão** > de**aplicações**da **Biblioteca** > de Software e, em seguida, escolha a aplicação que deseja.  
+1.  Na consola de Configuração Manager, escolha aplicações de gestão de **Software Library**aplicações da Biblioteca de Software  >  **Application Management**  >  **Applications**e, em seguida, escolha a aplicação que deseja.  
 
 3.  No separador **Home,** no grupo **Aplicação,** escolha **'História de Revisão'** para abrir a caixa de diálogo do Histórico de Revisão de **Aplicações.**  
 
@@ -59,8 +59,8 @@ Neste tópico, aprenderá a trabalhar com versões de aplicação do Gestor de C
 >  Só é possível eliminar a revisão da aplicação em vigor se a aplicação estiver reformada e não tiver referências.  
 
 ##  <a name="application-supersedence"></a> Substituição de aplicações  
- A gestão de aplicações no Gestor de Configuração permite-lhe atualizar ou substituir as aplicações existentes utilizando uma relação de supersedência. Quando substitui uma aplicação, pode especificar um novo tipo de implementação para substituir o tipo de implementação da aplicação superseded e também decidir se deve atualizar ou desinstalar a aplicação supersedantes da instalação da aplicação de substituição.  
-
+ A gestão de aplicações no Gestor de Configuração permite-lhe atualizar ou substituir as aplicações existentes utilizando uma relação de supersedência. Quando substitui uma aplicação, pode especificar um novo tipo de implementação para substituir o tipo de implementação da aplicação superseded e também decidir se deve atualizar ou desinstalar a aplicação supersedantes da instalação da aplicação de substituição. De um modo geral, recomendamos limitar as cadeias de supersedência a cinco níveis de profundidade no máximo.
+ 
 > [!IMPORTANT]  
 >  Quando é selecionada a opção para desinstalar o tipo de implementação substituído, não é possível substituir um tipo de implementação por outro que foi implementado num tipo de coleção diferente.  Por exemplo, um tipo de implementação que foi implementado numa coleção de dispositivos não pode ser substituído por um tipo de implementação que foi implementado numa coleção de utilizadores se a opção para desinstalar o tipo de implementação substituído estiver selecionada.  
 
@@ -94,11 +94,11 @@ Neste tópico, aprenderá a trabalhar com versões de aplicação do Gestor de C
 
 ### <a name="to-specify-a-supersedence-relationship"></a>Para especificar uma relação de substituição  
 
-1.  Na consola de Configuração Manager, escolha aplicações de**gestão** > de**aplicações**da Biblioteca > de **Software,** e depois escolha a aplicação que substitui outra aplicação.  
+1.  Na consola de Configuração Manager, escolha aplicações de gestão de aplicações da **Biblioteca**  >  **Application Management**  >  **Applications**de Software, e depois escolha a aplicação que substitui outra aplicação.  
 
 3.  No separador **Casa,** no grupo **Propriedades,** escolha **Propriedades** para abrir o nome de aplicação Caixa de diálogo **Properties.**  
 
-4.  No separador **De Supersedência** da caixa de **diálogo**<Nome de *Aplicação\> * Properties, escolha **Adicionar**.  
+4.  No separador **De Supersedência** da caixa de diálogo<Nome de *Aplicação \> * **Properties,** escolha **Adicionar**.  
 
 5.  Na caixa de diálogo **Especificar Relação de Substituição** , clique em **Procurar**.  
 
@@ -111,7 +111,7 @@ Neste tópico, aprenderá a trabalhar com versões de aplicação do Gestor de C
 
 8.  Escolha **OK** para fechar a caixa de diálogo especificação da relação de **supersedência.**  
 
-9. Escolha **OK** para fechar a caixa de diálogo<Nome de *\> Aplicação* **Properties.**  
+9. Escolha **OK** para fechar a caixa de **diálogo** *<\> Nome* Properties.  
 
 ### <a name="to-display-applications-that-supersede-the-current-application"></a>Para apresentar as aplicações que substituem a aplicação atual  
 
@@ -119,8 +119,8 @@ Neste tópico, aprenderá a trabalhar com versões de aplicação do Gestor de C
 
 2.  No espaço de trabalho da Biblioteca de **Software,** expandir a Gestão de **Aplicações,** escolher **Aplicações**e, em seguida, escolher a aplicação que deseja.  
 
-3.  No separador **Casa,** no grupo **Propriedades,** escolha **Propriedades** para abrir a caixa de diálogo<Nome *\> * de Aplicação **Propriedades.**  
+3.  No separador **Casa,** no grupo **Propriedades,** escolha **Propriedades** para abrir a caixa de diálogo<Nome * \> * de Aplicação **Propriedades.**  
 
-4.  No separador **Referências** da caixa de **diálogo**<Nome *\> de Aplicação,* escolha **aplicações que sobressaem esta aplicação** da lista de abandono do **tipo Relacionamento.**  
+4.  No separador **Referências** da caixa de **diálogo**<Nome * \> de Aplicação,* escolha **aplicações que sobressaem esta aplicação** da lista de abandono do **tipo Relacionamento.**  
 
-5.  Reveja a lista de aplicações que substituia a aplicação selecionada e, em seguida, escolha **OK** para fechar a caixa de diálogo *<Nome Properties.\> * **Properties**  
+5.  Reveja a lista de aplicações que substituia a aplicação selecionada e, em seguida, escolha **OK** para fechar a caixa de diálogo *<Nome \> * Properties. **Properties**  

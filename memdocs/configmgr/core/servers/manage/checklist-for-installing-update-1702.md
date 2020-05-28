@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723314"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906455"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Lista de verificação para instalar a atualização 1702 para O Gestor de Configuração
 
@@ -27,7 +27,7 @@ Quando utilizar o atual ramo do Gestor de Configuração, pode instalar a atuali
 > [!TIP]
 > A versão 1702 também está disponível como [meio de base](updates.md#bkmk_Baselines) que pode usar para instalar o primeiro site de uma nova hierarquia.
 
-Para obter a atualização para a versão 1702, deve utilizar uma função do sistema de site de pontode ligação de serviço no site de alto nível da sua hierarquia. Isto pode estar em modo online ou offline. Depois de a sua hierarquia descarregar o pacote de atualização da Microsoft, pode encontrá-lo na consola sob a visão geral da **Administração &gt; &gt; Cloud Services &gt; Updates and Servicing**.
+Para obter a atualização para a versão 1702, deve utilizar uma função do sistema de site de pontode ligação de serviço no site de alto nível da sua hierarquia. Isto pode estar em modo online ou offline. Depois de a sua hierarquia descarregar o pacote de atualização da Microsoft, pode encontrá-lo na consola sob a visão geral da **Administração &gt; Cloud Services &gt; &gt; Updates and Servicing**.
 
 -   Quando a atualização estiver listada como **disponível,** a atualização está pronta para ser instalada. Antes de instalar a versão 1702, reveja as seguintes informações sobre a instalação da [atualização 1702](#about-installing-update-1702) e a lista de [verificação](#checklist) para configurações a fazer antes de iniciar a atualização.
 
@@ -35,7 +35,7 @@ Para obter a atualização para a versão 1702, deve utilizar uma função do si
 
     -   Se o dmpdownloader.log indicar que o processo de descarregamento está a dormir e à espera de um intervalo antes de verificar as atualizações, pode reiniciar o serviço **SMS_Executive** no servidor do site para reiniciar o download dos ficheiros de redistribuição da atualização.
 
-    -   Outro problema comum de descarregamento ocorre `silverlight.dlservice.microsoft.com` `download.microsoft.com`quando as definições do servidor proxy impedem os downloads de e .
+    -   Outro problema comum de descarregamento ocorre quando as definições do servidor proxy impedem os downloads de `silverlight.dlservice.microsoft.com` e `download.microsoft.com` .
 
 Para mais informações sobre a instalação de atualizações, consulte [as atualizações e a manutenção da consola](updates.md#bkmk_inconsole).
 
@@ -89,7 +89,7 @@ Para obter mais informações, veja [Pré-requisitos de site e sistema de sites]
 
 **Reveja a versão do Kit de Avaliação e Implementação do Windows (ADK) para o Windows 10** O Windows 10 ADK deve ser a versão 1607 ou mais tarde. Se tiver de atualizar o ADK, faça-o antes de iniciar a atualização do 'Gestor de Configuração'. Isto garante que as imagens de boot padrão são automaticamente atualizadas para a versão mais recente do Windows PE. (As imagens de arranque personalizadas devem ser atualizadas manualmente.)
 
-Se atualizar o site antes de atualizar o ADK, consulte o [Blog Configuration Manager e o Windows ADK para windows 10, versão 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) para um script que pode ser usado para regenerar as imagens de boot.
+Se atualizar o site antes de atualizar o ADK, consulte o [Blog Configuration Manager e o Windows ADK para windows 10, versão 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) para um script que pode ser usado para regenerar as imagens de boot.
 
 **Analise o estado do site e da hierarquia e certifique-se de que não existem problemas por resolver:** antes de atualizar um site, resolva todos os problemas operacionais do servidor do site, do servidor da base de dados do site e das funções do sistema de sites que se encontrem instaladas em computadores remotos. Uma atualização de site pode falhar devido a problemas operacionais existentes.
 
@@ -99,7 +99,7 @@ Para mais informações, consulte [Os alertas de utilização e o sistema de est
 Certifique-se de que a replicação de ficheiros e bases de dados entre os sites está operacional e atual. Atrasos ou atrasos em qualquer um dos dois podem impedir uma atualização suave e bem sucedida.
 Para a replicação de base de dados, pode utilizar o Analisador de Ligações de Replicação para ajudar a resolver problemas antes de iniciar a atualização.
 
-Para mais informações, consulte o [Analisador](monitor-replication.md#BKMK_RLA) de Link de Replicação no tópico de [replicação](monitor-replication.md) da base de dados Monitor.
+Para mais informações, consulte o Analisador de Link de [Replicação](monitor-replication.md#BKMK_RLA)no tópico de replicação da base de   dados [Monitor.](monitor-replication.md)  
 
 **Instale todas as atualizações críticas aplicáveis para sistemas operativos em computadores que acolhem o site, o servidor** de base de dados do site e as funções do sistema de site remoto: Antes de instalar uma atualização para O Gestor de Configuração, instale quaisquer atualizações críticas para cada sistema de site aplicável. Se uma atualização que instalar necessitar de um reinício, reinicie os computadores aplicáveis antes de iniciar a atualização.
 
@@ -184,7 +184,7 @@ Para mais informações, consulte [Atualizações para Gestor de Configuração]
 
 ## <a name="post-update-checklist"></a>Lista de verificação de atualizações postais
 Reveja as seguintes ações a tomar após a instalação da atualização estar concluída.
-1. Certifique-se de que a replicação local-a-local está ativa. Na consola, veja a Hierarquia do**Site** **de Monitorização** > e a**Replicação** da Base de Dados de **Monitorização** > para obter indicações de problemas ou confirmação de que as ligações de replicação estão ativas.
+1. Certifique-se de que a replicação local-a-local está ativa. Na consola, veja a Hierarquia do Site **de Monitorização**e a Replicação da Base de Dados de  >  **Site Hierarchy** **Monitorização**  >  **Database Replication** para obter indicações de problemas ou confirmação de que as ligações de replicação estão ativas.
 2. Certifique-se de que cada função do servidor do site e do sistema do site foi atualizada para a versão 1702. Na consola, pode adicionar a **versão** de coluna opcional ao ecrã de alguns nós, incluindo **Sites** e **Pontos de Distribuição**.
 
    Quando necessário, uma função do sistema do site reinstala-se automaticamente para atualizar para a nova versão. Considere reiniciar sistemas de sites remotos que não atualização com sucesso.

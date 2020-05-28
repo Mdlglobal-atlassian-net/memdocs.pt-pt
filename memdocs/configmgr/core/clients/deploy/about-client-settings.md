@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771359"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877512"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Sobre as definições do cliente no Gestor de Configuração
 
@@ -206,7 +206,7 @@ Para obter mais informações sobre as seguintes três definições, consulte as
 > [!Important]  
 > A experiência de utilizador silverlight do catálogo de aplicações não é suportada a partir da versão atual do ramo 1806. A partir da versão 1906, os clientes atualizados utilizam automaticamente o ponto de gestão para implementações de aplicações disponíveis pelo utilizador. Também não pode instalar novas funções de catálogo de aplicações. O suporte termina para as funções de catálogo de aplicações com a versão 1910.  
 >
-> Para obter mais informações, veja os artigos seguintes:
+> Para obter mais informações, veja os seguintes artigos:
 >
 > - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Funcionalidades removidas e preteridas](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -218,7 +218,7 @@ O Gestor de Configuração utiliza esta definição para ligar os utilizadores a
 > [!Important]  
 > A experiência de utilizador silverlight do catálogo de aplicações não é suportada a partir da versão atual do ramo 1806. A partir da versão 1906, os clientes atualizados utilizam automaticamente o ponto de gestão para implementações de aplicações disponíveis pelo utilizador. Também não pode instalar novas funções de catálogo de aplicações. O suporte termina para as funções de catálogo de aplicações com a versão 1910.  
 >
-> Para obter mais informações, veja os artigos seguintes:
+> Para obter mais informações, veja os seguintes artigos:
 >
 > - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Funcionalidades removidas e preteridas](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -325,9 +325,9 @@ Se os clientes devem instalar as atualizações de software necessárias no praz
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Período de graça para execução após prazo de implantação (horas)
 
-Se pretender dar mais tempo aos utilizadores para instalarem as implementações de aplicações ou atualizações de software necessárias para além do prazo, detete te desem a opção para **Sim**. Este período de carência é para um computador desligado por um longo período de tempo, e o utilizador precisa de instalar muitas implementações de aplicações ou atualizações. Por exemplo, esta definição é útil se um utilizador regressar de férias, e tem de esperar muito tempo enquanto o cliente instala implementações de aplicações em atraso.
+Se pretender dar mais tempo aos utilizadores para instalarem as implementações de aplicações ou atualizações de software necessárias para além do prazo, detetete um valor para esta opção. Este período de carência é para um computador desligado por um longo período de tempo, e o utilizador precisa de instalar muitas implementações de aplicações ou atualizações. Por exemplo, esta definição é útil se um utilizador regressar de férias, e tem de esperar muito tempo enquanto o cliente instala implementações de aplicações em atraso.
 
-Detete um período de graça de 1 a 120 horas. Utilize esta definição juntamente com a propriedade de implantação **Atrasar a execução desta implementação de acordo com as preferências do utilizador**. Para mais informações, consulte [aplicações de implementação](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Detete um período de carência de 0 a 120 horas. Utilize esta definição juntamente com a propriedade de implantação **Atrasar a execução desta implementação de acordo com as preferências do utilizador**. Para mais informações, consulte [aplicações de implementação](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Reiniciar computador
@@ -363,7 +363,7 @@ Utiliza grupos de limites do Gestor de Configuração para definir e regular a d
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Utilize grupos de limites do Gestor de Configuração para id do Grupo de Otimização de Entrega
 
-Escolha **Sim** para aplicar o identificador de grupo de limites como o identificador de grupo de otimização de entrega no cliente. Quando o cliente comunica com o serviço de nuvem de otimização de entrega, utiliza este identificador para localizar os pares com o conteúdo pretendido.
+Escolha **Sim** para aplicar o identificador de grupo de limites como o identificador de grupo de otimização de entrega no cliente. Quando o cliente comunica com o serviço de nuvem de otimização de entrega, utiliza este identificador para localizar os pares com o conteúdo pretendido. Ativar esta definição também define o modo de transferência de Otimização de Entrega para a opção Group (2) em clientes direcionados.
 
 > [!Note]
 > A Microsoft recomenda permitir que o cliente configure esta definição através da política local e não da política de grupo. Isto permite que o identificador de grupo de limites seja definido como o identificador do grupo de otimização de entrega no cliente. Para mais informações, consulte [Otimização de Entrega](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Escolha uma das seguintes opções para esta definição:
 
     - Implementações necessárias (quando for atingido o prazo de instalação)  
 
-    > [!IMPORTANT]  
-    > O cliente permite sempre instalações de software do Software Center, independentemente das definições de ligação à Internet medidos.  
-
     Se o cliente atingir o limite de transferência de dados para a ligação à Internet medido, o cliente já não tenta comunicar com os sites do Gestor de Configuração.  
 
 - **Bloco**: O cliente do Gestor de Configuração não tenta comunicar com sites do Gestor de Configuração quando está numa ligação de internet medido. Esta é a opção predefinida.  
 
+> [!IMPORTANT]  
+> O cliente permite sempre instalações de software do Software Center, independentemente das definições de ligação à Internet medidos. Se o utilizador solicitar uma instalação de software enquanto o dispositivo estiver numa rede de medidor, o Software Center honra a intenção do utilizador.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Gestão de energia  
@@ -558,7 +557,7 @@ Em seguida, configure as seguintes definições adicionais conforme necessário:
 
 
 
-## <a name="remote-tools"></a>Ferramentas remotas  
+## <a name="remote-tools"></a>Remote tools (Ferramentas remotas)  
 
 ### <a name="enable-remote-control-on-clients-and-firewall-exception-profiles"></a>Ativar o Controlo Remoto nos clientes e perfis de exceção firewall
 
@@ -777,9 +776,9 @@ Se pretender especificar os tipos de ficheiros para o inventário, selecione Tip
 
 - Selecione **Novo** para adicionar um novo tipo de ficheiro ao inventário. Em seguida, especifique as seguintes informações na caixa de diálogo **Inventariada File Properties:**  
 
-    - **Nome**: Forneça um nome para o ficheiro que pretende inventariar. Utilize um wildcard`*`asterisco para representar qualquer série de`?`texto, e um ponto de interrogação ( ) para representar qualquer personagem único. Por exemplo, se pretender inventariar todos os ficheiros com `*.doc`a extensão .doc, especifique o nome do ficheiro .  
+    - **Nome**: Forneça um nome para o ficheiro que pretende inventariar. Utilize um wildcard asterisco para `*` representar qualquer série de texto, e um ponto de interrogação ( ) para representar qualquer `?` personagem único. Por exemplo, se pretender inventariar todos os ficheiros com a extensão .doc, especifique o nome do ficheiro `*.doc` .  
 
-    - **Localização**: Selecione **set** para abrir a caixa de diálogo **Path Properties.** Configure o inventário de software para pesquisar todos os discos rígidos do `C:\Folder`cliente para o ficheiro especificado, `%windir%`procure um caminho especificado (por exemplo, ) ou procure uma variável especificada (por exemplo, ). Também pode pesquisar todas as subpastas sob o caminho especificado.  
+    - **Localização**: Selecione **set** para abrir a caixa de diálogo **Path Properties.** Configure o inventário de software para pesquisar todos os discos rígidos do cliente para o ficheiro especificado, procure um caminho especificado (por exemplo, `C:\Folder` ) ou procure uma variável especificada (por exemplo, `%windir%` ). Também pode pesquisar todas as subpastas sob o caminho especificado.  
 
     - **Excluir ficheiros encriptados e comprimidos**: Quando escolher esta opção, quaisquer ficheiros comprimidos ou encriptados não são inventariados.  
 
@@ -798,9 +797,9 @@ Se pretender recolher ficheiros de computadores clientes, selecione **'Ficheiros
 
 - Na caixa de diálogo **Propriedades do Ficheiro Recolhido** , forneça as seguintes informações:  
 
-    - **Nome**: Forneça um nome para o ficheiro que pretende recolher. Utilize um wildcard`*`asterisco para representar qualquer série de`?`texto, e um ponto de interrogação ( ) para representar qualquer personagem único.  
+    - **Nome**: Forneça um nome para o ficheiro que pretende recolher. Utilize um wildcard asterisco para `*` representar qualquer série de texto, e um ponto de interrogação ( ) para representar qualquer `?` personagem único.  
 
-    - **Localização**: Selecione **set** para abrir a caixa de diálogo **Path Properties.** Configure o inventário de software para pesquisar todos os discos rígidos do cliente para `C:\Folder`o ficheiro que pretende recolher, `%windir%`pesquisar um caminho especificado (por exemplo, ou procurar uma variável especificada (por exemplo, ). Também pode pesquisar todas as subpastas sob o caminho especificado.  
+    - **Localização**: Selecione **set** para abrir a caixa de diálogo **Path Properties.** Configure o inventário de software para pesquisar todos os discos rígidos do cliente para o ficheiro que pretende recolher, pesquisar um caminho especificado (por exemplo, `C:\Folder` ou procurar uma variável especificada (por exemplo, `%windir%` ). Também pode pesquisar todas as subpastas sob o caminho especificado.  
 
     - **Excluir ficheiros encriptados e comprimidos**: Quando escolher esta opção, não são recolhidos ficheiros comprimidos ou encriptados.  
 
@@ -942,11 +941,11 @@ Esta definição de cliente fornece as seguintes opções:
 
 - **Normal**: O Windows Setup utiliza mais recursos do sistema e atualizações mais rapidamente. Utiliza mais tempo de processador, pelo que o tempo total de instalação é mais curto, mas a paragem do utilizador é mais longa.  
 
-    - Configura o ficheiro configuraçãoconfig.ini no `/Priority Normal` dispositivo com a opção de [linha de comando de configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Configura o ficheiro configuraçãoconfig.ini no dispositivo com a opção de `/Priority Normal` [linha de comando de configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Baixo**: Pode continuar a trabalhar no dispositivo enquanto descarrega e atualiza em segundo plano. O tempo total de instalação é mais longo, mas a paragem do utilizador é mais curta. Pode ser necessário aumentar o tempo de execução máxima da atualização para evitar uma pausa na utilização desta opção.  
 
-    - Remove a `/Priority` opção de [linha de comando de configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) a partir do ficheiro configuração config.ini.
+    - Remove a opção de `/Priority` [linha de comando de configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) a partir do ficheiro configuração config.ini.
 
 
 ### <a name="enable-third-party-software-updates"></a>Ativar atualizações de software de terceiros

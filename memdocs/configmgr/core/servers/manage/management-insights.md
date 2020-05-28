@@ -2,7 +2,7 @@
 title: Informações de gestão
 titleSuffix: Configuration Manager
 description: Conheça a funcionalidade de insights de gestão disponível na consola Do Gestor de Configuração.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713738"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268968"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Insights de gestão em Gestor de Configuração
 
@@ -80,7 +80,7 @@ Utilize os seguintes filtros na parte superior do painel de instrumentos para ap
 - Show Concluído
 - Opcional
 - Recomendado
-- Crítica
+- Crítico
 
 O painel inclui os seguintes azulejos:  
 
@@ -146,13 +146,13 @@ A partir da versão de 1902, existem novas regras com recomendações sobre gest
 
 - **Coleções com o mesmo horário de reavaliação**: Estas coleções têm o mesmo tempo de reavaliação que outras coleções. Modifique o tempo de reavaliação para que não entrem em conflito.  
 
-- **Coleções com tempo de consulta ao longo**de dois segundos : Reveja as regras de consulta para esta coleção. Considere modificar ou apagar a coleção.
+- **Coleções com tempo de consulta ao longo**de 5 minutos : Reveja as regras de consulta para esta coleção. Considere modificar ou apagar a coleção.
 
 - As seguintes regras incluem configurações que potencialmente causam carga desnecessária no site. Reveja estas coleções, e depois elimine-as ou desative a avaliação das regras:  
 
   - **Coleções sem regras de consulta e atualizações incrementais ativadas**  
 
-  - **Coleções sem regras de consulta e habilitadas para avaliação programada ou incremental**  
+  - **Coleções sem regras de consulta e habilitadas para qualquer horário**  
 
   - **Coleções sem regras de consulta e agendar avaliação completa selecionada**  
 

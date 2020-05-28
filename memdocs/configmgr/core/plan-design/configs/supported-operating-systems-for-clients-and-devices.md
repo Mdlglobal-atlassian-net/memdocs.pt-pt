@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078690"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904539"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versões de SO suportadas para clientes e dispositivos para Gestor de Configuração
 
@@ -54,7 +54,7 @@ Se necessitar da política do utilizador neste cenário e aceitar qualquer impac
 
 - Na versão 1910 e mais tarde, utilize [as definições do cliente.](../../clients/deploy/configure-client-settings.md) No grupo **Política do Cliente,** configure a seguinte definição: **Ative a política do utilizador para várias sessões de utilizador**.<!-- 4737447 -->
 
-- Na versão 1906, utilize o Gestor de Configuração SDK com a [classe WMI](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md)do servidor SMS_PolicyAgentConfig . Desloque a nova `PolicyEnableUserPolicyOnTS` propriedade para `true`.
+- Na versão 1906, utilize o Gestor de Configuração SDK com a [classe WMI](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md)do servidor SMS_PolicyAgentConfig . Desloque a nova `PolicyEnableUserPolicyOnTS` propriedade para `true` .
 
 > [!Note]  
 > Não pode usar a cogestão com um cliente que executa a multi-sessão do Windows 10 Enterprise. <!-- SCCMDocs-pr#3950 -->
@@ -209,7 +209,7 @@ Para mais informações, consulte [como implementar clientes para Macs](../../cl
 > [!Important]  
 > A versão 1902 do Gestor de Configuração deixa cair o suporte para linux e UNIX como cliente. A deprecation foi anunciada com a [versão 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Considere a Microsoft Azure Management para gerir servidores Linux. As soluções Azure têm um suporte linux extensivo que na maioria dos casos excede a funcionalidade do Gestor de Configuração, incluindo a gestão de patch sem fim para o Linux.
 
-Os pacotes de instalação de clientes Linux e UNIX não são fornecidos com os meios de configuração do Gestor de Configuração. Baixe os **Clientes para sistemas operativos adicionais** a partir do [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). Além dos pacotes de instalação do cliente, o download do cliente inclui o script que gere a instalação do cliente em cada computador.  
+Os pacotes de instalação de clientes Linux e UNIX não são fornecidos com os meios de configuração do Gestor de Configuração. Baixe os **Clientes para sistemas operativos adicionais** a partir do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). Além dos pacotes de instalação do cliente, o download do cliente inclui o script que gere a instalação do cliente em cada computador.  
 
 ### <a name="requirements-and-limitations"></a>Requisitos e limitações
 
@@ -229,89 +229,89 @@ As seguintes versões são suportadas utilizando o ficheiro .tar indicado.
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 6.1 (Potência)|ccm-Aix61ppc. &lt;construir\>.alcatrão|  
-|Versão 7.1 (Potência)|ccm-Aix71ppc. &lt;construir\>.alcatrão|  
+|Versão 6.1 (Potência)|ccm-Aix61ppc. &lt; construir \> .alcatrão|  
+|Versão 7.1 (Potência)|ccm-Aix71ppc. &lt; construir \> .alcatrão|  
 
 #### <a name="centos"></a>CentOS  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 #### <a name="debian"></a>Debian  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 8 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 8 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 8 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 8 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 #### <a name="hp-ux"></a>HP-UX  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 11iv3 IA64|ccm-HpuxB.11.31i64. &lt;construir\>.alcatrão|  
+|Versão 11iv3 IA64|ccm-HpuxB.11.31i64. &lt; construir \> .alcatrão|  
 
 #### <a name="oracle-linux"></a>Oracle Linux  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 #### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 #### <a name="solaris"></a>Solaris  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 10 x86|ccm-Sol10x86. &lt;construir\>.alcatrão|  
-|Versão 10 SPARC|ccm-Sol10sparc. &lt;construir\>.alcatrão|  
-|Versão 11 x86|ccm-Sol11x86. &lt;construir\>.alcatrão|  
-|Versão 11 SPARC|ccm-Sol11sparc. &lt;construir\>.alcatrão|  
+|Versão 10 x86|ccm-Sol10x86. &lt; construir \> .alcatrão|  
+|Versão 10 SPARC|ccm-Sol10sparc. &lt; construir \> .alcatrão|  
+|Versão 11 x86|ccm-Sol11x86. &lt; construir \> .alcatrão|  
+|Versão 11 SPARC|ccm-Sol11sparc. &lt; construir \> .alcatrão|  
 
 #### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 10 SP1 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 10 SP1 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 11 SP1 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 11 SP1 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 12 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 10 SP1 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 10 SP1 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 11 SP1 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 11 SP1 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 12 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 #### <a name="ubuntu"></a>Ubuntu  
 
 |Versão|Arquivo TAR|  
 |-|-|  
-|Versão 10.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 10.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 12.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 12.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 14.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 14.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 16.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 16.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 10.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 10.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 12.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 12.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 14.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 14.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 16.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 16.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 
 ## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>NO LOCAL MDM

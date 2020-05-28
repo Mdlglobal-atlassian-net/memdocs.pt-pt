@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0e939b51c464215ac1d4feea539ceb5677a01a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723685"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824023"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Como se desdobrar para piloto com Desktop Analytics
 
@@ -100,7 +101,12 @@ Antes de poder implementar o Windows, crie primeiro os objetos de software no 'G
 
 ## <a name="deploy-to-pilot-devices"></a>Implantação para dispositivos piloto
 
-O Gestor de Configuração utiliza os dados do Desktop Analytics para criar coleções para as implementações piloto e de produção. Para garantir que os dispositivos estão saudáveis após cada fase de implementação, utilize o seguinte procedimento para criar uma implementação faseada integrada no Desktop Analytics:
+O Gestor de Configuração utiliza os dados do Desktop Analytics para criar coleções para as implementações piloto e de produção. Estas coleções estão no espaço de trabalho **de Ativos e Compliance,** nó de **Recolha de Dispositivos,** pasta **de Planos de Implementação.**
+
+> [!IMPORTANT]
+> Estas coleções são geridas pelo Gestor de Configuração para os planos de implementação do Desktop Analytics. Alterações manuais não são suportadas.
+
+Para garantir que os dispositivos estão saudáveis após cada fase de implementação, utilize o seguinte procedimento para criar uma implementação faseada integrada no Desktop Analytics:
 
 1. Na consola do Gestor de Configuração, vá à Biblioteca de **Software,** expanda a manutenção do **Desktop Analytics**e selecione o nó de Planos de **Implementação.**  
 
@@ -113,9 +119,9 @@ O Gestor de Configuração utiliza os dados do Desktop Analytics para criar cole
 
 4. Introduza um nome para a implementação e selecione a sequência de tarefas a utilizar. Utilize a opção de criar automaticamente uma implementação de **duas fases por defeito**e, em seguida, configurar as seguintes coleções:  
 
-    - **Primeira Recolha**: Encontre e selecione a coleção **Pilot** para este plano de implantação. A convenção padrão de `<deployment plan name> (Pilot)`nomeação para esta coleção é.
+    - **Primeira Recolha**: Encontre e selecione a coleção **Pilot** para este plano de implantação. A convenção padrão de nomeação para esta coleção `<deployment plan name> (Pilot)` é.
 
-    - **Segunda Coleção**: Encontre e selecione a coleção **de produção** para este plano de implantação. A convenção padrão de `<deployment plan name> (Production)`nomeação para esta coleção é.
+    - **Segunda Coleção**: Encontre e selecione a coleção **de produção** para este plano de implantação. A convenção padrão de nomeação para esta coleção `<deployment plan name> (Production)` é.
 
     > [!Note]  
     > Com a integração do Desktop Analytics, o Gestor de Configuração cria automaticamente coleções piloto e de produção para o plano de implementação. Antes de as poder utilizar, pode levar algum tempo para estas coleções sincronizarem. Para mais informações, consulte [Troubleshoot - Latência](troubleshooting.md#data-latency)de dados .<!-- 4984639 -->
@@ -182,7 +188,7 @@ Selecione uma listagem específica em qualquer das vistas para obter mais detalh
 
 À medida que aborda estes problemas de implementação, o painel de instrumentos continua a mostrar o progresso dos dispositivos. Atualiza à medida que os dispositivos passam de **Necessidades atenção** para **Concluído**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Deixe o piloto correr durante algum tempo para recolher dados operacionais. Encoraje os utilizadores de dispositivos-piloto a testar aplicações.
 

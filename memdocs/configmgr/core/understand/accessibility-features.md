@@ -1,8 +1,8 @@
 ---
-title: Acessibilidade
+title: Accessibility (Acessibilidade)
 titleSuffix: Configuration Manager
 description: Conheça as funcionalidades que tornam o Gestor de Configuração acessível a todos.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718561"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556035"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Funcionalidades de acessibilidade no Gestor de Configuração
 
@@ -45,7 +46,7 @@ Para aceder a um espaço de trabalho, utilize os seguintes atalhos de teclado:
 |Ctrl + 4|  Administração|
 
 
-### <a name="other-keyboard-shortcuts"></a>Outros atalhos de teclado
+### <a name="other-console-shortcuts"></a>Outros atalhos de consola
 
 |Atalho de teclado|  Objetivo|
 |--------|--------|  
@@ -56,6 +57,14 @@ Para aceder a um espaço de trabalho, utilize os seguintes atalhos de teclado:
 |Ctrl + D|Dete tede o foco para o painel de detalhes, quando disponível.|
 |Alt     |Mude o foco dentro e fora da fita.|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>Atalhos CMPivot
+
+A maioria dos [atalhos](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) de teclado do navegador da Web funcionarão na CMPivot.
+
+|Atalho de teclado|Objetivo|
+|--------|--------|  
+|Ctrl + 1|Concentre-se no primeiro separador.|
+|Alt +&lt;|Para voltar ao endereço|
 
 
 ## <a name="other-accessibility-features"></a>Outras funcionalidades de acessibilidade
@@ -85,9 +94,9 @@ Para aceder a um espaço de trabalho, utilize os seguintes atalhos de teclado:
 ## <a name="see-also"></a>Consulte também
 
 Para obter mais informações sobre os fundamentos da navegação nas interfaces de utilizador do Gestor de Configuração, consulte os seguintes artigos:
-- [Usando a consola De Configuração Manager](../servers/manage/admin-console.md)  
-- [Manual do utilizador do Software Center](software-center.md)
+- [Usando a consola De Configuração Manager](../servers/manage/admin-console.md)
+- [Manual do utilizador do Centro de Software](software-center.md)
 
 > [!NOTE]  
-> As informações deste artigo podem aplicar-se apenas aos utilizadores que licenciam produtos da Microsoft nos Estados Unidos. Se obteve este produto fora dos Estados Unidos, pode utilizar o cartão de informação subsidiário que veio com o seu pacote de software ou visitar o [website da Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkId=8431) para obter informações de contacto para serviços de suporte da Microsoft. Pode contactar a sua subsidiária para saber se o tipo de produtos e serviços descritos nesta secção estão disponíveis na sua área. Encontram-se disponíveis informações sobre acessibilidade noutros idiomas, incluindo japonês e francês.  
+> As informações deste artigo podem aplicar-se apenas aos utilizadores que licenciam produtos da Microsoft nos Estados Unidos. Se obteve este produto fora dos Estados Unidos, pode utilizar o cartão de informação subsidiário que veio com o seu pacote de software ou visitar o [website da Microsoft Accessibility](https://www.microsoft.com/accessibility/) para obter informações de contacto para serviços de suporte da Microsoft. Pode contactar a sua subsidiária para saber se o tipo de produtos e serviços descritos nesta secção estão disponíveis na sua área. Encontram-se disponíveis informações sobre acessibilidade noutros idiomas, incluindo japonês e francês.  
 

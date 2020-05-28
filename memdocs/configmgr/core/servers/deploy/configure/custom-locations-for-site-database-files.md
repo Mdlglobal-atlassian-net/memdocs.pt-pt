@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721011"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906179"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Localizações personalizadas para ficheiros de base de dados do site do Gestor de Configuração
 
@@ -36,6 +36,6 @@ Após a **configuração,** pode alterar a localização dos ficheiros da base d
 
 -   No servidor do site do Gestor de Configuração, pare o serviço **SMS_Executive.**  
 
--   Utilize a documentação para a sua versão do SQL Server para guiá-lo sobre como mover uma base de dados de utilizador. Por exemplo, se utilizar o SQL Server 2014, consulte as bases de dados dos [utilizadores em](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) Tecnologia.  
+-   Para mais informações sobre como mover uma base de dados de utilizadores, consulte mover bases [de dados](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014)de utilizadores .  
 
 -   Depois de concluir o movimento de ficheiros da base de dados, reinicie o serviço **SMS_Executive** no servidor do site do Gestor de Configuração.  

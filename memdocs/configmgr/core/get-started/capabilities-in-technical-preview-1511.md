@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076344"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905838"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1511 para Gestor de Configuração
 
@@ -34,7 +34,7 @@ Para computadores ligados via WUfB, o Gestor de Configuração não poderá repo
 
 -   Windows 10 Desktop Pro ou Windows 10 Enterprise Edition versão 1511 ou posterior  
 
--   Computadores a serem geridos através [do Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx).  
+-   Computadores a serem geridos através [do Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### <a name="try-it-out"></a>Experimente!  
  Tente completar a seguinte tarefa e, em seguida, use as informações de feedback perto do topo deste tópico para nos informar como funcionou:  
@@ -67,7 +67,7 @@ Quando a Microsoft publicar uma nova atualização do cliente do Office 365 para
 
 4. Pode verificar a conformidade com as atualizações do Office 365 utilizando monitorização ou relatórios na consola.  
 
-   Para obter passos detalhados, consulte [a Manage Office 365 atualizações de clientes com pré-visualização técnica do Gestor](https://technet.microsoft.com/library/mt628083.aspx)de Configuração .  
+   Para obter passos detalhados, consulte [a Manage Office 365 atualizações de clientes com pré-visualização técnica do Gestor](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)de Configuração .  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Suporte para SQL Server AlwaysOn para bases de dados altamente disponíveis  
  O Gestor de Configuração agora suporta a utilização de um sQL Server AlwaysOn grupos de disponibilidade para hospedar a base de dados do site.  Ao instalar um novo site, pode dirigir a configuração para utilizar o grupo de disponibilidade em vez de uma instância normal do SQL Server.  
@@ -110,7 +110,7 @@ Tente completar as seguintes tarefas e, em seguida, use as informações de feed
  Utilize os seguintes procedimentos para criar e configurar primeiro o grupo de disponibilidade e, em seguida, instalar um novo site do Gestor de Configuração que utiliza o grupo de disponibilidade.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Para criar um grupo de disponibilidade sQL Server AlwaysOn  
-O processo para criar um grupo de disponibilidade do [Servidor SQL](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) está documentado na biblioteca de documentação do Servidor SQL.  Ao criar o grupo de disponibilidade, certifique-se de que os seguintes requisitos de utilização com o Gestor de Configuração são cumpridos:  
+O processo para criar um grupo de disponibilidade do [Servidor SQL](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) está documentado na biblioteca de documentação do Servidor SQL.  Ao criar o grupo de disponibilidade, certifique-se de que os seguintes requisitos de utilização com o Gestor de Configuração são cumpridos:  
 
 -   Um máximo de três membros:  
 
@@ -131,7 +131,7 @@ Para instalar um site que utiliza um grupo de disponibilidade do Servidor SQL:
 
 1.  Substitua o seguinte quando solicitado pela Configuração do Gestor de Configuração:  
 
-    -   **Nome do Servidor SQL**: Introduza o nome virtual para o Ponto Final que configurado ao criar o grupo de disponibilidade. O nome virtual deve ser um nome DNS completo, como ** &lt;\>endpointServer .fabrikam.com**.  
+    -   **Nome do Servidor SQL**: Introduza o nome virtual para o Ponto Final que configurado ao criar o grupo de disponibilidade. O nome virtual deve ser um nome DNS completo, como ** &lt; endpointServer \> .fabrikam.com**.  
 
     -   **Caso**: Este valor deve permanecer em branco. Não há nenhum caso nesta configuração.  
 
@@ -165,7 +165,7 @@ Tente completar a seguinte tarefa e, em seguida, use as informações de feedbac
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Para criar uma coleção para um cluster de servidores  
 
-1.  [Crie uma coleção](https://technet.microsoft.com/library/gg712295.aspx) de dispositivos que contenha os servidores do cluster.  
+1.  [Crie uma coleção](../clients/manage/collections/create-collections.md) de dispositivos que contenha os servidores do cluster.  
 
 2.  No espaço de trabalho **de Ativos e Compliance,** clique em Coleções de **Dispositivos,** clique à direita na recolha que contém os servidores no cluster e, em seguida, clique em **Propriedades**.  
 
@@ -200,6 +200,6 @@ Tente completar a seguinte tarefa e, em seguida, use as informações de feedbac
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>Para implementar atualizações de software para o cluster do servidor  
 
-1.  [Implemente atualizações](https://technet.microsoft.com/library/gg712304.aspx) de software para a coleção de clusters do servidor.  
+1.  [Implemente atualizações](../../sum/deploy-use/deploy-software-updates.md) de software para a coleção de clusters do servidor.  
 
-2.  [Monitorize a implementação da atualização do software](https://technet.microsoft.com/library/gg712304.aspx).  
+2.  [Monitorize a implementação da atualização do software](../../sum/deploy-use/monitor-software-updates.md).  

@@ -2,7 +2,7 @@
 title: Réplicas de bases de dados de pontos de gestão
 titleSuffix: Configuration Manager
 description: Utilize uma réplica de base de dados para reduzir a carga do CPU colocada no servidor de base de dados do site por pontos de gestão.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720990"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343121"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Réplicas de base de dados para pontos de gestão para Gestor de Configuração
 
@@ -57,7 +57,7 @@ Os sites primários do Gestor de Configuração podem usar uma réplica de base 
 
     -   A base de dados do site tem de **publicar** a réplica da base de dados e cada servidor de réplica de base de dados remota tem de **subscrever** os dados publicados.  
 
-    -   O SQL Server que aloja a base de dados do site e que aloja uma réplica da base de dados têm de estar configurados para suportar um **Tamanho de Replicação de Texto Máx.** de 2 GB. Para ver um exemplo desta configuração para o SQL Server 2012, veja [Configure the max text repl size Server Configuration Option (Configurar a Opção de Configuração de Servidor max text repl size)](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   O SQL Server que aloja a base de dados do site e que aloja uma réplica da base de dados têm de estar configurados para suportar um **Tamanho de Replicação de Texto Máx.** de 2 GB. Para ver um exemplo desta configuração para o SQL Server 2012, veja [Configure the max text repl size Server Configuration Option (Configurar a Opção de Configuração de Servidor max text repl size)](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Certificado auto-assinado:** Para configurar uma réplica de base de dados, deve criar um certificado auto-assinado no servidor de réplica de base de dados e disponibilizar este certificado a cada ponto de gestão que utilize esse servidor de réplica de base de dados.  
 
@@ -82,6 +82,8 @@ Os sites primários do Gestor de Configuração podem usar uma réplica de base 
 -   **Upgrades para o ramo atual do Gestor**de Configuração : Antes de atualizar um site, seja do System Center 2012 Configuration Manager para o diretor de configuração da secção atual ou de atualizar o atual ramo do Gestor de Configuração para o mais recente lançamento, deve desativar réplicas de base de dados para pontos de gestão.  Após a atualização do site, pode reconfigurar as réplicas de base de dados para pontos de gestão.  
 
 -   **Múltiplas réplicas num único Servidor SQL:**  Se configurar um servidor de réplica de base de dados para alojar várias réplicas de bases de dados para pontos de gestão (cada réplica deve estar numa instância separada) deve utilizar um script de configuração modificado (a partir do passo 4 da secção seguinte) para evitar a sobreposição do certificado auto-assinado em uso por réplicas de bases de dados previamente configuradas nesse servidor.  
+
+- As implementações de utilizadores no Software Center não funcionarão contra um ponto de gestão utilizando uma réplica SQL. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Configurar réplicas de base de dados  
 Para configurar uma réplica de base de dados, são necessários os passos seguintes:  
@@ -172,7 +174,7 @@ Utilize o seguinte procedimento como exemplo de como configurar um servidor de r
         -   Se o SQL Server Agent for executado utilizando outra conta, selecione **Executar sob a seguinte conta do Windows**e configure essa conta. Poderá especificar uma conta do Windows ou uma conta do SQL Server.  
 
         > [!IMPORTANT]  
-        >  Terá de conceder à conta que executa o Agente de Distribuição permissões para o publicador como subscrição de solicitação. Para obter informações sobre a configuração destas permissões, veja [Distribution Agent Security (Segurança do Agente de Distribuição)](https://go.microsoft.com/fwlink/p/?LinkId=238463) na Biblioteca TechNet do SQ Server.  
+        >  Terá de conceder à conta que executa o Agente de Distribuição permissões para o publicador como subscrição de solicitação. Para obter informações sobre a configuração destas permissões, consulte [a Segurança do Agente de Distribuição](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - Em **Ligar ao Distribuidor**, selecione **Representando a conta de processo**.  
 
@@ -421,43 +423,43 @@ Para suportar a notificação de cliente com uma réplica de base de dados para 
 
 ##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>Para configurar o Service Broker para uma réplica de base de dados  
 
-1. Utilize o **Estúdio de Gestão de Servidores SQL** para se ligar à base de dados do servidor de réplicas de base de dados e, em seguida, executar a seguinte consulta para ativar o Corretor de Serviços no servidor de réplica de base de dados: **ALTER DATABASE &lt;Replica Database\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
+1. Utilize o **Estúdio de Gestão de Servidores SQL** para se ligar à base de dados do servidor de réplicas de base de dados e, em seguida, executar a seguinte consulta para ativar o Corretor de Serviços no servidor de réplica de base de dados: **ALTER DATABASE Replica Database SET &lt; \> ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
 
 2. Em seguida, no servidor de réplica de base de dados, configure o Service Broker para notificação de cliente e exporte o certificado do Service Broker. Para isso, execute um procedimento armazenado do SQL Server que configura o Service Broker e exporta o certificado numa única ação. Ao executar o procedimento armazenado, deve especificar o FQDN do servidor de réplica de base de dados, o nome da base de dados de réplicas de bases de dados e uma localização para a exportação do ficheiro de certificado.  
 
-    Executar a seguinte consulta para configurar os detalhes necessários no servidor de réplica de base de dados e para exportar o certificado para o servidor de réplica de base de dados: **EXEC sp_BgbConfigSSBForReplicaDB '&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>', '&lt;Certificate Backup File Path\>'**  
+    Executar a seguinte consulta para configurar os detalhes necessários no servidor de réplica de base de dados e para exportar o certificado para o servidor de réplica de base de dados: **EXEC sp_BgbConfigSSBForReplicaDB ' Replica &lt; SQDN \> ', ' Replica Database Name &lt; \> ', ' Certificate Backup File Path &lt; \> '**  
 
    > [!NOTE]  
-   >  Para este passo, se o servidor de réplica da base de dados não estiver na instância predefinida do SQL Server, é necessário especificar também o nome da instância além do nome da base de dados de réplica. Para tal, ** &lt;\> ** substitua o Nome da Base de Dados de Réplica sintetizada por ** &lt;nome de réplica de nome\\Replica Database Name\>**.  
+   >  Para este passo, se o servidor de réplica da base de dados não estiver na instância predefinida do SQL Server, é necessário especificar também o nome da instância além do nome da base de dados de réplica. Para tal, substitua o ** &lt; Nome \> da Base** de Dados de Réplica sintetizada por nome de réplica de nome Replica Database ** &lt; \\ Name \> **.  
 
     Depois de exportar o certificado do servidor de réplica de base de dados, coloque uma cópia do certificado no servidor de base de dados de sites primários.  
 
 3. Utilize o **SQL Server Management Studio** para ligar à base de dados do site primário. Depois de ligar à base de dados de sites primários, execute uma consulta para importar o certificado e especificar a porta do Service Broker que está a ser utilizada no servidor de réplica de base de dados, o FQDN do servidor de réplica de base de dados e o nome da base de dados de réplicas de bases de dados. Isto configura a base de dados de sites primários que o Service Broker utilizará para comunicar com a base de dados do servidor de réplica de base de dados.  
 
-    Executar a seguinte consulta para importar o certificado do servidor de réplica de base de dados e especificar os detalhes necessários: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker Port\>',&lt;' Certificado Ficheiro ',\>'&lt;Replica SQL Server FQDN\>', '&lt;Replica Database Name\>'**  
+    Executar a seguinte consulta para importar o certificado do servidor de réplica de base de dados e especificar os detalhes necessários: **EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', ' &lt; SQL Service Broker Port \> ', ' Certificado Ficheiro &lt; \> ', ' Replica &lt; SQL Server FQDN \> ', ' Replica Database Name &lt; \> '**  
 
    > [!NOTE]  
-   >  Para este passo, se o servidor de réplica da base de dados não estiver na instância predefinida do SQL Server, é necessário especificar também o nome da instância além do nome da base de dados de réplica. Para tal, substitua ** &lt;\> ** o Nome da Base de Dados de Réplicas por **"Nome\\de Réplica De\>base de dados**de réplicas " Nome base de dados .  
+   >  Para este passo, se o servidor de réplica da base de dados não estiver na instância predefinida do SQL Server, é necessário especificar também o nome da instância além do nome da base de dados de réplica. Para tal, substitua o ** &lt; Nome \> da Base** de Dados de Réplicas por **"Nome de Réplica \\ De \> base de dados**de réplicas " Nome base de dados .  
 
-4. Em seguida, no servidor de base de dados do site, executar o seguinte comando para exportar o certificado para o servidor de base de dados do site: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;Certificado Backup File Path\>' '**  
+4. Em seguida, no servidor de base de dados do site, executar o seguinte comando para exportar o certificado para o servidor de base de dados do site: **EXEC sp_BgbCreateAndBackupSQLCert ' Certificado Backup File Path ' &lt; \> '**  
 
     Depois de exportar o certificado do servidor de base de dados do site, coloque uma cópia do certificado no servidor de réplica de base de dados.  
 
 5. Utilize o **SQL Server Management Studio** para ligar à base de dados do servidor de réplica da base de dados. Depois de ligar à base de dados do servidor de réplica de base de dados, execute uma consulta para importar o certificado e especificar o código do site do site primário e a porta do Service Broker que está a ser utilizada no servidor de base de dados do site. Isto configura o servidor de réplica de base de dados para utilizar o Service Broker para comunicar com a base de dados do site primário.  
 
-    Executar a seguinte consulta para importar o certificado do servidor de base de dados do site: **EXEC sp_BgbConfigSSBForRemoteService '&lt;Código\>de site '' '&lt;SQL Service Broker Port\>', '&lt;Certificado Ficheiro Path\>' '**  
+    Executar a seguinte consulta para importar o certificado do servidor de base de dados do site: EXEC sp_BgbConfigSSBForRemoteService ' Código de ** &lt; site \> '' ' &lt; SQL Service Broker Port \> ', ' Certificado Ficheiro Path &lt; ' \> '**  
 
    Alguns minutos depois de concluir a configuração da base de dados do site e da base de dados de réplica de base de dados, o Notification Manager do site primário configura a conversa do Service Broker para notificação de cliente da base de dados do site primário para a réplica de base de dados.  
 
 ###  <a name="supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a> Script suplementar para réplicas de base de dados adicionais num único SQL Server  
  Quando utilizar o script do passo 4 para configurar um certificado auto-assinado para o servidor de réplica de base de dados num Servidor SQL que já tem uma réplica de base de dados que planeia continuar a utilizar, tem de utilizar uma versão modificada do script original. As seguintes modificações impedem o script de eliminar um certificado existente no servidor e criam certificados subsequentes com nomes amigáveis exclusivos.  Edite o script original da seguinte forma:  
 
--   Comentar (evitar a execução) cada linha entre as entradas do script **# Eliminar cert existente se existir** e # Criar o novo **cert**. Para tal, adicione **#** um como o primeiro personagem de cada linha aplicável.  
+-   Comentar (evitar a execução) cada linha entre as entradas do script **# Eliminar cert existente se existir** e # Criar o novo **cert**. Para tal, adicione um **#** como o primeiro personagem de cada linha aplicável.  
 
 -   Para cada réplica de base de dados subsequente, utilize este script para configurar, atualizar e atribuir um nome amigável ao certificado.  Para isso, edite a linha **$enrollment. CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** e substitua o Certificado de Identificação do **Servidor ConfigMgr SQL** por um novo nome, como O Certificado de Identificação do **Servidor ConfigMgr SQL1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a>Gerir configurações de réplicas de base de dados  
- Quando utilizar uma réplica de base de dados num site, utilize as informações das secções seguintes para complementar o processo de desinstalação de uma réplica de base de dados, o processo de desinstalação de um site que utiliza uma réplica de base de dados ou o processo de transferência da base de dados do site para uma nova instalação do SQL Server. Quando utilizar informações das secções seguintes para eliminar publicações, utilize as orientações para eliminar a replicação transacional para a versão do SQL Server utilizada para a réplica de base de dados. Por exemplo, se utilizar o SQL Server 2008 R2, consulte [Como: Eliminar uma Publicação (Programação Transact-SQL de replicação)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Quando utilizar uma réplica de base de dados num site, utilize as informações das secções seguintes para complementar o processo de desinstalação de uma réplica de base de dados, o processo de desinstalação de um site que utiliza uma réplica de base de dados ou o processo de transferência da base de dados do site para uma nova instalação do SQL Server. Quando utilizar informações das secções seguintes para eliminar publicações, utilize as orientações para eliminar a replicação transacional para a versão do SQL Server utilizada para a réplica de base de dados. Para mais informações, consulte [Eliminar uma Publicação](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  Depois de restaurar uma base de dados do site configurada para réplicas de bases de dados, antes de poder utilizar as réplicas de bases de dados, tem de reconfigurar cada réplica de base de dados, recriando as publicações e as subscrições.  

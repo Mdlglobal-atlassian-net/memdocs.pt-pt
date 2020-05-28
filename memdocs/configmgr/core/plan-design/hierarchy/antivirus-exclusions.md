@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906194"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Exclusões antivírus recomendadas para O Gestor de Configuração
 
@@ -83,7 +83,7 @@ Para evitar tais problemas, recomendamos que adicione as seguintes exclusões de
 
 ### <a name="folder-exclusions-for-clients"></a>Exclusões de pastas para clientes
 
-- *Pasta de*\\\*Instalação do Cliente .sdf
+- *Pasta de Instalação do Cliente* \\ \* . sdf
 - *Pasta de Instalação de Clientes*\ServiceData
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
@@ -110,14 +110,14 @@ As exclusões de processos só são necessárias se os programas antivírus agre
 - *Pasta de Instalação do Cliente*\Ccmrepair.exe (lado do cliente)
 - %*windir*%\CCMSetup\Ccmsetup.exe (lado cliente)
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para obter mais informações sobre exclusões antivírus, consulte os seguintes artigos:
 
-[Gestor de configuração Exclusões antivírus do ramo atual -System Center Premier Field Engineer Blog](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Gestor de configuração Exclusões antivírus do ramo atual -System Center Premier Field Engineer Blog](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[Atualizado System Center 2012 Configuração Manager Antivirus Exclusions com mais detalhes sobre ASD e Boot Images](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[Atualizado System Center 2012 Configuração Manager Antivirus Exclusions com mais detalhes sobre ASD e Boot Images](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[Como escolher o software antivírus para funcionar em computadores que estão a executar o SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[Como escolher o software antivírus para funcionar em computadores que estão a executar o SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Recomendações de digitalização de vírus para computadores Da empresa que estão a executar versões suportadas atualmente do Windows](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Recomendações de digitalização de vírus para computadores Da empresa que estão a executar versões suportadas atualmente do Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

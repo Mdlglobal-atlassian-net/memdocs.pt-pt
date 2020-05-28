@@ -10,12 +10,13 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0835892788f86e9c246ed98d46658025fbc4180d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723720"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268866"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Como ligar o Gestor de Configuração ao Desktop Analytics
 
@@ -136,7 +137,7 @@ O Gestor de Configuração sincroniza as suas coleções no prazo de 60 minutos 
 > [!NOTE]
 > A ligação do Gestor de Configuração ao Desktop Analytics baseia-se no ponto de ligação do serviço. Quaisquer alterações na função do sistema do site podem ter impacto na sincronização com o serviço de nuvem. Para mais informações, consulte sobre o ponto de [ligação ao serviço](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Avance para o próximo artigo para inscrever dispositivos para desktop Analytics.
 > [!div class="nextstepaction"]

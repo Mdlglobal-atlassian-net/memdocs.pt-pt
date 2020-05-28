@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712226"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906341"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Começar com as definições de conformidade no Gestor de Configuração
 
@@ -107,7 +107,7 @@ Para mais informações, consulte [os dispositivos Dotados Windows com a políti
 
 ## <a name="microsoft-edge-browser-profiles"></a>Perfis de navegador do Microsoft Edge
 <!-- 1357310 -->
-A partir da versão 1802, para os clientes que utilizam o navegador Web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) nos clientes do Windows 10, criar uma política de definições de conformidade para configurar várias definições do Microsoft Edge. 
+A partir da versão 1802, para os clientes que utilizam o navegador Web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nos clientes do Windows 10, criar uma política de definições de conformidade para configurar várias definições do Microsoft Edge. 
 
 Para mais informações, consulte os perfis do [navegador Microsoft Edge.](../deploy-use/browser-profiles.md)
 

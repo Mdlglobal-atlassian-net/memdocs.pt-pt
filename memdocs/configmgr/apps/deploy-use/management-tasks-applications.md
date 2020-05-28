@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0896204fa994643064676b55b20d63d349c4098b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710119"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905870"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Tarefas de gestão para aplicações de Gestor de Configuração
 
@@ -29,7 +29,7 @@ Para ajudar a criar aplicações e tipos de implementação, consulte [Criar apl
 >  Dependendo do tipo de aplicação ou tipo de implementação, algumas opções de gestão podem não estar disponíveis.  
 
 ##  <a name="manage-applications"></a>Gerir aplicações  
- No espaço de trabalho da Biblioteca de **Software,** expandir aplicações de **gestão** > de**aplicações,** escolher a aplicação para gerir e, em seguida, escolher uma tarefa de gestão.  
+ No espaço de trabalho da Biblioteca de **Software,** expandir aplicações de **gestão**de  >  **aplicações,** escolher a aplicação para gerir e, em seguida, escolher uma tarefa de gestão.  
 
 |Tarefa|Detalhes|  
 |----------|-------------|  
@@ -40,7 +40,7 @@ Para ajudar a criar aplicações e tipos de implementação, consulte [Criar apl
 |**Estatísticas de Atualização**|Atualiza as informações que são apresentadas no nó **Implementações** da área de trabalho **Monitorização** sobre as implementações desta aplicação.<br /><br /> Consulte [as aplicações monitorada na consola 'Gestor de Configuração'.](../../apps/deploy-use/monitor-applications-from-the-console.md)|  
 |**Restabelecer**|Repõe um requerimento que foi retirado utilizando a tarefa de gestão da **Reforma.**|  
 |**Extinguir**|Quando se reforma uma candidatura, já não está disponível para implementação, mas a aplicação e implementação do pedido não são eliminadas. As cópias existentes desta aplicação que tenham sido instaladas em computadores cliente não serão removidas. Quaisquer revisões à aplicação serão eliminadas do Configuration Manager após 60 dias. Mas as cópias instaladas da aplicação não são removidas.<br /><br /> Para eliminar uma aplicação, primeiro deve retirar a aplicação, eliminar todas as implementações, remover referências à aplicação por outras implementações e, em seguida, apagar todas as revisões da aplicação.<br /><br /> Consulte [aplicações Revise e supersede](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Exportar**|Abre o **Assistente de Aplicações** de Exportação que lhe permite exportar as aplicações selecionadas para um ficheiro .zip que pode então arquivar ou instalar noutro site. Se optar por exportar conteúdo de aplicação, será criada uma pasta que tenha o conteúdo.<br /><br /> Você também pode exportar dependências de aplicações, relacionamentos e condições de supersedência, e conteúdo para a aplicação e suas dependências.<br /><br /> O cmdlet Windows PowerShell, **Export-CMApplication,** faz a mesma função. Para mais informações, consulte [a Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880) no Microsoft System Center 2012 Configuration Manager SP1 cmdlet documentação de referência.|  
+|**Exportar**|Abre o **Assistente de Aplicações** de Exportação que lhe permite exportar as aplicações selecionadas para um ficheiro .zip que pode então arquivar ou instalar noutro site. Se optar por exportar conteúdo de aplicação, será criada uma pasta que tenha o conteúdo.<br /><br /> Você também pode exportar dependências de aplicações, relacionamentos e condições de supersedência, e conteúdo para a aplicação e suas dependências.<br /><br /> O cmdlet Windows PowerShell, **Export-CMApplication,** faz a mesma função. Para mais informações, consulte [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
 |**Eliminar**|Elimina a aplicação selecionada atualmente.<br /><br /> Não é possível eliminar uma aplicação se outras aplicações dependerem da mesma, se tiver uma implementação ativa ou se tiver sequências de tarefas dependentes.|  
 |**Simular Implementação**|Abra o **Assistente de Simulação de Implementação da Aplicação** para testar os resultados da implementação de uma aplicação em computadores sem instalar ou desinstalar a aplicação.<br /><br /> Ver [Simular implementações de aplicações](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Implementar**|Abre o **Assistente de Implementação de Software** para poder implementar a aplicação selecionada em conjuntos de computadores da hierarquia.<br /><br /> Ver [Aplicações de implantação](../../apps/deploy-use/deploy-applications.md).|  

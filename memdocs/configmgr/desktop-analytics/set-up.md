@@ -10,12 +10,13 @@ ms.assetid: 7ff8d453-f24d-4230-a116-585190a663fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91a65f240a20e30af1610670c79182dee744e77b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714907"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268155"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Como configurar desktop Analytics
 
@@ -77,7 +78,7 @@ Utilize este procedimento para iniciar sessão no Desktop Analytics e configurá
 
 O portal Azure mostra a página **inicial** do Desktop Analytics Home.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Avance para o próximo artigo para ligar o Gestor de Configuração ao Desktop Analytics.
 > [!div class="nextstepaction"]  

@@ -2,7 +2,7 @@
 title: Suporte para o Windows 10
 titleSuffix: Configuration Manager
 description: Conheça as versões do Windows 10 que são suportadas como clientes ou para OSD com Gestor de Configuração
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709629"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879065"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Suporte para Windows 10 no Gestor de Configuração  
 
@@ -53,11 +53,12 @@ A tabela seguinte lista as versões do Windows 10 que pode utilizar como cliente
 | **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
 | **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
 | **Enterprise LTSC 2019** <!--01/09/2029-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -65,8 +66,8 @@ Para obter mais informações sobre o ciclo de vida do Windows, consulte a [fich
 
 | Chave |
 |--|
-| ![Apoio](media/green_check.png) = **Apoiado**  |
-| ![Não](media/Red_X.png) = **apoiado não apoiado** |
+| ![Apoio ](media/green_check.png)  =  **Apoiado**  |
+| ![Não ](media/Red_X.png)  =  **apoiado não apoiado** |
 
 ### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Notas de suporte ao cliente do Windows 10
 
@@ -93,7 +94,7 @@ Para fornecer feedback sobre o Windows Insider, utilize o [Feedback Hub](https:/
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
-Quando implementa sistemas operativos com o Gestor de Configuração, o Windows ADK é uma dependência externa necessária. Para obter mais informações, veja os artigos seguintes:
+Quando implementa sistemas operativos com o Gestor de Configuração, o Windows ADK é uma dependência externa necessária. Para obter mais informações, veja os seguintes artigos:
 
 - [Requisitos de infraestrutura para a implementação do SO](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
@@ -112,12 +113,13 @@ A tabela seguinte lista as versões do ADK do Windows 10 que pode utilizar com d
 | **1803**<br>(10.1.17134) | ![Para trás compatível](media/blue_compat.png) | ![Para trás compatível](media/blue_compat.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Para trás compatível](media/blue_compat.png) | ![Para trás compatível](media/blue_compat.png) | ![Não suportado](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) | ![Suportado](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Não suportado](media/Red_X.png) | ![Suportado](media/green_check.png) |
 
 |Chave|
 |--|
-| ![Apoio](media/green_check.png) = **Apoiado** <br/> Esta tabela apenas mostra a capacidade de suporte do Windows ADK em relação à versão do 'Gestor de Configuração'. A Microsoft recomenda a utilização do Windows ADK que corresponda à versão do Windows que está a implementar. Utilize a versão Mais recente do Windows ADK ao implementar a versão mais recente do Windows 10. A versão mais recente do Windows ADK poderá suportar a implementação de versões oS mais antigas, como o Windows 8.1.<!-- SCCMDocs issue 1229 --> Para obter mais informações sobre a capacidade de suporte de componentes do Windows ADK, consulte plataformas suportadas pelo [DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) e [requisitos USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
-| ![Compatível para](media/blue_compat.png)  = **trás compatível com retrocesso** <br/> Esta combinação não é testada, mas deve funcionar. Documentaremos quaisquer problemas ou ressalvas conhecidas. |
-| ![Não](media/Red_X.png) = **apoiado não apoiado** |
+| ![Apoio ](media/green_check.png)  =  **Apoiado** <br/> Esta tabela apenas mostra a capacidade de suporte do Windows ADK em relação à versão do 'Gestor de Configuração'. A Microsoft recomenda a utilização do Windows ADK que corresponda à versão do Windows que está a implementar. Utilize a versão Mais recente do Windows ADK ao implementar a versão mais recente do Windows 10. A versão mais recente do Windows ADK poderá suportar a implementação de versões oS mais antigas, como o Windows 8.1.<!-- SCCMDocs issue 1229 --> Para obter mais informações sobre a capacidade de suporte de componentes do Windows ADK, consulte plataformas suportadas pelo [DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) e [requisitos USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Compatível para ](media/blue_compat.png)   =  **trás compatível com retrocesso** <br/> Esta combinação não é testada, mas deve funcionar. Documentaremos quaisquer problemas ou ressalvas conhecidas. |
+| ![Não ](media/Red_X.png)  =  **apoiado não apoiado** |
 
 ### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Notas de suporte aDK do Windows 10
 

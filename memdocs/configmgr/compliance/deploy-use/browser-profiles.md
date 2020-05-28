@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210099"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906349"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Configure as definições do Microsoft Edge no Gestor de Configuração
 
 *Aplica-se a: Gestor de Configuração (ramo atual)*
 
 <!-- 1357310 -->
-A partir da versão 1802, para os clientes que utilizam o navegador Web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) nos clientes do Windows 10, criar uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. 
+A partir da versão 1802, para os clientes que utilizam o navegador Web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nos clientes do Windows 10, criar uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. 
 
 Esta política aplica-se apenas aos clientes do Windows 10, versão 1703 ou posterior. <!--511552-->
 
@@ -76,6 +76,6 @@ A partir da versão 1806, esta política adiciona três definições para [o Win
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Como qualquer política de definições de conformidade, o cliente remedia as definições na programação que especifica. [Monitore e informe sobre](monitor-compliance-settings.md) a conformidade do dispositivo na consola Do Gestor de Configuração.

@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722586"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906431"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Utilizar serviços em nuvem com o Configuration Manager
 
@@ -36,7 +36,7 @@ Embora o fornecimento de recursos em nuvem não seja algo que deve fazer antes d
 
 -   Para obter informações sobre pontos de distribuição baseados na nuvem, consulte [Instale pontos de distribuição baseados na nuvem](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
--   Para mais informações sobre o Azure, consulte [o Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) na Biblioteca MSDN.  
+-   Para mais informações sobre o Azure, veja [o que é Azure?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Máquinas virtuais Azure (para infraestruturas baseadas em nuvem)  
  O Gestor de Configuração suporta a utilização de computadores que funcionam em máquinas virtuais no Azure, tal como acontece quando são executados no local dentro da sua rede corporativa física. Pode utilizar máquinas virtuais do Azure nos seguintes cenários:  
@@ -78,12 +78,4 @@ Estas capacidades adicionais não requerem que tenha uma subscrição Azure. Nã
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Segurança para serviços baseados na nuvem  
  O Gestor de Configuração utiliza certificados para fornecer e aceder ao seu conteúdo no Azure, e gerir os serviços que utiliza. O Gestor de Configuração encripta os dados que armazena no Azure, mas não introduz controlos adicionais de segurança ou dados para além daqueles que o Azure fornece.  
 
- Para mais informações, consulte os detalhes para os diferentes cenários de recursos baseados na nuvem. Pode também ver os seguintes tópicos para a segurança do Azure:  
-
--   [Azure: Compreender a Gestão de Contas de Segurança em Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Visão geral da segurança azure](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Get Past the Security Crossroads in Your Cloud Migration (Ultrapassar as Encruzilhada da Segurança na Migração para a Nuvem)](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Data Security in Azure Part 1 of 2 (Segurança de Dados no Azure, Parte 1 de 2)](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Para mais informações, consulte os detalhes para os diferentes cenários de recursos baseados na nuvem. Consulte também uma [introdução à segurança azure.](https://docs.microsoft.com/azure/security/fundamentals/overview)

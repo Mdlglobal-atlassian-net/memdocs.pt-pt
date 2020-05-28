@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904683"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>O que&#39;novo na versão 1706 do Gestor de Configuração
 
@@ -28,8 +28,8 @@ A atualização 1706 para o atual ramo do Gestor de Configuração está dispon�
 > Para instalar um novo site, tem de utilizar uma versão de base do 'Gestor de Configuração'.  
 >
 > Saiba mais sobre:    
-> - [Instalação de novos sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalação de atualizações nos sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalação de novos sites](../../servers/deploy/install/installing-sites.md)  
+> - [Instalação de atualizações nos sites](../../servers/manage/updates.md)  
 > - [Versões de base e atualização](../../servers/manage/updates.md#bkmk_Baselines)  
 
 As seguintes secções fornecem detalhes sobre alterações e novas capacidades introduzidas na versão 1706 do Gestor de Configuração.  
@@ -223,7 +223,7 @@ Agora pode utilizar o 'Gestor de Configuração' para gerir as atualizações do
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Configure atualização do Windows para políticas de adiamento de negócios
 <!-- 1290890 -->
-Agora pode configurar políticas de diferimento para atualizações de funcionalidades do Windows 10 ou atualizações de qualidade para dispositivos Windows 10 geridos diretamente pelo Windows Update for Business. Pode gerir as políticas de diferimento no novo nó **de Atualização do Windows para Políticas Empresariais** no âmbito da Manutenção da **Biblioteca** > de Software**Windows 10**.
+Agora pode configurar políticas de diferimento para atualizações de funcionalidades do Windows 10 ou atualizações de qualidade para dispositivos Windows 10 geridos diretamente pelo Windows Update for Business. Pode gerir as políticas de diferimento no novo nó **de Atualização do Windows para Políticas Empresariais** no âmbito da Manutenção da Biblioteca de **Software**  >  **Windows 10**.
 
 Para mais detalhes, consulte [integração com a Atualização do Windows para Negócios no Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714788"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905205"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Capacidades na versão técnica de pré-visualização do Gestor de Configuração 1807 
 
@@ -82,7 +82,7 @@ O espaço de trabalho **comunitário** inclui também os seguintes nódosos:
 
 - Utilize a consola 'Gestor de Configuração' num OS do cliente.  
 
-    - Alternativamente, mas não recomendado: num sistema operativo OS, desative o [Internet Explorer: Configuração de segurança melhorada](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - Alternativamente, mas não recomendado: num sistema operativo OS, desative o [Internet Explorer: Configuração de segurança melhorada](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - O computador com a consola requer acesso à Internet e conectividade aos seguintes sites:  
     - `https://aka.ms`  
@@ -112,7 +112,7 @@ Tente completar as tarefas. Em seguida, envie [Feedback](capabilities-in-technic
 
 Por predefinição, esta definição é **Automática**. Com este valor, o Gestor de Configuração seleciona a unidade em que está instalada. 
 
-Durante a manutenção offline, o Gestor de `<drive>:\ConfigMgr_OfflineImageServicing`Configuração armazena ficheiros temporários na pasta, . Também monta as imagens de S nesta pasta. 
+Durante a manutenção offline, o Gestor de Configuração armazena ficheiros temporários na `<drive>:\ConfigMgr_OfflineImageServicing` pasta, . Também monta as imagens de S nesta pasta. 
 
 Reveja o ficheiro de registo **OfflineServicingMgr.log.** 
 
@@ -191,7 +191,7 @@ Caso não configure estes pré-requisitos, o site envia notificação por e-mail
 
     - Configure manualmente as seguintes definições para esta aplicação nativa em Azure AD:  
 
-        - **Redirecione o URI:** `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Utilize o nome de domínio totalmente qualificado (FQDN) do serviço de gateway de gestão de nuvem (CMG), por exemplo, GraniteFalls.Contoso.com.   
+        - **Redirecione o URI:** `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Utilize o nome de domínio totalmente qualificado (FQDN) do serviço de gateway de gestão de nuvem (CMG), por exemplo, GraniteFalls.Contoso.com.   
 
         - **Manifesto**: definir **oauth2AllowImplicitImplicitFlow** para verdadeiro:`"oauth2AllowImplicitFlow": true,`  
 
@@ -261,7 +261,7 @@ Para mais informações, consulte o suporte de [atualizações de software de te
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre a instalação ou atualização do ramo técnico de pré-visualização, consulte [a pré-visualização técnica](technical-preview.md).    
 

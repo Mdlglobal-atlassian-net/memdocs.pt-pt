@@ -2,7 +2,7 @@
 title: Documentação na consola
 titleSuffix: Configuration Manager
 description: Este artigo só aparece na consola Do Gestor de Configuração.
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126036"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551609"
 ---
 <!-- 
 - Feature 1357546
@@ -27,13 +27,13 @@ ms.locfileid: "82126036"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Documentação do Microsoft Endpoint Configuration Manager
 
-*Última atualização: 23 de abril de 2020*
+*Última atualização: 11 de maio de 2020*
 
 Este conteúdo pode ajudá-lo na aprendizagem e suporte do Gestor de Configuração.
 
 (Nota: este conteúdo é atualizado na segunda segunda-feira de cada mês, utilizando dados do mês anterior.)
 
-Para obter mais informações, veja os artigos seguintes:
+Para obter mais informações, veja os seguintes artigos:
 
 - [Biblioteca de documentação do Gestor de Configuração](https://docs.microsoft.com/mem/configmgr)  
 - [Como utilizar os docs do Gestor de Configuração](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
@@ -55,22 +55,22 @@ Uma lista com curadoria de artigos importantes.
 
 ## <a name="trending"></a>Tendência
 
-Os artigos mais populares entre 1 de março e 30 de março de 2020.
+Os artigos mais populares entre 1 de abril e 30 de abril de 2020.
 
 | Vistas da página | Título |
 |------------|-------|
-| 22659 | [Planear o gateway de gestão na cloud](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [Referência dos ficheiros de registo](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [Portas utilizadas para ligações](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [Manual do utilizador do Software Center](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [Atualizações e manutenção](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [Ativar a segurança da camada de transporte (TLS) 1.2 visão geral](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [Análise de Computadores](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Cogestão para os dispositivos com Windows 10](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [O que é o Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [Novidades na versão 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [Planear o gateway de gestão na cloud](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [Referência dos ficheiros de registo](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [Portas utilizadas para ligações](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [Atualizações e manutenção](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [Ativar a segurança da camada de transporte (TLS) 1.2 visão geral](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Cogestão para os dispositivos com Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [Manual do utilizador do Centro de Software](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [Como ativar a Segurança da Camada de Transporte (TLS) 1.2 nos clientes](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [Análise de Computadores](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [Definições do cliente](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-A página do hub do Gestor de [Configuração](https://docs.microsoft.com/mem/configmgr/) recebeu 36.258 visualizações de página neste período de tempo.
+A página do hub do Gestor de [Configuração](https://docs.microsoft.com/mem/configmgr/) recebeu 41.479 visualizações de página neste período de tempo.
 
 ## <a name="recently-updated"></a>Atualizado recentemente
 
@@ -78,15 +78,16 @@ Artigos com uma atualização recente e significativa.
 
 | Última revisão | Título |
 |---------------|-------|
-| 3/30/2020 | [Referência para tarefas de manutenção](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 3/30/2020 | [Gerir as definições de atualizações de software](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 3/25/2020 | [Políticas antimalware de proteção de pontofinal](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 23/03/2020 | [Windows Autopilot para os dispositivos existentes](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 12/03/2020 | [Como criar planos de implantação](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 12/03/2020 | [Como se deslocar para piloto](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 12/03/2020 | [Novidades no Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 3/3/2020 | [Avaliação de compatibilidade](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 3/3/2020 | [Análise de Computadores](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 30/04/2020 | [Pré-visualização técnica 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 4/29/2020 | [Autenticação baseada em token para CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 4/28/2020 | [Grupos de Orquestração](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 15/04/2020 | [Application approval process (Processo de aprovação de aplicações)](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
+| 15/04/2020 | [Inscreva dispositivos em Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 4/10/2020 | [Anexo de inquilino do Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 4/8/2020 | [Integrar com o Power BI Report Server](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 4/8/2020 | [Notas de versão](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 4/1/2020 | [Qual é o serviço de administração](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
+| 4/1/2020 | [Novidades na versão 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>Artigos de resolução de problemas
 
@@ -106,11 +107,12 @@ Passeios guiados para ajudar na resolução de problemas componentes e funcional
 
 ## <a name="new-and-updated-support-articles"></a>Novos e atualizados artigos de apoio
 
-Artigos de apoio que são novos ou atualizados entre 21 de fevereiro e 19 de março de 2020.
+Artigos de apoio que sejam novos ou atualizados entre 20 de março e 15 de maio de 2020.
 
-- [KB 4552430 Categoria de atualização de terceiros repõe-se para padrão no Gestor de Configuração](https://support.microsoft.com/help/4552430)
-- [KB 4551013 Atualizações revistas de terceiros não conseguem descarregar no Gestor de Configuração](https://support.microsoft.com/help/4551013)
-- [KB 4552181 Bancas de distribuição de conteúdos na filial atual do Gestor de Configuração, versão 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Uma sequência de tarefas de upgrade do Gestor de Configuração no local não continua após uma reversão de atualização do Windows 10 no local](https://support.microsoft.com/help/4550023)
+- [A criação de aplicações do Microsoft Edge KB 4561494 falha no Gestor de Configuração](https://support.microsoft.com/help/4561494)
+- [A consola KB 4551059 Remote Configuration Manager fica pendurada durante 20 segundos a cada 10 minutos](https://support.microsoft.com/help/4551059)
+- [Resumo kB 4556203 De alterações no microsoft Endpoint Configuration Manager atual, versão 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Update for Microsoft Endpoint Configuration Manager versão 2002, anel de atualização precoce](https://support.microsoft.com/help/4553501)
+- [Erro kB 4561945 "A ligação subjacente foi fechada" quando a ferramenta de ligação de serviço descarrega o ficheiro ConfigMgr.AdminUIContent.cab](https://support.microsoft.com/help/4561945)
 
 Para subscrever a notificação do Atom ou RSS de novos artigos de suporte do Gestor de Configuração, consulte [as atualizações](https://support.microsoft.com/help/4089498/) de conteúdos de suporte e selecione **Microsoft Endpoint Configuration Manager**.  

@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713451"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906326"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Como implementar clientes para servidores UNIX e Linux no Gestor de Configuração
 
@@ -36,7 +36,7 @@ Antes de poder gerir um servidor Linux ou UNIX com o Gestor de Configuração, t
  Depois de instalar o cliente, especifice as Definições do Cliente na consola Do Gestor de Configuração para configurar o agente cliente da mesma forma que os clientes baseados no Windows. Para obter mais informações, veja  [Definições de cliente para servidores Linux e UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a>Sobre os pacotes de instalação de clientes e o agente universal  
- Para instalar o cliente para Linux e UNIX numa plataforma específica, tem de utilizar o pacote de instalação de cliente aplicável ao computador onde instalar o cliente. Os pacotes de instalação de cliente aplicáveis são incluídos como parte de cada transferência de cliente a partir do [Centro de Transferências da Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Para além de pacotes de instalação de cliente, a transferência do cliente inclui o script de **instalação** que gere a instalação do cliente em cada computador.  
+ Para instalar o cliente para Linux e UNIX numa plataforma específica, tem de utilizar o pacote de instalação de cliente aplicável ao computador onde instalar o cliente. Os pacotes de instalação de cliente aplicáveis são incluídos como parte de cada transferência de cliente a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/download/details.aspx?id=47719). Para além de pacotes de instalação de cliente, a transferência do cliente inclui o script de **instalação** que gere a instalação do cliente em cada computador.  
 
  Ao instalar um cliente, pode utilizar as mesmas propriedades de processo e linha de comando, independentemente do pacote de instalação do cliente que utilize.  
 
@@ -69,7 +69,7 @@ Cada pacote de instalação de clientes contém todos os ficheiros necessários 
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a>Para instalar o cliente do Gestor de Configuração nos servidores Linux e UNIX  
 
-1.  Num computador Windows, [transfira o ficheiro de cliente adequado para o servidor Linux ou UNIX](https://go.microsoft.com/fwlink/?LinkID=525184) que pretende gerir.  
+1.  Num computador Windows, [transfira o ficheiro de cliente adequado para o servidor Linux ou UNIX](https://www.microsoft.com/download/details.aspx?id=47719) que pretende gerir.  
 
 2.  Execute o ficheiro .exe de extração automática no computador Windows para extrair o script de instalação e o ficheiro .tar de instalação do cliente.  
 
@@ -90,7 +90,7 @@ Cada pacote de instalação de clientes contém todos os ficheiros necessários 
  As seguintes propriedades estão disponíveis para modificar o comportamento do script de instalação:  
 
 > [!NOTE]  
->  Utilize a `-h` propriedade para exibir esta lista de propriedades suportadas.  
+>  Utilize a propriedade `-h` para exibir esta lista de propriedades suportadas.  
 
 -   `-mp <server FQDN>`  
 
@@ -100,7 +100,7 @@ Cada pacote de instalação de clientes contém todos os ficheiros necessários 
     >  Esta propriedade não especifica o ponto de gestão a que o cliente é atribuído após a instalação.  
 
     > [!NOTE]  
-    >  Quando utiliza `-mp` a propriedade para especificar um ponto de gestão configurado para aceitar `-UsePKICert` apenas ligações de clientes HTTPS, também deve utilizar a propriedade.  
+    >  Quando utiliza a propriedade para especificar um ponto de `-mp` gestão configurado para aceitar apenas ligações de clientes HTTPS, também deve utilizar a `-UsePKICert` propriedade.  
 
 -   `-sitecode <sitecode>`  
 
@@ -134,20 +134,20 @@ Cada pacote de instalação de clientes contém todos os ficheiros necessários 
 
      Opcional. Especifica o nome de ficheiro e caminho completo de um certificado PKI X.509 no formato Public Key Certificate Standard (PKCS#12). Este certificado é utilizado para autenticação de cliente. Se não for especificado um certificado durante a instalação e precisar de adicionar ou alterar um certificado, utilize o utilitário **certutil** . Para mais informações, consulte [Como gerir certificados sobre o cliente para linux e UNIX](../manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts).  
 
-     Quando utilizar, `-UsePKICert`deve também fornecer a palavra-passe associada ao ficheiro PKCS#12 através da utilização do `-certpw` parâmetro da linha de comando.  
+     Quando `-UsePKICert` utilizar, deve também fornecer a palavra-passe associada ao ficheiro PKCS#12 através da utilização do `-certpw` parâmetro da linha de comando.  
 
      Se não utilizar esta propriedade para especificar um certificado PKI, o cliente utiliza um certificado auto-assinado e todas as comunicações para os sistemas do site estão acima de HTTP.  
 
      Se especificar um certificado inválido na linha de comandos de instalação do cliente, não são devolvidos erros. A validação do certificado ocorre após a instalação do cliente. Quando o cliente começa, os certificados são validados com o ponto de gestão. Se um certificado falhar na validação, a seguinte mensagem aparece em **scxcm.log**: **Falha validar o certificado para Ponto**de Gestão . A localização do ficheiro de registo predefinida é:  **/var/opt/microsoft/scxcm.log**.  
 
      > [!NOTE]  
-     > Deve especificar esta propriedade quando instala um `-mp` cliente e utilizar a propriedade para especificar um ponto de gestão configurado para aceitar apenas ligações de clientes HTTPS.  
+     > Deve especificar esta propriedade quando instala um cliente e utilizar a propriedade para especificar um ponto de `-mp` gestão configurado para aceitar apenas ligações de clientes HTTPS.  
 
      Exemplo: `-UsePKICert <full path and filename> -certpw <password>`  
 
 -   `-certpw <parameter>`  
 
-     Opcional. Especifica a palavra-passe associada ao ficheiro PKCS#12 que `-UsePKICert` especificou através da utilização da propriedade.  
+     Opcional. Especifica a palavra-passe associada ao ficheiro PKCS#12 que especificou através da utilização da `-UsePKICert` propriedade.  
 
      Exemplo: `-UsePKICert <full path and filename> -certpw <password>`  
 
@@ -201,7 +201,7 @@ Cada pacote de instalação de clientes contém todos os ficheiros necessários 
 
      Utilize esta opção se utilizar certificados de cliente PKI que não acorrentam a um certificado CA raiz que é confiado pelos pontos de gestão dos seus sites. Os pontos de gestão rejeitarão o cliente se o certificado de cliente não se limitar a um certificado de raiz fidedigno na lista de emitentes de certificados do site.  
 
-     Se não utilizar esta opção, o cliente Linux e UNIX verificará a `-UsePKICert` hierarquia de confiança usando apenas o certificado na opção.  
+     Se não utilizar esta opção, o cliente Linux e UNIX verificará a hierarquia de confiança usando apenas o certificado na `-UsePKICert` opção.  
 
      Exemplo: `-rootcerts <full path and file name>,<full path and file name>`  
 

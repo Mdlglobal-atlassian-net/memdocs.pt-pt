@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718848"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427751"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instale um ponto de distribuição em nuvem para O Gestor de Configuração
 
@@ -35,7 +35,7 @@ Este artigo detalha os passos para instalar um ponto de distribuição em nuvem 
 - [Distribuir conteúdo e configurar clientes](#bkmk_client)
 - [Gerir e monitorizar](#bkmk_monitor)
 - [Modificar](#bkmk_modify)
-- [Resolução avançada de problemas](#bkmk_tshoot)
+- [Resolução de problemas avançados](#bkmk_tshoot)
 
 
 ## <a name="before-you-begin"></a><a name="bkmk_before"></a>Antes de começar
@@ -132,7 +132,7 @@ Execute este procedimento no site para acolher este ponto de distribuição em n
     - **Ficheiro do certificado**: Selecione **Navegar** e selecione o . Ficheiro PFX para o certificado de autenticação do servidor deste ponto de distribuição em nuvem. O nome comum deste certificado preenche os campos de nome **fQDN** e **serviço** exigidos.  
 
         > [!NOTE]  
-        > O certificado de autenticação do servidor de ponto de distribuição em nuvem suporta wildcards. Se utilizar um certificado wildcard, substitua`*`o asterisco ( ) no campo **FQDN** de serviço com o nome de anfitrião desejado para o serviço.  
+        > O certificado de autenticação do servidor de ponto de distribuição em nuvem suporta wildcards. Se utilizar um certificado wildcard, substitua o asterisco `*` ( ) no campo **FQDN** de serviço com o nome de anfitrião desejado para o serviço.  
 
 5. Na página **Alertas,** configurar quotas de armazenamento, quotas de transferência e em que percentagem destas quotas pretende que o Gestor de Configuração gere alertas. Em seguida, selecione **Seguinte**.  
 
@@ -169,11 +169,11 @@ Antes que os clientes possam usar o ponto de distribuição da nuvem, devem ser 
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-O nome comum do certificado de autenticação do servidor deve incluir o seu nome de domínio. Este nome é necessário quando compra um certificado a um fornecedor público. É recomendado ao emitir este certificado do seu PKI. Por exemplo, `WallaceFalls.contoso.com`. Quando especifica este certificado no Assistente de Ponto de Distribuição de Nuvem Create,`WallaceFalls.contoso.com`o nome comum preenche a propriedade **FQDN** de serviço (). O **nome de serviço** tem`WallaceFalls`o mesmo nome de anfitrião e `cloudapp.net`anexa-o ao nome de domínio Azure, . Neste cenário, os clientes precisam de resolver o Serviço`WallaceFalls.contoso.com` **FQDN** do seu`WallaceFalls.cloudapp.net`domínio para o nome do **Serviço** Azure (). Crie um pseudónimo CNAME para mapear estes nomes.
+O nome comum do certificado de autenticação do servidor deve incluir o seu nome de domínio. Este nome é necessário quando compra um certificado a um fornecedor público. É recomendado ao emitir este certificado do seu PKI. Por exemplo, `WallaceFalls.contoso.com`. Quando especifica este certificado no Assistente de Ponto de Distribuição de Nuvem Create, o nome comum preenche a propriedade **FQDN** de serviço `WallaceFalls.contoso.com` (). O **nome de serviço** tem o mesmo nome de anfitrião e `WallaceFalls` anexa-o ao nome de domínio Azure, `cloudapp.net` . Neste cenário, os clientes precisam de resolver o **Serviço FQDN** do seu domínio `WallaceFalls.contoso.com` para o nome do **Serviço** Azure `WallaceFalls.cloudapp.net` (). Crie um pseudónimo CNAME para mapear estes nomes.
 
 ### <a name="create-cname-alias"></a>Criar pseudónimos CNAME
 
-Crie um registo de nome canónico (CNAME) no DNS público e virado para a Internet da sua organização. Este registo cria um pseudónimo para a propriedade **FQDN** do ponto de distribuição da nuvem que os clientes recebem, para o nome do **Serviço**Azure. Por exemplo, crie um `WallaceFalls.contoso.com` novo `WallaceFalls.cloudapp.net`disco CNAME para .  
+Crie um registo de nome canónico (CNAME) no DNS público e virado para a Internet da sua organização. Este registo cria um pseudónimo para a propriedade **FQDN** do ponto de distribuição da nuvem que os clientes recebem, para o nome do **Serviço**Azure. Por exemplo, crie um novo disco CNAME para `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net` .  
 
 ### <a name="client-name-resolution-process"></a>Processo de resolução de nome do cliente
 
@@ -216,6 +216,8 @@ As definições padrão do cliente permitem automaticamente que os clientes util
 
 Monitorize o conteúdo que distribui para um ponto de distribuição na nuvem o mesmo que com quaisquer outros pontos de distribuição no local. Para mais informações, consulte [o monitor de conteúdos](monitor-content-you-have-distributed.md).
 
+Quando visualizar a lista de pontos de distribuição em nuvem na consola, pode adicionar colunas adicionais à lista. Por exemplo, a coluna **Data egress** mostra a quantidade de dados que os clientes descarregaram do serviço nos últimos 30 dias.<!-- SCCMDocs#755 -->
+
 ### <a name="alerts"></a><a name="bkmk_alerts"></a>Alertas  
 
 O Gestor de Configuração verifica periodicamente o serviço Azure. Se o serviço não estiver ativo, ou se houver problemas de subscrição ou certificado, o Gestor de Configuração levanta um alerta.
@@ -234,7 +236,7 @@ Especifique os limiares para cada ponto de distribuição da nuvem durante a ins
 > [!NOTE]  
 > Os alertas para um ponto de distribuição na nuvem dependem das estatísticas de utilização do Azure, que podem demorar até 24 horas a ficar disponíveis. Para mais informações sobre o Storage Analytics para Azure, consulte [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
 
-Num ciclo de hora a hora, o site primário que monitoriza o ponto de distribuição em nuvem descarrega dados de transações do Azure. Armazena estes dados `CloudDP-<ServiceName>.log` de transação no ficheiro do servidor do site. O Gestor de Configuração avalia então esta informação contra as quotas de armazenamento e transferência para cada ponto de distribuição na nuvem. Quando a transferência de dados atinge ou excede o volume especificado para avisos ou alertas críticos, o Gestor de Configuração gera o alerta apropriado.  
+Num ciclo de hora a hora, o site primário que monitoriza o ponto de distribuição em nuvem descarrega dados de transações do Azure. Armazena estes dados de transação no `CloudDP-<ServiceName>.log` ficheiro do servidor do site. O Gestor de Configuração avalia então esta informação contra as quotas de armazenamento e transferência para cada ponto de distribuição na nuvem. Quando a transferência de dados atinge ou excede o volume especificado para avisos ou alertas críticos, o Gestor de Configuração gera o alerta apropriado.  
 
 > [!WARNING]  
 > Uma vez que o site descarrega informações sobre transferências de dados do Azure a cada hora, o uso pode exceder um limiar de aviso ou crítico antes que o Gestor de Configuração possa aceder aos dados e levantar um alerta.  

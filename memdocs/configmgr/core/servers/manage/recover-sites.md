@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723867"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903965"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Recuperar um site do Gestor de Configuração
 
@@ -50,7 +50,7 @@ Utilize um dos seguintes procedimentos para limpar um servidor existente:
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Limpe um servidor existente apenas para a recuperação do servidor do site
 
 1. Eliminar as teclas de registo SMS:`HKLM\Software\Microsoft\SMS`
-2. Eliminar quaisquer entradas de `SMS` `HKLM\System\CurrentControlSet\Services`registo a partir de . Por exemplo:
+2. Eliminar quaisquer entradas de registo a partir `SMS` de `HKLM\System\CurrentControlSet\Services` . Por exemplo:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
     - SMS_INBOX_MONITOR
@@ -193,7 +193,7 @@ Utilize esta opção quando não ocorrer nenhuma perda de dados no servidor de b
 
 O Gestor de Configuração permite o rastreio de alterações para a base de dados do site no Servidor SQL. Alterar o rastreio permite que o Gestor de Configuração se questione para obter informações sobre as alterações feitas nas tabelas de bases de dados após um ponto de tempo anterior. O período de retenção especifica a duração da utilização das informações de rastreio de alterações. Por predefinição, a base de dados do site está configurada para ter um período de retenção de cinco dias. Quando recupera a base de dados de um site, o processo de recuperação procede de forma diferente se a sua cópia de segurança estiver dentro ou fora do período de retenção. Por exemplo, se o seu servidor SQL falhar, e a sua última cópia de segurança tiver sete dias, está fora do período de retenção.
 
-Para obter mais informações sobre os internos de rastreio de alterações do SQL Server, consulte as seguintes publicações de blog da equipa do SQL Server: [Change Tracking Cleanup - parte 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) e Change Tracking [Cleanup - parte 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+Para obter mais informações sobre os internos de rastreio de alterações do SQL Server, consulte as seguintes publicações de blog da equipa do SQL Server: [Change Tracking Cleanup - parte 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) e Change Tracking [Cleanup - parte 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Reinicialização do site ou dados globais
 
@@ -263,7 +263,7 @@ Utilize um dos seguintes procedimentos para o ajudar a recuperar o servidor do s
 
 1. Prepare o script de instalação automática para as opções de que necessita para a recuperação do site. Para mais informações, consulte a [recuperação do site sem supervisão.](unattended-recovery.md)  
 
-2. Executar Configuração do Gestor `/script` de Configuração utilizando a opção linha de comando. Por exemplo, cria um ficheiro de inicialização de configuração **ConfigMgrUnattend.ini**. Guarde-o `C:\Temp` no diretório do computador em que está a executar a configuração. Utilize o seguinte comando:  
+2. Executar Configuração do Gestor de Configuração utilizando a opção linha `/script` de comando. Por exemplo, cria um ficheiro de inicialização de configuração **ConfigMgrUnattend.ini**. Guarde-o no `C:\Temp` diretório do computador em que está a executar a configuração. Utilize o seguinte comando:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -284,7 +284,7 @@ Depois de recuperar o seu site, existem várias tarefas pós-recuperação a con
 
 ### <a name="reenter-user-account-passwords"></a>Reintroduzir as palavras-passe da conta de utilizador
 
-Após a recuperação do servidor do site, reintroduza as palavras-passe para quaisquer contas de utilizador no site. Estas palavras-passe são redefinidas durante a recuperação do site. As contas estão listadas na página **final** do assistente de configuração após a recuperação do site ser concluída. A lista também `C:\ConfigMgrPostRecoveryActions.html` é guardada no servidor do site recuperado.
+Após a recuperação do servidor do site, reintroduza as palavras-passe para quaisquer contas de utilizador no site. Estas palavras-passe são redefinidas durante a recuperação do site. As contas estão listadas na página **final** do assistente de configuração após a recuperação do site ser concluída. A lista também é `C:\ConfigMgrPostRecoveryActions.html` guardada no servidor do site recuperado.
 
 #### <a name="reenter-user-account-passwords-after-site-recovery"></a>Reintroduza as palavras-passe da conta do utilizador após a recuperação do site
 
@@ -370,7 +370,7 @@ Quando recuperar os sistemas do site que executam o IIS e configurar para HTTPS,
 
 ### <a name="reinstall-hotfixes"></a>Reinstalar os hotfixes
 
-Após uma recuperação do site, deve reinstalar quaisquer [hotfixes fora da banda](updates.md#bkmk_outofband) que tenham sido aplicados ao servidor do site. Após a recuperação do site, consulte a lista dos hotfixos previamente instalados na página **Final** do assistente de configuração. Esta lista também `C:\ConfigMgrPostRecoveryActions.html` é guardada no servidor do site recuperado.
+Após uma recuperação do site, deve reinstalar quaisquer [hotfixes fora da banda](updates.md#bkmk_outofband) que tenham sido aplicados ao servidor do site. Após a recuperação do site, consulte a lista dos hotfixos previamente instalados na página **Final** do assistente de configuração. Esta lista também é `C:\ConfigMgrPostRecoveryActions.html` guardada no servidor do site recuperado.
 
 ### <a name="recover-custom-reports"></a>Recuperar relatórios personalizados
 
@@ -380,7 +380,7 @@ Alguns clientes criam relatórios personalizados nos Serviços de Reporte de Ser
 
 A base de dados do site rastreia onde o servidor do site armazena os ficheiros de conteúdo. Os ficheiros de conteúdo em si não são apoiados ou restaurados como parte do processo de backup e recuperação. Para recuperar totalmente os ficheiros de conteúdo, restaure a biblioteca de conteúdos e os ficheiros de origem do pacote para a localização original. Existem vários métodos para recuperar os seus ficheiros de conteúdo. O método mais fácil é restaurar os ficheiros a partir de uma cópia de segurança do sistema de ficheiros do servidor do site.
 
-Se não tiver uma cópia de segurança do sistema de ficheiros para os ficheiros de origem do pacote, copie-os manualmente ou descarregue-os. Este processo é semelhante ao de quando criou originalmente o pacote. Execute a seguinte consulta no SQL Server para encontrar a localização `SELECT * FROM v_Package`de origem do pacote para todos os pacotes e aplicações: . Identifique o site de origem do pacote olhando para os três primeiros caracteres do ID do pacote. Por exemplo, se o ID de pacote for CEN00001, o código de site do site de origem é CEN. Ao restaurar os ficheiros de origem do pacote, estes devem ser restaurados para a mesma localização em que se encontravam antes da falha.
+Se não tiver uma cópia de segurança do sistema de ficheiros para os ficheiros de origem do pacote, copie-os manualmente ou descarregue-os. Este processo é semelhante ao de quando criou originalmente o pacote. Execute a seguinte consulta no SQL Server para encontrar a localização de origem do pacote para todos os pacotes e aplicações: `SELECT * FROM v_Package` . Identifique o site de origem do pacote olhando para os três primeiros caracteres do ID do pacote. Por exemplo, se o ID de pacote for CEN00001, o código de site do site de origem é CEN. Ao restaurar os ficheiros de origem do pacote, estes devem ser restaurados para a mesma localização em que se encontravam antes da falha.
 
 Se não tiver uma cópia de segurança do sistema de ficheiros que inclua a biblioteca de conteúdos, tem as seguintes opções de restauro:  
 
@@ -396,7 +396,7 @@ Quando tiver incluído ficheiros de base de dados do System Center Updates Publi
 
 1. Reinstalar atualizações Editor no computador recuperado.  
 
-2. Copie o ficheiro de base de dados `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` **Scupdb.sdf** do seu destino de reserva para o computador que executa o Editor de Atualizações.  
+2. Copie o ficheiro de base de dados **Scupdb.sdf** do seu destino de reserva para o computador que executa o Editor de `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` Atualizações.  
 
 3. Quando mais de um utilizador executa atualizações Do Publisher no computador, copie cada ficheiro de base de dados para a localização do perfil de utilizador apropriado.  
 
@@ -406,7 +406,7 @@ Como parte das propriedades do ponto de migração do Estado, especifica as past
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Gerar novamente os certificados para pontos de distribuição
 
-Depois de restaurar um site, o **distmgr.log** pode listar `Failed to decrypt cert PFX data`a seguinte entrada para um ou mais pontos de distribuição: . Esta entrada indica que os dados do certificado de ponto de distribuição não podem ser desencriptados pelo site. Para resolver esta questão, regenerar ou reimportar o certificado para os pontos de distribuição afetados. Utilize o cmdlet [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell.
+Depois de restaurar um site, o **distmgr.log** pode listar a seguinte entrada para um ou mais pontos de distribuição: `Failed to decrypt cert PFX data` . Esta entrada indica que os dados do certificado de ponto de distribuição não podem ser desencriptados pelo site. Para resolver esta questão, regenerar ou reimportar o certificado para os pontos de distribuição afetados. Utilize o cmdlet [Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Atualizar certificados utilizados para pontos de distribuição baseados na nuvem
 

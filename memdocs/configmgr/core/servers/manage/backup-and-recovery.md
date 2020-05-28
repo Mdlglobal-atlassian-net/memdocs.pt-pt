@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717868"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906467"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Efetuar uma Cópia de Segurança de um Site do Gestor de Configuração
 
@@ -71,7 +71,7 @@ Para simplificar o processo de backup, pode criar um ficheiro **AfterBackup.bat.
 
 Pode fazer o apoio a um site da administração central e ao local principal. Sites secundários ou servidores do sistema de site não têm tarefas de backup.
 
-Quando o serviço de backup do Gestor de Configuração funciona, segue as instruções definidas no ficheiro de controlo de cópia de segurança: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. É possível modificar o ficheiro de controlo da cópia de segurança para alterar o comportamento do serviço de cópia de segurança.  
+Quando o serviço de backup do Gestor de Configuração funciona, segue as instruções definidas no ficheiro de controlo de cópia de segurança: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl` . É possível modificar o ficheiro de controlo da cópia de segurança para alterar o comportamento do serviço de cópia de segurança.  
 > [!NOTE]
 > As modificações de **Smsbkup.ctl** serão aplicadas após o reinício do serviço SMS_SITE_VSS_WRITER no Servidor do Site.
 
@@ -86,7 +86,7 @@ As informações de estado da cópia de segurança do site são escritas no fich
 
 4.  Selecione a tarefa do Servidor do Servidor do **Site de Backup** e clique em **Editar**.  
 
-5.  Selecione a opção para **ativar esta tarefa**. Clique em **Definir Caminhos** para especificar o destino de reserva. Existem as seguintes opções:  
+5.  Selecione a opção para **ativar esta tarefa**. Clique em **Definir Caminhos** para especificar o destino de reserva. Tem as seguintes opções:  
 
     > [!IMPORTANT]  
     >  Para ajudar a impedir a adulteração dos ficheiros de cópia de segurança, armazenar os ficheiros numa localização segura. O caminho de backup mais seguro é para uma unidade local, para que possa definir permissões de ficheiro NTFS na pasta. O Gestor de Configuração não encripta os dados de backup armazenados no caminho de reserva.  
@@ -116,7 +116,7 @@ As informações de estado da cópia de segurança do site são escritas no fich
 
 -   Quando configurar a tarefa de backup para criar um alerta quando falha, procure alertas de falha de cópia de segurança no nó de **Alertas** do espaço de trabalho **monitoramento.**  
 
--   Abra o Windows Explorer no servidor `<ConfigMgrInstallationFolder>\Logs`do site e navegue para . Reveja **smsbkup.log** para avisos e erros. Quando a cópia de segurança do `Backup completed` site `STATMSG: ID=5035`completa com sucesso, o registo mostra com id de mensagem .  
+-   Abra o Windows Explorer no servidor do site e navegue para `<ConfigMgrInstallationFolder>\Logs` . Reveja **smsbkup.log** para avisos e erros. Quando a cópia de segurança do site completa com sucesso, o registo mostra `Backup completed` com id de mensagem `STATMSG: ID=5035` .  
 
     > [!TIP]  
     >  Quando a tarefa de manutenção de reserva falhar, reinicie a tarefa de backup parando e reiniciando o **serviço SMS_SITE_BACKUP** Windows.  
@@ -137,7 +137,7 @@ Mantenha vários arquivos do instantâneo de cópia de segurança pelas seguinte
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Utilizar o Ficheiro AfterBackup.bat  
-Depois de ter conseguido fazer o backup do site, a tarefa de backup tenta executar automaticamente um script chamado **AfterBackup.bat**. Crie manualmente o ficheiro AfterBackup.bat `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`no servidor do site em . Se existir um ficheiro AfterBackup.bat na pasta correta, funciona automaticamente após a conclusão da tarefa de cópia de segurança.
+Depois de ter conseguido fazer o backup do site, a tarefa de backup tenta executar automaticamente um script chamado **AfterBackup.bat**. Crie manualmente o ficheiro AfterBackup.bat no servidor do site em `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Se existir um ficheiro AfterBackup.bat na pasta correta, funciona automaticamente após a conclusão da tarefa de cópia de segurança.
 
 O ficheiro AfterBackup.bat permite-lhe arquivar o instantâneo de cópia de segurança no final de cada operação de backup. Pode executar automaticamente outras tarefas pós-cópia de segurança que não fazem parte da tarefa de manutenção do Servidor do Servidor do Site de Backup. O ficheiro AfterBackup.bat integra o arquivo e as operações de cópia de segurança, assegurando que cada novo instantâneo de cópia de segurança é arquivado.
 
@@ -172,7 +172,7 @@ A biblioteca de conteúdos em 'Gestor de Configuração' é o local onde todos o
 
 -   A biblioteca de conteúdos deve ser restaurada antes de poder redistribuir o conteúdo para pontos de distribuição. Quando inicia a redistribuição de conteúdos, o Gestor de Configuração copia os ficheiros da biblioteca de conteúdos do servidor do site para os pontos de distribuição. Para mais informações, consulte a biblioteca de [conteúdos.](../../plan-design/hierarchy/the-content-library.md)  
 
--   Os ficheiros de origem do pacote devem ser restaurados antes de poder atualizar o conteúdo nos pontos de distribuição. Quando inicia uma atualização de conteúdo, o Gestor de Configuração copia ficheiros novos ou modificados da fonte do pacote para a biblioteca de conteúdos. Em seguida, copia os ficheiros para pontos de distribuição associados. Execute a seguinte consulta do SQL Server contra a base de dados `SELECT * FROM v_Package`do site para encontrar a localização de origem do pacote para todos os pacotes e aplicações: . Pode identificar o site de origem do pacote atravésdos primeiros três carateres do ID de pacote. Por exemplo, se o ID de pacote for CEN00001, o código de site do site de origem é CEN. Quando restaurar os ficheiros de origem do pacote, devem ser restaurados no mesmo local onde estavam antes da falha.  
+-   Os ficheiros de origem do pacote devem ser restaurados antes de poder atualizar o conteúdo nos pontos de distribuição. Quando inicia uma atualização de conteúdo, o Gestor de Configuração copia ficheiros novos ou modificados da fonte do pacote para a biblioteca de conteúdos. Em seguida, copia os ficheiros para pontos de distribuição associados. Execute a seguinte consulta do SQL Server contra a base de dados do site para encontrar a localização de origem do pacote para todos os pacotes e aplicações: `SELECT * FROM v_Package` . Pode identificar o site de origem do pacote atravésdos primeiros três carateres do ID de pacote. Por exemplo, se o ID de pacote for CEN00001, o código de site do site de origem é CEN. Quando restaurar os ficheiros de origem do pacote, devem ser restaurados no mesmo local onde estavam antes da falha.  
 
 Verifique se inclui tanto a biblioteca de conteúdos como os ficheiros de fonte de pacote no seu sistema de ficheiros de reserva para o servidor do site.  
 
@@ -183,12 +183,12 @@ Utilize o procedimento seguinte para fazer o backup da base de dados da Editora 
 
 #### <a name="back-up-the-updates-publisher-database"></a>Volte a ser a base de dados da Editora de Atualizações  
 
-1.  No computador que executa atualizações Editora, navegue para a base de `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\`dados Da Empresa de Atualizações Editora **scupdb.sdf** em . Há um ficheiro de base de dados diferente para cada utilizador que executa o Updates Publisher.  
+1.  No computador que executa atualizações Editora, navegue para a base de dados Da Empresa de Atualizações Editora **scupdb.sdf** em `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` . Há um ficheiro de base de dados diferente para cada utilizador que executa o Updates Publisher.  
 
-2.  Copie o ficheiro de base de dados para o destino de cópia de segurança. Por exemplo, se o `E:\ConfigMgr_Backup`seu destino de backup for `E:\ConfigMgr_Backup\SCUP`, pode copiar o ficheiro de base de dados da Atualizações Publisher para .  
+2.  Copie o ficheiro de base de dados para o destino de cópia de segurança. Por exemplo, se o seu destino de backup for , pode copiar o ficheiro de base de dados da `E:\ConfigMgr_Backup` Atualizações Publisher para `E:\ConfigMgr_Backup\SCUP` .  
 
     > [!TIP]  
-    >  Quando houver mais de um ficheiro de base de dados num computador, considere armazenar o ficheiro numa subpasta que indique o perfil do utilizador associado ao ficheiro base de dados. Por exemplo, pode ter um `E:\ConfigMgr_Backup\SCUP\User1` ficheiro de `E:\ConfigMgr_Backup\SCUP\User2`base de dados e outro ficheiro de base de dados em .  
+    >  Quando houver mais de um ficheiro de base de dados num computador, considere armazenar o ficheiro numa subpasta que indique o perfil do utilizador associado ao ficheiro base de dados. Por exemplo, pode ter um ficheiro de base de dados e outro ficheiro de base de `E:\ConfigMgr_Backup\SCUP\User1` dados em `E:\ConfigMgr_Backup\SCUP\User2` .  
 
 
 
@@ -213,7 +213,7 @@ O SMS Writer é um serviço que interage com o Serviço de Cópia de Sombra de V
 ### <a name="process"></a>Processo  
 1. O SMS Writer é registado junto do serviço VSS, ligando-se às respetivas interfaces e eventos. 
 2. Quando o VSS difunde eventos ou envia notificações específicas para o SMS Writer, o SMS Writer responde à notificação e executa a ação adequada. 
-3. O SMS Writer lê o ficheiro de controlo de cópia `<ConfigMgrInstallationPath>\inboxes\smsbkup.box`de segurança **smsbkup.ctl** localizado em , e determina os ficheiros e dados para fazer backup. 
+3. O SMS Writer lê o ficheiro de controlo de cópia de segurança **smsbkup.ctl** localizado em `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` , e determina os ficheiros e dados para fazer backup. 
 4. O SMS Writer constrói metadados, que consistem em vários componentes, incluindo dados específicos da chave de registo SMS e subchaves. 
     a. Envia os metadados para o VSS quando é solicitado. 
     b. O VSS envia então os metadados para a aplicação de pedido, o Gestor de Backup do Gestor de Configuração. 
@@ -231,9 +231,9 @@ O writer ID para o SMS Writer é **03ba67dd-dc6d-4729-a038-251f7018463b**.
 O serviço SMS Writer tem de ser executado sob a conta do Sistema Local.  
 
 ### <a name="volume-shadow-copy-service"></a>Serviço de Cópia Sombra de Volumes  
-O VSS é um conjunto de APIs COM que implementa uma estrutura para permitir a execução de cópias de segurança de volume enquanto as aplicações do sistema continuam a escrever nos volumes. O VSS fornece uma interface consistente que permite coordenar as aplicações de utilizador que atualizam dados no disco (o serviço SMS Writer) com as que efetuam cópias de segurança das aplicações (o serviço Backup Manager). Para mais informações, consulte o Serviço de Cópia de [Sombra de Volume](https://go.microsoft.com/fwlink/p/?LinkId=241968).  
+O VSS é um conjunto de APIs COM que implementa uma estrutura para permitir a execução de cópias de segurança de volume enquanto as aplicações do sistema continuam a escrever nos volumes. O VSS fornece uma interface consistente que permite coordenar as aplicações de utilizador que atualizam dados no disco (o serviço SMS Writer) com as que efetuam cópias de segurança das aplicações (o serviço Backup Manager). Para mais informações, consulte o Serviço de Cópia de [Sombra de Volume](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Depois de criar um backup, pratique a [recuperação](recover-sites.md) do site com esse backup. Esta prática pode ajudá-lo a familiarizar-se com o processo de recuperação antes de ter de confiar nele. Também pode ajudar a confirmar que o backup foi bem sucedido para o seu propósito.  

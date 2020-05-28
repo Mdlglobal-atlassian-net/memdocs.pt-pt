@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906092"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Introdução ao ramo de manutenção a longo prazo do Gestor de Configuração
 
@@ -53,7 +53,7 @@ As integrações na nuvem, bem como quaisquer funcionalidades incluídas na vers
 
 ## <a name="find-ltsb-documentation"></a>Encontre documentação LTSB
 
-O LTSB baseia-se na versão atual do ramo 1606. Utilize a documentação atual do [ramo,](https://docs.microsoft.com/sccm/)com ressalvas e limitações específicas do LTSB. Essas ressalvas e limitações são identificadas nos seguintes artigos:
+O LTSB baseia-se na versão atual do ramo 1606. Utilize a documentação atual do [ramo,](https://docs.microsoft.com/mem/configmgr/)com ressalvas e limitações específicas do LTSB. Essas ressalvas e limitações são identificadas nos seguintes artigos:
 
 - [Instalar o LTSC](install-the-ltsb.md)
 - [Atualizar o LTSC para a via atual](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ Os clientes com garantia de software ativa (SA) em licenças de Gestor de Config
 
 Os clientes que tenham direitos perpétuos ao System Center Configuration Manager, ou que permitam que a SA ou a subscrição caducem após o dia 1 de outubro, podem instalar a versão do System Center Configuration Manager LTSB que está atual no momento do lapso.
 
-Para obter mais informações sobre estas licenças, consulte os [termos e condições Completos para os produtos que adquiriu através](https://go.microsoft.com/fwlink/?LinkId=800052)de programas de licenciamento de volume da Microsoft .
+Para obter mais informações sobre estas licenças, consulte os [termos e condições Completos para os produtos que adquiriu através](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)de programas de licenciamento de volume da Microsoft .
 
 Para obter mais informações sobre o licenciamento para sucursais do Gestor de Configuração, consulte o licenciamento e os balcões do Gestor de [Configuração.](learn-more-editions.md)
 

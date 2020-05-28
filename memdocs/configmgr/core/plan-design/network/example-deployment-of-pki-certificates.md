@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718778"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904240"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Implementação passo a passo dos certificados PKI para Gestor de Configuração: Autoridade de Certificação Windows Server 2008
 
@@ -52,7 +52,7 @@ A tabela seguinte lista os tipos de certificados PKI que podem ser necessários 
 |Requisito de Certificado|Descrição do Certificado|  
 |-----------------------------|-----------------------------|  
 |Certificado de servidor Web para os sistemas de sites que executam o IIS|Este certificado é utilizado para encriptar dados e autenticar o servidor para clientes. Deve ser instalado externamente a partir do Gestor de Configuração nos servidores de sistemas do site que executam os Serviços de Informação da Internet (IIS) e que são configurados no Gestor de Configuração para utilizar HTTPS.<br /><br /> Para que os passos para configurar e instalar este certificado, consulte implementar o certificado do servidor web para sistemas de [site que executam o IIS](#BKMK_webserver2008_cm2012) neste tópico.|  
-|Certificado de serviço para clientes que ligam a pontos de distribuição baseados na nuvem|Para os passos para configurar e instalar este certificado, consulte A implantação do certificado de [serviço para pontos de distribuição baseados](#BKMK_clouddp2008_cm2012) na nuvem neste tópico.<br /><br /> **Importante:** este certificado é utilizado em conjunto com o certificado de gestão do Windows Azure. Para mais informações sobre o certificado de gestão, consulte como criar um Certificado de [Gestão](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) e como adicionar um Certificado de [Gestão a uma subscrição](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) do Windows Azure na secção plataforma Windows Azure da Biblioteca MSDN.|  
+|Certificado de serviço para clientes que ligam a pontos de distribuição baseados na nuvem|Para os passos para configurar e instalar este certificado, consulte A implantação do certificado de [serviço para pontos de distribuição baseados](#BKMK_clouddp2008_cm2012) na nuvem neste tópico.<br /><br /> **Importante:** este certificado é utilizado em conjunto com o certificado de gestão do Windows Azure. Para mais informações sobre o certificado de gestão, consulte Como Criar um Certificado de [Gestão](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) e Como Adicionar um Certificado de [Gestão a uma Subscrição Windows Azure](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
 |Certificado de cliente para computadores com o Windows|Este certificado é utilizado para autenticar os computadores clientes do Gestor de Configuração para os sistemas de site que são configurados para utilizar https. Também pode ser utilizado para pontos de gestão e pontos de migração do Estado para monitorizar o seu estado operacional quando são criados para utilizar HTTPS. Deve ser instalado externamente a partir do Gestor de Configuração em computadores.<br /><br /> Para as etapas para configurar e instalar este certificado, consulte [Implementar o certificado de cliente para computadores Windows](#BKMK_client2008_cm2012) neste tópico.|  
 |Certificado de cliente para pontos de distribuição|Este certificado tem duas finalidades:<br /><br /> O certificado é utilizado para autenticar o ponto de distribuição para um ponto de gestão ativado para HTTPS antes de o ponto de distribuição enviar mensagens de estado.<br /><br /> Quando a opção do ponto de distribuição **Ativar suporte PXE para clientes** está selecionada, o certificado é enviado para computadores com arranque PXE para que liguem a um ponto de gestão ativado para HTTPS durante a implementação do sistema operativo.<br /><br /> Para as etapas para configurar e instalar este certificado, consulte [Implementar o certificado de cliente para pontos](#BKMK_clientdistributionpoint2008_cm2012) de distribuição neste tópico.|  
 |Certificado de inscrição para dispositivos móveis|Este certificado é utilizado para autenticar clientes de dispositivos móveis do Gestor de Configuração para sistemas de localização que estão configurados para utilizar HTTPS. Deve ser instalado como parte da inscrição de dispositivos móveis no ConfigurManager, e escolhe o modelo de certificado configurado como uma definição de cliente de dispositivo móvel.<br /><br /> Para as etapas de configuração deste certificado, consulte A implantação do certificado de [inscrição para dispositivos móveis](#BKMK_mobiledevices2008_cm2012) neste tópico.|  
@@ -354,7 +354,7 @@ Esta implementação de certificados possui os seguintes procedimentos:
 
 4.  No painel de resultados, no separador **Objetos de Política do Grupo Linked,** clique à direita na nova Política de Grupo e, em seguida, escolha **Editar**.  
 
-5.  No Editor de **Gestão de Políticas**do Grupo, expandir **políticas** sob **configuração de computador,** e depois ir para as **Definições** / de Segurança do Windows**Definições** / **Políticas de Chave Pública**.  
+5.  No Editor de **Gestão de Políticas**do Grupo, expandir **políticas** sob **configuração de computador,** e depois ir para as **Definições de**Segurança do Windows  /  **Security Settings**  /  **Definições Políticas de Chave Pública**.  
 
 6.  Clique no tipo de objeto chamado Cliente de Serviços de **Certificado - Inscrição automática,** e, em seguida, escolha **Propriedades**.  
 

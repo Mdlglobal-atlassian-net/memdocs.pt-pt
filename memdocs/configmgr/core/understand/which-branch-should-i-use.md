@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722565"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906015"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Que via do Configuration Manager devo utilizar?
 
@@ -47,7 +47,7 @@ A Microsoft planeia lançar atualizações para o ramo atual do Gestor de Config
 
 Para instalar o ramo atual como um novo site, utilize meios de [base.](../servers/manage/updates.md#bkmk_Baselines) Utilize também os meios de base para atualizar a partir do System Center 2012 Configuration Manager com o Service Pack 2 ou system Center 2012 R2 Configuration Manager com o Service Pack 1. O acesso a este meio depende de como a sua organização licencia o Gestor de Configuração.
 
-Também pode utilizar os meios de base para instalar um novo site que é uma edição de avaliação do ramo atual. A edição de avaliação não requer licença. Pode utilizar a edição de avaliação durante 180 dias. Suporta upgrade para uma edição licenciada da filial atual. Para instalar apenas uma edição de avaliação, obtenha-a no Centro de [Avaliação TechNet.](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)
+Também pode utilizar os meios de base para instalar um novo site que é uma edição de avaliação do ramo atual. A edição de avaliação não requer licença. Pode utilizar a edição de avaliação durante 180 dias. Suporta upgrade para uma edição licenciada da filial atual. Para instalar apenas uma edição de avaliação, obtenha-a no Centro de [Avaliação.](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)
 
 > [!NOTE]
 > Utilize os meios de base para instalar sites para uma nova hierarquia do Gestor de Configuração. Se já instalou uma versão de base, utilize atualizações na consola para atualizar os seus sites para uma nova versão.  
@@ -87,9 +87,9 @@ Para instalar o LTSB como um novo site ou como uma atualização de um site de C
 > [!TIP]  
 > Para conhecer o System Center 2016, consulte a documentação do [System Center 2016.](https://docs.microsoft.com/system-center/index) Esta documentação também identifica como obter o System Center 2016, que requer um contrato de licença da Microsoft ou direitos semelhantes.  
 >  
-> Para encontrar a versão 1606 do Gestor de Configuração no Centro de Serviços de Licenciamento de Volume `System Center 2016`(VLSC), vá ao **separador Downloads e Chaves** do [VLSC,](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)procure, e depois selecione o System Center **2016 Datacenter** ou **system center 2016 Standard**.  
+> Para encontrar a versão 1606 do Gestor de Configuração no Centro de Serviços de Licenciamento de Volume (VLSC), vá ao **separador Downloads e Chaves** do [VLSC,](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) `System Center 2016` procure, e depois selecione o **System Center 2016 Datacenter** ou **system center 2016 Standard**.  
 >  
-> Pode também obter uma edição de avaliação do System Center 2016 do [TechNet Evaluation Center.](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)  
+> Pode ainda obter uma edição de avaliação do System Center 2016 do Centro de [Avaliação.](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)  
 
 ### <a name="features-of-the-ltsb"></a>Características do LTSB
 
@@ -116,7 +116,7 @@ O LTSB baseia-se na versão atual da sucursal 1606 e tem as seguintes limitaçõ
 
 - Pode converter a sua instalação LTSB numa instalação de ramificação atual. A conversão para a sucursal atual é suportada antes ou depois de expirar o suporte para o LTSB.
 
-  Para converter, tem de ter um acordo ativo de Garantia de Software com a Microsoft. Para obter mais informações, veja os artigos seguintes:
+  Para converter, tem de ter um acordo ativo de Garantia de Software com a Microsoft. Para obter mais informações, veja os seguintes artigos:
 
   - [Atualize o ramo de manutenção a longo prazo para o ramo atual](convert-to-current-branch.md)
   - [Licenciamento e balcões para Gestor de Configuração](learn-more-editions.md)
@@ -166,6 +166,6 @@ Para verificar a versão do seu site, na consola vá ao **About Configuration Ma
 
 ### <a name="branch"></a>Ramo
 
-Para confirmar o ramo do seu site, na consola vá aos**Sites**de**Configuração** > do Site **da Administração,** > e abra **as Definições da Hierarquia**. Se houver uma opção ativa para se converter ao ramo atual, o site executa a versão LTSB. Quando o site executa o ramo atual, a consola desativa esta opção.
+Para confirmar o ramo do seu site, na consola vá aos Sites de Configuração do Site **da Administração,**  >  **Site Configuration**  >  **Sites**e abra **as Definições da Hierarquia**. Se houver uma opção ativa para se converter ao ramo atual, o site executa a versão LTSB. Quando o site executa o ramo atual, a consola desativa esta opção.
 
 Para obter mais informações sobre as diferentes versões do Gestor de Configuração, consulte [as versões Baseline e update](../servers/manage/updates.md#bkmk_Baselines).

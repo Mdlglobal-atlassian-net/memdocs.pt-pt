@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712429"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268084"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Tutorial: Ativar a cogestão dos clientes existentes do Gestor de Configuração
 
@@ -64,9 +64,10 @@ Se não estiver já presente no seu ambiente, durante este tutorial irá:
 
 Ao longo deste tutorial, utilize as seguintes permissões para completar tarefas:
 
-- Uma conta que é *administradora global* no Azure Ative Directory (Azure AD) 
 - Uma conta que é um administrador de *domínio* na sua infraestrutura no local  
 - Uma conta que é um *administrador completo* para *todos os* âmbitos no Gestor de Configuração
+- Uma conta que é *administradora global* no Azure Ative Directory (Azure AD)
+   - Certifique-se de ter atribuído uma licença Intune à conta que usa para assinar com o seu inquilino. Caso contrário, o sessão falha com a mensagem de erro "Utilizador não reconhecido". <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Configurar o Azure AD híbrido
 
@@ -120,7 +121,7 @@ Se tiver problemas com a conclusão do Hybrid Azure AD para dispositivos Windows
 
 Utilize as Definições do Cliente para configurar os clientes do Gestor de Configuração para registar-se automaticamente com o Azure AD.  
 
-1. Abra as**definições**do Cliente de**visão geral** > da**administração** > do Gestor > de **Configuração**e, em seguida, edite as **Definições padrão do cliente**.  
+1. Abra as definições do Cliente de visão geral da administração do Gestor de **Configuração**  >  **Administration**  >  **Overview**  >  **Client Settings**e, em seguida, edite as **Definições padrão do cliente**.  
 
 2. Selecione **Serviços cloud**.  
 
@@ -134,7 +135,7 @@ Em seguida, vamos configurar a inscrição automática de dispositivos com Intun
 
 A inscrição automática também permite que os utilizadores matriculem os seus dispositivos Windows 10 para Intune. Os dispositivos matriculam-se quando um utilizador adiciona a sua conta de trabalho ao seu dispositivo pessoalmente propriedade, ou quando um dispositivo corporativo é unido ao Azure Ative Directory.  
 
-1. Inscreva-se no [portal Azure](https://portal.azure.com/) e selecione **Azure Ative Directory** > **Mobility (MDM e MAM)** > **Microsoft Intune**.  
+1. Inscreva-se no [portal Azure](https://portal.azure.com/) e selecione **Azure Ative Directory**  >  **Mobility (MDM e MAM)**  >  **Microsoft Intune**.  
 
 2. Configure o âmbito do **utilizador do MDM**. Especifique um dos seguintes para configurar quais os dispositivos dos utilizadores geridos pela Microsoft Intune e aceite as predefinições para os valores de URL.  
 
@@ -178,7 +179,7 @@ Para permitir a cogestão para a versão 1902 e anterior do Gestor de Configura�
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - Reveja o estado dos dispositivos cogeridos com o painel de [cogestão](how-to-monitor.md)
 - Comece a obter [valor imediato](quickstarts.md#immediate-value) da cogestão

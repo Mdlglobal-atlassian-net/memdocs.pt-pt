@@ -2,7 +2,7 @@
 title: Ativos em Desktop Analytics
 titleSuffix: Configuration Manager
 description: Conheça dispositivos, condutores e aplicações no Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722551"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268917"
 ---
 # <a name="assets-in-desktop-analytics"></a>Ativos em Desktop Analytics
 
@@ -41,15 +42,19 @@ O separador **Apps** mostra todas as aplicações instaladas que o serviço dete
 
 As aplicações **notáveis** são instaladas em mais de 2% dos dispositivos matriculados.
 
+A definição de detalhes da **Aplicação** é desativada por padrão, pelo que este separador combina todas as versões de apps com o mesmo nome e editor.<!-- 5542186 --> O comportamento padrão ajuda a reduzir o número total de aplicações que vê, o que ajuda a reduzir os seus esforços para anotar as aplicações. A contagem de aplicações no azulejo **Noteworthy Apps** também reflete esta configuração. Por exemplo, em vez de listar centenas de casos de Microsoft Edge, há um exemplo para todas as versões. Pode tomar decisões uma vez para todas as versões. Se precisar de tomar decisões sobre versões específicas de uma aplicação, ligue esta definição. Também pode configurar esta definição quando trabalhar com um plano de implementação. Para mais informações, consulte [os ativos do Plano.](about-deployment-plans.md#plan-assets)
+
+Selecione a aplicação da lista e selecione **Editar**. Esta ação apresenta detalhes para a aplicação. Selecione **o** menu importance drop-down e detete tede um valor. Também pode atribuir um **Proprietário.** Se fizer alterações, selecione **Guardar**.
+
 Configure a **importância** das aplicações definindo uma das seguintes categorias:
 
-- Crítica
+- Crítico
 - Importante
 - Ignorar
 - Não revisto
 - Não é importante.<!-- 3587232 -->
 
-Selecione a aplicação da lista e selecione **Editar**. Esta ação apresenta detalhes para a aplicação. Selecione **o** menu importance drop-down e detete tede um valor. Também pode atribuir um **Proprietário.** Se fizer alterações, selecione **Guardar**.
+Quando a **aplicação versa a** definição de detalhes está desligada, os detalhes da aplicação mostram o número de versões e idiomas da aplicação que combina. Se guardar quaisquer alterações aos detalhes da aplicação, aplica-se a todas as versões. Por exemplo, defino a **Importância** ou **proprietário**. Alguns valores mostrarão "Multiple", o que significa que não há um valor consistente em todas as versões.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Decisão de upgrade automático de aplicações de sistema e loja
 
@@ -70,7 +75,7 @@ Identificar **a Importância** e **a Decisão** de Upgrade é fundamental para t
 >    - Para aplicativos de loja, filtrar **Tipo** como **Moderno**
 >    - Para aplicações do sistema, **categoria** de filtro como **processo de fundo** ou componente **windows**
 
-Num plano de implementação, também pode definir a **decisão de Upgrade**. Para mais informações, consulte [os ativos do Plano](about-deployment-plans.md#plan-assets)
+Num plano de implementação, também pode definir a **decisão de Upgrade**. Para mais informações, consulte [os ativos do Plano.](about-deployment-plans.md#plan-assets)
 
 ### <a name="usage"></a>Utilização
 
@@ -82,7 +87,7 @@ Num plano de implementação, também pode definir a **decisão de Upgrade**. Pa
 
 - **Os dispositivos lançaram esta aplicação nos últimos 30 dias**: Este valor é a contagem de dispositivos onde um utilizador lançou a aplicação selecionada. Apenas inclui dispositivos que reportaram uso nos últimos 30 dias. Esta contagem está em todos os seus dispositivos matriculados com desktop Analytics em execução em qualquer versão do Windows 10. É possível que esta contagem possa variar para um plano de implantação.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Conheça os planos de implementação do Desktop Analytics](about-deployment-plans.md)  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076310"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905829"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1601 para Gestor de Configuração
 
@@ -83,7 +83,7 @@ Na Pré-Visualização Técnica de 1601, adicionámos suporte para as seguintes 
 
     -   **Todas as atualizações necessárias instaladas com um prazo superior a um determinado número de dias:** Esta regra verifica se o dispositivo do utilizador tem todas as atualizações necessárias (especificadas na regra de **atualizações automáticas necessárias)** dentro do prazo e do período de carência especificado por si, e instala automaticamente as atualizações pendentes.  
 
-    -   **Requerer encriptação de unidade BitLocker:** Esta é uma verificação para ver se a unidade\\primária (por exemplo, C: ) no dispositivo é encriptada pelo BitLocker. Se a encriptação Bitlocker não estiver ativada no dispositivo primário, o acesso ao e-mail e aos SharePoint Services é bloqueado.  
+    -   **Requerer encriptação de unidade BitLocker:** Esta é uma verificação para ver se a unidade primária (por exemplo, C: \\ ) no dispositivo é encriptada pelo BitLocker. Se a encriptação Bitlocker não estiver ativada no dispositivo primário, o acesso ao e-mail e aos SharePoint Services é bloqueado.  
 
     -   **Requerer Antimalware:** Esta é uma verificação para ver se o software antimalware (System Center Endpoint Protection ou Windows Defender) está ativado e em funcionamento.  
          Se não estiver ativado, o acesso ao e-mail e aos SharePoint Services é bloqueado.  
@@ -140,7 +140,7 @@ Um cliente está on-line se está atualmente ligado a uma função de sistema de
  O estado on-line do cliente não tem pré-requisitos. Pode começar a usá-lo assim que a pré-visualização técnica do Diretor de Configuração 1601 estiver instalada.  
 
 ### <a name="limitations"></a>Limitações  
- O estado on-line do cliente só está disponível para computadores Windows com o cliente Do Gestor de Configuração instalado. O estado on-line do cliente não é suportado para computadores Mac, computador Linux ou UNIX, ou dispositivos geridos com a On\-premises Mobile Device Management.  
+ O estado on-line do cliente só está disponível para computadores Windows com o cliente Do Gestor de Configuração instalado. O estado on-line do cliente não é suportado para computadores Mac, computador Linux ou UNIX, ou dispositivos geridos com a \- On premises Mobile Device Management.  
 
 ### <a name="to-view-client-online-status"></a>Para ver o estado on-line do cliente  
 
@@ -164,7 +164,6 @@ Um cliente está on-line se está atualmente ligado a uma função de sistema de
 
  O Gestor de Configuração ajuda-o agora a gerir as aplicações que adquiriu através de um programa deste tipo, importando as informações da licença da loja de aplicações e rastreando quantas das licenças que utilizou.  
 
- Para mais detalhes, consulte [Gerir aplicações que adquiriu através de um programa de compra de volume com O Gestor de Configuração](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS - Configuração de aplicações para aplicações<br />Híbrido  
  Algumas aplicações iOS suportam a pré-configuração de definições, tais como um servidor ou base de dados a que a aplicação deve estabelecer ligação. O Gestor de Configuração suporta agora a implementação de políticas de configuração de apps para o dispositivo que permitem ao utilizador utilizar a aplicação imediatamente sem precisar de saber esta informação. Os desenvolvedores devem ativar esta funcionalidade nas suas apps.  

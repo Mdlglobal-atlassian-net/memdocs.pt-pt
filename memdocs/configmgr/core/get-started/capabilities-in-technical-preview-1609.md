@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721536"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905712"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1609 para Gestor de Configuração
 
@@ -51,7 +51,6 @@ Se ativado, o Assistente de Configuração da Apple solicita este serviço duran
 
 A análise de upgrade permite avaliar e analisar a prontidão e compatibilidade do dispositivo com o Windows 10, para permitir atualizações mais fáceis e suaves. Com a integração do Upgrade Analytics com O Gestor de Configuração, pode aceder aos dados de compatibilidade de upgrade na consola de administração do Gestor de Configuração e, em seguida, a partir da lista de dispositivos, dispositivos-alvo para atualização ou reparação.
 
-Pode ler mais sobre upgrade Analytics em [Get started com Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Tipos de ligação nativa para perfis híbridos VPN do Windows 10
 
@@ -72,7 +71,7 @@ Neste lançamento, atualizámos o [Windows Store para integração de negócios]
 #### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>Comprar e sincronizar uma aplicação licenciada online paga
 
 1. Compre uma aplicação licenciada online paga na Windows Store for Business.
-2. No espaço de trabalho da **Administração** da consola De Configuração Manager, clique em**Atualizações** > de **Serviços** > cloud e na manutenção**da Windows Store para negócios**.
+2. No espaço de trabalho da **Administração** da consola De Configuração Manager, clique em Atualizações de **Serviços cloud**  >  **e na manutenção**da Windows Store para  >  **negócios**.
 3. No separador **Home,** no grupo **Sync,** clique em **Sync Now**.
 4. Pouco depois, a aplicação que adquiriu aparecerá no nó de Informações de **Licença para Aplicações** de Loja do espaço de trabalho de Gestão de **Aplicações.**
 
@@ -83,7 +82,7 @@ O procedimento para criar e implementar uma aplicação De Configuração Manage
 
 #### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>Modificar a chave secreta do cliente do Diretório Ativo Azure
 
-1. No espaço de trabalho da **Administração** da consola De Configuração Manager, clique em**Atualizações** > de **Serviços** > cloud e na manutenção**da Windows Store para negócios**.
+1. No espaço de trabalho da **Administração** da consola De Configuração Manager, clique em Atualizações de **Serviços cloud**  >  **e na manutenção**da Windows Store para  >  **negócios**.
 2. Selecione a sua conta Windows Store para negócios e, em seguida, clique em **Propriedades**.
 3. Na caixa de diálogo **Windows Store for Business Account Properties,** introduza uma nova tecla no campo de chaves secreto do **Cliente** e, em seguida, clique em **Verificar**. Uma vez verificado, clique em **Aplicar**e, em seguida, feche a caixa de diálogo.
 
@@ -239,7 +238,7 @@ As seguintes secções detalham as alterações introduzidas com esta pré-visua
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Alterações na UI e comportamento para grupos de fronteiras e localizações de conteúdos
 Seguem-se as principais alterações aos grupos de fronteira e à forma como os clientes encontram conteúdo. Muitas destas mudanças e conceitos trabalham em conjunto.
 - **As configurações para fast ou slow são removidas:** Já não configura pontos de distribuição individuais para ser rápido ou lento.  Em vez disso, cada sistema de site associado a um grupo de fronteiras é tratado da mesma forma. Devido a esta alteração, o separador **Referências** das propriedades do grupo de fronteira já não suporta a configuração de Fast ou Slow.
-- **Novo grupo de limites padrão em cada site:**  Cada site primário tem um novo grupo de limites padrão chamado ***\<Padrão-Site-Boundary-Group sitecode>***.  Quando um cliente não está numa localização de rede que é atribuída a um grupo de limites, esse cliente utilizará os sistemas de site associados ao grupo padrão a partir do seu site designado. Planeie usar este grupo de fronteiras como substituto do conceito de localização de conteúdo de recuo.    
+- **Novo grupo de limites padrão em cada site:**  Cada site primário tem um novo grupo de limites padrão chamado ***Padrão-Site-Boundary-Group \< sitecode>***.  Quando um cliente não está numa localização de rede que é atribuída a um grupo de limites, esse cliente utilizará os sistemas de site associados ao grupo padrão a partir do seu site designado. Planeie usar este grupo de fronteiras como substituto do conceito de localização de conteúdo de recuo.    
   -  **'Permitir localizações de origem de recaídas para conteúdo'** é removido: Já não configura explicitamente um ponto de distribuição a utilizar para o recuo e as opções para o definir são removidas da UI.
 
   Além disso, o resultado da definição Permitir que os **clientes utilizem uma localização de origem de recuo para conteúdo** num tipo de implementação para aplicações mudou. Esta definição num tipo de implementação permite agora que um cliente utilize o grupo de limites do site padrão como uma localização de fonte de conteúdo.
@@ -318,8 +317,8 @@ Ao configurar os diferentes grupos vizinhos para estarem disponíveis em diferen
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Atualizar os grupos de fronteira existentes para o novo modelo
 Quando instala a versão 1609 e atualiza o seu site, as seguintes configurações são automaticamente feitas. Estes destinam-se a garantir que o seu comportamento atual de recuo permanece disponível, até configurar novos grupos de fronteira e relacionamentos.  
-- Os pontos de distribuição desprotegidos de um site são adicionados ao código de site do grupo de limites do *Site-Boundary-Group\<>* grupo de fronteira seletiva.
-- Uma cópia é feita de cada grupo de fronteira existente que inclui um servidor de site configurado com uma ligação lenta. O nome do novo grupo é *** \<o nome original do grupo de fronteira>-Slow-Tmp:***  
+- Os pontos de distribuição desprotegidos de um site são adicionados ao código de site do *grupo padrão-site-boundary-group \<>* grupo de fronteira desse site.
+- Uma cópia é feita de cada grupo de fronteira existente que inclui um servidor de site configurado com uma ligação lenta. O nome do novo grupo é o nome original do grupo de *** \< fronteira>-Slow-Tmp:***  
   -   Os sistemas do site que têm uma ligação rápida são deixados no grupo de fronteira original.
   -   Uma cópia dos sistemas do site que têm uma ligação lenta são adicionadas à cópia do grupo de fronteira. Os sistemas originais do site configurados como lentopermanecem no grupo de fronteira original para a compatibilidade retrógrada, mas não são usados a partir desse grupo de fronteira.
   -   Esta cópia de grupo de fronteiras não tem limites associados a ela. No entanto, é criada uma ligação de recuo entre o grupo original e a nova cópia do grupo de fronteira que tem o tempo de recuo definido para zero.
@@ -338,7 +337,7 @@ Não selecionado | Selecionado |   **Recuo normal** - Use pontos de distribuiç�
 
 
 ## <a name="office-365-client-management-dashboard"></a>Painel de gestão de clientes do Office 365  
-A Pré-visualização Técnica 1609 do Gestor de Configuração introduz um novo painel de instrumentos. Para ver o dashboard, na consola do Gestor de Configuração vá ao Gabinete de**Visão Geral** > da **Biblioteca** > de Software**365 Gestão**de Clientes .
+A Pré-visualização Técnica 1609 do Gestor de Configuração introduz um novo painel de instrumentos. Para ver o dashboard, na consola do Gestor de Configuração vá ao Gabinete de Visão Geral da Biblioteca de **Software**  >  **Overview**  >  **365 Gestão**de Clientes .
 >[!NOTE]
 >No **What's New** space na consola 'Configuração Manager', o novo painel de instrumentos é incorretamente nomeado Painel de **Assistência do Office 365**.
 
@@ -348,7 +347,7 @@ O painel de instrumentos exibe gráficos para o seguinte:
 - Versões de clientes do Office 365
 - Escritório 365 línguas de cliente
 - Escritório 365 canais de clientes     
-Para obter mais informações, veja [Overview of update channels for Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx) (Descrição geral dos canais de atualização do Office 365 ProPlus).
+Para obter mais informações, veja [Overview of update channels for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels) (Descrição geral dos canais de atualização do Office 365 ProPlus).
 - Regras de implantação automática que têm o Office 365 Client selecionado no conjunto de produtos disponíveis.
 
 Pode tomar as seguintes ações no painel de instrumentos:
@@ -368,7 +367,7 @@ Neste comunicado, a partir do painel de gestão de clientes do Office 365, pode 
 - Pode ter problemas quando tenta importar as definições de clientes existentes (XML) no assistente de instalação de aplicações do Office 365. Pode configurar manualmente as definições do cliente sem problemas.
 
 #### <a name="to-deploy-office-365-apps-to-clients"></a>Para implementar as aplicações do Office 365 para clientes
-1. Na consola de Gestor de Configuração, navegue para o Gabinete de**Visão Geral** > da **Biblioteca** > de Software**365 Gestão**de Clientes.
+1. Na consola de Gestor de Configuração, navegue para o Gabinete de Visão Geral da Biblioteca de **Software**  >  **Overview**  >  **365 Gestão**de Clientes.
 2. Clique no **Instalador do Office 365** no painel superior direito. Abre o Assistente de Instalação de Clientes do Office 365.
 3. Na página Definições de **Aplicação,** forneça um nome e descrição para a aplicação, introduza o local de descarregamento dos ficheiros e, em seguida, clique em **Next**. Note que a localização deve ser especificada no formulário &#92;&#92;*servidor*&#92;*partilhar*.
 4. Na página definições do **Cliente importado,** escolha se importa as definições do cliente do Office 365 a partir de um ficheiro de configuração XML existente ou para especificar manualmente as definições e, em seguida, clique em **Next**.
@@ -383,7 +382,7 @@ Quando tiver um ficheiro de configuração existente, introduza a localização 
 Se optar por não colocar a embalagem no assistente, salte para o passo 9.
 8. Configure o restante das páginas do assistente como faria para uma implementação típica da aplicação. Para mais informações, consulte [Criar e implementar uma aplicação](../../apps/get-started/create-and-deploy-an-application.md).
 9. Conclua o assistente.
-10. Pode implementar ou editar a aplicação tal como faria com qualquer outra aplicação no Diretor de Configuração a partir de**Aplicações**de**Gestão** > de Aplicações de**Visão Geral** > da Biblioteca > de **Software.**
+10. Pode implementar ou editar a aplicação tal como faria com qualquer outra aplicação no Diretor de Configuração a partir de Aplicações de Gestão de Aplicações de Visão Geral da **Biblioteca**de  >  **Overview**  >  **Application Management**  >  **Applications**Software.
 
 >[!NOTE]
 >Depois de implementar aplicações do Office 365, pode criar regras de implementação automáticas para manter as aplicações. Para criar um ADR para aplicações do Office 365, clique em **Criar um ADR,** e selecione **Office 365 Client** quando escolher o produto. Para mais informações, consulte [a implementação automática](../../sum/deploy-use/automatically-deploy-software-updates.md)de atualizações de software .
@@ -417,7 +416,7 @@ Numa sequência de tarefas existente para instalar um sistema operativo, irá ad
 Nesta versão, pode obter uma visão rápida da conformidade geral dos dispositivos e das principais razões para o incumprimento utilizando novas tabelas no âmbito do espaço de **trabalho de Monitorização** na consola Do Gestor de Configuração.
 
 #### <a name="to-view-the-intune-compliance-charts"></a>Para ver as tabelas de conformidade intune
-1. Na consola 'Gestor de Configuração', vá a **monitorizar** > **as definições**de conformidade da**visão geral** > .
+1. Na consola 'Gestor de Configuração', vá a **monitorizar**as  >  **Overview**  >  **definições**de conformidade da visão geral .
 2. A tabela geral de conformidade com o **dispositivo** é apresentada.
 3. Clique no nó de Política de **Conformidade** para ver os gráficos **de conformidade geral** do dispositivo e **principais razões de incumprimento.**
 
@@ -437,7 +436,7 @@ Complete as seguintes secções por ordem:
 
 #### <a name="check-the-top-non-compliance-reasons-chart"></a>Consulte o gráfico das principais razões de incumprimento
 5. Verifique o gráfico **principais motivos de incumprimento.** Este gráfico enumera as 5 principais razões para o incumprimento, mas quando apenas duas definições de conformidade foram definidas entre as políticas, apenas são apresentadas as 2 principais razões de incumprimento.
-6. Clique numa das secções da tabela. Ambos os dispositivos devem aparecer na vista filtrada no dispositivo de**visão geral** >  **de Ativos e Conformidade** > **.**
+6. Clique numa das secções da tabela. Ambos os dispositivos devem aparecer na vista filtrada no dispositivo de visão geral **de Ativos e Conformidade**  >  **Overview**  >  **Device**.
 
 #### <a name="make-devices-compliant-and-check-the-charts"></a>Tornar os dispositivos conformes e verificar os gráficos
 7. Faça um dos dispositivos em conformidade com uma das políticas. Volte a verificar a tabela de conformidade geral do **dispositivo.** O gráfico deve apresentar um dispositivo compatível e um dispositivo não conforme.

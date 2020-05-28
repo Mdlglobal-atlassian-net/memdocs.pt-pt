@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719653"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905138"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Plano para a migração de objetos do Gestor de Configuração para o ramo atual do Gestor de Configuração
 
@@ -123,7 +123,7 @@ Você pode migrar anúncios de um site de origem suportado de Configuração 200
 É possível migrar itens de configuração e linhas de base de configuração.  
 
 > [!NOTE]  
->  Itens de configuração não interpretados das hierarquias de origem do Diretor de Configuração 2007 não são suportados para a migração. Não é possível migrar nem importar estes itens de configuração para a hierarquia de destino. Para saber mais sobre itens de configuração não interpretados, consulte itens de configuração não interpretados nos [itens de configuração sobre configuração no](https://go.microsoft.com/fwlink/?LinkId=103846) tópico de Gestão de Configuração Desejado na biblioteca de documentação de Configuração 2007.  
+>  Itens de configuração não interpretados das hierarquias de origem do Diretor de Configuração 2007 não são suportados para a migração. Não é possível migrar nem importar estes itens de configuração para a hierarquia de destino. Para saber mais sobre itens de configuração não interpretados, consulte itens de configuração não interpretados nos [itens de configuração sobre configuração no](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) tópico de Gestão de Configuração Desejado na biblioteca de documentação de Configuração 2007.  
 
 Pode importar Pacotes de Configuração 2007 do Gestor de Configuração. O processo de importação converte automaticamente os pacotes de configuração para serem compatíveis com o ramo atual do Gestor de Configuração.  
 

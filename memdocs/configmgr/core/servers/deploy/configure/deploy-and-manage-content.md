@@ -2,7 +2,7 @@
 title: Implementar conteúdo
 titleSuffix: Configuration Manager
 description: Depois de instalar pontos de distribuição para O Gestor de Configuração, eis como pode começar a implementar conteúdo para eles.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722978"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343155"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Implementar e gerir conteúdos para O Gestor de Configuração
 
@@ -24,11 +24,11 @@ ms.locfileid: "81722978"
 Depois de instalar pontos de distribuição para O Gestor de Configuração, pode começar a implementar conteúdo para os mesmos. Normalmente, o conteúdo transfere-se para pontos de distribuição em toda a rede, mas existem outras opções para obter conteúdo para os pontos de distribuição. Após transferências de conteúdo para um ponto de distribuição, pode atualizar, redistribuir, remover e validar esse conteúdo nos pontos de distribuição.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a>Distribuir conteúdo  
-Normalmente, distribui conteúdo para pontos de distribuição para que esteja disponível para computadores clientes. (A exceção a isto é quando se utiliza a distribuição de conteúdo a pedido para uma implementação específica.)  Quando distribui conteúdo, o Gestor de Configuração armazena ficheiros de conteúdo num pacote e, em seguida, distribui o pacote para o ponto de distribuição. Os tipos de conteúdo que pode distribuir, incluem:  
+Normalmente, distribui conteúdo para pontos de distribuição para que esteja disponível para computadores clientes. (A exceção a isto é quando se utiliza a distribuição de conteúdo a pedido para uma implementação específica.) Quando distribui conteúdo, o Gestor de Configuração armazena ficheiros de conteúdo num pacote e, em seguida, distribui o pacote para o ponto de distribuição. O conteúdo do pacote é retirado da biblioteca de conteúdos do servidor do site. Os tipos de conteúdo que pode distribuir, incluem:  
 
 - Tipos de implementação de aplicações  
 
-- Pacotes  
+- Pacote  
 
 - Pacotes de implementação  
 
@@ -52,21 +52,21 @@ Utilize o seguinte procedimento para distribuir conteúdo em pontos de distribui
 
 2.  No espaço de trabalho da Biblioteca de **Software,** selecione um dos seguintes passos para o tipo de conteúdo que pretende distribuir:  
 
-    - **Aplicações**: Expandir aplicações de **gestão** > de**aplicações**e, em seguida, selecionar as aplicações que pretende distribuir.  
+    - **Aplicações**: Expandir aplicações de **gestão**de  >  **aplicações**e, em seguida, selecionar as aplicações que pretende distribuir.  
 
-    - **Pacotes**: Expandir**pacotes**de **gestão** >  de aplicações e, em seguida, selecionar os pacotes que pretende distribuir.  
+    - **Pacotes**: Expandir pacotes de gestão de **aplicações**  >   **Packages**e, em seguida, selecionar os pacotes que pretende distribuir.  
 
-    - **Pacotes de implementação**: Expandir pacotes de**implementação**de **atualizações** >  de software e, em seguida, selecionar os pacotes de implementação que pretende distribuir.  
+    - **Pacotes de implementação**: Expandir pacotes de implementação de **atualizações**de software e, em  >   **Deployment Packages**seguida, selecionar os pacotes de implementação que pretende distribuir.  
 
-    - **Pacotes de controladores**: Expandir pacotes de controladores de **sistemas** >  **operativos**e, em seguida, selecionar os pacotes de controlador que pretende distribuir.  
+    - **Pacotes de controladores**: Expandir pacotes de controladores de **Operating Systems**  >   **sistemas operativos**e, em seguida, selecionar os pacotes de controlador que pretende distribuir.  
 
-    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas** >  **operativos**e, em seguida, selecionar as imagens do sistema operativo que pretende distribuir.  
+    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas**  >   **operativos**e, em seguida, selecionar as imagens do sistema operativo que pretende distribuir.  
 
-    - **Instaladores de sistemaoperativo**: Expandir**instaladores**de **sistemas operativos** > e, em seguida, selecionar os instaladores do sistema operativo que pretende distribuir.  
+    - **Instaladores de sistemaoperativo**: Expandir instaladores de **sistemas operativos**e, em  >  **Operating System Installers**seguida, selecionar os instaladores do sistema operativo que pretende distribuir.  
 
-    - **Imagens de arranque**: Expandir**as imagens**de arranque dos **sistemas operativos** >  e, em seguida, selecionar as imagens de arranque que pretende distribuir.  
+    - **Imagens de arranque**: Expandir as imagens de arranque dos **sistemas operativos**e, em  >   **Boot Images**seguida, selecionar as imagens de arranque que pretende distribuir.  
 
-    - **Sequências de tarefas**: Expandir as sequências de tarefas **dos sistemas** >  **operativos**e, em seguida, selecionar a sequência de tarefas que pretende distribuir. Embora as sequências de tarefas não contenham conteúdo, têm dependências de conteúdo associadas que são distribuídas.  
+    - **Sequências de tarefas**: Expandir as sequências de tarefas **dos**  >   **sistemas operativos**e, em seguida, selecionar a sequência de tarefas que pretende distribuir. Embora as sequências de tarefas não contenham conteúdo, têm dependências de conteúdo associadas que são distribuídas.  
 
       > [!NOTE]  
       > Se modificar a sequência de tarefas, terá de redistribuir o conteúdo.  
@@ -155,7 +155,7 @@ Pode criar um ficheiro de conteúdo pré-encenado comprimido que contenha os fic
     > [!NOTE]  
     > **Para candidaturas:** No separador **Casa,** no grupo **Aplicação,** clique em Criar Ficheiro de **Conteúdo Pré-Encenado**.  
     >   
-    > **Para pacotes:** No separador **Home,** no &lt;grupo *'Nome pacote*>', clique em Criar Ficheiro de Conteúdo **Pré-encenado**.  
+    > **Para pacotes:** No separador **Home,** no grupo &lt; *> De Pacote,* clique em Criar Ficheiro de **Conteúdo Pré-encenado**.  
 
 4.  Na página **Geral,** clique em **Navegar,** escolha a localização para o ficheiro de conteúdo pré-encenado, especifique um nome para o ficheiro e, em seguida, clique em **Guardar**. Utiliza este ficheiro de conteúdo pré-encenado em servidores de sites primários, servidores de sites secundários ou pontos de distribuição para importar o conteúdo e os metadados.  
 
@@ -252,18 +252,18 @@ Utilize o seguinte procedimento para exportar manualmente os ficheiros de conte�
 
 1.  Copie o ficheiro de conteúdo pré-encenado para o computador do qual pretende extrair o conteúdo.  
 
-2.  Copie a ferramenta de &lt;linha de comando de extrato de conteúdo da\\&lt;*plataforma* *ConfigMgrInstallationPath*>\bin> para o computador do qual pretende extrair o ficheiro de conteúdo pré-encenado.  
+2.  Copie a ferramenta de linha de comando de extrato de conteúdo da plataforma &lt; *ConfigMgrInstallationPath*>\bin> para o computador do qual pretende extrair o ficheiro de \\ &lt; *platform* conteúdo pré-encenado.  
 
 3.  Abra o pedido de comando e navegue até à localização da pasta do ficheiro de conteúdo pré-encenado e da ferramenta Extract Content.  
 
     > [!NOTE]  
     > Pode extrair um ou mais ficheiros de conteúdo pré-encenados num servidor de site, servidor de site secundário ou ponto de distribuição.  
 
-4.  Tipo **de extração /P:**&lt;*PrestagedFileLocation PrestagedLocation*>**\\**&lt;*PrestagedFileName*> **/S** para importar um único ficheiro.  
+4.  Tipo **de extração /P:** &lt; *PrestagedFileLocation* > **\\** &lt; *PrestagedLocation PrestagedFileName* >  **/S** para importar um único ficheiro.  
 
-    Tipo **de extração de conteúdo /P:**&lt;*PrestagedFileLocation*> **/S** para importar todos os ficheiros pré-encenados na pasta especificada.  
+    Tipo **de extração de conteúdo /P:** &lt; *PrestagedFileLocation* >  **/S** para importar todos os ficheiros pré-encenados na pasta especificada.  
 
-    Por exemplo, o extrato de tipo **/P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S** onde `D:\PrestagedFiles\` está o PrestagedFileLocation, `MyPrestagedFile.pkgx` é o nome de ficheiro pré-encenado, e `/S` informa o Gestor de Configuração para extrair apenas ficheiros de conteúdo que são mais recentes do que o que está atualmente no ponto de distribuição.  
+    Por exemplo, o extrato de tipo **/P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S** onde `D:\PrestagedFiles\` está o PrestagedFileLocation, é o nome de `MyPrestagedFile.pkgx` ficheiro pré-encenado, e informa o Gestor de `/S` Configuração para extrair apenas ficheiros de conteúdo que são mais recentes do que o que está atualmente no ponto de distribuição.  
 
     Quando extrai o ficheiro de conteúdo pré-encenado num servidor de site, os ficheiros de conteúdo são adicionados à biblioteca de conteúdos no servidor do site e, em seguida, a disponibilidade de conteúdo é registada na base de dados do servidor do site. Quando exporta o ficheiro de conteúdo pré-encenado num ponto de distribuição, os ficheiros de conteúdo são adicionados à biblioteca de conteúdos no ponto de distribuição, o ponto de distribuição envia uma mensagem de estado para o servidor do site principal dos pais, e então a disponibilidade de conteúdo é registada na base de dados do site.  
 
@@ -311,7 +311,7 @@ Tem as seguintes opções para gerir conteúdos:
 
 ### <a name="update-content"></a>Atualizar conteúdo
 Quando a localização do ficheiro de origem para uma implementação for atualizada adicionando novos ficheiros ou substituir ficheiros existentes por uma versão mais recente, pode atualizar os ficheiros de conteúdo nos pontos de distribuição utilizando os Pontos de **Distribuição de Atualização** ou a ação **de Atualização de Conteúdos:**  
-- Os ficheiros de conteúdo são copiados da rota de ficheiros de origem para a biblioteca de conteúdos no site que detém a fonte de conteúdo do pacote  
+- Os ficheiros de conteúdo são copiados da localização original da fonte do pacote para a biblioteca de conteúdos no site que detém a fonte de conteúdo do pacote
 - A versão do pacote é incrementada  
 - Cada instância da biblioteca de conteúdos nos servidores do site e nas atualizações de pontos de distribuição apenas com os ficheiros que mudaram  
 
@@ -324,19 +324,19 @@ Quando a localização do ficheiro de origem para uma implementação for atuali
 
 2.  No espaço de trabalho da Biblioteca de **Software,** selecione um dos seguintes passos para o tipo de conteúdo que pretende distribuir:  
 
-    - **Aplicações**: Expandir aplicações de **gestão** > de**aplicações**e, em seguida, selecionar as aplicações que pretende distribuir. Clique no separador Tipos de **Implementação** e, em seguida, selecione o tipo de implementação que pretende atualizar.  
+    - **Aplicações**: Expandir aplicações de **gestão**de  >  **aplicações**e, em seguida, selecionar as aplicações que pretende distribuir. Clique no separador Tipos de **Implementação** e, em seguida, selecione o tipo de implementação que pretende atualizar.  
 
-    - **Pacotes**: Expandir**pacotes**de **gestão** > de aplicações e, em seguida, selecionar os pacotes que pretende atualizar.  
+    - **Pacotes**: Expandir pacotes de gestão de **aplicações**  >  **Packages**e, em seguida, selecionar os pacotes que pretende atualizar.  
 
-    - **Pacotes de implementação**: Expandir pacotes de**implementação**de **atualizações** > de software e, em seguida, selecionar os pacotes de implementação que pretende atualizar.  
+    - **Pacotes de implementação**: Expandir pacotes de implementação de **atualizações**de software e, em  >  **Deployment Packages**seguida, selecionar os pacotes de implementação que pretende atualizar.  
 
-    - **Pacotes de controladores**: Expandir pacotes de controladores de **sistemas** > **operativos**e, em seguida, selecionar os pacotes de controlador que pretende atualizar.  
+    - **Pacotes de controladores**: Expandir pacotes de controladores de **Operating Systems**  >  **sistemas operativos**e, em seguida, selecionar os pacotes de controlador que pretende atualizar.  
 
-    - **Imagens do sistema operativo**: Expandir**as imagens**do sistema operativo dos **sistemas** > operativos e, em seguida, selecionar as imagens do sistema operativo que pretende atualizar.  
+    - **Imagens do sistema operativo**: Expandir as imagens do sistema operativo dos **sistemas**  >  **operativos**e, em seguida, selecionar as imagens do sistema operativo que pretende atualizar.  
 
-    - **Instaladores de sistemaoperativo**: Expandir**instaladores**de **sistemas operativos** > e, em seguida, selecionar os instaladores do sistema operativo que pretende atualizar.  
+    - **Instaladores de sistemaoperativo**: Expandir instaladores de **sistemas operativos**e, em  >  **Operating System Installers**seguida, selecionar os instaladores do sistema operativo que pretende atualizar.  
 
-    - **Imagens de arranque**: Expandir**as imagens**de arranque dos **sistemas operativos** >  e, em seguida, selecionar as imagens de arranque que pretende atualizar.  
+    - **Imagens de arranque**: Expandir as imagens de arranque dos **sistemas operativos**e, em  >   **Boot Images**seguida, selecionar as imagens de arranque que pretende atualizar.  
 
 3.  No separador **Home,** no grupo **'Implementação',** clique em Pontos de Distribuição de **Atualização**e clique em **OK** para confirmar que pretende atualizar o conteúdo.  
 
@@ -362,19 +362,19 @@ Utilize esta operação para reparar ficheiros de conteúdo na embalagem ou reen
 
 2.  No espaço de trabalho da Biblioteca de **Software,** selecione um dos seguintes passos para o tipo de conteúdo que pretende distribuir:  
 
-    - **Aplicações**: Expandir aplicações de **gestão** >  de**aplicações**e, em seguida, selecionar a aplicação que pretende redistribuir.  
+    - **Aplicações**: Expandir aplicações de **gestão**de  >   **aplicações**e, em seguida, selecionar a aplicação que pretende redistribuir.  
 
-    - **Pacotes**: Expandir**pacotes**de **gestão** > de aplicações e, em seguida, selecionar o pacote que pretende redistribuir.  
+    - **Pacotes**: Expandir pacotes de gestão de **aplicações**  >  **Packages**e, em seguida, selecionar o pacote que pretende redistribuir.  
 
-    - **Pacotes de implementação**: Expandir pacotes de**implementação**de **atualizações** >  de software e, em seguida, selecionar o pacote de implementação que pretende redistribuir.  
+    - **Pacotes de implementação**: Expandir pacotes de implementação de **atualizações**de software e, em seguida, selecionar o pacote de  >   **Deployment Packages**implementação que pretende redistribuir.  
 
-    - **Pacotes de controladores**: Expandir pacotes de controladores de **sistemas** > **operativos**e, em seguida, selecionar o pacote de controlador que pretende redistribuir.  
+    - **Pacotes de controladores**: Expandir pacotes de controladores de **Operating Systems**  >  **sistemas operativos**e, em seguida, selecionar o pacote de controlador que pretende redistribuir.  
 
-    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas** > **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende redistribuir.  
+    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas**  >  **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende redistribuir.  
 
-    - **Instaladores de sistemaoperativo**: Expandir**instaladores**de **sistemas operativos** > e, em seguida, selecionar o instalador do sistema operativo que pretende redistribuir.  
+    - **Instaladores de sistemaoperativo**: Expandir instaladores de **sistemas operativos**e, em  >  **Operating System Installers**seguida, selecionar o instalador do sistema operativo que pretende redistribuir.  
 
-    - **Imagens de arranque**: Expandir**as imagens**de arranque dos **sistemas operativos** >  e, em seguida, selecionar a imagem de arranque que pretende redistribuir.  
+    - **Imagens de arranque**: Expandir as imagens de arranque dos **sistemas operativos**e, em  >   **Boot Images**seguida, selecionar a imagem de arranque que pretende redistribuir.  
 
 3.  No separador **Home Page** , no grupo **Propriedades** , clique em **Propriedades**.  
 
@@ -409,7 +409,7 @@ Pode utilizar o método de classificação de gestão do Windows de Replicação
 
 Utilize apenas este método para forçar a replicação quando tiver de redistribuir o conteúdo depois de existirem problemas com a replicação normal de conteúdos (normalmente confirmados pela utilização do nó de monitorização da consola).   
 
-Para obter mais informações sobre esta opção SDK, consulte o Método de [Replicação de RetryContent em classe SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) em MSDN. Microsoft.com.
+Para obter mais informações sobre esta opção SDK, consulte o Método de [Replicação de RetryContent na classe SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
 
 ### <a name="remove-content"></a>Remover conteúdo
 Quando já não necessitar de conteúdo nos seus pontos de distribuição, pode remover os ficheiros de conteúdo no ponto de distribuição.  
@@ -426,19 +426,19 @@ No entanto, quando o conteúdo está associado a outro pacote que foi distribuí
 
 2.  No espaço de trabalho da Biblioteca de **Software,** selecione um dos seguintes passos para o tipo de conteúdo que pretende eliminar:  
 
-    - **Aplicações**: Expandir aplicações de **gestão** > de**aplicações**e, em seguida, selecionar a aplicação que pretende remover.  
+    - **Aplicações**: Expandir aplicações de **gestão**de  >  **aplicações**e, em seguida, selecionar a aplicação que pretende remover.  
 
-    - **Pacotes**: Expandir**pacotes**de **gestão** > de aplicações e, em seguida, selecionar o pacote que pretende remover.  
+    - **Pacotes**: Expandir pacotes de gestão de **aplicações**  >  **Packages**e, em seguida, selecionar o pacote que pretende remover.  
 
-    - **Pacotes de implementação**: Expandir pacotes de**implementação**de **atualizações** > de software e, em seguida, selecionar o pacote de implementação que pretende remover.  
+    - **Pacotes de implementação**: Expandir pacotes de implementação de **atualizações**de software e, em seguida, selecionar o pacote de  >  **Deployment Packages**implementação que pretende remover.  
 
-    - **Pacotes de controladores**: Expandir pacotes de controladores de **sistemas** > **operativos**e, em seguida, selecionar o pacote de controlador que pretende remover.  
+    - **Pacotes de controladores**: Expandir pacotes de controladores de **Operating Systems**  >  **sistemas operativos**e, em seguida, selecionar o pacote de controlador que pretende remover.  
 
-    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas** > **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende remover.  
+    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas**  >  **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende remover.  
 
-    - **Instaladores de sistemaoperativo**: Expandir instaladores de **sistemas** > **operativos**e, em seguida, selecionar o instalador do sistema operativo que pretende remover.  
+    - **Instaladores de sistemaoperativo**: Expandir instaladores de **Operating Systems**  >  **sistemas operativos**e, em seguida, selecionar o instalador do sistema operativo que pretende remover.  
 
-    - **Imagens de arranque**: Expandir**as imagens**de arranque dos **sistemas operativos** > e, em seguida, selecionar a imagem de arranque que pretende remover.  
+    - **Imagens de arranque**: Expandir as imagens de arranque dos **sistemas operativos**e, em  >  **Boot Images**seguida, selecionar a imagem de arranque que pretende remover.  
 
 3.  No separador **Home Page** , no grupo **Propriedades** , clique em **Propriedades**.  
 
@@ -491,19 +491,19 @@ Para obter mais informações sobre a configuração do calendário de validaç�
 
 2.  No espaço de trabalho da Biblioteca de **Software,** selecione um dos seguintes passos para o tipo de conteúdo que pretende validar:  
 
-    - **Aplicações**: Expandir aplicações de **gestão** > de**aplicações**e, em seguida, selecionar a aplicação que pretende validar.  
+    - **Aplicações**: Expandir aplicações de **gestão**de  >  **aplicações**e, em seguida, selecionar a aplicação que pretende validar.  
 
-    - **Pacotes**: Expandir**pacotes**de **gestão** > de aplicações e, em seguida, selecionar o pacote que pretende validar.  
+    - **Pacotes**: Expandir pacotes de gestão de **aplicações**  >  **Packages**e, em seguida, selecionar o pacote que pretende validar.  
 
-    - **Pacotes de implementação**: Expandir pacotes de**implementação**de **atualizações** > de software e, em seguida, selecionar o pacote de implementação que pretende validar.  
+    - **Pacotes de implementação**: Expandir pacotes de implementação de **atualizações**de software e, em seguida, selecionar o pacote de  >  **Deployment Packages**implementação que pretende validar.  
 
-    - **Pacotes de controladores**: Expandir pacotes de controladores de **sistemas** > **operativos**e, em seguida, selecionar o pacote de controlador que pretende validar.  
+    - **Pacotes de controladores**: Expandir pacotes de controladores de **Operating Systems**  >  **sistemas operativos**e, em seguida, selecionar o pacote de controlador que pretende validar.  
 
-    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas** > **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende validar.  
+    - **Imagens do sistema operativo**: Expandir imagens do sistema operativo dos **sistemas**  >  **operativos**e, em seguida, selecionar a imagem do sistema operativo que pretende validar.  
 
-    - **Instaladores de sistemaoperativo**: Expandir**instaladores**de **sistemas operativos** >  e, em seguida, selecionar o instalador do sistema operativo que pretende validar.  
+    - **Instaladores de sistemaoperativo**: Expandir instaladores de **sistemas operativos**e, em  >   **Operating System Installers**seguida, selecionar o instalador do sistema operativo que pretende validar.  
 
-    - **Imagens de arranque**: Expandir**as imagens**de arranque dos **sistemas operativos** > e, em seguida, selecionar a imagem de arranque que pretende fazer o pré-estágio.  
+    - **Imagens de arranque**: Expandir as imagens de arranque dos **sistemas operativos**e, em  >  **Boot Images**seguida, selecionar a imagem de arranque que pretende fazer o pré-estágio.  
 
 3.  No separador **Home Page** , no grupo **Propriedades** , clique em **Propriedades**.  
 

@@ -2,7 +2,7 @@
 title: Monitorizar a cogestão
 titleSuffix: Configuration Manager
 description: Utilize o painel de cogestão para rever informações sobre dispositivos cogeridos.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709699"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268067"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Como monitorizar a cogestão no Gestor de Configuração
 
@@ -173,7 +173,7 @@ A política de produção (CoMgmtSettingsProd) é direcionada para a coleção *
 
 ## <a name="wmi-device-data"></a>Dados do dispositivo WMI
 
-Consulta à **SMS_Client_ComanagementState** classe WMI. Pode criar coleções personalizadas no Gestor de Configuração, que ajudam a determinar o estado da sua implementação de cogestão. Para obter mais informações sobre a criação de coleções personalizadas, consulte [Como criar coleções.](../core/clients/manage/collections/create-collections.md)
+Consulta da classe **SMS_Client_ComanagementState** WMI no **ROOT\SMS\site_ &lt; SITECODE>** espaço de nome no servidor do site. Pode criar coleções personalizadas no Gestor de Configuração, que ajudam a determinar o estado da sua implementação de cogestão. Para obter mais informações sobre a criação de coleções personalizadas, consulte [Como criar coleções.](../core/clients/manage/collections/create-collections.md)
 
 Os seguintes campos estão disponíveis na classe WMI:  
 

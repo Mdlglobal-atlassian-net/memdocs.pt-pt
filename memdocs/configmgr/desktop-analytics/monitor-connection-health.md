@@ -10,12 +10,13 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37555c6b60b0d2c18096c2778e9a077baeb9143f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714543"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864876"
 ---
 # <a name="monitor-connection-health"></a>Estado de funcionamento da ligação do monitor
 
@@ -103,6 +104,9 @@ O dispositivo tem os seguintes atributos:
 O Gestor de Configuração deteta um ou mais problemas de bloqueio que impedem a inscrição do dispositivo. Para mais informações, consulte a lista de propriedades do dispositivo Desktop Analytics no Gestor de [Configuração](#bkmk_config-issues).  
 
 Por exemplo, o cliente do Gestor de Configuração não é pelo menos a versão 1902 (5.0.8790). Atualize o cliente para a versão mais recente. Considere permitir a atualização automática do cliente para o site do Gestor de Configuração. Para mais informações, consulte [os clientes de Upgrade](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+
+> [!TIP]
+> Há um problema conhecido com a atualização de segurança estendida de abril de 2020 (ESU) para o Windows 7 que faz com que os dispositivos reportem mal este erro. Para mais informações, consulte notas de [lançamento](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 A partir da versão 2002, pode identificar mais facilmente os problemas de configuração de procuração de clientes em duas áreas:
 
@@ -213,7 +217,7 @@ Caso contrário, poderá apresentar um dos seguintes erros:
 
 - Não é possível configurar a recolha de dados de compatibilidade da aplicação do dispositivo (SetRequestAllAppraiserVersions). Verifique os registos para obter os detalhes da exceção  
 
-- Não é possível escrever as Versões RequestAllAppraiserVersions à chave `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`de registo . Verifique permissões  
+- Não é possível escrever as Versões RequestAllAppraiserVersions à chave de registo `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . Verifique permissões  
 
 Verifique as permissões desta chave de registo. Certifique-se de que a conta do Sistema local pode aceder a esta chave para o cliente do Gestor de Configuração definir.  
 
@@ -228,7 +232,7 @@ Instale a última atualização de compatibilidade. Para mais informações, con
 
 ### <a name="appraiser-version"></a>Versão do avaliador
 
-Esta propriedade exibe a versão atual do componente Appraiser no dispositivo. Mostra a versão `%windir%\System32\appraiser.dll`do ficheiro, sem os pontos decimais. Por exemplo, a versão de ficheiro 10.0.17763 exibe como 10017763.
+Esta propriedade exibe a versão atual do componente Appraiser no dispositivo. Mostra a versão do ficheiro, `%windir%\System32\appraiser.dll` sem os pontos decimais. Por exemplo, a versão de ficheiro 10.0.17763 exibe como 10017763.
 
 ### <a name="last-successful-full-run-of-appraiser"></a>Última e bem sucedida corrida completa de Avaliador
 
@@ -248,7 +252,7 @@ Se não for bem sucedido, pode mostrar um dos seguintes erros:
 
 Para mais informações, reveja o registo m365AHandler no cliente.
 
-Verifique o seguinte `%windir%\System32\CompatTelRunner.exe`ficheiro: . Se não existir, reinstale as atualizações de [compatibilidade necessárias](enroll-devices.md#update-devices). Certifique-se de que nenhum outro componente do sistema está a remover este ficheiro, como a política de grupo ou um serviço antimalware.
+Verifique o seguinte ficheiro: `%windir%\System32\CompatTelRunner.exe` . Se não existir, reinstale as atualizações de [compatibilidade necessárias](enroll-devices.md#update-devices). Certifique-se de que nenhum outro componente do sistema está a remover este ficheiro, como a política de grupo ou um serviço antimalware.
 
 Se o ficheiro M365AHandler.log no cliente incluir um dos seguintes erros:
 
@@ -299,7 +303,7 @@ Se não for bem sucedido, pode mostrar um dos seguintes erros:
 
 Para mais informações, reveja o registo m365AHandler no cliente.
 
-Verifique o seguinte `%windir%\System32\DeviceCensus.exe`ficheiro: . Se não existir, reinstale as atualizações de [compatibilidade necessárias](enroll-devices.md#update-devices). Certifique-se de que nenhum outro componente do sistema está a remover este ficheiro, como a política de grupo ou um serviço antimalware.
+Verifique o seguinte ficheiro: `%windir%\System32\DeviceCensus.exe` . Se não existir, reinstale as atualizações de [compatibilidade necessárias](enroll-devices.md#update-devices). Certifique-se de que nenhum outro componente do sistema está a remover este ficheiro, como a política de grupo ou um serviço antimalware.
 
 ### <a name="windows-diagnostic-endpoint-connectivity"></a>Conectividade final do ponto final do windows de diagnóstico
 
@@ -356,9 +360,9 @@ Se esta verificação for bem sucedida, o dispositivo está devidamente configur
 
 Caso contrário, pode apresentar um dos seguintes erros:
 
-- Não se pode escrever o CommercialId para a chave `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`de registo. Verifique permissões  
+- Não se pode escrever o CommercialId para a chave de `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` registo. Verifique permissões  
 
-- Não é possível atualizar o `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`CommercialId na chave de registo . Verifique os registos para obter os detalhes da exceção  
+- Não é possível atualizar o CommercialId na chave de registo `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Verifique os registos para obter os detalhes da exceção  
 
 - Fornecer o valor CommercialId correto em`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -393,7 +397,7 @@ Caso contrário, pode apresentar um dos seguintes erros:
 
 - Não é possível verificar se o nome do dispositivo será enviado para a Microsoft como parte dos dados de diagnóstico do Windows. Verifique os registos para obter os detalhes da exceção  
 
-- Não é possível escrever AllowDeviceNameInTelemettry para a chave `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`de registo . Verifique permissões  
+- Não é possível escrever AllowDeviceNameInTelemettry para a chave de registo `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection` . Verifique permissões  
 
 Para mais informações, reveja o registo m365AHandler no cliente.  
 
@@ -409,6 +413,9 @@ Se esta verificação for bem sucedida, o componente DiagTrack está corretament
 Caso contrário, poderá apresentar um dos seguintes erros:
 
 - O componente Connected User Experience and Telemettry (diagtrack.dll) está desatualizado. Verificar os requisitos  
+
+    > [!TIP]
+    > Há um problema conhecido com a atualização de segurança estendida de abril de 2020 (ESU) para o Windows 7 que faz com que os dispositivos reportem mal este erro. Para mais informações, consulte notas de [lançamento](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Não é possível encontrar o componente De Experiência e Telemetria Conectada (diagtrack.dll). Verificar os requisitos  
 
@@ -426,7 +433,7 @@ Certifique-se de que o serviço connected **user experiences and Telemettry** no
 
 ### <a name="diagtrack-version"></a>Versão DiagTrack
 
-Esta propriedade exibe a versão atual do componente De experiência e telemetria do utilizador conectado no dispositivo. Mostra a versão `%windir%\System32\diagtrack.dll`do ficheiro, sem os pontos decimais. Por exemplo, a versão de ficheiro 10.0.10586 exibe como 10010586.
+Esta propriedade exibe a versão atual do componente De experiência e telemetria do utilizador conectado no dispositivo. Mostra a versão do ficheiro, `%windir%\System32\diagtrack.dll` sem os pontos decimais. Por exemplo, a versão de ficheiro 10.0.10586 exibe como 10010586.
 
 ### <a name="sqm-id-retrieval"></a>Recuperação de ID SQM
 

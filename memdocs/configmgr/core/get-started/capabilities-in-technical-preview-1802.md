@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 50e05d07ec3e2612c170157c45f5e64abe3766de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718610"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428195"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Capacidades em Pré-visualização Técnica 1802 para Gestor de Configuração
 
@@ -36,7 +36,7 @@ Reveja a [pré-visualização técnica para o Gestor](technical-preview.md) de C
 - **A atualização para uma nova versão de pré-visualização falha quando tiver um servidor de site em modo passivo**. Se tiver um [servidor de site primário em modo passivo,](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)então tem de desinstalar o servidor do site do modo passivo antes de atualizar para esta nova versão de pré-visualização. Pode reinstalar o servidor do site do modo passivo depois de o site completar a atualização.
 
   Para desinstalar o servidor do site do modo passivo:
-  1. Na consola do Gestor de Configuração, vá a Servidores de**Configuração** > de Site de Visão**Geral** > da **Administração** > **e às Funções**do Sistema do Site, e, em seguida, selecione o servidor do site de modo passivo.
+  1. Na consola do Gestor de Configuração, vá a **Servidores**de Configuração de Site de Visão Geral da Administração e às Funções do Sistema do  >  **Overview**  >  **Site Configuration**  >  **Site,** e, em seguida, selecione o servidor do site de modo passivo.
   2. No painel de **funções** do Sistema do Site, clique à direita na função do **servidor do Site** e, em seguida, escolha remover a **função**.
   3. Clique à direita no servidor do site do modo passivo e, em seguida, escolha **Eliminar**.
   4. Depois de o servidor do site desinstalar, no servidor do site primário ativo reiniciar o serviço **CONFIGURATION_MANAGER_UPDATE**.
@@ -56,7 +56,7 @@ Nesta versão, pode agora transitar a carga de trabalho de Proteção de Ponto f
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Configure a otimização da entrega do Windows para utilizar grupos de limites do Gestor de Configuração
 <!-- 1324696 -->
-Utiliza grupos de limites do Gestor de Configuração para definir e regular a distribuição de conteúdos através da sua rede corporativa e para escritórios remotos. A [Otimização](/windows/deployment/update/waas-delivery-optimization) de Entrega do Windows é uma tecnologia baseada em nuvem, peer-to-peer para partilhar conteúdos entre dispositivos Windows 10. A partir desta versão, configure a Otimização da Entrega para utilizar os seus grupos de fronteira ao partilhar conteúdo entre os pares. Uma nova definição de cliente aplica o identificador de grupo de limites como o identificador do grupo de otimização de entrega no cliente. Quando o cliente comunica com o serviço de nuvem de otimização de entrega, utiliza este identificador para localizar os pares com o conteúdo pretendido. 
+Utiliza grupos de limites do Gestor de Configuração para definir e regular a distribuição de conteúdos através da sua rede corporativa e para escritórios remotos. A [Otimização](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) de Entrega do Windows é uma tecnologia baseada em nuvem, peer-to-peer para partilhar conteúdos entre dispositivos Windows 10. A partir desta versão, configure a Otimização da Entrega para utilizar os seus grupos de fronteira ao partilhar conteúdo entre os pares. Uma nova definição de cliente aplica o identificador de grupo de limites como o identificador do grupo de otimização de entrega no cliente. Quando o cliente comunica com o serviço de nuvem de otimização de entrega, utiliza este identificador para localizar os pares com o conteúdo pretendido. 
 
 ### <a name="prerequisites"></a>Pré-requisitos
 - Otimização de Entregas só está disponível nos clientes do Windows 10
@@ -68,7 +68,7 @@ Utiliza grupos de limites do Gestor de Configuração para definir e regular a d
 2. Selecione o novo grupo de **Otimização de Entrega.**
 3. Ativar a definição de grupos de limitedo do Gestor de **Configuração de Utilização para o ID do Grupo**de Otimização de Entrega .
 
-Para mais informações, consulte a opção modo de entrega **do Grupo** nas opções de [Otimização de Entrega](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
+Para mais informações, consulte a opção modo de entrega **do Grupo** nas opções de [Otimização de Entrega](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
 
 
 
@@ -96,23 +96,23 @@ O modelo de sequência de tarefas padrão para a atualização do Windows 10 inc
 - **Remova aplicações incompatíveis**: Adicione passos neste grupo para remover quaisquer aplicações incompatíveis com esta versão do Windows 10. O método para desinstalar uma aplicação varia. Se a aplicação utilizar o Instalador do Windows, copie a linha de comando do **programa Desinstalar** a partir do separador **De si** no separador de implementação do Instalador do Windows. Em seguida, adicione um passo de Linha de **Comando executar** neste grupo com a linha de comando do programa desinstalação. Por exemplo: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Remova controladores incompatíveis**: Adicione passos neste grupo para remover quaisquer controladores incompatíveis com esta versão do Windows 10.
 - **Remova/suspenda a segurança de terceiros**: Adicione passos neste grupo para remover ou suspender programas de segurança de terceiros, como antivírus.
-   - Se estiver a utilizar um programa de encriptação de discos de terceiros, forneça o seu controlador de encriptação ao Windows Configuração com a [opção](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)de linha de comando **/ReflectDrivers** . Adicione um passo variável de sequência de [tarefas definido](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) na sequência de tarefas deste grupo. Detete a variável de sequência de tarefas para **OSDSetupAdicionalUpgradeOptions**. Desloque o valor para **/ReflectDriver** com o caminho para o condutor. Esta variável de ação de [sequência de tarefas](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) apendia a linha de comando de configuração do Windows utilizada pela sequência de tarefas. Contacte o seu fornecedor de software para obter qualquer orientação adicional sobre este processo.
+   - Se estiver a utilizar um programa de encriptação de discos de terceiros, forneça o seu controlador de encriptação ao Windows Configuração com a [opção](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)de linha de comando **/ReflectDrivers** . Adicione um passo variável de sequência de [tarefas definido](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) na sequência de tarefas deste grupo. Detete a variável de sequência de tarefas para **OSDSetupAdicionalUpgradeOptions**. Desloque o valor para **/ReflectDriver** com o caminho para o condutor. Esta variável de ação de [sequência de tarefas](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) apendia a linha de comando de configuração do Windows utilizada pela sequência de tarefas. Contacte o seu fornecedor de software para obter qualquer orientação adicional sobre este processo.
 
 ### <a name="new-groups-under-post-processing"></a>Novos grupos em **pós-processamento**
 - **Aplique controladores baseados em configuração**: Adicione passos neste grupo para instalar controladores baseados em configuração (.exe) a partir de pacotes.
 - **Instalar/ativar a segurança de terceiros**: Adicione passos neste grupo para instalar ou ativar programas de segurança de terceiros, como antivírus. 
-- **Definir aplicações e associações padrão do Windows**: Adicione passos neste grupo para definir aplicações padrão do Windows e associações de ficheiros. Primeiro prepare um computador de referência com as associações de aplicações desejadas. Em seguida, executar a seguinte linha de comando para exportar: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Adicione o ficheiro XML a uma embalagem. Em seguida, adicione um passo de Linha de [Comando de Execução](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) neste grupo. Especifique a embalagem que contém o ficheiro XML e, em seguida, especifique a seguinte linha de comando: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Para mais informações, consulte as associações de pedidos por [defeito de exportação ou importação.](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
-- **Aplicar personalizações e personalização**: Adicione passos neste grupo para aplicar personalizações de menu Iniciar, tais como organizar grupos de programas. Para mais informações, consulte [Personalizar o ecrã Iniciar](/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Definir aplicações e associações padrão do Windows**: Adicione passos neste grupo para definir aplicações padrão do Windows e associações de ficheiros. Primeiro prepare um computador de referência com as associações de aplicações desejadas. Em seguida, executar a seguinte linha de comando para exportar: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Adicione o ficheiro XML a uma embalagem. Em seguida, adicione um passo de Linha de [Comando de Execução](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) neste grupo. Especifique a embalagem que contém o ficheiro XML e, em seguida, especifique a seguinte linha de comando: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Para mais informações, consulte as associações de pedidos por [defeito de exportação ou importação.](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
+- **Aplicar personalizações e personalização**: Adicione passos neste grupo para aplicar personalizações de menu Iniciar, tais como organizar grupos de programas. Para mais informações, consulte [Personalizar o ecrã Iniciar](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### <a name="additional-recommendations"></a>Recomendações adicionais
-- Reveja a documentação do Windows para resolver erros de [atualização do Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Este artigo também inclui informações detalhadas sobre o processo de upgrade.
+- Reveja a documentação do Windows para resolver erros de [atualização do Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Este artigo também inclui informações detalhadas sobre o processo de upgrade.
 - No degrau de **predefinição Verificar Prontidão,** **certifique-se de espaço mínimo de disco livre (MB)**. Detete o valor para pelo menos **16384** (16 GB) para um pacote de upgrade de 32 bits, ou **20480** (20 GB) por 64 bits. 
 - Utilize a variável de [sequência de tarefas incorporada](../../osd/understand/task-sequence-variables.md) **SMSTSDownloadRetryCount** para voltar a tentar a política de descarregamento. Atualmente por padrão, o cliente retenta duas vezes; esta variável é definida para dois (2). Se os seus clientes não estiverem numa ligação de rede corporativa com fios, tentativas adicionais ajudam o cliente a obter a política. A utilização desta variável não causa nenhum efeito colateral negativo, para além de uma falha retardada se não conseguir descarregar a política.<!-- 501016 --> Aumente também a variável **SMSTSDownloadRetryDelay** a partir do padrão de 15 segundos.
 - Faça uma avaliação de compatibilidade inline. 
    - Adicione um segundo passo do **Sistema Operativo de Upgrade** no início do grupo **Prepare-se para atualizar.** Nomeie-o *Avaliação de Atualização*. Especifique o mesmo pacote de atualização e, em seguida, ative a opção de realizar a compatibilidade do **Windows Configuração sem iniciar a atualização**. Ativar **Continue a erro** no separador Opções. 
    - Imediatamente após este passo de *avaliação* de upgrade, adicione um passo de Linha de **Comando executar.** Especifique a seguinte linha de comando:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>No separador **Opções,** adicione a seguinte condição: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>Este código de devolução é o equivalente decimal de MOSETUP_E_COMPAT_SCANONLY (0xC1900210), que é uma varredura de compatibilidade bem sucedida sem problemas. Se o passo de Avaliação de *Atualização* for bem sucedido e devolver este código, este passo é ignorado. Caso contrário, se o passo de avaliação devolver qualquer outro código de devolução, este passo falha a sequência de tarefas com o código de retorno da compatibilidade do Windows Setup.
    - Para mais informações, consulte o [sistema operativo Upgrade](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
-- Se pretender alterar o dispositivo de BIOS para UEFI durante esta sequência de tarefas, consulte [Converter de BIOS para UEFI durante uma atualização no local](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+- Se pretender alterar o dispositivo de BIOS para UEFI durante esta sequência de tarefas, consulte [Converter de BIOS para UEFI durante uma atualização no local](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 Envie **feedback** do separador **Home** da fita se tiver mais recomendações ou sugestões.
 
@@ -158,13 +158,13 @@ Tente completar as tarefas. Em seguida, envie **feedback** do separador **home**
 <!--1319632-->
 O novo [dashboard Product Lifecycle](../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) mostra o estado da política de lifecycle do produto microsoft para os produtos da Microsoft instalados em dispositivos geridos com o Gestor de Configuração. O dashboard fornece-lhe informações sobre produtos da Microsoft no seu ambiente, estado de suporte e datas finais de suporte. Pode utilizar o painel de instrumentos para compreender a disponibilidade de suporte para cada produto. 
 
-Para aceder ao Painel de Instrumentos de Ciclo de Vida, na consola do Gestor de Configuração, vá ao Ciclo de Vida do**Produto lifecycle** **de Ativos e Compliance** >**Asset Intelligence** >
+Para aceder ao Painel de Instrumentos de Ciclo de Vida, na consola do Gestor de Configuração, vá ao **Ciclo**de Vida do Produto  > **Asset Intelligence**  > **lifecycle** de Ativos e Compliance Asset Intelligence
 
 
 
 ## <a name="improvements-to-reporting"></a>Melhorias na comunicação
 <!--1357653-->
-Como resultado do [seu feedback,](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) adicionámos um novo relatório, o **Windows 10 A servicing detalhes para uma coleção específica.** Este relatório mostra o Id de Recursos, o nome NetBIOS, o nome OS, o nome de lançamento do OS, a construção, a sucursal de OS e o estado de manutenção dos dispositivos Windows 10. Para aceder ao relatório, aceda a **relatórios de monitorização** >**Reporting** >de**relatórios** >**operativos** >**Windows 10 Detalhes**de manutenção para uma recolha específica .
+Como resultado do [seu feedback,](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) adicionámos um novo relatório, o **Windows 10 A servicing detalhes para uma coleção específica.** Este relatório mostra o Id de Recursos, o nome NetBIOS, o nome OS, o nome de lançamento do OS, a construção, a sucursal de OS e o estado de manutenção dos dispositivos Windows 10. Para aceder ao relatório, aceda a **relatórios de monitorização**de  > **Reporting**  > **Reports**  > **relatórios operativos**  > **Windows 10 Detalhes**de manutenção para uma recolha específica .
 
 
 
@@ -227,14 +227,14 @@ A lista de [cenários não apoiados](../plan-design/network/cng-certificates-ove
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Suporte de gateway de gestão de nuvem para Gestor de Recursos Azure
 <!-- 1324735 -->
-Ao criar uma instância do gateway de [gestão](../clients/manage/cmg/plan-cloud-management-gateway.md) da nuvem (CMG), o assistente oferece agora a opção de criar uma implementação do Gestor de **Recursos Azure**. [O Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) é uma plataforma moderna para gerir todos os recursos de solução como uma entidade única, chamada grupo de [recursos.](/azure/azure-resource-manager/resource-group-overview#resource-groups) Ao implantar a CMG com o Azure Resource Manager, o site utiliza o Azure Ative Directory (Azure AD) para autenticar e criar os recursos em nuvem necessários. Esta implantação modernizada não requer o clássico certificado de gestão Azure.  
+Ao criar uma instância do gateway de [gestão](../clients/manage/cmg/plan-cloud-management-gateway.md) da nuvem (CMG), o assistente oferece agora a opção de criar uma implementação do Gestor de **Recursos Azure**. [O Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) é uma plataforma moderna para gerir todos os recursos de solução como uma entidade única, chamada grupo de [recursos.](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups) Ao implantar a CMG com o Azure Resource Manager, o site utiliza o Azure Ative Directory (Azure AD) para autenticar e criar os recursos em nuvem necessários. Esta implantação modernizada não requer o clássico certificado de gestão Azure.  
 
 O assistente CMG ainda fornece a opção para uma **implantação de serviço clássico** usando um certificado de gestão Azure. Para simplificar a implantação e gestão de recursos, recomendamos a utilização do modelo de implantação do Gestor de Recursos Azure para todas as novas instâncias cmg. Se possível, reimplante as instâncias CMG existentes através do Gestor de Recursos.
 
 O Gestor de Configuração não migra as instâncias clássicas de CMG existentes para o modelo de implementação do Gestor de Recursos Azure. Crie novas instâncias CMG utilizando implementações do Gestor de Recursos Azure e, em seguida, remova as instâncias clássicas de CMG. 
 
 > [!IMPORTANT]
-> Esta capacidade não permite suporte para fornecedores de serviços de nuvem Azure (CSP). A implantação da CMG com o Azure Resource Manager continua a utilizar o clássico serviço de cloud, que o CSP não suporta. Para mais informações, consulte [os serviços azure disponíveis no Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> Esta capacidade não permite suporte para fornecedores de serviços de nuvem Azure (CSP). A implantação da CMG com o Azure Resource Manager continua a utilizar o clássico serviço de cloud, que o CSP não suporta. Para mais informações, consulte [os serviços azure disponíveis no Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### <a name="prerequisites"></a>Pré-requisitos
 - Integração com [a Azure AD.](../clients/deploy/deploy-clients-cmg-azure.md) Não é necessária a descoberta do utilizador da AD Azure.
@@ -317,7 +317,7 @@ O Windows AutoPilot é uma solução para o embarque e configuração de novos d
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Melhorias nas políticas do Gestor de Configuração para o Windows Defender Exploit Guard
 <!-- 1356220 -->
-Foram adicionadas definições de política adicionais para os componentes de acesso à pasta Attack Surface Reduction e Controlled foram adicionadas no Gestor de Configuração para [o Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
+Foram adicionadas definições de política adicionais para os componentes de acesso à pasta Attack Surface Reduction e Controlled foram adicionadas no Gestor de Configuração para [o Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
 
 **Novas definições para acesso a pasta controlada**<br/>
 Existem duas opções adicionais quando configurao o acesso à pasta Controlada: **bloquear apenas sectores** de disco e **auditar sectores**de discos apenas . Estas duas definições permitem que o acesso à pasta controlada seja ativado apenas para os sectores de arranque e não permite a proteção de pastas específicas ou as pastas protegidas por defeito. 
@@ -332,20 +332,20 @@ Existem duas opções adicionais quando configurao o acesso à pasta Controlada:
 
 ## <a name="microsoft-edge-browser-policies"></a>Políticas de navegador Microsoft Edge
 <!-- 1357310 -->
-Para os clientes que utilizam o navegador Web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) nos clientes do Windows 10, pode agora criar uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. Esta política inclui atualmente as seguintes definições:
+Para os clientes que utilizam o navegador Web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nos clientes do Windows 10, pode agora criar uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. Esta política inclui atualmente as seguintes definições:
 - **Definir o navegador Microsoft Edge como padrão**: configura a definição de aplicação padrão do Windows 10 para o navegador web para o Microsoft Edge
-- **Permitir a queda da barra**de endereços : Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política de [navegador AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Permitir sincronizar os favoritos entre os navegadores**da Microsoft : Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política do [navegador SyncFavoritesBetweenIEEMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Permitir dados de navegação claros na saída**: Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política de [navegador ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Não permita rastrear os cabeçalhos**: Para mais informações, consulte a política do [navegador AllowDoNotTrack](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Permitir a preenchimento automática**: Para mais informações, consulte a política do [navegador AllowAutofill](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Permitir cookies**: Para mais informações, consulte a política do [navegador AllowCookies.](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
-- Permita um **bloqueador pop-up**: Para mais informações, consulte a política do [navegador AllowPopups](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Permitir sugestões de pesquisa na barra**de endereços : Para mais informações, consulte a política do navegador [AllowSearchSuggestionsinAddressBar](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Permitir enviar tráfego intranet para o Internet Explorer**: Para mais informações, consulte a política do navegador [SendIntranetTraffictoInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Permitir o gestor de passwords**: Para mais informações, consulte a política de [navegador AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Permitir ferramentas de desenvolvimento**: Para mais informações, consulte a política do [navegador AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Permitir extensões**: Para mais informações, consulte a política do [navegador AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Permitir a queda da barra**de endereços : Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política de [navegador AllowAddressBarDropdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Permitir sincronizar os favoritos entre os navegadores**da Microsoft : Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política do [navegador SyncFavoritesBetweenIEEMicrosoftEdge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Permitir dados de navegação claros na saída**: Requer o Windows 10, versão 1703 ou mais tarde. Para mais informações, consulte a política de [navegador ClearBrowsingDataOnExit](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Não permita rastrear os cabeçalhos**: Para mais informações, consulte a política do [navegador AllowDoNotTrack](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Permitir a preenchimento automática**: Para mais informações, consulte a política do [navegador AllowAutofill](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Permitir cookies**: Para mais informações, consulte a política do [navegador AllowCookies.](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
+- Permita um **bloqueador pop-up**: Para mais informações, consulte a política do [navegador AllowPopups](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Permitir sugestões de pesquisa na barra**de endereços : Para mais informações, consulte a política do navegador [AllowSearchSuggestionsinAddressBar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Permitir enviar tráfego intranet para o Internet Explorer**: Para mais informações, consulte a política do navegador [SendIntranetTraffictoInternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Permitir o gestor de passwords**: Para mais informações, consulte a política de [navegador AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Permitir ferramentas de desenvolvimento**: Para mais informações, consulte a política do [navegador AllowDeveloperTools](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Permitir extensões**: Para mais informações, consulte a política do [navegador AllowExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### <a name="prerequisites"></a>Pré-requisitos
 - Cliente do Windows 10 que é azure Ative Diretório. 
@@ -423,5 +423,5 @@ As implementações faseadas automatizam um lançamento coordenado e sequenciado
 2. Executar a seguinte declaração para iniciar a fase de produção:<br/> `UPDATE PhasedDeployment SET EvaluatePhasedDeployment = 1, Action = 3 WHERE PhasedDeploymentID = <Phased Deployment ID>`
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações sobre a instalação ou atualização do ramo de pré-visualização técnica, consulte [a Pré-visualização técnica para o Gestor de Configuração](technical-preview.md).    

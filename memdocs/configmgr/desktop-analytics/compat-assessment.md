@@ -2,7 +2,7 @@
 title: Avaliação de compatibilidade
 titleSuffix: Configuration Manager
 description: Saiba mais sobre a avaliação da compatibilidade para aplicações do Windows e controladores no Desktop Analytics.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110003"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268900"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Avaliação da compatibilidade no Desktop Analytics
 
@@ -29,7 +30,7 @@ Desktop Analytics utiliza as seguintes categorias de avaliação de compatibilid
 
 - **Alta**: A aplicação é quase certa de falhar durante ou após a atualização. Pode precisar de uma reparação.
 
-- **Desconhecido**: A aplicação não foi avaliada. Não existem outros conhecimentos, como *as Questões Conhecidas dos Estados-Membros.*
+- **Desconhecido**: A aplicação não foi avaliada. Não existem outras ideias, tais como *Questões Conhecidas* de MS ou *Ready for Windows*.
 
 Na lista de ativos de aplicação ou condutor num plano de implementação, verá este valor para cada ativo na coluna Risco de **Compatibilidade.**
 
@@ -40,9 +41,13 @@ Na lista de ativos de aplicação ou condutor num plano de implementação, ver�
 Existem várias fontes que desktop Analytics usa para gerar a classificação de avaliação para aplicações:
 
 - [Microsoft conheceu problemas](#microsoft-known-issues)
+- [Pronto para Windows](#ready-for-windows)
 - [Insights avançados](#advanced-insights)
 
 Pode encontrar a avaliação de cada fonte na aplicação no Desktop Analytics. Na lista de ativos da aplicação num plano de implementação, selecione uma aplicação individual para abrir as suas propriedades flyout pane. Verá uma recomendação geral e um nível de avaliação. A secção de **fatores** de risco de compatibilidade mostra os pormenores destas avaliações.
+
+> [!TIP]
+> Se os detalhes da aplicação não mostrarem a avaliação da compatibilidade, pode ser porque a definição de Detalhes das **Versões** da Aplicação está desligada. Está desligado por padrão, e combina todas as versões de apps com o mesmo nome e editor. O serviço ainda faz avaliações de risco de compatibilidade para cada versão. Ligue os detalhes das **versões da App** para ver a avaliação do risco de compatibilidade para uma versão específica da aplicação. Para mais informações, consulte [os ativos do Plano.](about-deployment-plans.md#plan-assets)
 
 ## <a name="microsoft-known-issues"></a>Microsoft conheceu problemas
 
@@ -120,7 +125,7 @@ Os dados de compatibilidade do Windows classificam algumas aplicações e contro
 
 1. Selecione **os ativos** do Plano no menu e mude para o separador **Apps.**
 
-1. Filtre a coluna de nomes para mostrar `Safeguard`itens com valores que contenham a palavra . Selecione o resultado para ver mais informações.
+1. Filtre a coluna de nomes para mostrar itens com valores que contenham a palavra `Safeguard` . Selecione o resultado para ver mais informações.
 
     > [!NOTE]
     > Esta entrada não é uma aplicação real que está instalada nos seus dispositivos. É um espaço reservado para ajudar a identificar aplicações ou condutores no seu ambiente com a etiqueta de compatibilidade de salvaguarda.
@@ -130,6 +135,28 @@ Os dados de compatibilidade do Windows classificam algumas aplicações e contro
 1. Compare a lista publicada atual com a lista de ativos no seu ambiente. Remediar quaisquer aplicações ou controladores potencialmente problemáticos, atualizando para uma versão compatível.
 
 [![Screenshot da app Safeguard em Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Pronto para Windows
+
+O Estado de Adoção baseia-se em informações de dispositivos comerciais que partilham dados com a Microsoft. O estado está integrado com declarações de suporte de fornecedores de software.
+
+O Desktop Analytics fornece o estado de adoção de cada versão de um ativo encontrado em dispositivos comerciais. Este estado não inclui dados de dispositivos de consumo ou dispositivos que não partilhem dados. O estado pode não ser representativo da taxa de adoção em todos os dispositivos do Windows 10.
+
+As categorias possíveis são:
+
+- **Altamente adotados:** Pelo menos 100.000 dispositivos comerciais do Windows 10 instalaram esta aplicação.
+
+- **Adotado**: Pelo menos 10.000 dispositivos comerciais do Windows 10 instalaram esta aplicação.
+
+- **Dados insuficientes**: Demasiados dispositivos comerciais do Windows 10 estão a partilhar informações para esta aplicação para a Microsoft categorizar a sua adoção.
+
+- **Programador**de contactos : Pode haver problemas de compatibilidade com esta versão da aplicação. A Microsoft recomenda contactar o fornecedor de software para saber mais.
+
+- **Desconhecido**: Não há nenhuma informação disponível para esta versão desta aplicação. A informação pode estar disponível para outras versões da aplicação.
+
+### <a name="support-statement"></a>Declaração de apoio
+
+Se o fornecedor de software suportar uma ou mais versões desta aplicação no Windows 10, verá esta declaração no painel de propriedades da aplicação. Na secção fatores de risco de compatibilidade, veja a **declaração de apoio**.
 
 ## <a name="advanced-insights"></a>Insights avançados
 

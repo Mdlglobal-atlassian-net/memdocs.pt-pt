@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709965"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877739"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Referência técnica para a configuração plug-in do Gestor de Conversão de Pacotes XML
 
@@ -34,7 +34,7 @@ A tabela seguinte descreve os elementos XML no ficheiro de configuração do Ges
 
 |Elemento  |Tipo  |Descrição  |
 |---------|---------|---------|
-|**PcmPlugIn**|String|O nome do script ou executável para usar como plug-in do Gestor de Conversão do Pacote.|
+|**PcmPlugIn**|Cadeia|O nome do script ou executável para usar como plug-in do Gestor de Conversão do Pacote.|
 |**PcmPlugInTimeoutMilliseconds**|Número inteiro|O tempo máximo, em milissegundos, para aguardar o script plug-in do Gestor de Conversão do Pacote ou executável para completar o processamento de um pacote.|
 |**PcmPluginExitCode**|Número inteiro|O código de saída esperado do processo de encaixe. Este valor indica sucesso. Todos os outros códigos são considerados um erro.|
 |**ForçaRequisitos Extração**|Booleano|Permitir a conversão automática para utilizar os requisitos de recolha associados a uma embalagem. Isto só deve ser definido para True quando trabalhar com um plug-in do Gestor de Conversão de Pacotes que foi concebido para tomar decisões sobre quais os requisitos a utilizar.|
@@ -44,7 +44,10 @@ A tabela seguinte descreve os elementos XML no ficheiro de configuração do Ges
 ## <a name="sample-configuration-xml"></a>Configuração da amostra XML
 
 Esta secção fornece um exemplo da configuração do Gestor de Conversão de Pacotes elementos XML no ficheiro de configuração do Gestor de Configuração, **Microsoft.ConfigurationManagement.exe.config**. Por predefinição, este ficheiro encontra-se no seguinte caminho:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> A partir da versão 1910, este caminho mudou para utilizar a `Microsoft Endpoint Manager` pasta. Certifique-se de que não utiliza uma versão mais antiga do ficheiro que possa existir noutra pasta. 
 
 Na amostra, os elementos relacionados com o Gestor de Conversão de Pacotes estão dentro do seguinte elemento:`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

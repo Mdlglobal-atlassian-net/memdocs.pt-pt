@@ -63,7 +63,7 @@ O estado de implementação para implementações de pacotes e programas não é
 
 ## <a name="monitor-the-state-of-an-application-in-the-configuration-manager-console"></a>Monitorize o estado de uma aplicação na consola 'Gestor de Configuração'  
 
-1.  Na consola 'Gestor de Configuração', escolha**implementações** **de monitorização** > .  
+1.  Na consola 'Gestor de Configuração', escolha implementações **de monitorização**  >  **Deployments**.  
 
 3.  Para rever os detalhes de implementação de cada estado de conformidade e os dispositivos nesse estado, selecione uma implementação e, em seguida, no separador **Home,** no grupo **de implantação,** escolha **'Ver Status'** para abrir o painel **'Status' de implantação.** Neste painel, pode ver os ativos com cada estado de compatibilidade. Escolha qualquer ativo para visualizar informações mais detalhadas sobre o estado de implementação para esse ativo.  
 
@@ -80,7 +80,7 @@ A informação que é mostrada no painel de Estado de **Implementação** depois
 
 Se os dados apresentados no separador **Resumo** e no separador Tipos de **Implementação** não corresponderem aos dados apresentados no painel **'Status',** escolha **'Executar Summarization'** para atualizar os dados nestes separadores. Pode configurar o intervalo predefinido de resumo da implementação de aplicações da seguinte forma:  
 
-1. Na consola de Gestor de Configuração, escolha**sites**de**configuração** > do site **da administração** > .
+1. Na consola de Gestor de Configuração, escolha sites de configuração do site **da administração**  >  **Site Configuration**  >  **Sites**.
 
 2. Na lista **de Sites,** selecione o site para o qual pretende configurar o intervalo de resumição e, em seguida, no separador **Home,** no grupo **Definições,** escolha **Resumos**de Estado .
 

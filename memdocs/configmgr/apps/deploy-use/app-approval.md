@@ -2,7 +2,7 @@
 title: Aprovar aplicações
 titleSuffix: Configuration Manager
 description: Conheça as definições e comportamentos para aprovação de aplicações no Gestor de Configuração.
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fac75f0f13141c86b29d0213b3c7b06b9f603062
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643228"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802060"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Aprovar aplicações no Gestor de Configuração
 
@@ -109,6 +109,9 @@ Com estes pré-requisitos, os destinatários recebem um e-mail com notificação
 
 - Configure a notificação de [e-mail para alertas](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
+    > [!NOTE]
+    > O utilizador administrativo que implementa a aplicação necessita de autorização para criar um alerta e subscrição. Se este utilizador não tiver estas permissões, verá um erro no final do Assistente de **Software de Implementação:**"Não tem direitos de segurança para executar esta operação."<!-- 2810283 -->
+
 - Ative o Fornecedor SMS no local principal para utilizar um certificado.<!--SCCMDocs-pr issue 3135--> Utilize uma das seguintes opções:  
 
   - (Recomendado) Ativar [http melhorado](../../core/plan-design/hierarchy/enhanced-http.md) para o local principal.
@@ -127,39 +130,39 @@ Com estes pré-requisitos opcionais adicionais, os destinatários podem aprovar 
 
 - Ative o serviço de administração do SMS Provider através do portal de gestão de nuvem. Na consola do Gestor de Configuração, vá ao espaço de trabalho **da Administração,** expanda a **Configuração do Site,** e selecione o nó de Funções de **Servidores e Derôs.** Selecione o servidor com a função SMS Provider. No painel de detalhes, selecione a função **De Fornecedor SMS** e selecione **Propriedades** na fita no separador Role do Site. Selecione a opção de permitir o tráfego de gateway de gestão de nuvem do Gestor de **Configuração para o serviço de administração**.  
 
-  - O Provedor de SMS requer **.NET 4.5.2** ou mais tarde.  
+- O Provedor de SMS requer **.NET 4.5.2** ou mais tarde.  
 
-- [Gateway de gestão da cloud](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Criar um portal de gestão de [nuvens.](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)
 
-- A bordo do site para [serviços Azure](../../core/servers/deploy/configure/azure-services-wizard.md) para **Gestão de Nuvem**  
+- A bordo do site para [os serviços Azure](../../core/servers/deploy/configure/azure-services-wizard.md) para gestão de **nuvem.**
 
-  - Ativar a descoberta do [utilizador da AD Azure](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+- Ativar a descoberta do [utilizador da AD Azure](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-  - Configure manualmente as definições em Azure AD:  
+- Configure manualmente as definições em Azure AD:  
 
-        1. Vá ao [portal Azure](https://portal.azure.com) como utilizador com permissões *global de administração.* Vá ao **Diretório Ativo Azure**e selecione registos de **Aplicativos.**  
+    1. Vá ao [portal Azure](https://portal.azure.com) como utilizador com permissões *global de administração.* Vá ao **Diretório Ativo Azure**e selecione registos de **Aplicativos.**  
 
-        2. Selecione a aplicação que criou para a integração do Gestor de Configuração **cloud Management.**  
+    1. Selecione a aplicação que criou para a integração do Gestor de Configuração **cloud Management.**  
 
-        3. No menu **Gerir,** **selecione Autenticação**.  
+    1. No menu **Gerir,** **selecione Autenticação**.  
 
-            1. Na secção **REdirecionamento de URIs,** cola no seguinte caminho:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. Na secção **REdirecionamento de URIs,** cola no seguinte caminho:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Substitua-a `<CMG FQDN>` com o nome de domínio totalmente qualificado (FQDN) do seu serviço de gateway de gestão de nuvem (CMG). Por exemplo, GraniteFalls.Contoso.com.  
+        1. `<CMG FQDN>`Substitua-a com o nome de domínio totalmente qualificado (FQDN) do seu serviço de gateway de gestão de nuvem (CMG). Por exemplo, GraniteFalls.Contoso.com.  
 
-            3. Em seguida, selecione **Guardar**.  
+        1. Em seguida, selecione **Guardar**.  
 
-        4. No menu **Gerir,** selecione **Manifesto**.  
+    1. No menu **Gerir,** selecione **Manifesto**.  
 
-            1. No painel de manifesto edite, encontre a propriedade **oauth2AllowImplicitFlow.**  
+        1. No painel de manifesto edite, encontre a propriedade **oauth2AllowImplicitFlow.**  
 
-            2. Mude o seu valor para **verdadeiro.** Por exemplo, toda a linha deve parecer a seguinte linha:`"oauth2AllowImplicitFlow": true,`  
+        1. Mude o seu valor para **verdadeiro.** Por exemplo, toda a linha deve parecer a seguinte linha:`"oauth2AllowImplicitFlow": true,`  
 
-            3. Selecione **Guardar**.  
+        1. Selecione **Guardar**.  
 
 ### <a name="configure-email-approval"></a>Configure a aprovação de e-mail
 
-1. Na consola 'Gestor de Configuração', [implemente uma aplicação](deploy-applications.md) disponível para uma recolha de utilizadores. Na página Definições de **Implementação,** ative-a para aprovação. Em seguida, insira um ou mais endereços de e-mail para receber notificação. Endereços de e-mail separados com um ponto-semi-cólon ().`;`  
+1. Na consola 'Gestor de Configuração', [implemente uma aplicação](deploy-applications.md) disponível para uma recolha de utilizadores. Na página Definições de **Implementação,** ative-a para aprovação. Em seguida, insira um ou mais endereços de e-mail para receber notificação. Endereços de e-mail separados com um ponto-semi-cólon `;` ().  
 
      > [!Note]  
      > Qualquer pessoa na sua organização Azure AD que receba o e-mail pode aprovar o pedido. Não envie o e-mail para os outros a menos que queira que tomem medidas.  

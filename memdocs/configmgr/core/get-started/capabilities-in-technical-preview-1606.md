@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905677"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1606 para Gestor de Configuração
 
@@ -50,7 +50,7 @@ Pode criar categorias de dispositivos, que podem ser usados para colocar automat
 
 ### <a name="associate-a-collection-with-a-device-category"></a>Associar uma coleção com uma categoria de dispositivo
 Quando associar uma coleção a uma categoria de dispositivo, todos os dispositivos da categoria que especificaserão serão adicionados a essa recolha.
-1.  No diálogo **Properties** para uma recolha de dispositivos, clique em Adicionar Regra de Categoria**de Dispositivo de** **Regra** > .
+1.  No diálogo **Properties** para uma recolha de dispositivos, clique em **Adicionar**Regra de Categoria de Dispositivo de Regra  >  **Device Category Rule**.
 2.  Na caixa de diálogo **"Create Device Category Membership Rule",** selecione a categoria que será aplicada a todos os dispositivos da recolha.
 3.  Feche a caixa de diálogo de regras de **adesão à categoria de dispositivo supérrico** e a caixa de diálogo das propriedades de recolha.
 
@@ -80,9 +80,9 @@ Opções semelhantes foram adicionadas ao assistente de implementação de atual
 
 Device Guard é uma funcionalidade do Windows 10 que utiliza funcionalidades de hardware e software para controlar rigorosamente o que é permitido executar no dispositivo.
 
-Pode ler uma visão detalhada do que a Guarda de Dispositivos faz e como funciona [neste artigo da Technet.](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview)
+Para mais informações, consulte [Introdução à Proteção do Dispositivo](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-Nesta versão, o Gestor de Configuração pode interoperar com o Dispositivo Guard e [o Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) para que os ficheiros executáveis e DLL que são implementados com o Gestor de Configuração sejam automaticamente fidedignos, uma vez que provêm de um Instalador Gerido, o que significa que serão autorizados a funcionar no dispositivo-alvo e outros softwares não serão autorizados a funcionar a menos que sejam explicitamente autorizados a executar outras regras do AppLocker.  
+Nesta versão, o Gestor de Configuração pode interoperar com o Dispositivo Guard e [o Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) para que os ficheiros executáveis e DLL que são implementados com o Gestor de Configuração sejam automaticamente fidedignos, uma vez que provêm de um Instalador Gerido, o que significa que serão autorizados a funcionar no dispositivo-alvo e outros softwares não serão autorizados a funcionar a menos que sejam explicitamente autorizados a executar outras regras do AppLocker.  
 
 Atualmente, esta capacidade não é configurável a partir da consola Do Gestor de Configuração. Para configurar a apólice requer que configure uma chave de registo em cada cliente e configure os serviços windows no cliente.
 Uma vez feito isto, configure o ficheiro de política appLocker. Depois de configurar o ficheiro de política, pode implantá-lo em qualquer dispositivo cliente compatível.
@@ -93,24 +93,22 @@ Como todas as políticas do AppLocker, as políticas com regras de instalação 
 - Modo de auditoria – As aplicações são registadas impedidas de funcionar, mas quaisquer aplicações que teriam sido bloqueadas são reportadas num ficheiro de registo (isto será suportado numa versão posterior do 'Gestor de Configuração').
 - Aplicações ativadas - As aplicações estão bloqueadas de funcionamento.
 
-Mais informações sobre como usar o Dispositivo Guard com O Gestor de Configuração podem ser encontradas no [blog De Mobilidade e Segurança Empresarial.](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10)
+Para obter mais informações, veja os seguintes artigos:
 
-Continuar a ler:
+- [Introdução do Dispositivo Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Introdução do Dispositivo Guard](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Certificação e conformidade da Guarda de Dispositivos](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Guia de implantação da Guarda de Dispositivos](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Planeamento e início no processo de implementação de controlo de aplicações do Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Vários pontos de gestão de dispositivos para a Gestão de Dispositivos Móveis no local  
-  Com a Pré-visualização\-Técnica 1606, no local a Gestão de Dispositivos Móveis (MDM) suporta uma nova capacidade na Atualização de Aniversário do Windows 10 que configura automaticamente um dispositivo matriculado para ter mais de um ponto de gestão de dispositivos disponíveis para utilização. Esta capacidade permite que o dispositivo recue para outro ponto de gestão do dispositivo quando o que utiliza normalmente não está disponível. Esta capacidade funciona apenas para Computadores com a Atualização de Aniversário do Windows 10 instalada.  
+  Com a Pré-visualização Técnica 1606, no local a Gestão de \- Dispositivos Móveis (MDM) suporta uma nova capacidade na Atualização de Aniversário do Windows 10 que configura automaticamente um dispositivo matriculado para ter mais de um ponto de gestão de dispositivos disponíveis para utilização. Esta capacidade permite que o dispositivo recue para outro ponto de gestão do dispositivo quando o que utiliza normalmente não está disponível. Esta capacidade funciona apenas para Computadores com a Atualização de Aniversário do Windows 10 instalada.  
 
 ### <a name="try-it-out"></a>Experimente!  
 
 1.  Instale mais de um ponto de gestão de dispositivos na sua hierarquia.  
 
-2.  Inscreva um dispositivo de atualização\-de aniversário do Windows 10 para gestão de dispositivos móveis no local.  
+2.  Inscreva um dispositivo de atualização de aniversário do Windows 10 para gestão de \- dispositivos móveis no local.  
 
-Para obter informações sobre como preparar o\-seu site e inscrever dispositivos para a Gestão de Dispositivos Móveis no local, consulte [Gerir dispositivos móveis com infraestrutura no local](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+Para obter informações sobre como preparar o seu site e inscrever dispositivos para a Gestão de \- Dispositivos Móveis no local, consulte [Gerir dispositivos móveis com infraestrutura no local](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ## <a name="cloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Serviço de Procuração de Nuvem para gestão de clientes na Internet
 
@@ -221,10 +219,10 @@ Depois de os clientes terem as novas informações de localização para o Cloud
 
 Iniciando a Pré-visualização Técnica 1606, pode utilizar uma definição de agente de cliente do Gestor de Configuração, em vez da política de grupo, para permitir que os clientes do Office 365 recebam atualizações do Gestor de Configuração. Depois de configurar esta definição e implementar atualizações do Office 365, o agente cliente do Gestor de Configuração comunica com o agente cliente do Office 365 para descarregar as atualizações do Office 365 a partir de um ponto de distribuição e instalá-las. O Gestor de Configuração também faz o inventário da definição do agente cliente.
 
-Para mais informações, consulte as atualizações do [Manage Office 365 ProPlus.](https://technet.microsoft.com/library/mt741983.aspx)
+Para mais informações, consulte as atualizações do [Manage Office 365 ProPlus.](../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Defina a definição de cliente do Gestor de Configuração para gerir o agente cliente do Office 365
-1.  Na consola 'Gestor de Configuração', clique em**Configurar** > **As Definições**do Cliente de Visão Geral da **Administração** > .
+1.  Na consola 'Gestor **Administration**de Configuração', clique em  >  **Configurar**  >  **As Definições**do Cliente de Visão Geral da Administração .
 2. Abra as definições apropriadas do dispositivo para ativar o agente cliente. Para obter mais informações sobre as definições de clientes padrão e personalizadas, consulte [como configurar as definições](../../core/clients/deploy/configure-client-settings.md)do cliente .
 3. Clique em **Atualizações de Software** e selecione **Sim** para a gestão ativa da definição de Agente cliente do **Office 365.**  
 

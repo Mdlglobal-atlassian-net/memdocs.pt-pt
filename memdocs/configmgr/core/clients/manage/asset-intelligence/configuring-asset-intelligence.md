@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906616"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Configure inteligência de ativos no gestor de configuração
 
@@ -39,7 +39,7 @@ Os inventários de Inteligência de Ativos e gere o uso da licença de software.
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Para ativar classes de relatório de inventário de hardware do Asset Intelligence a partir da home page do Asset Intelligence  
 
-1.  Na consola de Gestor de Configuração, escolha A Inteligência de **Ativos e** > **Compliance**.  
+1.  Na consola de Gestor de Configuração, escolha A Inteligência de **Ativos e**  >  **Compliance**.  
 
 3.  No separador **Home,** no grupo De Inteligência de **Ativos,** escolha Aulas de **Inventário de Edição**.   
 
@@ -51,13 +51,13 @@ Os inventários de Inteligência de Ativos e gere o uso da licença de software.
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>Para ativar classes de relatório de inventário de hardware do Asset Intelligence a partir das propriedades de definições de cliente  
 
-1.  Na consola do Gestor de Configuração, escolha as**definições** > padrão do agente do cliente de **Configuração** >  do**Cliente**. Se criou configurações personalizadas do cliente, pode selecioná-las.  
+1.  Na consola do Gestor **Administration**de Configuração, escolha as  >   **Client Settings**  >  **definições padrão**do agente do cliente de Configuração do Cliente . Se criou configurações personalizadas do cliente, pode selecioná-las.  
 
 3.  No separador **Casa** > **Properties,** escolha **Propriedades**.   
 
-4.  Escolha**as classes**de conjunto de inventário > de **hardware**. .  
+4.  Escolha as classes de conjunto de inventário de **hardware**  >  **Set Classes**. .  
 
-5.  Escolha **filtro por categoria** > **Asset Intelligence Reporting Classes**. A lista de classes é atualizada apenas com as classes de relatório de inventário de hardware do Asset Intelligence.  
+5.  Escolha **filtro por categoria**Asset Intelligence Reporting  >  **Classes**. A lista de classes é atualizada apenas com as classes de relatório de inventário de hardware do Asset Intelligence.  
 
 6.  Selecione pelo menos uma aula de reportagem da lista.  
 
@@ -73,7 +73,7 @@ Para além de transferir novas informações do catálogo do Asset Intelligence,
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Para instalar uma função de sistema de sites do ponto de sincronização do Asset Intelligence  
 
-1.  Na consola do Gestor de Configuração, escolha servidores de**configuração** > do site **de administração**> **e funções**do sistema do site.  
+1.  Na consola do Gestor de Configuração, escolha servidores de configuração do site **de administração**e funções do sistema do >  **Site Configuration**  >  **site.**  
 
 3.  Adicione a função do sistema de sistema de sincronização de dados de inteligência de ativos a um servidor de sistema de site novo ou existente:  
 
@@ -110,7 +110,7 @@ Para além de transferir novas informações do catálogo do Asset Intelligence,
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>Para ativar o registo de eventos de início de sessão bem-sucedidos através de uma política de segurança local  
 
-1.  Num computador cliente do Gestor de Configuração, escolha **Iniciar** > **Ferramentas Administrativas** > **Política de Segurança Local**.  
+1.  Num computador cliente do Gestor de Configuração, escolha **Iniciar**  >  **Ferramentas Administrativas**  >  **Política de Segurança Local**.  
 
 2.  Na caixa de diálogo política de **segurança local,** em Definições de **Segurança,** expandir **políticas locais,** e depois escolher política de **auditoria.**  
 
@@ -139,7 +139,7 @@ Para além de transferir novas informações do catálogo do Asset Intelligence,
 4.  Na página **Importar** , especifique se está a importar um ficheiro de Licenciamento em Volume da Microsoft (MVLS) (.xml ou .csv) ou um ficheiro de Declaração de Licença Geral (.csv). Para obter mais informações sobre a criação de um ficheiro de Declaração de Licença Geral, consulte [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) mais à frente neste tópico.  
 
     > [!WARNING]  
-    >  Para transferir um ficheiro MVLS no formato .csv, que pode importar para o catálogo do Asset Intelligence, consulte [Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkId=226547). Para aceder a estas informações, tem de ter uma conta registada no site. Tem de contactar o seu representante de conta Microsoft para obter informações sobre como obter o seu ficheiro MVLS no formato .xml.  
+    >  Para transferir um ficheiro MVLS no formato .csv, que pode importar para o catálogo do Asset Intelligence, consulte [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Para aceder a estas informações, tem de ter uma conta registada no site. Tem de contactar o seu representante de conta Microsoft para obter informações sobre como obter o seu ficheiro MVLS no formato .xml.  
 
 5.  Introduza o caminho unC para o ficheiro de declaração de licença ou escolha **Navegar** para selecionar uma pasta e ficheiro partilhados por rede.  
 
@@ -192,10 +192,10 @@ O Asset Intelligence faz corresponder os produtos que especificar na declaraçã
 
 |Nome da coluna|Tipo de dados|Necessário|Exemplo|  
 |-----------------|---------------|--------------|-------------|  
-|Nome|Até 255 carateres|Sim|Título de software|  
-|Publicador|Até 255 carateres|Sim|Fabricante de software|  
+|Name|Até 255 carateres|Sim|Título de software|  
+|Publisher|Até 255 carateres|Sim|Fabricante de software|  
 |Versão|Até 255 carateres|Sim|Versão do título de software|  
-|Idioma|Até 255 carateres|Sim|Idioma do título de software|  
+|Linguagem|Até 255 carateres|Sim|Idioma do título de software|  
 |QuantidadeEfetiva|Valor inteiro|Sim|Número de licenças adquiridas|  
 |NúmeroDePO|Até 255 carateres|Não|Informações de nota de encomenda|  
 |NomeDoRevendedor|Até 255 carateres|Não|Informações do revendedor|  
@@ -213,7 +213,7 @@ O Asset Intelligence faz corresponder os produtos que especificar na declaraçã
 
 ##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Para configurar tarefas de manutenção do Asset Intelligence  
 
-1.  Na consola de Gestor de Configuração, escolha**sites**de**configuração** > do site **da administração** > .  
+1.  Na consola de Gestor de Configuração, escolha sites de configuração do site **da administração**  >  **Site Configuration**  >  **Sites**.  
 
 3.  Selecione o site no qual pretende configurar a tarefa de manutenção do Asset Intelligence.  
 

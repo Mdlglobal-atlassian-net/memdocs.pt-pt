@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073607"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904661"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Novidades na versão 1802 do Gestor de Configuração
 
@@ -124,10 +124,10 @@ Ao criar uma instância do gateway de [gestão](../../clients/manage/cmg/plan-cl
 
 - A partir desta versão, o portal de **gestão** da nuvem já não é uma funcionalidade de pré-lançamento.  
 
-- A documentação da funcionalidade é revista e melhorada. Para obter mais informações, veja os artigos seguintes:
+- A documentação da funcionalidade é revista e melhorada. Para obter mais informações, veja os seguintes artigos:
     - [Plano para o gateway de gestão de nuvem](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Tamanho do gateway de gestão da nuvem e números de escala](../configs/size-and-scale-numbers.md#bkmk_cmg)
-    - [Segurança e privacidade para o gateway de gestão na cloud ](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
+    - [Segurança e privacidade para o gateway de gestão na cloud](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
     - [Perguntas frequentes sobre o gateway de gestão de nuvens](../../clients/manage/cmg/cloud-management-gateway-faq.md)
     - [Certificados para o gateway de gestão na cloud](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)
     - [Configurar o gateway de gestão na cloud](../../clients/manage/cmg/setup-cloud-management-gateway.md)  
@@ -143,7 +143,7 @@ A Microsoft pretende deprecer o suporte ao cliente Linux e UNIX no Gestor de Con
 
 ### <a name="surface-device-dashboard"></a>Dashboard de dispositivos Surface
 <!--1355788-->
-O dashboard do dispositivo Surface fornece informações sobre os dispositivos Surface encontrados no seu ambiente. Na consola, vá a**Dispositivos**de Superfície **de Monitorização** > . Pode ver os itens:
+O dashboard do dispositivo Surface fornece informações sobre os dispositivos Surface encontrados no seu ambiente. Na consola, vá a Dispositivos de Superfície **de Monitorização**  >  **Surface Devices**. Pode ver os itens:
 - Por cento das superfícies
 - Por cento dos modelos Surface
 - As cinco melhores versões de firmware
@@ -169,7 +169,7 @@ A partir deste lançamento, pode ver um dashboard com informações sobre cogest
 
 ### <a name="microsoft-edge-browser-policies"></a>Políticas de navegador Microsoft Edge
 <!-- 1357310 -->
-Para os clientes que utilizam o navegador Web [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) nos clientes do Windows 10, crie uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. Para mais informações, consulte [Create Microsoft Edge perfil de navegador](../../../compliance/deploy-use/browser-profiles.md). 
+Para os clientes que utilizam o navegador Web [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nos clientes do Windows 10, crie uma política de definições de conformidade do Gestor de Configuração para configurar várias definições do Microsoft Edge. Para mais informações, consulte [Create Microsoft Edge perfil de navegador](../../../compliance/deploy-use/browser-profiles.md). 
 
 
 

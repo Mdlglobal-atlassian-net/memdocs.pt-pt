@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710791"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904097"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Preparar Servidores do Windows para suportar o Configuration Manager
 
@@ -98,7 +98,7 @@ As seguintes funções do Windows são necessárias para suportar funcionalidade
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>IIS solicita filtragem para pontos de distribuição  
 Por predefinição, o IIS utiliza a filtragem de pedidos para bloquear várias extensões de nomes de ficheiros e localizações de pastas contra o acesso por comunicação HTTP ou HTTPS. Num ponto de distribuição, isto impede os clientes de descarregar pacotes que tenham bloqueado extensões ou localizações de pastas.  
 
-Quando os ficheiros de origem do pacote tiverem extensões bloqueadas no IIS pela configuração de filtragem do pedido, tem de configurar a filtragem do pedido para as permitir. Isto é feito [editando a funcionalidade](https://technet.microsoft.com/library/hh831621.aspx) de filtragem de pedidos no IIS Manager nos seus computadores de ponto de distribuição.  
+Quando os ficheiros de origem do pacote tiverem extensões bloqueadas no IIS pela configuração de filtragem do pedido, tem de configurar a filtragem do pedido para as permitir. Isto é feito [editando a funcionalidade](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) de filtragem de pedidos no IIS Manager nos seus computadores de ponto de distribuição.  
 
 Além disso, as seguintes extensões de nome de ficheiro são utilizadas pelo Gestor de Configuração para pacotes e aplicações. Certifique-se de que as configurações de filtragem do seu pedido não bloqueiam estas extensões de ficheiros:  
 
@@ -136,4 +136,4 @@ Por exemplo, os ficheiros de origem para uma implementação de software podem i
 - HEAD
 - PROPFIND
 
-Para mais informações, consulte a filtragem do [pedido de configuração no IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs). 
+Para mais informações, consulte a filtragem do [pedido de configuração no IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 

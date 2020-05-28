@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210082"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905179"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Capacidades em Pré-visualização Técnica 1806 para Gestor de Configuração
 
@@ -68,7 +68,7 @@ Esta versão iterates ainda mais no suporte para atualizações de software de t
 
 Os seguintes catálogos de atualizações de software de terceiros estão disponíveis nesta versão:
 
- | Publicador | Nome do catálogo |
+ | Publisher | Nome do catálogo |
  |--------|---------------------|
  | HP | Catálogo de Atualizações de Clientes HP |
 
@@ -81,10 +81,10 @@ A SCUP continua a apoiar outros catálogos e cenários. A lista de catálogos no
 
     > [!Tip]  
     > O ponto de atualização do software requer HTTPS porque é um requisito para as APIs wSUS usadas para lidar com certificados de assinatura. Os clientes também não precisam de ser ativados por HTTPS. Para obter mais informações sobre a habilitação do HTTPS sobre o WSUS, consulte os seguintes artigos para assistência:  
-    > - [WSUS seguro com o protocolo Secure Sockets Layer](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Post de blog wSUS Support](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [WSUS seguro com o protocolo Secure Sockets Layer](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Post de blog wSUS Support](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Espaço suficiente para o disco no ponto de atualização do software, pasta WSUSContent, para armazenar o conteúdo binário de origem para atualizações de software de terceiros. A quantidade de armazenamento necessário varia em função do fornecedor, tipos de atualizações e atualizações específicas que publica para implementação. Se precisar de mover a pasta WSUSContent para outra unidade com mais espaço livre, consulte a publicação de blog da equipa de suporte wSUS Como alterar o local onde a [WSUS armazena atualizações localmente](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+- Espaço suficiente para o disco no ponto de atualização do software, pasta WSUSContent, para armazenar o conteúdo binário de origem para atualizações de software de terceiros. A quantidade de armazenamento necessário varia em função do fornecedor, tipos de atualizações e atualizações específicas que publica para implementação. Se precisar de mover a pasta WSUSContent para outra unidade com mais espaço livre, consulte a publicação de blog da equipa de suporte wSUS Como alterar o local onde a [WSUS armazena atualizações localmente](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Ative e implemente a definição do cliente [Ativar atualizações](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) de software de terceiros no grupo **Deactualizações** de Software.  
 
@@ -149,7 +149,7 @@ Execute os seguintes passos para *quaisquer atualizações de software de tercei
 
 
 ### <a name="monitoring-progress-of-third-party-software-updates"></a>Monitorização do progresso das atualizações de software de terceiros
-A sincronização de atualizações de software de terceiros é tratada pelo componente SMS_ISVUPDATES_SYNCAGENT no servidor do site. Pode visualizar mensagens de estado deste componente ou ver o estado mais detalhado no registo SMS_ISVUPDATES_SYNCAGENT.log. Este registo encontra-se no servidor do site na subpasta **Logs** do diretório de instalação do site. Por defeito, `C:\Program Files\Microsoft Configuration Manager\Logs`este caminho é . Para obter mais informações sobre a monitorização do processo geral de gestão de atualizações de software, consulte [as atualizações](../../sum/deploy-use/monitor-software-updates.md)de software do Monitor .
+A sincronização de atualizações de software de terceiros é tratada pelo componente SMS_ISVUPDATES_SYNCAGENT no servidor do site. Pode visualizar mensagens de estado deste componente ou ver o estado mais detalhado no registo SMS_ISVUPDATES_SYNCAGENT.log. Este registo encontra-se no servidor do site na subpasta **Logs** do diretório de instalação do site. Por defeito, este caminho é `C:\Program Files\Microsoft Configuration Manager\Logs` . Para obter mais informações sobre a monitorização do processo geral de gestão de atualizações de software, consulte [as atualizações](../../sum/deploy-use/monitor-software-updates.md)de software do Monitor .
 
 
 ### <a name="known-issues"></a>Problemas conhecidos
@@ -191,9 +191,6 @@ Há também uma nova condição global, são as **aplicações do Office 365 ger
 <!--1357861-->
 O Gestor de Conversão de Pacotes é agora uma ferramenta integrada que lhe permite converter pacotes legados do Gestor de Configuração 2007 em aplicações atuais do Gestor de Configuração. Depois pode utilizar funcionalidades de aplicações como dependências, regras de exigência e afinidade do dispositivo de utilização.
 
-> [!Tip]  
-> Documentação antiga para a funcionalidade existente no Gestor de Conversão de Pacotes está disponível no [TechNet.](https://technet.microsoft.com/library/hh531519.aspx) A informação relevante está em processo de migração para a biblioteca docs.microsoft.com.
-
 ### <a name="try-it-out"></a>Experimente!
  Tente completar as tarefas. Então envie [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) para nos dizer como funcionou.
 
@@ -206,7 +203,6 @@ O Gestor de Conversão de Pacotes é agora uma ferramenta integrada que lhe perm
      - **Pacote conversão**: Alguns pacotes podem ser facilmente convertidos em aplicações com esta ação.
      - **Corrigir e Converter**: Alguns pacotes requerem problemas a corrigir antes de se converterem em aplicações.  
 
-   Para obter mais informações sobre estas ações, consulte [Como analisar e converter pacotes.](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)  
 
 3. Vá ao espaço de trabalho **de monitorização** e selecione **O Estado**de Conversão do Pacote . Este novo painel de instrumentos mostra o estado geral de análise e conversão dos pacotes no site. Uma nova tarefa de fundo resume automaticamente os dados da análise.  
 
@@ -238,7 +234,7 @@ Agora pode implementar atualizações de software para dispositivos sem primeiro
 A Ferramenta de Personalização do Office está agora integrada com o Instalador office 365 na consola Do Gestor de Configuração. Ao criar uma implementação para o Office 365, pode agora configurar dinamicamente as mais recentes definições de gestão do Office. A Ferramenta de Personalização do Office é atualizada ao mesmo tempo que o lançamento de novas construções do Office 365. Agora pode aproveitar as novas definições de gestão no Office 365 assim que estiverem disponíveis. 
 
 ### <a name="prerequisites"></a>Pré-requisitos
-- O computador que executa a consola Do Gestor de Configuração precisa de acesso à Internet através da porta HTTPS 443. O Assistente de Instalação de Clientes do Office 365 utiliza um API padrão do navegador Windows para abrir https://config.office.com. Se for utilizado um proxy de internet, o utilizador deve poder aceder a este URL.
+- O computador que executa a consola Do Gestor de Configuração precisa de acesso à Internet através da porta HTTPS 443. O Assistente de Instalação de Clientes do Office 365 utiliza um API padrão do navegador Windows para abrir https://config.office.com . Se for utilizado um proxy de internet, o utilizador deve poder aceder a este URL.
 
 ### <a name="try-it-out"></a>Experimente!
  Tente completar as tarefas. Então envie [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) para nos dizer como funcionou.
@@ -357,5 +353,5 @@ Na [versão 1710](../plan-design/changes/whats-new-in-version-1710.md#site-infra
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações sobre a instalação ou atualização do ramo de pré-visualização técnica, consulte [a Pré-visualização técnica para o Gestor de Configuração](technical-preview.md).    

@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720010"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429330"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Atualize o Windows para a versão mais recente com O Gestor de Configuração
 
@@ -85,7 +85,7 @@ As seguintes tarefas não são compatíveis com a atualização no local. Exigem
 
   - Alterando divisórias de disco
   - Mudar a arquitetura do sistema de x86 para x64
-  - Implementação da UEFI. (Para obter mais informações sobre uma possível opção, consulte [Converter de BIOS para UEFI durante uma atualização no local](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - Implementação da UEFI. (Para obter mais informações sobre uma possível opção, consulte [Converter de BIOS para UEFI durante uma atualização no local](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).)
   - Modificação da linguagem base do OS  
 
 - Tem requisitos personalizados, incluindo a utilização de uma imagem de base personalizada, utilizando encriptação de discos de terceiros, ou requeira operações offline winPE.  

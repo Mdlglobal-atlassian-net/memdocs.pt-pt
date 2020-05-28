@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075018"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428578"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementar a gestão do BitLocker
 
@@ -77,7 +77,7 @@ Quando cria e implementa esta política, o cliente do Gestor de Configuração a
 
     - **Selecione protetor para acionar**o sistema operativo: Configure-o para utilizar um TPM e PIN, ou apenas o TPM.
 
-    - **Configurar**o comprimento mínimo pin para o arranque : Se necessitar de um PIN, este valor é o comprimento mais curto que o utilizador pode especificar. O utilizador introduz este PIN quando o computador arranca para desbloquear a unidade. Por defeito, o `4`comprimento mínimo do PIN é .
+    - **Configurar**o comprimento mínimo pin para o arranque : Se necessitar de um PIN, este valor é o comprimento mais curto que o utilizador pode especificar. O utilizador introduz este PIN quando o computador arranca para desbloquear a unidade. Por defeito, o comprimento mínimo do PIN é `4` .
 
     Para obter mais informações sobre estas e outras definições nesta página, consulte a [referência Definições - Unidade OS](../../tech-ref/bitlocker/settings.md#os-drive).
 
@@ -205,9 +205,9 @@ Quando mudar as autoridades de gestão de encriptação, planeie [a reencriptaç
 
 Para mais informações sobre a gestão do BitLocker com o Intune, consulte os seguintes artigos:
 
-- [Utilize encriptação do dispositivo com Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Utilize encriptação do dispositivo com Intune](../../../../intune/protect/encrypt-devices.md)
 - [Problemas bitLocker políticas no Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Configurar relatórios e portais BitLocker](setup-websites.md)

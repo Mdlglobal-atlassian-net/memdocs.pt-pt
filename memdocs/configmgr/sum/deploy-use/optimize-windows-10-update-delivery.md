@@ -2,7 +2,7 @@
 title: Otimizar a entrega de atualizações do Windows 10
 titleSuffix: Configuration Manager
 description: Saiba como utilizar o Gestor de Configuração para gerir os conteúdos da atualização para se manter atual com o Windows 10.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771376"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267795"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Otimizar a entrega da atualização do Windows 10 com o Gestor de Configuração
 
@@ -125,13 +125,13 @@ Se as trocas do lado do servidor de atualizações de maior dimensão forem bloq
 
 O agente de atualização do Windows (WUA) solicita primeiro conteúdo expresso. Se não instalar a atualização expressa, pode voltar à atualização completa do ficheiro.  
 
-1. O cliente do Gestor de Configuração diz à WUA para descarregar o conteúdo da atualização. Quando a WUA inicia um download expresso, primeiro descarrega `Windows10.0-KB1234567-<platform>-express.cab`um stub (por exemplo, que faz parte do pacote expresso.  
+1. O cliente do Gestor de Configuração diz à WUA para descarregar o conteúdo da atualização. Quando a WUA inicia um download expresso, primeiro descarrega um stub (por exemplo, `Windows10.0-KB1234567-<platform>-express.cab` que faz parte do pacote expresso.  
 
 2. WuA passa este stub para o instalador de atualização windows, manutenção baseada em componentes (CBS). A CBS usa o canhoto para fazer um inventário local, comparando os deltas do ficheiro no dispositivo com o necessário para chegar à versão mais recente do ficheiro que está a ser oferecido.  
 
 3. A CBS pede então à WUA que descarregue as gamas necessárias a partir de um ou mais ficheiros expresso .psf.  
 
-4. A Otimização da Entrega coordena com o Gestor de Configuração e descarrega as gamas a partir de um ponto de distribuição local ou pares, se disponível. Se a Otimização da Entrega estiver desativada, o Serviço de Transferência Inteligente de Fundo (BITS) é utilizado da mesma forma que o Gestor de Configuração coordena as fontes de cache dos pares. Otimização de Entrega ou BITS passa as gamas para WUA, o que os coloca à disposição da CBS para aplicar e instalar.  
+4. Se a Otimização de Entrega estiver ativada e os pares forem descobertos como com as gamas necessárias, o cliente irá descarregar de pares independentemente do cliente ConfigMgr. Se a Otimização da Entrega estiver desativada ou nenhum par tiver as gamas necessárias, o cliente ConfigMgr irá descarregar estas gamas a partir de um ponto de distribuição local (ou um par ou Microsoft Update). As gamas são transmitidas ao Windows Update Agent, que os disponibiliza para a CBS para aplicar as gamas.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Por que os ficheiros expressos (.psf) são tão grandes quando armazenados em fontes de pares do Gestor de Configuração na pasta ccmcache?
@@ -175,7 +175,7 @@ Utilize os seguintes ficheiros de registo para monitorizar os downloads delta:
 - WUAHandler.log
 - DeltaDownload.log
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Deploy software updates](deploy-software-updates.md)
 - [Automatically deploy software updates](automatically-deploy-software-updates.md)

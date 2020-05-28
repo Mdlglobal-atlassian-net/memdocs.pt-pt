@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fff68eaad52f753d27971562a4bbfaa47a6cf6e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffa50d2cfb3095eb136128c09b74e9ee6a4eb501
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711568"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904404"
 ---
 # <a name="diagnostics-and-usage-data-for-configuration-manager"></a>Diagnósticos e dados de utilização para Gestor de Configuração
 
@@ -28,7 +28,7 @@ Cada hierarquia do Gestor de Configuração permite diagnósticos e dados de uti
 > [!NOTE]  
 > O Gestor de Configuração recolhe dados apenas a partir da base de dados do servidor SQL do site, e não recolhe dados diretamente de clientes ou servidores do site.  
 
-Para mais informações, consulte a [declaração de privacidade](https://go.microsoft.com/fwlink/?LinkID=626527)da Microsoft .  
+Para mais informações, consulte a [declaração de privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft .  
 
 > [!div class="nextstepaction"]
 > [Como a Microsoft utiliza dados de diagnóstico e de utilização](how-diagnostics-and-usage-data-is-used.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076769"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877421"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurar gateway de gestão de nuvem para Gestor de Configuração
 
@@ -41,7 +41,7 @@ Utilize a seguinte lista de verificação para se certificar de que dispõe das 
 
     - Integração com [AD Azure](../../../servers/deploy/configure/azure-services-wizard.md) para Gestão de **Nuvem.** A descoberta do utilizador da AD Azure não é necessária.  
 
-    - O **Microsoft.ClassicCompute** & **Microsoft.Os** fornecedores de recursos de armazenamento devem ser registados dentro da subscrição Azure. Para mais informações, consulte [o Gestor de Recursos Azure.](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)
+    - O **Microsoft.ClassicCompute**  &  **Microsoft.Os** fornecedores de recursos de armazenamento devem ser registados dentro da subscrição Azure. Para mais informações, consulte [o Gestor de Recursos Azure.](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)
 
     - Um administrador de subscrição precisa de assinar.  
 
@@ -87,7 +87,7 @@ Faça este procedimento no site de alto nível. Esse site ou é um local primár
 6. Na página Definições do assistente, primeiro **selecione 'Navegar'** e escolher o . Ficheiro PFX para o certificado de autenticação do servidor CMG. O nome deste certificado preenche os campos de **nome** **fQDN** e serviço exigidos.  
 
    > [!NOTE]  
-   > O certificado de autenticação do servidor CMG suporta wildcards. Se utilizar um certificado wildcard, substitua`*`o asterisco ( ) no campo **FQDN** de serviço com o nome de anfitrião desejado para o CMG.<!--491233-->  
+   > O certificado de autenticação do servidor CMG suporta wildcards. Se utilizar um certificado wildcard, substitua o asterisco `*` ( ) no campo **FQDN** de serviço com o nome de anfitrião desejado para o CMG.<!--491233-->  
 
 7. Selecione a lista de abandono da **Região** para escolher a região azure para este CMG.  
 
@@ -199,6 +199,43 @@ Este comando exibe quaisquer pontos de gestão baseados na Internet que o client
 > [!Note]  
 > Para resolver problemas o tráfego de clientes da CMG, utilize **CMGHttpHandler.log**, **CMGService.log**e **SMS_Cloud_ProxyConnector.log**. Para mais informações, consulte [ficheiros De registo](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>Instale clientes fora do local usando um CMG
+
+Para instalar o agente cliente em sistemas não atualmente ligados à sua intranet, uma das seguintes condições deve ser verdadeira. Em todos os casos, é necessária uma conta de administrador local sobre os sistemas-alvo.
+
+1. O site do Gestor de Configuração está devidamente configurado para utilizar certificados PKI para autenticação do cliente. Além disso, os sistemas de clientes têm cada um um certificado de autenticação de cliente válido, único e de confiança anteriormente emitido para os mesmos.
+
+2. Os sistemas são unidos por domínio Azure AD ou híbridos unidos por domínio Azure.
+
+3. O site está a executar a versão de 'Gestor de Configuração' em 2002 ou mais tarde.
+
+Para as opções 1 e 2, utilize o parâmetro **/mp** para especificar o URL da CMG ao ligar **para ccmsetup.exe**. Para mais informações, consulte sobre os parâmetros e propriedades de [instalação do cliente.](../../deploy/about-client-installation-properties.md#mp)
+
+Para a opção 3, a partir da versão De Configuração 2002, pode instalar o agente cliente em sistemas não ligados à sua intranet utilizando um símbolo de registo a granel. Para obter mais informações sobre este método, consulte [Criar um sinal de registo](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)a granel .
+
+### <a name="configure-off-premises-clients-for-cmg"></a>Configure clientes fora do local para a CMG
+
+Pode ligar os sistemas a um CMG recentemente configurado onde as seguintes condições são verdadeiras:  
+
+- Os sistemas já têm o agente cliente do Gestor de Configuração instalado.
+
+- Os sistemas não estão ligados e não podem ser ligados à sua intranet.
+
+- Os sistemas satisfazem uma das seguintes condições:
+
+  - Cada um tem um certificado de autenticação de cliente válido, único e de confiança anteriormente emitido.
+
+  - Azure AD-joined domínio
+
+  - Híbrido Azure AD-joined domínio.
+
+- Não deseja ou não pode reinstalar completamente o agente cliente existente.
+
+- Tem um método para alterar o valor do registo da máquina e reiniciar o serviço de hospedar o **Agente SMS** utilizando uma conta de administrador local.
+
+Para forçar a ligação nestes sistemas, crie o valor de registo **CMGFQDNs** (do tipo REG_SZ) em **HKLM\Software\Microsoft\CCM**. Defino este valor para o URL do CMG (por exemplo, `https://contoso-cmg.contoso.com` ). Uma vez definido, reinicie o serviço de hospedagem do **Agente SMS** no sistema de cliente.
+
+Se o cliente do Gestor de Configuração não tiver um atual CMG ou um ponto de gestão virado para a Internet definido no registo, verifica automaticamente o valor do registo **CMGFQDNs.** Esta verificação ocorre a cada 25 horas, quando o serviço de hospedeiro do **agente SMS** começa, ou quando deteta uma mudança de rede. Quando o cliente se conecta ao site e aprende de um CMG, atualiza automaticamente este valor.
 
 ## <a name="modify-a-cmg"></a>Modificar um CMG
 
@@ -277,7 +314,7 @@ Apenas modifique o CMG da consola 'Gestor de Configuração'. Não é suportado 
 Se precisar de eliminar o CMG, faça-o também a partir da consola 'Gestor de Configuração'. A remoção manual de quaisquer componentes em Azure faz com que o sistema seja inconsistente. Este estado deixa informações órfãs, e comportamentos inesperados podem ocorrer.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Monitorize os clientes para gateway de gestão de nuvem](monitor-clients-cloud-management-gateway.md)
 - [Perguntas frequentes sobre o gateway de gestão de nuvens](cloud-management-gateway-faq.md)

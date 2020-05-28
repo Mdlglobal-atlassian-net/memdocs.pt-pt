@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905684"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1607 para Gestor de Configuração
 
@@ -62,15 +62,15 @@ A marca personalizada para o Centro de Software é aplicada de acordo com as seg
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Utilize o mesmo adaptador de rede para múltiplas implementações iniciadas pelo PXE
 Na versão 1607 de Pré-visualização Técnica, quando utiliza um adaptador de ethernet para imagem de vários dispositivos (como um adaptador USB ethernet que utiliza em vários dispositivos), pode ativar uma nova definição que lhe permite introduzir identificadores de hardware para os adaptadores de ethernet. O Gestor de Configuração ignora os identificadores de hardware na lista ao realizar uma instalação PXE e para o registo do cliente.
 
-Para mais informações sobre este problema, consulte o Blog da Equipa de [Apoio ao Sistema de Suporte osd do Gestor](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)de Configuração .  
+Para mais informações sobre este problema, consulte o Blog da Equipa de [Apoio ao Sistema de Suporte osd do Gestor](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721)de Configuração .  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Ativar a funcionalidade para gerir identificadores de hardware duplicados  
-1. Na consola de Configuração Manager, vá a Atualizações de**Overview** > **Serviços** > cloud e**funcionalidades**de**serviços** > de manutenção da **Administração.** > 
+1. Na consola de Configuração Manager, vá a **Atualizações**de Serviços cloud  >  **Overview**  >  **Cloud Services**  >  **e**  >  **funcionalidades**de serviços de manutenção da Administração.
 2. No painel de visualização, selecione **Gerir identificadores de hardware duplicados**.
 3. No separador **Home,** no grupo **Funcionalidades,** clique **em Ligar**.
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Adicione identificadores de hardware para o Gestor de Configuração ignorar  
-1. Na consola do Gestor de Configuração, vá a**Sites**de**Configuração** > do Site de**Visão Geral** > da **Administração** > .
+1. Na consola do Gestor de Configuração, vá a Sites de Configuração do Site de Visão Geral da **Administração**  >  **Overview**  >  **Site Configuration**  >  **Sites**.
 2. No separador **Home Page** , no grupo **Sites** , clique em **Definições de Hierarquia**.
 3. Vá ao separador De Aprovação de **Clientes e Registos Contraditórios.**
 4. Clique em **Adicionar** na secção **de identificadores de hardware Duplicate** para adicionar novos identificadores de hardware.

@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906140"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Utilize o Instalador Hotfix para instalar atualizações para o Gestor de Configuração
 
@@ -75,24 +75,24 @@ Cada pacote de atualização para O Gestor de Configuração é um ficheiro .exe
 
 |Ficheiro|Detalhes|  
 |----------|-------------|  
-|&lt;Versão\>do produto -QFE-KB\>-&lt;\>-&lt;KB idioma da plataforma id\>do artigo KB&lt;.exe|Este é o ficheiro de atualização. A linha de comandos para este ficheiro é gerida por Updatesetup.exe.<br /><br /> Por exemplo:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
+|&lt;Versão do produto \> -QFE-KB &lt; KB idioma da plataforma id do artigo \> - &lt; \> - &lt; \> KB .exe|Este é o ficheiro de atualização. A linha de comandos para este ficheiro é gerida por Updatesetup.exe.<br /><br /> Por exemplo:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Este invólucro .msi gere a instalação do pacote de atualização.<br /><br /> Ao executar a atualização, o Updatesetup.exe deteta o idioma de apresentação do computador em que é executado. Por predefinição, a interface de utilizador da atualização encontra-se em inglês. No entanto, quando o idioma de apresentação é suportado, a interface de utilizador é apresentada no idioma local do computador.|  
 |License_&lt;idioma\>.rtf|Quando aplicável, cada atualização contém um ou mais ficheiros de licença para os idiomas suportados.|  
-|&lt;Produto&updatetype&lt;>- versão\>-&lt;\>-&lt;produto KB artigo ID plataforma\>.msp|Quando a atualização se aplica à consola ou clientes do Gestor de Configuração, o pacote de atualização inclui ficheiros separados do Patch (.msp) do Instalador do Windows.<br /><br /> Por exemplo:<br /><br /> **Atualização da consola do Configuration Manager:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Atualização do cliente:** ConfigMgr1511-cliente-KB1234567-i386.msp<br />ConfigMgr1511-cliente-KB1234567-x64.msp|  
+|&lt;Produto&updatetype>- &lt; versão produto \> - &lt; KB artigo ID \> - &lt; plataforma \> .msp|Quando a atualização se aplica à consola ou clientes do Gestor de Configuração, o pacote de atualização inclui ficheiros separados do Patch (.msp) do Instalador do Windows.<br /><br /> Por exemplo:<br /><br /> **Atualização da consola do Configuration Manager:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Atualização do cliente:** ConfigMgr1511-cliente-KB1234567-i386.msp<br />ConfigMgr1511-cliente-KB1234567-x64.msp|  
 
 Por predefinição, o pacote de atualização regista as ações num ficheiro .log no servidor do site. O ficheiro de registo tem o mesmo nome que o pacote de atualização e é escrito na pasta **%SystemRoot%/Temp** .  
 
-Quando executa o pacote de atualização, é extraído um ficheiro para uma pasta temporária com o mesmo nome que o pacote de atualização e, em seguida, Updatesetup.exe é executado. Updatesetup.exe inicia a atualização &lt;de\> &lt;software\> para a versão do produto KB Number Wizard do Gestor de Configuração.  
+Quando executa o pacote de atualização, é extraído um ficheiro para uma pasta temporária com o mesmo nome que o pacote de atualização e, em seguida, Updatesetup.exe é executado. Updatesetup.exe inicia a atualização de software para a versão do produto KB Number Wizard do Gestor de &lt; \> &lt; \> Configuração.  
 
 Conforme aplicável ao âmbito da atualização, o assistente cria uma série de pastas sob a pasta de instalação do Gestor de Configuração no servidor do site. A estrutura de pastas é semelhante à seguinte:   
-**&lt;\>\\&lt;\>\\&lt;\\&lt;\>Nome\>do servidor \SMS_ Código do Site\>\Hotfix KB Plataforma de atualização de números . \\ \\ &lt;**  
+** \\ \\ &lt; Nome do servidor \> \SMS_ &lt; Código do Site \> \Hotfix \\ &lt; KB \> \\ &lt; Plataforma \> \\ &lt; \> de atualização**de números .  
 
 A tabela seguinte fornece detalhes sobre as pastas na estrutura de pastas:  
 
 |Nome da pasta|Mais informações|  
 |-----------------|----------------------|  
 |&lt;Nome do servidor\>|Este é o nome do servidor do site em que executou o pacote de atualização.|  
-|Código&lt;do Site SMS_\>|Este é o nome de partilha da pasta de instalação do Gestor de Configuração.|  
+|Código do Site SMS_ &lt;\>|Este é o nome de partilha da pasta de instalação do Gestor de Configuração.|  
 |&lt;Número da BDC\>|Este é o número de ID do artigo da Base de Dados de Conhecimento relativo a este pacote de atualização.|  
 |&lt;Tipo de atualização\>|Estes são os tipos de atualizações para O Gestor de Configuração. O assistente cria uma pasta separada para cada tipo de atualização contido no pacote de atualização. Os nomes das pastas representam os tipos de atualização. Incluem o seguinte:<br /><br /> **Servidor**: Inclui atualizações para servidores de site, servidores de base de dados de sites e computadores que executam o Fornecedor SMS.<br /><br /> **Cliente**: Inclui atualizações para o cliente do Gestor de Configuração.<br /><br /> **AdminConsole**: Inclui atualizações para a consola de Configuração Manager<br /><br /> Além dos tipos de atualização anteriores, o assistente cria uma pasta chamada **SCUP**. Esta pasta não representa um tipo de atualização. Em vez disso, contém o ficheiro .cab para o Updates Publisher.|  
 |&lt;Plataforma\>|Esta é uma pasta específica da plataforma. Contém os ficheiros de atualização específicos de um tipo de processador.  Estas pastas incluem:<br /><br />- x64<br /><br /> - I386|  
@@ -161,7 +161,7 @@ Se optar por não atualizar automaticamente a base de dados do site quando insta
 
 4.  Reinício dos serviços que foram interrompidos em etapas anteriores.  
 
-5.  Quando o pacote de atualização se instala, extrai **atualização.sql** para a seguinte localização no servidor do site: ** \\ \\ &lt;\>Nome do&lt;servidor \SMS_ Código\>do Site \Hotfix\\&lt;Número\>KB \update.sql**  
+5.  Quando o pacote de atualização se instala, extrai **atualização.sql** para a seguinte localização no servidor do site: Nome do servidor \SMS_ Código do ** \\ \\ &lt; \> Site &lt; \> \Hotfix \\ &lt; Número KB \> \update.sql**  
 
 ####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>Atualizar um computador que executa o Provedor de SMS  
 Depois de instalar um pacote de atualização que inclui atualizações para o Fornecedor SMS, tem de implementar a atualização para cada computador que executa o Fornecedor SMS. A única exceção é a instância do Fornecedor de SMS instalada anteriormente no servidor do site onde instalou o pacote de atualizações. A instância local do Fornecedor SMS no servidor do site é atualizada quando instala o pacote de atualização.  
@@ -169,7 +169,7 @@ Depois de instalar um pacote de atualização que inclui atualizações para o F
 Se remover e, em seguida, reinstalar o Fornecedor SMS num computador, terá de reinstalar a atualização para o Fornecedor SMS nesse computador.  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a>Atualizar clientes  
-Quando instala uma atualização que inclui atualizações para o cliente do Gestor de Configuração, é-lhe apresentada a opção de atualizar automaticamente os clientes com a instalação da atualização ou atualizar manualmente os clientes mais tarde. Para obter mais informações sobre a atualização automática de clientes, veja [Como atualizar clientes em computadores Windows](https://technet.microsoft.com/library/mt627885.aspx).  
+Quando instala uma atualização que inclui atualizações para o cliente do Gestor de Configuração, é-lhe apresentada a opção de atualizar automaticamente os clientes com a instalação da atualização ou atualizar manualmente os clientes mais tarde. Para obter mais informações sobre a atualização automática de clientes, veja [Como atualizar clientes em computadores Windows](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 Pode implementar atualizações com o Updates Publisher ou um pacote de implementação de software, ou pode optar por instalar manualmente a atualização em cada cliente. Para obter mais informações sobre como utilizar implementações para instalar atualizações, veja a secção [Implementar atualizações para o Configuration Manager](#BKMK_Deploy) deste tópico.  
 
@@ -178,7 +178,7 @@ Pode implementar atualizações com o Updates Publisher ou um pacote de implemen
 
 Para instalar manualmente a atualização do cliente, em cada cliente do Gestor de Configuração, deve executar **msiexec.exe** e fazer referência à atualização específica do cliente .msp.  
 
-Por exemplo, pode utilizar a seguinte linha de comando para uma atualização do cliente. Esta linha de comando executa mSIEXEC no computador cliente e refere o ficheiro .msp que o pacote de atualização extraído no servidor do site: **msiexec.exe \\ \\ &lt;/p ServerName\>\SMS_&lt;SiteCode\>\Hotfix KB Number \Hotfix\\&lt;\>\\&lt;\>\\&lt;\> Platform msp /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
+Por exemplo, pode utilizar a seguinte linha de comando para uma atualização do cliente. Esta linha de comando executa mSIEXEC no computador cliente e refere o ficheiro .msp que o pacote de atualização extraído no servidor do site: **msiexec.exe /p \\ \\ &lt; ServerName \> \SMS_ &lt; SiteCode \> \Hotfix \\ &lt; KB Number \> \Hotfix Platform msp \\ &lt; \> \\ &lt; \> /L v \* &lt; logfile \> REINSTALLMODE=mous REINSTALL=ALL**  
 
 ###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a>Consolas de Gestor de Configuração de Atualização  
 Para atualizar uma consola do Gestor de Configuração, tem de instalar a atualização no computador que executa a consola após a instalação da consola estar terminada.  
@@ -194,7 +194,7 @@ Se o computador que atualiza for executado o cliente do Gestor de Configuração
 
 - Pode instalar manualmente a atualização em cada computador. Para instalar manualmente a atualização da consola do Gestor de Configuração, em cada computador que executa a consola Do Gestor de Configuração, pode executar msiexec.exe e fazer referência à atualização da consola do Gestor de Configuração .msp.  
 
-Por exemplo, pode utilizar a seguinte linha de comando para atualizar uma consola do Gestor de Configuração. Esta linha de comando executa mSIEXEC no computador e refere o ficheiro .msp que o pacote de atualização extraído no servidor do site: **msiexec.exe /p \\ \\ &lt;ServerName\>\SMS_&lt;\>SiteCode \Hotfix\\&lt;KB Number\>\AdminConsole\\&lt;Platform\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
+Por exemplo, pode utilizar a seguinte linha de comando para atualizar uma consola do Gestor de Configuração. Esta linha de comando executa mSIEXEC no computador e refere o ficheiro .msp que o pacote de atualização extraído no servidor do site: **msiexec.exe /p \\ \\ &lt; ServerName \> \SMS_ &lt; SiteCode \> \Hotfix \\ &lt; KB Number \> \AdminConsole \\ &lt; Platform msp \> \\ &lt; \> /L v \* &lt; logfile \> REINSTALLMODE=mous REINSTALL=ALL**  
 
 ##  <a name="deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Implementar atualizações para o Configuration Manager  
 Depois de instalar o pacote de atualização num servidor de site, pode utilizar um dos três métodos seguintes para implementar atualizações para computadores adicionais.  
@@ -202,12 +202,12 @@ Depois de instalar o pacote de atualização num servidor de site, pode utilizar
 ###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>Utilizar atualizações Publisher 2011 para instalar atualizações  
 Quando instala o pacote de atualização num servidor de site, o Assistente de instalação cria um ficheiro de catálogo para Atualizações editora que pode utilizar para implementar as atualizações para computadores aplicáveis. O assistente cria sempre este catálogo, mesmo quando o utilizador seleciona a opção **Utilizar pacote e programa para implementar esta atualização**.  
 
-O catálogo de Atualizações Editor chama-se **SCUPCatalog.cab** e pode ser encontrado no seguinte local no computador onde o pacote de atualização é executado: ** \\ \\ &lt;ServerName\>\SMS_&lt;\>SiteCode \Hotfix\\&lt;KB Number\>\SCUP\SCUPCatalog.cab**  
+O catálogo de Atualizações Editora chama-se **SCUPCatalog.cab** e pode ser encontrado no seguinte local no computador onde o pacote de atualização é executado: ** \\ \\ &lt; ServerName \> \SMS_ &lt; SiteCode \> \Hotfix \\ &lt; KB Number \> \SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 > Uma vez que o ficheiro SCUPCatalog.cab é criado utilizando caminhos específicos para o servidor do site onde o pacote de atualização está instalado, não pode ser utilizado em outros servidores do site.  
 
-Depois de o assistente estar terminado, pode importar o catálogo para updates Publisher e, em seguida, utilizar atualizações de software Do Gestor de Configuração para implementar as atualizações. Para obter informações sobre updates Publisher, consulte [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) na biblioteca TechNet para System Center 2012.  
+Depois de o assistente estar terminado, pode importar o catálogo para updates Publisher e, em seguida, utilizar atualizações de software Do Gestor de Configuração para implementar as atualizações. Para obter informações sobre updates Publisher, consulte [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Utilize o seguinte procedimento para importar o ficheiro SCUPCatalog.cab para atualizar o Editor e publicar as atualizações.  
 
@@ -253,8 +253,8 @@ Pode implementar atualizações específicas para clientes aplicáveis. As segui
 |Servidor do site de administração central|Crie uma consulta de associação direta e adicione o computador do servidor do site de administração central.|  
 |Todos os servidores primários do site|Crie uma consulta de associação direta e adicione cada computador do servidor do site primário.|  
 |Todos os servidores do site secundário|Crie uma consulta de associação direta e adicione cada computador do servidor do site secundário.|  
-|Todos os clientes x86|Criar uma coleção com os seguintes critérios de consulta:<br /><br /> **Selecione \* a partir de SMS_R_System interior junte SMS_G_System_SYSTEM na SMS_G_System_SYSTEM. ResourceID = SMS_R_System.ResourceId onde SMS_G_System_SYSTEM. SystemType = "Pc baseado em X86"**|  
-|Todos os clientes x64|Criar uma coleção com os seguintes critérios de consulta:<br /><br /> **Selecione \* a partir de SMS_R_System interior junte SMS_G_System_SYSTEM na SMS_G_System_SYSTEM. ResourceID = SMS_R_System.ResourceId onde SMS_G_System_SYSTEM. SystemType = "Pc baseado em X64"**|  
+|Todos os clientes x86|Criar uma coleção com os seguintes critérios de consulta:<br /><br /> **Selecione \* a partir de SMS_R_System SMS_G_System_SYSTEM interior no SMS_G_System_SYSTEM. ResourceID = SMS_R_System.ResourceId onde SMS_G_System_SYSTEM. SystemType = "Pc baseado em X86"**|  
+|Todos os clientes x64|Criar uma coleção com os seguintes critérios de consulta:<br /><br /> **Selecione \* a partir de SMS_R_System SMS_G_System_SYSTEM interior no SMS_G_System_SYSTEM. ResourceID = SMS_R_System.ResourceId onde SMS_G_System_SYSTEM. SystemType = "Pc baseado em X64"**|  
 |Todos os computadores que executam a consola Do Gestor de Configuração|Crie uma consulta de associação direta e adicione cada computador.|  
 |Computadores remotos que executam uma instância do Fornecedor de SMS|Crie uma consulta de associação direta e adicione cada computador.|  
 

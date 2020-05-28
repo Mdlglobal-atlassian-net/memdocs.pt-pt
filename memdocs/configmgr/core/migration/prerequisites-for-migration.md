@@ -10,12 +10,12 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 229a8c7980933480a243278b2679d55f012490ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36e62ea5198824a6b3466853cdbcfc3057d1829e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713017"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428730"
 ---
 # <a name="prerequisites-for-migration-in-configuration-manager"></a>Pré-requisitos para a migração em Gestor de Configuração
 
@@ -93,11 +93,13 @@ São necessárias configurações para a utilização de operações de migraç�
 
   Durante a recolha de dados, são utilizados os protocolos de rede e as portas seguintes:  
 
-  -   NetBIOS/SMB - 445 (TCP)  
+  - NetBIOS/SMB - 445 (TCP)  
 
-  -   RPC (WMI) - 135 (TCP)  
+  - RPC (WMI) - 135 (TCP & UDP)  
 
-  -   SQL Server - As portas TCP utilizadas pelas bases de dados dos sites de origem e de destino.  
+  - RPC dinâmico. As portas dinâmicas utilizam uma gama de números de porta que são definidos pela versão S. Estes portos também são conhecidos como portos efémeros. Para mais informações sobre os intervalos de portas predefinidos, consulte [Descrição geral do serviço e requisitos de portas de rede para o Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).<!-- SCCMDocs#1053 -->
+
+  - SQL Server - As portas TCP utilizadas pelas bases de dados dos sites de origem e de destino.  
 
 - **Migrar Atualizações de Software:**  
 

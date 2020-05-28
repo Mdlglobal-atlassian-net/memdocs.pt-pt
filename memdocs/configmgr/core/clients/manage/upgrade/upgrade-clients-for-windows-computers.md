@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715026"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427768"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Como atualizar clientes para computadores Windows em 'Gestor de Configuração'
 
@@ -39,7 +39,7 @@ Exclua os clientes da atualização especificando uma coleção de exclusão. Pa
 > Se atualizar a sua infraestrutura de servidor a partir de uma versão anterior do 'Gestor de Configuração', complete as atualizações do servidor antes de atualizar os clientes do Gestor de Configuração. Este processo inclui a instalação de todas as atualizações de filiais atuais. A mais recente atualização do ramo atual contém a versão mais recente do cliente. Atualize os clientes depois de ter instalado todas as atualizações do Gestor de Configuração.
 
 > [!NOTE]
-> Se pretender reatribuir o site aos clientes durante a atualização, `SMSSITECODE` especifique o novo site utilizando a propriedade cliente.msi. Se utilizar o `AUTO` valor `SMSSITECODE`do , `SITEREASSIGN=TRUE`também especifique . Esta propriedade permite a reatribuição automática do site durante a atualização. Para mais informações, consulte as propriedades de [instalação do Cliente - SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
+> Se pretender reatribuir o site aos clientes durante a atualização, especifique o novo site utilizando a `SMSSITECODE` propriedade cliente.msi. Se utilizar o valor do `AUTO` `SMSSITECODE` , também especifique `SITEREASSIGN=TRUE` . Esta propriedade permite a reatribuição automática do site durante a atualização. Para mais informações, consulte as propriedades de [instalação do Cliente - SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
 
 ## <a name="about-automatic-client-upgrade"></a><a name="bkmk_autoupdate"></a>Sobre a atualização automática do cliente
 
@@ -97,9 +97,9 @@ Utilize o seguinte procedimento para configurar a atualização automática do c
 Os clientes receberão estas definições da próxima vez que transferirem a política.
 
 > [!NOTE]
-> As atualizações do cliente honram quaisquer janelas de manutenção do Gestor de Configuração que configuraste.
+> As atualizações do cliente honram quaisquer janelas de manutenção do Gestor de Configuração que configuraste. O fio execmgr só executa o programa de armadilhas de configuração do cliente (ccmsetup.exe) durante uma janela de manutenção. Se o dispositivo executa uma edição do Windows com um filtro de escrita, o ccmsetup tenta descarregar e instalar ao mesmo tempo. Caso contrário, o ccmsetup aleatoriamente aleatoriamente um tempo para descarregar conteúdo. Depois de descarregar conteúdo e compilar a política local, o execmgr programa a atualização do cliente durante a próxima janela de manutenção.<!-- SCCMDocs#896 -->
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para métodos alternativos de atualização dos clientes, consulte [como implementar clientes para computadores Windows](../../deploy/deploy-clients-to-windows-computers.md).
 

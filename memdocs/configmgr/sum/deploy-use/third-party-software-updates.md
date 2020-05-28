@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771431"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906754"
 ---
 # <a name="enable-third-party-updates"></a>Ativar as atualizações de terceiros 
 
@@ -30,7 +30,7 @@ Começando com a versão 1806, o nó de Catálogos de Atualizações de **Softwa
 ## <a name="prerequisites"></a>Pré-requisitos 
 - Espaço suficiente para o disco na pasta WSUSContent do ponto de atualização de software de topo para armazenar o conteúdo binário de origem para atualizações de software de terceiros.
     - A quantidade de armazenamento necessário varia em função do fornecedor, tipos de atualizações e atualizações específicas que publica para implementação.
-    - Se precisar de mover a pasta WSUSContent para outra unidade com mais espaço livre, consulte o Como alterar o local onde a [WSUS armazena atualizações de bloglocalmente.](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)
+    - Se precisar de mover a pasta WSUSContent para outra unidade com mais espaço livre, consulte o Como alterar o local onde a [WSUS armazena atualizações de bloglocalmente.](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)
 - O serviço de sincronização de atualização de software de terceiros requer acesso à Internet.
     - Para a lista de catálogos de parceiros, é necessário download.microsoft.com sobre a porta HTTPS 443. 
     -  Acesso à Internet a quaisquer catálogos de terceiros e atualizar ficheiros de conteúdos. Podem ser necessários portos adicionais que não sejam 443.
@@ -40,7 +40,7 @@ Começando com a versão 1806, o nó de Catálogos de Atualizações de **Softwa
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Requisitos adicionais quando o SUP está remoto do servidor de topo do site 
 
 1. O SSL deve ser ativado no SUP quando estiver remoto. Isto requer um certificado de autenticação do servidor gerado a partir de uma autoridade de certificados internos ou através de um fornecedor público.
-    - [Configure sSL no WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configure sSL no WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Quando configurar o SSL no WSUS, note que alguns dos serviços web e diretórios virtuais são sempre HTTP e não HTTPS. 
         - O Gestor de Configuração descarrega conteúdo de terceiros para pacotes de atualização de software do seu diretório de conteúdo wSUS em HTTP.   
     - [Configure o SSL no SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -51,7 +51,7 @@ Começando com a versão 1806, o nó de Catálogos de Atualizações de **Softwa
 
 
 3. Crie a seguinte chave de registo no servidor do site do Gestor de Configuração: 
-    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, criar um novo DWORD denominado **EnableSelfSignedCertificates** com um valor de `1`. 
+    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, criar um novo DWORD denominado **EnableSelfSignedCertificates** com um valor de `1` . 
 
 4. Para permitir a instalação do certificado de assinatura WSUS auto-assinado para as Editoras Fidedignas e lojas Trust Root no servidor Remoto SUP:
    - A conta de ligação ao **servidor WSUS** deve ter permissões de administração remotas no servidor SUP.
@@ -75,7 +75,7 @@ Se ativar esta opção, pode subscrever catálogos de atualizações de terceiro
 Terá de decidir se pretende que o Gestor de Configuração gere automaticamente o certificado de assinatura WSUS de terceiros utilizando um certificado auto-assinado ou se precisa configurar manualmente o certificado. 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>Gerir automaticamente o certificado de assinatura WSUS
-Se não tiver a obrigação de utilizar certificados PKI, pode optar por gerir automaticamente os certificados de assinatura para atualizações de terceiros. A gestão de certificados WSUS é feita como `wsyncmgr.log`parte do ciclo de sincronização e é registada no . 
+Se não tiver a obrigação de utilizar certificados PKI, pode optar por gerir automaticamente os certificados de assinatura para atualizações de terceiros. A gestão de certificados WSUS é feita como parte do ciclo de sincronização e é registada no `wsyncmgr.log` . 
 
 1. Na consola De Configuração Manager, vá ao espaço de trabalho da **Administração.** Expandir a **Configuração**do Site, e selecionar o nó **de Sites.**
 2. Selecione o site de alto nível na hierarquia. Na fita, clique em **Configurar componentes**do site , e selecione **Software Update Point**.
@@ -92,7 +92,7 @@ Se precisar de configurar manualmente o certificado, como por exemplo a necessid
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Ativar atualizações de terceiros sobre os clientes
-Ative atualizações de terceiros sobre os clientes nas definições do cliente. A definição define a política do agente De atualização do Windows para [permitir atualizações assinadas para uma localização do serviço de atualização intranet microsoft](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Esta definição de cliente também instala o certificado de assinatura WSUS para a loja Trusted Publisher no cliente. A sessão de `updatesdeployment.log` registo de gestão de certificados é vista nos clientes.  Faça estes passos para cada definição personalizada do cliente que pretende utilizar para atualizações de terceiros. Para mais informações, consulte o artigo [sobre as definições](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) do cliente.
+Ative atualizações de terceiros sobre os clientes nas definições do cliente. A definição define a política do agente De atualização do Windows para [permitir atualizações assinadas para uma localização do serviço de atualização intranet microsoft](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Esta definição de cliente também instala o certificado de assinatura WSUS para a loja Trusted Publisher no cliente. A sessão de registo de gestão de certificados é vista `updatesdeployment.log` nos clientes.  Faça estes passos para cada definição personalizada do cliente que pretende utilizar para atualizações de terceiros. Para mais informações, consulte o artigo [sobre as definições](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) do cliente.
 
 1. Na consola Do Gestor de Configuração, vá ao espaço de trabalho da **Administração** e selecione o nó de Definições do **Cliente.**
 2. Selecione uma definição personalizada de cliente existente ou crie uma nova. 
@@ -234,7 +234,7 @@ A sincronização de atualizações de software de terceiros é tratada pelo com
 -  O Gestor de Configuração tem uma nova versão para o formato de ficheiro de cabine de catálogo. A nova versão inclui os certificados para os ficheiros binários do fornecedor. Estes certificados são adicionados ao nó de **Certificados** sob **segurança** no espaço de trabalho da **Administração** assim que você aprove e confie no catálogo.  
      - Ainda pode utilizar a versão de ficheiro de cabine de catálogo mais antigo, desde que o URL de descarregamento seja https e as atualizações estejam assinadas. O conteúdo não será publicado porque os certificados para os binários não estão no ficheiro da cabine e já estão aprovados. Pode contornar esta questão encontrando o certificado no nó dos **Certificados,** desbloqueando-o e publicando novamente a atualização. Se estiver a publicar várias atualizações assinadas com certificados diferentes, terá de desbloquear cada certificado que seja utilizado.
      - Para mais informações, consulte as mensagens de estado 11523 e 11524 na tabela de mensagens abaixo.
--  Quando o serviço de sincronização de atualização de software de terceiros no ponto de atualização de software de topo requer um servidor proxy para acesso à Internet, as verificações de assinatura digital podem falhar. Para mitigar este problema, configure as definições de proxy WinHTTP no sistema de site. Para mais informações, consulte os [comandos de Netsh para WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
+-  Quando o serviço de sincronização de atualização de software de terceiros no ponto de atualização de software de topo requer um servidor proxy para acesso à Internet, as verificações de assinatura digital podem falhar. Para mitigar este problema, configure as definições de proxy WinHTTP no sistema de site. Para mais informações, consulte os [comandos de Netsh para WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - Ao utilizar um CMG para armazenamento de conteúdo, o conteúdo para atualizações de terceiros não será descarregado para os clientes se o conteúdo delta de Download quando a [definição](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) de cliente **disponível** estiver ativada. <!--6598587-->
 
 ## <a name="status-messages"></a>Mensagens de estado

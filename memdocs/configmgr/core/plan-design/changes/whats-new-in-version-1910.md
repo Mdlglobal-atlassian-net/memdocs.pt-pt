@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719324"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879058"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novidades na versão 1910 do ramo atual do Gestor de Configuração
 
@@ -42,11 +42,11 @@ O Microsoft Endpoint Manager é uma solução integrada para gerir todos os seus
 
 As seguintes soluções de gestão da Microsoft fazem agora parte da marca Microsoft Endpoint Manager:
 
-- [Gestor de configuração](https://docs.microsoft.com/configmgr)
+- [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
 - [Análise de Computadores](../../../desktop-analytics/overview.md)
 - [Piloto automático](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Outras funcionalidades na [Consola de Gestão](https://go.microsoft.com/fwlink/?linkid=2109094) de Dispositivos
+- Outras funcionalidades na [Consola de Gestão](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) de Dispositivos
 
 Para mais informações, consulte as seguintes publicações de Brad Anderson, vice-presidente corporativo da Microsoft para a Microsoft 365:
 
@@ -123,7 +123,7 @@ Quando ativa o Microsoft Connected Cache nos pontos de distribuição do Gestor 
 Para mais informações, consulte o [Microsoft Connected Cache no 'Configuração Manager'.](../hierarchy/microsoft-connected-cache.md#bkmk_intune)
 
 > [!NOTE]
-> A versão atual do gestor de configuração 1906 incluía a Otimização de [Otimização](../hierarchy/microsoft-connected-cache.md) de Entregas em Cache (DOINC), uma aplicação instalada no Windows Server que ainda está em desenvolvimento. A partir da versão atual do ramo 1910, esta funcionalidade chama-se Microsoft Connected Cache.
+> A versão atual do gestor de configuração 1906 incluía a Otimização de Otimização de [Entregas em Cache de Rede,](../hierarchy/microsoft-connected-cache.md)uma aplicação instalada no Windows Server que ainda está em desenvolvimento. A partir da versão atual do ramo 1910, esta funcionalidade chama-se Microsoft Connected Cache.
 >
 > Quando instala a Cache Conectada num ponto de distribuição do Gestor de Configuração, descarrega o tráfego do serviço de otimização de entregas para fontes locais. A Cache Conectada faz este comportamento apertando eficientemente o conteúdo ao nível do byte-range.
 
@@ -375,7 +375,7 @@ The following additional hotfixes are available to address specific issues:
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 <!-- At this time, version 1910 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-1910.md#early-update-ring). -->
 A partir de 20 de dezembro de 2019, a versão 1910 está globalmente disponível para todos os clientes instalarem.

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073947"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427930"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>O que&#39;novo na versão 1702 do Gestor de Configuração
 
@@ -28,8 +28,8 @@ A atualização 1702 para o ramo atual do Gestor de Configuração está dispon�
 > Para instalar um novo site, tem de utilizar uma versão de base do 'Gestor de Configuração'.  
 >
 > Saiba mais sobre:    
-> - [Instalação de novos sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalação de atualizações nos sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalação de novos sites](../../servers/deploy/install/installing-sites.md)  
+> - [Instalação de atualizações nos sites](../../servers/manage/updates.md)  
 > - [Versões de base e atualização](../../servers/manage/updates.md#bkmk_Baselines)
 
 As seguintes secções fornecem detalhes sobre alterações e novas capacidades introduzidas na versão 1702 do Gestor de Configuração.  
@@ -71,7 +71,7 @@ Pode encontrar a opção **Feedback:**
 - Quando clicar em qualquer objeto na consola.   
    ![Opção righ-click](./media/feedback-option.png)   
 
-  Escolher **o Feedback** abre o seu navegador para o site de feedback do UserVoice do Gestor de [Configuração.](https://go.microsoft.com/fwlink/?linkid=617029)
+  Escolher **o Feedback** abre o seu navegador para o site de feedback do UserVoice do Gestor de [Configuração.](https://configurationmanager.uservoice.com/forums/300492-ideas)
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Alterações para Atualizações e Manutenção
@@ -191,7 +191,7 @@ Agora pode voltar a uma página anterior quando executar uma sequência de taref
 A partir da versão 1702, para implementações disponíveis de sequências de tarefas, pode optar por utilizar conteúdo pré-cache. O conteúdo pré-cache dá-lhe a opção de permitir que o cliente descarregue apenas o conteúdo aplicável assim que receber a implementação. Portanto, quando o utilizador clica **em Instalar** no Centro de Software, o conteúdo está pronto e a instalação começa rapidamente porque o conteúdo está no disco rígido local. Para mais detalhes, consulte o [conteúdo pré-cache da Configuração](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Converter de BIOS para UEFI durante uma atualização no local
-A Atualização de Criadores do Windows 10 introduz uma ferramenta de conversão simples que automatiza o processo de repartição do disco rígido para hardware ativado pela UEFI e integra a ferramenta de conversão no processo de atualização do Windows 7 para o Windows 10. Quando combinar esta ferramenta com a sequência de tarefas de atualização do sistema operativo e a ferramenta OEM que converte o firmware de BIOS para UEFI, pode converter os seus computadores de BIOS para UEFI durante uma atualização no local para a Atualização de Criadores do Windows 10. Para mais detalhes, consulte os passos da [sequência de tarefas para gerir o BIOS até à conversão UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+A Atualização de Criadores do Windows 10 introduz uma ferramenta de conversão simples que automatiza o processo de repartição do disco rígido para hardware ativado pela UEFI e integra a ferramenta de conversão no processo de atualização do Windows 7 para o Windows 10. Quando combinar esta ferramenta com a sequência de tarefas de atualização do sistema operativo e a ferramenta OEM que converte o firmware de BIOS para UEFI, pode converter os seus computadores de BIOS para UEFI durante uma atualização no local para a Atualização de Criadores do Windows 10. Para mais detalhes, consulte os passos da [sequência de tarefas para gerir o BIOS até à conversão UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>Melhorias na etapa de sequência de tarefas de instalação de aplicações
 Esta versão introduziu as seguintes melhorias:

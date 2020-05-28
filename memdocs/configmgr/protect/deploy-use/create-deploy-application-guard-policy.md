@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721746"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923431"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Criar e implementar a política de guarda de aplicações do Windows Defender
 
@@ -25,12 +25,12 @@ Pode criar e implementar as políticas de Guarda de [Aplicações do Windows Def
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para criar e implementar uma política de Guarda de Aplicações Do Windows Defender, tem de utilizar a Atualização do Criador de outono do Windows 10 (1709). Os dispositivos Windows 10 para os quais implementa a política devem ser configurados com uma política de isolamento de rede. Para mais informações, consulte a visão geral do [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Para criar e implementar uma política de Guarda de Aplicações Do Windows Defender, tem de utilizar a Atualização do Criador de outono do Windows 10 (1709). Os dispositivos Windows 10 para os quais implementa a política devem ser configurados com uma política de isolamento de [rede](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Para mais informações, consulte a visão geral do [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Criar uma política e navegar nas definições disponíveis
 
 1. Na consola 'Gestor de Configuração', escolha **Ativos e Conformidade.**
-2. No espaço de trabalho **de Ativos e Compliance,** escolha **A** > Proteção de**Pontos Finais** > guarda de**aplicação Windows Defender**.
+2. No espaço de trabalho **de Ativos e Compliance,** escolha **A**Proteção de  >  **Pontos Finais**guarda de  >  **aplicação Windows Defender**.
 3. No separador **Home,** no grupo **Criar,** clique em Criar a Política de Guarda de **Aplicações do Windows Defender**.
 4. Usando o [artigo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) como referência, pode navegar e configurar as definições disponíveis. O Gestor de Configuração permite-lhe definir determinadas definições de política:
    - [Configurações de interação do anfitrião](#bkmk_HIS)
@@ -96,7 +96,7 @@ Quando ativa a gestão de ficheiros, poderá ver erros registados no DCMReportin
 
 Para editar as definições do Application Guard, expanda a **Proteção do Ponto Final** no espaço de trabalho **de Ativos e Compliance** e, em seguida, clique no nó de Proteção de **Aplicações do Windows Defender.** Clique na política que pretende editar e, em seguida, selecione **Propriedades**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para ler mais sobre o Windows Defender Application Guard: [Windows Defender Application Guard View](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 [Guarda de aplicações Do Windows Defender FAQ](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/faq-wd-app-guard).

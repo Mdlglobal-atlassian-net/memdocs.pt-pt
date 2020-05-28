@@ -10,18 +10,18 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2c8b369b69bd5fcddd2f52b875b5089d82ebb0e
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
-ms.translationtype: HT
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605139"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429844"
 ---
 # <a name="task-sequence-variables"></a>Variáveis de sequência de tarefas
 
 *Aplica-se a: Gestor de Configuração (ramo atual)*
 
-Este artigo é uma referência para todas as variáveis disponíveis por ordem alfabética. Utilize a função localizar o navegador **(tipicamente** **CTRL** + **F)** para encontrar uma variável específica. A variável notas se é específica para um passo particular. O artigo sobre [os passos](task-sequence-steps.md) da sequência de tarefas inclui a lista de variáveis específicas a cada passo.
+Este artigo é uma referência para todas as variáveis disponíveis por ordem alfabética. Utilize a função localizar o navegador **(tipicamente** **CTRL**  +  **F)** para encontrar uma variável específica. A variável notas se é específica para um passo particular. O artigo sobre [os passos](task-sequence-steps.md) da sequência de tarefas inclui a lista de variáveis específicas a cada passo.
 
 Para obter mais informações, consulte [A utilização de variáveis](using-task-sequence-variables.md)de sequência de tarefas .
 
@@ -106,11 +106,11 @@ Especifica os gateways predefinidos utilizados pelo computador.
 
 ### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a>_SMSTSDownloadOnDemand
 
-Se a sequência de tarefas atual estiver a funcionar `true`no modo de descarregamento a pedido, esta variável é . Modo de descarregamento a pedido significa que o gestor da sequência de tarefas descarrega conteúdo localmente apenas quando tem de aceder ao conteúdo.
+Se a sequência de tarefas atual estiver a funcionar no modo de descarregamento a pedido, esta variável é `true` . Modo de descarregamento a pedido significa que o gestor da sequência de tarefas descarrega conteúdo localmente apenas quando tem de aceder ao conteúdo.
 
 ### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a>_SMSTSInWinPE
 
-Quando o passo atual da sequência de tarefas está a decorrer no Windows PE, esta variável é `true`. Teste esta variável de sequência de tarefas para determinar o ambiente atual do Os.
+Quando o passo atual da sequência de tarefas está a decorrer no Windows PE, esta variável é `true` . Teste esta variável de sequência de tarefas para determinar o ambiente atual do Os.
 
 ### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a>_SMSTSIPAddresses
 
@@ -132,9 +132,9 @@ Armazena o código de devolução da última ação que foi executada. Esta vari
 
 ### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a>_SMSTSLastActionSucceeded
 
-- Se o último passo for `true`bem sucedido, esta variável é .  
+- Se o último passo for bem sucedido, esta variável é `true` .  
 
-- Se o último passo falhou, é. `false`  
+- Se o último passo falhou, `false` é.  
 
 - Se a sequência de tarefas saltou a última ação, porque o passo está desativado ou a condição associada avaliada a **falsas,** esta variável não é redefinida. Ainda detém o valor da ação anterior.  
 
@@ -177,7 +177,7 @@ Especifica a marca do computador.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a>_SMSTSMDataPath
 
-Especifica o caminho definido pela variável [SMSTSLocalDataDrive.](#SMSTSLocalDataDrive) Quando define sMSTSLocalDataDrive antes do início da sequência de tarefas, como por exemplo, definindo uma variável de recolha, o Gestor de Configuração define a variável _SMSTSMDataPath assim que a sequência de tarefas começar.
+Especifica o caminho definido pela variável [SMSTSLocalDataDrive.](#SMSTSLocalDataDrive) Este caminho especifica onde a sequência de tarefas armazena ficheiros de cache temporários no computador de destino enquanto está em execução. Quando define sMSTSLocalDataDrive antes do início da sequência de tarefas, como por exemplo, definindo uma variável de recolha, o Gestor de Configuração define a variável _SMSTSMDataPath assim que a sequência de tarefas começar.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a>_SMSTSMediaType
 
@@ -205,7 +205,7 @@ Armazena o nome do título de marca que a sequência de tarefas exibe no diálog
 
 *Aplica-se ao passo do [sistema operativo upgrade.](task-sequence-steps.md#BKMK_UpgradeOS)*
 
-Armazena o valor do código de saída que o Windows Setup retorna para indicar sucesso ou falha. Esta variável é `/Compat` útil com a opção linha de comando.
+Armazena o valor do código de saída que o Windows Setup retorna para indicar sucesso ou falha. Esta variável é útil com a `/Compat` opção linha de comando.
 
 #### <a name="example"></a>Exemplo
 
@@ -229,7 +229,7 @@ Armazena o nome atual da sequência de tarefas. Um administrador do Gestor de Co
 
 ### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a>_SMSTSRunFromDP
 
-Ajuste `true` para se a sequência de tarefa sintetizada estiver em execução no modo de ponto de distribuição. Este modo significa que o gestor da sequência de tarefas obtém as quotas de pacote necessárias a partir do ponto de distribuição.
+Ajuste para se a sequência de `true` tarefa sintetizada estiver em execução no modo de ponto de distribuição. Este modo significa que o gestor da sequência de tarefas obtém as quotas de pacote necessárias a partir do ponto de distribuição.
 
 ### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a>_SMSTSSerialNumber
 
@@ -239,7 +239,7 @@ Especifica o número de série do computador.
 
 ### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a>_SMSTSSetupRollback
 
-Especifica se a Configuração do Windows realizou uma operação de reversão durante uma atualização no local. Os valores `true` variáveis podem ser ou `false`.
+Especifica se a Configuração do Windows realizou uma operação de reversão durante uma atualização no local. Os valores variáveis podem ser `true` ou `false` .
 
 ### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a>_SMSTSSiteCode
 
@@ -274,7 +274,7 @@ Quando a sequência de tarefas utiliza HTTPS para comunicar com o ponto de gest�
 
 ### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a>_SMSTSUserStarted
 
-Especifica se um utilizador iniciou a sequência de tarefas. Esta variável só é definida se a sequência de tarefas for iniciada a partir do Centro de Software. Por exemplo, [_SMSTSLaunchMode](#SMSTSLaunchMode) se _SMSTSLaunchMode `SMS`for definido para .
+Especifica se um utilizador iniciou a sequência de tarefas. Esta variável só é definida se a sequência de tarefas for iniciada a partir do Centro de Software. Por exemplo, se [_SMSTSLaunchMode](#SMSTSLaunchMode) for definido para `SMS` .
 
 Esta variável pode ter os seguintes valores:  
 
@@ -284,7 +284,7 @@ Esta variável pode ter os seguintes valores:
 
 ### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a>_SMSTSUseSSL
 
-Especifica se a sequência de tarefas utiliza o SSL para comunicar com o ponto de gestão do Gestor de Configuração. Se configurar os sistemas do seu site `true`para HTTPS, o valor está definido para .
+Especifica se a sequência de tarefas utiliza o SSL para comunicar com o ponto de gestão do Gestor de Configuração. Se configurar os sistemas do seu site para HTTPS, o valor está definido para `true` .
 
 ### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a>_SMSTSUUID
 
@@ -301,84 +301,84 @@ Especifica se o computador está a ser executado como um dispositivo Windows To 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se a`1` **verificação da memória mínima (MB)** devolvida verdadeira ( ) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **verificação da memória mínima (MB)** devolvida verdadeira ( `1` ) ou falsa ( `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a>_TS_CRSPEED
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se o controlo`1`mínimo de`0`velocidade do **processador (MHz)** devolvido verdadeiro ( ) ou falso ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se o controlo mínimo de **velocidade do processador (MHz)** devolvido verdadeiro ( `1` ) ou falso ( `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a>_TS_CRDISK
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se o espaço`1`mínimo de`0`disco **livre (MB)** verificar devolvido verdadeiro ( ) ou falso ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se o **espaço mínimo de disco livre (MB)** verificar devolvido verdadeiro ( ) ou falso ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a>_TS_CROSTYPE
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se o **Sistema operativo atual a ser atualizado é** verificado de forma verdadeira (`1`) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se o **Sistema operativo atual a ser atualizado é** verificado de forma verdadeira ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crarch"></a><a name="TSCRARCH"></a>_TS_CRARCH
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se a **Arquitetura da verificação atual do OS** retornou verdadeira (`1`) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **Arquitetura da verificação atual do OS** retornou verdadeira ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a>_TS_CRMINOSVER
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se`1`a versão`0`mínima **de SISTEMA** devolvido verdadeiro ( ) ou falso ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **versão mínima de SISTEMA** devolvido verdadeiro ( ) ou falso ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a>_TS_CRMAXOSVER
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se`1`a versão`0`máxima **de OS** despertá-la é verdadeira ( ) ou falsa ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **versão máxima de OS** despertá-la é verdadeira ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a>_TS_CRCLIENTMINVER
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se`1`a versão`0`do **cliente mínimo** deverificação devolvida verdadeira ( ) ou falsa ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **versão do cliente mínimo** deverificação devolvida verdadeira ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a>_TS_CROSLANGUAGE
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se a **linguagem da verificação atual do OS** retornou verdadeira (`1`) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se a **linguagem da verificação atual do OS** retornou verdadeira ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a>_TS_CRACPOWER
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para saber se`1`a potência`0`ca **ligada à** verificação retornou verdadeiramente ( ) ou falsa ( ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para saber se a **potência ca ligada à** verificação retornou verdadeiramente ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a>_TS_CRNETWORK
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se o **adaptador** de rede de verificação retornada verdadeira (`1`) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se o **adaptador** de rede de verificação retornada verdadeira ( `1` ) ou falsa ( `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 
 *Começando na versão 2002* <!--6005561-->  
 *Aplica-se ao passo de prontidão de [verificação.](task-sequence-steps.md#BKMK_CheckReadiness)*
 
-Uma variável de leitura apenas para se o **adaptador de rede não é** verificação sem fios devolvida verdadeiramente (`1`) ou falsa (`0`). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
+Uma variável de leitura apenas para se o **adaptador de rede não é** verificação sem fios devolvida verdadeiramente ( ) ou falsa ( `1` `0` ). Se não ativar a verificação, o valor desta variável apenas para leitura é em branco.
 
 ### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a>_TSAppInstallStatus
 
@@ -422,15 +422,15 @@ Esta definição é obrigatória. Os valores possíveis são `True` ou `False`. 
 
 #### <a name="osdadapter0ipaddresslist"></a>OSDAdapter0IPAddressList
 
-Lista de endereços IP deslimitados com vírpara o adaptador. Esta propriedade é ignorada a menos que `false` **o EnableDHCP** esteja definido para . Esta definição é obrigatória.
+Lista de endereços IP deslimitados com vírpara o adaptador. Esta propriedade é ignorada a menos que **o EnableDHCP** esteja definido para `false` . Esta definição é obrigatória.
 
 #### <a name="osdadapter0subnetmask"></a>OSDAdapter0SubnetMask
 
-Lista de máscaras de sub-rede delimitadas. Esta propriedade é ignorada a menos que `false` **o EnableDHCP** esteja definido para . Esta definição é obrigatória.
+Lista de máscaras de sub-rede delimitadas. Esta propriedade é ignorada a menos que **o EnableDHCP** esteja definido para `false` . Esta definição é obrigatória.
 
 #### <a name="osdadapter0gateways"></a>OSDAdapter0Gateways
 
-Lista de endereços ip deslimitada sintetmente. Esta propriedade é ignorada a menos que `false` **o EnableDHCP** esteja definido para . Esta definição é obrigatória.
+Lista de endereços ip deslimitada sintetmente. Esta propriedade é ignorada a menos que **o EnableDHCP** esteja definido para `false` . Esta definição é obrigatória.
 
 #### <a name="osdadapter0dnsdomain"></a>DOMÍNIO OSDAdapter0DNSDomain
 
@@ -442,11 +442,11 @@ Lista de servidores DNS delimitada selada para o adaptador. Esta definição é 
 
 #### <a name="osdadapter0enablednsregistration"></a>REGISTO OSDAdapter0EnableDNS
 
-Prepara-se para `true` registar o endereço IP do adaptador em DNS.
+`true`Prepara-se para registar o endereço IP do adaptador em DNS.
 
 #### <a name="osdadapter0enablefulldnsregistration"></a>OSDAdapter0EnableFullDNSRegistration
 
-`true` Decidiu registar o endereço IP do adaptador em DNS com o nome DNS completo para o computador.
+Decidiu `true` registar o endereço IP do adaptador em DNS com o nome DNS completo para o computador.
 
 #### <a name="osdadapter0enableipprotocolfiltering"></a>FILTRAgem de protocolos ENABLEIP EnableIP
 
@@ -454,15 +454,15 @@ Decidiu `true` ativar a filtragem do protocolo IP no adaptador.
 
 #### <a name="osdadapter0ipprotocolfilterlist"></a>OSDAdapter0IPProtocolFilterList
 
-Lista de protocolos delimitados com a comma autorizados a passar por cima do IP. Esta propriedade é ignorada se o **EnableIPProtocolFiltering** estiver definido para `false`.
+Lista de protocolos delimitados com a comma autorizados a passar por cima do IP. Esta propriedade é ignorada se o **EnableIPProtocolFiltering** estiver definido para `false` .
 
 #### <a name="osdadapter0enabletcpfiltering"></a>FILTRAgem OSDAdapter0EnableTCP
 
-Delineado para `true` ativar a filtragem da porta TCP para o adaptador.
+`true`Delineado para ativar a filtragem da porta TCP para o adaptador.
 
 #### <a name="osdadapter0tcpfilterportlist"></a>OSDAdapter0TCPFilterFilterPortList
 
-Lista de portas delimitada saqueadas a serem concedidas permissões de acesso para a TCP. Esta propriedade é ignorada se o **EnableTCPFiltering** estiver definido para `false`.
+Lista de portas delimitada saqueadas a serem concedidas permissões de acesso para a TCP. Esta propriedade é ignorada se o **EnableTCPFiltering** estiver definido para `false` .
 
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
 
@@ -474,11 +474,11 @@ Opções para NetBIOS em TCP/IP. Os valores possíveis são:
 
 #### <a name="osdadapter0enablewins"></a>OSDAdapter0EnableWINS
 
-Prepara-te para `true` utilizar o WINS para resolução de nomes.
+Prepara-te para utilizar o WINS para resolução de `true` nomes.
 
 #### <a name="osdadapter0winsserverlist"></a>LISTA OSDAdapter0WINSServerList
 
-Lista delimitada de comma dos endereços IP do servidor WINS. Esta propriedade é ignorada a menos `true`que **enableWINS** esteja definido para .
+Lista delimitada de comma dos endereços IP do servidor WINS. Esta propriedade é ignorada a menos que **enableWINS** esteja definido para `true` .
 
 #### <a name="osdadapter0macaddress"></a>OSDAdapter0MacAddress
 
@@ -651,7 +651,7 @@ Especifica o nome do computador de destino.
 
 *Aplica-se ao passo de Definições do [Windows de captura.](task-sequence-steps.md#BKMK_CaptureWindowsSettings)*
 
-Definida como o nome NetBIOS do computador. O valor só é definido se a variável `true` [OSDMigrateComputerName](#OSDMigrateComputerName) estiver definida para .
+Definida como o nome NetBIOS do computador. O valor só é definido se a variável [OSDMigrateComputerName](#OSDMigrateComputerName) estiver definida para `true` .
 
 ### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a>Nome de ficheiro OSDConfig
 
@@ -723,9 +723,9 @@ Especifica o nome do formato RFC 1779 da unidade organizacional (UO) ao qual o c
 
 (entrada)
 
-Para evitar que os dados potencialmente sensíveis sejam `TRUE`exibidos ou registados, detete te a variável para . Esta variável disfarça o nome do programa no **smsts.log** durante um passo **de Pacote de Instalação.**
+Para evitar que os dados potencialmente sensíveis sejam exibidos ou registados, detete te a variável para `TRUE` . Esta variável disfarça o nome do programa no **smsts.log** durante um passo **de Pacote de Instalação.**
 
-A partir da versão 1902, quando `TRUE`se define esta variável para, também esconde a linha de comando do passo da Linha de **Comando run** no ficheiro de registo.<!--3654172-->
+A partir da versão 1902, quando se define esta variável `TRUE` para, também esconde a linha de comando do passo da Linha de **Comando run** no ficheiro de registo.<!--3654172-->
 
 ### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a>Filtragem osdEnableTCPIPPIP
 
@@ -825,7 +825,7 @@ Especifica o nome de um domínio de Diretório Ativo que o computador de destino
 
 (entrada)
 
-Especifica o nome do formato RFC 1779 da unidade organizacional (UO) ao qual o computador de destino é associado. Se for especificado, o valor tem de conter o caminho completo. O comprimento do nome Ou deve ser entre 0 e 32.767 caracteres. Este valor não é definido se a variável `1` [OSDJoinType](#OSDJoinType) estiver definida para (junte-se ao grupo de trabalho).
+Especifica o nome do formato RFC 1779 da unidade organizacional (UO) ao qual o computador de destino é associado. Se for especificado, o valor tem de conter o caminho completo. O comprimento do nome Ou deve ser entre 0 e 32.767 caracteres. Este valor não é definido se a variável [OSDJoinType](#OSDJoinType) estiver definida para `1` (junte-se ao grupo de trabalho).
 
 #### <a name="example"></a>Exemplo
 
@@ -963,7 +963,7 @@ Especifica se o nome do computador é migrado.
 
 (entrada)
 
-Especifica os ficheiros de configuração utilizados para controlar a captura de perfis de utilizador. Esta variável só é utilizada se o `Advanced` [OSDMigrateMode](#OSDMigrateMode) estiver definido para . Este valor da lista delimitada por vírgulas está definido para efetuar a migração personalizada de perfis de utilizador.
+Especifica os ficheiros de configuração utilizados para controlar a captura de perfis de utilizador. Esta variável só é utilizada se o [OSDMigrateMode](#OSDMigrateMode) estiver definido para `Advanced` . Este valor da lista delimitada por vírgulas está definido para efetuar a migração personalizada de perfis de utilizador.
 
 #### <a name="example"></a>Exemplo
 
@@ -1030,7 +1030,7 @@ Especifica se a conta de computador local é restaurada.
 
 (entrada)
 
-Se a variável [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) for, `true`esta variável deve conter a palavra-passe atribuída a *todas as* contas locais migradas. UsMT atribui a mesma senha a todas as contas locais migradas. Considere esta senha como temporária, e mude-a mais tarde por outro método.
+Se a variável [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) `true` for, esta variável deve conter a palavra-passe atribuída a *todas as* contas locais migradas. UsMT atribui a mesma senha a todas as contas locais migradas. Considere esta senha como temporária, e mude-a mais tarde por outro método.
 
 ### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a>OSDMigrateMode
 
@@ -1123,19 +1123,19 @@ Utilize os seguintes nomes variáveis para definir as propriedades para a *prime
 
 #### <a name="osdpartitions0type"></a>OSDPartitions0Type
 
-Especifica o tipo de partição. Esta propriedade é necessária. Os valores `Logical`válidos `Hidden`são, `Primary` `Extended`e .
+Especifica o tipo de partição. Esta propriedade é necessária. Os valores válidos `Primary` `Extended` são, `Logical` e `Hidden` .
 
 #### <a name="osdpartitions0filesystem"></a>SISTEMA OSDPartitions0FileSystem
 
-Especifica o tipo de sistema de ficheiros a utilizar ao formatar a divisória. Esta propriedade é opcional. Se não especificar um sistema de ficheiros, o passo não formata a partição. Valores `FAT32` válidos são e `NTFS`.
+Especifica o tipo de sistema de ficheiros a utilizar ao formatar a divisória. Esta propriedade é opcional. Se não especificar um sistema de ficheiros, o passo não formata a partição. Valores válidos são `FAT32` e `NTFS` .
 
 #### <a name="osdpartitions0bootable"></a>OSDPartitions0Bootable
 
-Especifica se a partição é sabotável. Esta propriedade é necessária. Se este valor `TRUE` for definido para discos MBR, então o passo marca esta partição como ativa.
+Especifica se a partição é sabotável. Esta propriedade é necessária. Se este valor for definido `TRUE` para discos MBR, então o passo marca esta partição como ativa.
 
 #### <a name="osdpartitions0quickformat"></a>OSDPartitions0QuickFormat
 
-Especifica o tipo de formato que é utilizado. Esta propriedade é necessária. Se este valor `TRUE`estiver definido, o passo executa um formato rápido. Caso contrário, o passo executa um formato completo.
+Especifica o tipo de formato que é utilizado. Esta propriedade é necessária. Se este valor estiver `TRUE` definido, o passo executa um formato rápido. Caso contrário, o passo executa um formato completo.
 
 #### <a name="osdpartitions0volumename"></a>OSDPartitions0VolumeName
 
@@ -1147,7 +1147,7 @@ Especifica o tamanho da divisória. Esta propriedade é opcional. Se esta propri
 
 #### <a name="osdpartitions0sizeunits"></a>OSDPartitions0SizeUnits
 
-O passo utiliza estas unidades para interpretar a variável **OSDPartitions0Size.** Esta propriedade é opcional. Os valores válidos são `MB` (predefinidos), `GB`e `Percent`.
+O passo utiliza estas unidades para interpretar a variável **OSDPartitions0Size.** Esta propriedade é opcional. Os valores válidos são `MB` (predefinidos), `GB` e `Percent` .
 
 #### <a name="osdpartitions0volumelettervariable"></a>OSDPartitions0VolumeLetterVariable
 
@@ -1200,7 +1200,7 @@ Especifica o nome de organização registado por defeito no novo SISTEMA. O valo
 
 *Aplica-se ao passo de Definições do [Windows de captura.](task-sequence-steps.md#BKMK_CaptureWindowsSettings)*
 
-Definida como o nome da organização registado do computador. O valor só é definido se a variável `true` [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) estiver definida para .
+Definida como o nome da organização registado do computador. O valor só é definido se a variável [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) estiver definida para `true` .
 
 ### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a>Nome de utilizador registado sinuoso
 
@@ -1311,13 +1311,13 @@ Especifica o caminho para o diretório do Windows do SISTEMA instalado no comput
 
 Especifica a definição de fuso horário predefinido que é usada no novo SISTEMA.
 
-Detete o valor desta variável para o nome invariante da linguagem do fuso horário. Por exemplo, utilize a `Std` corda no valor para um fuso horário sob a seguinte chave de registo: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.
+Detete o valor desta variável para o nome invariante da linguagem do fuso horário. Por exemplo, utilize a corda no `Std` valor para um fuso horário sob a seguinte chave de registo: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .
 
 ### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a>OSDTimeZone (saída)
 
 *Aplica-se ao passo de Definições do [Windows de captura.](task-sequence-steps.md#BKMK_CaptureWindowsSettings)*
 
-Definida como o fuso horário do computador. O valor só é definido se a variável `true` [OSDMigrateTimeZone](#OSDMigrateTimeZone) estiver definida para .
+Definida como o fuso horário do computador. O valor só é definido se a variável [OSDMigrateTimeZone](#OSDMigrateTimeZone) estiver definida para `true` .
 
 ### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a>OSDWindowsSettingsInputLocale
 
@@ -1527,7 +1527,7 @@ Especifica como uma sequência de tarefas associa os utilizadores ao computador 
 <!--512358-->
 Em cenários desligados, o motor de sequência de tarefas tenta enviar repetidamente mensagens de estado para o ponto de gestão. Este comportamento neste cenário causa atrasos no processamento da sequência de tarefas.
 
-Desloque `true` esta variável e o motor de sequência de tarefas não tente enviar mensagens de estado depois de a primeira mensagem não enviar. Esta primeira tentativa inclui múltiplas tentativas.
+Desloque esta variável e o motor de sequência de `true` tarefas não tente enviar mensagens de estado depois de a primeira mensagem não enviar. Esta primeira tentativa inclui múltiplas tentativas.
 
 Quando a sequência de tarefas recomeça, o valor desta variável persiste. No entanto, a sequência de tarefas tenta enviar uma mensagem de estado inicial. Esta primeira tentativa inclui múltiplas tentativas. Se for bem sucedida, a sequência de tarefas continua a enviar o estado independentemente do valor desta variável. Se o estado não enviar, a sequência de tarefas utiliza o valor desta variável.
 
@@ -1540,7 +1540,7 @@ Quando a sequência de tarefas recomeça, o valor desta variável persiste. No e
 
 (entrada)
 
-Por padrão num SISTEMA de 64 bits, a sequência de tarefas localiza e executa o programa na linha de comando utilizando o redirector do sistema de ficheiros WOW64. Este comportamento permite que o comando encontre versões de 32 bits de programas de SE e DLLs. A definição `true` desta variável para desativar a utilização do redirector do sistema de ficheiros WOW64. O comando encontra versões nativas de 64 bits de programas de SE e DLLs. Esta variável não tem qualquer efeito ao correr num Sistema Operativo de 32 bits.
+Por padrão num SISTEMA de 64 bits, a sequência de tarefas localiza e executa o programa na linha de comando utilizando o redirector do sistema de ficheiros WOW64. Este comportamento permite que o comando encontre versões de 32 bits de programas de SE e DLLs. A definição desta variável para `true` desativar a utilização do redirector do sistema de ficheiros WOW64. O comando encontra versões nativas de 64 bits de programas de SE e DLLs. Esta variável não tem qualquer efeito ao correr num Sistema Operativo de 32 bits.
 
 ### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a>Código de abortador SMSTSDownload
 
@@ -1592,9 +1592,9 @@ Utilize esta variável para alterar o idioma de apresentação de uma imagem de 
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a>SMSTSLocalDataDrive
 
-Especifica onde a sequência de tarefas armazena ficheiros temporários no computador de destino enquanto está em execução.
+Especifica onde a sequência de tarefas armazena ficheiros de cache temporários no computador de destino enquanto está em execução.
 
-Defina esta variável antes do início da sequência de tarefas, como por exemplo, definindo uma variável de recolha. Uma vez iniciada a sequência de tarefas, o Gestor de Configuração define a [variável _SMSTSMDataPath](#SMSTSMDataPath) assim que a sequência de tarefas começa.
+Defina esta variável antes do início da sequência de tarefas, como por exemplo, definindo uma variável de recolha. Uma vez iniciada a sequência de tarefas, o Gestor de Configuração define a [variável _SMSTSMDataPath](#SMSTSMDataPath) com base no que a variável SMSTSLocalDataDrive foi definida.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a>SMSTSMP
 
@@ -1609,9 +1609,9 @@ Utilize esta variável para especificar o endereço URL ou IP do ponto de gestã
 
 (entrada)
 
-Se o cliente não estiver na intranet, utilize esta variável para permitir repetidos pedidos de MPList para atualizar o cliente. Por padrão, esta variável está definida para `True`.
+Se o cliente não estiver na intranet, utilize esta variável para permitir repetidos pedidos de MPList para atualizar o cliente. Por padrão, esta variável está definida para `True` .
 
-Quando os clientes estiverem na internet, detete esta variável para `False` evitar atrasos desnecessários.
+Quando os clientes estiverem na internet, detete esta variável `False` para evitar atrasos desnecessários.
 
 ### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a>Tempo de solicitação sMSTSMPListRequestTimeout
 
@@ -1622,11 +1622,11 @@ Quando os clientes estiverem na internet, detete esta variável para `False` evi
 
 (entrada)
 
-Se a sequência de tarefas não conseguir recuperar a lista de pontos de gestão (MPList) dos serviços de localização, esta variável especifica quantos milissegundos espera antes de voltar a tentar o passo. Por defeito, a `60000` sequência de tarefas aguarda milissegundos (60 segundos) antes de se voltar a tentar. Tenta até três vezes.
+Se a sequência de tarefas não conseguir recuperar a lista de pontos de gestão (MPList) dos serviços de localização, esta variável especifica quantos milissegundos espera antes de voltar a tentar o passo. Por defeito, a sequência de tarefas aguarda `60000` milissegundos (60 segundos) antes de se voltar a tentar. Tenta até três vezes.
 
 ### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a>SMSTSpeerDownload
 
-Utilize esta variável para permitir ao cliente utilizar a cache de pares do Windows PE. Configurar esta `true` variável para ativar esta funcionalidade.
+Utilize esta variável para permitir ao cliente utilizar a cache de pares do Windows PE. Configurar esta variável para `true` ativar esta funcionalidade.
 
 ### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a>SmStspeerRequestport
 
@@ -1638,7 +1638,7 @@ Utilize esta variável para manter temporariamente o conteúdo na cache da sequ�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a>SMSTSPostAction
 
-Especifica um comando que é executado após o completo da sequência de tarefas. Por exemplo, `shutdown.exe /r /t 30 /f` especifique para reiniciar o computador 30 segundos após o conclusão da sequência de tarefas.
+Especifica um comando que é executado após o completo da sequência de tarefas. Por exemplo, especifique `shutdown.exe /r /t 30 /f` para reiniciar o computador 30 segundos após o conclusão da sequência de tarefas.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a>SMSSPreferredAdvertID
 
@@ -1646,7 +1646,7 @@ Força a sequência de tarefas a executar uma implantação específica no compu
 
 ### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a>SMSTSPreserveContent
 
-Esta variável assinala o conteúdo na sequência de tarefas a manter na cache do cliente do Gestor de Configuração após a implantação. Esta variável é diferente do [SMSTSPersistContent,](#SMSTSPersistContent)que apenas mantém o conteúdo durante a duração da sequência de tarefas. O SMSTSPersistContent utiliza a cache de sequência de tarefas, o SMSTSPreserveContent utiliza a cache do cliente do Gestor de Configuração. Detete O SMSTSPreserveContent para `true` ativar esta funcionalidade.
+Esta variável assinala o conteúdo na sequência de tarefas a manter na cache do cliente do Gestor de Configuração após a implantação. Esta variável é diferente do [SMSTSPersistContent,](#SMSTSPersistContent)que apenas mantém o conteúdo durante a duração da sequência de tarefas. O SMSTSPersistContent utiliza a cache de sequência de tarefas, o SMSTSPreserveContent utiliza a cache do cliente do Gestor de Configuração. Detete O SMSTSPreserveContent `true` para ativar esta funcionalidade.
 
 ### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a>Atraso de reinicialização de SMSTS
 
@@ -1665,7 +1665,7 @@ A partir da versão 1906, utilize esta variável com a variável [SMSTSRebootDel
 
 #### <a name="example"></a>Exemplo
 
-Pretende dar aos utilizadores uma notificação de reinício de 60 minutos no início de uma sequência de tarefas de atualização do Windows 10 no local. Depois do primeiro intervalo, quer que os intervalos adicionais sejam de apenas 60 segundos. Despleite o Atraso `3600`do Reboot de SMSTS para , e SMSTSRebootDelayNextA a `60`.  
+Pretende dar aos utilizadores uma notificação de reinício de 60 minutos no início de uma sequência de tarefas de atualização do Windows 10 no local. Depois do primeiro intervalo, quer que os intervalos adicionais sejam de apenas 60 segundos. Despleite o Atraso do Reboot de SMSTS para `3600` , e SMSTSRebootDelayNextA a `60` .  
 
 
 ### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a>Mensagem de reinício de SMSTS
@@ -1685,7 +1685,7 @@ Indica que é pedido um reinício após a conclusão do passo de sequência de t
 
 ### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a>SMSTSRetrySolicitado
 
-Pede uma repetição após a conclusão do passo de sequência de tarefas atual. Se esta variável de sequência de tarefas for definida, `true`também detete a variável [SMSTSRebootRequested](#SMSTSRebootRequested) para . Depois de o computador ser reiniciado, o gestor da sequência de tarefas repete o mesmo passo de sequência de tarefas.
+Pede uma repetição após a conclusão do passo de sequência de tarefas atual. Se esta variável de sequência de tarefas for definida, também detete a variável [SMSTSRebootRequested](#SMSTSRebootRequested) para `true` . Depois de o computador ser reiniciado, o gestor da sequência de tarefas repete o mesmo passo de sequência de tarefas.
 
 ### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a>SMSTSRunCommandlineasuser
 
@@ -1696,7 +1696,7 @@ Utilize variáveis de sequência de tarefas para configurar o contexto do utiliz
 
 Configure `SMSTSRunCommandLineAsUser` com um dos seguintes valores:
 
-- `true`: Quaisquer outros passos da Linha de Comando `SMSTSRunCommandLineUserName`de **Execução** são executados no contexto do utilizador especificado em .
+- `true`: Quaisquer outros passos da Linha de **Comando de Execução** são executados no contexto do utilizador especificado em `SMSTSRunCommandLineUserName` .
 
 - `false`: Quaisquer outros passos da Linha de **Comando de Execução** são executados no contexto que configurado no degrau.
 
@@ -1732,7 +1732,7 @@ Utilize variáveis de sequência de tarefas para configurar o contexto do utiliz
 
 Configure `SMSTSRunPowerShellAsUser` com um dos seguintes valores:
 
-- `true`: Quaisquer outros passos do **Script PowerShell** executados no contexto do utilizador especificado em `SMSTSRunPowerShellUserName`.
+- `true`: Quaisquer outros passos do **Script PowerShell** executados no contexto do utilizador especificado em `SMSTSRunPowerShellUserName` .
 
 - `false`: Quaisquer outros passos **do Script PowerShell** executados no contexto que configurado no degrau.
 
@@ -1763,11 +1763,11 @@ Especifica a palavra-passe para a conta especificada pela variável [SMSTSRunPow
 
 (entrada)
 
-Controle o tempo de paragem para as atualizações de software durante este passo. Por exemplo, se esperar inúmeras atualizações durante a varredura, aumente o valor. O valor `3600` predefinido é de segundos (60 minutos). O valor variável é definido em segundos.
+Controle o tempo de paragem para as atualizações de software durante este passo. Por exemplo, se esperar inúmeras atualizações durante a varredura, aumente o valor. O valor predefinido é `3600` de segundos (60 minutos). O valor variável é definido em segundos.
 
 ### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a>Utilizadores de SMSTSUDA
 
-Especifica os utilizadores primários do computador de destino `<DomainName>\<UserName>`utilizando o seguinte formato: . Separe vários utilizadores utilizando`,`uma vírvia ( ). Para mais informações, consulte [os utilizadores associados com um computador](../get-started/associate-users-with-a-destination-computer.md)de destino.
+Especifica os utilizadores primários do computador de destino utilizando o seguinte formato: `<DomainName>\<UserName>` . Separe vários utilizadores utilizando uma vírvia `,` ( ). Para mais informações, consulte [os utilizadores associados com um computador](../get-started/associate-users-with-a-destination-computer.md)de destino.
 
 #### <a name="example"></a>Exemplo
 
@@ -1783,7 +1783,7 @@ Esta variável de sequência de tarefas opcional controla o comportamento do cli
 
 Detete o valor SMSTSWaitForSecondReboot em segundos para especificar quanto tempo a sequência de tarefas para neste passo enquanto o computador reinicia. Dê tempo suficiente para o caso de haver um segundo recomeço.
 
-Por exemplo, se definir o SMSTSWaitForSecondReboot para `600`, a sequência de tarefas para durante 10 minutos após um reinício antes de os passos adicionais funcionarem. Esta variável é útil quando um único passo de sequência de atualizações de software instala centenas de atualizações de software.
+Por exemplo, se definir o SMSTSWaitForSecondReboot para , a sequência de `600` tarefas para durante 10 minutos após um reinício antes de os passos adicionais funcionarem. Esta variável é útil quando um único passo de sequência de atualizações de software instala centenas de atualizações de software.
 
 > [!Note]
 > Esta variável aplica-se apenas a uma sequência de tarefas que implementa um SISTEMA. Não funciona numa sequência de tarefas personalizada. <!-- 2839998 -->
@@ -1791,14 +1791,14 @@ Por exemplo, se definir o SMSTSWaitForSecondReboot para `600`, a sequência de t
 ### <a name="tsdebugmode"></a><a name="TSDebugMode"></a>Modo TSDebug
 
 <!--3612274-->
-A partir da versão 1906, `TRUE` deset esta variável numa coleção ou objeto de computador para o qual a sequência de tarefas é implementada. Qualquer dispositivo que tenha este conjunto variável colocará qualquer sequência de tarefa saquires no modo de depuração.
+A partir da versão 1906, deset esta variável `TRUE` numa coleção ou objeto de computador para o qual a sequência de tarefas é implementada. Qualquer dispositivo que tenha este conjunto variável colocará qualquer sequência de tarefa saquires no modo de depuração.
 
 Para mais informações, consulte [Debug uma sequência](../deploy-use/debug-task-sequence.md)de tarefas .
 
 ### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a>Erro DebugOn
 
 <!-- 5012536 -->
-A partir da versão 1910, `TRUE` deset esta variável para iniciar automaticamente a [sequência de tarefas](../deploy-use/debug-task-sequence.md) debugger quando a sequência de tarefas devolve um erro.
+A partir da versão 1910, deset esta variável `TRUE` para iniciar automaticamente a sequência de [tarefas](../deploy-use/debug-task-sequence.md) debugger quando a sequência de tarefas devolve um erro.
 
 Desdefinir esta variável usando:
 
@@ -1821,7 +1821,7 @@ Utilize esta variável para controlar quando a sequência de tarefas apresentar 
 
 (entrada)
 
-Especifique se o motor de sequência de tarefas considera um aviso detetado como um erro durante este passo. A sequência de tarefas `Warning` define a [variável _TSAppInstallStatus](#TSAppInstallStatus) para quando uma ou mais aplicações, ou uma dependência necessária, não foram instaladas porque não cumpria um requisito. Quando se define `True`esta variável para , `Warning`e a sequência de tarefas define **_TSAppInstallStatus** para , o resultado é um erro. Um valor `False` é o comportamento padrão.
+Especifique se o motor de sequência de tarefas considera um aviso detetado como um erro durante este passo. A sequência de tarefas define a [variável _TSAppInstallStatus](#TSAppInstallStatus) para `Warning` quando uma ou mais aplicações, ou uma dependência necessária, não foram instaladas porque não cumpria um requisito. Quando se define esta variável para `True` , e a sequência de tarefas define **_TSAppInstallStatus** para , o resultado é `Warning` um erro. Um valor `False` é o comportamento padrão.
 
 ### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a>TSProgressInfoLevel
 
@@ -1832,6 +1832,10 @@ Especifique esta variável para controlar o tipo de informação que a janela de
 - `1`: Incluir o passo atual e os passos totais para o texto de progresso. Por exemplo, **2 de 10**.
 - `2`: Incluir o passo atual, os passos totais e a percentagem concluída. Por exemplo, **2 de 10 (20% completo)**.
 - `3`: Incluir a percentagem completada. Por exemplo, **(20% completo)**.
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a>TSUEFIDrive
+
+Utilização nas propriedades de uma partição FAT32 no campo **Variável.** Quando a sequência de tarefas deteta esta variável, prepara o disco para a transição para o UEFI antes de reiniciar o computador. Para obter mais informações, consulte os passos da [sequência de tarefas para gerir o BIOS até à conversão UEFI](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a>Diretório de Trabalho
 
@@ -1864,7 +1868,7 @@ As seguintes variáveis são depreciadas:
 >
 > Durante uma implementação do OS, por padrão, a Configuração do Windows determina a melhor letra de unidade a utilizar (tipicamente C:).
 
-*Comportamento anterior*: ao aplicar uma imagem, a variável OSDPreverveDriveLetter determina se a sequência de tarefas utiliza a letra de unidade capturada no ficheiro de imagem (WIM). Defina o valor `false` desta variável para utilizar a localização que especifica para a definição de **Destino** na etapa de sequência de tarefas **do Sistema Operativo Aplicar.** Para mais informações, consulte [Aplicar a imagem do OS](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
+*Comportamento anterior*: ao aplicar uma imagem, a variável OSDPreverveDriveLetter determina se a sequência de tarefas utiliza a letra de unidade capturada no ficheiro de imagem (WIM). Defina o valor desta variável para utilizar a localização que especifica para a definição de Destino na etapa de sequência de `false` tarefas **do Sistema Operativo Aplicar.** **Destination** Para mais informações, consulte [Aplicar a imagem do OS](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
 
 
 ## <a name="see-also"></a>Consulte também

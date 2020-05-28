@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906938"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Implementar windows para ir com gestor de configuração
 
@@ -23,7 +23,7 @@ ms.locfileid: "81710966"
 
 Este tópico fornece os passos para fornecer windows to go in Configuration Manager. O Windows To Go é uma funcionalidade empresarial do Windows 8 que permite a criação de uma área de trabalho do Windows To Go que pode arrancar a partir de uma unidade externa ligada por USB em computadores que cumpram os requisitos de certificação do Windows 7 ou do Windows 8, independentemente do sistema operativo em execução no computador. As áreas de trabalho do Windows To Go podem utilizar a mesma imagem que as empresas utilizam nos seus computadores de secretária e portáteis e podem ser geridas da mesma forma.  
 
- Para mais informações sobre o Windows To Go, consulte a visão geral da [funcionalidade Windows To Go](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Para mais informações sobre o Windows To Go, consulte a visão geral da [funcionalidade Windows To Go](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Aprovisionar o Windows To Go  
  O Windows To Go é um sistema operativo armazenado numa unidade externa ligada por USB. Pode aprovisionar a unidade do Windows To Go tal como aprovisiona outras implementações de sistema operativo. No entanto, uma vez que o Windows To Go foi concebido para ser uma solução centrada no utilizador e com elevada mobilidade, tem de adotar uma abordagem ligeiramente diferente ao aprovisionamento destas unidades.  
@@ -105,7 +105,7 @@ Este tópico fornece os passos para fornecer windows to go in Configuration Mana
 
    -   **Comentário**: especifique uma descrição exclusiva da finalidade do suporte de dados.  
 
-   -   **Ficheiro do suporte de dados**: especifique o nome e o caminho dos ficheiros de saída. O assistente escreve os ficheiros de saída nesta localização. Por exemplo: ** \\\servername\folder\outputfile.wim**  
+   -   **Ficheiro do suporte de dados**: especifique o nome e o caminho dos ficheiros de saída. O assistente escreve os ficheiros de saída nesta localização. Por exemplo: ** \\ \servername\folder\outputfile.wim**  
 
 7. Na página **Segurança** , especifique as seguintes informações e clique em **Seguinte**.  
 
@@ -311,7 +311,7 @@ Este tópico fornece os passos para fornecer windows to go in Configuration Mana
 
     1.  **Nome**: especifique um nome para a linha de comandos, como **Enable BitLocker for Windows To Go**.  
 
-    2.  **Linha de Comando**: i386\osdbitlocker_wtg.exe /Ativar /pwd:< *Nenhum&#124;AD*>  
+    2.  **Linha de Comando**: i386\osdbitlocker_wtg.exe /Ativar /pwd:< *None&#124; Anúncio*>  
 
          Parâmetros:  
 

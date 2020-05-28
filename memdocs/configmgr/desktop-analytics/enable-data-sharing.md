@@ -10,12 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723636"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268747"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Ativar a partilha de dados para desktop Analytics
 
@@ -74,6 +75,9 @@ Para permitir a partilha de dados, configure o seu servidor proxy para permitir 
 > Para a privacidade e integridade dos dados, o Windows verifica um certificado Microsoft SSL (fixação de certificado) ao comunicar com os pontos finais de dados de diagnóstico. Interceção e inspeção ssl não são possíveis. Para utilizar o Desktop Analytics, exclua estes pontos finais da inspeção SSL.<!-- BUG 4647542 -->
 
 A partir da versão 2002, se o site do Gestor de Configuração não ligar aos pontos finais necessários para um serviço na nuvem, eleva uma mensagem de estado crítico ID 11488. Quando não consegue ligar-se ao serviço, o SMS_SERVICE_CONNECTOR o estado do componente muda para crítico. Ver estado detalhado no nó de [Estado do Componente](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) da consola 'Gestor de Configuração'.<!-- 5566763 -->
+
+> [!NOTE]
+> Para obter mais informações sobre as gamas de endereços IP da Microsoft, consulte [o Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). Estes endereços atualizam-se regularmente. Não há granularidade por serviço, qualquer endereço IP nestas gamas poderia ser usado.
 
 ### <a name="server-connectivity-endpoints"></a>Pontos finais de conectividade do servidor
 
@@ -136,7 +140,7 @@ Configure os dispositivos para utilizar o contexto do utilizador inscrito para a
 - Certifique-se de que os utilizadores têm permissão de procuração para chegar aos pontos finais dos dados de diagnóstico. Esta opção requer que os dispositivos possuam utilizadores de consolas com permissões por procuração, pelo que não pode utilizar este método com dispositivos sem cabeça.
 
 > [!IMPORTANT]
-> A abordagem de autenticação por procuração do utilizador é incompatível com a utilização da Proteção avançada de ameaças do Microsoft Defender. Este comportamento deve-se ao facto de esta autenticação se basear `0`na chave de registo **DisableEnterpriseAuthProxy** definida para , enquanto o Microsoft Defender ATP exige que seja definido para `1`. Para mais informações, consulte configurações de [proxy de máquina seleção e conectividade](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)de internet no MICROSOFT Defender ATP .
+> A abordagem de autenticação por procuração do utilizador é incompatível com a utilização da Proteção avançada de ameaças do Microsoft Defender. Este comportamento deve-se ao facto de esta autenticação se basear na chave de registo **DisableEnterpriseAuthProxy** definida para , enquanto o `0` Microsoft Defender ATP exige que seja definido para `1` . Para mais informações, consulte configurações de [proxy de máquina seleção e conectividade](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)de internet no MICROSOFT Defender ATP .
 
 ### <a name="device-proxy-authentication"></a>Autenticação por procuração de dispositivo
 
@@ -158,7 +162,7 @@ Esta abordagem é a mais complexa porque requer as seguintes configurações:
 
   - Procuração transparente
 
-  - Configure o proxy WinINET em todo o dispositivo utilizando a seguinte definição de política de grupo: Faça definições de **procuração por máquina (em vez de por utilizador)** (ProxySettingsPerUser = `1`)
+  - Configure o proxy WinINET em todo o dispositivo utilizando a seguinte definição de política de grupo: Faça definições de **procuração por máquina (em vez de por utilizador)** (ProxySettingsPerUser = `1` )
 
   - Ligação direcionada ou que utiliza tradução de endereços de rede (NAT)
 

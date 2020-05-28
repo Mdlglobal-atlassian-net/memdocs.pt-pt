@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715068"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906280"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Painel de instrumentos de dispositivo de superfície no Gestor de Configuração
 
@@ -31,8 +31,8 @@ Para abrir o painel do dispositivo Surface, utilize os seguintes passos:
 2. Clique no nó **de monitorização.** 
 3. Para carregar o painel de instrumentos, clique em **Dispositivos de Superfície**.
 
-**Painel de instrumentos**
-![de superfície do dispositivo de superfície Painel de superfície](media/Surface-device-dashboard.PNG)
+**Painel de instrumentos de** 
+ ![ dispositivo de superfície Painel de instrumentos de dispositivo de superfície](media/Surface-device-dashboard.PNG)
 
 
 
@@ -57,11 +57,9 @@ O painel do dispositivo Surface mostra três gráficos para o seu ambiente.
 
 ## <a name="more-information"></a>Mais informações
 
-Para mais informações sobre os dispositivos Surface, consulte:
-- O site [surface.]( https://go.microsoft.com/fwlink/?linkid=861998)
+Para obter mais informações sobre os dispositivos Surface, consulte o site [surface.](https://www.microsoft.com/surface)
 
-Para obter mais informações sobre a implementação de atualizações de firmware surface no Gestor de Configuração, consulte:
-- [Como gerir as atualizações]( https://support.microsoft.com/help/4098906)do controlador do Surface no Gestor de Configuração .
+Para obter mais informações sobre a implementação de atualizações de firmware surface no Gestor de Configuração, consulte [como gerir as atualizações](https://support.microsoft.com/help/4098906)do controlador do Surface .
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078707"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879094"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novidades na versão 1906 do diretor de configuração da filial atual
 
@@ -186,7 +186,7 @@ Para mais informações, consulte o dashboard Source De [Dados do Cliente](../..
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>Use o seu ponto de distribuição como um servidor de cache em rede para otimização de entrega
 
 <!--3555764-->
-Pode agora instalar o servidor De Otimização de Otimização de Entrega (DOINC) nos seus pontos de distribuição. Ao gravar este conteúdo no local, os seus clientes podem beneficiar da funcionalidade de Otimização de Entrega, mas pode ajudar a proteger os links WAN.
+Agora pode instalar o servidor de Cache de Otimização de Entrega nos seus pontos de distribuição. Ao gravar este conteúdo no local, os seus clientes podem beneficiar da funcionalidade de Otimização de Entrega, mas pode ajudar a proteger os links WAN.
 
 Este servidor de cache funciona como uma cache transparente a pedido para conteúdos descarregados pela Otimização da Entrega. Utilize as definições do cliente para se certificar de que este servidor é oferecido apenas aos membros do grupo de limites do Gestor de Configuração local.
 
@@ -306,7 +306,7 @@ Esta versão inclui as seguintes melhorias nas aprovações das aplicações:
 
 - Há um novo método WMI, **DeleteInstance** para remover um pedido de aprovação de aplicações. Esta ação não desinstala a aplicação no dispositivo. Se ainda não estiver instalada, o utilizador não pode instalar a aplicação a partir do Software Center.
 
-- Ligue para a **API CreateApprovedRequest** para criar um pedido pré-aprovado para uma aplicação num dispositivo. Para evitar a instalação automática da aplicação no cliente, defina o parâmetro **de instalação automática** para `FALSE`. O utilizador vê a aplicação no Centro de Software, mas não está instalada automaticamente.
+- Ligue para a **API CreateApprovedRequest** para criar um pedido pré-aprovado para uma aplicação num dispositivo. Para evitar a instalação automática da aplicação no cliente, defina o parâmetro **de instalação automática** para `FALSE` . O utilizador vê a aplicação no Centro de Software, mas não está instalada automaticamente.
 
 Para mais informações, consulte [Aprovar aplicações.](../../../apps/deploy-use/app-approval.md)
 
@@ -348,7 +348,7 @@ A pré-cache da sequência de tarefas inclui agora tipos de conteúdo adicionais
 
 - Imagens do SO
 - Pacotes de controladores
-- Pacotes
+- Pacote
 
 Para mais informações, consulte o [conteúdo pré-cache da Configure](../../../osd/deploy-use/configure-precache-content.md).
 
@@ -432,7 +432,7 @@ Utilize o seguinte formato URL para abrir o Centro de Software para um separador
 
 `softwarecenter:page=CustomTab1`
 
-A `CustomTab1` corda é o primeiro separador personalizado em ordem.
+A corda `CustomTab1` é o primeiro separador personalizado em ordem.
 
 Por exemplo, digite este URL na janela Windows **Run.**
 
@@ -501,9 +501,9 @@ Agora pode perfurar as estatísticas de conformidade para ver quais os dispositi
 
 A hiperligação **requerida de visualização** está disponível nos seguintes locais:
 
-   - **Software** > da Biblioteca de**Software atualiza** > **todas as atualizações de software**
-   - **Biblioteca de** > software**Windows 10 A servir** > **todas as atualizações do Windows 10**
-   - **Software Library** > Gabinete de Biblioteca de Software**365 Gabinete** > de Gestão de Clientes**365 Atualizações**
+   - **Biblioteca de**  >  Software **Atualizações de**  >  software **Todas as atualizações de software**
+   - **Biblioteca de**  >  Software Serviço do **Windows 10**  >  **Todas as atualizações do Windows 10**
+   - **Biblioteca de**  >  Software **Escritório 365 Gestão de**  >  Clientes **Atualizações do Office 365**
 
 Para mais informações, consulte [as atualizações](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)de software do Monitor , [Gerencie o Windows como um serviço](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)e [gerencie as atualizações do Office 365 ProPlus.](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)
 
@@ -562,7 +562,7 @@ No espaço de trabalho **de Ativos e Compliance,** vá ao nó dos **Dispositivos
 
 > [!Note]  
 > - Este separador não está atualmente disponível a partir de um subnódoo de dispositivos sob o nó de **Recolha de Dispositivos.** Por exemplo, quando seleciona a opção de **mostrar aos membros** numa coleção.
-> - Este separador pode não povoar como esperado para alguns utilizadores. Para ver a lista completa de coleções a que pertence um dispositivo, deve ter a função de segurança **do Administrador Completo.** Este é um problema conhecido. <!--5107309-->
+> - Este separador pode não povoar como esperado para alguns utilizadores. Para ver a lista completa de coleções a que pertence um dispositivo, deve ter a função de segurança **do Administrador Completo.** Trata-se de um problema conhecido. <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>Separador de sequências de tarefas no nó de aplicações
 
@@ -640,7 +640,7 @@ The following additional hotfixes are available to address specific issues:
 -->
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 <!--At this time, version 1906 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-1906.md#early-update-ring). -->
 A partir de 16 de agosto de 2019, a versão 1906 está globalmente disponível para todos os clientes instalarem.

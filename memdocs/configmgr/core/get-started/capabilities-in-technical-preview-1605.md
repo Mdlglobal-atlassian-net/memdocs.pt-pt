@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721641"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905742"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1605 para Gestor de Configuração
 
@@ -97,13 +97,13 @@ As ações comuns como **Aposentado/Limpeza,** **Código de Reset,** **Bloqueio 
 
 1.  No Diretório Ativo do Azure, registe o Gestor de Configuração como uma ferramenta de gestão "Web Application and/ou Web API". Isto lhe dará uma identificação do cliente de que precisará mais tarde.  
 
-    1.  No nó de Diretório [https://manage.windowsazure.com](https://manage.windowsazure.com)Ativo de , selecione o seu Diretório Ativo Azure e, em seguida, clique em **Aplicações** > **Adicionar**.  
+    1.  No nó de Diretório Ativo de [https://manage.windowsazure.com](https://manage.windowsazure.com) , selecione o seu Diretório Ativo Azure e, em seguida, clique em **Aplicações**  >  **Adicionar**.  
 
     2.  Clique **Em adicionar uma aplicação que a minha organização está a desenvolver.**  
 
     3.  Introduza um nome para a aplicação, selecione **aplicação Web** e/ou **Web API,** em seguida, clique na seta **Seguinte.**  
 
-    4.  Introduza o mesmo URL tanto para o **URL de inscrição** como para o **ID de aplicação URI**. O URL pode ser qualquer coisa e não precisa de resolver um endereço real. Por exemplo, pode introduzir **https://&lt;seu domínio>/sccm**.  
+    4.  Introduza o mesmo URL tanto para o **URL de inscrição** como para o **ID de aplicação URI**. O URL pode ser qualquer coisa e não precisa de resolver um endereço real. Por exemplo, pode introduzir **https:// &lt; seu domínio>/sccm**.  
 
     5.  Conclua o assistente.  
 
@@ -163,7 +163,7 @@ As ações comuns como **Aposentado/Limpeza,** **Código de Reset,** **Bloqueio 
 
     2.  2.  Escolha a aplicação que pretende implementar, então, no separador **Home,** no grupo **Criar,** clique em **Criar Aplicação**.  
 
--   A localização que usa para obter e carregar um token Apple VPP para aplicações compradas em volume na consola Do Gestor de Configuração mudou. Agora pode fazê-lo no espaço de trabalho **da Admin** no âmbito do nó do Programa de Compra de Volume apple de **serviços** > **Apple Volume Purchase Program Tokens** na nuvem.  
+-   A localização que usa para obter e carregar um token Apple VPP para aplicações compradas em volume na consola Do Gestor de Configuração mudou. Agora pode fazê-lo no espaço de trabalho **da Admin** no âmbito do nó do Programa de Compra de Volume apple de **serviços**na  >  **Apple Volume Purchase Program Tokens** nuvem.  
 
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Proteção de Dados empresariais (EDP)  
  Pode criar itens de configuração que lhe permitem implementar as suas políticas de proteção de dados da empresa (EDP), incluindo permitir-lhe escolher as suas aplicações protegidas, o seu nível de proteção EDP e como encontrar dados empresariais na rede. Para mais informações sobre a EDP, consulte os seguintes tópicos:  
@@ -192,7 +192,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 #### <a name="general-prerequisites"></a>Pré-requisitos gerais  
 
--   Certifique-se de que completou as [etapas de Preparação para a Gestão de Dispositivos Móveis no local](https://technet.microsoft.com/library/mt613153.aspx) e [inscreveu os seus dispositivos.](https://technet.microsoft.com/library/mt627870.aspx)  
+-   Certifique-se de que completou as [etapas de preparação para](../../mdm/plan-design/plan-on-premises-mdm.md) o MDM no local e [inscreveu os seus dispositivos](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   Para obter a melhor experiência de instalação de aplicações ao utilizar o Portal da Empresa, certifique-se de que o Gestor de Configuração tem uma ligação ativa com o Microsoft Intune.  
 
@@ -236,7 +236,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
    2. Executar **set-execuçãoPolítica RemoteSigned**  
 
-   3. Da pasta ** &lt;SCCM diretor\>de instalação \cd.latest\SMSSETUP\TOOLS\MDM** executar **.\ConfiguraçãoScript.ps1**  
+   3. Da pasta ** &lt; SCCM diretor de instalação \> \cd.latest\SMSSETUP\TOOLS\MDM** executar **.\ConfiguraçãoScript.ps1**  
 
       O script de configuração faz o seguinte:  
 
@@ -261,7 +261,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 2.  Os utilizadores podem então procurar e instalar aplicações a partir do Portal da Empresa.  
 
-     Depois de abrir o Portal da Empresa, verá uma caixa de diálogo de autenticação chamada Gestor user@domain de **Configuração** Especificar as credenciais de Diretório Ativo do utilizador (sob a forma de utilizador ou de domínio\utilizador) para iniciar sessão.  
+     Depois de abrir o Portal da Empresa, verá uma caixa de diálogo de autenticação chamada Gestor de **Configuração** Especificar as credenciais de Diretório Ativo do utilizador (sob a forma de utilizador user@domain ou de domínio\utilizador) para iniciar sessão.  
 
 ##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Novos separadores para atualizações e sistemas operativos no Centro de Software  
  Nesta versão, foram feitas as seguintes alterações para melhorar o layout da aplicação do Centro de Software:  
@@ -284,7 +284,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Para criar uma coleção para um grupo de servidores  
 
-1.  [Crie uma coleção](https://technet.microsoft.com/library/gg712295.aspx) de dispositivos que contenha os computadores do grupo de servidores.  
+1.  [Crie uma coleção](../clients/manage/collections/create-collections.md) de dispositivos que contenha os computadores do grupo de servidores.  
 
 2.  No espaço de trabalho **de Ativos e Compliance,** clique em Coleções de **Dispositivos,** clique à direita na recolha que contém os computadores no grupo do servidor e, em seguida, clique em **Propriedades**.  
 
@@ -325,9 +325,9 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Para implementar atualizações de software para o grupo de servidores e monitorizar o estado  
 
-1.  [Implemente atualizações](https://technet.microsoft.com/library/gg712304.aspx) de software para a coleção do grupo de servidores.  
+1.  [Implemente atualizações](../../sum/deploy-use/deploy-software-updates.md) de software para a coleção do grupo de servidores.  
 
-2.  [Monitorize a implementação da atualização do software](https://technet.microsoft.com/library/gg712304.aspx). Além das vistas padrão de monitorização para a implementação de atualizações de software, uma nova descrição do estado é exibida quando um cliente aguarda a sua vez de instalar as atualizações de software. **À espera de fechadura** é exibido para este novo estado.  
+2.  [Monitorize a implementação da atualização do software](../../sum/deploy-use/monitor-software-updates.md). Além das vistas padrão de monitorização para a implementação de atualizações de software, uma nova descrição do estado é exibida quando um cliente aguarda a sua vez de instalar as atualizações de software. **À espera de fechadura** é exibido para este novo estado.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>Para limpar os bloqueios de implementação de computadores num grupo de servidores  
 
@@ -366,7 +366,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 ##### <a name="onboard-devices-for-microsoft-defender-atp"></a>Dispositivos de bordo para Microsoft Defender ATP  
 
-1. Na consola de Configuração Manager, navegue **nos Ativos e** > na**visão geral** > de conformidade**As** > **políticas ATP do Windows Defender** e clique em Criar a Política **ATP do Windows Defender**. Abre o Assistente de Política ATP da Microsoft Defender.  
+1. Na consola de Configuração Manager, navegue **nos Ativos e**na visão geral de conformidade  >  **Overview**  >  **As**políticas  >  **ATP do Windows Defender** e clique em Criar a Política **ATP do Windows Defender**. Abre o Assistente de Política ATP da Microsoft Defender.  
 
 2. Digite o **nome** e **descrição** para a política ATP do Microsoft Defender e selecione **Onboarding**. Clique em Seguinte.  
 
@@ -386,7 +386,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 ##### <a name="monitor-microsoft-defender-atp"></a>Monitor Microsoft Defender ATP  
 
-1.  Na consola 'Gestor de Configuração', navegue na **Monitorização** > da**Visão Geral** > **segurança** e, em seguida, clique no Windows **Defender ATP**.  
+1.  Na consola 'Gestor de Configuração', navegue na **Monitorização**da  >  **Visão Geral**  >  **segurança** e, em seguida, clique no **Windows Defender ATP**.  
 
 2.  Reveja o painel de proteção de ameaças avançada do Microsoft Defender.  
 
@@ -408,7 +408,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Permitir o atestado de saúde para dispositivos no local  
  Em 1605, corrigimos alguns bugs descobertos em 1604 De Pré-visualização Técnica.  Para experimentá-lo, configure no local o Serviço de Attestation de Saúde utilizando as definições do agente cliente.  
 
-1.  Na consola do Gestor de Configuração, navegue nas**definições**do Cliente de**Visão Geral** > da **Administração** > e, em seguida, coloque **o Serviço de Atestado** de Saúde no local para **Sim**.  
+1.  Na consola do Gestor de Configuração, navegue nas definições do Cliente de Visão Geral da **Administração**  >  **Overview**  >  **Client settings**e, em seguida, coloque **o Serviço de Atestado** de Saúde no local para **Sim**.  
 
 2.  Especifique o **URL do Serviço de Atestado de Estado de Funcionamento no Local**e, em seguida, clique em **OK**.  
 
@@ -429,7 +429,7 @@ Nesta pré-visualização técnica, se o Portal da Empresa estiver aberto por ma
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Pré-declarar dispositivos pertencentes à empresa com o número de série IMEI ou iOS  
 
-1. Na consola do Gestor de Configuração, vá **Assets e Compliance** > **Overview** > **Todos os dispositivos** > **pré-declarados**de propriedade corporativa, e, em seguida, clique em Criar **Dispositivos Pré-declarados**. O assistente pré-declarado dos dispositivos abre.  
+1. Na consola do Gestor de Configuração, vá **Assets e Compliance**  >  **Overview**Todos os  >  **dispositivos**pré-declarados de propriedade  >  **Pre-declared Devices**corporativa, e, em seguida, clique em **Criar Dispositivos Pré-declarados**. O assistente pré-declarado dos dispositivos abre.  
 
 2. Especifique como pretende adicionar informações do dispositivo:  
 

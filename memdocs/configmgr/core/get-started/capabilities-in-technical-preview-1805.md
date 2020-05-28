@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714844"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905236"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Capacidades em Pré-visualização Técnica 1805 para Gestor de Configuração
 
@@ -163,8 +163,6 @@ Ao transitar esta carga de trabalho, ainda pode implementar definições do 'Con
 <!--1358112-->
 
 O Windows Low Delay Background Transport (LEDBAT) é uma funcionalidade do Windows Server para ajudar a gerir as transferências de rede de fundo. Para os pontos de distribuição que estão em execução em versões suportadas do Windows Server, pode ativar uma opção para ajudar a ajustar o tráfego de rede. Os clientes só usam largura de banda da rede quando estão disponíveis. 
-
-Para obter mais informações sobre o Windows LEDBAT, consulte o post de blog new [transport advancements.](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)
 
 
 ### <a name="prerequisites"></a>Pré-requisitos
@@ -350,7 +348,7 @@ Para obter mais informações sobre o uso geral da ferramenta SCUP, consulte [Sy
 - Se o WSUS estiver num servidor separado do ponto de atualização do software, deve fazer uma das seguintes opções no servidor WSUS remoto:
     - Ativar o serviço de Registo Remoto no Windows  
     ou
-    - Na chave `HKLM\Software\Microsoft\Update Services\Server\Setup`de registo, crie um novo DWORD denominado `1` **EnableSelfSignedCertificates** com um valor de . 
+    - Na chave de `HKLM\Software\Microsoft\Update Services\Server\Setup` registo, crie um novo DWORD denominado **EnableSelfSignedCertificates** com um valor de `1` . 
 
 ### <a name="try-it-out"></a>Experimente!
 Tente completar as tarefas. Então envie [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) para nos dizer como funcionou.
@@ -390,7 +388,7 @@ O modelo de sequência de tarefas padrão para a atualização do Windows 10 inc
 ## <a name="cmtrace-installed-with-client"></a>CMTrace instalado com cliente
 <!--1357971-->
 
-A ferramenta de visualização de log CMTrace é agora instalada automaticamente juntamente com o cliente do Gestor de Configuração. É adicionado ao diretório de instalação do `%WinDir%\ccm\cmtrace.exe`cliente, que por padrão é .
+A ferramenta de visualização de log CMTrace é agora instalada automaticamente juntamente com o cliente do Gestor de Configuração. É adicionado ao diretório de instalação do cliente, que por padrão é `%WinDir%\ccm\cmtrace.exe` .
 
 > [!Note]  
 > O CMTrace *não* está registado automaticamente com o Windows para abrir a extensão do ficheiro .log.
@@ -414,10 +412,10 @@ Esta versão inclui as seguintes melhorias ao novo mecanismo de [Feedback](capab
 
 - O diálogo de feedback agora lembra-se das definições anteriores, tais como as opções selecionadas e o seu endereço de e-mail.  
 
-- Agora suporta feedback offline. Guarde o seu feedback da consola e, em seguida, faça o upload para a Microsoft a partir de um sistema ligado à Internet. Utilize a nova ferramenta de `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`uploader de feedback offline localizada em . Para ver as opções de linha de comando `--help` disponíveis e necessárias, execute a ferramenta com a opção. O sistema conectado precisa de acesso a **petrol.office.microsoft.com**.
+- Agora suporta feedback offline. Guarde o seu feedback da consola e, em seguida, faça o upload para a Microsoft a partir de um sistema ligado à Internet. Utilize a nova ferramenta de uploader de feedback offline localizada em `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` . Para ver as opções de linha de comando disponíveis e necessárias, execute a ferramenta com a `--help` opção. O sistema conectado precisa de acesso a **petrol.office.microsoft.com**.
 
 ### <a name="known-issues"></a>Problemas conhecidos
-Ao utilizar **Enviar um sorriso** ou enviar uma **franja** da consola numa máquina com conectividade de internet, pode voltar com a seguinte mensagem: "Error envio feedback". Se clicar em **Mais detalhes,** mostra `{"Message":""}`o seguinte texto: . Este erro deve-se a um problema conhecido com a resposta do sistema de feedback backend. Pode descartar o erro. A Microsoft ainda recebeu o seu feedback. (Se os detalhes apresentarem uma mensagem diferente, utilize a opção de feedback offline para voltar a enviar o seu feedback mais tarde.)
+Ao utilizar **Enviar um sorriso** ou enviar uma **franja** da consola numa máquina com conectividade de internet, pode voltar com a seguinte mensagem: "Error envio feedback". Se clicar em **Mais detalhes,** mostra o seguinte texto: `{"Message":""}` . Este erro deve-se a um problema conhecido com a resposta do sistema de feedback backend. Pode descartar o erro. A Microsoft ainda recebeu o seu feedback. (Se os detalhes apresentarem uma mensagem diferente, utilize a opção de feedback offline para voltar a enviar o seu feedback mais tarde.)
 
 
 
@@ -462,5 +460,5 @@ Nesta versão, utilize [certificados CNG](../plan-design/network/cng-certificate
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações sobre a instalação ou atualização do ramo de pré-visualização técnica, consulte [a Pré-visualização técnica para o Gestor de Configuração](technical-preview.md).    

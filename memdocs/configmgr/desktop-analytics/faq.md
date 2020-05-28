@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693296"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429816"
 ---
 # <a name="desktop-analytics-faq"></a>FAQ da Análise de Computadores
 
@@ -51,6 +52,10 @@ Sim, use o seguinte processo:
 
 - No separador **desktop Analytics Connection,** altere a **Coleção Target** ou gere as coleções adicionais.
 
+<!-- 7130169 -->
+> [!Note]
+> Não inclua mais de 20 coleções na lista de coleções adicionais. Tenha cuidado com o número total de dispositivos em cada coleção. Inclua sempre o seu [piloto Global incluir e excluir coleções.](deploy-pilot.md#bkmk_GlobalPilot)  
+
 > [!IMPORTANT]  
 > O Gestor de Configuração utiliza uma política de definições para configurar dispositivos na recolha do alvo. Esta política inclui as definições de dados de diagnóstico para permitir que os dispositivos enviem dados para a Microsoft. Alterar a recolha de alvos não desfaz a política de definições dos dispositivos que já não se encontra na recolha do alvo. Se não quiser que os seus dispositivos continuem a enviar dados de diagnóstico, [reconfigure os dispositivos](account-close.md#reconfigure-clients).
 
@@ -64,7 +69,7 @@ Para mais informações, consulte [Refresh um computador existente com uma nova 
 
 ### <a name="can-i-change-from-bios-to-uefi-when-upgrading-windows"></a>Posso mudar de BIOS para UEFI ao atualizar o Windows?
 
-Sim. Para mais informações, consulte [Converter de BIOS para UEFI durante uma atualização no local](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Sim. Para mais informações, consulte [Converter de BIOS para UEFI durante uma atualização no local](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Posso usar desktop analytics com Windows 10 LTSC?
 
@@ -144,7 +149,7 @@ Sim, as seguintes funcionalidades do Windows Analytics foram reformadas ou ainda
 - Windows Information Protection
 - Suporte para Servidor Windows
 
-## <a name="other"></a>Outros
+## <a name="other"></a>Outro
 
 ### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Posso usar desktop Analytics para as minhas atualizações Do Office 365 ProPlus?
 

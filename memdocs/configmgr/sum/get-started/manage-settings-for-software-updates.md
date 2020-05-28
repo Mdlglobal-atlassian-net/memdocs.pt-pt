@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719807"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906803"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Gerir as definições para atualizações de software  
 
@@ -40,7 +40,7 @@ Existem definições de política de grupo específicas que são utilizadas pelo
 Quando o ponto de atualização de software é criado para um site, os clientes recebem uma política de computador que fornece o nome do servidor do ponto de atualização de software e configura a política local **Especificar localização do serviço de atualizações da Microsoft na intranet** no computador. O WUA obtém o nome do servidor que está especificado na definição **Definir o serviço de atualização na intranet para detetar atualizações** e estabelece ligação a este servidor quando verifica a compatibilidade das atualizações de software. Quando uma política de domínio é criada para a definição **Especificar localização do serviço de atualizações da Microsoft na intranet** , substitui a política local e o WUA poderá estabelecer ligação a outro servidor diferente do ponto de atualização de software. Se isto acontecer, o cliente pode analisar a compatibilidade da atualização de software com base em diferentes produtos, classificações e idiomas. Por conseguinte, não deve configurar a política do Active Directory para computadores cliente.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Política de grupo Permitir Conteúdo Assinado da Localização do Serviço de Atualizações da Microsoft na Intranet  
-Tem de ativar a definição da Política de Grupo **Permitir conteúdo assinado da localização do serviço de atualização da Microsoft na intranet** antes de o WUA nos computadores verificar as atualizações de software que foram criadas e publicadas com o System Center Updates Publisher. Ativada a definição de política, o WUA aceita as atualizações de software recebidas através de uma localização de intranet se as atualizações de software forem assinadas no arquivo de certificados **Fabricantes Fidedignos** no computador local. Para obter mais informações sobre as definições da Política de Grupo necessárias ao Updates Publisher, veja [Biblioteca de Documentação do Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
+Tem de ativar a definição da Política de Grupo **Permitir conteúdo assinado da localização do serviço de atualização da Microsoft na intranet** antes de o WUA nos computadores verificar as atualizações de software que foram criadas e publicadas com o System Center Updates Publisher. Ativada a definição de política, o WUA aceita as atualizações de software recebidas através de uma localização de intranet se as atualizações de software forem assinadas no arquivo de certificados **Fabricantes Fidedignos** no computador local. Para obter mais informações sobre as definições da Política de Grupo necessárias ao Updates Publisher, veja [Biblioteca de Documentação do Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Configuração de atualizações automáticas  
 As Atualizações Automáticas permitem a receção de atualizações de segurança e de outras transferências importantes em computadores cliente. As Atualizações Automáticas são configuradas através da definição da Política de Grupo **Configurar Atualizações Automáticas** ou através do Painel de Controlo do computador local. Quando as Atualizações Automáticas são ativadas, os computadores cliente recebem notificações de atualização e, dependendo das definições configuradas, transferem e instalam as atualizações necessárias. Quando as Atualizações Automáticas coexistem com atualizações de software, cada computador cliente pode apresentar ícones de notificação e notificações de apresentação em pop-up para a mesma atualização. Além disso, quando for necessário um reinício, cada computador cliente pode apresentar uma caixa de diálogo de reinício para a mesma atualização.  
@@ -137,6 +137,6 @@ Por predefinição, a lista de revogação do certificado (CRL) não é verifica
 Se for utilizado, a verificação do CRL deve ser ativada nas consolas do Gestor de Configuração que processam atualizações de software.  
 
 #### <a name="to-enable-crl-checking"></a>Para ativar a verificação CRL  
-No computador que executa a verificação CRL, a partir do DVD do produto, executa o seguinte a partir de um pedido de comando: **\SMSSETUP\BIN\X64\\**<*idioma*>**\UpdDwnldCfg.exe /checkrevocation**.  
+No computador que executa a verificação CRL, a partir do DVD do produto, executa o seguinte a partir de um pedido de comando: ** \\ \SMSSETUP\BIN\X64** < *language* > **idioma \UpdDwnldCfg.exe /checkrevocation**.  
 
 Por exemplo, para o inglês (EUA) executar **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  

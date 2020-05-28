@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722712"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906054"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Licenciamento e balcões para Gestor de Configuração
 
@@ -32,7 +32,7 @@ Utilize este artigo para conhecer os requisitos de licenciamento para as opçõe
 
 Os clientes com garantia de software ativa (SA) em licenças de Gestor de Configuração ou com direitos de subscrição equivalentes a partir de 1 de outubro de 2016 têm direitos de utilização da versão 1606 de outubro de 2016 do Diretor de Configuração. Os clientes com direitos de Configuração Em ou depois de 1 de outubro de 2016 encontrarão duas opções licenciadas após a instalação: filial atual e ramo de manutenção de longo prazo (LTSB).
 
-Para os termos e condições completos para os produtos que compra através de programas de licenciamento de volume da Microsoft, consulte [Termos e Documentação de Licenciamento.](https://go.microsoft.com/fwlink/?LinkId=800052)
+Para os termos e condições completos para os produtos que compra através de programas de licenciamento de volume da Microsoft, consulte [Termos e Documentação de Licenciamento.](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 
 ## <a name="licensed-branches"></a>Sucursais licenciadas
@@ -117,7 +117,7 @@ Para saber mais sobre os detalhes de licenciamento de produtos, utilize os segui
 
 - [Visão geral do VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Termos do produto de licenciamento de volume da Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Termos do produto de licenciamento de volume da Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Os clientes da licença de volume podem obter um resumo das suas licenças no Centro de Serviços de Licença de [Volume.](https://www.microsoft.com/Licensing/servicecenter/default.aspx) Vá ao menu **Licenças** e selecione Resumo das **Licenças.**
 

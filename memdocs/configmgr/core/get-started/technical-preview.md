@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fd1e0bb45972bb9b3ba2a3e0bbfbb3d0509c4a8
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729300"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905148"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Pré-visualização técnica para Gestor de Configuração
 
@@ -25,7 +25,7 @@ Este artigo fornece detalhes sobre o ramo de pré-visualização técnica mensal
 
 Como esta versão é uma pré-visualização técnica, os detalhes e funcionalidades estão sujeitos a alterações.
 
-Esta informação aplica-se a todas as versões do ramo de pré-visualização técnica do Gestor de Configuração. Este artigo lista cada nova funcionalidade juntamente com a versão técnica de pré-visualização na qual aparece pela primeira vez. Por exemplo, versão **2001** para janeiro (`01``20`) de 2020 ( ). Artigos separados dedicados a cada versão de pré-visualização detalham as características individuais.
+Esta informação aplica-se a todas as versões do ramo de pré-visualização técnica do Gestor de Configuração. Este artigo lista cada nova funcionalidade juntamente com a versão técnica de pré-visualização na qual aparece pela primeira vez. Por exemplo, versão **2001** para janeiro `01` ( ) de 2020 ( `20` ). Artigos separados dedicados a cada versão de pré-visualização detalham as características individuais.
 
 Para obter informações sobre as novidades no *atual ramo* do Gestor de Configuração, consulte [as novidades nas versões incrementais do Gestor de Configuração.](../plan-design/changes/whats-new-incremental-versions.md)
 
@@ -74,7 +74,7 @@ O ramo técnico de pré-visualização do Gestor de Configuração suporta os se
 - O site suporta até 10 clientes, que podem executar qualquer versão de OS do [cliente suportada.](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> A inclusão destes produtos neste conteúdo não implica uma extensão do suporte para uma versão que está para além do seu ciclo de vida de suporte. O Gestor de Configuração não suporta produtos que estão para além do seu ciclo de vida de suporte. Para mais informações, consulte [a Política de Ciclo de Vida](https://go.microsoft.com/fwlink/p/?LinkId=208270)da Microsoft .
+> A inclusão destes produtos neste conteúdo não implica uma extensão do suporte para uma versão que está para além do seu ciclo de vida de suporte. O Gestor de Configuração não suporta produtos que estão para além do seu ciclo de vida de suporte. Para mais informações, consulte [a Política de Ciclo de Vida](https://support.microsoft.com/lifecycle)da Microsoft .
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a>Instalar e atualizar
 
@@ -95,7 +95,7 @@ Instale uma versão de base até um ano após o seu lançamento. Quando instalar
 
 - Versão técnica de **pré-visualização 2002**: A versão de pré-visualização técnica do Diretor de Configuração 2002 está disponível como uma atualização na consola e como uma nova versão de base.
 
-Faça o download de uma versão de base do [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Faça o download de uma versão de base do Centro de [Avaliação.](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Fornecendo feedback
 
@@ -188,7 +188,7 @@ As seguintes funcionalidades foram lançadas com versões anteriores do ramo de 
 
 ## <a name="see-also"></a>Consulte também
 
-Para obter mais informações, veja os artigos seguintes:
+Para obter mais informações, veja os seguintes artigos:
 
 - [Avaliar o Configuration Manager num laboratório](evaluate-with-lab-environment.md)
 - [Novidades das versões incrementais do Configuration Manager](../plan-design/changes/whats-new-incremental-versions.md)

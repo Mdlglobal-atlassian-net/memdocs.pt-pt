@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078809"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905471"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1705 para Gestor de Configuração
 
@@ -64,7 +64,7 @@ A conta que utiliza para executar a ferramenta requer as seguintes permissões:
 -   **Administrador local** no computador que acolhe o ponto de ligação de serviço.
 
 Necessitará do GUIA do pacote de atualização que pretende repor. Para obter o GUID:
--   Na consola vá para**Atualizações de** **Administração** > e Manutenção e, em seguida, no painel de visualização, clique na cabeça de uma das colunas (como **Estado),** em seguida, selecione **Pacote Guia**. Isto adiciona essa coluna ao visor e a coluna mostra o pacote de atualização GUID.
+-   Na consola vá para Atualizações de **Administração**  >  **e Manutenção** e, em seguida, no painel de visualização, clique na cabeça de uma das colunas (como **Estado),** em seguida, selecione **Pacote Guia**. Isto adiciona essa coluna ao visor e a coluna mostra o pacote de atualização GUID.
 
 > [!TIP]  
 > Para copiar o GUID, selecione a linha para o pacote de atualização que pretende repor e, em seguida, utilize CTRL+C para copiar essa linha. Se colar a sua seleção copiada a um editor de texto, pode então copiar apenas o GUID para ser utilizado como parâmetro de linha de comando quando executa a ferramenta.
@@ -85,10 +85,10 @@ Depois da ferramenta correr:
 
 |                        Parâmetro                         |                                                            Descrição                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;FQDN do Servidor SQL do seu site de topo>** | *Necessário* <br> Deve especificar o FQDN do Servidor SQL que acolhe a base de dados do site para o site de topo da sua hierarquia. |
-|                **-Nome &lt;da base de dados -D>**                 |                             *Necessário* <br> Deve especificar o nome da base de dados de sites de topo.                             |
-|                 **-P &lt;Pacote GUIA>**                 |                        *Necessário* <br> Deve especificar o GUIA para o pacote de atualização que pretende repor.                        |
-|           **-I &lt;Nome de instância do Servidor SQL>**           |                   *Opcional* <br> Use isto para identificar a instância do Servidor SQL que acolhe a base de dados do site.                   |
+| **-S &lt; FQDN do Servidor SQL do seu site de topo>** | *Necessário* <br> Deve especificar o FQDN do Servidor SQL que acolhe a base de dados do site para o site de topo da sua hierarquia. |
+|                **-D &lt; Nome da base de dados>**                 |                             *Necessário* <br> Deve especificar o nome da base de dados de sites de topo.                             |
+|                 **-P &lt; Pacote GUIA>**                 |                        *Necessário* <br> Deve especificar o GUIA para o pacote de atualização que pretende repor.                        |
+|           **-I &lt; Nome da instância do Servidor SQL>**           |                   *Opcional* <br> Use isto para identificar a instância do Servidor SQL que acolhe a base de dados do site.                   |
 |                       **-FDELETE**                       |                      *Opcional* <br> Use isto para forçar a eliminação de um pacote de atualização descarregado com sucesso.                      |
 
  **Exemplos:**  
@@ -99,7 +99,7 @@ Depois da ferramenta correr:
 ### <a name="test-the-tool-with-the-technical-preview"></a>Teste a ferramenta com a Pré-visualização Técnica  
 Pode utilizar esta ferramenta com versões de pré-visualização técnica 1606 ou posteriores. Este suporte para trás é fornecido para que a ferramenta possa ser usada com um maior número de cenários de atualização de pré-visualização técnica, sem ter que esperar até que a próxima versão técnica de pré-visualização esteja disponível.
 
-Execute a ferramenta num pacote de atualização para obter uma pré-visualização técnica antes de a atualização completar a verificação pré-requisito. Um estado de verificação pré-requisito preenchido é identificado pelo seguinte Estado para o pacote **em** > **Atualizações administrativas e manutenção:**  
+Execute a ferramenta num pacote de atualização para obter uma pré-visualização técnica antes de a atualização completar a verificação pré-requisito. Um estado de verificação pré-requisito preenchido é identificado pelo seguinte Estado para o pacote **em**  >  **Atualizações administrativas e manutenção:**  
 -   **Verificação pré-requisito aprovada**
 -   **Verificação pré-requisito passada com aviso**
 -   **Verificação pré-requisito falhou**
@@ -121,12 +121,12 @@ Com esta versão, pode agora utilizar réplicas de compromisso assíncronos nos 
 
 - Esta versão não suporta a falha na utilização da réplica de compromisso assíncrono como base de dados do site.
   > [!CAUTION]  
-  > Como o Gestor de Configuração não valida o estado da réplica assíncrona compromete-se a confirmar a sua corrente, e [ao conceber tal réplica pode estar dessincronizada,](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)o uso de uma réplica de compromisso assíncrono, uma vez que a base de dados do site pode colocar a integridade do seu site e os dados em risco.  
+  > Como o Gestor de Configuração não valida o estado da réplica assíncrona compromete-se a confirmar a sua corrente, e [ao conceber tal réplica pode estar dessincronizada,](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)o uso de uma réplica de compromisso assíncrono, uma vez que a base de dados do site pode colocar a integridade do seu site e os dados em risco.  
 
 - Pode utilizar o mesmo número e tipo de réplicas num grupo de disponibilidade, tal como suportado pela versão do SQL Server que utiliza.   (O apoio prévio limitava-se a duas réplicas sincronizadas.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configure uma réplica de compromisso assíncrono
-Para adicionar uma réplica assíncrona a um grupo de [disponibilidade que utiliza com o Configurmanager,](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)não precisa de executar os scripts de configuração necessários para configurar uma réplica sincronizada. (Isto porque não há suporte para usar essa réplica assíncrona como base de dados do site.) Consulte [a documentação do SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) para obter informações sobre como adicionar réplicas secundárias a grupos de disponibilidade.
+Para adicionar uma réplica assíncrona a um grupo de [disponibilidade que utiliza com o Configurmanager,](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)não precisa de executar os scripts de configuração necessários para configurar uma réplica sincronizada. (Isto porque não há suporte para usar essa réplica assíncrona como base de dados do site.) Para mais informações, consulte [Adicionar uma réplica secundária a um grupo de disponibilidade](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Use a réplica assíncrona para recuperar o seu site
 Antes de utilizar uma réplica assíncrona para recuperar a base de dados do site, tem de parar o site primário ativo para evitar mais escritos na base de dados do site. Depois de parar o site, pode utilizar uma réplica assíncrona no lugar da utilização de uma base de [dados recuperada manualmente](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -170,7 +170,7 @@ Certifique-se de que leu o post do blog para entender o básico sobre o Windows 
 Para criar uma política, e para navegar nas definições disponíveis:
 
 1.  Na consola 'Gestor de Configuração', escolha **Ativos e Conformidade.**
-2.  No espaço de trabalho **de Ativos e Compliance,** escolha **A** > Proteção de**Pontos Finais** > guarda de**aplicação Windows Defender**.
+2.  No espaço de trabalho **de Ativos e Compliance,** escolha **A**Proteção de  >  **Pontos Finais**guarda de  >  **aplicação Windows Defender**.
 3.  No separador **Home,** no grupo **Criar,** clique em Criar a Política de Guarda de **Aplicações do Windows Defender**.
 4.  Utilizando o post do blog como referência, pode navegar e configurar as definições disponíveis para experimentar a funcionalidade.
 5.  Quando terminar, complete o assistente e implemente a política para um ou mais dispositivos Windows 10.
@@ -246,7 +246,7 @@ Neste momento, ligou o site do Gestor de Configuração ao Azure AD.
 Antes de começar, certifique-se de que os ficheiros de origem de instalação do cliente são armazenados localmente no dispositivo para o qual pretende instalar o cliente.
 Em seguida, utilize as instruções em [Como implementar clientes para computadores Windows](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) utilizando a seguinte linha de comando de instalação (substitua os valores no exemplo com os seus próprios valores):
 
-**ccmsetup.exe /NoCrlCheck /Source:C:CLIENTE CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:CLIENTE CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HE C AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso AADCLIENTAPPID= \< GUID> AADRESOURCEURI=<https://contososerver>**
 
 - **/NoCrlCheck**: Se o seu ponto de gestão de gestão ou gateway de gestão de nuvem utilizar um certificado de servidor não público, então o cliente pode não conseguir chegar à localização crl.
 - **/Fonte**: Pasta local: Localização dos ficheiros de instalação do cliente.
@@ -276,7 +276,7 @@ Os pré-requisitos para configurar uma ligação à OMS são inalterados dos [do
 
 ### <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>Utilize o Assistente de Serviços Azure para configurar a ligação à OMS
 
-1.  Na consola, vá ao **Administration** > **Overview** > **Cloud Services** > **Azure Services**, e depois escolha os **Serviços Configure Azure** a partir do separador **Home** da fita, para iniciar o Assistente **de Serviços Azure**.
+1.  Na consola, vá ao **Administration**  >  **Overview**  >  **Cloud Services**  >  **Azure Services**, e depois escolha os **Serviços Configure Azure** a partir do separador **Home** da fita, para iniciar o Assistente **de Serviços Azure**.
 
 2.  Na página **dos Serviços Azure,** selecione o serviço de cloud Da Suite de Gestão da Operação. Forneça um nome amigável para o nome de **serviço Azure** e uma descrição opcional, e depois clique em **Seguinte**.
 

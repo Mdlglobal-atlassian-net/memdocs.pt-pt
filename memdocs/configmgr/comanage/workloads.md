@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075715"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842228"
 ---
 # <a name="co-management-workloads"></a>Cargas de trabalho de cogestão
 
@@ -75,16 +75,15 @@ A carga de trabalho endpoint Protection inclui o conjunto Windows Defender de fu
 - Controlo de Aplicações do Windows Defender  
 - Centro de Segurança do Windows Defender  
 - Proteção avançada de ameaças do Windows Defender (agora conhecida como Proteção de Ameaças do Microsoft Defender)
-- Windows Information Protection  
 
 Para obter mais informações sobre a funcionalidade Intune, consulte [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Quando muda esta carga de trabalho, as políticas do Gestor de Configuração permanecem no dispositivo até que as políticas intune as sobressaem. Este comportamento garante que o dispositivo ainda tem políticas de proteção durante a transição.
 >
-> A carga de trabalho de proteção de pontofinal também faz parte da configuração do dispositivo. O mesmo comportamento aplica-se quando muda a carga de trabalho de configuração do [dispositivo.](#device-configuration)<!-- SCCMDocs.nl-nl issue #4 -->
+> A carga de trabalho de proteção de pontofinal também faz parte da configuração do dispositivo. O mesmo comportamento aplica-se quando muda a carga de trabalho de configuração do [dispositivo.](#device-configuration)<!-- SCCMDocs.nl-nl issue #4 --> Quando muda a carga de trabalho de configuração do dispositivo, também inclui políticas para a funcionalidade de Proteção de Informação do Windows, que não está incluída na carga de trabalho de proteção de pontofinal.<!-- 4184095 -->
 >
-> As definições antivírus do Microsoft Defender que fazem parte do tipo de perfil de restrições do Dispositivo para a configuração do Dispositivo Intune não estão incluídas no âmbito do slider de proteção endpoint. Para gerir o Antivírus Do Microsoft Defender para dispositivos cogeridos com o slider de proteção de pontofinal ativado, utilize as novas políticas antivírus no >  **microsoft Endpoint manager administrador****antivírus**de**segurança** > Endpoint . O novo tipo de política tem novas e melhoradas opções disponíveis, e suporta todas as mesmas definições disponíveis no perfil de restrições do Dispositivo. <!--6609171-->
+> As definições antivírus do Microsoft Defender que fazem parte do tipo de perfil de restrições do Dispositivo para a configuração do Dispositivo Intune não estão incluídas no âmbito do slider de proteção endpoint. Para gerir o Antivírus Do Microsoft Defender para dispositivos cogeridos com o slider de proteção de pontofinal ativado, utilize as novas políticas antivírus no **microsoft Endpoint manager administrador antivírus**  >  **de segurança**  >  **Antivirus**Endpoint . O novo tipo de política tem novas e melhoradas opções disponíveis, e suporta todas as mesmas definições disponíveis no perfil de restrições do Dispositivo. <!--6609171-->
 >
 > A funcionalidade de encriptação do Windows inclui a gestão bitLocker. Para obter mais informações sobre o comportamento desta funcionalidade com cogestão, consulte a [gestão do Deploy BitLocker](../protect/deploy-use/bitlocker/deploy-management-agent.md#co-management-and-intune).<!-- SCCMDocs#2321 -->
 
@@ -97,6 +96,9 @@ A carga de trabalho de configuração do dispositivo inclui configurações que 
 Ainda pode implementar definições do 'Configuração Manager' para dispositivos cogeridos, mesmo que o Intune seja a autoridade de configuração do dispositivo. Esta exceção pode ser usada para configurar configurações que a sua organização necessita, mas ainda não estão disponíveis em Intune. Especifique esta exceção numa linha de base de [configuração do Gestor](../compliance/deploy-use/create-configuration-baselines.md)de Configuração . Ative a opção de **aplicar sempre esta linha de base mesmo para clientes cogeridos** ao criar a linha de base. Pode mudá-lo mais tarde no separador **Geral** das propriedades de uma linha de base existente.  
 
 Para obter mais informações sobre a funcionalidade Intune, consulte Criar um perfil de [dispositivo no Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Quando muda a carga de trabalho de configuração do dispositivo, também inclui políticas para a funcionalidade de Proteção de Informação do Windows, que não está incluída na carga de trabalho de proteção de pontofinal.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Aplicativos click-to-run do Office
 
@@ -139,17 +141,17 @@ Quando a carga de trabalho endpoint Protection é transferida para Intune, o cli
 
 Para resolver este problema, aplique o CleanUpPolicy.xml utilizando configSecurityPolicy.exe após as políticas intune terem sido recebidas pelo cliente usando os passos abaixo:
 
-1. Copie e guarde `CleanUpPolicy.xml`o texto abaixo como .
+1. Copie e guarde o texto abaixo como `CleanUpPolicy.xml` .
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
-1. Abra um pedido de `ConfigSecurityPolicy.exe`comando elevado para . Tipicamente, este executável está numa das seguintes diretórios:
+1. Abra um pedido de comando elevado para `ConfigSecurityPolicy.exe` . Tipicamente, este executável está numa das seguintes diretórios:
    - C:\Programa Ficheiros\Windows Defender
    - C:\Program Files\Microsoft Security Client
 1. A partir do pedido de comando, passe no ficheiro xml para limpar a apólice. Por exemplo, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Como mudar as cargas de trabalho](how-to-switch-workloads.md)  

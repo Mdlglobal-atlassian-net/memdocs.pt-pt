@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714424"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906278"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventário de hardware para Linux e UNIX no Gestor de Configuração
 
@@ -105,7 +105,7 @@ As ações do inventário de hardware são introduzidas no ficheiro de registo d
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Criar um fornecedor de inventário de hardware personalizado para computadores Linux e UNIX:  
  Para criar um fornecedor personalizado de inventário de hardware para o cliente do Gestor de Configuração para o Linux e uniX, utilize a **Fonte OMI - v.1.0.6** e siga as instruções do Guia de Arranque do OMI. Este processo inclui a criação de um ficheiro MOF (Managed Object Format) que define o esquema do novo fornecedor. Mais tarde, importa o ficheiro MOF para O Gestor de Configuração para permitir o suporte da nova classe de inventário personalizado.  
 
- Tanto o OMI Source - v.1.0.6, como o Guia de Introdução da OMI, estão disponíveis para transferência a partir do Web site [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . Pode localizar estas transferências no separador **Documents** (Documentos) da página Web seguinte do Web site OpenGroup.org: [Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ Tanto o OMI Source - v.1.0.6, como o Guia de Introdução da OMI, estão disponíveis para transferência a partir do Web site [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . Pode localizar estas transferências no separador **Documents** (Documentos) da página Web seguinte do Web site OpenGroup.org: [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Configure cada computador com Linux ou UNIX com o fornecedor de inventário de hardware personalizado:  
  Depois de criar um fornecedor de inventário personalizado, tem de copiar e, em seguida, registar o ficheiro da biblioteca de fornecedores em cada computador que tem o inventário que pretende recolher.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078452"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906705"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Pré-requisitos para atualizações de software no Gestor de Configuração
 
@@ -68,7 +68,7 @@ A Consola de Administração WSUS é necessária no servidor do site do Gestor d
 ### <a name="client-settings-for-software-updates"></a>Definições de cliente para atualizações de software  
 As atualizações de software são ativadas para clientes por padrão. Existem outras definições disponíveis que controlam como e quando os clientes avaliam a conformidade com as atualizações do software e controlam a forma como as atualizações do software são instaladas.  
 
- Para obter mais informações, veja os artigos seguintes:  
+ Para obter mais informações, veja os seguintes artigos:  
 
 - [Definições de cliente para atualizações de software](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
@@ -83,7 +83,7 @@ São necessárias duas atualizações para sincronizar a classificação de **Up
 
 - Tem de instalar o [KB 3095113,](https://support.microsoft.com/kb/3095113)lançado em outubro de 2015, nos pontos de atualização do software e servidores do site antes de sincronizar a classificação **de Upgrades.**
   - Esta atualização permite a classificação **de Upgrades.**
-- Para requerer o Windows 10 versão 1607 e mais tarde, tem de instalar e configurar [o KB 3159706](https://support.microsoft.com/en-us/help/3159706). KB 3159706 foi lançado em maio de 2016.
+- Para requerer o Windows 10 versão 1607 e mais tarde, tem de instalar e configurar [o KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 foi lançado em maio de 2016.
   - Esta atualização permite ao WSUS desencriptar de forma nativa os ficheiros utilizados para atualizar a versão 1607 do Windows 1607 e posteriormente.
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ As atualizações e problemas descritos nesta secção aplicam-se apenas ao WSUS
 
 ### <a name="historical-information-about-kb-3095113"></a>Informação histórica sobre kB 3095113
 
- [O KB 3095113](https://support.microsoft.com/kb/3095113) foi [lançado como um hotfix](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/) em outubro de 2015 para adicionar suporte para atualizações do Windows 10 à WSUS. A atualização permite à WSUS sincronizar e distribuir atualizações na classificação **de Atualizações** para windows 10.
+ [O KB 3095113](https://support.microsoft.com/kb/3095113) foi [lançado como um hotfix](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) em outubro de 2015 para adicionar suporte para atualizações do Windows 10 à WSUS. A atualização permite à WSUS sincronizar e distribuir atualizações na classificação **de Atualizações** para windows 10.
 
 Se sincronizar quaisquer atualizações sem ter instalado pela primeira vez [o KB 3095113,](https://support.microsoft.com/kb/3095113)povoa a base de dados WSUS (SUSDB) com dados inutilizáveis. Esses dados devem ser limpos antes de as atualizações poderem ser corretamente implementadas. As atualizações do Windows 10 neste estado não podem ser descarregadas utilizando o Descarregamento software Updates Wizard.
 
@@ -115,15 +115,15 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Historicamente, quando estes erros ocorreram, seriam resolvidos através da realização de uma versão modificada dos passos de resolução para a [WSUS.](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/) Como estes passos são semelhantes à resolução para não fazer os passos manuais necessários após a instalação do KB 3159706, combinamos ambos os conjuntos de passos numa única resolução na secção abaixo:
+Historicamente, quando estes erros ocorreram, seriam resolvidos através da realização de uma versão modificada dos passos de resolução para a [WSUS.](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus) Como estes passos são semelhantes à resolução para não fazer os passos manuais necessários após a instalação do KB 3159706, combinamos ambos os conjuntos de passos numa única resolução na secção abaixo:
 
 - [Para recuperar da sincronização das atualizações antes de instalar kB 3095113 ou KB 3159706](#bkmk_fix-upgrades).
 
 ### <a name="historical-information-about-kb-3159706"></a>Informação histórica sobre kB 3159706
 
-O KB 3148812 foi inicialmente lançado em abril de 2016 para permitir à WSUS desencriptar de forma nativa os ficheiros .esd utilizados para a atualização dos pacotes do Windows 10. [KB 3148812 causou problemas a alguns clientes](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/) e foi substituído por [KB 3159706](https://support.microsoft.com/en-us/help/3159706). O KB 3159706 precisa de ser instalado em todos os pontos de atualização de software e servidores do site antes de poder repor o Windows 10 Version 1607 e dispositivos posteriores. No entanto, podem surgir problemas se não se aperceber que o KB necessita dos seguintes passos manuais após a instalação:
+O KB 3148812 foi inicialmente lançado em abril de 2016 para permitir à WSUS desencriptar de forma nativa os ficheiros .esd utilizados para a atualização dos pacotes do Windows 10. [KB 3148812 causou problemas a alguns clientes](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) e foi substituído por [KB 3159706](https://support.microsoft.com/help/3159706). O KB 3159706 precisa de ser instalado em todos os pontos de atualização de software e servidores do site antes de poder repor o Windows 10 Version 1607 e dispositivos posteriores. No entanto, podem surgir problemas se não se aperceber que o KB necessita dos seguintes passos manuais após a instalação:
 
-1. De uma corrida `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`rápida de comando elevado .
+1. De uma corrida rápida de comando elevado `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` .
 1. Reinicie o serviço WSUS em todos os servidores WSUS.
 
 Se não perceber que o KB 3159706 tinha passos manuais após a instalação, ou sincronizado na atualização para o Windows 10 1607 antes de instalar o KB 3159706, terá problemas de ligação à consola WSUS e implementando a atualização respectivamente. Quando um cliente descarregou o ficheiro de upgrade, receberia um código de erro [ **0xC1800118** ](https://support.microsoft.com/help/3194588/0xc1800118-error-when-you-push-windows-10-version-1607-by-using-wsus).
@@ -143,7 +143,7 @@ Siga os passos abaixo para resolver tanto o erro 0xc1800118 como "Error: Invalid
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - Se partilhar a base de dados wSUS entre vários servidores WSUS, só precisa de **desmarcar atualizações** uma vez para cada base de dados.  
-1. Em cada servidor WSUS, a partir `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`de uma execução rápida de comando elevado: . Em seguida, reinicie o serviço WSUS em todos os servidores WSUS.
+1. Em cada servidor WSUS, a partir de uma execução rápida de comando elevado: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` . Em seguida, reinicie o serviço WSUS em todos os servidores WSUS.
    -  A WSUS coloca a base de dados no [modo de utilizador único](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) antes de verificar se é necessário fazer manutenção. A manutenção corre ou não funciona com base nos resultados da verificação. Em seguida, a base de dados é reposta no modo multiutilizador. 
    - Se partilhar a base de dados wSUS entre vários servidores WSUS, só precisa de fazer esta manutenção uma vez para cada base de dados.
 1. Elimine todas as atualizações do Windows 10 de cada base de dados wSUS utilizando o PowerShell ISE como administrador.
@@ -171,5 +171,5 @@ Siga os passos abaixo para resolver tanto o erro 0xc1800118 como "Error: Invalid
    start-service wuauserv
    ```
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 [Preparar a gestão de atualizações de software](../get-started/prepare-for-software-updates-management.md)

@@ -63,7 +63,7 @@ WHERE dt.InitializationStatus NOT IN (6,7)
 AND rg.ReplicationPattern=N'Site'
 ```
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Reinicialização de dados globais](global-data-reinit.md)
 - [Reinicialização de dados de sites](site-data-reinit.md)

@@ -2,7 +2,7 @@
 title: Planos de implementação em Desktop Analytics
 titleSuffix: Configuration Manager
 description: Conheça os planos de implementação no Desktop Analytics.
-ms.date: 01/14/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c14eb9127b096f7fc4e4680735867913ea877f54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722537"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268492"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Sobre planos de implementação em Desktop Analytics
 
@@ -47,8 +48,6 @@ Por padrão, desktop Analytics atualiza os dados do plano de implementação dia
 
 Depois de ligar o Desktop Analytics ao Gestor de Configuração, selecione as suas coleções nos planos de implementação. Esta integração permite então implementar o Windows para uma recolha com base nos dados do Desktop Analytics.
 
-
-
 ## <a name="readiness-rules"></a>Regras de prontidão
 
 Estão disponíveis as seguintes regras de prontidão nos planos de implantação:
@@ -56,7 +55,6 @@ Estão disponíveis as seguintes regras de prontidão nos planos de implantaçã
 - Se os seus dispositivos recebem automaticamente os controladores do Windows Update. Se os dispositivos receberem as atualizações do controlador a partir do Windows Update, quaisquer problemas de controlador identificados como parte da avaliação de prontidão são automaticamente marcados como **Ready**.  
 
 - Baixo limiar de contagem de instalações para as suas aplicações Windows. Se uma aplicação for instalada numa percentagem mais elevada de computadores do que este limiar, o plano de implementação marca a aplicação como **Noteworthy**. Esta etiqueta significa que pode decidir a importância da aplicação para testar durante a fase piloto.  
-
 
 ## <a name="plan-assets"></a>Plano de ativos
 
@@ -76,14 +74,14 @@ A decisão de **atualização** do Windows para substituir o dispositivo pode se
 - Um componente crítico da bota no sistema tem um controlador bloqueado
 - A característica e modelo específicos não conseguem atualizar
 - Há um componente de classe de exibição com um bloco de condutor que tem todos os seguintes atributos:
-    - Não se sobressapara.
-    - Não há condutor na nova versão do SO
-    - Ainda não está no Windows Update
+  - Não se sobressapara.
+  - Não há condutor na nova versão do SO
+  - Ainda não está no Windows Update
 - Há outro componente plug-and-play no sistema que bloqueia a atualização
 - Há um componente sem fios que usa um condutor emulado xP
 - Um componente de rede com uma ligação ativa perderá o seu condutor. Por outras palavras, após a atualização, pode perder a conectividade da rede.
 
-A decisão **de atualização** do Windows para reinstalar indica que a atualização necessitará de uma reinstalação em oposição a uma atualização no local. 
+A decisão **de atualização** do Windows para reinstalar indica que a atualização necessitará de uma reinstalação em oposição a uma atualização no local.
 
 Uma decisão de atualização **bloqueada** do Windows pode ser causada pelas seguintes razões:
 
@@ -102,11 +100,13 @@ As aplicações que o Desktop Analytics mostra como *notáveis* baseiam-se no ba
    > [!Tip]
    > Para obter mais informações sobre a categoria de aplicações "Não importantes", consulte a [decisão de atualização automática do sistema e as aplicações de loja](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
+A definição de detalhes da **Aplicação** é desativada por padrão, pelo que este separador combina todas as versões de apps com o mesmo nome e editor.<!-- 5542186 --> O comportamento padrão ajuda a reduzir o número total de aplicações que vê, o que ajuda a reduzir os seus esforços para anotar as aplicações. A contagem de aplicações no azulejo **Noteworthy Apps** também reflete esta configuração. Por exemplo, em vez de listar centenas de casos de Microsoft Edge, há um exemplo para todas as versões. Pode tomar decisões uma vez para todas as versões. Se precisar de tomar decisões sobre versões específicas de uma aplicação, ligue esta definição. Também pode configurar esta definição ao trabalhar ao nível dos ativos globais. Para mais informações, consulte [sobre ativos - Apps](about-assets.md#apps).
+
+Quando a **aplicação versa a** definição de detalhes está desligada, os detalhes da aplicação mostram o número de versões e idiomas da aplicação que combina. Se guardar quaisquer alterações aos detalhes da aplicação, aplica-se a todas as versões. Por exemplo, defino a Decisão de **Atualização** ou **A Importância**. Alguns valores mostrarão "Multiple", o que significa que não há um valor consistente em todas as versões. O serviço ainda faz avaliações de risco de compatibilidade para cada versão. Ligue os detalhes das **versões da App** para ver a avaliação do risco de compatibilidade para uma versão específica da aplicação.
 
 ### <a name="drivers"></a>Controladores
 
 Consulte a lista de condutores incluídos neste plano de implantação. Desdefinir a **decisão de upgrade,** rever a recomendação da Microsoft e ver fatores de risco de compatibilidade.
-
 
 ## <a name="importance"></a>Importância
 
@@ -116,20 +116,15 @@ Se uma aplicação for instalada em menos de 2% dos dispositivos visados, está 
 
 Para aplicações, escolha uma importância de **Critical**, **Important**, ou **Não importante.** Se marcar um como crítico ou importante, o Desktop Analytics inclui na implementação do piloto alguns dispositivos com essa aplicação. O serviço inclui no piloto mais instâncias de uma aplicação crítica. Se marcar uma aplicação como não importante, o Desktop Analytics automaticamente a define para **Ready to upgrade**.
 
-
-
 ## <a name="pilot-devices"></a>Dispositivos-piloto
 
 Desktop Analytics combina a sua informação de importância com as configurações piloto globais. Cria então uma recomendação para a qual os dispositivos devem fazer parte da implantação do piloto. A implementação do piloto recomendado inclui dispositivos com diferentes configurações de hardware e um ou mais casos de todas as aplicações críticas e importantes. Se uma aplicação for marcada como crítica, o serviço recomenda mais dispositivos com essa aplicação no piloto.
-
-
 
 ## <a name="deployment-plans-in-configuration-manager"></a>Planos de implementação em Gestor de Configuração
 
 Depois de criar um plano de implementação, utilize o Gestor de Configuração para implementar os produtos. Assim que a implementação começa, o Desktop Analytics monitoriza a implementação com base nas definições do plano.
 
-
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Conheça os ativos do Desktop Analytics](about-assets.md): dispositivos, controladores e apps  
 

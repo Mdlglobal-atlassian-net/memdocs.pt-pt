@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720899"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343172"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>A biblioteca de conteúdos em Gestor de Configuração
 
@@ -91,6 +91,8 @@ Uma biblioteca de conteúdos remotos é um pré-requisito para a elevada disponi
 
 - O servidor do site não pode ter a função de ponto de distribuição. O ponto de distribuição também usa a biblioteca de conteúdos, e esta função não suporta uma biblioteca de conteúdos remotos. Depois de mover a biblioteca de conteúdos, não pode adicionar a função de ponto de distribuição ao servidor do site.  
 
+- O sistema remoto para a biblioteca de conteúdos tem de estar num domínio de confiança.
+
 > [!Important]  
 > Não reutilize uma localização partilhada da rede entre vários sites. Por exemplo, não use o mesmo caminho tanto para um site de administração central como para um local primário para crianças. Esta configuração tem o potencial de corromper a biblioteca de conteúdos, e exigir que a reconstrua.<!--SCCMDocs-pr issue 2764-->  
 
@@ -105,14 +107,14 @@ Uma biblioteca de conteúdos remotos é um pré-requisito para a elevada disponi
 
 3. Selecione Gerir a **Biblioteca de Conteúdos** na fita.  
 
-4. Na janela Manage Content Library, o campo **Current Location** mostra a unidade e o caminho locais. Introduza um caminho de rede válido para a **Nova Localização**. Este caminho é o local para onde o site move a biblioteca de conteúdos. Deve incluir um nome de pasta que já `\\server\share\folder`existe na parte, por exemplo, . Selecione **OK**.  
+4. Na janela Manage Content Library, o campo **Current Location** mostra a unidade e o caminho locais. Introduza um caminho de rede válido para a **Nova Localização**. Este caminho é o local para onde o site move a biblioteca de conteúdos. Deve incluir um nome de pasta que já existe na parte, por exemplo, `\\server\share\folder` . Selecione **OK**.  
 
 5. Note o valor **de Estado** na coluna da Biblioteca de Conteúdos no separador Resumo do painel de detalhes. Atualiza para mostrar o progresso do site na mudança da biblioteca de conteúdos.  
 
    - Enquanto **em curso,** o valor **Move Progress (%)** mostra a percentagem completa.  
 
         > [!Note]  
-        > Se tiver uma grande biblioteca de `0%` conteúdos, poderá ver progressos na consola por um tempo. Por exemplo, com uma biblioteca de 1 TB, tem `1%`de copiar 10 GB antes de aparecer . Reveja **distmgr.log**, que mostra o número de ficheiros e bytes copiados. A partir da versão 1810, o ficheiro de registo também mostra um tempo estimado restante.
+        > Se tiver uma grande biblioteca de conteúdos, poderá ver `0%` progressos na consola por um tempo. Por exemplo, com uma biblioteca de 1 TB, tem de copiar 10 GB antes de aparecer `1%` . Reveja **distmgr.log**, que mostra o número de ficheiros e bytes copiados. A partir da versão 1810, o ficheiro de registo também mostra um tempo estimado restante.
 
    - Se houver um estado de erro, o estado mostra o erro. Erros comuns incluem **acesso negado** ou **disco completo**.  
 
@@ -128,7 +130,7 @@ Se a biblioteca de conteúdos original abranger duas unidades, é fundida numa �
 
 A partir da versão 1810, durante o processo de cópia, os componentes do Gestor **de Despooler** e **Distribuição** não processam novos pacotes. Esta ação garante que o conteúdo não é adicionado à biblioteca enquanto se move. Independentemente disso, agende esta mudança durante a manutenção do sistema.
 
-Se precisar de mover a biblioteca de conteúdos de volta para o servidor do site, repita este processo, mas introduza uma unidade local e caminho para a **Nova Localização**. Deve incluir um nome de pasta que já `D:\SCCMContentLib`existe na unidade, por exemplo, . Quando o conteúdo original ainda existe, o processo move rapidamente a configuração para o local local para o servidor do site.
+Se precisar de mover a biblioteca de conteúdos de volta para o servidor do site, repita este processo, mas introduza uma unidade local e caminho para a **Nova Localização**. Deve incluir um nome de pasta que já existe na unidade, por exemplo, `D:\SCCMContentLib` . Quando o conteúdo original ainda existe, o processo move rapidamente a configuração para o local local para o servidor do site.
 
 > [!Tip]  
 > Para mover o conteúdo para outra unidade no servidor do site, utilize a ferramenta de transferência da **Biblioteca de Conteúdos.** Para mais informações, consulte a ferramenta de transferência da Biblioteca de [Conteúdos](../../support/content-library-transfer.md).  
@@ -154,11 +156,11 @@ Por predefinição, a biblioteca de conteúdos é armazenada na raiz de uma unid
 
 ### <a name="package-library"></a>Biblioteca de pacotes
 
-A pasta da biblioteca de pacotes, **PkgLib,** inclui um ficheiro para cada pacote distribuído ao ponto de distribuição. O nome do ficheiro é o `ABC00001.INI`ID do pacote, por exemplo, . Neste ficheiro da `[Packages]` secção encontra-se uma lista de IDs de conteúdo que fazem parte do pacote, bem como outras informações, como a versão. Por exemplo, **o ABC00001** é um pacote legado na versão **1**. O ID de conteúdo `ABC00001.1`neste ficheiro é .
+A pasta da biblioteca de pacotes, **PkgLib,** inclui um ficheiro para cada pacote distribuído ao ponto de distribuição. O nome do ficheiro é o ID do pacote, por exemplo, `ABC00001.INI` . Neste ficheiro da `[Packages]` secção encontra-se uma lista de IDs de conteúdo que fazem parte do pacote, bem como outras informações, como a versão. Por exemplo, **o ABC00001** é um pacote legado na versão **1**. O ID de conteúdo neste ficheiro é `ABC00001.1` .
 
 ### <a name="data-library"></a>Biblioteca de dados
 
-A pasta da biblioteca de dados, **DataLib,** inclui um ficheiro e uma pasta para cada um dos conteúdos em cada pacote. Por exemplo, este ficheiro `ABC00001.1.INI` e `ABC00001.1`pasta são nomeados e, respectivamente. O ficheiro inclui informações para validação. A pasta recria a estrutura da pasta a partir do pacote original.
+A pasta da biblioteca de dados, **DataLib,** inclui um ficheiro e uma pasta para cada um dos conteúdos em cada pacote. Por exemplo, este ficheiro e pasta são nomeados `ABC00001.1.INI` `ABC00001.1` e, respectivamente. O ficheiro inclui informações para validação. A pasta recria a estrutura da pasta a partir do pacote original.
 
 Os ficheiros na biblioteca de dados são substituídos por ficheiros INI com o nome do ficheiro original na embalagem. Por exemplo, `MyFile.exe.INI`. Estes ficheiros incluem informações sobre o ficheiro original, tais como o tamanho, tempo modificado e o haxixe. Use os primeiros quatro caracteres do haxixe para localizar o ficheiro original na biblioteca de ficheiros. Por exemplo, o haxixe em MyFile.exe.INI é **DEF98765**, e os primeiros quatro caracteres são **DEF9**.
 
@@ -168,7 +170,7 @@ Se a biblioteca de conteúdos se estender por várias unidades, os ficheiros do 
 
 Localize um ficheiro específico utilizando os primeiros quatro caracteres do haxixe encontrado na biblioteca de dados. Dentro da pasta da biblioteca de ficheiros estão muitas pastas, cada uma com um nome de quatro caracteres. Encontre a pasta que corresponde aos quatro primeiros caracteres do hash. Uma vez encontrado esta pasta, inclui um ou mais conjuntos de três ficheiros. Estes ficheiros partilham o mesmo nome, mas um tem a extensão INI, um tem a extensão SIG, e um não tem extensão de ficheiro. O ficheiro original é aquele sem extensão cujo nome é igual ao haxixe da biblioteca de dados.
 
-Por exemplo, a pasta `DEF98765.INI` `DEF98765.SIG` **DEF9** inclui , e `DEF98765`. `DEF98765`é o `MyFile.exe`original. O ficheiro INI inclui uma lista de "utilizadores" ou iDs de conteúdo que partilham o mesmo ficheiro. O site não remove um ficheiro a menos que todos estes conteúdos também sejam removidos.
+Por exemplo, a pasta **DEF9** inclui `DEF98765.INI` , e `DEF98765.SIG` `DEF98765` . `DEF98765`é o `MyFile.exe` original. O ficheiro INI inclui uma lista de "utilizadores" ou iDs de conteúdo que partilham o mesmo ficheiro. O site não remove um ficheiro a menos que todos estes conteúdos também sejam removidos.
 
 ### <a name="drive-spanning"></a>Extensão de unidade
 
@@ -180,7 +182,7 @@ Se escolheu a opção **Automática,** o Gestor de Configuração seleciona a un
 
 Especifica um valor de espaço de reserva durante a configuração. O Gestor de Configuração tenta utilizar um disco secundário uma vez que o melhor disco disponível tenha apenas este valor de espaço de reserva deixado livre. Cada vez que uma nova unidade é selecionada para utilização, a unidade com o espaço livre mais disponível é selecionada.
 
-Não é possível especificar que um ponto de distribuição deve usar todas as unidades, exceto um conjunto específico. Evite este comportamento criando um ficheiro vazio na `NO_SMS_ON_DRIVE.SMS`raiz da unidade, chamada . Coloque este ficheiro antes de o Select Manager selecionar a unidade para utilização. Se o Gestor de Configuração detetar este ficheiro na raiz da unidade, não utiliza a unidade para a biblioteca de conteúdos.
+Não é possível especificar que um ponto de distribuição deve usar todas as unidades, exceto um conjunto específico. Evite este comportamento criando um ficheiro vazio na raiz da unidade, chamada `NO_SMS_ON_DRIVE.SMS` . Coloque este ficheiro antes de o Select Manager selecionar a unidade para utilização. Se o Gestor de Configuração detetar este ficheiro na raiz da unidade, não utiliza a unidade para a biblioteca de conteúdos.
 
 
 ## <a name="troubleshooting"></a>Resolução de problemas
@@ -196,3 +198,5 @@ As seguintes dicas podem ajudá-lo a resolver problemas com a biblioteca de cont
 - Para ver se existem desajustes de hash, valide o pacote a partir da consola 'Gestor de Configuração'.  
 
 - Como última opção, redistribua o conteúdo. Esta ação deve resolver a maioria das questões.  
+
+Para obter informações mais aprofundadas, consulte [A compreensão e resolução](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager)de conteúdos no Gestor de Configuração .

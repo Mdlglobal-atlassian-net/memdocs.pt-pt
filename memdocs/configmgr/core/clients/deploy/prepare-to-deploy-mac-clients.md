@@ -10,12 +10,12 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d0968a61be4e450bb145b309f61de0d6c212549
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b5bcbce659601e10f44f06af94eb939767a389a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713997"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906628"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Prepare-se para implementar software de cliente para Macs
 
@@ -27,7 +27,7 @@ Siga estes passos para se certificar de que está pronto para implementar o clie
 
 ## <a name="mac-prerequisites"></a>Pré-requisitos mac
 
-O pacote de instalação do cliente Mac não é fornecido com os meios de configuração do Gestor de Configuração. Baixe os **Clientes para sistemas operativos adicionais** a partir do [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
+O pacote de instalação do cliente Mac não é fornecido com os meios de configuração do Gestor de Configuração. Baixe os **Clientes para sistemas operativos adicionais** a partir do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Para a lista de versões suportadas, consulte [sistemas operativos suportados para clientes e dispositivos.](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)
 
@@ -162,6 +162,6 @@ Para mais informações, consulte [Instale o ponto de serviços de reporte](../.
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Implementar o cliente do Gestor de Configuração para computadores Mac](deploy-clients-to-macs.md)  

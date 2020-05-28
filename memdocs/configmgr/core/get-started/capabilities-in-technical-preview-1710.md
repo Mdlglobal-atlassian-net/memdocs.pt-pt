@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721298"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905312"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1710 para Gestor de Configuração
 
@@ -35,7 +35,7 @@ Este artigo introduz as funcionalidades disponíveis na Pré-visualização Téc
 - **A atualização para uma nova versão de pré-visualização falha quando tiver um servidor de site em modo passivo**. Quando executar uma versão de pré-visualização que tenha um [servidor de site primário em modo passivo,](capabilities-in-technical-preview-1706.md#site-server-role-high-availability)tem de desinstalar o servidor do site do modo passivo antes de poder atualizar com sucesso o seu site de pré-visualização para esta nova versão de pré-visualização. Pode reinstalar o servidor do site do modo passivo depois de o site completar a atualização.
 
   Para desinstalar o servidor do site do modo passivo:
-  1. Na consola, vá para **a Administração** > **Resumo** > servidores de**configuração** > do site**e funções**do sistema do site, e, em seguida, selecione o servidor de site de modo passivo.
+  1. Na consola, vá para **a Administração**  >  **Resumo**  >  servidores de**configuração**do site e funções do sistema do  >  **site,** e, em seguida, selecione o servidor de site de modo passivo.
   2. No painel de funções do **Sistema do Site,** clique à direita na função **do servidor do Site** e, em seguida, escolha remover **a função**.
   3. Clique à direita no servidor do site do modo passivo e, em seguida, escolha **Eliminar**.
   4. Depois de o servidor do site desinstalar, no servidor do site primário ativo reiniciar o serviço **CONFIGURATION_MANAGER_UPDATE**.
@@ -106,11 +106,11 @@ Os dispositivos geridos devem executar o Windows 10 1709 Fall Creators Update ou
 |------------------------|------------------------|
 | Redução da Superfície de Ataque  | Os dispositivos devem ter [uma proteção]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) do Windows Defender AV em tempo real ativada.  |
 | Acesso a pastas controladas  | Os dispositivos devem ter [uma proteção]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) do Windows Defender AV em tempo real ativada.   |
-| Exploit Protection  | Nenhuma  |
+| Exploit Protection  | Nenhum  |
 | Proteção da rede  |  Os dispositivos devem ter [uma proteção]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) do Windows Defender AV em tempo real ativada.  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Criar uma política de Exploração da Guarda  <!--1355468 -->
-1. Na consola 'Gestor de Configuração', vá para a**Proteção**de **Pontofinal de Ativos e conformidade** > , e, em seguida, clique no **Windows Defender Exploit Guard**.
+1. Na consola 'Gestor de Configuração', vá para a Proteção de **Pontofinal de Ativos e conformidade**,  >  **Endpoint Protection**e, em seguida, clique no **Windows Defender Exploit Guard**.
 2. No separador **Home,** no grupo **Criar,** clique em **Criar Política de Exploração**.
 3. Na página **Geral** do **Assistente de Criação de Item de Configuração**, especifique um nome e uma descrição opcional para o item de configuração.
 4. Em seguida, selecione os componentes da Exploit Guard que pretende gerir com esta política. Para cada componente que selecionar, pode configurar detalhes adicionais.
@@ -121,11 +121,11 @@ Os dispositivos geridos devem executar o Windows 10 1709 Fall Creators Update ou
 5. Complete o assistente para criar a política, que poderá posteriormente ser implementada para dispositivos.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Implementar uma política de Exploração da Guarda     
-Depois de criar políticas de Exploit Guard, use o assistente de política de exploração de implementação para implantá-las. Para isso, abra a consola do Gestor de Configuração para **Ativos e a conformidade** > **endpoint Protection**, e, em seguida, clique em implementar a Política de Guardar **Exploração**.
+Depois de criar políticas de Exploit Guard, use o assistente de política de exploração de implementação para implantá-las. Para isso, abra a consola do Gestor de Configuração para **Ativos e a conformidade**  >  **endpoint Protection**, e, em seguida, clique em implementar a Política de Guardar **Exploração**.
 
 ## <a name="limited-support-for-cng-certificates"></a>Suporte limitado para certificados de GNC
 <!-- 1356191 -->
-A partir deste lançamento, pode agora utilizar modelos de certificados de [Encriptação API: Próxima Geração (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) para os seguintes cenários:
+A partir deste lançamento, pode agora utilizar modelos de certificados de [Encriptação API: Próxima Geração (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) para os seguintes cenários:
 
 - Registo e comunicação do cliente com um ponto de gestão HTTPS.   
 - Distribuição de software e implementação de aplicações com um ponto de distribuição HTTPS.   
@@ -202,7 +202,7 @@ Para compreender o básico sobre o Windows Defender Application Guard, leia [a p
 
 Para criar uma política, e para navegar nas definições disponíveis:
 1. Na consola **'Gestor de Configuração',** escolha **Ativos e Conformidade.**
-2. No espaço de trabalho **de Ativos e Compliance,** escolha **A** > Proteção de**Pontos Finais** > guarda de**aplicação Windows Defender**.
+2. No espaço de trabalho **de Ativos e Compliance,** escolha **A**Proteção de  >  **Pontos Finais**guarda de  >  **aplicação Windows Defender**.
 3. No separador **Home,** no grupo **Criar,** clique em Criar a Política de Guarda de **Aplicações do Windows Defender**.
 4. Utilizando o post do blog como referência, pode navegar e configurar as definições disponíveis para experimentar a funcionalidade.
 5. Neste lançamento, adicionámos a nova página de Definição de Rede ao assistente. Aqui, especifique a identidade corporativa e defina o limite da sua rede corporativa.

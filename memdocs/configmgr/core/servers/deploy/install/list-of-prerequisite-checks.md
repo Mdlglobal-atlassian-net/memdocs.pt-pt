@@ -2,7 +2,7 @@
 title: Verificações de pré-requisitos
 titleSuffix: Configuration Manager
 description: Referência das verificações pré-requisitoespecíficas específicas para atualizações do Gestor de Configuração.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718197"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943795"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Lista de verificações pré-requisitos para Gestor de Configuração
 
@@ -727,7 +727,7 @@ O Gestor de Configuração não requer extensões de esquema de Diretório Ativo
 
 *Aplica-se a: Site da administração central, local primário*
 
-Os pacotes não têm caracteres inválidos no `#`nome da partilha, tais como .
+Os pacotes não têm caracteres inválidos no nome da partilha, tais como `#` .
 
 ### <a name="site-system-to-sql-server-communication"></a>Sistema de site para comunicação SQL Server
 
@@ -741,7 +741,7 @@ A conta que configurapara executar o serviço SQL Server para a instância de ba
 
 A partir da versão 1810, verifique se a base de dados do site tem um atraso nos dados de rastreio de alterações SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Verifique manualmente esta verificação executando um procedimento de diagnóstico armazenado na base de dados do site. Primeiro, crie uma [ligação de diagnóstico](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) à base de dados do seu site. O método mais fácil é usar o Editor de Consulta de Motor `admin:<instance name>`de Base de Dados do SQL Server Management Studio e ligar-se a .
+Verifique manualmente esta verificação executando um procedimento de diagnóstico armazenado na base de dados do site. Primeiro, crie uma [ligação de diagnóstico](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) à base de dados do seu site. O método mais fácil é usar o Editor de Consulta de Motor de Base de Dados do SQL Server Management Studio e ligar-se a `admin:<instance name>` .
 
 Numa janela de consulta de ligação de administrador dedicada, execute os seguintes comandos:
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Quando instala um novo site, o Gestor de Configuração instala automaticamente o Cliente Nativo do Servidor SQL como um componente redistribuível. Depois de instalado o site, o Gestor de Configuração não atualiza o Cliente Nativo do Servidor SQL. Atualizar o Cliente Nativo do Servidor SQL pode exigir um reinício, o que pode afetar o processo de instalação do site.
 
-Este cheque garante que o site tem uma versão suportada do Cliente Nativo SQL. A partir da versão 1810, a versão mínima é SQL 2012 SP4 (`11.*.7001.0`).
+Esta verificação garante que o servidor do site tem uma versão suportada do Cliente Nativo SQL. A verificação prévia não verifica a versão do Cliente Nativo SQL em sistemas de sites remotos.
 
-Esta versão SQL Native Client suporta TLS 1.2. Para obter mais informações, veja os artigos seguintes:
+A versão mínima é SQL 2012 SP4 `11.*.7001.0` ( ). Esta versão SQL Native Client suporta TLS 1.2. Para obter mais informações, veja os seguintes artigos:
 
 - [Suporte TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721473"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905666"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1610 para Gestor de Configuração
 
@@ -29,7 +29,7 @@ Este artigo introduz as funcionalidades disponíveis na Pré-visualização Téc
 
 **Seguem-se novas funcionalidades que pode experimentar com esta versão.**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrar pelo tamanho do conteúdo nas regras de implementação automática
-Agora pode filtrar o tamanho do conteúdo para atualizações de software em regras de implementação automática. Por exemplo, pode definir o filtro **Content Size (KB)** para **< 2048** para apenas descarregar atualizações de software inferiores a 2MB. A utilização deste filtro impede que as grandes atualizações de software descarreguem automaticamente para um melhor suporte a uma manutenção simplificada do Windows quando a largura de banda da rede é limitada. Para mais detalhes, consulte o Gestor de Configuração e a Manutenção Simplificada do [Windows em sistemas operativos](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)de nível inferior .
+Agora pode filtrar o tamanho do conteúdo para atualizações de software em regras de implementação automática. Por exemplo, pode definir o filtro **Content Size (KB)** para **< 2048** para apenas descarregar atualizações de software inferiores a 2MB. A utilização deste filtro impede que as grandes atualizações de software descarreguem automaticamente para um melhor suporte a uma manutenção simplificada do Windows quando a largura de banda da rede é limitada. Para mais detalhes, consulte o Gestor de Configuração e a Manutenção Simplificada do [Windows em sistemas operativos](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)de nível inferior .
 
 #### <a name="to-configure-the-content-size-field"></a>Para configurar o campo tamanho do conteúdo
 Para configurar o campo Tamanho de **Conteúdo (KB),** vá à página de **Atualizações** de Software no Assistente de Regra de Implementação Automática criar um ADR ou vá ao separador **Deatualizações** de Software nas propriedades para um ADR existente.
@@ -52,7 +52,7 @@ Além disso, para uma implementação de alto risco, como uma sequência de tare
 
 Para obter mais informações:
 - [Configurações para gerir implementações de alto risco](../servers/manage/settings-to-manage-high-risk-deployments.md)
-- [Como configurar as definições do cliente](../clients/deploy/configure-client-settings.md)
+- [Como configurar as definições de cliente](../clients/deploy/configure-client-settings.md)
 
 ## <a name="deny-previously-approved-application-requests"></a>Negar pedidos de pedido previamente aprovados
 
@@ -64,7 +64,7 @@ Para negar um pedido aprovado pelo pedido:
 1. Na consola 'Gestor de Configuração', [crie e implemente uma aplicação](../../apps/deploy-use/create-applications.md) que requer aprovação.
 2. Num computador cliente, abra o Centro de Software e submeta um pedido para a aplicação.
 3. Na consola 'Gestor de Configuração', aprove o pedido de aplicação.
-4. Negue o pedido de aplicação aprovado: Na consola do Gestor de Configuração, navegue na Visão**Geral** > da **Biblioteca** > de Software Pedidos de**Aprovação** > de**Gestão** de Aplicações e selecione o pedido de aplicação que pretende negar.  Na fita, clique em **Negar**.
+4. Negue o pedido de aplicação aprovado: Na consola do Gestor de Configuração, navegue na Visão Geral da Biblioteca de **Software**Pedidos de Aprovação de Gestão de  >  **Overview**  >  **Aplicações**  >  **Approval Requests** e selecione o pedido de aplicação que pretende negar.  Na fita, clique em **Negar**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Excluir clientes da atualização automática
 A Pré-visualização Técnica 1610 introduz uma nova definição que pode utilizar para excluir uma coleção de clientes de instalar automaticamente versões de clientes atualizadas.  Isto aplica-se à atualização automática, bem como a outros métodos, tais como atualização baseada em atualizações de software, scripts de logon e política de grupo. Isto pode ser usado para uma coleção de computadores que precisam de maior cuidado ao atualizar o cliente. Um cliente que se encontra numa coleção excluída ignora os pedidos para instalar software de cliente atualizado.
@@ -126,7 +126,7 @@ Especificamente, pode configurar as seguintes definições do Windows Defender:
 
 ### <a name="try-it-out"></a>Experimente!
 
-1. Na consola do Gestor de Configuração, vá **Assets e Compliance** > **Overview** > **Definições de Configuração**de**Definição** > de Conformidade, e crie um novo item de **configuração**.
+1. Na consola do Gestor de Configuração, vá **Assets e Compliance**  >  **Overview**  >  **Compliance Settings**  >  **Definições de Configuração**de Definição de Conformidade, e crie um novo **item**de configuração .
 2. Introduza um nome e, em seguida, selecione **O Windows 8.1 e Windows 10** em **Definições para dispositivos geridos sem o cliente do Gestor de Configuração** e clique em **Next**.
 3. Certifique-se de que **todos os Windows 10 (64 bits)** e **All Windows 10 (32 bits)** são selecionados na página **Plataformas Suportadas** e, em seguida, clique em **Next**.
 4. Selecione o grupo de definição **do Windows Defender** e, em seguida, clique em **Next**.
@@ -143,7 +143,7 @@ Agora pode solicitar uma sincronização de política para um dispositivo móvel
 
 ### <a name="try-it-out"></a>Experimente!
 
-1. Na consola de Configuração Manager, vá **Assets e Compliance** > **Overview** > Dispositivos.
+1. Na consola de Configuração Manager, vá **Assets e Compliance**  >  **Overview** > Dispositivos.
 2. No menu "Ações de **Dispositivoremoto Remoto",** selecione **Enviar Pedido de Sincronização**.
 
 Sincronização pode levar de 5 a 10 minutos. Quaisquer alterações de política estão sincronizadas com o dispositivo. Pode rastrear o estado do pedido de sincronização na coluna **Remote Sync State** na vista **Dispositivos** ou no diálogo **Properties** do dispositivo.

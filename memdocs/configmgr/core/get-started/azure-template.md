@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711603"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406675"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Criar um laboratório de Gestor de Configuração em Azure
 
-*Aplica-se a: Gestor de Configuração (ramo de pré-visualização técnica)*
+*Aplica-se a: Gestor de Configuração (ramo atual, ramo de pré-visualização técnica)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ Para mais informações, consulte [O Gestor de Configuração no Azure](../under
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Este processo requer uma subscrição Azure na qual pode criar os seguintes objetos: 
-- Duas máquinas virtuais Standard_B2s para domínio Contoller e MP & funções dP.
-- Uma Standard_B2ms máquina virtual para o servidor de dados Primary Site Server e SQL.
+- Duas Standard_B2s máquinas virtuais para controlador de domínio, ponto de gestão e ponto de distribuição.
+- Uma Standard_B2ms máquina virtual para o servidor principal do site e o servidor de base de dados SQL.
 - conta de armazenamento Standard_LRS
 
 > [!Tip]  
-> Consulte a calculadora de [preços Azure](https://azure.microsoft.com/pricing/calculator/) para ajudar a determinar os custos potenciais.  
+> Para ajudar a determinar os custos potenciais, consulte a calculadora de [preços Azure](https://azure.microsoft.com/pricing/calculator/).  
 
 
 
@@ -71,9 +71,9 @@ Este processo requer uma subscrição Azure na qual pode criar os seguintes obje
     > [!Important]  
     > As seguintes definições são exigidas pelo Azure. Utilize os valores predefinidos. Não mude estes valores.  
     > 
-    > - Localização dos artefactos : A localização dos scripts para este modelo ** \_** <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    > - Localização dos ** \_ artefactos**: A localização dos scripts para este modelo <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
     >
-    > - **Artefactos Localização Sas Token : O sasToken é necessário para aceder à localização dos artefactos \_**  
+    > - ** \_ Artefactos Localização Sas Token**: O sasToken é necessário para aceder à localização dos artefactos  
     > 
     > - **Localização**: A localização de todos os recursos
 
@@ -84,9 +84,9 @@ O Azure valida as definições e inicia a implementação. Verifique o estado da
 > [!NOTE]
 > O processo pode demorar 2 a 4 horas. Mesmo quando o portal Azure mostra uma implementação bem sucedida, os scripts de configuração continuam a ser executados. Não reinicie os VMs durante o processo.
 
-Para ver o estado dos scripts `<prefix>PS1` de configuração, ligue-se ao servidor e veja o seguinte ficheiro: `%windir%\TEMP\ProvisionScript\PS1.json`. Se mostrar todos os passos como completos, o processo está concluído.
+Para ver o estado dos scripts de configuração, ligue-se ao `<prefix>PS1` servidor e veja o seguinte ficheiro: `%windir%\TEMP\ProvisionScript\PS1.json` . Se mostrar todos os passos como completos, o processo está concluído.
 
-Para ligar aos VMs, obtenha primeiro do portal Azure os endereços IP públicos para cada VM. Quando se liga ao VM, `contoso.com`o nome de domínio é . Utilize as credenciais que especificou no modelo de implantação. Para mais informações, consulte [Como ligar e iniciar sessão numa máquina virtual Azure que executa o Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+Para ligar aos VMs, obtenha primeiro do portal Azure os endereços IP públicos para cada VM. Quando se liga ao VM, o nome de domínio é `contoso.com` . Utilize as credenciais que especificou no modelo de implantação. Para mais informações, consulte [Como ligar e iniciar sessão numa máquina virtual Azure que executa o Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
 
 
 
@@ -96,13 +96,13 @@ Os Três VMs têm as seguintes especificações:
 - 150 GB de espaço em disco
 - Um endereço IP público e privado. Os IPs públicos estão num grupo de segurança de rede que só permite ligações remotas de ambiente de trabalho na porta TCP 3389. 
 
-O prefixo que especificou no modelo de implementação é o prefixo de nome VM. Por exemplo, se definir "contoso" como prefixo, então `contosoDC`o nome da máquina do controlador de domínio é .
+O prefixo que especificou no modelo de implementação é o prefixo de nome VM. Por exemplo, se definir "contoso" como prefixo, então o nome da máquina do controlador de domínio é `contosoDC` .
 
 
 ### `<prefix>DC01`
 
 - Controlador de domínio do Active Directory
-- Standard_B2s, que tem dois CPU e 4 GB de memória
+- Standard_B2s, que tem dois processadores e 4 GB de memória
 - Edição do Windows Server 2019 Datacenter
 
 #### <a name="windows-features-and-roles"></a>Funcionalidades e funções do Windows
@@ -113,7 +113,7 @@ O prefixo que especificou no modelo de implementação é o prefixo de nome VM. 
 
 ### `<prefix>PS01`
 
-- Standard_B2ms, que tem dois CPU e 8 GB de memória
+- Standard_B2ms, que tem dois processadores e 8 GB de memória
 - Edição do Datacenter do Windows Server 2016
 - SQL Server
 - Windows 10 ADK com Windows PE 
@@ -127,7 +127,7 @@ O prefixo que especificou no modelo de implementação é o prefixo de nome VM. 
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s, que tem dois CPU e 4 GB de memória
+- Standard_B2s, que tem dois processadores e 4 GB de memória
 - Edição do Windows Server 2019 Datacenter
 - Ponto de distribuição
 - Ponto de gestão

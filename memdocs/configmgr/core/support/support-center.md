@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 21279eb2f7d7962d1286d60a599411912d38313a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718603"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903900"
 ---
 # <a name="support-center-for-configuration-manager"></a>Centro de Suporte para Gestor de Configuração
 
@@ -52,7 +52,7 @@ A partir da versão 1906, o **OneTrace** é um novo espectador de log com Suppor
 
 ### <a name="powershell-cmdlets"></a>Cmdlets do PowerShell
 
-O Centro de Suporte também inclui [cmdlets Windows PowerShell](https://go.microsoft.com/fwlink/?linkid=397830). Utilize estes cmdlets para criar uma ligação remota a outro cliente do Gestor de Configuração, para configurar as opções de recolha de dados e para iniciar a recolha de dados.
+O Centro de Suporte também inclui [cmdlets PowerShell](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Utilize estes cmdlets para criar uma ligação remota a outro cliente do Gestor de Configuração, para configurar as opções de recolha de dados e para iniciar a recolha de dados.
 
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -66,7 +66,7 @@ Instale os seguintes componentes no servidor ou computador cliente no qual insta
 
 ## <a name="install"></a>Instalar
 
-Encontre o instalador do Centro de Suporte `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`no servidor do site no seguinte caminho: .
+Encontre o instalador do Centro de Suporte no servidor do site no seguinte caminho: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
 Depois de o instalar, encontre os seguintes itens no menu Iniciar no grupo **Microsoft System Center:**  
 
@@ -86,7 +86,7 @@ Se já tiver uma versão mais antiga do Support Center instalada, o novo instala
 
 ### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>As ligações remotas devem incluir o nome ou domínio do computador como parte do nome do utilizador
 
-Se se ligar a um cliente remoto do Centro de Suporte, deve fornecer o nome da máquina ou nome de domínio para a conta de utilizador ao estabelecer a ligação. Se utilizar um nome de computador ou `.\administrator`nome de domínio de curta duração (por exemplo), a ligação tem sucesso, mas o Centro de Suporte não recolhe dados do cliente.
+Se se ligar a um cliente remoto do Centro de Suporte, deve fornecer o nome da máquina ou nome de domínio para a conta de utilizador ao estabelecer a ligação. Se utilizar um nome de computador ou nome de domínio de curta duração (por `.\administrator` exemplo), a ligação tem sucesso, mas o Centro de Suporte não recolhe dados do cliente.
 
 Para evitar este problema, utilize os seguintes formatos de nome de utilizador para se ligar a um cliente remoto:
 
@@ -106,6 +106,6 @@ onde `<connection_name>` está o nome da ligação remota.
 No Centro de Suporte, se selecionar a **avaliação** de implementação da Aplicação a partir da ação **de gatilho invocada** no separador **Conteúdo,** esta ação inicia uma tarefa que avalia as aplicações implementadas. Se estiver ligado a um cliente local, avalia as implementações de aplicações de máquinas e utilizadores. No entanto, se estiver ligado a um cliente remoto, apenas avalia as implementações de aplicações de máquinas.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Arranque rápido do Centro de Apoio](support-center-quickstart.md)

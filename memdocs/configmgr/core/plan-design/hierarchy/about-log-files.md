@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720304"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879014"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Sobre ficheiros de registo no Gestor de Configuração
 
@@ -132,7 +132,7 @@ Para configurar opções de registo de todos os componentes num sistema de site 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global`
 
-|Nome  |Valores  |Descrição  |
+|Name  |Valores  |Descrição  |
 |---------|---------|---------|
 |Nível de Registo|`0`: Verbose<br>`1`: Padrão<br>`2`: Advertências e erros<br>`3`: Erros apenas|O nível de detalhe para escrever para registar ficheiros.|
 |LogMaxHistory|Qualquer inteiro maior ou igual a zero, por exemplo:<br>`0`: Sem história<br>`1`: Padrão|Quando um ficheiro de registo atinge o tamanho máximo, o cliente renomea-o como uma cópia de segurança e cria um novo ficheiro de registo. Especifique quantas versões anteriores manter.|
@@ -145,7 +145,7 @@ Para depuração avançada, também pode adicionar este **valor REG_SZ** sob a s
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\DebugLogging`
 
-|Nome  |Valores  |Descrição  |
+|Name  |Valores  |Descrição  |
 |---------|---------|---------|
 |Ativado | `True`: ativar registos de depuração<br>`False`: desativar os registos de depuração |Permite a desflorestação de depuração para fins de resolução de problemas.|
 
@@ -159,7 +159,7 @@ Configure estes valores sob a seguinte tecla de Registo do Windows:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing`
 
-|Nome  |Valores  |Tipo  |Descrição
+|Name  |Valores  |Tipo  |Descrição
 |---------|---------|---------|---------|
 |SqlEnabled| `1`: ativar rastreio SQL<br> `0`: desativar o rastreio SQL |REG_DWORD|Adicione o registo de rastreio SQL em todos os registos do servidor do site.|
 |Arquivado| `1`: ativar arquivos de registo<br> `0`: desativar os arquivos de registo | REG_DWORD |Arquivar registos de servidores do site para um local separado para preservação histórica.|
@@ -174,7 +174,7 @@ Para configurar as opções de registo de um componente específico do servidor,
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\<ComponentName>`
 
-|Nome  |Valores  |Descrição  |
+|Name  |Valores  |Descrição  |
 |---------|---------|---------|
 |Nível de exploração|`0`: Verbose<br>`1`: Padrão<br>`2`: Advertências e erros<br>`3`: Erros apenas|O nível de detalhe para escrever para registar ficheiros.|
 |LogMaxHistory|Qualquer inteiro maior ou igual a zero, por exemplo:<br>`0`: Sem história<br>`1`: Padrão|Quando um ficheiro de registo atinge o tamanho máximo, o servidor renomea-o como uma cópia de segurança e cria um novo ficheiro de registo. Especifique quantas versões anteriores manter.|
@@ -198,7 +198,7 @@ Por exemplo, para o papel do ponto de distribuição:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP\Logging`
 
-|Nome  |Valores  |Descrição  |
+|Name  |Valores  |Descrição  |
 |---------|---------|---------|
 |Nível de Registo|`0`: Verbose<br>`1`: Padrão<br>`2`: Advertências e erros<br>`3`: Erros apenas|O nível de detalhe para escrever para registar ficheiros.|
 |LogMaxHistory|Qualquer inteiro maior ou igual a zero, por exemplo:<br>`0`: Sem história<br>`1`: Padrão|Quando um ficheiro de registo atinge o tamanho máximo, o servidor renomea-o como uma cópia de segurança e cria um novo ficheiro de registo. Especifique quantas versões anteriores manter.|
@@ -211,9 +211,12 @@ Por exemplo, para o papel do ponto de distribuição:
 
 Para alterar o nível verboso do registo AdminUI.log para a consola 'Gestor de Configuração', utilize o seguinte procedimento:
 
-1. Abra o ficheiro de configuração da consola, **Microsoft.ConfigurationManagement.exe.config,** num editor XML como o Notepad. O ficheiro de configuração predefinido encontra-se no seguinte local:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Abra o ficheiro de configuração da consola, **Microsoft.ConfigurationManagement.exe.config,** num editor XML como o Notepad. O ficheiro de configuração predefinido encontra-se no seguinte local:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
-1. Sob o sistema.elemento fonte de**source** **fonte** > de >  **diagnóstico,** altere o atributo **switchValue** de `Error` . `Verbose` Por exemplo:
+    > [!IMPORTANT]
+    > A partir da versão 1910, este caminho mudou para utilizar a `Microsoft Endpoint Manager` pasta. Certifique-se de que não utiliza uma versão mais antiga do ficheiro que possa existir noutra pasta.
+
+1. Sob o **sistema.elemento**fonte de fonte de  >  **sources**  >  **source** diagnóstico, altere o atributo **switchValue** de `Error` `Verbose` . Por exemplo:
 
     Original: `<source name="SmsAdminUISnapIn" switchValue="Error">` Novo:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
 
@@ -240,15 +243,15 @@ Os seguintes locais são os incumprimentos. Se personalizar os diretórios de in
 - Cliente:`C:\Windows\CCM\logs`
 - Servidor:`C:\Program Files\Microsoft Configuration Manager\Logs`
 - Ponto de gestão:`C:\SMS_CCM\Logs`
-- Consola de Gestor de Configuração:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Consola de Gestor de Configuração:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS:`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Localizações de registo de sequência de tarefas
 
 A localização do ficheiro de registo de sequência de tarefas **smsts.log** varia consoante a fase da sequência de tarefas:
 
-- No Windows PE antes do `X:\Windows\temp\smstslog\smsts.log` passo do disco de [formato e partição:](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) (X é a unidade RAM do Windows PE)
-- No Windows PE após o `X:\smstslog\smsts.log`passo do disco `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` de **formato e partição:**
+- No Windows PE antes do passo do disco de [formato e partição:](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) `X:\Windows\temp\smstslog\smsts.log` (X é a unidade RAM do Windows PE)
+- No Windows PE após o passo do disco de **formato e partição:** `X:\smstslog\smsts.log` `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - No novo Sistema Operativo Windows antes da instalação do cliente:`C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - No Windows após a instalação do cliente:`C:\Windows\CCM\Logs\smstslog\smsts.log`
 - No Windows após a conclusão da sequência de tarefas:`C:\Windows\CCM\Logs\smsts.log`

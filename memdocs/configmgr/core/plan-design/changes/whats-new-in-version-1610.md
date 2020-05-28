@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073964"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904805"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>O que&#39;novo na versão 1610 do Gestor de Configuração
 
@@ -29,8 +29,8 @@ A atualização 1610 para o espaço atual do Gestor de Configuração está disp
 > Para instalar um novo site, tem de utilizar uma versão de base do 'Gestor de Configuração'.  
 >
 > Saiba mais sobre:    
-> - [Instalação de novos sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalação de atualizações nos sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalação de novos sites](../../servers/deploy/install/installing-sites.md)  
+> - [Instalação de atualizações nos sites](../../servers/manage/updates.md)  
 > - [Versões de base e atualização](../../servers/manage/updates.md#bkmk_Baselines)
 
 As seguintes secções fornecem detalhes sobre alterações e novas capacidades introduzidas na versão 1610 do Gestor de Configuração.  
@@ -153,10 +153,10 @@ Além disso, para uma implementação de alto risco, como uma sequência de tare
 
 Para obter mais informações:
 - [Configurações para gerir implementações de alto risco](../../servers/manage/settings-to-manage-high-risk-deployments.md)
-- [Como configurar as definições do cliente](../../clients/deploy/configure-client-settings.md)
+- [Como configurar as definições de cliente](../../clients/deploy/configure-client-settings.md)
 
 ## <a name="software-updates-dashboard"></a>Painel de atualizações de software
-Utilize o painel de atualizações de software para visualizar o estado de conformidade atual dos dispositivos na sua organização e analise rapidamente os dados para ver quais os dispositivos em risco. Para visualizar o dashboard, navegue para **monitorizar o** > **Painel de Atualizações**de Software de**Segurança** > de**Visão Geral** > .
+Utilize o painel de atualizações de software para visualizar o estado de conformidade atual dos dispositivos na sua organização e analise rapidamente os dados para ver quais os dispositivos em risco. Para visualizar o dashboard, navegue para **monitorizar o**Painel de  >  **Overview**  >  **Security**  >  **Atualizações**de Software de Segurança de Visão Geral .
 
 Para mais detalhes, consulte [as atualizações](../../../sum/deploy-use/monitor-software-updates.md)de software do Monitor .
 
@@ -168,7 +168,7 @@ Esta ação não faz com que a aplicação seja desinstalada a partir de nenhum 
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrar pelo tamanho do conteúdo nas regras de implementação automática
 Agora pode filtrar o tamanho do conteúdo para atualizações de software em regras de implementação automática. Por exemplo, para descarregar apenas atualizações de software inferiores a 2 MB, pode definir o filtro Tamanho de **Conteúdo (KB)** para **< 2048**. A utilização deste filtro impede que as grandes atualizações de software descarreguem automaticamente, o que suporta melhor a manutenção simplificada do Nível Inferior do Windows quando a largura de banda da rede é limitada. Para obter mais detalhes, veja:
-- [Gestor de configuração e manutenção simplificada do Windows em sistemas operativos de nível inferior](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Gestor de configuração e manutenção simplificada do Windows em sistemas operativos de nível inferior](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Para configurar o campo Tamanho do **Conteúdo (KB),** faça um dos seguintes:
@@ -176,7 +176,7 @@ Para configurar o campo Tamanho do **Conteúdo (KB),** faça um dos seguintes:
 - Nas propriedades para uma regra de implementação automática existente, vá ao separador Atualizações de **Software.**
 
 ## <a name="office-365-client-management-dashboard"></a>Painel de gestão de clientes do Office 365
-O painel de gestão de clientes do Office 365 já se encontra disponível na consola Do Gestor de Configuração. Para ver o dashboard, vá ao **Software Library** > **Overview** > Office**365 Client Management**.
+O painel de gestão de clientes do Office 365 já se encontra disponível na consola Do Gestor de Configuração. Para ver o dashboard, vá ao **Software Library**  >  **Overview**  >  **Office 365 Client Management**.
 
 O painel de instrumentos exibe gráficos para o seguinte:
 

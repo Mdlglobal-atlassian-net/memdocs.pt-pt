@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904564"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configurações suportadas do Configuration Manager
 
@@ -27,12 +27,12 @@ A informação neste e nos seguintes tópicos é essencial para ajudá-lo a iden
 
 Quando uma funcionalidade ou capacidade do Gestor de Configuração requer configurações mais específicas, essa informação é incluída com a documentação específica da funcionalidade, e é suplementar aos detalhes de configuração mais gerais.  
 
- Os produtos e tecnologias que são descritos nos seguintes tópicos são suportados pelo Gestor de Configuração. No entanto, a sua inclusão neste conteúdo não implica uma extensão do suporte a qualquer produto para além do ciclo de vida individual de suporte desse produto. Os produtos que estão para além do seu ciclo de vida de suporte não são suportados para uso com o Gestor de Configuração, incluindo quaisquer produtos abrangidos pelo programa [Extended Security Updates (ESU).](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) Para mais informações sobre os Ciclos de Vida do Suporte da Microsoft, aceda ao site [Ciclo de Vida do Suporte da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) . Para obter mais informações sobre atualizações de segurança estendidas no Gestor de Configuração, consulte [versões De SO suportadas para clientes e dispositivos para O Gestor](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)de Configuração .
+ Os produtos e tecnologias que são descritos nos seguintes tópicos são suportados pelo Gestor de Configuração. No entanto, a sua inclusão neste conteúdo não implica uma extensão do suporte a qualquer produto para além do ciclo de vida individual de suporte desse produto. Os produtos que estão para além do seu ciclo de vida de suporte não são suportados para uso com o Gestor de Configuração, incluindo quaisquer produtos abrangidos pelo programa [Extended Security Updates (ESU).](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) Para mais informações sobre os Ciclos de Vida do Suporte da Microsoft, aceda ao site [Ciclo de Vida do Suporte da Microsoft](https://support.microsoft.com/lifecycle) . Para obter mais informações sobre atualizações de segurança estendidas no Gestor de Configuração, consulte [versões De SO suportadas para clientes e dispositivos para O Gestor](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)de Configuração .
 
 > [!NOTE]  
->  Para obter informações sobre a política de suporte de vida da Microsoft, vá ao site FAQ da Política de Suporte ao Suporte ao Vida da Microsoft no [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Para obter informações sobre a política de suporte de vida da Microsoft, vá ao site FAQ da Política de Suporte ao Suporte ao Vida da Microsoft no [Microsoft Support Lifecycle Policy FAQ](https://support.microsoft.com/lifecycle).  
 
- Além disso, os produtos e versões de produtos que não estão listados nos seguintes tópicos não são suportados com o Gestor de Configuração, a menos que tenham sido anunciados no Blog de [Mobilidade e Segurança Empresarial.](https://blogs.technet.microsoft.com/enterprisemobility/)  Por vezes, o conteúdo deste blog antecede uma atualização a este corpo de documentação.
+ Além disso, os produtos e versões de produtos que não estão listados nos seguintes tópicos não são suportados com o Gestor de Configuração, a menos que tenham sido anunciados no Blog de [Mobilidade e Segurança Empresarial.](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)  Por vezes, o conteúdo deste blog antecede uma atualização a este corpo de documentação.
 
 
 -  [Dimensionamento e números da escala](../../../core/plan-design/configs/size-and-scale-numbers.md)  
@@ -65,5 +65,5 @@ Conheça as configurações de domínio ative diretório suportadas que o Gestor
 -  [Suporte para funcionalidades e redes do Windows](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
 Conheça as tecnologias suportadas pelo Windows (como branchCache e desduplicação de dados) e limitações para a sua utilização com o Gestor de Configuração.
 
--  [Apoio a ambientes de virtualização](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
+-  [Suporte para ambientes de virtualização](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
 Saiba mais sobre como usar tecnologias de máquinas virtuais suportadas.

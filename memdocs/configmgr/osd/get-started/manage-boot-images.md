@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075069"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732878"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Gerir imagens de boot com Gestor de Configuração
 
@@ -25,7 +25,7 @@ Uma imagem de arranque no Gestor de Configuração é uma imagem [do Windows PE]
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Imagens de arranque padrão
 
-O Gestor de Configuração fornece duas imagens de boot padrão: uma para suportar plataformas x86 e outra para suportar plataformas x64. Estas imagens são armazenadas nas pastas *x64* ou *i386* `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`na seguinte partilha no servidor do site: . As imagens de boot padrão são atualizadas ou regeneradas dependendo da ação que tomar.
+O Gestor de Configuração fornece duas imagens de boot padrão: uma para suportar plataformas x86 e outra para suportar plataformas x64. Estas imagens são armazenadas nas pastas *x64* ou *i386* na seguinte partilha no servidor do site: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . As imagens de boot padrão são atualizadas ou regeneradas dependendo da ação que tomar.
 
 Considere os seguintes comportamentos para qualquer uma das ações descritas para imagens de boot padrão:
 
@@ -40,7 +40,7 @@ Considere os seguintes comportamentos para qualquer uma das ações descritas pa
 - Se não quiser que as suas imagens de arranque personalizadas/predefinidas sejam atualizadas automaticamente, não as guarde no local predefinido.  
 
 > [!NOTE]
-> A ferramenta de registo do Gestor de Configuração **(CMTrace)** é adicionada a todas as imagens de arranque na Biblioteca de **Software**. Quando estiver no Windows PE, inicie `cmtrace` a ferramenta digitando a partir do pedido de comando.
+> A ferramenta de registo do Gestor de Configuração **(CMTrace)** é adicionada a todas as imagens de arranque na Biblioteca de **Software**. Quando estiver no Windows PE, inicie a ferramenta digitando `cmtrace` a partir do pedido de comando.
 >
 > CMTrace é o espectador predefinido para ficheiros de registo no Windows PE.
 
@@ -86,7 +86,7 @@ Durante a instalação do site, o Gestor de Configuração adiciona automaticame
 | Versões Windows PE para imagens de arranque personalizáveis a partir da consola Do Gestor de Configuração | Windows PE 10 |
 | Versões suportadas pelo Windows PE para imagens de arranque *não personalizáveis* a partir da consola Do Gestor de Configuração | - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
 
-Por exemplo, utilize a consola 'Gestor de Configuração' para personalizar imagens de boot com base no Windows PE 10 a partir do Windows ADK para windows 10. Para uma imagem de arranque baseada no Windows PE 5, personalize-a a partir de um computador diferente utilizando a versão do DISM do Windows ADK para windows 8. Em seguida, adicione a imagem de boot personalizada à consola 'Gestor de Configuração'. Para obter mais informações, veja os artigos seguintes:
+Por exemplo, utilize a consola 'Gestor de Configuração' para personalizar imagens de boot com base no Windows PE 10 a partir do Windows ADK para windows 10. Para uma imagem de arranque baseada no Windows PE 5, personalize-a a partir de um computador diferente utilizando a versão do DISM do Windows ADK para windows 8. Em seguida, adicione a imagem de boot personalizada à consola 'Gestor de Configuração'. Para obter mais informações, veja os seguintes artigos:
 
 - [Personalizar imagens de arranque](customize-boot-images.md)
 - [Suporte para Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
@@ -188,7 +188,7 @@ No separador **Personalização**, selecione qualquer uma das seguintes definiç
 - Selecione a opção **Comandos Enable Prestart** para especificar um comando a executar antes da sequência de tarefas ser executada. Quando ativar esta opção, especifique também a linha de comando a executar e quaisquer ficheiros de suporte necessários pelo comando.  
 
     > [!WARNING]  
-    > Adicione `cmd /c` ao início da linha de comando. Se não especificar, `cmd /c`o comando não fecha depois de ser executado. O destacamento continua à espera que o comando termine e não iniciará quaisquer outros comandos ou ações configurados.  
+    > Adicione `cmd /c` ao início da linha de comando. Se não `cmd /c` especificar, o comando não fecha depois de ser executado. O destacamento continua à espera que o comando termine e não iniciará quaisquer outros comandos ou ações configurados.  
 
     > [!TIP]  
     > Durante a criação de meios de sequência de tarefas, o assistente escreve a linha de comando id do pacote e prestat para o ficheiro **CreateTSMedia.log.** Esta informação inclui o valor para quaisquer variáveis de sequência de tarefas. Este registo está no computador que executa a consola 'Gestor de Configuração'. Reveja este ficheiro de registo para verificar os valores das variáveis da sequência de tarefas.  
@@ -201,13 +201,8 @@ No separador **Personalização**, selecione qualquer uma das seguintes definiç
 
 - **Desdefinido o layout padrão do teclado no WinPE:** <!--4910348-->A partir da versão 1910, configure o layout padrão do teclado para uma imagem de arranque. Se selecionar um idioma diferente do en-us, o Gestor de Configuração ainda inclui en-us nos locais de entrada disponíveis. No dispositivo, o layout inicial do teclado é o local selecionado, mas o utilizador pode mudar o dispositivo para en-us, se necessário.
 
-    > [!Tip]
-    > O [cmdlet Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell agora inclui `-InputLocale`um novo parâmetro, . Por exemplo:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Utilize o cmdlet [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell para configurar estas definições a partir de um script.
 
 #### <a name="optional-components"></a>Componentes Opcionais
 

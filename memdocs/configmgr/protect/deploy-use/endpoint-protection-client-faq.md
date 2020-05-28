@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724371"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906836"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Cliente endpoint protection frequentemente fez perguntas
 
@@ -145,7 +145,7 @@ Para remover todos os itens potencialmente prejudiciais ou indesejáveis que o W
 
 -   Certifique-se de que o seu software antivírus e antisspyware, o Windows Defender, está a utilizar as atualizações mais recentes contra potenciais ameaças (consulte Como mantenho as definições de vírus e spyware atualizadas?). Certifique-se também de que está a utilizar sempre a versão mais recente do Windows Defender.  
 
--   Transfira apenas as atualizações a partir de origens seguras. Para sistemas operativos Windows,https://go.microsoft.com/fwlink/?LinkID=96304) vá sempre ao Microsoft [Update](https://go.microsoft.com/fwlink/?LinkID=96304) – e para outros softwares utilize sempre os sites legítimos da empresa ou pessoa que o produz.  
+-   Transfira apenas as atualizações a partir de origens seguras. Para sistemas operativos Windows, vá sempre ao [catálogo da Microsoft Update](https://catalog.update.microsoft.com).  Para outros softwares, utilize sempre os sites legítimos da empresa ou pessoa que o produz.
 
 -   Se receber um e-mail com um anexo e desconhecer a origem, deverá eliminá-lo imediatamente. Não descarregue quaisquer aplicações ou ficheiros de fontes desconhecidas e tenha cuidado ao trocar ficheiros com outros utilizadores.  
 

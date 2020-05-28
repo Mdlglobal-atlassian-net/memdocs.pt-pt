@@ -2,7 +2,7 @@
 title: Novidades na versão 2002
 titleSuffix: Configuration Manager
 description: Obtenha detalhes sobre alterações e novas capacidades introduzidas na versão 2002 do ramo atual do Gestor de Configuração.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719296"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381558"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novidades na versão 2002 do ramo atual do Gestor de Configuração
 
 *Aplica-se a: Gestor de Configuração (ramo atual)*
 
-Update 2002 for Configuration Manager current branch está disponível como uma atualização na consola. Aplique esta atualização em sites que executam a versão 1806 ou posterior. <!-- baseline only statement:-->Ao instalar um novo site, também está disponível como uma versão de base. Este artigo resume as mudanças e novas funcionalidades no Gestor de Configuração, versão 2002.
+Update 2002 for Configuration Manager current branch está disponível como uma atualização na consola. Aplique esta atualização em sites que executam a versão 1810 ou posterior. <!-- baseline only statement:-->Ao instalar um novo site, também está disponível como uma versão de base. Este artigo resume as mudanças e novas funcionalidades no Gestor de Configuração, versão 2002.
 
 Reveja sempre a mais recente lista de verificação para instalar esta atualização. Para mais informações, consulte a Lista de [Verificação para instalar a atualização 2002](../../servers/manage/checklist-for-installing-update-2002.md). Depois de atualizar um site, consulte também a [lista de verificação pós-actualização](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -280,7 +280,7 @@ Para mais informações, consulte as [experiências do Utilizador para a impleme
 
 Esta versão inclui as seguintes melhorias na implementação do OS:
 
-- O ambiente de sequência de tarefas `_TSSecureBoot`inclui uma nova variável apenas de leitura, .<!--5842295--> Utilize esta variável para determinar o estado da bota segura num dispositivo ativado pela UEFI. Para mais informações, consulte [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
+- O ambiente de sequência de tarefas inclui uma nova variável apenas de leitura, `_TSSecureBoot` .<!--5842295--> Utilize esta variável para determinar o estado da bota segura num dispositivo ativado pela UEFI. Para mais informações, consulte [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
 
 - Delineie as variáveis da sequência de tarefas para configurar o contexto do utilizador para os passos de **Script run Command Line** e Run **PowerShell.**<!-- 5573175 --> Para mais informações, consulte [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) e [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser).
 
@@ -411,9 +411,9 @@ Para obter mais informações sobre as alterações nas cmdlets do Windows Power
 
 Para obter mais informações sobre as alterações ao serviço de administração REST API, consulte as notas de lançamento do [serviço de administração.](../../../develop/adminservice/release-notes.md#bkmk_2002)
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Além de novas funcionalidades, esta versão também inclui alterações adicionais, tais como correções de bugs. Para mais informações, consulte [resumo das alterações no atual ramo do Gestor de Configuração, versão 2002](https://support.microsoft.com/help/4556203).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -431,10 +431,11 @@ The following additional hotfixes are available to address specific issues:
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-Neste momento, a versão 2002 é lançada para o anel de atualização precoce. Para instalar esta atualização, tem de optar por entrar. Para mais informações, consulte o anel de [atualização precoce](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+A partir de 11 de maio de 2020, a versão 2002 está globalmente disponível para todos os clientes instalarem.
 
 Quando estiver pronto para instalar esta versão, consulte [a instalação de atualizações para O Gestor](../../servers/manage/updates.md) de Configuração e lista de [verificação para instalar a atualização de 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 

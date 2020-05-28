@@ -2,7 +2,7 @@
 title: Pré-visualização de análise endpoint
 titleSuffix: Configuration Manager
 description: Instruções para pré-visualização de análise de Endpoint.
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e7dbb53833c29aae442eec4ca3c8402b99cde237
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693239"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764242"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Pré-visualização de análise endpoint
 
@@ -24,6 +24,9 @@ ms.locfileid: "82693239"
 > Esta informação diz respeito a uma funcionalidade de pré-visualização que pode ser substancialmente modificada antes de ser lançada comercialmente. A Microsoft não faz garantias, de forma expressa ou implícita, em relação à informação aqui apresentada. 
 >
 > Para mais informações sobre alterações à análise de Endpoint, consulte [o que há de novo na análise de Endpoint](whats-new-endpoint-analytics.md). 
+>
+>Se quiser participar na pré-visualização privada do Endpoint Analytics, por favor introduza os detalhes [neste formulário](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Os inquilinos serão voos como aberturas para a pré-visualização expandir-se.
+
 
 ## <a name="endpoint-analytics-overview"></a>Visão geral da análise do ponto final
 
@@ -64,7 +67,7 @@ Para inscrever os dispositivos via Intune, esta pré-visualização requer:
 Para inscrever dispositivos via Configuração Manager, esta pré-visualização requer:
 - Versão de Gestor de Configuração 2002 ou mais recente
 - Clientes atualizados para versão 2002 ou mais recente
-- Anexo de inquilino do [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) habilitado com uma localização de inquilino Azure da América do Norte (em breve iremos expandir-nos para outras regiões)
+- Anexo de inquilino do [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) habilitado com uma localização de inquilino Azure da América do Norte ou Europa (em breve iremos expandir-nos para outras regiões)
 
 Quer os dispositivos de inscrição através de Intune ou De Configuration Manager, [**a escrita de reparação proactiva**](#bkmk_uea_prs) tem os seguintes requisitos:
 - Os dispositivos devem ser a AD Azure ou a Azure AD híbrida unida e satisfazer uma das seguintes condições:
@@ -99,8 +102,38 @@ Um utilizador só para leitura só necessitaria da permissão **De Leitura** nas
 
 Para remediações proactivas, o utilizador necessita de permissões adequadas ao seu papel na categoria de configurações do **Dispositivo.**  Não são necessárias permissões na categoria **Endpoint Analytics** se o utilizador utilizar apenas reparações proactivas.
 
+Um Administrador de [Serviço Intune](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) é obrigado a confirmar os requisitos de licenciamento antes de utilizar pela primeira vez remediações proactivas.
 
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a>Comece a recolher dados
+- Se estiver a matricular apenas dispositivos geridos intune, salte para o Bordo na secção do portal de [análise Endpoint.](#bkmk_uea_onboard)
+
+- Se estiver a inscrever dispositivos geridos pelo Gestor de Configuração, terá de fazer os seguintes passos:
+   - [Ativar a recolha de dados de análise endpoint no Gestor de Configuração](#bkmk_uea_cm_enroll)
+   - [Ativar o upload de dados no Gestor de Configuração](#bkmk_uea_cm_upload)
+   - [A bordo do portal de análise Endpoint](#bkmk_uea_onboard)  
+
+### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a>Dispositivos de inscrição geridos pelo Gestor de Configuração
+<!--6051638, 5924760-->
+Antes de inscrever dispositivos de Gestor de Configuração, verifique os [pré-requisitos,](#bkmk_uea_prereq) incluindo a anexação do inquilino do [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
+
+#### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a>Ativar a recolha de dados de análise endpoint no Gestor de Configuração
+
+1. Na consola do Gestor de Configuração, vá às Definições padrão do cliente de **'' 'Definições**de  >  **Client Settings**  >  **Cliente'** de Administração .
+1. Clique à direita e selecione **Propriedades** e, em seguida, selecione as definições do **Agente de Computador.**
+1. Definir ativar a recolha de **dados de análise endpoint** para **sim**.
+   > [!Important] 
+   > Se tiver uma definição de agente de cliente personalizado existente que tenha sido implementada nos seus dispositivos, terá de atualizar a opção de recolha de **dados enable Endpoint** nessa definição personalizada e, em seguida, reimplantá-la para as suas máquinas para que este faça efeito.
+
+#### <a name="enable-data-upload-in-configuration-manager"></a><a name="bkmk_uea_cm_upload"></a>Ativar o upload de dados no Gestor de Configuração
+
+1. Na consola de Gestor de Configuração, vá à Cogestão de Serviços de Nuvem **de**  >  **Cloud Services**  >  **Administração.**
+1. Selecione **CoMgmtSettingsProd** e, em seguida, clique em **Propriedades**.
+1. No separador **de upload configure,** verifique a opção de ativar a **análise do Endpoint para dispositivos enviados para** o Microsoft Endpoint Manager
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Ativar a análise do Endpoint para dispositivos enviados para o Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>A bordo do portal de análise Endpoint
+O embarque no portal de análise Endpoint é necessário tanto para o Gestor de Configuração como para dispositivos geridos por Intune.
 
 1. Ir para `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Clique em **Iniciar**. Isto atribuirá automaticamente um perfil de configuração para recolher dados de desempenho de arranque de todos os dispositivos elegíveis. Pode [alterar os dispositivos atribuídos](#bkmk_uea_profile) mais tarde. Pode levar até 24 horas para que os dados de desempenho do arranque possam ser preenchidos a partir dos seus dispositivos matriculados no Intune após o seu reboot.
@@ -207,7 +240,7 @@ Se clicar num determinado dispositivo, pode ver a sua bota e a sua história de 
 A página de desempenho do **Startup** tem separadores de relatórios que fornecem suporte para os insights, incluindo:
 1. **Desempenho do modelo.** Este separador permite-lhe ver o desempenho do boot e do sign-in por modelo do dispositivo, o que pode ajudá-lo a identificar se os problemas de desempenho estão isolados em determinados modelos.
 1. **Desempenho do dispositivo**. Este separador fornece métricas de boot e de iniciação para todos os seus dispositivos. Você pode classificar por uma métrica particular (por exemplo, tempo de inscrição GP) para ver quais os dispositivos que têm as piores pontuações para essa métrica para ajudar na resolução de problemas. Pode também pesquisar um dispositivo pelo nome. Se clicar num dispositivo, pode ver o seu histórico de boot e sign-in, o que pode ajudá-lo a identificar se houve uma regressão recente
-1. **Processos de arranque.** Este separador (se visível; só voámos isto para alguns de vocês, uma vez que ainda estamos a desenvolver esta funcionalidade) mostrar-lhe-á quais os processos que estão a impactar a fase de "tempo para desktop responsivo"; isto é - manter o CPU acima de 50% após a prestação do ambiente de trabalho.
+1. **Processos de arranque.** Os processos de arranque podem impactar negativamente a experiência do utilizador, aumentando o tempo que os utilizadores devem esperar que o ambiente de trabalho se torne reativo. Este separador (se visível; só voámos isto para alguns de vocês, uma vez que ainda estamos a desenvolver esta funcionalidade) mostrar-lhe-á quais os processos que estão a impactar a fase de "tempo para desktop responsivo"; isto é - manter o CPU acima de 50% após a prestação do ambiente de trabalho. A tabela apenas lista processos que impactam um mínimo de 10 dispositivos no seu inquilino.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a>Reparações proactivas
 
@@ -218,7 +251,7 @@ Cada pacote de script supor um script de deteção, um script de reparação e m
 ### <a name="get-the-detection-and-remediation-scripts"></a><a name="bkmk_uea_prs_ps1"></a>Obtenha os scripts de deteção e reparação
 
 1. Copie os scripts da parte inferior deste artigo na secção de [scripts PowerShell.](#bkmk_uea_ps_scripts)
-    - Os ficheiros script `det` cujos nomes começam são scripts de deteção. Os scripts de `rem`reparação começam com .
+    - Os ficheiros script cujos nomes começam `det` são scripts de deteção. Os scripts de reparação começam com `rem` .
     - Para obter uma descrição dos scripts, consulte as [descrições](#bkmk_uea_scripts)do Script .
 1. Guarde cada script usando o nome fornecido. O nome também está nos comentários no topo de cada script.
     - Pode usar um nome de script diferente, mas não corresponderá ao nome listado na secção descrições do [Script.](#bkmk_uea_scripts)
@@ -232,7 +265,7 @@ O serviço de extensão de **gestão intune** da Microsoft obtém os scripts de 
      [![Página de reparações proactivas de endpoint. Selecione o link de criação.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. Na etapa **basics,** dê ao pacote de script um **nome** e opcionalmente, uma **descrição**. O campo **Publisher** pode ser editado, mas não tem o nome do seu inquilino. **A versão** não pode ser editada. 
 1. Na etapa **definições,** copie o texto dos scripts que descarregou para os scripts **de Deteção** e **remediação.** 
-   - Precisa do script de deteção e remediação correspondente para estar no mesmo pacote. Por exemplo, `Detect_stale_Group_Policies.ps1` o script de `Remediate_stale_GroupPolicies.ps1` deteção corresponde ao script de reparação.
+   - Precisa do script de deteção e remediação correspondente para estar no mesmo pacote. Por exemplo, o script de `Detect_stale_Group_Policies.ps1` deteção corresponde ao script de `Remediate_stale_GroupPolicies.ps1` reparação.
        [![Análise final analítica Proactive remedia a página de definições de script.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Termine as opções na página **Definições** com as seguintes configurações recomendadas:
    - **Execute este script usando as credenciais de login**: Isto depende do script. Para mais informações, consulte as [descrições](#bkmk_uea_scripts)do Script .
@@ -241,7 +274,7 @@ O serviço de extensão de **gestão intune** da Microsoft obtém os scripts de 
 1. Clique **em Seguinte** e, em seguida, atribua todas as **etiquetas de Âmbito** que precisar.
 1. Na etapa de **Atribuiçãos,** selecione os grupos de dispositivos para os quais pretende implementar o pacote de scripts.
 1. Complete o **passo Review + Criar** passo para a sua implementação.
-1. Em **análise de Endpoint reporting** > **- Reparações proactivas,** pode ver uma visão geral do seu estado de deteção e reparação.
+1. Em **análise de Endpoint reporting**-  >  **Reparações proactivas,** pode ver uma visão geral do seu estado de deteção e reparação.
        [![Análise final aanálise Relatório de reparações proactivas, página geral.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Clique no **estado do Dispositivo** para obter detalhes de estado para cada dispositivo na sua implementação.
        [![Análise endpoint Proactiva remedia o estado do dispositivo.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
@@ -310,7 +343,7 @@ Note que estes problemas não se aplicarão aos dados provenientes do próximo c
 Segundo, aqui está uma lista rápida de verificação para resolver problemas:
 1. Certifique-se de que tem o perfil de Monitorização de Saúde do Windows direcionado para todos os dispositivos para os quais pretende obter dados de desempenho. Pode encontrar um link para este perfil a partir da página de definição de análise de ponto final, ou navegar para ele como faria qualquer outro perfil Intune. Veja o separador de atribuição para se certificar de que é atribuído ao conjunto de dispositivos esperado. 
 1. Veja quais os dispositivos que foram configurados com sucesso para a recolha de dados. Pode também ver esta informação na página de visão geral dos perfis.  
-   - Existe um problema conhecido em que os clientes podem ver erros `-2016281112 (Remediation failed)`de atribuição de perfis, onde os dispositivos afetados mostram um código de erro de . Estamos a investigar ativamente este assunto.
+   - Existe um problema conhecido em que os clientes podem ver erros de atribuição de perfis, onde os dispositivos afetados mostram um código de erro de `-2016281112 (Remediation failed)` . Estamos a investigar ativamente este assunto.
 1. Os dispositivos que foram configurados com sucesso para recolha de dados devem ser reiniciados após a recolha de dados, e deve esperar até 24 horas depois para que o dispositivo apareça no separador de desempenho do dispositivo.
 1. Se o seu dispositivo foi configurado com sucesso para recolha de dados, foi posteriormente reiniciado e, após 24 horas, ainda não o vê, então pode ser que o dispositivo não consiga chegar aos nossos pontos finais de recolha. Este problema pode acontecer se a sua empresa utilizar um servidor proxy e os pontos finais não tiverem sido ativados no proxy. Para mais informações, consulte [pontos finais de resolução de problemas](#bkmk_uea_endpoints).
 
@@ -350,7 +383,7 @@ Configure os dispositivos para utilizar o contexto do utilizador inscrito para a
 - Certifique-se de que os utilizadores têm permissão de procuração para chegar aos pontos finais de partilha de dados. Esta opção requer que os dispositivos possuam utilizadores de consolas com permissões por procuração, pelo que não pode utilizar este método com dispositivos sem cabeça.
 
 > [!IMPORTANT]
-> A abordagem de autenticação por procuração do utilizador é incompatível com a utilização da Proteção avançada de ameaças do Microsoft Defender. Este comportamento deve-se ao facto de esta autenticação se basear `0`na chave de registo **DisableEnterpriseAuthProxy** definida para , enquanto o Microsoft Defender ATP exige que seja definido para `1`. Para mais informações, consulte configurações de [proxy de máquina seleção e conectividade](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)de internet no MICROSOFT Defender ATP .
+> A abordagem de autenticação por procuração do utilizador é incompatível com a utilização da Proteção avançada de ameaças do Microsoft Defender. Este comportamento deve-se ao facto de esta autenticação se basear na chave de registo **DisableEnterpriseAuthProxy** definida para , enquanto o `0` Microsoft Defender ATP exige que seja definido para `1` . Para mais informações, consulte configurações de [proxy de máquina seleção e conectividade](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)de internet no MICROSOFT Defender ATP .
 
 #### <a name="device-proxy-authentication"></a>Autenticação por procuração de dispositivo
 
@@ -372,7 +405,7 @@ Esta abordagem é a mais complexa porque requer as seguintes configurações:
 
   - Procuração transparente
 
-  - Configure o proxy WinINET em todo o dispositivo utilizando a seguinte definição de política de grupo: Faça definições de **procuração por máquina (em vez de por utilizador)** (ProxySettingsPerUser = `1`)
+  - Configure o proxy WinINET em todo o dispositivo utilizando a seguinte definição de política de grupo: Faça definições de **procuração por máquina (em vez de por utilizador)** (ProxySettingsPerUser = `1` )
 
   - Ligação direcionada ou que utiliza tradução de endereços de rede (NAT)
 
@@ -380,6 +413,10 @@ Esta abordagem é a mais complexa porque requer as seguintes configurações:
 
 
 ## <a name="frequently-asked-questions"></a><a name="bkmk_uea_faq"></a>Perguntas frequentes
+
+### <a name="will-my-endpoint-analytics-data-migrate-if-i-move-my-intune-tenant-to-a-different-tenant-location"></a>Os meus dados de análise endpoint migrarão se eu mudar o meu inquilino intune para outro local de inquilino?
+
+Se migrar o seu inquilino Intune para um local diferente, todos os dados da sua solução de análise Endpoint no momento da migração serão perdidos. Como os pontos finais reportam na análise de Endpoint continuamente, todos os eventos que ocorrem após a migração automaticamente carregam para a sua nova localização de inquilino e os relatórios começam a repovoar, assumindo que os dispositivos permanecem devidamente matriculados. 
 
 ### <a name="why-are-the-scripts-exiting-with-a-code-of-1"></a>Porque é que os guiões estão a sair com um código de 1?
 
@@ -391,14 +428,14 @@ Os scripts saem com um código de 1 para sinalizar para Insinserir que deve ocor
 
 ## <a name="script-descriptions"></a><a name="bkmk_uea_scripts"></a>Descrições do guião
 
-Esta tabela mostra os nomes do guião, descrições, deteções, reparações e itens configuráveis. Os ficheiros script `Detect` cujos nomes começam são scripts de deteção. Os scripts de `Remediate`reparação começam com . Estes scripts podem ser copiados a partir da próxima secção deste artigo.
+Esta tabela mostra os nomes do guião, descrições, deteções, reparações e itens configuráveis. Os ficheiros script cujos nomes começam `Detect` são scripts de deteção. Os scripts de reparação começam com `Remediate` . Estes scripts podem ser copiados a partir da próxima secção deste artigo.
 
 |Nome do script|Descrição|
 |---|---|
-|**Atualizar políticas de grupo stale** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Deteta se a última atualização da Política de Grupo for maior do que `7 days` há pouco.  </br>Personalize o limiar de 7 `$numDays` dias alterando o valor para o script de deteção. </br></br>Repara-se correndo `gpupdate /target:computer /force` e`gpupdate /target:user /force`  </br> </br>Pode ajudar a reduzir as chamadas de suporte relacionadas com a conectividade da rede quando os certificados e configurações são entregues através da Política de Grupo. </br> </br> **Executar o script usando as credenciais logge-on**: Sim|
+|**Atualizar políticas de grupo stale** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Deteta se a última atualização da Política de Grupo for maior do que `7 days` há pouco.  </br>Personalize o limiar de 7 dias alterando o valor para o script de `$numDays` deteção. </br></br>Repara-se correndo `gpupdate /target:computer /force` e`gpupdate /target:user /force`  </br> </br>Pode ajudar a reduzir as chamadas de suporte relacionadas com a conectividade da rede quando os certificados e configurações são entregues através da Política de Grupo. </br> </br> **Executar o script usando as credenciais logge-on**: Sim|
 |**Reiniciar o serviço Click-to-Run do Office** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Deteta se o serviço Click-to-Run está programado para iniciar automaticamente e se o serviço for interrompido. </br> </br> Repara-se, definindo o serviço para iniciar automaticamente e iniciar o serviço se este for interrompido. </br></br> Ajuda a corrigir problemas em que as Aplicações Win32 Microsoft 365 para empresa não serão lançadas porque o serviço Click-to-Run está parado. </br> </br> **Executar o script usando as credenciais logge-on**: Não|
-|**Verificar certificados de rede** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Deteta certificados emitidos por um CA na loja pessoal da Máquina ou do Utilizador que estejam caducadas ou perto de expirar. </br> Especifique o CA `$strMatch` alterando o valor para no script de deteção. Especifique 0 para `$expiringDays` encontrar certificados caducados, ou especifique outro número de dias para encontrar certificados perto de expirar.  </br></br>Repara-se levantando uma notificação de torrada ao utilizador. </br> Especifique os `$Title` valores e `$msgText` valores com o título de mensagem e texto que pretende que os utilizadores vejam. </br> </br> Anota os utilizadores de certificados caducados que possam ter de ser renovados. </br> </br> **Executar o script usando as credenciais logge-on**: Não|
-|**Certificados claros** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Deteta certificados caducados emitidos por uma AC na loja pessoal do utilizador atual. </br> Especifique o CA `$certCN` alterando o valor para no script de deteção. </br> </br> Repara-se ao apagar certificados expirados emitidos por uma AC da loja pessoal do utilizador atual. </br> Especifique o CA `$certCN` alterando o valor para o script de reparação. </br> </br> Encontra e elimina os certificados expirados emitidos por uma AC a partir da loja pessoal do utilizador atual. </br> </br> **Executar o script usando as credenciais logge-on**: Sim|
+|**Verificar certificados de rede** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Deteta certificados emitidos por um CA na loja pessoal da Máquina ou do Utilizador que estejam caducadas ou perto de expirar. </br> Especifique o CA alterando o valor para no script de `$strMatch` deteção. Especifique 0 para `$expiringDays` encontrar certificados caducados, ou especifique outro número de dias para encontrar certificados perto de expirar.  </br></br>Repara-se levantando uma notificação de torrada ao utilizador. </br> Especifique os `$Title` valores e `$msgText` valores com o título de mensagem e texto que pretende que os utilizadores vejam. </br> </br> Anota os utilizadores de certificados caducados que possam ter de ser renovados. </br> </br> **Executar o script usando as credenciais logge-on**: Não|
+|**Certificados claros** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Deteta certificados caducados emitidos por uma AC na loja pessoal do utilizador atual. </br> Especifique o CA alterando o valor para no script de `$certCN` deteção. </br> </br> Repara-se ao apagar certificados expirados emitidos por uma AC da loja pessoal do utilizador atual. </br> Especifique o CA alterando o valor `$certCN` para o script de reparação. </br> </br> Encontra e elimina os certificados expirados emitidos por uma AC a partir da loja pessoal do utilizador atual. </br> </br> **Executar o script usando as credenciais logge-on**: Sim|
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>PowerShell Scripts
 
@@ -770,7 +807,7 @@ Atualmente, a funcionalidade básica da Endpoint analytics recolhe informações
   - **gpLogonDurationInMilliseconds**: Tempo para as políticas do grupo processarem
   - **desktopShownDurationInMillisegundos:** Hora de trabalhar (explorer.exe) para ser carregado
   - **desktopUsdurationInMillisegundos:** Hora de desktop (explorer.exe) ser utilizável
-  - **topProcesses:** Lista de processos carregados durante o arranque com nome, com estatísticas de utilização do CPU e detalhes da aplicação (Nome, editor, versão). Por *exemplo\"{\"Nome de\"processo :\"\"\"\"\\\\\\\\\\\\\"\"\"\"&reg; &reg; \"\"\"\"\"\"\"\"\"svchost\", CpuUsage :43, ProcessFullPath : C: Windows System32 svchost.exe , ProductName : Microsoft Windows Operating System , Publisher : Microsoft Corporation , ProductVersion : 10.0.18362.1 }\"*
+  - **topProcesses:** Lista de processos carregados durante o arranque com nome, com estatísticas de utilização do CPU e detalhes da aplicação (Nome, editor, versão). Por exemplo *{ Nome de processo : \" \" \" svchost \" , \" CpuUsage \" :43, \" ProcessFullPath \" : \" C: Windows \\ \\ \\ \\ System32 \\ \\ svchost.exe \" , \" ProductName : Microsoft Windows \" Operating System , Publisher : Microsoft Corporation \" , &reg; &reg; \" \" \" \" \" \" ProductVersion : \" \" 10.0.18362.1 \" }*
 - Dados de dispositivo que não estão associados a um dispositivo ou utilizador (se estes dados estiverem associados a um dispositivo ou utilizador, o Intune trata-os como se fossem dados identificados)
   - **ID:** ID de dispositivo único usado pelo Windows Update
   - **localId:** Um ID único definido localmente para o dispositivo. Este não é o nome do dispositivo legível pelo homem. Muito provavelmente igual ao valor armazenado na HKLM\Software\Microsoft\SQMClient\MachineId.
@@ -790,4 +827,4 @@ Para obter mais informações sobre aspetos de privacidade relacionados, consult
 - [Termos de licenciamento e documentação](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 - [Segurança e privacidade nos centros de dados do Microsoft Azure](https://azure.microsoft.com/global-infrastructure/)  
 - [Confiança na nuvem de confiança](https://azure.microsoft.com/overview/trusted-cloud/)  
-- [Centro de Fidedignidade](https://www.microsoft.com/trustcenter)  
+- [Centro de Confiança](https://www.microsoft.com/trustcenter)  

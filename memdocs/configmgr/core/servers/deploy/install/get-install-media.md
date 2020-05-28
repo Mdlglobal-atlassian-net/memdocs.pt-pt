@@ -10,12 +10,12 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5d59e165f2bb20ad6851f7d52c94d39e1ec9e4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb9bfc252c82e477359a4c14cbe92a6dc11257bd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718246"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906500"
 ---
 # <a name="where-to-get-installation-media-for-configuration-manager"></a>Onde obter meios de instalação para Gestor de Configuração
 
@@ -25,6 +25,6 @@ Se tiver licenças de volume do Gestor de Configuração com Garantia de Softwar
 
 Se tiver uma licença de Gestor de Configuração da EMS, Microsoft 365 ou um Fornecedor de Soluções Cloud (CSP), consulte o [Produto e Licenciamento FAQ](../../../understand/product-and-licensing-faq.md#bkmk_csp).
 
-Se quiser adquirir licenças de volume para O Gestor de Configuração, contacte o seu Revendedor Microsoft preferido ou veja [como comprar através](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)do Licenciamento de Volume . Também pode descarregar meios de comunicação para instalar uma edição de avaliação do Diretor de Configuração do site do [TechNet Evaluation Center.]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)
+Se quiser adquirir licenças de volume para O Gestor de Configuração, contacte o seu Revendedor Microsoft preferido ou veja [como comprar através](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx)do Licenciamento de Volume . Também pode descarregar meios de comunicação para instalar uma edição de avaliação do Gestor de Configuração a partir do site do Centro de [Avaliação.](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)
 
 Para saber mais sobre os meios de base para O Gestor de Configuração, consulte [as versões Baseline e update](../../manage/updates.md#bkmk_Baselines).

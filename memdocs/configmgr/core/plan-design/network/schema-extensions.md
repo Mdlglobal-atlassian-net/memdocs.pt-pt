@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904077"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Extensões de esquema para o Configuration Manager
 
@@ -25,7 +25,7 @@ Pode estender o esquema de Diretório Ativo para suportar o Gestor de Configura�
 
 -   É uma boa ideia estender o esquema do Diretório Ativo, mas não é necessário.  
 
-Antes de [expandir o esquema do Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), deve estar familiarizado com os Serviços de Domínio do Active Directory e à vontade para [modificar o esquema do Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Antes de [expandir o esquema do Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema), deve estar familiarizado com os Serviços de Domínio do Active Directory e à vontade para [modificar o esquema do Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Considerações para alargar o esquema de Diretório Ativo para Gestor de Configuração  
 
@@ -70,7 +70,7 @@ Tarefa de **instalação e site** do cliente - Quando um computador Windows inst
 
     -   **Instale os clientes manualmente** e forneça propriedades de instalação do cliente utilizando propriedades de linha de comando de instalação CCMSetup. Isto deve incluir o seguinte:  
 
-        -   Especifique um ponto de gestão ou um caminho de origem a partir do qual o computador pode descarregar os ficheiros de instalação utilizando a propriedade CCMSetup **/mp:=&lt;\> nome** de ponto de gestão nome de computador ou **/fonte:&lt;caminho para ficheiros\> de origem do cliente** na linha de comando CCMSetup durante a instalação do cliente.  
+        -   Especifique um ponto de gestão ou um caminho de origem a partir do qual o computador pode descarregar os ficheiros de instalação utilizando a propriedade CCMSetup **/mp:= &lt; nome \> ** de ponto de gestão nome de computador ou **/fonte: &lt; caminho para ficheiros \> de origem do cliente** na linha de comando CCMSetup durante a instalação do cliente.  
 
         -   Especifique uma lista de pontos de gestão iniciais para o cliente usar para que possa atribuí-los ao site e, em seguida, baixar a política do cliente e as definições do site. Para o efeito, utilize a propriedade SMSMP do CCMSetup Client.msi.  
 

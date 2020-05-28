@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078673"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878957"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Conceitos fundamentais para gestão de conteúdos em Gestor de Configuração
 
@@ -108,7 +108,7 @@ O Gestor de Configuração suporta várias opções para gerir conteúdos entre 
 
 Utilize a tabela seguinte para comparar as principais características destas tecnologias:
 
-| Funcionalidade  | Cache&nbsp;de pares  | Otimização de Entrega&nbsp;  | BranchCache  |
+| Funcionalidade  | Cache de pares &nbsp;  | &nbsp;Otimização de Entrega  | BranchCache  |
 |---------|---------|---------|---------|
 | Através de subredes | Sim | Sim | Não |
 | Limitar largura de banda | Sim (BITS) | Sim (nativo) | Sim (BITS) |
@@ -156,7 +156,7 @@ A Otimização da Entrega é a tecnologia recomendada para otimizar a entrega de
 A partir da versão 1906, pode instalar um servidor Microsoft Connected Cache nos seus pontos de distribuição. Ao gravar este conteúdo no local, os seus clientes podem beneficiar da funcionalidade de Otimização de Entrega, mas pode ajudar a proteger os links WAN.
 
 > [!NOTE]
-> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache (DOINC).
+> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache.
 
 Este servidor de cache funciona como uma cache transparente a pedido para conteúdos descarregados pela Otimização da Entrega. Utilize as definições do cliente para se certificar de que este servidor é oferecido apenas aos membros do grupo de limites do Gestor de Configuração local.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078741"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905257"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Capacidades em Pré-visualização Técnica 1804 para Gestor de Configuração
 
@@ -80,7 +80,7 @@ Esta biblioteca de conteúdos remotos é um novo pré-requisito para a elevada d
 
 3. Selecione **numa partilha de rede** e introduza um caminho de rede válido. Este caminho é o local para onde o site move a biblioteca de conteúdos. Clique em **OK**.  
 
-4. Note a propriedade **Status** na coluna da Biblioteca de Conteúdos no painel de detalhes. Atualiza para mostrar o progresso do site na mudança da biblioteca de conteúdos. Quando em curso exibe a percentagem completa. Se houver um estado de erro, exibe o erro. Erros comuns incluem `access denied` ou `disk full`. Quando estiver `OK`concluído, exibe . Consulte o **distmgr.log** para obter mais detalhes. Para mais informações, consulte os [registos](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog)do servidor do servidor do Site e do servidor do site .  
+4. Note a propriedade **Status** na coluna da Biblioteca de Conteúdos no painel de detalhes. Atualiza para mostrar o progresso do site na mudança da biblioteca de conteúdos. Quando em curso exibe a percentagem completa. Se houver um estado de erro, exibe o erro. Erros comuns incluem `access denied` ou `disk full` . Quando estiver concluído, exibe `OK` . Consulte o **distmgr.log** para obter mais detalhes. Para mais informações, consulte os [registos](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog)do servidor do servidor do Site e do servidor do site .  
 
 Se precisar de mover a biblioteca de conteúdos de volta para o servidor do site, repita este processo, mas selecione a opção **Local para o servidor do site**.  
 
@@ -134,8 +134,6 @@ Se tentar enviar feedback de um dispositivo que não seja capaz de aceder à int
 
 Utilize o Centro de Suporte para resolução de problemas do cliente, visualização de registoem em tempo real ou capturando o estado de um computador cliente do Gestor de Configuração para posterior análise. O Centro de Suporte é uma única ferramenta para consolidar muitas ferramentas de resolução de problemas do administrador. Uma pré-visualização da versão mais recente do Support Center com correções de bugs, melhorias e uma pré-visualização do nosso novo observador de registos está disponível na pré-visualização técnica. Encontre o instalador do Centro de Suporte no servidor do site na pasta **cd.latest\SMSSETUP\Tools\SupportCenter.**
 
- > [!Tip]  
- > Documentação antiga para a funcionalidade existente no Support Center está disponível no [TechNet.](https://technet.microsoft.com/library/dn688621.aspx) A informação relevante está em processo de migração para a biblioteca docs.microsoft.com.  
 
 ### <a name="new-support-center-features"></a>Novas funcionalidades do Centro de Suporte  
 
@@ -304,7 +302,7 @@ Fizemos as seguintes melhorias na implementação do OS, algumas das quais foram
   > As variáveis e os seus valores são guardados com a sequência de tarefas como XML, e obfuscados na base de dados. Quando o cliente solicita uma política de sequência de tarefas a partir do ponto de gestão, é encriptado em trânsito e quando armazenado no cliente. No entanto, todos os valores variáveis são texto simples no ambiente de sequência de tarefas na memória durante o tempo de execução do cliente. Se a sequência de tarefas incluir um passo para obter o valor da variável, esta saída encontra-se em texto simples. Este comportamento requer uma ação explícita do administrador para incluir tal passo na sequência de tarefas. 
 
 
-- Nome do [programa de máscaras durante a sequência de comando de execução](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): Para evitar que os dados `TRUE`potencialmente sensíveis sejam exibidos ou registados, detete a variável de sequência de tarefas **OSDDoNotLogCommand para** . Esta variável disfarça o nome do programa [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) no smsts.log durante um passo de sequência de tarefa smsts.log. <!--1358493-->  
+- Nome do [programa de máscaras durante a sequência de comando de execução](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): Para evitar que os dados potencialmente sensíveis sejam exibidos ou registados, detete a variável de sequência de tarefas **OSDDoNotLogCommand para** `TRUE` . Esta variável disfarça o nome do programa [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) no smsts.log durante um passo de sequência de tarefa smsts.log. <!--1358493-->  
 
 
 
@@ -313,5 +311,5 @@ Fizemos as seguintes melhorias na implementação do OS, algumas das quais foram
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações sobre a instalação ou atualização do ramo de pré-visualização técnica, consulte [a Pré-visualização técnica para o Gestor de Configuração](technical-preview.md).    

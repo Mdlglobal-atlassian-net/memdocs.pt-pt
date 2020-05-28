@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711596"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904637"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Versões de Servidor SQL suportadas para gestor de configuração
 
@@ -65,7 +65,7 @@ Numa hierarquia com vários sites, diferentes sites podem usar diferentes versõ
 - As versões SQL Server que utiliza permanecem no suporte pela Microsoft.
 - O SQL Server suporta a replicação entre as duas versões do Servidor SQL. Para mais informações, consulte a [replicação do SQL Server para trás](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
 
-Para o SQL Server 2016 e anterior, o suporte para cada versão E pacote de serviçoS SQL segue a Política de [Lifecycle da Microsoft](https://aka.ms/sqllifecycle). O suporte para um pacote de serviço sQL Server específico inclui atualizações cumulativas, a menos que quebrem a compatibilidade para trás com a versão do pacote de serviço base. A partir do SQL Server 2017, os pacotes de serviços não serão lançados uma vez que segue um [modelo de manutenção moderno.](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/) A equipa do SQL Server recomenda a instalação contínua e [proactiva de atualizações cumulativas](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) à medida que se tornam disponibilizadas.
+Para o SQL Server 2016 e anterior, o suporte para cada versão E pacote de serviçoS SQL segue a Política de [Lifecycle da Microsoft](https://aka.ms/sqllifecycle). O suporte para um pacote de serviço sQL Server específico inclui atualizações cumulativas, a menos que quebrem a compatibilidade para trás com a versão do pacote de serviço base. A partir do SQL Server 2017, os pacotes de serviços não serão lançados uma vez que segue um [modelo de manutenção moderno.](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server) A equipa do SQL Server recomenda a instalação contínua e [proactiva de atualizações cumulativas](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) à medida que se tornam disponibilizadas.
 
 Salvo especificação em contrário, as seguintes versões do SQL Server são suportadas com todas as versões ativas do Gestor de Configuração. Se for adicionado suporte para uma nova versão do SQL Server, a versão 'Gestor de Configuração' que adiciona esse suporte é notada. Da mesma forma, se o suporte for depreciado, procure detalhes sobre as versões afetadas do Gestor de Configuração.
 
@@ -109,7 +109,7 @@ A versão SQL Server 2019 regista o seguinte erro:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-Também verá despejos de`.mdump` crash (ficheiros) da SQL no seu `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`diretório de registo, que por padrão é .
+Também verá despejos de crash `.mdump` (ficheiros) da SQL no seu diretório de registo, que por padrão é `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise
 

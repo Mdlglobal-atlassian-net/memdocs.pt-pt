@@ -87,7 +87,7 @@ A funcionalidade Grupos de **Orquestração** é a evolução da funcionalidade 
 
    - **Especifique a sequência de manutenção**e, em seguida, separe os recursos selecionados na ordem adequada. Utilize esta definição para definir explicitamente a ordem na qual os dispositivos executam a implementação da atualização do software.
 
-1. Na página **Pré-Script,** introduza um script PowerShell para ser executado em cada dispositivo *antes* da implementação ser executada. O script deve devolver `0` um valor `3010` de sucesso, ou para o sucesso com o reinício.
+1. Na página **Pré-Script,** introduza um script PowerShell para ser executado em cada dispositivo *antes* da implementação ser executada. O script deve devolver um valor de `0` sucesso, ou `3010` para o sucesso com o reinício.
 
 1. Na página **Post-Script,** introduza um script PowerShell para ser executado em cada dispositivo *após* a execução. O comportamento é o mesmo que o PreScript.
 
@@ -120,10 +120,10 @@ Para eliminar o grupo de orquestração, selecione-o e, em seguida, clique em **
       - **Especifique a sequência de manutenção**: Separe os recursos selecionados à ordem adequada. Utilize esta definição para definir explicitamente a ordem na qual os dispositivos executam a implementação da atualização do software.
 
    - **Pré-script**: 
-       - Introduza um script PowerShell que seja executado em cada dispositivo *antes* da implementação ser executado. O script deve devolver `0` um valor `3010` de sucesso, ou para o sucesso com o reinício.
+       - Introduza um script PowerShell que seja executado em cada dispositivo *antes* da implementação ser executado. O script deve devolver um valor de `0` sucesso, ou `3010` para o sucesso com o reinício.
        
    - **Pós-Script:**
-      - Introduza um script PowerShell para ser executado em cada dispositivo *após* a execução. O script deve devolver `0` um valor `3010` de sucesso, ou para o sucesso com o reinício.
+      - Introduza um script PowerShell para ser executado em cada dispositivo *após* a execução. O script deve devolver um valor de `0` sucesso, ou `3010` para o sucesso com o reinício.
    > [!WARNING]
    > Certifique-se de que os pré-scripts e pós-scripts são testados antes de os utilizar em grupos de orquestração. Os pré-scripts e pós-scripts não têm tempo e vão funcionar até que o intervalo do grupo de orquestração seja atingido.
 
@@ -213,6 +213,6 @@ Utilize os seguintes ficheiros de registo no servidor do site para ajudar a moni
 - **ActualizaçãoDeployment.log**: Mostra o processo de instalação da atualização.
 - **PolicyAgent.log**: Verifica se o cliente está num grupo de orquestração.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Deploy software updates](deploy-software-updates.md)

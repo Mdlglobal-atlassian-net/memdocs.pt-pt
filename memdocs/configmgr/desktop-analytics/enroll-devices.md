@@ -10,12 +10,13 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9cca066d389ea8d3847737651f4994977a5e2f5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723615"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864910"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Como inscrever dispositivos no Desktop Analytics
 
@@ -36,10 +37,10 @@ A tabela seguinte lista as atualizações de cada componente nas versões de SO 
 | Versão do SO | Avaliador | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | <sup> [Nota](#bkmk_note1) incluída 1</sup> | [Última atualização cumulativa](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Incluído | [Última atualização cumulativa](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Incluído | [Última atualização cumulativa](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Incluído | [Última atualização cumulativa](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Incluído | [Última atualização cumulativa](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | <sup> [Nota](#bkmk_note1) incluída 1</sup> | [Última atualização cumulativa](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | <sup> [Nota](#bkmk_note1) incluída 1</sup> | [Última atualização cumulativa](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | <sup> [Nota](#bkmk_note1) incluída 1</sup> | [Última atualização cumulativa](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | <sup> [Nota](#bkmk_note1) incluída 1</sup> | [Última atualização cumulativa](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup> [Nota 2](#bkmk_note2)</sup> | [Última rollup mensal](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup> [Nota 3](#bkmk_note3)</sup> | [Última rollup mensal](https://support.microsoft.com/help/4009469) |
 
@@ -50,7 +51,7 @@ A tabela seguinte lista as atualizações de cada componente nas versões de SO 
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a>Nota 1: Windows 10
 
-Embora o Windows 10 inclua estes componentes por padrão, os dispositivos do Windows 10 requerem a mais recente atualização cumulativa para obter a funcionalidade completa do Desktop Analytics. Por exemplo, avaliar o dispositivo para compatibilidade com a versão mais recente do SO e obter a informação quase em tempo real para implementações e estado de inscrição.
+Embora o Windows 10 inclua estes componentes por padrão, os dispositivos do Windows 10 requerem a mais recente atualização cumulativa para obter a funcionalidade completa do Desktop Analytics, como avaliar o dispositivo para compatibilidade com a versão mais recente do SISTEMA.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a>Nota 2: Windows 8.1
 
@@ -125,7 +126,7 @@ Existe uma opção nas definições do Gestor de Configuração para desktop Ana
 
 Em geral, utilize as coleções do Gestor de Configuração para direcionar as definições e inscrições do Desktop Analytics. Utilize adesão direta ou consultas para incluir ou excluir dispositivos da recolha. Para mais informações, consulte [Como criar coleções.](../core/clients/manage/collections/create-collections.md)
 
-O Gestor de Configuração só configura as definições do Windows se um valor já não existir. Se precisar de configurar diferentes configurações para um grupo único de dispositivos, pode utilizar a política de [grupo](group-policy-settings.md). As definições direcionadas pela política do grupo têm precedência sobre as definições do Gestor de Configuração.
+O Gestor de Configuração só configura as definições do Windows se um valor já não existir. Se precisar de configurar diferentes configurações para um grupo único de dispositivos, pode utilizar a política de [grupo](group-policy-settings.md). As definições direcionadas pela política do grupo têm precedência sobre as definições do Gestor de Configuração. Os dispositivos visados pela política do grupo podem não refletir com precisão o estado no painel de [saúde connection.](monitor-connection-health.md)
 
 Quando configurar o nível de dados de diagnóstico, define o limite superior para o dispositivo. Por predefinição no Windows 10, na versão 1803 e posteriormente, os utilizadores podem optar por definir um nível mais baixo. Pode controlar este comportamento utilizando a definição de política de grupo, configurar a **definição de opt-in de definição de telemetria**. Para mais informações, consulte [as definições de política do Grupo para desktop Analytics](group-policy-settings.md).
 
@@ -133,7 +134,7 @@ Quando configurar o nível de dados de diagnóstico, define o limite superior pa
 
 Se a sua organização utilizar a autenticação do servidor proxy para acesso à Internet, certifique-se de configurar corretamente ou os seus dispositivos. Para mais informações, consulte a [autenticação](enable-data-sharing.md#proxy-server-authentication)do servidor Proxy .
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Avançar para o próximo artigo para criar planos de implementação no Desktop Analytics.
 > [!div class="nextstepaction"]

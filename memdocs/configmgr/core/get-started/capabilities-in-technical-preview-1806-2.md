@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078758"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905208"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Capacidades em Pré-visualização Técnica 1806.2 para Gestor de Configuração
 
@@ -60,7 +60,7 @@ Se já atualizou o seu site, a atualização automática do cliente e o impulso 
 Se estiver a instalar um novo cliente no seu site de pré-visualização técnica 1806.2, utilize este mesmo processo. 
 
 > [!Important]  
-> Não use o `/MP` parâmetro da linha de comando neste cenário. Este parâmetro tem `/source` prioridade e faz com que a CCMsetup baixe o conteúdo do cliente a partir do ponto de gestão ou ponto de distribuição.
+> Não use o `/MP` parâmetro da linha de comando neste cenário. Este parâmetro tem prioridade `/source` e faz com que a CCMsetup baixe o conteúdo do cliente a partir do ponto de gestão ou ponto de distribuição.
 > 
 > As propriedades da linha de comando, tais como SMSSITECODE ou CCMLOGLEVEL, estão bem de usar, mas não devem ser necessárias para atualizar um cliente existente. 
 
@@ -147,7 +147,7 @@ Quando criar uma implementação faseada e configurar manualmente uma fase, na p
 <!--1357427-->
 O Gestor de Configuração suporta agora a implementação de novos formatos de pacote de aplicações Do Windows 10 (.msix) e pacote de aplicações (.msixbundle). As mais recentes [visualizações](https://insider.windows.com/) do Windows Insider suportam atualmente estes novos formatos.
 
-Para uma visão geral do MSIX, veja [mais de perto o MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).
+Para uma visão geral do MSIX, veja [mais de perto o MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
 
 Para como criar uma nova aplicação MSIX, consulte o [suporte MSIX introduzido no Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -159,7 +159,7 @@ Para como criar uma nova aplicação MSIX, consulte o [suporte MSIX introduzido 
 Tente completar as tarefas. Então envie [feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) para nos dizer como funcionou.
 
 1. Na consola 'Gestor de Configuração', [crie uma aplicação](../../apps/deploy-use/create-applications.md). 
-2. Selecione o ficheiro de instalação de aplicação **Type** as **Windows app package\*( .appx, \*.appxbundle, \*.msix, \*.msixbundle)**.
+2. Selecione o ficheiro de instalação de aplicação **Type** as **Windows app package ( \* .appx, \* .appxbundle, \* .msix, \* .msixbundle)**.
 3. [Implemente a aplicação](../../apps/deploy-use/deploy-applications.md) para o cliente que executa a mais recente construção de Pré-visualização do Windows Insider.
 
 
@@ -214,7 +214,7 @@ Gerencie aplicações móveis com o Microsoft Intune enquanto continua a utiliza
 
 Após a transição desta carga de trabalho, todas as aplicações disponíveis implantadas a partir de Intune estão disponíveis no Portal da Empresa. As aplicações que implementa no 'Gestor de Configuração' estão disponíveis no Software Center. 
 
-Para obter mais informações, veja os artigos seguintes:  
+Para obter mais informações, veja os seguintes artigos:  
 
 - [Cogestão para os dispositivos com Windows 10](../../comanage/overview.md)  
 
@@ -303,7 +303,7 @@ Elimine catálogos personalizados do mesmo nó da consola. Selecione um catálog
 
 
 ### <a name="known-issue"></a>Problema conhecido
-A ação de exclusão em catálogos personalizados está acinzentada, pelo que não é possível eliminar catálogos personalizados da consola. Para contornar este problema, utilize a ferramenta **mais wbemtest** no servidor do site. Consulta por exemplo que pretende eliminar com o nome ou `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"`baixar URL, por exemplo: . Na janela de resultados da consulta, selecione o objeto e clique em **Eliminar**.<!--518676-->  
+A ação de exclusão em catálogos personalizados está acinzentada, pelo que não é possível eliminar catálogos personalizados da consola. Para contornar este problema, utilize a ferramenta **mais wbemtest** no servidor do site. Consulta por exemplo que pretende eliminar com o nome ou baixar URL, por exemplo: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"` . Na janela de resultados da consulta, selecione o objeto e clique em **Eliminar**.<!--518676-->  
 
 
 
@@ -337,5 +337,5 @@ O relatório inclui as seguintes partes:
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Para obter informações sobre a instalação ou atualização do ramo de pré-visualização técnica, consulte [a Pré-visualização técnica para o Gestor de Configuração](technical-preview.md).    

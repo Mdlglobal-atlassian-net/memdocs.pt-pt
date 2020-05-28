@@ -1,5 +1,5 @@
 ---
-title: Acesso condicional com cogestão
+title: Acesso Condicional com cogestão
 titleSuffix: Configuration Manager
 description: Controlar o acesso dos utilizadores aos recursos organizacionais com base nas regras de conformidade da Intune
 ms.date: 05/13/2019
@@ -10,18 +10,18 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711505"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764055"
 ---
-# <a name="conditional-access-with-co-management"></a>Acesso condicional com cogestão
+# <a name="conditional-access-with-co-management"></a>Acesso Condicional com cogestão
 
-O acesso condicional garante que apenas os utilizadores de confiança podem aceder a recursos organizacionais em dispositivos fidedignos utilizando aplicações fidedignas. É construído de raiz na nuvem. Quer esteja a gerir dispositivos com o Intune ou a alargar a implementação do Seu Gestor de Configuração com cogestão, funciona da mesma forma.
+O Acesso Condicional garante que apenas os utilizadores de confiança podem aceder a recursos organizacionais em dispositivos fidedignos utilizando aplicações fidedignas. É construído de raiz na nuvem. Quer esteja a gerir dispositivos com o Intune ou a alargar a implementação do Seu Gestor de Configuração com cogestão, funciona da mesma forma.
 
-No vídeo seguinte, o gestor de programas sénior Joey Glocke e o gestor de marketing de produtos Locky Ainley discutem e demo acesso condicional com cogestão:
+No vídeo seguinte, o gestor de programas sénior Joey Glocke e o gestor de marketing de produtos Locky Ainley discutem e demo Acesso Condicional com cogestão:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player]
 
@@ -37,11 +37,11 @@ Com a cogestão, a Intune avalia todos os dispositivos da sua rede para determin
 
     - Esta avaliação é violação pós-segurança e incidentes  
 
-O vice-presidente corporativo da Microsoft, Brad Anderson, discute o acesso condicional em profundidade com demonstrações ao vivo durante o keynote Ignite 2018. 
+O vice-presidente corporativo da Microsoft, Brad Anderson, discute o Acesso Condicional em profundidade com demonstrações ao vivo durante o keynote Ignite 2018. 
 
 > [!VIDEO https://www.youtube.com/embed/7tDbUhVCX_I?start=1071]
 
-O acesso condicional também lhe proporciona um local centralizado para ver a saúde de todos os dispositivos ligados à rede. Obtém-se as vantagens da escala de nuvem, que é especialmente valiosa para testar casos de produção do Gestor de Configuração.
+O Acesso Condicional também lhe fornece um local centralizado para ver a saúde de todos os dispositivos ligados à rede. Obtém-se as vantagens da escala de nuvem, que é especialmente valiosa para testar casos de produção do Gestor de Configuração.
 
 
 ## <a name="benefits"></a>Benefícios
@@ -52,7 +52,7 @@ Todas as equipas de TI são obcecadas com a segurança da rede. É obrigatório 
 - Se as suas definições forem atualizadas  
 - Se estiver na prisão quebrada ou enraizada  
 
-O acesso condicional combina o controlo granular sobre os dados organizacionais com uma experiência do utilizador que maximiza a produtividade dos trabalhadores em qualquer dispositivo a partir de qualquer local.
+O Acesso Condicional combina o controlo granular sobre os dados organizacionais com uma experiência do utilizador que maximiza a produtividade dos trabalhadores em qualquer dispositivo a partir de qualquer local.
 
 O seguinte vídeo mostra como a [Advanced Thread Protection](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) está integrada em cenários comuns que experimenta regularmente:
 
@@ -60,17 +60,17 @@ O seguinte vídeo mostra como a [Advanced Thread Protection](https://www.microso
 
 Com a cogestão, a Intune pode incorporar as responsabilidades do Gestor de Configuração para avaliar as suas normas de segurança no cumprimento das atualizações ou aplicações necessárias. Este comportamento é importante para qualquer organização de TI que queira continuar a usar o Gestor de Configuração para uma gestão complexa de aplicações e patch.
 
-O acesso condicional é também uma parte crítica do desenvolvimento da sua arquitetura [Zero Trust Network.](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) Com acesso condicional, os controlos de acesso do dispositivo em conformidade cobrem as camadas fundacionais da Rede Zero Trust. Esta funcionalidade é uma grande parte da forma como protege a sua organização no futuro.
+O Acesso Condicional é também uma parte crítica do desenvolvimento da sua arquitetura [Zero Trust Network.](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/14/building-zero-trust-networks-with-microsoft-365/) Com acesso condicional, os controlos de acesso do dispositivo em conformidade cobrem as camadas fundacionais da Rede Zero Trust. Esta funcionalidade é uma grande parte da forma como protege a sua organização no futuro.
 
-Para mais informações, consulte a publicação do blog sobre [o melhoramento do acesso condicional com dados de risco de máquina sacar da Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
+Para mais informações, consulte a publicação do blog sobre o reforço do [acesso condicional com dados de risco de máquina sacar da Microsoft Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Enhancing-conditional-access-with-machine-risk-data-from-Windows/ba-p/250559).
 
 
 
 ## <a name="case-studies"></a>Estudos de caso
 
-A empresa de consultoria de TI Wipro utiliza acesso condicional para proteger e gerir os dispositivos utilizados por todos os 91.000 colaboradores. Num estudo de caso recente, o vice-presidente de TI da Wipro observou:
+A empresa de consultoria de TI Wipro utiliza acesso condicionado para proteger e gerir os dispositivos utilizados por todos os 91.000 colaboradores. Num estudo de caso recente, o vice-presidente de TI da Wipro observou:
 
-> *Conseguir acesso condicional é uma grande vitória para a Wipro. Agora, todos os nossos empregados têm acesso móvel à informação a pedido.* 
+> Conseguir acesso condicional é uma grande vitória para a *Wipro. Agora, todos os nossos empregados têm acesso móvel à informação a pedido.* 
 >  *Aumentámos a nossa postura de segurança e a produtividade dos colaboradores. Agora, 91.000 colaboradores beneficiam de um acesso altamente seguro a mais de 100 aplicações de qualquer dispositivo, em qualquer lugar.*
 
 <!-- waiting for the case study to be public
@@ -86,7 +86,7 @@ Outros exemplos incluem:
 Intune também está totalmente integrado com parceiros como Cisco ISE, Aruba Clear Pass e Citrix NetScaler. Com estes parceiros, pode manter controlos de acesso com base na inscrição intune e no estado de conformidade do dispositivo através destas outras plataformas.
 
 Para mais informações, consulte os seguintes vídeos:
-- [Brad Anderson demos acesso condicional em detalhe](https://youtu.be/8321obNofgM?t=547)  
+- [Brad Anderson demos Acesso Condicional em detalhe](https://youtu.be/8321obNofgM?t=547)  
 - [Detalhes adicionais da Zona Endpoint 1805](https://youtu.be/f-ILlEuBFZg?t=196)  
 
 
@@ -94,26 +94,26 @@ Para mais informações, consulte os seguintes vídeos:
 
 Com acesso condicional e integração ATP, está a fortalecer um componente fundamental de cada organização de TI: acesso seguro à nuvem.
 
-Em mais de 63% de todas as violações de dados, os atacantes têm acesso à rede da organização através de credenciais de utilizador fracas, em incumprimento ou roubadas. Uma vez que o acesso condicional se centra na garantia da identidade do utilizador, restringe o roubo da credencial. O acesso condicional gere e protege as suas identidades, privilegiadas ou não privilegiadas. Não há melhor maneira de proteger os dispositivos e os dados sobre eles.
+Em mais de 63% de todas as violações de dados, os atacantes têm acesso à rede da organização através de credenciais de utilizador fracas, em incumprimento ou roubadas. Uma vez que o Acesso Condicional se concentra em garantir a identidade do utilizador, restringe o roubo da credencial. O Acesso Condicional gere e protege as suas identidades, privilegiadas ou não privilegiadas. Não há melhor maneira de proteger os dispositivos e os dados sobre eles.
 
-Uma vez que o acesso condicional é um componente central da Enterprise Mobility + Security (EMS), não é necessária configuração ou arquitetura no local. Com o Intune e o Azure Ative Directory (Azure AD), pode configurar rapidamente o acesso condicional na nuvem. Se está a utilizar o Gestor de Configuração, pode facilmente estender o seu ambiente à nuvem com cogestão e começar a usá-lo agora mesmo.
+Uma vez que o Acesso Condicional é um componente central da Mobilidade Empresarial + Segurança (EMS), não é necessária configuração ou arquitetura no local. Com o Intune e o Azure Ative Directory (Azure AD), pode configurar rapidamente o Acesso Condicional na nuvem. Se está a utilizar o Gestor de Configuração, pode facilmente estender o seu ambiente à nuvem com cogestão e começar a usá-lo agora mesmo.
 
-Para obter mais informações sobre a integração ATP, consulte esta publicação de blog [Microsoft Defender ATP a pontuação](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)de risco do dispositivo expõe um novo ciberataque, impulsiona o acesso condicional para proteger redes . Detalha como um grupo avançado de hackers usou ferramentas nunca antes vistas. A nuvem da Microsoft detetou-os e deteve-os porque os utilizadores visados tinham acesso condicional. A intrusão ativou a política de acesso condicional baseada no risco do dispositivo. Embora o atacante já estabelecesse uma posição de pé na rede, as máquinas exploradas eram automaticamente restringidas do acesso a serviços organizacionais e dados geridos pela Azure AD.
+Para obter mais informações sobre a integração ATP, consulte esta publicação de blog [Microsoft Defender ATP a pontuação](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/)de risco do dispositivo expõe um novo ciberataque, impulsiona o Acesso Condicional para proteger redes . Detalha como um grupo avançado de hackers usou ferramentas nunca antes vistas. A nuvem da Microsoft detetou-os e deteve-os porque os utilizadores visados tinham acesso condicional. A intrusão ativou a política de acesso condicional do dispositivo baseada no risco. Embora o atacante já estabelecesse uma posição de pé na rede, as máquinas exploradas eram automaticamente restringidas do acesso a serviços organizacionais e dados geridos pela Azure AD.
 
 
 
 ## <a name="configure"></a>Configurar
 
-O acesso condicional é fácil de usar quando ativa a [cogestão.](how-to-enable.md) Requer a deslocação da carga de trabalho das Políticas de **Conformidade** para Intune. Para mais informações, consulte Como mudar as cargas de [trabalho do Gestor de Configuração para Intune](how-to-switch-workloads.md). 
+O Acesso Condicional é fácil de utilizar quando ativa a [cogestão.](how-to-enable.md) Requer a deslocação da carga de trabalho das Políticas de **Conformidade** para Intune. Para mais informações, consulte Como mudar as cargas de [trabalho do Gestor de Configuração para Intune](how-to-switch-workloads.md). 
 
-Para obter mais informações sobre o acesso condicional, consulte os seguintes artigos: 
+Para mais informações sobre a utilização do Acesso Condicional, consulte os seguintes artigos: 
 
-- [Acesso condicional no Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Acesso Condicional em Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Políticas de conformidade de dispositivos do Intune](https://docs.microsoft.com/intune/device-compliance)  
 
-- [Acesso condicional com base na aplicação com o Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Acesso Condicional baseado em aplicativos com Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> As funcionalidades de acesso condicional ficam imediatamente disponíveis para dispositivos híbridos azure ad-join. Estas funcionalidades incluem a autenticação multi-factor e o Híbrido Azure AD juntam-se ao controlo de acesso. Este comportamento é porque são baseados em propriedades da AD Azure. Para alavancar a avaliação baseada na configuração do Intune e do Gestor de Configuração, ative a cogestão. Esta configuração dá-lhe controlo de acesso diretamente a partir de Intune para dispositivos conformes. Também lhe dá a funcionalidade de avaliação de políticas de conformidade da Intune.  
+> As funcionalidades de Acesso Condicional ficam imediatamente disponíveis para dispositivos híbridos azure ad-join. Estas funcionalidades incluem a autenticação multi-factor e o Híbrido Azure AD juntam-se ao controlo de acesso. Este comportamento é porque são baseados em propriedades da AD Azure. Para alavancar a avaliação baseada na configuração do Intune e do Gestor de Configuração, ative a cogestão. Esta configuração dá-lhe controlo de acesso diretamente a partir de Intune para dispositivos conformes. Também lhe dá a funcionalidade de avaliação de políticas de conformidade da Intune.  
 

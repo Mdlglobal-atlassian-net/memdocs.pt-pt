@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718288"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878104"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Problemas de resolução de cache conectados da Microsoft no gestor de configuração
 
 Este artigo fornece detalhes técnicos sobre o Microsoft Connected Cache no Gestor de Configuração. Use-o para ajudar a resolver problemas que possa ter no seu ambiente. Para obter mais informações sobre como funciona e como usá-lo, consulte o [Microsoft Connected Cache no 'Configuração Manager'.](../../../plan-design/hierarchy/microsoft-connected-cache.md)
 
 > [!NOTE]
-> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache (DOINC).
+> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache.
 
 ## <a name="verify"></a>Verificar
 
@@ -70,18 +70,18 @@ ExpireOn                    : 9/6/2019 8:36:19 AM
 IsPinned                    : False
 ```
 
-Note `BytesFromCacheServer` que o atributo não é zero.
+Note que o `BytesFromCacheServer` atributo não é zero.
 
 Se o cliente não estiver configurado corretamente, ou se o servidor cache não estiver instalado corretamente, o cliente de Otimização de Entrega recai para a fonte original da nuvem. Em seguida, o atributo BytesFromCacheServer será zero.
 
 ### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Verifique no servidor
 
-Primeiro, verifique se as propriedades do `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`registo estão corretamente configuradas: . Por exemplo, a localização `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`da `PrimaryDrivesInput` cache de acionamento é, onde podem ser múltiplas unidades, tais como `C,D,E`.
+Primeiro, verifique se as propriedades do registo estão corretamente configuradas: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . Por exemplo, a localização da cache de acionamento `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` é, onde `PrimaryDrivesInput` podem ser múltiplas unidades, tais como `C,D,E` .
 
 Em seguida, utilize o seguinte método para simular um pedido de descarregamento de cliente para o servidor com os cabeçalhos obrigatórios.
 
 1. Abra uma janela PowerShell de 64 bits como administrador.
-2. Executar o seguinte comando e substituir o nome `<DoincServer>`ou endereço IP do seu servidor para:
+2. Executar o seguinte comando e substituir o nome ou endereço IP do seu servidor `<DoincServer>` para:
 
 ```PowerShell
 Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
@@ -116,7 +116,7 @@ Os seguintes atributos indicam sucesso:
 
 - Diário de conjunto ARR:`%temp%\arr_setup.log`
 
-- Registo de configuração `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` do servidor de `DistMgr.log` cache DO: no ponto de distribuição e no servidor do site
+- Registo de configuração do servidor de cache DO: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` no ponto de distribuição e no servidor do `DistMgr.log` site
 
 - Registos operacionais IIS: Por defeito,`%SystemDrive%\inetpub\logs\LogFiles`
 

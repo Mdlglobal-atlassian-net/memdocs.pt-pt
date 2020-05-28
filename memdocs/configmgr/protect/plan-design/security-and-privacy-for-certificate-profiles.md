@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4b7db4537965b17cd56cc4d996eec576c2b18965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722117"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906855"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>Segurança e privacidade para perfis de certificado sintetmente em Gestor de Configuração
 
@@ -27,7 +27,7 @@ ms.locfileid: "81722117"
 
 |Procedimento recomendado de segurança|Mais informações|  
 |----------------------------|----------------------|  
-|Identifique e siga os eventuais procedimentos recomendados de segurança do Serviço de Inscrição de Dispositivos de Rede, que incluem a configuração do Web site do Serviço de Inscrição de Dispositivos de Rede nos Serviços de Informação Internet (IIS) para que exija SSL e ignore os certificados de cliente.|Consulte [Orientação do Serviço de Inscrição de Dispositivos de Rede](https://go.microsoft.com/fwlink/p/?LinkId=309016) na biblioteca Serviços de Certificados do Active Directory na TechNet.|  
+|Identifique e siga os eventuais procedimentos recomendados de segurança do Serviço de Inscrição de Dispositivos de Rede, que incluem a configuração do Web site do Serviço de Inscrição de Dispositivos de Rede nos Serviços de Informação Internet (IIS) para que exija SSL e ignore os certificados de cliente.|Para mais informações, consulte [a Orientação](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))do Serviço de Inscrição de Dispositivos de Rede .|  
 |Ao configurar os perfis de certificado SCEP, escolha as opções mais seguras suportadas pelos dispositivos e pela infraestrutura.|Identifique, implemente e siga os procedimentos de segurança eventualmente recomendados para os dispositivos e para a infraestrutura.|  
 |Especifique manualmente a afinidade dispositivo/utilizador em vez de permitir que os utilizadores identifiquem o respetivo dispositivo primário. Além disso, não ative a configuração baseada na utilização.|Se clicar na opção **Permitir inscrição de certificados apenas no dispositivo primário dos utilizadores** num perfil de certificado SCEP, não considere autoritativas as informações recolhidas junto dos utilizadores ou do dispositivo. Se implementar perfis de certificado SCEP com esta configuração e um utilizador administrativo fidedigno não especificar a afinidade dispositivo/utilizador, os utilizadores não autorizados poderão obter privilégios elevados e certificados para autenticação.<br /><br /> **Nota:** Se ativar a configuração baseada na utilização, esta informação é recolhida utilizando mensagens estatais que não são protegidas pelo Gestor de Configuração. Para ajudar a atenuar esta ameaça, utilize a assinatura SMB ou IPsec entre computadores cliente e o ponto de gestão.|  
 |Não adicione permissões de Leitura e Inscrição para utilizadores aos modelos de certificado ou configure o ponto de registo de certificados para ignorar a verificação do modelo de certificado.|Embora o Gestor de Configuração suporte a verificação adicional se adicionar as permissões de segurança de Read and Enroll para os utilizadores, e pode configurar o ponto de registo do certificado para não verificar se a autenticação não é possível, nenhuma configuração é uma boa prática de segurança. Para mais informações, consulte [O Planeamento para obter permissões](../../protect/plan-design/planning-for-certificate-template-permissions.md)de modelo de certificado para perfis de certificado .|  

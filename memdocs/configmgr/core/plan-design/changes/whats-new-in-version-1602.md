@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904901"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>O que&#39;novo na versão 1602 do Gestor de Configuração
 
@@ -42,9 +42,9 @@ A atualização 1602 para O Gestor de Configuração só está disponível como 
 > [!WARNING]  
 >  Antes de atualizar para o Windows Server 2012 R2, tem de desinstalar o WSUS 3.2 do servidor.  
 >   
->  Para obter informações sobre este passo crítico, consulte a secção "Nova e alterada funcionalidade" na visão geral dos Serviços de Atualização do [Servidor do Windows,](https://technet.microsoft.com/library/hh852345.aspx)na documentação do Windows Server.  
+>  Para obter mais informações sobre este passo crítico, consulte a secção "Nova e alterada funcionalidade" na visão geral dos Serviços de [Atualização](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)do Servidor do Windows .  
 
- Para atualizar um servidor, utilize os procedimentos de atualização R2 do Windows Server 2012. Não é necessário executar um servidor de servidor do Gestor de Configuração após a atualização. Para saber quais são os procedimentos de atualização, veja [Opções de Atualização do Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) na documentação do Windows Server.  
+ Para atualizar um servidor, utilize os procedimentos de atualização R2 do Windows Server 2012. Não é necessário executar um servidor de servidor do Gestor de Configuração após a atualização. Para saber quais são os procedimentos de atualização, veja [Opções de Atualização do Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) na documentação do Windows Server.  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>Grupos de disponibilidade do Servidor SQL AlwaysOn  
  Utilize os grupos de disponibilidade do SQL Server AlwaysOn para alojar a base de dados do site em sites primários, e o site da administração central como uma solução de alta disponibilidade e recuperação de desastres.  
@@ -60,7 +60,7 @@ A atualização 1602 para O Gestor de Configuração só está disponível como 
 
 -   Quando selecionar a classificação **de Atualizações** para atualizações de software sincronizada, é apresentado um aviso. Este aviso permite-lhe saber que é necessário o [hotfix 3095113](https://support.microsoft.com/kb/3095113) para o Windows Server Update Services (WSUS) 4.0 antes de poder sincronizar com sucesso as atualizações de software e para que o Serviço de Assistência do Windows 10 funcione corretamente. A partir da mensagem de aviso, pode ir ao artigo da base de conhecimentos associado.  
 
--   As atualizações disponíveis do Windows 10 passam a ser apresentadas apenas no **Windows 10 A servir** \ **todas as atualizações** do Windows 10 da consola Do Gestor de Configuração. Estas atualizações já não são apresentadas no nó de **Atualizações** \ de**Software Todas as atualizações** de software da consola.  
+-   As atualizações disponíveis do Windows 10 passam a ser apresentadas apenas no **Windows 10 A servir**todas as atualizações do Windows 10 da consola Do Gestor de  \  **All Windows 10 Updates** Configuração. Estas atualizações já não são apresentadas no nó de **Atualizações**de  \  **Software Todas as atualizações** de software da consola.  
 
 -   Um plano de manutenção é considerado uma implementação de alto risco, e a janela **Select Collection** exibe apenas as coleções personalizadas que cumprem as definições de verificação de implementação que estão configuradas nas propriedades do site. Para mais informações, consulte [Definições para gerir implementações de alto risco para O Gestor de Configuração](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
@@ -142,7 +142,7 @@ Encontrará estas aplicações no nó de **Aplicações** da consola 'Gestor de 
  Para mais detalhes, consulte [Como monitorizar os clientes](../../../core/clients/manage/monitor-clients.md).  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Atualizar a política de máquina seleção de PC e utilizador do Centro de Software  
- Uma nova opção, **Sync Policy,** foi adicionada à página de Manutenção de**Computadores** **opções** > do Centro de Software que faz com que o PC refresque a sua máquina de Configuração e a sua política de utilizador.  
+ Uma nova opção, **Sync Policy,** foi adicionada à página de Manutenção de **Options**  >  **Computadores** opções do Centro de Software que faz com que o PC refresque a sua máquina de Configuração e a sua política de utilizador.  
 
 ### <a name="software-center-branding-changes"></a>Mudanças de marca do Software Center  
  Pode alterar a cor, o nome da organização e o ícone que aparecem no Centro de Software. Estas definições são aplicadas de acordo com as seguintes regras:  

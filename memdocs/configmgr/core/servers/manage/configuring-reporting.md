@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723762"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823984"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configure relatórios no Gestor de Configuração
 
@@ -70,7 +70,7 @@ Utilize o procedimento seguinte para verificar se o SQL Server Reporting Service
 
 3. Abra a chave **ReportBuilderApplicationManifestName** para editar os dados de valor.  
 
-4. Mude o `ReportBuilder_3_0_0_0.application`valor para , e, em seguida, selecione **OK** para guardar.
+4. Mude o valor para `ReportBuilder_3_0_0_0.application` , e, em seguida, selecione **OK** para guardar.
 
 5. Feche o Editor de Registo do Windows.  
 
@@ -114,7 +114,7 @@ Para obter mais informações sobre a configuração dos sistemas do site, consu
 
 1. Na página de ponto de ponto de **serviços de Report,** configure as seguintes definições:  
 
-    - **Nome**do servidor da base de dados do site : Especifique o nome do servidor que acolhe a base de dados do site do Gestor de Configuração. O assistente normalmente recupera o nome de domínio totalmente qualificado (FQDN) para o servidor. Para especificar uma instância de &lt;base de dados, utilize o *nome*>\&do servidor de formato lt; nome> de *nome.* Por exemplo, `sqlserver\named1`.
+    - **Nome**do servidor da base de dados do site : Especifique o nome do servidor que acolhe a base de dados do site do Gestor de Configuração. O assistente normalmente recupera o nome de domínio totalmente qualificado (FQDN) para o servidor. Para especificar uma instância de base de dados, utilize o nome do servidor de formato &lt; *server name* > \& lt;* nome*> de nome. Por exemplo, `sqlserver\named1`.
 
     - **Nome da base de dados**: Especifique o nome da base de dados do site do Gestor de Configuração. Selecione **Verificar** se confirma se o assistente tem acesso à base de dados do site.  
 
@@ -130,7 +130,7 @@ Para obter mais informações sobre a configuração dos sistemas do site, consu
 
     - **Conta de ponto de ponto de serviços de reporte**: Selecione **Definir**, e, em seguida, selecione uma conta para usar. Os Serviços de Relato do Servidor SQL no ponto de serviços de reporte utilizam esta conta para se conectarem à base de dados do site do Gestor de Configuração. Esta ligação é para recuperar os dados para um relatório. Selecione **a conta existente** para especificar uma conta de utilizador do Windows que configuraprevia previamente como uma conta de 'Gestor de Configuração'. Selecione **Nova conta** para especificar uma conta de utilizador do Windows que não esteja configurada para utilização. O Gestor de Configuração concede automaticamente o acesso especificado ao utilizador à base de dados do site.  
 
-        A conta que executa os Serviços de Informação deve pertencer ao grupo de segurança local de domínio **Windows Authorization Access Group**. Também precisa da permissão **Read tokenGroupsGlobalAndUniversal** para **permitir**. Os utilizadores num domínio diferente do que a conta ponto de serviços de reporte precisam de uma confiança bidirecional entre os domínios para executar relatórios com sucesso.
+        A conta que executa os Serviços de Informação deve pertencer ao grupo de segurança local de domínio **Windows Authorization Access Group**. Isto concede à conta **permissões de leitura** no atributo **tokenGroupsGlobalAndUniversal** para todos os objetos de utilizador dentro do domínio. Os utilizadores num domínio diferente do que a conta ponto de serviços de reporte precisam de uma confiança bidirecional entre os domínios para executar relatórios com sucesso.
 
         A conta de utilizador e palavra-passe do Windows especificadas são encriptadas e armazenadas na base de dados do Reporting Services. O Reporting Services obtém os dados para relatórios na base de dados do site utilizando esta conta e palavra-passe.  
 
@@ -187,7 +187,7 @@ O Gestor de Configuração faz as seguintes ações para instalar o ponto de ser
 
 - Adicione as funções de segurança dos utilizadores de **relatório configmgr** e dos administradores de **relatório configmgr** nos Serviços de Informação.  
 
-- Crie subpastas e, em `%ProgramFiles%\SMS_SRSRP` seguida, implemente relatórios do Gestor de Configuração a partir do servidor do site para Serviços de Reporte.  
+- Crie subpastas e, em seguida, implemente relatórios do Gestor de Configuração a partir do `%ProgramFiles%\SMS_SRSRP` servidor do site para Serviços de Reporte.  
 
 - Adicione a função de Utilizadores do **Relatório ConfigMgr** nos Serviços de Relato às pastas-raiz de todas as contas de utilizador no Gestor de Configuração que tenham direitos de Leitura do **Site.**  
 
@@ -232,9 +232,9 @@ Verifique a instalação do ponto de serviços de reporte, analisando mensagens 
 
 ### <a name="verify-installation-by-log-file"></a>Verificar a instalação por ficheiro de registo
 
-Abra o ficheiro **Srsrp.log,** localizado no diretório de **Registos** do caminho de instalação do Gestor de Configuração. Procure a `Installation was successful`corda.
+Abra o ficheiro **Srsrp.log,** localizado no diretório de **Registos** do caminho de instalação do Gestor de Configuração. Procure a `Installation was successful` corda.
 
-Intereace este ficheiro de registo a partir do momento em que o ponto de serviços de reporte foi instalado com sucesso. Verifique se as pastas de relatórios foram criadas, se os relatórios foram implementados e se a política de segurança de cada pasta foi confirmada. Depois da última linha de confirmações da `Successfully checked that the SRS web service is healthy on server`política de segurança, procure a corda.  
+Intereace este ficheiro de registo a partir do momento em que o ponto de serviços de reporte foi instalado com sucesso. Verifique se as pastas de relatórios foram criadas, se os relatórios foram implementados e se a política de segurança de cada pasta foi confirmada. Depois da última linha de confirmações da política de segurança, procure a `Successfully checked that the SRS web service is healthy on server` corda.  
 
 ## <a name="configure-a-certificate-to-author-reports"></a>Configure um certificado para relatórios de autor
 
@@ -296,6 +296,6 @@ Se não mostrar servidores, verifique se instalou e configura um ponto de servi�
 
 Certifique-se de que o seu computador executa uma versão do SQL Server Report Builder que corresponde à versão do Servidor SQL que utiliza para o seu servidor de relatórios. Caso contrário, verá um erro, o servidor de relatório predefinido não salvará e não poderá criar ou editar relatórios.<!-- SCCMDocs#791 -->
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-[Operações e manutenção de relatórios](operations-and-maintenance-for-reporting.md)
+[Operações e manutenção dos relatórios](operations-and-maintenance-for-reporting.md)

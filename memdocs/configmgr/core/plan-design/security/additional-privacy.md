@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718673"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906574"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Informações adicionais sobre privacidade para O Gestor de Configuração
 
@@ -91,6 +91,6 @@ Para mais informações, consulte [Endpoint Protection](../../../protect/deploy-
 
 Na consola 'Gestor de Configuração', vá ao espaço de trabalho **de Monitorização,** selecione o nó **da Hierarquia** do Site e mude para a Vista **Geográfica**. Esta vista permite-lhe utilizar mapas que o Microsoft Bing Maps fornece para visualizar a topologia do seu servidor físico do Gestor de Configuração. Para ativar esta funcionalidade, as informações de localização que fornece são enviadas do seu servidor para o serviço Web Bing Maps.
 
-A Microsoft utiliza as informações para explorar e melhorar o Microsoft Bing Maps e outros serviços e sites da Microsoft. Para mais informações, consulte a [Declaração de Privacidade](https://go.microsoft.com/fwlink/?LinkId=823548)da Microsoft .
+A Microsoft utiliza as informações para explorar e melhorar o Microsoft Bing Maps e outros serviços e sites da Microsoft. Para mais informações, consulte a [Declaração de Privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft .
 
 Pode optar por não utilizar a Vista Geográfica da Hierarquia do Site. A visão padrão do Diagrama da Hierarquia permite-lhe ver a hierarquia e não utiliza o serviço Bing Maps.

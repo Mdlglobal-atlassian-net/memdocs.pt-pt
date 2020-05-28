@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722621"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906443"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configurações suportadas para o ramo de manutenção a longo prazo do gestor de configuração do centro de sistema
 
@@ -25,9 +25,9 @@ Utilize as informações neste tópico para entender quais os sistemas operativo
 Se não for indicado o contrário neste ou nos tópicos específicos ltSB, as mesmas configurações e limitações aplicáveis à versão 1606 do Ramo Atual aplicam-se ao LTSB.  Quando ocorrerem conflitos, utilize a informação que se aplica à edição que está a utilizar. Tipicamente, o LTSB é mais limitado do que o Ramo Atual.
 
 ## <a name="general-statement-of-support"></a>Declaração geral de apoio
-Os seguintes produtos e tecnologias são suportados por este ramo de Gestor de Configuração. No entanto, a sua inclusão neste conteúdo não expressa uma extensão do suporte a qualquer produto ou versão para além do ciclo de vida individual de suporte desse produto. Os produtos que estão para além do seu ciclo de vida de suporte não são suportados para uso com o Gestor de Configuração. Para mais informações, visite o site [microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) e leia o [FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976)da Política de Suporte ao Vida da Microsoft .
+Os seguintes produtos e tecnologias são suportados por este ramo de Gestor de Configuração. No entanto, a sua inclusão neste conteúdo não expressa uma extensão do suporte a qualquer produto ou versão para além do ciclo de vida individual de suporte desse produto. Os produtos que estão para além do seu ciclo de vida de suporte não são suportados para uso com o Gestor de Configuração. Para mais informações, visite o site [microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) e leia o FaQ da Política de Suporte ao Vida da Microsoft.
 
-Além disso, os produtos e versões de produtos que não estão listados nos seguintes tópicos não são suportados a menos que tenham sido anunciados no [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
+Além disso, os produtos e versões de produtos que não estão listados nos seguintes tópicos não são suportados a menos que tenham sido anunciados no [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Limitações para apoio futuro:** O LTSB tem suporte limitado para futuros sistemas operativos de servidores e clientes e dependências de produtos. A lista de plataformas para o LTSB é fixada para a vida útil do lançamento:
 
@@ -72,7 +72,7 @@ Pode utilizar o LTSB para gerir os seguintes sistemas operativos do Windows com 
 - A instalação do Server Core do Windows Server 2012 (x64) (Nota 2)
 
 **(Nota 1)** As versões do Datacenter são suportadas, mas não certificadas para O Gestor de Configuração.  
-**(Nota 2)** Para suportar a instalação de push do cliente, o computador que executa esta versão do sistema operativo deve executar o serviço de função de Servidor de Ficheiros para a função de servidor de Ficheiros e Serviços de Armazenamento. Para obter informações sobre a instalação de funcionalidades do Windows num computador Core do Servidor, consulte a instalação de [funções e funcionalidades do servidor num servidor de núcleo](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) de servidor na biblioteca TechNet do Windows Server 2012.
+**(Nota 2)** Para suportar a instalação de push do cliente, o computador que executa esta versão do sistema operativo deve executar o serviço de função de Servidor de Ficheiros para a função de servidor de Ficheiros e Serviços de Armazenamento. Para obter informações sobre a instalação de funcionalidades do Windows num computador Core do Servidor, consulte a instalação de [funções e funcionalidades do servidor num servidor de núcleo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))de servidores .
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Pode utilizar o LTSB para gerir os seguintes dispositivos Windows Embedded instalando o software cliente no dispositivo.  Para mais informações, consulte [Planplanning para implementação de clientes em dispositivos Incorporados](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)windows .
@@ -131,7 +131,7 @@ Pode utilizar o LTSB para gerir os seguintes dispositivos Windows Embedded insta
 ### <a name="mac-computers"></a>Computadores Mac  
  Pode utilizar o LTSB para gerir computadores Mac OS X com o cliente do Gestor de Configuração para Mac.
 
-O pacote de instalação do cliente Mac não é fornecido com os meios de Configuração Manager. Pode descarregá-lo como parte do download "Clientes para Sistemas Operativos Adicionais" do [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
+O pacote de instalação do cliente Mac não é fornecido com os meios de Configuração Manager. Pode descarregá-lo como parte do download "Clientes para Sistemas Operativos Adicionais" do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 O suporte para sistemas operativos Mac está limitado aos indicados nesta secção. O suporte não inclui sistemas operativos adicionais que possam ser suportados por uma futura atualização aos pacotes de instalação de clientes Mac para a Filial Atual.
 
@@ -145,7 +145,7 @@ Para mais informações, consulte [como implementar clientes para Macs](../clien
 ## <a name="linux-and-unix-servers"></a>Servidores Linux e UNIX
 Pode utilizar o LTSB para gerir servidores Linux e UNIX com o cliente do Gestor de Configuração para o Linux e uniX.
 
-Os pacotes de instalação de clientes Linux e UNIX não são fornecidos com os meios de configuração do Gestor de Configuração. Pode descarregá-los como parte do download "Clientes para Sistemas Operativos Adicionais" do [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). Para além de pacotes de instalação de cliente, a transferência do cliente inclui o script de instalação que gere a instalação do cliente em cada computador.
+Os pacotes de instalação de clientes Linux e UNIX não são fornecidos com os meios de configuração do Gestor de Configuração. Pode descarregá-los como parte do download "Clientes para Sistemas Operativos Adicionais" do [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). Para além de pacotes de instalação de cliente, a transferência do cliente inclui o script de instalação que gere a instalação do cliente em cada computador.
 
 O suporte para sistemas operativos Linux e UNIX está limitado aos indicados nesta secção. O suporte não inclui sistemas operativos adicionais que possam ser suportados por uma futura atualização para pacotes de clientes Linux e UNIX para a Current Branch.
 
@@ -163,95 +163,95 @@ As seguintes versões são suportadas utilizando o ficheiro .tar indicado.
 
 |Versão|Ficheiro|  
 |-|-|  
-|Versão 5.3 (Potência)|ccm-Aix53ppc. &lt;construir\>.alcatrão|  
-|Versão 6.1 (Potência)|ccm-Aix61ppc. &lt;construir\>.alcatrão|  
-|Versão 7.1 (Potência)|ccm-Aix71ppc. &lt;construir\>.alcatrão|  
+|Versão 5.3 (Potência)|ccm-Aix53ppc. &lt; construir \> .alcatrão|  
+|Versão 6.1 (Potência)|ccm-Aix61ppc. &lt; construir \> .alcatrão|  
+|Versão 7.1 (Potência)|ccm-Aix71ppc. &lt; construir \> .alcatrão|  
 
 ### <a name="centos"></a>CentOS  
 
 |Versão|Ficheiro|  
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="debian"></a>Debian  
 
 |Versão|Ficheiro|    
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 8 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 8 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 8 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 8 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="hp-ux"></a>HP-UX  
 
 |Versão|Ficheiro|  
 |-|-|  
-|Versão 11iv2 IA64|ccm-HpuxB.11.23i64. &lt;construir\>.alcatrão|  
-|Versão 11iv2 PA-RISC|ccm-HpuxB.11.23PA. &lt;construir\>.alcatrão|  
-|Versão 11iv3 IA64|ccm-HpuxB.11.31i64. &lt;construir\>.alcatrão|  
-|Versão 11iv3 PA-RISC|ccm-HpuxB.11.31PA. &lt;construir\>.alcatrão|  
+|Versão 11iv2 IA64|ccm-HpuxB.11.23i64. &lt; construir \> .alcatrão|  
+|Versão 11iv2 PA-RISC|ccm-HpuxB.11.23PA. &lt; construir \> .alcatrão|  
+|Versão 11iv3 IA64|ccm-HpuxB.11.31i64. &lt; construir \> .alcatrão|  
+|Versão 11iv3 PA-RISC|ccm-HpuxB.11.31PA. &lt; construir \> .alcatrão|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
 |Versão|Ficheiro|    
 |-|-|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Versão|Ficheiro|  
 |-|-|  
-|Versão 4 x86|ccm-RHEL4x86. &lt;construir\>.alcatrão|  
-|Versão 4 x64|ccm-RHEL4x64. &lt;construir\>.alcatrão|  
-|Versão 5 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 5 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 6 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 6 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 7 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 4 x86|ccm-RHEL4x86. &lt; construir \> .alcatrão|  
+|Versão 4 x64|ccm-RHEL4x64. &lt; construir \> .alcatrão|  
+|Versão 5 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 5 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 6 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 6 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 7 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="solaris"></a>Solaris  
 
 |Versão|Ficheiro|   
 |-|-|  
-|Versão 9 SPARC|ccm-Sol9sparc. &lt;construir\>.alcatrão|  
-|Versão 10 x86|ccm-Sol10x86. &lt;construir\>.alcatrão|  
-|Versão 10 SPARC|ccm-Sol10sparc. &lt;construir\>.alcatrão|  
-|Versão 11 x86|ccm-Sol11x86. &lt;construir\>.alcatrão|  
-|Versão 11 SPARC|ccm-Sol11sparc. &lt;construir\>.alcatrão|  
+|Versão 9 SPARC|ccm-Sol9sparc. &lt; construir \> .alcatrão|  
+|Versão 10 x86|ccm-Sol10x86. &lt; construir \> .alcatrão|  
+|Versão 10 SPARC|ccm-Sol10sparc. &lt; construir \> .alcatrão|  
+|Versão 11 x86|ccm-Sol11x86. &lt; construir \> .alcatrão|  
+|Versão 11 SPARC|ccm-Sol11sparc. &lt; construir \> .alcatrão|  
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Versão|Ficheiro|  
 |-|-|  
-|Versão 9 x86|ccm-SLES9x86. &lt;construir\>.alcatrão|  
-|Versão 10 SP1 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 10 SP1 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 11 SP1 x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 11 SP1 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 12 x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 9 x86|ccm-SLES9x86. &lt; construir \> .alcatrão|  
+|Versão 10 SP1 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 10 SP1 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 11 SP1 x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 11 SP1 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 12 x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="ubuntu"></a>Ubuntu  
 
 |Versão|Ficheiro|    
 |-|-|  
-|Versão 10.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 10.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 12.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 12.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
-|Versão 14.04 LTS x86|ccm-Universalx86. &lt;construir\>.alcatrão|  
-|Versão 14.04 LTS x64|ccm-Universalx64. &lt;construir\>.alcatrão|  
+|Versão 10.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 10.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 12.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 12.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
+|Versão 14.04 LTS x86|ccm-Universalx86. &lt; construir \> .alcatrão|  
+|Versão 14.04 LTS x64|ccm-Universalx64. &lt; construir \> .alcatrão|  
 
 ### <a name="exchange-server-connector"></a>Conector do Exchange Server
  O LTSB suporta uma gestão limitada de dispositivos que se ligam à instância do Exchange Server, sem instalar o software do cliente. Para mais informações, consulte [Gerir dispositivos móveis com 'Gestor de Configuração' e Troca](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
@@ -314,4 +314,4 @@ As informações nos seguintes tópicos da Sucursal atual aplicam-se ao LTSB:
 - [Opções de elevada disponibilidade](../servers/deploy/configure/high-availability-options.md)
 - [Hardware recomendado](../plan-design/configs/recommended-hardware.md)
 - [Suporte para funcionalidades e redes do Windows](../plan-design/configs/support-for-windows-features-and-networks.md)
-- [Apoio a ambientes de virtualização](../plan-design/configs/support-for-virtualization-environments.md)
+- [Suporte para ambientes de virtualização](../plan-design/configs/support-for-virtualization-environments.md)

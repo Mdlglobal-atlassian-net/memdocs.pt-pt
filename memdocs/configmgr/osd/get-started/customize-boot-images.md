@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724196"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906889"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Personalize as imagens de boot com o Gestor de Configuração
 
@@ -49,11 +49,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
 - **WinPE-WDS-Tools**: instala as ferramentas dos Serviços de Implementação do Windows.  
 
-  Existem outros pacotes do Windows PE disponíveis que pode adicionar. Os recursos seguintes fornecem mais informações sobre os componentes opcionais que pode adicionar à imagem de arranque.  
-
-- Para o Windows PE 5, veja [WinPE: adicionar pacotes (Referência de Componentes Opcionais)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx)  
-
-- Para o Windows PE 3.1, veja o tópico [Adicionar um Pacote a uma Imagem do Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) na Biblioteca de Documentação do TechNet relativa ao Windows 7.  
+  Existem outros pacotes do Windows PE disponíveis que pode adicionar. Para obter mais informações sobre os componentes opcionais que pode adicionar à imagem de arranque, consulte [WinPE: Adicione pacotes (Referência de Componentes Opcionais)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Quando executar o arranque do WinPE a partir de uma imagem de arranque personalizado que inclua ferramentas que adicionou, pode abrir uma linha de comandos a partir do WinPE e escrever o nome do ficheiro da ferramenta para executá-lo. A localização destas ferramentas é automaticamente adicionada à variável do caminho. O pedido de comando só pode ser adicionado se a definição de suporte de **comando Ativar (apenas a testar)** for selecionada no separador **de personalização** nas propriedades da imagem do arranque.
@@ -67,7 +63,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
 2. Transfira o Windows ADK para Windows 8.1 a partir do [Centro de Transferências da Microsoft](https://www.microsoft.com/download/details.aspx?id=39982).  
 
-3. Copie a imagem de arranque (wimpe.wim) da pasta de instalação do\\<Windows ADK (por exemplo, <caminho de *instalação*>\Windows Kits*versão*>\Kit de Avaliação e Implementação\Windows\\<Pré-instalação Ambiente*x86 ou amd64*>\\<*local>)* para uma pasta de destino no computador a partir da qual irá personalizar a imagem de arranque. Este procedimento utiliza C:\WinPEWAIK como o nome da pasta de destino.  
+3. Copie a imagem de arranque (wimpe.wim) da pasta de instalação do Windows ADK (por exemplo, <caminho de *instalação*>\Windows Kits \\ < *versão*>\Kit de Avaliação e Implementação\Windows Pré-instalação Ambiente \\ < *x86 ou amd64* > \\ < *local>)* para uma pasta de destino no computador a partir da qual irá personalizar a imagem de arranque. Este procedimento utiliza C:\WinPEWAIK como o nome da pasta de destino.  
 
 4. Utilize o DISM para montar a imagem de arranque numa pasta local do Windows PE. Por exemplo, escreva a seguinte linha de comandos:  
 
@@ -76,7 +72,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
     Em que C:\WinPEWAIK é a pasta que contém a imagem de arranque e C:\WinPEMount é a pasta montada.  
 
    > [!NOTE]
-   >  Para obter mais informações sobre o DISM, veja o tópico [Referência Técnica de Deployment Image Servicing and Management (DISM)](https://technet.microsoft.com/library/hh824821.aspx) na Biblioteca de Documentação do TechNet relativa ao Windows 8.1 e ao Windows 8.
+   >  Para mais informações, consulte a [referência do DISM (Deployment Image Servicing and Management).](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)
 
 5. Depois de montar a imagem de arranque, utilize o DISM para adicionar componentes opcionais à imagem de arranque. No Windows PE 5, os componentes opcionais de 64 bits estão localizados em <*Caminho de instalação*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -112,7 +108,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para mais informações sobre os componentes opcionais que pode adicionar à imagem de arranque, consulte o tópico [Referência dos Componentes Opcionais do Windows PE](https://technet.microsoft.com/library/hh824926.aspx) na Biblioteca de Documentação do TechNet relativa ao Windows 8.1 e ao Windows 8.  
+   >  Para obter mais informações sobre os componentes opcionais que pode adicionar à imagem de arranque, consulte a Referência de [Componentes Opcionais do Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Utilize o DISM para adicionar controladores específicos à imagem de arranque, se for necessário. Escreva o seguinte para adicionar controladores à imagem de arranque:  
 
@@ -136,7 +132,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
    4. Na página **Origem de Dados**, especifique as seguintes opções e clique em **Seguinte**.  
 
-      - Na caixa **Caminho**, especifique o caminho do ficheiro de imagem de arranque atualizado. O caminho especificado tem de ser um caminho de rede válido no formato UNC. Por ** \\ \\ **exemplo: <em>o nome de</em>**>\\**servidor<em>WinPEWAIK partilha</em> **>\winpe.wim**.  
+      - Na caixa **Caminho**, especifique o caminho do ficheiro de imagem de arranque atualizado. O caminho especificado tem de ser um caminho de rede válido no formato UNC. Por exemplo: **\\\\<** <em>o nome de servidor</em> **>\\<** <em>WinPEWAIK partilha</em> **>\winpe.wim**.  
 
       - Selecione a imagem de arranque na lista pendente **Imagem de Arranque**. Se o ficheiro WIM contiver várias imagens de arranque, será listada cada imagem.  
 
@@ -160,7 +156,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
    4. Numa linha de comandos, escreva **wbemtest** para abrir o Recurso de Teste do Windows Management Instrumentation.  
 
-   5. ** \\Tipo \\ ** <em>De Tipo SMS Fornecedor Computador</em> **>\root\sms\site_<** código**>** de <em>site</em> no **Espaço nome**, e, em seguida, clique em **Connect**.  
+   5. Tipo **\\\\<** <em>SMS Provider Computer</em> **>\root\sms\site_<** <em>sitecode</em> **>** in **Namespace**, e, em seguida, clique em **Connect**.  
 
    6. Clique em **Abrir Instância**, escreva **sms_bootimagepackage.packageID="<packageID\>"** e, em seguida, clique em **OK**. Para packageID, introduza o valor que identificou no passo 3.  
 
@@ -198,7 +194,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
     Em que C:\WinPEWAIK é a pasta que contém a imagem de arranque e C:\WinPEMount é a pasta montada.  
 
    > [!NOTE]
-   >  Para mais informações sobre o DISM, consulte o tópico [Referência Técnica da Gestão e Atualização de Imagens de Implementação](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) na Biblioteca de Documentação do TechNet relativa ao Windows 7.  
+   > Para mais informações, consulte a [referência do DISM (Deployment Image Servicing and Management).](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)
 
 5. Depois de montar a imagem de arranque, utilize o DISM para adicionar componentes opcionais à imagem de arranque. No Windows PE 3.1, por exemplo, os componentes opcionais estão localizados em <*CaminhoDaInstalação*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -228,7 +224,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Para obter mais informações sobre os diferentes pacotes que pode adicionar à imagem de arranque, veja o tópico [Adicionar um Pacote a uma Imagem do Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) na Biblioteca de Documentação do TechNet relativa ao Windows 7.  
+   >  Para obter mais informações sobre os diferentes pacotes que pode adicionar à imagem de arranque, consulte [Adicionar um Pacote a uma Imagem PE do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Utilize o DISM para adicionar controladores específicos à imagem de arranque, se for necessário. Escreva o seguinte para adicionar controladores à imagem de arranque, se for necessário:  
 
@@ -252,7 +248,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
    4. Na página **Origem de Dados**, especifique as seguintes opções e clique em **Seguinte**.  
 
-      - Na caixa **Caminho**, especifique o caminho do ficheiro de imagem de arranque atualizado. O caminho especificado tem de ser um caminho de rede válido no formato UNC. Por ** \\ \\ **exemplo: <em>o nome de</em>**>\\**servidor<em>WinPEWAIK partilha</em> **>\winpe.wim**.  
+      - Na caixa **Caminho**, especifique o caminho do ficheiro de imagem de arranque atualizado. O caminho especificado tem de ser um caminho de rede válido no formato UNC. Por exemplo: **\\\\<** <em>o nome de servidor</em> **>\\<** <em>WinPEWAIK partilha</em> **>\winpe.wim**.  
 
       - Selecione a imagem de arranque na lista pendente **Imagem de Arranque**. Se o ficheiro WIM contiver várias imagens de arranque, será listada cada imagem.  
 
@@ -276,7 +272,7 @@ Cada versão do 'Gestor de Configuração' suporta uma versão específica do Ki
 
    4. Numa linha de comandos, escreva **wbemtest** para abrir o Recurso de Teste do Windows Management Instrumentation.  
 
-   5. ** \\Tipo \\ ** <em>De Tipo SMS Fornecedor Computador</em> **>\root\sms\site_<** código**>** de <em>site</em> no **Espaço nome**, e, em seguida, clique em **Connect**.  
+   5. Tipo **\\\\<** <em>SMS Provider Computer</em> **>\root\sms\site_<** <em>sitecode</em> **>** in **Namespace**, e, em seguida, clique em **Connect**.  
 
    6. Clique em **Abrir Instância**, escreva **sms_bootimagepackage.packageID="<packageID\>"** e, em seguida, clique em **OK**. Para packageID, introduza o valor que identificou no passo 3.  
 

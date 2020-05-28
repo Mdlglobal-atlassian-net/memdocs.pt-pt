@@ -1,5 +1,5 @@
 ---
-title: Referência de configuração
+title: Referência da configuração
 titleSuffix: Configuration Manager
 description: Reveja esta referência para ajudá-lo a preparar-se para instalar um site ou hierarquia do Gestor de Configuração.
 ms.date: 04/18/2017
@@ -10,12 +10,12 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d948452da54a41e35095b01cb0e942e02a7a597f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff2d5c6df0da6b25395858a55ef1ee8a3c0da00b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718071"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906528"
 ---
 # <a name="reference-for-configuration-manager-setup"></a>Referência para Configuração do Gestor de Configuração
 
@@ -35,7 +35,7 @@ Antes de instalar novos sites do Gestor de Configuração, certifique-se de que 
 Antes de iniciar a instalação de um novo site, certifique-se de que o servidor do site e os servidores do sistema de site remoto que planeia utilizar para o site (por exemplo, o servidor que acolhe a base de dados do site) cumprem todas as configurações pré-requisitos. Estes tópicos na biblioteca de documentação podem ajudar:  
 
 -   [Configurações suportadas do Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
--   [Verificador de Pré-requisitos](prerequisite-checker.md)  
+-   [Verificador pré-requisito](prerequisite-checker.md)  
 
 ##  <a name="clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a> Clientes de sistemas operativos adicionais  
 Pode descarregar o software do cliente para O Gestor de Configuração do Microsoft Download Center para os seguintes sistemas operativos:  
@@ -73,4 +73,4 @@ A recolha de dados inclui estes três níveis:
 
 Para obter mais informações, incluindo a divulgação dos detalhes recolhidos por cada nível, consulte diagnósticos e dados de [utilização para O Gestor](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)de Configuração .  
 
-Para ver a Declaração de Privacidade do [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527)Gestor de Configuração on-line, vá para .
+Para mais informações, consulte a [Declaração de Privacidade](https://privacy.microsoft.com/privacystatement)da Microsoft .

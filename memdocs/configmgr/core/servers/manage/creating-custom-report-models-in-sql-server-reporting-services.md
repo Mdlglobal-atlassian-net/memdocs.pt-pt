@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712534"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879155"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>Criação de modelos de relatório personalizados para o Gestor de Configuração nos Serviços de Reporte de Servidores SQL
 
@@ -68,7 +68,7 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 4.  Na caixa de diálogo **Gestor de Ligações** , especifique as seguintes propriedades de ligação para a origem de dados:  
 
-    -   **Nome**do servidor : Digite o nome do servidor de base de dados do site do Gestor de Configuração ou selecione-o na lista. Se estiver a trabalhar com uma instância nomeada &lt;em vez da instância predefinida, digite o nome da*instância* do *servidor*>\\&lt;de dados de dados>.  
+    -   **Nome**do servidor : Digite o nome do servidor de base de dados do site do Gestor de Configuração ou selecione-o na lista. Se estiver a trabalhar com uma instância nomeada em vez da instância predefinida, digite o nome da instância do servidor de base de &lt; *dados* > \\ &lt; *instance name*>.  
 
     -   Selecione **Utilizar Autenticação do Windows**.  
 
@@ -100,7 +100,7 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
     > [!TIP]  
     >  Para ajudar a localizar as vistas na lista **Objetos disponíveis** , clique no cabeçalho **Nome** na parte superior da lista para ordenar os objetos por ordem alfabética.  
 
-5.  Depois de selecionar a **>** vista, clique para transferir o objeto para a lista de **objetos incluídos.**  
+5.  Depois de selecionar a vista, clique para transferir o objeto para a lista de **>** **objetos incluídos.**  
 
 6.  Se a página **Correspondência de Nomes** for apresentada, aceite as seleções predefinidas e clique em **Seguinte**.  
 
@@ -136,17 +136,17 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 ###  <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1. Localize a pasta em que criou o projeto de modelo de relatório. Por exemplo, %*USERPROFILE*%\Documents\Visual Studio\\2008\Projects*&lt;Project Name\>.*  
+1. Localize a pasta em que criou o projeto de modelo de relatório. Por exemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects \\ * &lt; Project Name \> .*  
 
 2. Copie os ficheiros seguintes da pasta do projeto de modelo de relatório para uma pasta temporária no seu computador:  
 
-   -   Nome modelo **.dsv** * &lt;\> *  
+   -   * &lt; Nome \> modelo* **.dsv**  
 
-   -   Nome modelo **.smdl** * &lt;\> *  
+   -   * &lt; Nome \> modelo* **.smdl**  
 
 3. Abra os ficheiros acima referidos utilizando um editor de texto, como o Bloco de Notas.  
 
-4. No ficheiro _ &lt;Nome\>modelo_**.dsv,** localize a primeira linha do ficheiro, que diz o seguinte:  
+4. No ficheiro _ &lt; Nome \> modelo_**.dsv,** localize a primeira linha do ficheiro, que diz o seguinte:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -156,9 +156,9 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 5. Copie todo o conteúdo do ficheiro para a Área de Transferência do Windows.  
 
-6. Feche o _ &lt;\>_ ficheiro Nome modelo **.dsv**.  
+6. Feche o ficheiro _ &lt; Nome modelo \> _**.dsv**.  
 
-7. No ficheiro _ &lt;Nome\>modelo_**.smdl,** localize as três últimas linhas do ficheiro, que aparecem da seguinte forma:  
+7. No ficheiro _ &lt; Nome \> modelo_**.smdl,** localize as três últimas linhas do ficheiro, que aparecem da seguinte forma:  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
     `</SemanticModel>`  
 
-8. Colar o conteúdo do _ &lt;\>_ ficheiro Nome modelo **.dsv** diretamente antes da última linha do ficheiro**&lt;(SemanticModel\>**).  
+8. Colar o conteúdo do ficheiro _ &lt; \> Nome_modelo **.dsv** diretamente antes da última linha do ficheiro** &lt; (SemanticModel \> **).  
 
-9. Guarde e _ &lt;\>_ feche o ficheiro Nome modelo **.smdl**.  
+9. Guarde e feche o ficheiro _ &lt; Nome \> _modelo **.smdl**.  
 
-10. Copie o _ &lt;nome\>_ do modelo de ficheiro **.smdl** para a pasta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other no servidor do site do Gestor de Configuração.  
+10. Copie o _ &lt; \> nome_do modelo de ficheiro **.smdl** para a pasta *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other no servidor do site do Gestor de Configuração.  
 
     > [!IMPORTANT]  
     >  Depois de copiar o ficheiro do modelo de relatório para o servidor do site do Gestor de Configuração, tem de sair e reiniciar a consola do Gestor de Configuração antes de poder utilizar o modelo de relatório no **Assistente de Relatório criar**.  
@@ -213,7 +213,7 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 4.  Na caixa de diálogo **Gestor de Ligações** , especifique as seguintes propriedades de ligação para a origem de dados:  
 
-    -   **Nome**do servidor : Digite o nome do servidor de base de dados do site do Gestor de Configuração ou selecione-o na lista. Se estiver a trabalhar com uma instância nomeada &lt;em vez da instância predefinida, digite o nome da*instância* do *servidor*>\\&lt;de dados de dados>.  
+    -   **Nome**do servidor : Digite o nome do servidor de base de dados do site do Gestor de Configuração ou selecione-o na lista. Se estiver a trabalhar com uma instância nomeada em vez da instância predefinida, digite o nome da instância do servidor de base de &lt; *dados* > \\ &lt; *instance name*>.  
 
     -   Selecione **Utilizar Autenticação do Windows**.  
 
@@ -246,7 +246,7 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
    - **v_GS_OPERATING_SYSTEM (dbo)**  
 
-     Depois de selecionar cada **>** vista, clique para transferir o objeto para a lista de **objetos incluídos.**  
+     Depois de selecionar cada vista, clique para transferir o objeto para a lista de **>** **objetos incluídos.**  
 
    > [!TIP]  
    >  Para ajudar a localizar as vistas na lista **Objetos disponíveis** , clique no cabeçalho **Nome** na parte superior da lista para ordenar os objetos por ordem alfabética.  
@@ -379,17 +379,17 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1. Localize a pasta em que criou o projeto de modelo de relatório. Por exemplo, %*USERPROFILE*%\Documents\Visual Studio\\2008\Projects*&lt;Project Name\>.*  
+1. Localize a pasta em que criou o projeto de modelo de relatório. Por exemplo, %*USERPROFILE*%\Documents\Visual Studio 2008\Projects \\ * &lt; Project Name \> .*  
 
 2. Copie os ficheiros seguintes da pasta do projeto de modelo de relatório para uma pasta temporária no seu computador:  
 
-   -   Nome modelo **.dsv** * &lt;\> *  
+   -   * &lt; Nome \> modelo* **.dsv**  
 
-   -   Nome modelo **.smdl** * &lt;\> *  
+   -   * &lt; Nome \> modelo* **.smdl**  
 
 3. Abra os ficheiros acima referidos utilizando um editor de texto, como o Bloco de Notas.  
 
-4. No ficheiro _ &lt;Nome\>modelo_**.dsv,** localize a primeira linha do ficheiro, que diz o seguinte:  
+4. No ficheiro _ &lt; Nome \> modelo_**.dsv,** localize a primeira linha do ficheiro, que diz o seguinte:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -399,9 +399,9 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
 5. Copie todo o conteúdo do ficheiro para a Área de Transferência do Windows.  
 
-6. Feche o _ &lt;\>_ ficheiro Nome modelo **.dsv**.  
+6. Feche o ficheiro _ &lt; Nome modelo \> _**.dsv**.  
 
-7. No ficheiro _ &lt;Nome\>modelo_**.smdl,** localize as três últimas linhas do ficheiro, que aparecem da seguinte forma:  
+7. No ficheiro _ &lt; Nome \> modelo_**.smdl,** localize as três últimas linhas do ficheiro, que aparecem da seguinte forma:  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ Os modelos de relatório de amostraestão incluídos no Gestor de Configuração
 
     `</SemanticModel>`  
 
-8. Colar o conteúdo do _ &lt;\>_ ficheiro Nome modelo **.dsv** diretamente antes da última linha do ficheiro**&lt;(SemanticModel\>**).  
+8. Colar o conteúdo do ficheiro _ &lt; \> Nome_modelo **.dsv** diretamente antes da última linha do ficheiro** &lt; (SemanticModel \> **).  
 
-9. Guarde e _ &lt;\>_ feche o ficheiro Nome modelo **.smdl**.  
+9. Guarde e feche o ficheiro _ &lt; Nome \> _modelo **.smdl**.  
 
-10. Copie o _ &lt;nome\>_ do modelo de ficheiro **.smdl** para a pasta *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other no servidor do site do Gestor de Configuração.  
+10. Copie o _ &lt; \> nome_do modelo de ficheiro **.smdl** para a pasta *%programfiles%* \Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other no servidor do site do Gestor de Configuração.  
 
     > [!IMPORTANT]  
     >  Depois de copiar o ficheiro do modelo de relatório para o servidor do site do Gestor de Configuração, tem de sair e reiniciar a consola do Gestor de Configuração antes de poder utilizar o modelo de relatório no **Assistente de Relatório criar**.  

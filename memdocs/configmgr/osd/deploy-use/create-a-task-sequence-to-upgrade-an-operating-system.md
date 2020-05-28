@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723006"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430122"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Criar uma sequência de tarefas para atualizar um OS em 'Gestor de Configuração'
 
@@ -63,7 +63,7 @@ Para atualizar o SISTEMA nos clientes, crie uma sequência de tarefas e selecion
 
     - **Índice de edição**: Se houver vários índices de edição de OS disponíveis no pacote, selecione o índice de edição pretendido. Por predefinição, o assistente seleciona o primeiro índice.  
 
-    - **Chave do produto**: Especifique a chave do produto Windows para o SISTEMA instalar. Especifique as chaves de licença de volume codificadas ou as chaves padrão do produto. Se utilizar uma chave de produto padrão, separe`-`cada grupo de cinco caracteres por um painel (). Por exemplo: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Quando a atualização é para uma edição de licença de volume, a chave do produto pode não ser necessária.  
+    - **Chave do produto**: Especifique a chave do produto Windows para o SISTEMA instalar. Especifique as chaves de licença de volume codificadas ou as chaves padrão do produto. Se utilizar uma chave de produto padrão, separe cada grupo de cinco caracteres por um painel `-` (). Por exemplo: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Quando a atualização é para uma edição de licença de volume, a chave do produto pode não ser necessária.  
 
         > [!Note]  
         > Esta chave do produto pode ser uma chave de ativação múltipla (MAK), ou uma chave genérica de licenciamento de volume (GVLK). Um GVLK também é referido como uma chave de configuração de cliente de serviço de gestão (KMS). Para mais informações, consulte [Plano de ativação](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)de volume . Para obter uma lista das teclas de configuração do cliente KMS, consulte o [apêndice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) do guia de ativação do Windows Server.
@@ -102,7 +102,7 @@ Adicione passos neste grupo para verificar se o computador está a usar bateria 
 
 #### <a name="battery-check-example"></a>Exemplo de verificação da bateria
 
-Utilize o WbemTest `root\cimv2` e ligue-se ao espaço de nome. Em seguida, executar a seguinte consulta:
+Utilize o WbemTest e ligue-se ao espaço de `root\cimv2` nome. Em seguida, executar a seguinte consulta:
 
 `Select BatteryStatus From Win32_Battery where BatteryStatus != 2`
 
@@ -114,7 +114,7 @@ Adicione passos neste grupo para verificar se o computador está ligado a uma re
 
 #### <a name="network-check-example"></a>Exemplo de verificação de rede
 
-Utilize o WbemTest `root\cimv2` e ligue-se ao espaço de nome. Em seguida, executar a seguinte consulta:
+Utilize o WbemTest e ligue-se ao espaço de `root\cimv2` nome. Em seguida, executar a seguinte consulta:
 
 `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`
 
@@ -136,7 +136,7 @@ Adicione passos neste grupo para remover quaisquer controladores que sejam incom
 
 Adicione passos neste grupo para remover ou suspender programas de segurança de terceiros, como antivírus.  
 
-Se estiver a utilizar um programa de encriptação de discos de terceiros, forneça o seu controlador de encriptação ao Windows Setup com a `/ReflectDrivers` [opção linha de comando](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Adicione um passo variável de sequência de [tarefas definido](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) na sequência de tarefas deste grupo. Detete a variável de sequência de tarefas para **OSDSetupAdicionalUpgradeOptions**. Desloque `/ReflectDrivers` o valor com o caminho para o condutor. Esta [variável de sequência de tarefas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) apendia a linha de comando de configuração do Windows utilizada pela sequência de tarefas. Contacte o seu fornecedor de software para obter qualquer orientação adicional sobre este processo.  
+Se estiver a utilizar um programa de encriptação de discos de terceiros, forneça o seu controlador de encriptação ao Windows Setup com a `/ReflectDrivers` [opção linha de comando](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Adicione um passo variável de sequência de [tarefas definido](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) na sequência de tarefas deste grupo. Detete a variável de sequência de tarefas para **OSDSetupAdicionalUpgradeOptions**. Desloque o valor `/ReflectDrivers` com o caminho para o condutor. Esta [variável de sequência de tarefas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) apendia a linha de comando de configuração do Windows utilizada pela sequência de tarefas. Contacte o seu fornecedor de software para obter qualquer orientação adicional sobre este processo.  
 
 ### <a name="download-package-content-task-sequence-step"></a>Descarregue passo de sequência de tarefas de conteúdo de pacote  
 
@@ -147,7 +147,7 @@ Utilize o passo de conteúdo do [pacote de descarregamento](../understand/task-s
 - Para transferir dinamicamente um pacote de controlador aplicável, utilize dois passos **Transferir Conteúdo do Pacote** com condições para detetar o tipo de hardware adequado a cada pacote de controlador. Configure cada passo de conteúdo do **pacote de descarregamento** para usar a mesma variável. Em seguida, utilize essa variável para o valor de **conteúdo encenado** na secção de recondutores na etapa do **Sistema Operativo de Atualização.**  
 
     > [!NOTE]  
-    > O Gestor de Configuração adiciona um sufixo numérico a este nome variável. Por exemplo, se `%mycontent%` especificar como variável personalizada, o cliente armazena todos os conteúdos referenciados neste local. Quando se refere à variável num passo posterior, como sistema operativo de **upgrade,** utilize a variável com um sufixo numérico. Neste exemplo, `%mycontent01%` `%mycontent02%`ou , quando o número corresponder à ordem em que a etapa de **Descarregamento** do Conteúdo do Pacote lista este conteúdo específico.  
+    > O Gestor de Configuração adiciona um sufixo numérico a este nome variável. Por exemplo, se especificar `%mycontent%` como variável personalizada, o cliente armazena todos os conteúdos referenciados neste local. Quando se refere à variável num passo posterior, como sistema operativo de **upgrade,** utilize a variável com um sufixo numérico. Neste exemplo, `%mycontent01%` ou , quando o número corresponder à ordem em que a etapa de `%mycontent02%` **Descarregamento** do Conteúdo do Pacote lista este conteúdo específico.  
 
 
 ## <a name="recommended-task-sequence-steps-for-post-processing"></a>Passos de sequência de tarefas recomendados para pós-processamento
@@ -261,12 +261,12 @@ Para mais informações, consulte o [sistema operativo Upgrade](../understand/ta
 
 ### <a name="convert-from-bios-to-uefi"></a>Converter de BIOS para UEFI
 
-Se pretender alterar o dispositivo de BIOS para UEFI durante esta sequência de tarefas, consulte [Converter de BIOS para UEFI durante uma atualização no local](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+Se pretender alterar o dispositivo de BIOS para UEFI durante esta sequência de tarefas, consulte [Converter de BIOS para UEFI durante uma atualização no local](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).  
 
 ### <a name="manage-bitlocker"></a>Gerir o BitLocker
 
 <!--SCCMDocs issue #494-->
-Se estiver a utilizar a Encriptação do Disco BitLocker, por padrão, o Windows Setup suspende-o automaticamente durante a atualização. A partir da versão 1803 do Windows `/BitLocker` 10, o Windows Configuração inclui o parâmetro da linha de comando para controlar este comportamento. Se os seus requisitos de segurança exigirem manter sempre a encriptação ativa do disco, utilize a variável de sequência de [tarefas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** no grupo **Prepare para upgrade** para incluir `/BitLocker TryKeepActive`. Para mais informações, consulte [as opções da linha de comando configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Se estiver a utilizar a Encriptação do Disco BitLocker, por padrão, o Windows Setup suspende-o automaticamente durante a atualização. A partir da versão 1803 do Windows 10, o Windows Configuração inclui o `/BitLocker` parâmetro da linha de comando para controlar este comportamento. Se os seus requisitos de segurança exigirem manter sempre a encriptação ativa do disco, utilize a variável de sequência de [tarefas](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** no grupo **Prepare para upgrade** para incluir `/BitLocker TryKeepActive` . Para mais informações, consulte [as opções da linha de comando configuração do Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Remover aplicações padrão
 

@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05aeca86071ea823d3ebc3cf493bea4d418bad27
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722691"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906040"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>FAQs do Microsoft Endpoint Configuration Manager
 
@@ -37,11 +37,11 @@ O Microsoft Endpoint Manager é uma solução integrada para gerir todos os seus
 
 As seguintes soluções de gestão da Microsoft fazem agora parte da marca **Microsoft Endpoint Manager:**
 
-- [Gestor de configuração](https://docs.microsoft.com/configmgr)
+- [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
 - [Análise de Computadores](../../desktop-analytics/overview.md)
 - [Piloto automático](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Outras funcionalidades na [Consola de Gestão](https://go.microsoft.com/fwlink/?linkid=2109094) de Dispositivos
+- Outras funcionalidades na [Consola de Gestão](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760) de Dispositivos
 
 Para mais informações, consulte as seguintes publicações de Brad Anderson, vice-presidente corporativo da Microsoft para a Microsoft 365:
 
@@ -73,6 +73,6 @@ Leva tempo para fazer alterações em todos os produtos, serviços e materiais d
 
 Há também alguns componentes fundamentais que podem nunca mudar. O principal serviço Windows nos servidores do site ainda está **SMS_Executive**. O repositório GitHub que suporta esta documentação continuará a ser **SCCMDocs**.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Saiba mais sobre as [novidades nas versões incrementais do Gestor de Configuração.](../plan-design/changes/whats-new-incremental-versions.md)

@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ec5581567925ee57300274e50288058e06d80ec0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718190"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906161"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Pacotes de idiomas no Gestor de Configuração
 
@@ -42,7 +42,7 @@ Ao executar a configuração do 'Gestor de Configuração', descarrega ficheiros
 
 ## <a name="server-languages"></a>Idiomas do servidor  
 
-Utilize a tabela seguinte para mapear uma identificação local para um idioma que pretende suportar nos servidores. Para obter mais informações sobre iDs locais, consulte [iDs locais atribuídos pela Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Utilize a tabela seguinte para mapear uma identificação local para um idioma que pretende suportar nos servidores. Para obter mais informações sobre iDs locais, consulte [iDs locais atribuídos pela Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Idioma do servidor|ID de região (LCID)|Código de três letras|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Utilize a tabela seguinte para mapear uma identificação local para um idioma q
 
 ## <a name="client-languages"></a>Línguas de cliente  
 
-Use a tabela seguinte para mapear uma identificação local para um idioma que pretende suportar nos computadores dos clientes. Para obter mais informações sobre iDs locais, consulte [iDs locais atribuídos pela Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Use a tabela seguinte para mapear uma identificação local para um idioma que pretende suportar nos computadores dos clientes. Para obter mais informações sobre iDs locais, consulte [iDs locais atribuídos pela Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Idioma do cliente|ID de região (LCID)|Código de três letras|  
 |---------------------|------------------------|-----------------------|  

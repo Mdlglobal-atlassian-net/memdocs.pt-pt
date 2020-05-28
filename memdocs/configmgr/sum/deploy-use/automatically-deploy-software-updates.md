@@ -5,17 +5,17 @@ description: Implemente automaticamente atualizações de software utilizando re
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110445"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709439"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Implementar automaticamente atualizações de software  
 
@@ -49,7 +49,7 @@ Aprove e implemente automaticamente atualizações de software utilizando um ADR
 
          - O modelo de Atualizações de **Clientes do Office 365** fornece configurações comuns para usar quando implementa atualizações para clientes Do Office 365 Pro Plus.
              > [!Note]
-             > A partir de 21 de abril de 2020, o Office 365 ProPlus está a ser renomeado para **microsoft 365 Apps para empresa**. Se os seus ADRs dependerem da propriedade "Title", terá de editá-lo a partir de 9 de junho de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`é um exemplo do novo título. Para mais informações, consulte [a alteração de nome para o Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > A partir de 21 de abril de 2020, o Office 365 ProPlus está a ser renomeado para **microsoft 365 Apps para empresa**. Se os seus ADRs dependerem da propriedade "Title", terá de editá-lo a partir de 9 de junho de 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`é um exemplo do novo título. Para obter mais informações sobre a modificação dos seus ADRs para a alteração do título, consulte [os canais de atualização para aplicações microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Para mais informações sobre a alteração de nome, consulte a [alteração de nome para o Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - O modelo **de atualizações antivírus SCEP e Windows Defender** fornece configurações comuns para usar quando implementa atualizações de definição de proteção de pontofinal.  
 
@@ -85,7 +85,7 @@ Aprove e implemente automaticamente atualizações de software utilizando um ADR
 
      - O limite para as atualizações de software na ADR é de 1000 atualizações de software.  
 
-     - Se necessário, filtre no tamanho do conteúdo para atualizações de software em regras de implementação automáticas. Para mais informações, consulte o Gestor de [Configuração e o Serviço Simplificado do Windows em sistemas operativos de nível inferior](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - Se necessário, filtre no tamanho do conteúdo para atualizações de software em regras de implementação automáticas. Para mais informações, consulte o Gestor de [Configuração e o Serviço Simplificado do Windows em sistemas operativos de nível inferior](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - A partir da versão 1910, pode utilizar **o Deploy como** filtro de atualização para as suas regras de implementação automática. Este filtro ajuda a identificar novas atualizações que possam ter de ser implementadas para as suas coleções piloto ou de teste. O filtro de atualização de software também pode ajudar a evitar a reimplementação de atualizações mais antigas. 
          - Ao utilizar **o Deploy como** filtro, tenha em ação de que já tenha implementado a atualização para outra recolha, como um piloto ou uma recolha de testes. <!--4852033-->
@@ -187,7 +187,7 @@ Aprove e implemente automaticamente atualizações de software utilizando um ADR
 
         -  **Descrição**: especifique uma descrição que disponibilize informações sobre o pacote de implementação. A descrição opcional está limitada a 127 caracteres.  
 
-        -  **Origem do pacote**: especifica a localização dos ficheiros de origem de atualização de software. Digite um caminho de rede para `\\server\sharename\path`a localização de origem, por exemplo, ou clique **em Navegar** para encontrar a localização da rede. Crie a pasta partilhada para os ficheiros de origem do pacote de implementação antes de passar para a página seguinte.  
+        -  **Origem do pacote**: especifica a localização dos ficheiros de origem de atualização de software. Digite um caminho de rede para a localização de origem, por exemplo, `\\server\sharename\path` ou clique em **Navegar** para encontrar a localização da rede. Crie a pasta partilhada para os ficheiros de origem do pacote de implementação antes de passar para a página seguinte.  
 
             - Não pode utilizar a localização especificada como fonte de outro pacote de implementação de software.  
 
@@ -211,13 +211,13 @@ Aprove e implemente automaticamente atualizações de software utilizando um ADR
 
     -   **Descarregue as atualizações de software a partir da internet**: Selecione esta definição para descarregar as atualizações de software a partir de uma localização especificada na internet. Esta definição está ativada por predefinição.  
 
-    -   **Transferir atualizações de software a partir de uma localização na rede local**: selecione esta definição para transferir as atualizações de software a partir de um diretório local ou uma pasta partilhada. Esta definição é útil quando o computador que executa o assistente não tem acesso à Internet. Qualquer computador com acesso à Internet pode descarregar preliminarmente as atualizações de software. Em seguida, guarde-os num local da rede local acessível a partir do computador que executa o assistente.  
+    -   **Transferir atualizações de software a partir de uma localização na rede local**: selecione esta definição para transferir as atualizações de software a partir de um diretório local ou uma pasta partilhada. Esta definição é útil quando o computador que executa o assistente não tem acesso à Internet. Qualquer computador com acesso à Internet pode descarregar preliminarmente as atualizações de software. Em seguida, guarde-os num local da rede local acessível a partir do computador que executa o assistente. Outro cenário poderia ser ao descarregar conteúdo que é publicado através do System Center Updates Publisher ou de uma solução de patching de terceiros. A partilha de conteúdo wSUS no ponto de atualização de software de alto nível pode ser inserida como a localização da rede para descarregar, tais como `\\server\WsusContent` . <!--memdocs-issue-211-->
 
 14. Na página de Seleção de **Idiomas,** selecione os idiomas para os quais o site descarrega as atualizações de software selecionadas. O site só descarrega estas atualizações se estiverem disponíveis nos idiomas selecionados. As atualizações de software que não são específicas do idioma são sempre descarregadas. Por padrão, o assistente seleciona os idiomas configurados nas propriedades do ponto de atualização do software. Terá de estar selecionado pelo menos um idioma para que possa prosseguir para a página seguinte. Quando seleciona apenas idiomas que uma atualização de software não suporta, o download falha na atualização.  
 
 15. Na página **Resumo,** reveja as definições. Para guardar as definições para um modelo de implementação, clique em **Guardar Como Modelo**. Introduza um nome e selecione as definições que pretende incluir no modelo e, em seguida, clique em **Guardar**. Para alterar uma definição configurada, clique na página do assistente associada e altere a definição.  
 
-    -  O nome do modelo pode consistir em caracteres `\` Alphanuméricos `'` ASCII, bem como (backslash) ou (marca única de citação).  
+    -  O nome do modelo pode consistir em caracteres Alphanuméricos ASCII, bem como `\` (backslash) ou (marca única `'` de citação).  
 
 16. Clique em **Seguinte** para criar a ADR.  
 
@@ -249,5 +249,5 @@ As implementações também podem ser adicionadas programáticamente utilizando 
 Para obter mais informações sobre o processo de implementação, veja [Processo de implementação de atualizações de software](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 [Monitorizar atualizações de software](monitor-software-updates.md)

@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709895"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877629"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Resolução de Problemas do Gestor de Conversão de Pacotes
 
@@ -58,10 +58,13 @@ Os detalhes do nó dos **Pacotes** na consola do Gestor de Configuração mostra
 
 ### <a name="enable-logging"></a>Ativar registo
 
-Ao ativar o loglogging para O Gestor de Conversão de Pacotes, regista todas as suas ações, exceções e erros. 
+Ao ativar o loglogging para O Gestor de Conversão de Pacotes, regista todas as suas ações, exceções e erros.
 
 Para ativar o registo deste componente no Gestor de Configuração, modifique o **Microsoft.ConfigurationManagement.exe.Config**. Por predefinição, este ficheiro de configuração encontra-se no seguinte caminho:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> A partir da versão 1910, este caminho mudou para utilizar a `Microsoft Endpoint Manager` pasta. Certifique-se de que não utiliza uma versão mais antiga do ficheiro que possa existir noutra pasta.
 
 Insira os **seguintes interruptores** e **trace** elementos XML no elemento **de diagnóstico do sistema** após o elemento de última **fonte:**
 
@@ -83,7 +86,7 @@ Insira os **seguintes interruptores** e **trace** elementos XML no elemento **de
 Esta amostra utiliza o ficheiro **PCMTrace.log**. Este registo está no computador que executa a consola 'Gestor de Configuração' no seguinte caminho:  
 `%UserProfile%\AppData\Local\Temp`
 
-Para configurar o nível de detalhe, altere a definição do interruptor de rastreio **pcmLogging.** Desfixaeste valor para quatro níveis de`1`detalhe, desde`4`menos detalhados ( ) até mais detalhados ( ).
+Para configurar o nível de detalhe, altere a definição do interruptor de rastreio **pcmLogging.** Desfixaeste valor para quatro níveis de detalhe, desde menos detalhados ( `1` ) até mais detalhados ( `4` ).
 
 
 ### <a name="smsprovlog"></a>SMSProv.log

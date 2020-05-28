@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 926d1483739b85f787ebc9e2a992ea7ed39633c2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722215"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764123"
 ---
 # <a name="plan-for-bitlocker-management"></a>Planear a gestão do BitLocker
 
@@ -74,7 +74,7 @@ Deixe os utilizadores ajudarem-se a si próprios com uma chave de uso único par
 
 - Para criar uma política de gestão BitLocker, precisa do papel de **Administrador Completo** no Gestor de Configuração.
 
-- O serviço de recuperação BitLocker requer HTTPS para encriptar as chaves de recuperação através da rede desde o cliente De Configuração Gerir até ao ponto de gestão. Existem duas opções:
+- O serviço de recuperação BitLocker requer HTTPS para encriptar as chaves de recuperação através da rede desde o cliente do Gestor de Configuração até ao ponto de gestão. Existem duas opções:
 
   - HTTPS-enable o site do IIS no ponto de gestão que acolhe o serviço de recuperação. Esta opção aplica-se apenas à versão de Configuração Manager 2002.<!-- 5925660 -->
 
@@ -96,12 +96,12 @@ Deixe os utilizadores ajudarem-se a si próprios com uma chave de uso único par
 
 - A conta de utilizador que executa o script do instalador do portal necessita de direitos de **sisadmina** SQL no servidor de base de dados do site. Durante o processo de configuração, o script define direitos de função de login, utilizador e SQL para a conta de máquina de servidor web. Pode remover esta conta de utilizador da função de sysadmina após a configuração do portal de autosserviço e do site de administração e monitorização.
 
-- A BitLocker Management não é suportada em máquinas virtuais (VMs). Por esta razão, algumas funcionalidades podem não funcionar como esperado em máquinas virtuais. Por exemplo, a BitLocker Management não iniciará a encriptação em unidades fixas de máquinas virtuais. As unidades fixas adicionais em máquinas virtuais podem mostrar-se conformes, mesmo que não estejam encriptadas.
+- A BitLocker Management não é suportada em máquinas virtuais (VMs) ou em OSes de servidor. Por esta razão, algumas funcionalidades podem não funcionar como esperado em máquinas virtuais ou em OSes de servidor. Por exemplo, em máquinas virtuais, a BitLocker Management não iniciará a encriptação em unidades fixas de máquinas virtuais. As unidades adicionalmente fixas em máquinas virtuais podem mostrar-se conformes, mesmo que não estejam encriptadas.
 
 > [!TIP]
 > Por defeito, o passo da sequência de tarefas **Enable BitLocker** apenas encripta o *espaço utilizado* na unidade. A gestão bitLocker utiliza encriptação completa do *disco.* Configure este passo de sequência de tarefas para permitir a opção **de utilizar a encriptação completa do disco**. Para mais informações, consulte os passos da [sequência de tarefas - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Encriptar dados de recuperação](../deploy-use/bitlocker/encrypt-recovery-data.md) (um pré-requisito opcional antes de implementar a política pela primeira vez)
 

@@ -2,7 +2,7 @@
 title: Gerir a sincronização de atualizações de software
 titleSuffix: Configuration Manager
 description: Utilize estes passos para agendar a sincronização de atualizações de software, iniciar manualmente a sincronização de atualizações de software e monitorizar a sincronização das atualizações de software.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712681"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269053"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> Sincronizar atualizações de software
 
@@ -56,7 +56,7 @@ Utilize os seguintes procedimentos no site de alto nível para iniciar manualmen
 
 2. Na área de trabalho Biblioteca de Software, expanda **Atualizações de Software** e clique em **Todas as Atualizações de Software** ou em **Grupos de Atualizações de Software**.  
 
-3. No separador **Home Page** , no grupo **Criar** , clique em **Sincronizar Atualizações de Software**. Clique em **Sim** na caixa de diálogo para confirmar que quer iniciar o processo de sincronização.  
+3. No separador **Home,** no grupo **All Software Updates,** clique em **Synchronize Software Updates**. Clique em **Sim** na caixa de diálogo para confirmar que quer iniciar o processo de sincronização.  
 
    Depois de iniciar o processo de sincronização no ponto de atualização do software, pode monitorizar o processo de sincronização a partir da consola Do Gestor de Configuração para todos os pontos de atualização de software da sua hierarquia. Utilize o seguinte procedimento para monitorizar o processo de sincronização de atualizações de software.  
 
@@ -92,7 +92,7 @@ O Ponto de Atualização de Software de alto nível utiliza o WSUS para obter in
 8. Sincronizar o ponto de atualização do software do Gestor de Configuração.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 Depois de sincronizar as atualizações de software pela primeira vez, ou depois de existirem novas classificações ou produtos disponíveis, tem de [configurar as novas classificações e produtos](configure-classifications-and-products.md) para sincronizar as atualizações de software com os novos critérios.
 
 Depois de sincronizar as atualizações de software com os critérios de que necessita, [gere as definições para atualizações](manage-settings-for-software-updates.md)de software .  

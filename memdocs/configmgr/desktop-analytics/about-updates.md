@@ -10,12 +10,13 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c09212577cd61e7ddd6c293e2d1dc47dabe036f0
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693353"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268934"
 ---
 # <a name="updates-in-desktop-analytics"></a>Atualizações em Desktop Analytics
 
@@ -91,7 +92,7 @@ O Desktop Analytics não avaliou o dispositivo. Este estado inclui dispositivos 
 
 Selecione o azulejo para ver as tendências de adoção para atualizações de funcionalidades. O gráfico de área empilhado categoriza os dispositivos pela atualização de funcionalidades que instalaram ao longo do tempo.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Conheça os ativos do Desktop Analytics](about-assets.md): dispositivos, controladores e apps  
 

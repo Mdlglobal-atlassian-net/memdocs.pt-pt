@@ -2,7 +2,7 @@
 title: Encontrar ajuda
 titleSuffix: Configuration Manager
 description: Encontre recursos para informações adicionais sobre o Gestor de Configuração.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722908"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343189"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Encontre ajuda para usar o Gestor de Configuração
 
@@ -81,7 +81,7 @@ A partir do Diretor de Configuração 2002, quando **envia um sorriso** ou envia
    - Identificação da mensagem de 53900 para uma submissão bem sucedida.
    - Identificação da mensagem de 53901 para uma submissão falhada.
 
-Ver mensagens de estado a partir de**consultas**de mensagem de**estado** > do sistema de **monitorização** > . Comece com a consulta **de Todas as Mensagens de Estado** e selecione o seu prazo. Quando as mensagens carregarem, clique no botão de **mensagens Filter** e filtre para id de mensagem 53900 ou 53901.
+Ver mensagens de estado a partir de consultas de mensagem de estado do sistema de **monitorização**  >  **System Status**  >  **Status Message Queries**. Comece com a consulta **de Todas as Mensagens de Estado** e selecione o seu prazo. Quando as mensagens carregarem, clique no botão de **mensagens Filter** e filtre para id de mensagem 53900 ou 53901.
 
 As mensagens de estado não são criadas se [enviar feedback que guardou para posterior submissão](find-help.md#BKMK_NoInternet).
 
@@ -127,13 +127,20 @@ Quando **enviar um sorriso** ou **enviar uma testa,** as seguintes informações
         - `-s --silent`Sem registo para consola (Não pode combinar com --verbose)
         - `-v, --verbose`Produção verbosa logging para consola (Não pode combinar com --silencioso)
         - `--help`Exibe o ecrã de ajuda
+    
+    - A partir da versão 1910, o utilitário UploadOfflineFeedback suporta a utilização de um servidor proxy. Pode especificar os seguintes parâmetros:
+        - `-x, --proxy`Especifica um servidor proxy para ligar a Internet.
+        - `-o, --port`Especifica a porta para o servidor proxy ligar a internet.
+        - `-u, --user`Especifica o nome do utilizador para o servidor proxy ligar a Internet.
+        - `-w, --password`Especifica a palavra-passe para o servidor proxy ligar a Internet. Digite um asterisco (&#42;) para produzir um aviso para a palavra-passe. A palavra-passe não é apresentada quando a digita no pedido de senha. Recomendamos vivamente a utilização de um asterisco (&#42;) para produzir um aviso para a entrada de palavra-passe, uma vez que o texto simples na linha de comando é menos seguro.
+        - `-i`Verificação de ligação skip: Ignora a verificação de ligação de rede, basta fazer upload do feedback com definições especificadas.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Confirmação do feedback da consola
 
 <!--3556010-->
 A partir da versão 1902, quando envia feedback através da consola Do Gestor de Configuração ou do UploadOfflineFeedback.exe, mostra uma mensagem de confirmação. Esta mensagem inclui um ID de **feedback**, que pode dar à Microsoft como identificador de rastreio.
 
-- Para copiar o ID de **feedback,** selecione o ícone da cópia ao lado do ID ou utilize o atalho da tecla **CTRL** + **C.**
+- Para copiar o ID de **feedback,** selecione o ícone da cópia ao lado do ID ou utilize o atalho da tecla **CTRL**  +  **C.**
   - Esta identificação não está armazenada no seu computador, por isso certifique-se de copiá-la antes de fechar a janela.
 - Clicar em **Não mostrar novamente esta mensagem** irá suprimir a caixa de diálogo e impedir que apareça no futuro.
 

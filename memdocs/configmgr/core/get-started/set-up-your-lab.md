@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711610"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905169"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Criar um laboratório de Gestor de Configuração
 
@@ -31,9 +31,9 @@ Seguir a orientação neste tópico permitir-lhe-á criar um laboratório para a
 
 -   O ambiente de laboratório utiliza o **Windows Server 2012 R2,** no qual vamos instalar o Gestor de Configuração.  
 
-     Pode descarregar uma versão de avaliação do Windows Server 2012 R2 do [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     Pode descarregar uma versão de avaliação do Windows Server 2012 R2 do Centro de [Avaliação](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Considere modificar ou desativar a Configuração de Segurança Melhorada do Internet Explorer para aceder mais facilmente a alguns dos downloads referenciados ao longo destes exercícios. Reveja [Internet Explorer: configuração de segurança avançada](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) para obter informações adicionais.  
+     Considere modificar ou desativar a Configuração de Segurança Melhorada do Internet Explorer para aceder mais facilmente a alguns dos downloads referenciados ao longo destes exercícios. Para mais informações, consulte [Internet Explorer: Configuração de Segurança Melhorada](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **O ambiente de laboratório utiliza o SQL Server 2012 SP2** para a base de dados do site.  
 
@@ -45,7 +45,7 @@ Seguir a orientação neste tópico permitir-lhe-á criar um laboratório para a
 
     -   **SQL_Latin1_General_CP1_CI_AS** como classe do **Agrupamento SQL** . A  
 
-    -   **Autenticação do Windows**, [em vez da autenticação SQL](https://technet.microsoft.com/library/ms144284.aspx), é necessária.  
+    -   **Autenticação do Windows**, [em vez da autenticação SQL](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15), é necessária.  
 
     -   É necessária uma instância dedicada ao **Servidor SQL.**  
 
@@ -61,11 +61,11 @@ Seguir a orientação neste tópico permitir-lhe-á criar um laboratório para a
 
 -   O controlador de domínio utiliza o **Windows Server 2008 R2** com serviços de domínio de diretório ativo instalados. O controlador de domínio também funciona como anfitrião para os servidores DHCP e DNS para utilização com um nome de domínio totalmente qualificado.  
 
-     Para mais informações, reveja esta visão geral dos Serviços de Domínio do [Diretório Ativo.](https://technet.microsoft.com/library/hh831484)  
+     Para mais informações, consulte a [visão geral dos Serviços](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11))de Domínio do Diretório Ativo .  
 
 -   **O Hyper-V é utilizado com algumas máquinas virtuais** para verificar se as medidas de gestão tomadas nestes exercícios estão a funcionar como esperado. Recomenda-se um mínimo de três máquinas virtuais, com o Windows 10 instalado.  
 
-     Para mais informações, reveja esta [visão geral da Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
+     Para mais informações, consulte [a visão geral do Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **permissões de administrador** são necessárias para todos estes componentes. O  
 
@@ -95,7 +95,7 @@ Depois de ter instalado todos estes componentes, existem passos adicionais que d
 Os próximos passos necessários para permitir aos clientes do Gestor de Configuração consultar os Serviços de Domínio do Diretório Ativo para localizar os recursos do site estão listados nos próximos procedimentos.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Criar o contentor de Gestão do Sistema.  
- O Gestor de Configuração não criará automaticamente o recipiente de Gestão de Sistemas necessário nos Serviços de Domínio de Diretório Ativo quando o esquema for estendido. Por conseguinte, irá criar este para o laboratório. Este passo irá solicitar-lhe que [instale o Editor de ADSI.](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
+ O Gestor de Configuração não criará automaticamente o recipiente de Gestão de Sistemas necessário nos Serviços de Domínio de Diretório Ativo quando o esquema for estendido. Por conseguinte, irá criar este para o laboratório. Este passo exigirá que [instale a Edição ADSI](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Certifique-se de que iniciou sessão com uma conta que tenha a permissão **Criar Todos os Objetos Subordinados** no recipiente **Sistema** nos Serviços de Domínio do Active Directory.  
 
@@ -103,7 +103,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 1.  Execute o **Editor de ADSI**e estabeleça ligação ao domínio em que reside o servidor de site.  
 
-2.  **New**Expandir o nome **Object** **\>** **&lt;\>** de domínio do domínio totalmente qualificado, expandir<nome distinto, clique direito **CN=System,** clique em Novo , e, em seguida, clique em Object .  
+2.  **New**Expandir o nome **Object** ** \> ** ** &lt; \> **de domínio do domínio totalmente qualificado, expandir<nome distinto, clique direito **CN=System,** clique em Novo e, em seguida, clique em Object .  
 
 3.  Na caixa de diálogo **Criar Objeto** , selecione **Contentor**e clique em **Seguinte**.  
 
@@ -119,7 +119,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 #### <a name="to-set-security-permissions-for-the-system-management-container"></a>Para definir permissões de segurança no contentor de Gestão do Sistema:  
 
-1.  No painel da consola, expanda o **domínio do servidor do site,** expanda o nome **&lt;\>distinto**do servidor DC= e, em seguida, expanda o **CN=System**. Clique com o botão direito do rato em **CN=System Management**e clique em **Propriedades**.  
+1.  No painel da consola, expanda o **domínio do servidor do site,** expanda o nome ** &lt; \> distinto**do servidor DC= e, em seguida, expanda o **CN=System**. Clique com o botão direito do rato em **CN=System Management**e clique em **Propriedades**.  
 
 2.  Na caixa de diálogo **CN=Propriedades de gestão do sistema** , clique no separador **Segurança** e, em seguida, clique em **Adicionar** para adicionar a conta de computador do servidor de site. Conceda permissões de **Controlo Total** à conta.  
 
@@ -129,7 +129,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 5.  Clique em **OK** para fechar a consola **Editor de ADSI** e conclua o procedimento.  
 
-     Para obter informações adicionais sobre este procedimento, por favor, reveja [O esquema de Diretório Ativo para O Gestor](../../core/plan-design/network/extend-the-active-directory-schema.md) de Configuração  
+     Para mais informações, consulte [Extend the Ative Directory schema for Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Expandir o esquema do Active Directory utilizando ExtADSch.exe  
  Irá estender o esquema de Diretório Ativo para este laboratório, pois isto permite-lhe utilizar todas as funcionalidades e funcionalidades do Gestor de Configuração com a menor quantidade de despesas administrativas. A extensão do esquema do Active Directory é uma configuração de toda a floresta e só pode ser efetuada uma vez por floresta. Expandir o esquema permanentemente modifica o conjunto de classes e atributos na configuração base do Active Directory. Esta ação é irreversível. O alargamento do esquema permite ao Gestor de Configuração aceder a componentes que lhe permitam funcionar de forma mais eficaz dentro do seu ambiente de laboratório.  
@@ -139,7 +139,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>Para expandir o esquema do Active Directory utilizando ExtADSch.exe:  
 
-1.  Crie uma cópia de segurança do estado do controlador de domínio mestre do esquema. Para obter mais informações sobre como fazer uma cópia de segurança do controlador de domínio principal, consulte [Cópia de Segurança do Windows Server](https://technet.microsoft.com/library/cc770757.aspx)  
+1.  Crie uma cópia de segurança do estado do controlador de domínio mestre do esquema. Para obter mais informações sobre o backup do controlador de domínio principal, consulte [o Windows Server Backup](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Navegue para **\SMSSETUP\BIN\X64** no suporte de dados de instalação.  
 
@@ -147,7 +147,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 4.  Certifique-se de que a extensão do esquema foi bem sucedida, revendo o **extadsch.log** localizado na pasta de raiz da unidade do sistema.  
 
-     Para obter informações adicionais sobre este procedimento, consulte [o esquema de Diretório Ativo para O Gestor](../../core/plan-design/network/extend-the-active-directory-schema.md)de Configuração .  
+     Para mais informações, consulte [Extend the Ative Directory schema for Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Outras tarefas necessárias  
  Também terá de realizar as seguintes tarefas antes da instalação.  
@@ -158,7 +158,7 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
  **Instale o .NET e ative a Windows Communication Foundation**  
 
- Tem de instalar duas .NET Frameworks: primeiro, a .NET 3.5.1 e depois a .NET 4.5.2+. Terá também de ativar a WCF (Windows Communication Foundation). A WCF foi concebida para oferecer uma abordagem para cálculo distribuído, interoperabilidade abrangente e suporte direto para orientação do serviço e simplifica a programação de aplicações ligadas através de um modelo de programação orientado para o serviço. Reveja [O que é a Windows Communication Foundation?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) para informações adicionais sobre a WCF.  
+ Tem de instalar duas .NET Frameworks: primeiro, a .NET 3.5.1 e depois a .NET 4.5.2+. Terá também de ativar a WCF (Windows Communication Foundation). A WCF foi concebida para oferecer uma abordagem para cálculo distribuído, interoperabilidade abrangente e suporte direto para orientação do serviço e simplifica a programação de aplicações ligadas através de um modelo de programação orientado para o serviço. Para mais informações, consulte o que é a Fundação de Comunicação do [Windows?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90))
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>Para instalar o .NET e ativar a Windows Communication Foundation:  
 
@@ -198,27 +198,15 @@ Os próximos passos necessários para permitir aos clientes do Gestor de Configu
 
 10. Depois de concluída a instalação base do .NET, navegue para o [Centro de Transferências da Microsoft](https://www.microsoft.com/download/details.aspx?id=42643) para obter o instalador da Web para o .NET Framework 4.5.2. Clique no botão **Transferir** e, em seguida, em **Executar** para iniciar o instalador. O instalador irá detetar e instalar automaticamente os componentes necessários no idioma selecionado.  
 
-Para obter mais informações, consulte os seguintes artigos para saber porque motivo estes .NET Frameworks são necessários:  
-
--   [Versões e dependências do .NET Framework](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [Instruções de Compatibilidade de Aplicações do .NET Framework 4 RTM](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [Como: atualizar uma Aplicação Web ASP.NET para ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Perguntas Frequentes sobre a Política de Ciclo de Vida do Microsoft .NET Framework](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR Inside out - In-Process Lado a Lado](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **Ativar BITS, IIS e RDC**  
 
-O [Serviço de Transferência Inteligente em Segundo Plano (BITS)](https://technet.microsoft.com/library/dn282296.aspx) é utilizado para aplicações que têm de transferir ficheiros assíncronos entre um cliente e um servidor. Ao medir o fluxo de transferências em primeiro e segundo plano, o BITS mantém a capacidade de resposta de outras aplicações de rede. Retoma também automaticamente as transferências de ficheiros se uma sessão de transferência for interrompida.  
+O [Serviço de Transferência Inteligente em Segundo Plano (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) é utilizado para aplicações que têm de transferir ficheiros assíncronos entre um cliente e um servidor. Ao medir o fluxo de transferências em primeiro e segundo plano, o BITS mantém a capacidade de resposta de outras aplicações de rede. Retoma também automaticamente as transferências de ficheiros se uma sessão de transferência for interrompida.  
 
 O utilizador deve instalar o BITS para este laboratório, porque este servidor de site será também utilizado como ponto de gestão.  
 
 Serviços de Informação Internet (IIS) é um servidor Web flexível e escalável que pode ser utilizado para alojar tudo na Web. É utilizado pelo Gestor de Configuração para uma série de funções do sistema do site. Para obter informações adicionais sobre o IIS, reveja [os Websites para servidores do sistema do site.](../../core/plan-design/network/websites-for-site-system-servers.md)  
 
-[Compressão de Diferencial Remota (RDC)](https://technet.microsoft.com/library/cc754372.aspx) é um conjunto de API que as aplicações podem utilizar para determinar se foram efetuadas quaisquer alterações a um conjunto de ficheiros. A RDC permite que a aplicação replique apenas as partes alteradas de um ficheiro, mantendo o tráfego de rede para um mínimo.  
+[Compressão de Diferencial Remota (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) é um conjunto de API que as aplicações podem utilizar para determinar se foram efetuadas quaisquer alterações a um conjunto de ficheiros. A RDC permite que a aplicação replique apenas as partes alteradas de um ficheiro, mantendo o tráfego de rede para um mínimo.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>Para ativar as funções de servidor de site BITS, IIS e RDC:  
 
@@ -330,7 +318,7 @@ Serviços de Informação Internet (IIS) é um servidor Web flexível e escaláv
 
 7.  Clique em **Instalar** e certifique-se de que a instalação foi concluída corretamente no painel **Notificações** do **Gestor de Servidores**.  
 
-Por predefinição, o IIS bloqueia vários tipos de extensões de ficheiro e localizações de pastas contra o acesso através de comunicação HTTP ou HTTPS. Para permitir que estes ficheiros sejam distribuídos a sistemas cliente, terá de configurar a filtragem de pedidos do IIS no ponto de distribuição. Para mais informações, reveja [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
+Por predefinição, o IIS bloqueia vários tipos de extensões de ficheiro e localizações de pastas contra o acesso através de comunicação HTTP ou HTTPS. Para permitir que estes ficheiros sejam distribuídos a sistemas cliente, terá de configurar a filtragem de pedidos do IIS no ponto de distribuição. Para mais informações, consulte a [Filtragem de Pedidos iIS para pontos de distribuição](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>Para configurar a filtragem de IIS nos pontos de distribuição:  
 

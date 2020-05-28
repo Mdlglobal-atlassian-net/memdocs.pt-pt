@@ -2,7 +2,7 @@
 title: Suporte para o servidor proxy
 titleSuffix: Configuration Manager
 description: Saiba como os servidores do sistema do Gestor de Configuração utilizam servidores proxy.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718715"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802094"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Suporte do servidor proxy no Gestor de Configuração
 
@@ -50,6 +50,10 @@ Para esta configuração, o servidor do site primário:
 - Por predefinição, utiliza a conta **System** do computador para efazer a ligação. Também pode utilizar a conta proxy do sistema do site, se necessário.  
 
 - Utiliza APIs do navegador web do Windows.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Ponto de ligação de gateway de gestão de nuvem
+
+O ponto de ligação de gestão de nuvem (CMG) é uma função no local que comunica com o serviço CMG em Azure. Para mais informações, consulte [Plan for the CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Ponto de distribuição
 
@@ -111,3 +115,7 @@ A partir da versão de 2002 do Gestor de Configuração, as seguintes funcionali
     - **Utilize credenciais para se ligar ao servidor proxy**: Muitos servidores proxy requerem que um utilizador autentime. Por padrão, o servidor do sistema do site utiliza a sua conta de computador para se ligar ao servidor proxy. Se necessário, ative esta opção, clique em **Definir**, e depois escolha uma **Conta Existente** ou especifique uma **Nova Conta**. Estas credenciais são a conta de servidor proxy do **sistema de site**.  Para mais informações, consulte [contas utilizadas no Gestor](../hierarchy/accounts.md)de Configuração .  
 
 4. Escolha **OK** para salvar a nova configuração do servidor proxy.  
+
+## <a name="next-steps"></a>Próximos passos
+
+Se a sua organização restringir a comunicação de rede com a internet utilizando um firewall ou dispositivo proxy, tem de permitir o acesso aos pontos finais da Internet. Para mais informações, consulte [os requisitos de acesso à Internet.](internet-endpoints.md)

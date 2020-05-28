@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718722"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904161"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Requisitos de certificado PKI para o Configuration Manager
 
@@ -23,11 +23,7 @@ ms.locfileid: "81718722"
 
 Os certificados de infraestrutura de chaves públicas (PKI) que poderá necessitar para o Gestor de Configuração estão listados nas seguintes tabelas. Estas informações pressupõem um conhecimento básico dos certificados PKI. Para mais informações, consulte a [implementação passo a passo dos certificados PKI para O Gestor de Configuração: Windows Server 2008 Certification Authority](example-deployment-of-pki-certificates.md).
 
-Para mais informações sobre os Serviços de Certificados de Diretório Ativo, consulte a seguinte documentação:  
-
-- Para Windows Server 2012: [Descrição Geral dos Serviços de Certificados do Active Directory](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Para Windows Server 2008: [Serviços de Certificados do Active Directory no Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+Para mais informações sobre serviços de certificados de diretório ativo, consulte a visão geral dos serviços de certificados de [diretório ativo.](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))
 
 Para obter informações sobre a utilização de certificados de Criptografia API: De próxima geração (CNG) com O Gestor de Configuração, consulte a visão geral dos [certificados cng](cng-certificates-overview.md).
 
