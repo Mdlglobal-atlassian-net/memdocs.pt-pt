@@ -81,7 +81,7 @@ Utilize o procedimento seguinte para utilizar uma sequência de tarefas para con
 
     - **Índice de imagem**: Especifique o índice do S O para instalar na imagem. Se a imagem do OS contiver várias versões, selecione a versão que pretende instalar.  
 
-    - **Chave do produto**: Se necessário, especifique a chave do produto para a instalação do Sistema operativo Windows. Pode especificar chaves de licenciamento em volume codificadas e chaves de produto padrão. Se utilizar uma chave de produto não codificada, separe cada`-`grupo de cinco caracteres com um traço (). Por exemplo: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
+    - **Chave do produto**: Se necessário, especifique a chave do produto para a instalação do Sistema operativo Windows. Pode especificar chaves de licenciamento em volume codificadas e chaves de produto padrão. Se utilizar uma chave de produto não codificada, separe cada grupo de cinco caracteres com um traço `-` (). Por exemplo: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
 
     - **Modo**de licenciamento do servidor : Se necessário, especifique que a licença do servidor é **por assento,** **por servidor,** ou que nenhuma licença é especificada. Se a licença do servidor for **Por servidor**, especifique também o número máximo de ligações de servidor.  
 
@@ -102,7 +102,7 @@ Utilize o procedimento seguinte para utilizar uma sequência de tarefas para con
 
         Também pode especificar uma unidade organizacional (UO). Esta definição é opcional e especifica o nome distinto LDAP X.500 da OU para criar a conta de computador, se ainda não existir.  
 
-    - **Conta**: especifique o nome de utilizador e palavra-passe da conta que tem permissões para aderir ao domínio especificado. Por `domain\user` exemplo: `%variable%`ou .  
+    - **Conta**: especifique o nome de utilizador e palavra-passe da conta que tem permissões para aderir ao domínio especificado. Por exemplo: `domain\user` ou `%variable%` .  
 
         > [!IMPORTANT]  
         > Se pretender migrar as definições de domínio ou as definições do grupo de trabalho durante a implementação, certifique-se de que introduz as credenciais de domínio apropriadas aqui.  
@@ -208,15 +208,15 @@ Este grupo contém as ações necessárias para compilar um computador de refer�
 
 |Passo da sequência de tarefas|Descrição|  
 |-------------------------------|---------------|  
-|**Reiniciar no Windows PE**|Reinicie o computador de destino para a imagem de arranque atribuída à sequência de tarefas. Este passo mostra uma mensagem ao utilizador de que o computador será reiniciado para que a instalação possa continuar.<br /><br />Este passo utiliza a `_SMSTSInWinPE` variável de sequência de tarefas apenas de leitura. Se o valor associado `false`for igual a , então o passo da sequência de tarefas continua.|
-|**Particionar Disco 0 - BIOS**|Partição e formatar o disco rígido no computador de destino no modo BIOS. O número do `0`disco predefinido é .<br /><br />Este passo utiliza várias variáveis de sequência de tarefas apenas de leitura. Por exemplo, só funciona se a cache do cliente do Gestor de Configuração não existir, e não funciona se o computador estiver configurado para UEFI.|
-|**Particionar Disco 0 - UEFI**|Partição e formatar o disco rígido no computador de destino no modo UEFI. O número do `0`disco predefinido é .<br /><br />Este passo utiliza várias variáveis de sequência de tarefas apenas de leitura. Por exemplo, só funciona se a cache do cliente do Gestor de Configuração não existir, e só funciona se o computador estiver configurado para UEFI.|
+|**Reiniciar no Windows PE**|Reinicie o computador de destino para a imagem de arranque atribuída à sequência de tarefas. Este passo mostra uma mensagem ao utilizador de que o computador será reiniciado para que a instalação possa continuar.<br /><br />Este passo utiliza a variável de sequência de tarefas apenas de `_SMSTSInWinPE` leitura. Se o valor associado for igual `false` a , então o passo da sequência de tarefas continua.|
+|**Particionar Disco 0 - BIOS**|Partição e formatar o disco rígido no computador de destino no modo BIOS. O número do disco predefinido é `0` .<br /><br />Este passo utiliza várias variáveis de sequência de tarefas apenas de leitura. Por exemplo, só funciona se a cache do cliente do Gestor de Configuração não existir, e não funciona se o computador estiver configurado para UEFI.|
+|**Particionar Disco 0 - UEFI**|Partição e formatar o disco rígido no computador de destino no modo UEFI. O número do disco predefinido é `0` .<br /><br />Este passo utiliza várias variáveis de sequência de tarefas apenas de leitura. Por exemplo, só funciona se a cache do cliente do Gestor de Configuração não existir, e só funciona se o computador estiver configurado para UEFI.|
 |**Aplicar Sistema Operativo**|Instale a imagem de OS especificada no computador de destino. Este passo elimina primeiro todos os ficheiros do volume, com a lém dos ficheiros de controlo específicos do Gestor de Configuração. Em seguida, aplica todas as imagens de volume contidas no ficheiro WIM ao correspondente volume sequencial de disco no computador-alvo.|
 |**Aplicar Definições do Windows**|Configure as definições do Windows para o computador de destino.|
 |**Aplicar Definições de Rede**|Especifique as informações de configuração da rede ou do grupo de trabalho para o computador de destino.|
-|**Aplicar Controladores de Dispositivo**|Combine e instale os controladores como parte desta implementação do SISTEMA. Para mais informações, consulte [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Este passo utiliza a `_SMSTSMediaType` variável de sequência de tarefas apenas de leitura. Se o valor associado não `FullMedia`for igual, este passo não corre.|
+|**Aplicar Controladores de Dispositivo**|Combine e instale os controladores como parte desta implementação do SISTEMA. Para mais informações, consulte [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Este passo utiliza a variável de sequência de tarefas apenas de `_SMSTSMediaType` leitura. Se o valor associado não for `FullMedia` igual, este passo não corre.|
 |**Configurar windows e configurar gestor**|Instale o software cliente do Gestor de Configuração. O Gestor de Configuração instala e regista o cliente do Gestor de Configuração GUID. Inclua quaisquer propriedades de **instalação necessárias.**|
-|**Instalar Atualizações**|Especifique como as atualizações de software são instaladas no computador de destino. O computador de destino não é avaliado para atualizações de software aplicáveis até que este passo corra. Nessa altura, a avaliação é semelhante a qualquer outro cliente gerido pelo Gestor de Configuração. Para mais informações, consulte [Instalar Atualizações de Software](../understand/install-software-updates.md).<br /><br />Este passo utiliza a `_SMSTSMediaType` variável de sequência de tarefas apenas de leitura. Se o valor associado não `FullMedia`for igual, este passo não corre.|
+|**Instalar Atualizações**|Especifique como as atualizações de software são instaladas no computador de destino. O computador de destino não é avaliado para atualizações de software aplicáveis até que este passo corra. Nessa altura, a avaliação é semelhante a qualquer outro cliente gerido pelo Gestor de Configuração. Para mais informações, consulte [Instalar Atualizações de Software](../understand/install-software-updates.md).<br /><br />Este passo utiliza a variável de sequência de tarefas apenas de `_SMSTSMediaType` leitura. Se o valor associado não for `FullMedia` igual, este passo não corre.|
 |**Instalar Aplicações**|Especifica quaisquer aplicações para instalar no computador de referência.|
 
 ### <a name="group-capture-the-reference-machine"></a>Grupo: Capturar a Máquina de Referência
@@ -232,6 +232,6 @@ Este grupo contém os passos necessários para preparar e capturar um computador
 > [!IMPORTANT]
 > Depois de capturar uma imagem de um computador de referência, não capture outra imagem de SO do computador de referência. As entradas de registo são criadas durante a configuração inicial. Crie um novo computador de referência cada vez que capturar a imagem de SO. Se planeia utilizar o mesmo computador de referência para criar futuras imagens de SO, primeiro desinstale e reinstale o cliente do Gestor de Configuração.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Métodos para implementar sistemas operativos empresariais](methods-to-deploy-enterprise-operating-systems.md)

@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711491"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983820"
 ---
 # <a name="paths-to-co-management"></a>Caminhos para a cogestão
 
@@ -45,7 +45,6 @@ Eis o que precisa para o preparar:
         - Para domínios federados
 - Definição de agente de cliente para a adesão híbrida azure
 - Configure a inscrição automática de dispositivos para Intune
-- Atribuir licenças de utilizador intune
 - Ativar a cogestão no Gestor de Configuração
 
 Para um tutorial neste caminho, consulte [Tutorial: Ativar a cogestão para os clientes existentes do Gestor de Configuração.](tutorial-co-manage-clients.md)

@@ -148,7 +148,7 @@ Embora cada um destes métodos de descoberta seja independente dos outros, eles 
 
 ### <a name="configure-active-directory-system-discovery"></a><a name="bkmk_config-adsd"></a>Configure descoberta do sistema de diretório ativo  
 
-1. No separador **Geral** da janela Ative Directory System Discovery](media/Disc_new_Icon.gif) Properties, selecione o **novo** ícone ![Novo ícone para especificar um novo recipiente de Diretório Ativo. Na caixa de diálogo ative **Directory Container,** termine as seguintes configurações:  
+1. No separador **Geral** da janela Ative Directory System Discovery Properties, selecione o **novo** ícone Novo ícone para especificar um novo recipiente de ![ ](media/Disc_new_Icon.gif) Diretório Ativo. Na caixa de diálogo ative **Directory Container,** termine as seguintes configurações:  
 
     1. Digite ou navegue para um local para o **Caminho**. Este valor é um caminho LDAP válido para um contentor ou unidade organizacional (OU). O site questiona este caminho para recursos. Por exemplo, `LDAP://CN=Computers,DC=contoso,DC=com`  
 
@@ -183,7 +183,7 @@ Embora cada um destes métodos de descoberta seja independente dos outros, eles 
 
 ### <a name="configure-active-directory-user-discovery"></a><a name="bkmk_config-adud"></a>Configure a descoberta do utilizador do diretório ativo  
 
-1. No separador **Geral** da janela Ative Directory User Discovery](media/Disc_new_Icon.gif) Properties, selecione o **novo** ícone ![Novo ícone para especificar um novo recipiente de Diretório Ativo. Na caixa de diálogo ative **Directory Container,** termine as seguintes configurações:  
+1. No separador **Geral** da janela Ative Directory User Discovery Properties, selecione o **novo** ![ ícone Novo ícone para especificar um novo recipiente ](media/Disc_new_Icon.gif) de Diretório Ativo. Na caixa de diálogo ative **Directory Container,** termine as seguintes configurações:  
 
     1. Especifique um ou mais locais para procurar.  
 
@@ -415,7 +415,7 @@ Utilize os seguintes procedimentos para descobrir primeiro apenas a sua topologi
     - No separador **Subnets,** selecione a opção **Procurar subredes locais.**  
 
       > [!TIP]  
-      > Se conhecer as subredes específicas que constituem a sua rede, desmarque a caixa de verificação **de sub-redes local Search.** Em seguida, ![selecione o novo ícone](media/Disc_new_Icon.gif) **Novo** ícone, e adicione as subredes específicas que pretende pesquisar. Para grandes redes, procure apenas uma ou duas subredes de cada vez para minimizar o uso da largura de banda da rede.  
+      > Se conhecer as subredes específicas que constituem a sua rede, desmarque a caixa de verificação **de sub-redes local Search.** Em seguida, selecione o **novo** ![ ícone Novo ](media/Disc_new_Icon.gif) ícone, e adicione as subredes específicas que pretende pesquisar. Para grandes redes, procure apenas uma ou duas subredes de cada vez para minimizar o uso da largura de banda da rede.  
 
     - No separador **Domínios,** selecione a opção de **procurar domínio local**.  
 
@@ -424,7 +424,7 @@ Utilize os seguintes procedimentos para descobrir primeiro apenas a sua topologi
       > [!TIP]  
       > Quando mapear pela primeira vez a topologia da rede, configure apenas alguns saltos de router para minimizar o uso da largura de banda da rede.  
 
-4. No separador **'Agendar',** ](media/Disc_new_Icon.gif)selecione o **novo** ícone ![Novo ícone e detetete um calendário para a descoberta em execução.  
+4. No separador **'Agendar',** selecione o **novo** ![ ícone Novo ícone e ](media/Disc_new_Icon.gif) detetete um calendário para a descoberta em execução.  
 
     > [!NOTE]  
     > Não é possível atribuir uma configuração de descoberta diferente aos horários separados da Discovery da Rede. Cada vez que a Rede Discovery corre, utiliza a configuração de descoberta atual.  
@@ -451,7 +451,7 @@ Utilize os seguintes procedimentos para descobrir primeiro apenas a sua topologi
 
     - Para pesquisar uma sub-rede específica, certifique-se de que a sub-rede está listada em **Subnets para pesquisar** e tem um valor de **Pesquisa** de **Ativado:**  
 
-      1. Se a sub-rede não estiver listada,](media/Disc_new_Icon.gif)selecione o **novo** ícone ![Novo ícone . Na caixa de diálogo **New Subnet Assignment,** introduza as informações **de Subnet** e **Máscara** e, em seguida, selecione **OK**. Por padrão, uma nova sub-rede está ativada para pesquisa.  
+      1. Se a sub-rede não estiver listada, selecione o **novo** ![ ícone Novo ícone ](media/Disc_new_Icon.gif) . Na caixa de diálogo **New Subnet Assignment,** introduza as informações **de Subnet** e **Máscara** e, em seguida, selecione **OK**. Por padrão, uma nova sub-rede está ativada para pesquisa.  
 
       2. Para alterar o valor **de Pesquisa** de uma sub-rede listada, selecione-o na lista. Em seguida, selecione o ícone **Alternar** para mudar o valor entre **Desativado** e **Ativado**.  
 
@@ -461,21 +461,21 @@ Utilize os seguintes procedimentos para descobrir primeiro apenas a sua topologi
 
     - Para pesquisar um domínio específico, certifique-se de que o domínio está listado em **Domínios** e tem um valor de **Pesquisa** de **Habilitado:**  
 
-      1. Se o domínio não estiver **New** listado, ![selecione o novo ícone Novo ícone](media/Disc_new_Icon.gif). Na caixa de diálogo **Domain Properties,** introduza as informações do **Domínio** e, em seguida, selecione **OK**. Por padrão, um novo domínio está ativado para pesquisa.  
+      1. Se o domínio não estiver listado, selecione o **novo** ![ ícone Novo ícone ](media/Disc_new_Icon.gif) . Na caixa de diálogo **Domain Properties,** introduza as informações do **Domínio** e, em seguida, selecione **OK**. Por padrão, um novo domínio está ativado para pesquisa.  
 
       2. Para alterar o valor **de Pesquisa** de um domínio listado, selecione-o na lista. Em seguida, selecione o ícone **Alternar** para mudar o valor entre **Desativado** e **Ativado**.  
 
 7. Para configurar a descoberta para pesquisar nomes específicos da comunidade SNMP para dispositivos SNMP, mude para o separador **SNMP.** Em seguida, configure uma ou mais das seguintes opções:  
 
-    - Para adicionar um nome comunitário SNMP à lista de **nomes comunitários SNMP,** selecione o **novo** ícone ![Novo ícone](media/Disc_new_Icon.gif). Na nova caixa de diálogo **SNMP Community Name,** especifique o **nome** da comunidade SNMP e, em seguida, selecione **OK**.  
+    - Para adicionar um nome comunitário SNMP à lista de **nomes comunitários SNMP,** selecione o **novo** ![ ícone Novo ícone ](media/Disc_new_Icon.gif) . Na nova caixa de diálogo **SNMP Community Name,** especifique o **nome** da comunidade SNMP e, em seguida, selecione **OK**.  
 
-    - Para remover um nome de comunidade SNMP, selecione ![o](media/Disc_delete_Icon.gif)nome da comunidade e, em seguida, selecione o ícone **Eliminar** .  
+    - Para remover um nome de comunidade SNMP, selecione o nome da comunidade e, em seguida, selecione o ícone **Eliminar** ![ ](media/Disc_delete_Icon.gif) .  
 
-    - Para ajustar a ordem de pesquisa dos nomes da comunidade SNMP, selecione um nome comunitário da lista. Em seguida, selecione ![o](media/Disc_moveUp_Icon.gif) ícone **move item up move** up ícone ou o ícone ![ **move item down** Move Down](media/Disc_moveDown_Icon.gif)Icon . Quando a descoberta corre, os nomes da comunidade são procurados por uma ordem de alto a baixo. 
+    - Para ajustar a ordem de pesquisa dos nomes da comunidade SNMP, selecione um nome comunitário da lista. Em seguida, selecione o ícone **move item up move** up ícone ou o ícone move ![ ](media/Disc_moveUp_Icon.gif) **item down** Move Down Icon ![ ](media/Disc_moveDown_Icon.gif) . Quando a descoberta corre, os nomes da comunidade são procurados por uma ordem de alto a baixo. 
 
     - Para configurar o número máximo de saltos de router para utilização por pesquisas SNMP, selecione o número de lúpulo da lista de **lançamentos máximos de lúpulo.**  
 
-8. Para configurar um dispositivo SNMP, mude para o separador **Dispositivos SNMP.** Se o dispositivo não estiver **New** listado, ![selecione o novo ícone Novo ícone](media/Disc_new_Icon.gif). Na caixa de diálogo do **Novo Dispositivo SNMP,** especifique o endereço IP ou o nome do dispositivo do dispositivo SNMP e, em seguida, selecione **OK**.  
+8. Para configurar um dispositivo SNMP, mude para o separador **Dispositivos SNMP.** Se o dispositivo não estiver listado, selecione o **novo** ![ ícone Novo ícone ](media/Disc_new_Icon.gif) . Na caixa de diálogo do **Novo Dispositivo SNMP,** especifique o endereço IP ou o nome do dispositivo do dispositivo SNMP e, em seguida, selecione **OK**.  
 
     > [!NOTE]  
     > Se especificar um nome de dispositivo, o Gestor de Configuração deve ser capaz de resolver o nome NetBIOS num endereço IP.  
@@ -487,12 +487,12 @@ Utilize os seguintes procedimentos para descobrir primeiro apenas a sua topologi
       > [!NOTE]  
       > Para utilizar esta opção, o servidor deve alugar o seu endereço IP a partir de um servidor DHCP e não pode utilizar um endereço IP estático.  
 
-    - Para consultar um servidor DHCP **New** específico, ![selecione o novo ícone Novo ícone](media/Disc_new_Icon.gif). Na nova caixa de diálogo **do Servidor DHCP,** especifique o endereço IP ou o nome do servidor do servidor DHCP e, em seguida, selecione **OK**.  
+    - Para consultar um servidor DHCP específico, selecione o **novo** ![ ícone Novo ícone ](media/Disc_new_Icon.gif) . Na nova caixa de diálogo **do Servidor DHCP,** especifique o endereço IP ou o nome do servidor do servidor DHCP e, em seguida, selecione **OK**.  
 
       > [!NOTE]  
       > Se especificar um nome de servidor, o Gestor de Configuração deve ser capaz de resolver o nome NetBIOS num endereço IP.  
 
-10. Para configurar quando a descoberta for executado, mude para o separador **'Agendar'.** Em seguida, ![selecione o novo ícone **Novo** ícone](media/Disc_new_Icon.gif) para definir uma programação para executar o Discovery da Rede. Pode configurar vários horários recorrentes e vários horários que não têm recorrência.  
+10. Para configurar quando a descoberta for executado, mude para o separador **'Agendar'.** Em seguida, selecione o **novo** ícone Novo ícone para definir uma programação para executar o Discovery da ![ ](media/Disc_new_Icon.gif) Rede. Pode configurar vários horários recorrentes e vários horários que não têm recorrência.  
 
     > [!NOTE]  
     > Se o separador **Schedule** mostrar mais de um horário ao mesmo tempo, o Network Discovery corre para todos os horários, tal como está configurado no momento indicado na programação. Este comportamento também é verdade para horários recorrentes.  

@@ -31,7 +31,7 @@ Crie um ficheiro completo de resolução de *problemas* (.zip) que capture o est
 
 - Direitos administrativos locais para um cliente do Gestor de Configuração  
 
-- O instalador do Centro de Suporte. Este ficheiro está no `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`servidor do site em . Para mais informações, consulte [Suporte Centro - Instale](support-center.md#install).  
+- O instalador do Centro de Suporte. Este ficheiro está no servidor do site em `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` . Para mais informações, consulte [Suporte Centro - Instale](support-center.md#install).  
 
 
 
@@ -43,7 +43,7 @@ Crie um ficheiro completo de resolução de *problemas* (.zip) que capture o est
 
 3.  No separador Casa da fita, **selecione Recolher Dados Selecionados**. Por predefinição, o Support Center apenas recolhe o conjunto de dados mínimos: ficheiros de registo, configuração do cliente e sistema operativo.  
 
-4.  Guarde o ficheiro de pacote de resolução de problemas (.zip) para uma pasta no computador. Por predefinição, o nome do `Support_c885cdfed3c7482bba4f9e662978ec07.zip`ficheiro é semelhante ao seguinte exemplo: .  
+4.  Guarde o ficheiro de pacote de resolução de problemas (.zip) para uma pasta no computador. Por predefinição, o nome do ficheiro é semelhante ao seguinte exemplo: `Support_c885cdfed3c7482bba4f9e662978ec07.zip` .  
 
 
 

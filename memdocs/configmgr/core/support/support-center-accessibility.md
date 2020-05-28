@@ -43,27 +43,27 @@ Também pode utilizar um teclado para executar tarefas comuns no Centro de Supor
 |Tarefa  |Atalho de teclado  |
 |---------|---------|
 |Opções de configuração de aplicação aberta |**F4**|
-|Exit     |**Alt** + **F4**|
+|Sair     |**Alt**  +  **F4**|
 |Detalhes do cliente de carregar ou atualizar<br>(no separador detalhes do **cliente** do Centro de Suporte)|**F5**|
 |Carregar visão de política selecionada<br>(no separador Política de **Clientes** do Centro de Apoio)|**F5**|
 |Atualizar uma política<br>(no separador Política de **Clientes** do Centro de Apoio, após a seleção de uma apólice)|**F5** |
-|Cópia como MOF<br>(no separador Política de **Clientes** do Centro de Apoio, após a seleção de uma apólice; também disponível para eventos WMI)|**Ctrl** + **Shift**Mudança + de Ctrl**C** |
-|Copiar uma política como cliente local MOF<br>(no separador Política de **Clientes** do Centro de Apoio, após a seleção de uma apólice)|**Turno X da CTRL** + **Shift** + **X** |
-|Política de pedidos<br>(no separador Política de **Clientes** do Centro de Apoio)|**CTRL** + **R** |
-|Avaliar uma política<br>(no separador Política de **Clientes** do Centro de Apoio)|**CTRL** + **E** |
+|Cópia como MOF<br>(no separador Política de **Clientes** do Centro de Apoio, após a seleção de uma apólice; também disponível para eventos WMI)|**CTRL**  +  **Turno**  +  **C** |
+|Copiar uma política como cliente local MOF<br>(no separador Política de **Clientes** do Centro de Apoio, após a seleção de uma apólice)|**CTRL**  +  **Turno**  +  **X** |
+|Política de pedidos<br>(no separador Política de **Clientes** do Centro de Apoio)|**CTRL**  +  **R** |
+|Avaliar uma política<br>(no separador Política de **Clientes** do Centro de Apoio)|**CTRL**  +  **E** |
 |Carregar ou refrescar a visão do conteúdo<br>(no separador **conteúdo** do Centro de Suporte)|**F5** |
 |Inventário de carga<br>(no separador **de inventário** do Centro de Apoio)|**F5** |
 |Iniciar resolução de problemas<br>(no separador de resolução de **problemas** do Centro de Apoio)|**F5** |
-|Pacote de dados aberto<br>(no separador **Casa** do Espectador do Centro de Suporte)|**Ctrl** + **O** |
-|Abrir ficheiros de registo<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**Ctrl** + **O** |
-|Abrir ficheiros de registo na vista atual<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**Ctrl** + **Shift**Mudança + de Ctrl**O** |
-|Abra ficheiros de registo numa nova janela do Log Viewer<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**Ctrl** + **N** |
-|Fechar todos os ficheiros de registo<br>(no separador **de registos** do Centro de Suporte e na janela **do Visualizador** de Registos)|**Ctrl** + **W** |
-|Pesquisar em ficheiros de registo| - **CTRL** + **F:** Abre o diálogo **Find** para introduzir a cadeia de pesquisa<br> - **F3**: Encontre o próximo jogo<br> - **Turno** + **F3:** Encontre o jogo anterior|
-|Procure um código de erro<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**CTRL** + **L** |
-|Cópia de um ficheiro de registo| - **CTRL** + **C:** Cópias sons de ficheiro slog<br> - **Turno C:** Copia a entrada de diário sem formatação**C****Shift** +  + |
-|Filtro rápido usando texto de ficheiro de registo<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**Ctrl** + **Shift**Mudança + de Ctrl**C** |
-|Anote um ficheiro de registo<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**Turno Ctrl** + **Shift** + **N** <sup>[Nota 1](#bkmk_note1)</sup>|
+|Pacote de dados aberto<br>(no separador **Casa** do Espectador do Centro de Suporte)|**CTRL**  +  **O** |
+|Abrir ficheiros de registo<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**CTRL**  +  **O** |
+|Abrir ficheiros de registo na vista atual<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**CTRL**  +  **Turno**  +  **O** |
+|Abra ficheiros de registo numa nova janela do Log Viewer<br>(no separador **de registos** do Centro de Suporte e na janela do Visualizador de Registos)|**CTRL**  +  **N** |
+|Fechar todos os ficheiros de registo<br>(no separador **de registos** do Centro de Suporte e na janela **do Visualizador** de Registos)|**CTRL**  +  **W** |
+|Pesquisar em ficheiros de registo| - **CTRL**  +  **F:** Abre o diálogo **Find** para introduzir a cadeia de pesquisa<br> - **F3**: Encontre o próximo jogo<br> - **Turno**  +  **F3**: Encontre o jogo anterior|
+|Procure um código de erro<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**CTRL**  +  **L** |
+|Cópia de um ficheiro de registo| - **CTRL**  +  **C:** Cópias texto de ficheiro de registo<br> - **CTRL**  +  **Turno**  +  **C:** Copia a entrada de diário sem formatação|
+|Filtro rápido usando texto de ficheiro de registo<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**CTRL**  +  **Turno**  +  **C** |
+|Anote um ficheiro de registo<br>(no separador **Logs** e na janela **do Visualizador** de Registos)|**CTRL**  +  **Turno**  +  **Nota** <sup>[N](#bkmk_note1)</sup>|
 |Ajuda Aberta|**F1**|
 
 

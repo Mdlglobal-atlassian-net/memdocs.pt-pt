@@ -81,7 +81,7 @@ Reveja o artigo de [pré-visualização técnica](../technical-preview.md) antes
 
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Para mais informações sobre a instalação ou atualização do ramo técnico de pré-visualização, consulte [a pré-visualização técnica](../technical-preview.md).    
 

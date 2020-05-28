@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771173"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987707"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Use um ponto de distribuição em nuvem no Gestor de Configuração
 
@@ -162,7 +162,7 @@ Quando utilizar um ponto de distribuição em nuvem na sua hierarquia, use as se
 
 - Um administrador distribui os seguintes tipos de conteúdos de software suportados:  
   - Aplicações
-  - Pacotes
+  - Pacote
   - Pacotes de upgrade de OS
   - Atualizações de software de terceiros  
 
@@ -174,7 +174,9 @@ Quando utilizar um ponto de distribuição em nuvem na sua hierarquia, use as se
 
 ### <a name="deployment-settings"></a>Definições da implementação
 
-- Quando implementa uma sequência de tarefas com a opção de descarregar conteúdo localmente quando necessário através da sequência de **tarefas,** o ponto de gestão não inclui um ponto de distribuição na nuvem como uma localização de conteúdo. Implemente a sequência de tarefas com a opção de **descarregar todos os conteúdos localmente antes** de iniciar a sequência de tarefas para os clientes utilizarem um ponto de distribuição em nuvem.  
+- **Descarregue os conteúdos localmente quando necessário pela sequência de tarefas em execução**. A partir da versão 1910, o motor de sequência de tarefas pode descarregar pacotes a pedido a partir de um CMG ativado por conteúdo ou um ponto de distribuição em nuvem. Esta alteração proporciona flexibilidade adicional com as implementações de upgrade do Windows 10 para dispositivos baseados na Internet.
+
+- **Descarregue todos os conteúdos localmente antes**de iniciar a sequência de tarefas . Na versão 1906 e anterior do Configurmanager, outras opções, como **o descarregamento de conteúdos localmente quando necessários pela sequência** de tarefas de execução, não funcionam neste cenário. O motor de sequência de tarefas não pode descarregar conteúdo de uma fonte de nuvem. O cliente do Gestor de Configuração deve descarregar o conteúdo a partir da fonte cloud antes de iniciar a sequência de tarefas. Ainda pode utilizar esta opção na versão 1910, se necessário para satisfazer os seus requisitos.
 
 - Um ponto de distribuição em nuvem não suporta implementações de pacotes com a opção de executar o programa a **partir do ponto de distribuição**. Utilize a opção de implementação para **descarregar conteúdo a partir do ponto de distribuição e executar localmente**.  
 
@@ -382,6 +384,6 @@ A Rede de Entrega de Conteúdos Azure (CDN) é uma solução global para fornece
 O ponto de distribuição de nuvem do Gestor de Configuração não suporta atualmente o Azure CDN.
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [Instale pontos de distribuição em nuvem](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)

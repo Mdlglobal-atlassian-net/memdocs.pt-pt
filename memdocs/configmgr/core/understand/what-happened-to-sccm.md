@@ -24,7 +24,7 @@ Não há alteração nos outros componentes da [suite System Center.](https://do
 
 As versões anteriores do produto, como system center 2012 Configuration Manager, não são remarcadas.
 
-Para obter mais informações, veja os artigos seguintes:
+Para obter mais informações, veja os seguintes artigos:
 
 - [O que é o Configuration Manager?](introduction.md)
 - [FAQs do Microsoft Endpoint Configuration Manager](microsoft-endpoint-manager-faq.md)

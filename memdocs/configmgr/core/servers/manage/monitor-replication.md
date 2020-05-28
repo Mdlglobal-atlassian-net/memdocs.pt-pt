@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713710"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879824"
 ---
 # <a name="monitor-database-replication"></a>Replicar a base de dados do monitor
 
@@ -122,7 +122,10 @@ Executar rLA na consola do Gestor de Configuração ou num pedido de comando:
 
 - Para correr na consola Do Gestor de Configuração: Vá ao espaço de trabalho **de monitorização** e selecione o nó de replicação da Base de **Dados.** Selecione a ligação de replicação que pretende analisar e, em seguida, na fita, selecione **Replication Link Analyzer**.  
 
-- Para correr a uma solicitação de comando, digite o seguinte comando:`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Para correr a uma solicitação de comando, digite o seguinte comando:`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > A partir da versão 1910, este caminho mudou para utilizar a `Microsoft Endpoint Manager` pasta. Certifique-se de que não utiliza uma versão mais antiga do ficheiro que possa existir noutra pasta.
 
 Ao executar rLA, deteta problemas utilizando uma série de regras de diagnóstico e verificações. Vê os problemas que a ferramenta identifica. Quando tem instruções para resolver um problema, exibe-as. Se a RLA conseguir remediar automaticamente um problema, apresenta-lhe essa opção.
 
