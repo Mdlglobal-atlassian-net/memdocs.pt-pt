@@ -2,20 +2,20 @@
 title: Contas utilizadas
 titleSuffix: Configuration Manager
 description: Identifique e gerencie os grupos Windows, contas e objetos SQL utilizados no 'Gestor de Configuração'.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073420"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267997"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Contas utilizadas no Gestor de Configuração
 
@@ -24,14 +24,14 @@ ms.locfileid: "82073420"
 Utilize as seguintes informações para identificar os grupos Windows, contas e objetos SQL que são utilizados no 'Gestor de Configuração', como são utilizados e quaisquer requisitos.  
 
 - [Grupos do Windows Criados e Utilizados pelo Configuration Manager](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [Utilizadores do Controlo Remoto do ConfigMgr](#configmgr-remote-control-users)  
+  - [Configuração Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuração Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Utilizadores de controlo remoto do Gestor de Configuração](#configmgr_rcusers)  
   - [Admins de SMS](#sms-admins)  
-  - [código&lt;de site SMS_SiteSystemToSiteServerConnection_MP_\>](#bkmk_remotemp)  
-  - [código&lt;de site SMS_SiteSystemToSiteServerConnection_SMSProv_\>](#bkmk_remoteprov)  
-  - [código&lt;de site SMS_SiteSystemToSiteServerConnection_Stat_\>](#bkmk_remotestat)  
-  - [código&lt;de site SMS_SiteToSiteConnection_\>](#bkmk_filerepl)  
+  - [código de site SMS_SiteSystemToSiteServerConnection_MP_ &lt;\>](#bkmk_remotemp)  
+  - [SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; código de site\>](#bkmk_remoteprov)  
+  - [código de site SMS_SiteSystemToSiteServerConnection_Stat_ &lt;\>](#bkmk_remotestat)  
+  - [SMS_SiteToSiteConnection_ &lt; código de site\>](#bkmk_filerepl)  
 
 - [Contas que o Configuration Manager Utiliza](#bkmk_accounts)
   - [Conta de descoberta de grupo de diretório ativo](#active-directory-group-discovery-account)  
@@ -96,7 +96,7 @@ O Gestor de Configuração cria automaticamente, e em muitos casos mantém autom
 > Quando o Gestor de Configuração cria um grupo num computador que é membro do domínio, o grupo é um grupo de segurança local. Se o computador for um controlador de domínio, o grupo é um grupo local de domínio. Este tipo de grupo é partilhado entre todos os controladores de domínio no domínio.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Configuração Manager_CollectedFilesAccess
 
 O Gestor de Configuração utiliza este grupo para conceder acesso a ficheiros de visualização recolhidos pelo inventário de software.  
 
@@ -114,14 +114,14 @@ O Gestor de Configuração gere automaticamente a adesão ao grupo. A associaç�
 Por predefinição, este grupo tem a permissão **de Leitura** para a seguinte pasta no servidor do site:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuração Manager_DViewAccess  
 
 Este grupo é um grupo de segurança local que o Gestor de Configuração cria no servidor de base de dados do site ou no servidor de réplica de base de dados para um site primário infantil. O site cria-o quando utiliza vistas distribuídas para replicação de bases de dados entre sites numa hierarquia. Contém o servidor do site e contas de computador SQL Server do site da administração central.
 
 Para mais informações, consulte [transferências de dados entre sites](data-transfers-between-sites.md).
 
 
-### <a name="configmgr-remote-control-users"></a>Utilizadores do Controlo Remoto do ConfigMgr  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Utilizadores de controlo remoto do Gestor de Configuração  
 
 As ferramentas remotas do Gestor de Configuração utilizam este grupo para armazenar as contas e grupos que configura na lista de **Espectadores Permitidos.** O site atribui esta lista a cada cliente.  
 
@@ -166,7 +166,7 @@ Pode ver os direitos e permissões do grupo SMS Admins no snap-in do **WMI Contr
 Quando utilizar uma consola de Configuração Remota, configure as permissões dCOM de **ativação remota** tanto no computador do servidor do site como no Fornecedor SMS. Conceda estes direitos ao grupo **SMS Admins.** Esta ação simplifica a administração em vez de conceder esses direitos diretamente aos utilizadores ou grupos. Para mais informações, consulte [as permissões do DCOM configurar para as consolas remote Configuration Manager](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>código&lt;de site SMS_SiteSystemToSiteServerConnection_MP_\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>código de site SMS_SiteSystemToSiteServerConnection_MP_ &lt;\>  
  
 Os pontos de gestão que são remotos do servidor do site utilizam este grupo para se conectarem à base de dados do site. Este grupo fornece acesso de ponto de gestão às pastas a receber no servidor do site e na base de dados do site.  
 
@@ -179,10 +179,10 @@ Ao desinstalar um site, este grupo não é automaticamente removido. Elimine-o m
 O Gestor de Configuração gere automaticamente a adesão ao grupo. Por predefinição, a associação inclui as contas de computador de computadores remotos que têm um ponto de gestão para o site.
 
 #### <a name="permissions"></a>Permissões
-Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Este grupo tem a permissão adicional da **Write** para subpastas abaixo **das caixas**de entrada , às quais o ponto de gestão escreve os dados do cliente.
+Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Este grupo tem a permissão adicional da **Write** para subpastas abaixo **das caixas**de entrada , às quais o ponto de gestão escreve os dados do cliente.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>código&lt;de site SMS_SiteSystemToSiteServerConnection_SMSProv_\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; código de site\>  
  
 Os computadores Remote SMS Provider utilizam este grupo para se ligarem ao servidor do site.  
 
@@ -195,11 +195,11 @@ Ao desinstalar um site, este grupo não é automaticamente removido. Elimine-o m
 O Gestor de Configuração gere automaticamente a adesão ao grupo. Por predefinição, a subscrição inclui a conta de computador ou uma conta de utilizador de domínio. Utiliza esta conta para se ligar ao servidor do site a partir de cada Fornecedor SMS remoto.
 
 #### <a name="permissions"></a>Permissões
-Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Este grupo tem as permissões adicionais de **Write** and **Modify** para subpastas abaixo das caixas de entrada. O Fornecedor SMS requer acesso a estas pastas.
+Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Este grupo tem as permissões adicionais de **Write** and **Modify** para subpastas abaixo das caixas de entrada. O Fornecedor SMS requer acesso a estas pastas.
 
-Este grupo também tem permissão **de leitura** para `C:\Program Files\Microsoft Configuration Manager\OSD\Bin`as subpastas no servidor do site abaixo . 
+Este grupo também tem permissão **de leitura** para as subpastas no servidor do site abaixo `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
-Tem também as seguintes permissões `C:\Program Files\Microsoft Configuration Manager\OSD\boot`para as subpastas abaixo:
+Tem também as seguintes permissões para as subpastas `C:\Program Files\Microsoft Configuration Manager\OSD\boot` abaixo:
 - **Leitura**  
 - **Ler & executar**  
 - **Listar conteúdos de pastas**  
@@ -207,7 +207,7 @@ Tem também as seguintes permissões `C:\Program Files\Microsoft Configuration M
 - **Modificar**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>código&lt;de site SMS_SiteSystemToSiteServerConnection_Stat_\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>código de site SMS_SiteSystemToSiteServerConnection_Stat_ &lt;\>  
 
 O componente do gestor de despacho de ficheiros nos computadores do sistema remoto do Gestor de Configuração utiliza este grupo para se ligar ao servidor do site.  
 
@@ -220,12 +220,12 @@ Ao desinstalar um site, este grupo não é automaticamente removido. Elimine-o m
 O Gestor de Configuração gere automaticamente a adesão ao grupo. Por predefinição, a subscrição inclui a conta de computador ou a conta de utilizador de domínio. Utiliza esta conta para se ligar ao servidor do site a partir de cada sistema de site remoto que executa o gestor de despacho de ficheiros.
 
 #### <a name="permissions"></a>Permissões
-Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta e as suas subpastas no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes`. 
+Por predefinição, este grupo tem **Read**, **Read & executar**, e lista a permissão de conteúdo da **pasta** para a seguinte pasta e as suas subpastas no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes` . 
 
-Este grupo tem as permissões adicionais de **Escrever** e `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` **Modificar** para a seguinte pasta no servidor do site: .
+Este grupo tem as permissões adicionais de **Escrever** e **Modificar** para a seguinte pasta no servidor do site: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>código&lt;de site SMS_SiteToSiteConnection_\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; código de site\>  
 O Gestor de Configuração utiliza este grupo para permitir a replicação baseada em ficheiros entre sites numa hierarquia. Para cada site remoto que transfere diretamente ficheiros para este site, este grupo tem contas configuradas como conta de replicação de **ficheiros**.  
 
 #### <a name="type-and-location"></a>Tipo e localização
@@ -237,7 +237,7 @@ Quando instala um novo site como criança de outro site, o Gestor de Configuraç
 Ao desinstalar um site, este grupo não é automaticamente removido. Elimine-o manualmente depois de desinstalar um site.
 
 #### <a name="permissions"></a>Permissões
-Por predefinição, este grupo tem `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`controlo **total** para a seguinte pasta: .
+Por predefinição, este grupo tem **controlo total** para a seguinte pasta: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive` .
 
 
 
@@ -245,6 +245,8 @@ Por predefinição, este grupo tem `C:\Program Files\Microsoft Configuration Man
 
 Pode configurar as seguintes contas para O Gestor de Configuração.  
 
+> [!TIP]
+> Não utilize o carácter percentual na `%` palavra-passe para contas que especifica na consola 'Gestor de Configuração'. A conta não autenticará.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Conta de descoberta de grupo de diretório ativo  
 
@@ -382,7 +384,7 @@ Os computadores clientes usam a conta de acesso à **rede** quando não podem us
 
 Um cliente do Gestor de Configuração tenta primeiro utilizar a sua conta de computador para descarregar o conteúdo. Se falhar, tenta automaticamente a conta de acesso à rede.  
 
-A partir da versão 1806, um grupo de trabalho ou um cliente filiado em Azure AD pode aceder de forma segura a conteúdos a partir de pontos de distribuição sem a necessidade de uma conta de acesso à rede. Este comportamento inclui cenários de implementação de OS com uma sequência de tarefas que funciona a partir de suportes de arranque, PXE ou Software Center. Para mais informações, consulte [O HTTP Melhorado](enhanced-http.md).<!--1358228,1358278-->
+Se configurar o site para HTTPS ou [Enhanced HTTP,](enhanced-http.md)um grupo de trabalho ou um cliente com a AD azure pode aceder de forma segura a conteúdos a partir de pontos de distribuição sem a necessidade de uma conta de acesso à rede. Este comportamento inclui cenários de implementação de OS com uma sequência de tarefas que funciona a partir de suportes de arranque, PXE ou Software Center.<!--1358228,1358278--> Para mais informações, consulte cliente para a comunicação de pontos de [gestão.](communications-between-endpoints.md#bkmk_client2mp)<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Se ativar o **HTTP melhorado** para não necessitar da conta de acesso à rede, o ponto de distribuição tem de ser executar o Windows Server 2012 ou mais tarde. <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ Os Serviços de Relato do Servidor SQL utilizam a conta de ponto de **ponto de r
 > A conta que especifica deve ter registo de permissões **locais** no computador que acolhe a base de dados dos Serviços de Informação SQL.
 
 > [!NOTE]  
-> A conta é automaticamente concedida todos os direitos necessários sendo adicionado ao smsschm_users Papel de Base de Dados SQL na base de dados ConfigMgr.
+> A conta é automaticamente concedida todos os direitos necessários sendo adicionado ao smsschm_users Função base de dados SQL na base de dados do Gestor de Configuração.
 
 Para mais informações, consulte [Introdução a relatórios.](../../servers/manage/introduction-to-reporting.md)
 
@@ -643,41 +645,41 @@ Este objeto é usado para executar execuções de reporte SQL.  O seguinte proce
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Funções de base de dados que o Gestor de Configuração utiliza no SQL
 <!--SCCMDocs issue #1160-->
-O Gestor de Configuração cria e mantém automaticamente os seguintes objetos de função no SQL. Estas funções fornecem acesso a procedimentos, tabelas, pontos de vista e funções específicos armazenados para executar as ações necessárias de cada função para recuperar dados ou inserir dados de e para a base de dados ConfigMgr. Estes objetos estão localizados na base de dados do Gestor de Configuração sob funções de segurança/roles/base de dados.
+O Gestor de Configuração cria e mantém automaticamente os seguintes objetos de função no SQL. Estas funções fornecem acesso a procedimentos, tabelas, visualizações e funções específicos armazenados para executar as ações necessárias de cada função para recuperar dados ou inserir dados de e para a base de dados do Gestor de Configuração. Estes objetos estão localizados na base de dados do Gestor de Configuração sob funções de segurança/roles/base de dados.
 
 > [!IMPORTANT]  
-> Modificar ou remover estes objetos pode causar problemas drásticos dentro de um ambiente de Gestor de Configuração.  Recomendamos que não faça alterações a estes objetos.
+> Modificar ou remover estes objetos pode causar problemas drásticos dentro de um ambiente de Gestor de Configuração. Não mude estes objetos. A lista que se segue é apenas para fins informantes.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Importações de licenças de volume de inteligência de ativos. A ConfigMgr concede esta permissão às contas dos utilizadores com base no acesso da RBA para poder importar licença de volume para ser usada com a Asset Intelligence.  Esta conta poderia ser adicionada por uma função de administrador completo ou por uma função de Gestor de Ativos.
+Importações de licenças de volume de inteligência de ativos. O Gestor de Configuração concede esta permissão às contas dos utilizadores com base no acesso da RBA para poder importar licença de volume para ser usada com inteligência de ativos.  Esta conta poderia ser adicionada por uma função de administrador completo ou por uma função de Gestor de Ativos.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Sincronização de atualização de inteligência de ativos. A ConfigMgr concede à conta de computador que acolhe o acesso à conta de Asset Intelligence Synchronization Point para obter dados de procuração de Inteligência de Ativos e para visualizar dados de IA pendentes para upload.
+Sincronização de atualização de inteligência de ativos. O Gestor de Configuração concede à conta de computador que acolhe o acesso à conta de Sincronização de Informação de Ativos para obter dados de procuração de Inteligência de Ativos e para visualizar dados de IA pendentes para upload.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Fora da Gestão de Bandas. Esta função é usada pela função AMT do Gestor de Configuração para recuperar dados em dispositivos que suportavam a Intel AMT.
 
 > [!NOTE]  
-> Este papel é depreciado em lançamentos mais recentes da ConfigMgr.
+> Este papel é depreciado em lançamentos mais recentes do Gestor de Configuração.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Suporte de proteção do centro de pontos de registo de certificados (SCEP). A ConfigMgr concede autorização à conta informática do sistema de site que suporta o Ponto de Registo de Certificado scep para a assinatura e renovação de certificados.
+Ponto de registo de certificado suster Protocolo de Inscrição simples de Certificado (SCEP). O Gestor de Configuração concede permissão à conta de computador do sistema de site que suporta o Ponto de Registo de Certificado para suporte SCEP para assinatura e renovação de certificados.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-Suporte PFX ponto de registo do certificado. A ConfigMgr concede autorização à conta de computador do sistema de site que suporta o Ponto de Registo de Certificado configurado para suporte PFX para assinatura e renovação.
+Suporte PFX ponto de registo do certificado. O Gestor de Configuração concede permissão à conta de computador do sistema do site que suporta o Ponto de Registo de Certificado configurado para suporte PFX para assinatura e renovação.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Ponto de gestão de dispositivos. A ConfigMgr concede esta permissão para a conta informática de um Ponto de Gestão que tem a opção: "Permitir que dispositivos móveis e Computador Mac usem este ponto de gestão", a capacidade de fornecer suporte para dispositivos matriculados em MDM.
+Ponto de gestão de dispositivos. O Gestor de Configuração concede esta permissão à conta de computador para um Ponto de Gestão que tem a opção: "Permitir que dispositivos móveis e Computador Mac usem este ponto de gestão", a capacidade de fornecer suporte para dispositivos matriculados em MDM.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Ponto de ligação de serviço. A ConfigMgr concede esta permissão à conta de computador que acolhe o Ponto de Ligação de Serviço para recuperar e fornecer dados de telemetria, gerir serviços na nuvem e recuperar atualizações de serviços.
+Ponto de ligação de serviço. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Ponto de Ligação de Serviço para recuperar e fornecer dados de telemetria, gerir serviços na nuvem e recuperar atualizações de serviço.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Vistas distribuídas. O Gestor de Configuração concede esta permissão à cont
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Armazém de Dados. A ConfigMgr concede esta permissão à conta de computador que acolhe o papel de Data Warehouse.
+Armazém de Dados. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o papel de Data Warehouse.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Ponto de matrícula. A ConfigMgr concede esta permissão à conta de computador que acolhe o Ponto de Inscrição para permitir a inscrição do dispositivo através do MDM.
+ Ponto de matrícula. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Ponto de Inscrição para permitir a inscrição do dispositivo através do MDM.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Proporciona acesso a todas as vistas de esquemas estendidas.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Serviço de Gerente de Hierarquia. A ConfigMgr concede permissões a esta conta para gerir as mensagens de estado failover e as transações de SQL Server Broker entre sites dentro de uma hierarquia.
+Serviço de Gerente de Hierarquia. O Gestor de Configuração concede permissões a esta conta para gerir as mensagens de estado failover e as transações de SQL Server Broker entre sites dentro de uma hierarquia.
 
 > [!NOTE]  
 > O papel smdbrole_WebPortal é um membro deste papel por defeito.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Serviço Multicast. A ConfigMgr concede esta permissão à conta de computador do Ponto de Distribuição que suporta o multicast.
+Serviço Multicast. O Gestor de Configuração concede esta permissão à conta de computador do Ponto de Distribuição que suporta o multicast.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Ponto de gestão. A ConfigMgr concede esta permissão à conta de computador que acolhe a função Management Point para prestar apoio aos clientes da ConfigMgr.
+Ponto de gestão. O Gestor de Configuração concede esta permissão à conta de computador que acolhe a função Management Point para fornecer suporte aos clientes do Gestor de Configuração.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Ponto de gestão Microsoft BitLocker Administration and Monitoring. A ConfigMgr concede esta permissão à conta de computador que acolhe o Ponto de Gestão que gere o MBAM para um ambiente.
+Ponto de gestão Microsoft BitLocker Administration and Monitoring. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Ponto de Gestão que gere o MBAM para um ambiente.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Pedido de pedido de pedido de ponto de gestão. A ConfigMgr concede esta permissão à conta de computador que acolhe o Ponto de Gestão para apoiar os pedidos de aplicação baseados no utilizador.
+Pedido de pedido de pedido de ponto de gestão. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Ponto de Gestão para apoiar pedidos de aplicação baseados no utilizador.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ Provedor de SMS. O Gestor de Configuração concede esta permissão à conta de 
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Servidor do site. A ConfigMgr concede esta permissão à conta de computador que acolhe o Sítio Principal ou CAS.
+Servidor do site. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Sítio Principal ou CAS.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Ponto de atualização de software. A ConfigMgr concede esta permissão à conta de computador que acolhe o Ponto de Atualização de Software para trabalhar com atualizações de terceiros.
+Ponto de atualização de software. O Gestor de Configuração concede esta permissão à conta de computador que acolhe o Ponto de Atualização de Software para trabalhar com atualizações de terceiros.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Ponto do web site do catálogo de aplicações. A ConfigMgr concede permissão à conta de computador que acolhe o Ponto do Web Site do Catálogo de Aplicações para fornecer a implementação da aplicação baseada no utilizador.
+Ponto do web site do catálogo de aplicações. O Gestor de Configuração concede permissão à conta de computador que acolhe o Ponto do Web Site do Catálogo de Aplicações para fornecer a implementação da aplicação baseada no utilizador.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Acesso ao relatório do utilizador. A ConfigMgr concede acesso à conta utilizada para a conta de ponto de reporte de serviços de informação para permitir o acesso às visualizações de reporte de SMS para exibir os dados de relatórios do Gestor de Configuração.  Os dados são ainda restringidos com a utilização da RBA.
+Acesso ao relatório do utilizador. O Gestor de Configuração concede acesso à conta utilizada para a conta ponto de reporte de Serviços de Informação para permitir o acesso às visualizações de relatórios sms para exibir os dados de relatórios do Gestor de Configuração.  Os dados são ainda restringidos com a utilização da RBA.
+
+## <a name="elevated-permissions"></a>Permissões elevadas
+
+<!-- SCCMDocs#405 -->
+
+O Gestor de Configuração requer que algumas contas tenham permissões elevadas para operações em curso. Por exemplo, consulte [os pré-requisitos para a instalação de um local primário](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). A lista que se segue resume estas permissões e as razões pelas quais são necessárias.
+
+- A conta de computador do servidor do site primário e do servidor do site da administração central requer:
+
+  - Direitos do Administrador Local em todos os servidores do sistema do site. Esta permissão é gerir, instalar e remover serviços do sistema. O servidor do site também atualiza os grupos locais no sistema do site quando adiciona ou remove funções.
+
+  - Acesso sysadmin à instância SQL para a base de dados do site. Esta permissão é configurar e gerir o SQL para o site. O Gestor de Configuração integra-se firmemente com o SQL, não é apenas uma base de dados.
+
+- As contas de utilizador na função de Administrador Completo requerem:
+
+  - Direitos do Administrador Local em todos os servidores do site. Esta permissão é visualizar, editar, remover e instalar serviços de sistema, chaves e valores de registo e objetos WMI.
+
+  - Acesso sysadmin à instância SQL para a base de dados do site. Esta permissão é instalar e atualizar a base de dados durante a configuração ou recuperação. Também é necessário para manutenção e operações SQL. Por exemplo, reindexar e atualizar estatísticas.
+
+    > [!NOTE]
+    > Algumas organizações podem optar por remover o acesso à sysadmina e apenas concedê-la quando é necessário. Este comportamento é por vezes referido como "acesso just-in-time (JIT)". Neste caso, os utilizadores com a função de Administrador Completo devem ainda ter acesso a procedimentos de leitura, atualização e execução na base de dados do Gestor de Configuração. Estas permissões permitem-lhes resolver a maioria dos problemas sem acesso total à sisadmina.

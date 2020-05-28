@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718148"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268985"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Pré-requisitos para instalar sites do Gestor de Configuração
 
@@ -49,6 +49,9 @@ Se estiver a instalar um site de administração central como parte de uma expan
 
         > [!IMPORTANT]  
         > Quando a configuração do Gestor de Configuração terminar, a conta de computador do servidor do site deve reter direitos de sysadmin para o Servidor SQL. Não remova os direitos de sinadmina SQL desta conta.  
+
+    > [!NOTE]
+    > Para obter mais informações sobre a necessidade destas permissões após a configuração, consulte [permissões elevadas](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - Se estiver a instalar um site primário, precisa dos seguintes direitos adicionais:  
 
@@ -134,7 +137,7 @@ Depois de expandir o site, precisa de reconfigurar os seguintes serviços Azure 
 - [Loja Microsoft para Empresas](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Gateway de gestão da cloud](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Na versão 1806 e mais tarde, renovar a chave secreta do inquilino do Azure Ative Directory. Para mais informações, consulte [Renovar a chave secreta.](../configure/azure-services-wizard.md#bkmk_renew)
+O método mais fácil é renovar a chave secreta do inquilino do Azure Ative Directory. Para mais informações, consulte [Renovar a chave secreta.](../configure/azure-services-wizard.md#bkmk_renew)
 
 Em alternativa, remova e recrie a ligação a esse serviço:
 
@@ -167,6 +170,6 @@ Seguem-se os pré-requisitos para a instalação de locais secundários:
 - O servidor de site secundário deve satisfazer todas as configurações pré-requisitos. Estas configurações incluem o SQL Server e as funções padrão do sistema do site do ponto de gestão e ponto de distribuição.  
 
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Depois de confirmar os pré-requisitos, está pronto para executar a configuração. Para mais informações, consulte [Utilize o Assistente de Configuração para instalar os sites do Gestor](use-the-setup-wizard-to-install-sites.md)de Configuração .

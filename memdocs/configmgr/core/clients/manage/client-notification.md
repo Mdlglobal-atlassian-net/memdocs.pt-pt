@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714095"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427810"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notificação do cliente no Gestor de Configuração
 
@@ -153,6 +153,9 @@ A partir da versão 1910, existem novas ações de dispositivos para **diagnóst
 Para obter mais informações sobre estas definições, consulte [sobre ficheiros](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client)de registo .
 
 Acompanhe o estado da tarefa no **diagnóstico.log** no cliente. Quando os registos dos clientes são recolhidos, informações adicionais são registadas em **MP_SinvCollFile.log** no ponto de gestão e **sinvproc.log** no servidor do site.
+
+> [!Tip]
+> Os registos de clientes recolhidos são armazenados de acordo com as definições de recolha de ficheiros de inventário de software. Os ficheiros são armazenados no servidor do site no **inbox\sinv.box\FileCol** diretório. Não há limite definido para o número de versões. A tarefa de manutenção do site [Eliminar Ficheiros Recolhidos](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) elimina os ficheiros numa programação, que por padrão é a cada 90 dias.
 
 ### <a name="prerequisites---client-diagnostics"></a>Pré-requisitos - Diagnósticos de clientes
 

@@ -10,12 +10,13 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6710170d6c86f59b1626285c618f3108f8947974
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.reviewer: acabello
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619445"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824069"
 ---
 # <a name="what-is-desktop-analytics"></a>O que é a Análise de Computadores?
 
@@ -93,7 +94,7 @@ Para utilizar o Desktop Analytics, certifique-se de que o seu ambiente cumpre os
     > Desktop Analytics suporta várias hierarquias do Gestor de Configuração reportando a um único inquilino azure AD.<!-- 4814075 --> Se tiver várias hierarquias no seu ambiente, tem as seguintes opções:
     >
     > - Use diferentes IDs Comerciais e inquilinos da Azure AD.
-    > - Configure ambas as hierarquias para usar o mesmo ID comercial para partilhar o inquilino da AD Azure e a instância desktop Analytics.
+    > - Configure ambas as hierarquias para usar o mesmo ID comercial para partilhar o inquilino da AD Azure e a instância desktop Analytics. Utilize [diferentes aplicativos](connect-configmgr.md#bkmk_connect) para ligar cada hierarquia. Pode levar até 30 dias após desligar uma hiearquia para o portal refletir alterações. 
 
 - Dispositivos com windows 7, Windows 8.1 ou Windows 10  
 
@@ -106,7 +107,7 @@ Para utilizar o Desktop Analytics, certifique-se de que o seu ambiente cumpre os
     >
     > O Desktop Analytics foi concebido para melhor suportar o cenário de atualização no local. Se precisar de fazer grandes alterações, como de arquitetura de 32 a 64 bits, use um cenário de imagem. As ideias do Desktop Analytics ainda são valiosas nestes cenários clássicos de implementação do SO, mas pode ignorar a orientação específica de upgrade no local. Para mais informações, consulte [Cenários para implantar sistemas operativos empresariais com o Gestor](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)de Configuração .
 
-- Dados de diagnóstico do Windows. Para obter mais informações, veja os artigos seguintes:  
+- Dados de diagnóstico do Windows. Para obter mais informações, veja os seguintes artigos:  
 
     - [Níveis de dados de diagnóstico](enable-data-sharing.md#diagnostic-data-levels)  
 
@@ -140,7 +141,7 @@ Para utilizar o Desktop Analytics, certifique-se de que o seu ambiente cumpre os
 > [!NOTE]
 > Para além do custo destas subscrições de licença, não há custos adicionais para a utilização do Desktop Analytics dentro do Azure Log Analytics. Os tipos de dados ingeridos pelo Desktop Analytics estão isentos de quaisquer encargos de ingestão e retenção de dados do Log Analytics. Como tipos de dados não faturados, estes dados também não estão sujeitos a nenhuma tampa de ingestão diária de dados do Log Analytics. Para mais informações, consulte o [uso e os custos do Log Analytics.](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 O seguinte tutorial fornece um guia passo a passo para começar com desktop Analytics e Gestor de Configuração:
   

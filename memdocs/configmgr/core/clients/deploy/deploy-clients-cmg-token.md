@@ -1,5 +1,5 @@
 ---
-title: Autenticação à base de token para CMG
+title: Autenticação baseada em token para CMG
 titleSuffix: Configuration Manager
 description: Registe um cliente na rede interna para obter um símbolo único ou crie um sinal de registo a granel para dispositivos baseados na Internet.
 ms.date: 04/29/2020
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587269"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709401"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticação baseada em token para gateway de gestão de nuvem
 
@@ -25,7 +25,7 @@ ms.locfileid: "82587269"
 
 O gateway de gestão de nuvem (CMG) suporta muitos tipos de clientes, mas mesmo com [o Enhanced HTTP,](../../plan-design/hierarchy/enhanced-http.md)estes clientes requerem um certificado de [autenticação do cliente.](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway) Este requisito de certificado pode ser um desafio para a disponibilização de clientes baseados na Internet que muitas vezes não se conectam à rede interna, não são capazes de aderir ao Azure Ative Directory (Azure AD), e não têm um método para instalar um certificado emitido pelo PKI.
 
-A partir da versão 2002, o Gestor de Configuração alarga o suporte do dispositivo com os seguintes métodos:
+Para superar estes desafios, a partir da versão 2002, o Configuração Manager alarga o suporte do seu dispositivo com os seguintes métodos:
 
 - Registe-se na rede interna para um símbolo único
 
@@ -54,7 +54,7 @@ Se não conseguir instalar e registar clientes na rede interna, crie um sinal de
 
 1. Abra uma linha de comandos como administrador.
 
-1. Executar a ferramenta `\bin\X64` a partir da pasta do diretório `BulkRegistrationTokenTool.exe`de instalação do Gestor de Configuração no servidor do site: . Crie um novo `/new` símbolo com o parâmetro. Por exemplo, `BulkRegistrationTokenTool.exe /new`. Para mais informações, consulte o uso da [ferramenta token de registo a granel](#bulk-registration-token-tool-usage).
+1. Executar a ferramenta a partir `\bin\X64` da pasta do diretório de instalação do Gestor de Configuração no servidor do site: `BulkRegistrationTokenTool.exe` . Crie um novo símbolo com o `/new` parâmetro. Por exemplo, `BulkRegistrationTokenTool.exe /new`. Para mais informações, consulte o uso da [ferramenta token de registo a granel](#bulk-registration-token-tool-usage).
 
 1. Copie o símbolo e guarde-o num local seguro.
 
@@ -71,7 +71,7 @@ Não é possível criar um sinal de registo em massa num site que tenha um servi
 
 ### <a name="bulk-registration-token-tool-usage"></a>Utilização da ferramenta simbólica de registo a granel
 
-A `BulkRegistrationTokenTool.exe` ferramenta está `\bin\X64` na pasta do diretório de instalação do Gestor de Configuração no servidor do site. Inscreva-se no servidor do site e execute-o como administrador. Suporta os seguintes parâmetros de linha de comando:
+A `BulkRegistrationTokenTool.exe` ferramenta está na pasta do `\bin\X64` diretório de instalação do Gestor de Configuração no servidor do site. Inscreva-se no servidor do site e execute-o como administrador. Suporta os seguintes parâmetros de linha de comando:
 
 - `/?`
 - `/new`
@@ -99,9 +99,31 @@ O símbolo não está guardado no cliente ou no site. Certifique-se de copiar o 
 
 #### <a name="lifetime"></a>/vida útil
 
-Utilize `/new` com parâmetro para especificar o período de validade do símbolo. Especifique um valor inteiro em minutos. O valor predefinido é de 4.320 (três dias). O valor máximo é de 10.080 (sete dias).
+Utilize com `/new` parâmetro para especificar o período de validade do símbolo. Especifique um valor inteiro em minutos. O valor predefinido é de 4.320 (três dias). O valor máximo é de 10.080 (sete dias).
 
-Exemplo: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Exemplo: `BulkRegistrationTokenTool.exe /lifetime 4320`
+
+## <a name="bulk-registration-token-management"></a>Gestão simbólica de registo a granel
+
+Pode ver fichas de registo a granel previamente criadas e suas vidas na consola Do Gestor de Configuração e bloquear o seu uso se necessário. A base de dados do site, no entanto, não armazena fichas de registo a granel.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Para rever um símbolo de registo a granel
+
+1. Na consola do Configuration Manager, clique em **Administração**.
+
+2. No espaço de trabalho da Administração, expandir **segurança,** clicar **em Certificados.** A consola lista todos os certificados relacionados com o site e fichas de registo a granel no painel de detalhes.
+
+3. Selecione o símbolo de registo a granel para rever.
+
+Pode identificar fichas específicas de registo a granel com base no seu GUID. Os GUIDs para fichas de registo a granel são apresentados no tempo de criação do símbolo. Também pode filtrar ou classificar na coluna **Tipo,** se necessário.
+
+#### <a name="to-block-a-bulk-registration-token"></a>Para bloquear um sinal de registo a granel
+
+1. Na consola do Configuration Manager, clique em **Administração**.
+
+2. No espaço de trabalho da Administração, expandir **Segurança,** clicar **em Certificados,** e selecionar o símbolo de registo a granel para bloquear.
+
+3. No separador **Home** da barra de fita ou no menu de conteúdo do clique direito, selecione **Bloquear**. Inversamente, pode desbloquear fichas de registo a granel previamente bloqueadas selecionando **Desbloquear** o separador **Home** da barra de fita ou o menu de conteúdo do clique direito.
 
 ## <a name="see-also"></a>Consulte também
 

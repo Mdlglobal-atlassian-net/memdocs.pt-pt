@@ -2,7 +2,7 @@
 title: Monitorizar implementações do sistema operativo
 titleSuffix: Configuration Manager
 description: Para ajudá-lo a monitorizar os objetos de implementação do sistema operativo, a consola Do Gestor de Configuração fornece alertas, relatórios e vários indicadores de estado.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723832"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802171"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Monitorizar implementações do sistema operativo no Gestor de Configuração
 
@@ -45,6 +45,9 @@ A consola 'Gestor de Configuração' fornece as seguintes formas de o ajudar a m
 3.  Clique na sequência de tarefas para a qual pretende monitorizar o estado de implementação.  
 
 4.  No separador **Home Page** , no grupo **Implementação** , clique em **Ver Estado**.  
+
+> [!NOTE]  
+> Quando uma atualização é iniciada, a mensagem de estado 52200 é gerada. Isto contém o utilizador que fez a atualização.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a>Relatórios de implantação do sistema operativo  
  Existem muitos relatórios de implementação do sistema operativo predefinidos disponíveis. Estes relatórios estão organizados em várias categorias e podem ser utilizados para reportar informações específicas sobre migração de estado e implementações de sequências de tarefas. Além de utilizar os relatórios pré-configurados, também pode criar relatórios de atualização de software personalizados, adequados às necessidades da sua empresa. Para mais informações, consulte [Operações e manutenção para reportagem](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

@@ -2,7 +2,7 @@
 title: Cache Ligada da Microsoft
 titleSuffix: Configuration Manager
 description: Utilize o seu ponto de distribuição do Gestor de Configuração como um servidor de cache local para otimização de entrega
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714970"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878500"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Cache conectado da Microsoft no gestor de configuração
 
@@ -26,7 +26,7 @@ ms.locfileid: "81714970"
 A partir da versão 1906, pode instalar um servidor Microsoft Connected Cache nos seus pontos de distribuição. Ao gravar este conteúdo no local, os seus clientes podem beneficiar da funcionalidade de Otimização de Entrega, mas pode ajudar a proteger os links WAN.
 
 > [!NOTE]
-> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache (DOINC).
+> A partir da versão 1910, esta funcionalidade chama-se **Microsoft Connected Cache**. Anteriormente era conhecido como Delivery Optimization In-Network Cache.
 
 Este servidor de cache funciona como uma cache transparente a pedido para conteúdos descarregados pela Otimização da Entrega. Utilize as definições do cliente para se certificar de que este servidor é oferecido apenas aos membros do grupo de limites do Gestor de Configuração local.
 
@@ -99,15 +99,29 @@ Quando configura os clientes para utilizar o servidor Connected Cache, já não 
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Nota 1: Sobre a seleção de unidades
 
-Se selecionar **Automático**, quando o Gestor de Configuração instala o componente 'Cache Connected', ele honra o ficheiro **no_sms_on_drive.sms.** Por exemplo, o ponto `C:\no_sms_on_drive.sms`de distribuição tem o ficheiro . Mesmo que o C: unidade tenha o espaço mais livre, o Gestor de Configuração configura a Connected Cache para utilizar outra unidade para a sua cache.
+Se selecionar **Automático**, quando o Gestor de Configuração instala o componente 'Cache Connected', ele honra o ficheiro **no_sms_on_drive.sms.** Por exemplo, o ponto de distribuição tem o ficheiro `C:\no_sms_on_drive.sms` . Mesmo que o C: unidade tenha o espaço mais livre, o Gestor de Configuração configura a Connected Cache para utilizar outra unidade para a sua cache.
 
-Se selecionar uma unidade específica que já tenha o ficheiro **no_sms_on_drive.sms,** o Gestor de Configuração ignora o ficheiro. Configurar a Cache Conectada para utilizar essa unidade é uma intenção explícita. Por exemplo, o ponto `F:\no_sms_on_drive.sms`de distribuição tem o ficheiro . Quando configura explicitamente as propriedades do ponto de distribuição para utilizar o **F:** unidade, Configuração Gestor de Configuração configura Cache Conectada para utilizar o F: unidade para a sua cache.
+Se selecionar uma unidade específica que já tenha o ficheiro **no_sms_on_drive.sms,** o Gestor de Configuração ignora o ficheiro. Configurar a Cache Conectada para utilizar essa unidade é uma intenção explícita. Por exemplo, o ponto de distribuição tem o ficheiro `F:\no_sms_on_drive.sms` . Quando configura explicitamente as propriedades do ponto de distribuição para utilizar o **F:** unidade, Configuração Gestor de Configuração configura Cache Conectada para utilizar o F: unidade para a sua cache.
 
 Para alterar a unidade depois de instalar a Cache Conectada:
 
 - Configure manualmente as propriedades do ponto de distribuição para utilizar uma letra de unidade específica.
 
 - Se for definido como automático, crie primeiro o ficheiro **no_sms_on_drive.sms.** Em seguida, faça algumaalteração nas propriedades do ponto de distribuição para desencadear uma mudança de configuração.
+
+### <a name="automation"></a>Automatização
+
+<!-- SCCMDocs#1911 -->
+
+Pode utilizar o Gestor de Configuração SDK para automatizar a configuração das definições de Cache conectadas pelo Microsoft num ponto de distribuição. Como é o caso de todas as funções do site, utilize a [classe SMS_SCI_SysResUse WMI](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). Para mais informações, consulte [programação das funções do site.](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)
+
+Quando atualizar o **SMS_SCI_SysResUse** instância para o ponto de distribuição, detete as seguintes propriedades:
+
+- **AcordoDOINCLicença**: Desemlicença `1` para aceitar os termos da licença.
+- **Bandeiras**: `|= 4` Ativar, desativar`&= ~4`
+- **DiskSpaceDOINC**: Definido para `Percentage` ou`GB`
+- **RetençãoDOINCCache**: Definido para `0` ou`1`
+- **LocalDriveDOINC**: Definir `Automatic` para, ou uma carta de unidade específica, como `C:` ou`D:`
 
 ## <a name="verify"></a>Verificar
 
@@ -158,7 +172,7 @@ A partir da versão 1910, quando activao Cache Conectado nos pontos de distribui
 
 - Ativar a funcionalidade de pré-lançamento **Aplicações cliente para dispositivos cogeridos**. Para mais informações, consulte [as funcionalidades de pré-lançamento](../../servers/manage/pre-release-features.md).
 
-- Ative a cogestão e mude a carga de trabalho das **aplicações do Cliente** para **Pilot Intune** ou **Intune**. Para obter mais informações, veja os artigos seguintes:
+- Ative a cogestão e mude a carga de trabalho das **aplicações do Cliente** para **Pilot Intune** ou **Intune**. Para obter mais informações, veja os seguintes artigos:
 
   - [Cargas de trabalho - Aplicativos de clientes](../../../comanage/workloads.md#client-apps)
   - [Como permitir a cogestão](../../../comanage/how-to-enable.md)

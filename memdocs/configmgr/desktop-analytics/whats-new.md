@@ -2,7 +2,7 @@
 title: Novidades no Desktop Analytics
 titleSuffix: Configuration Manager
 description: Um resumo das novas funcionalidades no mais recente lançamento mensal do serviço de cloud Desktop Analytics.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693146"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268169"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novidades no Desktop Analytics
 
@@ -26,6 +27,16 @@ Saiba o que há de novo todos os meses no Desktop Analytics.
 
 Para ser notificado quando esta página for atualizada, copie e cole o seguinte URL no seu leitor de feed RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Maio de 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Reduzir o número de apps para revisão
+
+<!-- 5542186 -->
+
+Para ajudar a consolidar e reduzir o número de aplicações mostradas na página de ativos no portal, agora combina todas as versões de apps com o mesmo nome e editor. A contagem de aplicações no azulejo **Noteworthy Apps** reflete esta configuração. Por exemplo, em vez de listar centenas de casos de Microsoft Edge, há um exemplo para todas as versões. Pode tomar decisões uma vez para todas as versões. Se precisar de tomar decisões sobre versões específicas de uma aplicação, este comportamento é configurável.
+
+Para mais informações, consulte [sobre ativos - Apps](about-assets.md#apps).
 
 ## <a name="march-2020"></a>Março de 2020
 
@@ -41,7 +52,7 @@ Agora pode ligar várias hierarquias do Gestor de Configuração a um único inq
 > [!NOTE]
 > O suporte para várias hierarquias requer a versão 1910 ou mais tarde do Gestor de Configuração.
 
-Para obter mais informações, veja os artigos seguintes:
+Para obter mais informações, veja os seguintes artigos:
 
 - [Piloto global](deploy-pilot.md#bkmk_GlobalPilot)
 - [Como criar planos de implantação](create-deployment-plans.md)

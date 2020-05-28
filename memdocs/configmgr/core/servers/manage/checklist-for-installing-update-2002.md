@@ -2,7 +2,7 @@
 title: Lista de verificação para 2002
 titleSuffix: Configuration Manager
 description: Saiba mais sobre as ações a tomar antes de atualizar para a versão de 'Gestor de Configuração' 2002.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723538"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268951"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Lista de verificação para instalar a tualização 2002 para O Gestor de Configuração
 
@@ -33,7 +33,7 @@ Depois da sua hierarquia descarregar o pacote de atualização da Microsoft, enc
 
   - O dmpdownloader.log pode indicar que o processo dmpdownloader está à espera de um intervalo antes de verificar se há atualizações. Para reiniciar o download dos ficheiros de redistribuição da atualização, reinicie o serviço **SMS_Executive** no servidor do site.
 
-  - Outro problema comum de descarregamento ocorre `silverlight.dlservice.microsoft.com` `download.microsoft.com`quando `go.microsoft.com`as definições do servidor proxy impedem os downloads de , e .
+  - Outro problema comum de descarregamento ocorre quando as definições do servidor proxy impedem os downloads de `silverlight.dlservice.microsoft.com` , `download.microsoft.com` e `go.microsoft.com` .
 
 Para mais informações sobre a instalação de atualizações, consulte [as atualizações e a manutenção da consola](updates.md#bkmk_inconsole).
 
@@ -68,33 +68,35 @@ A primeira vez que utilizas uma consola de Configuração Manager depois da atua
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+A partir de 11 de maio de 2020, a versão 2002 está globalmente disponível para todos os clientes instalarem. Se já tinha optado pelo anel de atualização inicial, procure uma atualização para esta versão atual do ramo.
 
-Neste momento, a versão 2002 é lançada para o anel de atualização precoce. Para instalar esta atualização, é necessário optar por entrar. O seguinte script PowerShell adiciona a sua hierarquia ou site primário autónomo ao anel de atualização inicial para a versão 2002:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Script de opt-in da versão 2002](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-A Microsoft assina digitalmente o script e embala-o dentro de um executável auto-extracto assinado.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> A atualização da versão 2002 só é aplicável aos sites que executam a versão 1810 ou posterior.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-Para optar pelo anel de atualização precoce:
+To opt-in to the early update ring:
 
-1. Abra o Windows PowerShell e **corra como administrador**
-1. Executar o script **EnableEarlyUpdateRing2002.ps1,** utilizando a seguinte sintaxe:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Quando `SiteServer` se refere ao site da administração central ou ao servidor de site primário autónomo. Por exemplo, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Procurar atualizações. Para mais informações, consulte [Obter atualizações disponíveis](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-A atualização da versão 2002 deverá agora estar disponível na consola.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Este script só adiciona o seu site ao anel de atualização inicial para a versão 2002. Não é uma mudança permanente.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Lista de Verificação
 
@@ -190,7 +192,7 @@ Antes de instalar a atualização, desative qualquer tarefa de manutenção do l
 
 Quando uma tarefa de manutenção da base de dados do site é executada durante a instalação da atualização, a instalação da atualização pode falhar. Antes de desativar uma tarefa, grave o calendário da tarefa para que possa restaurar a sua configuração depois de a atualização ter sido instalada.
 
-Para mais informações, consulte [tarefas](maintenance-tasks.md) de manutenção e [referência para tarefas](reference-for-maintenance-tasks.md)de manutenção .
+Para mais informações, consulte [tarefas](maintenance-tasks.md)de manutenção   e referência para [tarefas](reference-for-maintenance-tasks.md)de manutenção .
 
 ### <a name="temporarily-stop-any-antivirus-software"></a>Parar temporariamente qualquer software antivírus
 
@@ -212,7 +214,7 @@ Por exemplo, adiciona entradas personalizadas ao ficheiro **osdinjection.xml** n
 
 Quando instalar uma atualização do site que também atualiza o cliente, teste a nova atualização do cliente em pré-produção antes de atualizar todos os clientes de produção. Para utilizar esta opção, configure o seu site para suportar atualizações automáticas para pré-produção antes de iniciar a instalação da atualização.
 
-Para mais informações, consulte os [clientes de Upgrade](../../clients/manage/upgrade/upgrade-clients.md) e Como testar as atualizações dos [clientes numa recolha pré-produção.](../../clients/manage/upgrade/test-client-upgrades.md)
+Para mais informações, consulte os [clientes de Upgrade](../../clients/manage/upgrade/upgrade-clients.md)e Como testar as atualizações dos clientes numa recolha   [pré-produção.](../../clients/manage/upgrade/test-client-upgrades.md)
 
 ### <a name="plan-to-use-service-windows"></a>Plano para usar janelas de serviço
 
@@ -237,7 +239,7 @@ Para espaçar a partir da consola, dirija-se ao espaço de trabalho da **Adminis
 Para mais informações, consulte a secção para **executar o verificador pré-requisito antes** de instalar uma atualização antes de instalar uma [atualização na consola](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> Quando o verificador pré-requisito é executado, o processo atualiza alguns ficheiros de origem do produto que são usados para tarefas de manutenção do site. Portanto, depois de executar o verificador pré-requisito, mas antes de instalar a atualização, se precisar de executar uma tarefa de manutenção do site, execute **Setupwpf.exe** (Configuração do Gestor de Configuração) a partir do CD. Última pasta no servidor do site.
+> Quando o verificador pré-requisito é executado, o processo atualiza alguns ficheiros de origem do produto que são usados para tarefas de manutenção do site. Portanto, depois de executar o verificador pré-requisito, mas antes de instalar a atualização, se precisar de executar uma tarefa de manutenção do site, execute **Setupwpf.exe**   (Configuração do Gestor de Configuração) a partir do CD. Última pasta no servidor do site.
 
 ### <a name="update-sites"></a>Atualizar sites
 
@@ -265,7 +267,7 @@ Na consola 'Gestor de Configuração', vá aos seguintes locais para ver o estad
 
 - **Monitorização do** espaço de trabalho, nó de **replicação de base** de dados  
 
-Para obter mais informações, veja os artigos seguintes:  
+Para obter mais informações, veja os seguintes artigos:  
 
 - [Monitorizar a infraestrutura de hierarquia e replicação](monitor-hierarchy.md)
 - [Sobre o Analisador de Ligação de Replicação](monitor-replication.md#BKMK_RLA)  

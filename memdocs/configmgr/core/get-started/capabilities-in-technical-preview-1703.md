@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076157"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428414"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Capacidades na Pré-visualização Técnica 1703 para Gestor de Configuração
 
@@ -97,7 +97,7 @@ No Diretório Ativo do Azure, registe o Gestor de Configuração como uma aplica
 
 ### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>Utilize o assistente para configurar o serviço de nuvem WSfB
 
-1. Na consola, vá ao **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services,** e depois escolha **os Serviços Configure Azure** para iniciar o Assistente de **Serviços Azure.**
+1. Na consola, vá ao **Administration**  >  **Overview**  >  **Cloud Services Management**  >  **Azure**  >  **Azure Azure Services,** e depois escolha **os Serviços Configure Azure** para iniciar o **Assistente de Serviços Azure.**
 
 2. Na página **dos Serviços Azure,** selecione o serviço que pretende configurar e, em seguida, clique em **Next**. Com esta pré-visualização, apenas o WSfB pode ser configurado.
 
@@ -127,10 +127,10 @@ Agora pode utilizar o restante conteúdo da [Filial Atual](../../apps/deploy-use
 ### <a name="modify-a-cloud-service-configuration"></a>Modificar uma configuração de serviço na nuvem
 Pode ver e editar as propriedades de um serviço na nuvem para modificar a configuração.
 
-Na consola vá ao **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services,** e depois escolha Os **Serviços Configure Azure, selecione**um Serviço cloud e, em seguida, escolha **Propriedades**.
+Na consola vá ao **Administration**  >  **Overview**  >  **Cloud Services Management**  >  **Azure**  >  **Azure Azure Services,** e depois escolha **Os Serviços Configure Azure, selecione**um Serviço cloud e, em seguida, escolha **Propriedades**.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Converter de BIOS para UEFI durante uma atualização no local
-A Atualização de Criadores do Windows 10 introduz uma ferramenta de conversão simples que automatiza o processo de repartição do disco rígido para hardware ativado pela UEFI e integra a ferramenta de conversão no processo de atualização do Windows 7 para o Windows 10. Quando combinar esta ferramenta com a sequência de tarefas de atualização do sistema operativo e a ferramenta OEM que converte o firmware de BIOS para UEFI, pode converter os seus computadores de BIOS para UEFI durante uma atualização no local para a Atualização de Criadores do Windows 10. Para mais detalhes, consulte os passos da [sequência de tarefas para gerir o BIOS até à conversão UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+A Atualização de Criadores do Windows 10 introduz uma ferramenta de conversão simples que automatiza o processo de repartição do disco rígido para hardware ativado pela UEFI e integra a ferramenta de conversão no processo de atualização do Windows 7 para o Windows 10. Quando combinar esta ferramenta com a sequência de tarefas de atualização do sistema operativo e a ferramenta OEM que converte o firmware de BIOS para UEFI, pode converter os seus computadores de BIOS para UEFI durante uma atualização no local para a Atualização de Criadores do Windows 10. Para mais detalhes, consulte os passos da [sequência de tarefas para gerir o BIOS até à conversão UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## <a name="collapsible-task-sequence-groups"></a>Grupos de sequência de tarefas desmontáveis
 Esta versão introduz a capacidade de expandir e colapsar grupos de sequência de tarefas. Pode expandir ou colapsar grupos individuais ou expandir ou colapsar todos os grupos de uma só vez.
@@ -143,7 +143,7 @@ A partir desta versão, pode utilizar as definições do cliente do dispositivo 
 - Deve ter configurado o seu site para utilizar o serviço de cloud de atualização de prontidão.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Configure as definições do cliente do Windows Analytics
-Para configurar o Windows Analytics, na consola do Gestor de Configuração vai para**as Definições**do Cliente **de Administração,** > clique em duplo clique **em Criar Definições de Cliente de DispositivoPersonalizado** e, em seguida, verifique **o Windows Analytics**.  
+Para configurar o Windows Analytics, na consola do Gestor de Configuração vai para as Definições do Cliente **de Administração,**  >  **Client Settings**clique em duplo clique em **Criar Definições de Cliente de DispositivoPersonalizado** e, em seguida, verifique **o Windows Analytics**.  
 
 Em seguida, configure o seguinte depois de navegar para o separador de definições **do Windows Analytics:**
 - **ID comercial**  

@@ -2,7 +2,7 @@
 title: Proteção Avançada Contra Ameaças do Microsoft Defender
 titleSuffix: Configuration Manager
 description: Saiba como gerir e monitorizar a Proteção avançada de ameaças do Microsoft Defender, um novo serviço que ajuda as empresas a responder a ataques avançados.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210150"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406670"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Proteção Avançada Contra Ameaças do Microsoft Defender
 
@@ -40,10 +40,10 @@ Com base na versão do Gestor de Configuração que está a executar, os seguint
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Versão de Gestor de Configuração 2002 e posterior
 <!--5229962-->
-- Windows 7 SP1
+A partir da versão de 'Gestor de Configuração' de 2002, pode embarcar nos seguintes sistemas operativos:
+
 - Windows 8.1
 - Windows 10, versão 1607 ou mais tarde
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016, versão 1803
@@ -57,8 +57,8 @@ Com base na versão do Gestor de Configuração que está a executar, os seguint
    - Se estiver a embarcar no Windows 10, Windows Server 1803 e Windows Server 2019:
       1. Selecione **Configuração Manager (ramo atual) versão 1606** e selecione **pacote de descarregamento**.
       1. Descarregue o ficheiro de arquivo comprimido (.zip) e extrai o conteúdo.
-   - Se estiver a embarcar noutro sistema operativo Windows: 
-      1. Selecione os sistemas operativos que pretende embarcar a bordo da lista. Por exemplo, escolha o **Windows 7 e 8.1** ou **o Windows Server 2008 R2 SP1, 2012 R2 e 2016**.
+   - Se estiver a embarcar noutro sistema operativo Windows:
+      1. Selecione os sistemas operativos que deseja embarcar a partir da lista apresentada no serviço online ATP microsoft Defender.
       1. Copie os valores para a **chave Workspace** e **ID workspace** da secção de **ligação Configure** assim que o processo estiver concluído.
 
 > [!IMPORTANT]
@@ -66,11 +66,11 @@ Com base na versão do Gestor de Configuração que está a executar, os seguint
 
 ## <a name="onboard-devices"></a>Dispositivos a bordo
 
-1. Na consola De Configuração Manager, navegue para **Ativos e Compliance** > **Endpoint Protection** > **As políticas ATP do Windows Defender** e selecione Create Windows Defender **ATP Policy**. Abre o Assistente de Política ATP da Microsoft Defender.  
+1. Na consola De Configuração Manager, navegue para **Ativos e Compliance**  >  **Endpoint Protection**As políticas  >  **ATP do Windows Defender** e selecione Create Windows Defender **ATP Policy**. Abre o Assistente de Política ATP da Microsoft Defender.  
 1. Digite o **nome** e **descrição** para a política ATP do Microsoft Defender e selecione **Onboarding**.
 1. **Navegue** no ficheiro Configuração fornecido pelo inquilino do serviço de nuvem ATP da sua organização.
-   - Para **o Windows 7 e 8.1** ou Windows Server **2008 R2 SP1, 2012 R2 e 2016**, forneça a **chave Workspace** e **o ID workspace**.
-   - Para a versão de 2002 do Gestor de Configuração, necessitará da **chave Workspace** e **do Id workspace,** mesmo que esteja a embarcar apenas no Windows Server 2019 e no Windows Server 1803 ou dispositivos posteriores. Obtenha estes valores selecionando **Definições** > **De embarque** > **no Windows 7 e 8.1** do serviço online MICROSOFT Defender [ATP](https://securitycenter.windows.com/). <!--7054188-->
+   - Para o Windows 8.1 ou Windows Server 2012 R2 e 2016, forneça a **chave Workspace** e **o ID do espaço de trabalho**.
+   - Para a versão de 2002 do Gestor de Configuração, necessitará da **chave Workspace** e **do Id workspace,** mesmo que esteja a embarcar apenas no Windows Server 2019 e no Windows Server 1803 ou dispositivos posteriores. Obtenha estes valores selecionando **Definições**  >  **De embarque**no Windows 7 e  >  **8.1** do serviço online MICROSOFT Defender [ATP](https://securitycenter.windows.com/). <!--7054188-->
 1. Especifique as amostras de ficheiro que são recolhidas e partilhadas a partir de dispositivos geridos para análise.  
 
    - **Nenhum**
@@ -82,7 +82,7 @@ Selecione **Implementar** para direcionar a política ATP do Microsoft Defender 
 
 ## <a name="monitor"></a>Monitorizar
 
-1. Na consola 'Gestor de Configuração', navegue na **Segurança de Monitorização** > **Security** e, em seguida, selecione O Windows **Defender ATP**.  
+1. Na consola 'Gestor de Configuração', navegue na **Segurança de Monitorização**  >  **Security** e, em seguida, selecione O Windows **Defender ATP**.  
 
 1. Reveja o painel de proteção de ameaças avançada do Microsoft Defender.  
 
@@ -108,7 +108,7 @@ Selecione **Implementar** para direcionar a política ATP do Microsoft Defender 
 
 1. Descarregue o ficheiro de arquivo comprimido (.zip) e extrai o conteúdo. Os ficheiros offboarding são válidos por 30 dias.
 
-1. Na consola De Configuração Manager, navegue para **Ativos e Compliance** > **Endpoint Protection** > **As políticas ATP do Windows Defender** e selecione Create Windows Defender **ATP Policy**. Abre o Assistente de Política ATP da Microsoft Defender.  
+1. Na consola De Configuração Manager, navegue para **Ativos e Compliance**  >  **Endpoint Protection**As políticas  >  **ATP do Windows Defender** e selecione Create Windows Defender **ATP Policy**. Abre o Assistente de Política ATP da Microsoft Defender.  
 
 1. Digite o **nome** e **descrição** para a política ATP do Microsoft Defender e selecione **Offboarding**.
 
@@ -121,7 +121,7 @@ Selecione **Implementar** para direcionar a política ATP do Microsoft Defender 
 > [!IMPORTANT]
 > Os ficheiros de configuração ATP do Microsoft Defender contêm informações sensíveis que devem ser mantidas seguras.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - [Proteção Avançada Contra Ameaças do Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 

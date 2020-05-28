@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 518954457ba58656aeb1986689a3cf74ce918c02
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713150"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428599"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Sobre os parâmetros e propriedades de instalação do cliente em Gestor de Configuração
 
@@ -36,9 +36,9 @@ O comando CCMSetup.exe descarrega ficheiros necessários para instalar o cliente
 > [!NOTE]
 > Não pode instalar o cliente.  
 
-CCMSetup.exe fornece *parâmetros* de linha de comando para personalizar a instalação. Os parâmetros são pré-fixados com um corte (`/`) e por convenção são minúsculos. Especifica o valor de um parâmetro quando`:`necessário utilizando um cólon ( ) imediatamente seguido pelo valor. Para mais informações, consulte [os parâmetros da linha de comando CCMSetup.exe](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe fornece *parâmetros* de linha de comando para personalizar a instalação. Os parâmetros são pré-fixados com um corte `/` ( ) e por convenção são minúsculos. Especifica o valor de um parâmetro quando necessário utilizando um cólon ( `:` ) imediatamente seguido pelo valor. Para mais informações, consulte [os parâmetros da linha de comando CCMSetup.exe](#ccmsetupexe-command-line-parameters).
 
-Também pode fornecer *propriedades* na linha de comando CCMSetup.exe para modificar o comportamento do cliente.msi.Propriedades por convenção são maiúsculas. Especifica um valor para uma propriedade`=`usando um sinal igual ( ) imediatamente seguido pelo valor. Para mais informações, consulte [as propriedades do Cliente.msi.](#clientMsiProps)
+Também pode fornecer *propriedades* na linha de comando CCMSetup.exe para modificar o comportamento do cliente.msi.Propriedades por convenção são maiúsculas. Especifica um valor para uma propriedade usando um sinal igual ( `=` ) imediatamente seguido pelo valor. Para mais informações, consulte [as propriedades do Cliente.msi.](#clientMsiProps)
 
 > [!IMPORTANT]  
 > Especifique os parâmetros CCMSetup antes de especificar propriedades para cliente.msi.  
@@ -109,7 +109,7 @@ Este parâmetro também pode especificar o URL de um gateway de gestão de nuvem
 - Execute o seguinte comando:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Apreite o `https://` prefixo a utilizar com o parâmetro **/mp.**
@@ -117,7 +117,7 @@ Este parâmetro também pode especificar o URL de um gateway de gestão de nuvem
 Exemplo para quando utiliza o URL de gateway de gestão de nuvem:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> Ao especificar o URL de um portal de gestão de `https://`nuvens para o parâmetro **/mp,** deve começar com .
+> Ao especificar o URL de um portal de gestão de nuvens para o parâmetro **/mp,** deve começar com `https://` .
 
 ### <a name="regtoken"></a>/regtoken
 
@@ -218,19 +218,19 @@ Exemplo: `CCMSetup.exe /UsePKICert /NoCRLCheck`
 
 Este parâmetro especifica um ficheiro de texto que lista as propriedades de instalação do cliente.
 
-- Se o CCMSetup funciona como um serviço, coloque este `%Windir%\Ccmsetup`ficheiro na pasta do sistema CCMSetup: .
+- Se o CCMSetup funciona como um serviço, coloque este ficheiro na pasta do sistema CCMSetup: `%Windir%\Ccmsetup` .
 
 - Se especificar o parâmetro [**/noservice,**](#noservice) coloque este ficheiro na mesma pasta que CCMSetup.exe.
 
 Exemplo: `CCMSetup.exe /config:"configuration file name.txt"`
 
-Para fornecer o formato de ficheiro correto, utilize `\bin\<platform>` o ficheiro **mobileclienttemplate.tcf** na pasta no diretório de instalação do Gestor de Configuração no servidor do site. Este ficheiro tem comentários sobre as secções e como usá-las. Especifique as `[Client Install]` propriedades de instalação `Install=INSTALL=ALL`do cliente na secção, após o seguinte texto: .
+Para fornecer o formato de ficheiro correto, utilize o ficheiro **mobileclienttemplate.tcf** na pasta no diretório de instalação do Gestor de `\bin\<platform>` Configuração no servidor do site. Este ficheiro tem comentários sobre as secções e como usá-las. Especifique as propriedades de instalação do cliente na `[Client Install]` secção, após o seguinte texto: `Install=INSTALL=ALL` .
 
 Entrada `[Client Install]` da secção exemplo:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
-Este parâmetro especifica que CCMSetup.exe não instala o pré-requisito especificado. Pode introduzir mais do que um valor. Utilize o carácter`;`do ponto-e-vírgula para separar cada valor.
+Este parâmetro especifica que CCMSetup.exe não instala o pré-requisito especificado. Pode introduzir mais do que um valor. Utilize o carácter do `;` ponto-e-vírgula para separar cada valor.
 
 Exemplos:
 
@@ -272,7 +272,7 @@ As seguintes propriedades podem modificar o comportamento de instalação de ccm
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
-Utilize este ccmsetup. *propriedade msi* para passar parâmetros e propriedades adicionais da linha de comando para ccmsetup. *exe*. Inclua outros parâmetros e propriedades`"`dentro das aspas (). Utilize esta propriedade quando arrancar o cliente do Gestor de Configuração com o método de [instalação intune MDM](plan/client-installation-methods.md#microsoft-intune-mdm-installation).
+Utilize este ccmsetup. *propriedade msi* para passar parâmetros e propriedades adicionais da linha de comando para ccmsetup. *exe*. Inclua outros parâmetros e propriedades dentro das aspas `"` (). Utilize esta propriedade quando arrancar o cliente do Gestor de Configuração com o método de [instalação intune MDM](plan/client-installation-methods.md#microsoft-intune-mdm-installation).
 
 Exemplo: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -323,7 +323,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
-Especifica uma ou mais contas ou grupos de utilizadores do Windows a que deve ser dado acesso a definições e políticas de cliente. Esta propriedade é útil quando você não tem credenciais administrativas locais no computador cliente. Especifique uma lista de contas separadas`;`por pontos evímetros ().
+Especifica uma ou mais contas ou grupos de utilizadores do Windows a que deve ser dado acesso a definições e políticas de cliente. Esta propriedade é útil quando você não tem credenciais administrativas locais no computador cliente. Especifique uma lista de contas separadas por pontos evímetros `;` ().
 
 Exemplo: `CCMSetup.exe CCMADMINS="domain\account1;domain\group1"`
 
@@ -338,7 +338,7 @@ Exemplo: `CCMSetup.exe CCMALLOWSILENTREBOOT`
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
-Para especificar que o cliente é sempre baseado na Internet e nunca `1`se conecta à intranet, detetete este valor de propriedade para . O tipo de ligação do cliente apresenta **Sempre Internet**.  
+Para especificar que o cliente é sempre baseado na Internet e nunca se conecta à intranet, detetete este valor de propriedade para `1` . O tipo de ligação do cliente apresenta **Sempre Internet**.  
 
 Utilize esta propriedade com [**CCMHOSTNAME**](#ccmhostname) para especificar o FQDN do ponto de gestão baseado na Internet. Utilize-o também com o parâmetro CCMSetup [**/UsePKICert**](#usepkicert) e o código do site[**(SMSSITECODE**](#smssitecode)).
 
@@ -350,7 +350,7 @@ Exemplo: `CCMSetup.exe /UsePKICert CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.CO
 
 Utilize esta propriedade para especificar a lista de emitentes de certificados. Esta lista inclui informações de certificado para as autoridades de certificação de raiz confiáveis (CA) que o site do Gestor de Configuração confia.  
 
-Este valor é uma correspondência sensível a casos para atributos sujeitos que estão no certificado ca raiz. Atributos separados por`,`uma vírgula ou um ponto evíplo .`;` Especifique mais de um certificado CA`|`raiz utilizando uma barra de separador ().
+Este valor é uma correspondência sensível a casos para atributos sujeitos que estão no certificado ca raiz. Atributos separados por uma vírgula `,` ou um ponto evíplo `;` . Especifique mais de um certificado CA raiz utilizando uma barra de separador `|` ().
 
 Exemplo: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`
 
@@ -370,17 +370,17 @@ Utilize as seguintes palavras-chave para pesquisar o nome do assunto do certific
 
 Exemplos:
 
-- `CCMCERTSEL="Subject:computer1.contoso.com"`: Procure um certificado com uma correspondência `computer1.contoso.com` exata com o nome do computador no Nome do Assunto ou no Nome Alternativo do Sujeito.
+- `CCMCERTSEL="Subject:computer1.contoso.com"`: Procure um certificado com uma correspondência exata com o nome do computador `computer1.contoso.com` no Nome do Assunto ou no Nome Alternativo do Sujeito.
 
-- `CCMCERTSEL="SubjectStr:contoso.com"`: Procure um certificado `contoso.com` que contenha o nome do assunto ou o nome alternativo do sujeito.
+- `CCMCERTSEL="SubjectStr:contoso.com"`: Procure um certificado que contenha `contoso.com` o nome do assunto ou o nome alternativo do sujeito.
 
 Utilize a palavra-chave **SubjectAttr** para procurar o identificador de objetos (OID) ou atributos de nome distintos no nome do assunto ou nome alternativo do sujeito.
 
 Exemplos:
 
-- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Procurar o atributo da unidade organizacional expresso `Computers`como identificador de objetos e nomeado .
+- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Procurar o atributo da unidade organizacional expresso como identificador de objetos e nomeado `Computers` .
 
-- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Procurar o atributo da unidade organizacional expresso como `Computers`um nome distinto, e nomeado .
+- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Procurar o atributo da unidade organizacional expresso como um nome distinto, e nomeado `Computers` .
 
 > [!IMPORTANT]
 > Se utilizar o Nome do Assunto, a palavra-chave do **assunto** é sensível a casos, e a palavra-chave **SubjectStr** é insensível a casos.
@@ -389,7 +389,7 @@ Exemplos:
 
 Para obter a lista completa de atributos que pode utilizar para a seleção de certificados, consulte valores de [atributo suportados para critérios](#BKMK_attributevalues)de seleção de certificados PKI .
 
-Se mais de um certificado corresponder à pesquisa, e `1`definir [**ccMFIRSTCERT**](#ccmfirstcert) para, então o instalador de clientes seleciona o certificado com o período de validade mais longo.
+Se mais de um certificado corresponder à pesquisa, e definir [**ccMFIRSTCERT**](#ccmfirstcert) `1` para, então o instalador de clientes seleciona o certificado com o período de validade mais longo.
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
@@ -425,7 +425,7 @@ Para mais informações, consulte [sobre ficheiros](../../plan-design/hierarchy/
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-A frequência em minutos em que funciona a ferramenta de avaliação da saúde do cliente (ccmeval.exe). Especifique um `1` valor `1440`inteiro de . Por padrão, a ccmeval funciona uma vez por dia (1440 minutos).
+A frequência em minutos em que funciona a ferramenta de avaliação da saúde do cliente (ccmeval.exe). Especifique um valor inteiro de `1` `1440` . Por padrão, a ccmeval funciona uma vez por dia (1440 minutos).
 
 Exemplo: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -433,13 +433,13 @@ Para obter mais informações sobre a avaliação da saúde do cliente, consulte
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
-A hora durante o dia em que funciona a ferramenta de avaliação da saúde do cliente (ccmeval.exe). Especifique um `0` valor inteiro `23` de (meia-noite) para (23:00). Por defeito, a ccmeval corre à meia-noite.
+A hora durante o dia em que funciona a ferramenta de avaliação da saúde do cliente (ccmeval.exe). Especifique um valor inteiro de `0` (meia-noite) para `23` (23:00). Por defeito, a ccmeval corre à meia-noite.
 
 Para obter mais informações sobre a avaliação da saúde do cliente, consulte [os clientes do Monitor.](../manage/monitor-clients.md#bkmk_health)
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
-Se definir este `1`imóvel para , o cliente seleciona o certificado PKI com o período de validade mais longo.
+Se definir este imóvel para `1` , o cliente seleciona o certificado PKI com o período de validade mais longo.
 
 Exemplo: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`
 
@@ -466,26 +466,26 @@ Esta propriedade pode especificar o endereço de um gateway de gestão de nuvem 
 Por exemplo: `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> Quando especificar o endereço de um CMG para a propriedade **CCMHOSTNAME,** `https://`não anexa um prefixo como . Utilize apenas este prefixo com o URL **/mp** de um CMG.
+> Quando especificar o endereço de um CMG para a propriedade **CCMHOSTNAME,** não anexa um prefixo como `https://` . Utilize apenas este prefixo com o URL **/mp** de um CMG.
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
-Especifica a porta para o cliente utilizar quando comunica através do HTTP para os servidores do sistema do site. Por defeito, `80`este valor é .
+Especifica a porta para o cliente utilizar quando comunica através do HTTP para os servidores do sistema do site. Por defeito, este valor é `80` .
 
 Exemplo: `CCMSetup.exe CCMHTTPPORT=80`
 
 ### <a name="ccmhttpsport"></a>CCMHTTPSPORT
 
-Especifica a porta para o cliente utilizar quando comunica através do HTTPS para os servidores do sistema do site. Por defeito, `443`este valor é .
+Especifica a porta para o cliente utilizar quando comunica através do HTTPS para os servidores do sistema do site. Por defeito, este valor é `443` .
 
 Exemplo: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
-Utilize esta propriedade para definir a pasta para instalar os ficheiros do cliente do Gestor de Configuração. Por defeito, `%WinDir%\CCM`utiliza.
+Utilize esta propriedade para definir a pasta para instalar os ficheiros do cliente do Gestor de Configuração. Por defeito, `%WinDir%\CCM` utiliza.
 
 > [!TIP]
-> Independentemente de onde instale os ficheiros do cliente, instala sempre `%WinDir%\System32` o ficheiro **ccmcore.dll** na pasta. Num SISTEMA de 64 bits, instala uma cópia do ccmcore.dll na `%WinDir%\SysWOW64` pasta. Este ficheiro suporta aplicações de 32 bits que utilizam a versão de 32 bits das APIs do cliente do Gestor de Configuração SDK.
+> Independentemente de onde instale os ficheiros do cliente, instala sempre o ficheiro **ccmcore.dll** na `%WinDir%\System32` pasta. Num SISTEMA de 64 bits, instala uma cópia do ccmcore.dll na `%WinDir%\SysWOW64` pasta. Este ficheiro suporta aplicações de 32 bits que utilizam a versão de 32 bits das APIs do cliente do Gestor de Configuração SDK.
 
 Exemplo: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`
 
@@ -506,7 +506,7 @@ Para mais informações, consulte [sobre ficheiros](../../plan-design/hierarchy/
 
 ### <a name="ccmlogmaxhistory"></a>CCMLOGMAXHISTORY
 
-Quando um ficheiro de registo do Gestor de Configuração atinge o tamanho máximo, o cliente renomea-o como uma cópia de segurança e cria um novo ficheiro de registo. Esta propriedade especifica quantas versões anteriores do ficheiro de registo deve ser guardada. O valor predefinido é `1`. Se definir o `0`valor para, o cliente não mantém qualquer histórico de registo.
+Quando um ficheiro de registo do Gestor de Configuração atinge o tamanho máximo, o cliente renomea-o como uma cópia de segurança e cria um novo ficheiro de registo. Esta propriedade especifica quantas versões anteriores do ficheiro de registo deve ser guardada. O valor predefinido é `1`. Se definir o valor para, o cliente não mantém qualquer histórico de `0` registo.
 
 Exemplo: `CCMSetup.exe CCMLOGMAXHISTORY=5`
 
@@ -520,7 +520,7 @@ Exemplo: `CCMSetup.exe CCMLOGMAXSIZE=300000` (300.000 bytes)
 
 ### <a name="disablesiteopt"></a>DISABLESITEOPT
 
-Deteto `TRUE` esta propriedade para impedir que os administradores mudem o site atribuído no painel de controlo do Gestor de Configuração.
+Deteto esta propriedade para impedir que os administradores mudem o site atribuído no painel de controlo do Gestor de `TRUE` Configuração.
 
 Exemplo: **CCMSetup.exe DISABLESITEOPT=TRUE**
 
@@ -554,7 +554,7 @@ Exemplo: `CCMSetup.exe FSP=SMSFP01`
 
 ### <a name="ignoreappvversioncheck"></a>IGNOREAPPVVERSIONCHECK
 
-Se definir esta `TRUE`propriedade para , o instalador de clientes não verifica a versão mínima necessária da Virtualização de Aplicações microsoft (App-V).
+Se definir esta propriedade para , o instalador de `TRUE` clientes não verifica a versão mínima necessária da Virtualização de Aplicações microsoft (App-V).
 
 > [!IMPORTANT]  
 > Se instalar o cliente do Gestor de Configuração sem instalar o App-V, não pode [implementar aplicações virtuais.](../../../apps/get-started/deploying-app-v-virtual-applications.md)
@@ -581,9 +581,9 @@ Utilize o seguinte processo:
 
 1. [Crie uma sequência de tarefas de implementação não-OS](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) para instalar aplicações, instalar atualizações de software e configurar definições.
 
-1. [Implemente esta sequência de tarefas](../../../osd/deploy-use/deploy-a-task-sequence.md) para a nova coleção incorporada, **Todos os Dispositivos de Provisionamento.** Note o ID de implementação da sequência de tarefas, por exemplo `PRI20001`.
+1. [Implemente esta sequência de tarefas](../../../osd/deploy-use/deploy-a-task-sequence.md) para a nova coleção incorporada, **Todos os Dispositivos de Provisionamento.** Note o ID de implementação da sequência de tarefas, por exemplo `PRI20001` .
 
-1. [Instale o cliente do Gestor](deploy-clients-to-windows-computers.md#BKMK_Manual) de Configuração `PROVISIONTS=PRI20001`num dispositivo e inclua a seguinte propriedade: . Detete o valor desta propriedade como id de implementação da sequência de tarefas.
+1. [Instale o cliente do Gestor](deploy-clients-to-windows-computers.md#BKMK_Manual) de Configuração num dispositivo e inclua a seguinte propriedade: `PROVISIONTS=PRI20001` . Detete o valor desta propriedade como id de implementação da sequência de tarefas.
 
     - Se estiver a instalar o cliente a partir de Intune durante a inscrição em cogestão, consulte [como preparar dispositivos baseados na Internet para cogestão](../../../comanage/how-to-prepare-Win10.md).
 
@@ -606,7 +606,7 @@ Exemplo: `CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE`
 
 ### <a name="smscachedir"></a>SMSCACHEDIR
 
-Especifica a localização da pasta cache do cliente no computador cliente. Por defeito, a `%WinDir%\ccmcache`localização da cache é .
+Especifica a localização da pasta cache do cliente no computador cliente. Por defeito, a localização da cache é `%WinDir%\ccmcache` .
 
 Exemplo: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
@@ -614,7 +614,7 @@ Utilize esta propriedade com a propriedade [**SMSCACHEFLAGS**](#smscacheflags) p
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
-Utilize esta propriedade para especificar mais detalhes de instalação para a pasta cache do cliente. Pode utilizar propriedades **SMSCACHEFLAGS** individualmente ou em combinação separadas por pontos evívias ().`;`
+Utilize esta propriedade para especificar mais detalhes de instalação para a pasta cache do cliente. Pode utilizar propriedades **SMSCACHEFLAGS** individualmente ou em combinação separadas por pontos evívias `;` ().
 
 Se você não incluir esta propriedade:
 
@@ -628,7 +628,7 @@ Ao atualizar um cliente existente, o instalador de clientes ignora esta propried
 
 - **PERCENTDISKSPACE**: Desloque o tamanho da cache em percentagem do espaço *total* do disco. Se especificar esta propriedade, também coloque [**o SMSCACHESIZE**](#smscachesize) num valor percentual.
 
-- **PERCENTFREEDISKSPACE**: Desloque o tamanho da cache em percentagem do espaço de disco *livre.* Se especificar esta propriedade, também coloque [**o SMSCACHESIZE**](#smscachesize) como um valor percentual. Por exemplo, o disco tem 10 `SMSCACHESIZE=50`MB grátis, e especifica . O instalador do cliente define o tamanho da cache para 5 MB. Você não pode usar esta propriedade com a propriedade **PERCENTDISKSPACE.**
+- **PERCENTFREEDISKSPACE**: Desloque o tamanho da cache em percentagem do espaço de disco *livre.* Se especificar esta propriedade, também coloque [**o SMSCACHESIZE**](#smscachesize) como um valor percentual. Por exemplo, o disco tem 10 MB grátis, e especifica `SMSCACHESIZE=50` . O instalador do cliente define o tamanho da cache para 5 MB. Você não pode usar esta propriedade com a propriedade **PERCENTDISKSPACE.**
 
 - **MAXDRIVE**: Instale a cache no maior disco disponível. Se especificar um caminho com a propriedade [**SMSCACHEDIR,**](#smscachedir) o instalador de clientes ignora este valor.
 
@@ -668,7 +668,7 @@ Utilize esta propriedade para especificar a localização e o pedido de que o in
 
 - `U`: Atualize o cliente instalado para uma versão mais recente e utilize o código de site atribuído.
 
-Por predefinição, o `PU`instalador do cliente utiliza . Verifica primeiro as propriedades`P`de instalação e,`U`em seguida, as definições existentes ().  
+Por predefinição, o instalador do cliente utiliza `PU` . Verifica primeiro as propriedades de instalação `P` e, em seguida, as definições existentes `U` ().  
 
 Exemplo: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
@@ -693,7 +693,7 @@ Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 Especifica um ponto de gestão inicial para o cliente do Gestor de Configuração utilizar.  
 
 > [!IMPORTANT]  
-> Se o ponto de gestão apenas aceitar ligações ao `https://`cliente em vez de HTTPS, prefixe o nome do ponto de gestão com .
+> Se o ponto de gestão apenas aceitar ligações ao cliente em vez de HTTPS, prefixe o nome do ponto de gestão com `https://` .
 
 Exemplos:
 
@@ -724,10 +724,10 @@ Exemplo: `CCMSetup.exe /UsePKICert SMSSIGNCERT=C:\folder\smssign.cer`
 
 ### <a name="smssitecode"></a>SMSSITECODE
 
-Esta propriedade especifica um site do Gestor de Configuração ao qual atribui o cliente. Este valor pode ser um código de `AUTO`três caracteres ou a palavra . Se especificar `AUTO`, ou não especificar este imóvel, o cliente tenta determinar a sua atribuição do site a partir de Serviços de Domínio de Diretório Ativo ou de um ponto de gestão especificado. Para `AUTO` ativar as atualizações dos clientes, também detetete [sitereasSIGN=TRUE](#sitereassign).
+Esta propriedade especifica um site do Gestor de Configuração ao qual atribui o cliente. Este valor pode ser um código de três caracteres ou a palavra `AUTO` . Se especificar , ou não especificar este imóvel, o cliente tenta determinar a sua atribuição do site a partir de Serviços de Domínio de `AUTO` Diretório Ativo ou de um ponto de gestão especificado. Para ativar as atualizações dos `AUTO` clientes, também detetete [sitereasSIGN=TRUE](#sitereassign).
 
 > [!NOTE]  
-> Se também especificar um ponto de gestão baseado na Internet com `AUTO` a propriedade [**CCMHOSTNAME,**](#ccmhostname) não utilize com **SMSSITECODE**. Atribua diretamente o cliente ao seu site especificando o código do site.
+> Se também especificar um ponto de gestão baseado na Internet com a propriedade [**CCMHOSTNAME,**](#ccmhostname) não utilize `AUTO` com **SMSSITECODE**. Atribua diretamente o cliente ao seu site especificando o código do site.
 
 Exemplo: `CCMSetup.exe SMSSITECODE=XZY`
 

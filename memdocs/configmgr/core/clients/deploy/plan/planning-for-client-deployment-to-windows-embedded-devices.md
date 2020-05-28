@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906646"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Planeamento para implementação de clientes para dispositivos Incorporados do Windows em ' Gestor de Configuração
 
@@ -46,11 +46,11 @@ ms.locfileid: "81714018"
 
  O Gestor de Configuração suporta a gestão dos seguintes tipos de filtros de escrita:  
 
-- Filtro de escrita baseado em ficheiros (FBWF) - Para mais informações, consulte [filtro de escrita baseado em ficheiros](https://go.microsoft.com/fwlink/?LinkID=204717).  
+- Filtro de escrita baseado em ficheiros (FBWF) - Para mais informações, consulte [filtro de escrita baseado em ficheiros](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)).  
 
-- FILTRO de escrita melhorado (EWF) RAM - Para mais informações, consulte Filtro de [Escrita Melhorado](https://go.microsoft.com/fwlink/?LinkId=204718).  
+- FILTRO de escrita melhorado (EWF) RAM - Para mais informações, consulte Filtro de [Escrita Melhorado](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
 
-- Filtro de escrita unificado (UWF) - Para mais informações, consulte filtro de [escrita unificado](https://go.microsoft.com/fwlink/?LinkId=309236).  
+- Filtro de escrita unificado (UWF) - Para mais informações, consulte filtro de [escrita unificado](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
 
   O Gestor de Configuração não suporta as operações de filtragem de escrita quando o dispositivo Incorporado do Windows está no modo EWF RAM Reg.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "81714018"
 > 
 > **Para dispositivos que utilizem apenas fbWF:** Configure as seguintes exceções para persistir no estado do cliente e os dados de inventário entre o reinício do dispositivo:  
 > 
-> - CCMINSTALLDIR\\*.sdf  
+> - CCMINSTALLDIR \\ *.sdf  
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 

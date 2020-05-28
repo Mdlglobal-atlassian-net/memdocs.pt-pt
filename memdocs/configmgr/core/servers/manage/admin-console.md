@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110037"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878380"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Como utilizar a consola 'Gestor de Configuração'
 
@@ -27,7 +27,7 @@ Os administradores utilizam a consola Do Gestor de Configuração para gerir o a
 
 A consola 'Gestor de Configuração' está sempre instalada em todos os servidores do site. Também pode instalá-lo noutros computadores. Para mais informações, consulte [Instalar a consola 'Gestor de Configuração'.](../deploy/install/install-consoles.md)
 
-O método mais simples para abrir a consola **Start** num computador `Configuration Manager console`Windows 10, prima Iniciar e começar a escrever . Pode não precisar de escrever toda a corda para o Windows encontrar a melhor correspondência.
+O método mais simples para abrir a consola num computador Windows 10, prima **Iniciar** e começar a escrever `Configuration Manager console` . Pode não precisar de escrever toda a corda para o Windows encontrar a melhor correspondência.
 
 Se navegar no menu Iniciar, procure o ícone da consola Do Gestor de **Configuração** no grupo **Microsoft Endpoint Manager.**
 
@@ -58,7 +58,7 @@ A partir da versão 1810, pode especificar o nível mínimo de autenticação pa
 
 Algumas áreas da consola podem não ser visíveis dependendo da sua função de segurança atribuída. Para obter mais informações sobre papéis, consulte [os fundamentos da administração baseada no papel.](../../understand/fundamentals-of-role-based-administration.md)
 
-### <a name="workspaces"></a>Áreas de Trabalho
+### <a name="workspaces"></a>Áreas de trabalho
 
 A consola De Configuração Manager tem quatro **espaços de trabalho:**  
 
@@ -172,7 +172,7 @@ nota
 
 ### <a name="start-microsoft-teams-chat"></a>Iniciar o Chat das Equipas da Microsoft
 
-1. Vá para**as ligações**de consola de**segurança** > da **administração.** > 
+1. Vá para as ligações de consola de segurança da **administração.**  >  **Security**  >  **Console Connections**
 1. Clique à direita na ligação de consola de um utilizador e selecione **Start Microsoft Teams Chat**.
     - Se o Nome Principal do Utilizador não for encontrado para o administrador selecionado, o **Start Microsoft Teams Chat** está acinzentado.
     - Uma mensagem de erro, incluindo um link de descarregamento, aparece se o Microsoft Teams não estiver instalado no dispositivo a partir do qual executa a consola.
@@ -228,7 +228,7 @@ As seguintes notificações são mais aplicáveis ao serviço técnico de pré-v
 - Desajuste da versão da consola (Crítico): a versão da consola não corresponde à versão do site  
 - Atualização do site está disponível (Aviso): há um novo pacote de atualização disponível  
 
-Para obter mais informações e assistência para resolução de problemas, consulte o ficheiro **SmsAdminUI.log** no computador da consola. Por predefinição, este ficheiro de `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`registo encontra-se no seguinte caminho: .
+Para obter mais informações e assistência para resolução de problemas, consulte o ficheiro **SmsAdminUI.log** no computador da consola. Por predefinição, este ficheiro de registo encontra-se no seguinte caminho: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log` .
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a>Painel de documentação na consola
@@ -356,7 +356,7 @@ No espaço de trabalho **de Ativos e Compliance,** vá ao nó dos **Dispositivos
 
 > [!Note]  
 > - Este separador não está atualmente disponível a partir de um subnódoo de dispositivos sob o nó de **Recolha de Dispositivos.** Por exemplo, quando seleciona a opção de **mostrar aos membros** numa coleção.
-> - Este separador pode não povoar como esperado para alguns utilizadores. Para ver a lista completa de coleções a que pertence um dispositivo, deve ter a função de segurança **do Administrador Completo.** Este é um problema conhecido. <!--5107309--> <!--5107309-->
+> - Este separador pode não povoar como esperado para alguns utilizadores. Para ver a lista completa de coleções a que pertence um dispositivo, deve ter a função de segurança **do Administrador Completo.** Trata-se de um problema conhecido. <!--5107309--> <!--5107309-->
 
 
 #### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Adicione a coluna SMBIOS GUID aos nódosos de recolha de dispositivos e dispositivos
@@ -391,7 +391,7 @@ Para obter mais informações sobre como mostrar uma coluna não predefinida, co
 <!-- 3614690 -->
 A partir da versão 1806, quando se procura numa coleção de dispositivos, não procura a palavra-chave contra todas as propriedades do objeto. Quando não é específico sobre o que procurar, procura pelas quatro propriedades seguintes:
 
-- Nome
+- Name
 - Utilizadores primários(s)
 - Atualmente registado no utilizador
 - Último nome de utilizador de logon
@@ -419,9 +419,9 @@ No espaço de trabalho da Biblioteca de **Software,** expandir gestão de **apli
 
 1. Vá a um dos seguintes lugares na consola Do Gestor de Configuração:
 
-   - **Software** > da Biblioteca de**Software atualiza** > **todas as atualizações de software**
-   - **Biblioteca de** > software**Windows 10 A servir** > **todas as atualizações do Windows 10**
-   - **Software Library** > Gabinete de Biblioteca de Software**365 Gabinete** > de Gestão de Clientes**365 Atualizações**
+   - **Biblioteca de**  >  Software **Atualizações de**  >  software **Todas as atualizações de software**
+   - **Biblioteca de**  >  Software Serviço do **Windows 10**  >  **Todas as atualizações do Windows 10**
+   - **Biblioteca de**  >  Software **Escritório 365 Gestão de**  >  Clientes **Atualizações do Office 365**
 
 1. Selecione qualquer atualização que seja necessária por pelo menos um dispositivo.
 1. Olhe para o separador **Resumo** e encontre o gráfico de tartes em **estatísticas.**
@@ -497,8 +497,8 @@ Copiar informações do painel de detalhes do **ativo** para os seguintes nódos
 <!--4223683-->
 A partir da versão 1906, pode permitir que alguns nós sob o nó de **Segurança** utilizem o serviço de administração. Esta alteração permite que a consola comunique com o Fornecedor SMS em HTTPS em vez de via WMI. Para mais informações, consulte [Configurar o serviço](../../../develop/adminservice/set-up.md#bkmk_console)de administração .
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
-[Funções de acessibilidade](../../understand/accessibility-features.md)
+[Funcionalidades de acessibilidade](../../understand/accessibility-features.md)
 
 [Editor de sequência de tarefas](../../../osd/understand/task-sequence-editor.md#bkmk_conditions)

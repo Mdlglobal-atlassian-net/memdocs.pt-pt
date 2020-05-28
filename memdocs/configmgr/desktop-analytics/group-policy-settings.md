@@ -10,12 +10,13 @@ ms.assetid: 004ca404-e6fa-47f0-ae77-e44e18a08b33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0224d9faecb9ff17afc2af3a57ba222023b5a3d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718897"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268679"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Definições de política de grupo para Desktop Analytics
 
@@ -36,12 +37,12 @@ O Gestor de Configuração define as políticas do Windows numa ou em ambas as s
 | Política | Caminho | Aplica-se a | Valor |
 |--------|------|------------|-------|
 | **Comercialid** | Localização | Todas as versões do Windows | Para que um dispositivo apareça no Desktop Analytics, configure-o com o ID Comercial da sua organização. |
-| **Permitir Telemetria**  | GPO | Windows 10 | Definido `1` para `2` **Básico,** para `3` Dados de Diagnóstico **Melhorados,** ou para dados de diagnóstico **completos.** Desktop Analytics requer pelo menos dados básicos de diagnóstico. A Microsoft recomenda que utilize o nível Enhanced (Limited) com desktop Analytics. Para mais informações, consulte [configure dados de diagnóstico do Windows na sua organização](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versão 1803 e mais tarde | Esta definição só se aplica quando `2`a definição de AllowTelemettry é . Limita os eventos de dados de diagnóstico melhorados enviados à Microsoft apenas para os eventos necessários pelo Desktop Analytics. Para obter mais informações, consulte os eventos e campos de [dados de diagnóstico do Windows 10 recolhidos através da política de dados](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)de diagnóstico reforçado. |
+| **Permitir Telemetria**  | GPO | Windows 10 | Definido `1` para **Básico,** `2` para Dados de Diagnóstico **Melhorados,** ou para dados de `3` diagnóstico **completos.** Desktop Analytics requer pelo menos dados básicos de diagnóstico. A Microsoft recomenda que utilize o nível Enhanced (Limited) com desktop Analytics. Para mais informações, consulte [configure dados de diagnóstico do Windows na sua organização](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10, versão 1803 e mais tarde | Esta definição só se aplica quando a definição de AllowTelemettry é `2` . Limita os eventos de dados de diagnóstico melhorados enviados à Microsoft apenas para os eventos necessários pelo Desktop Analytics. Para obter mais informações, consulte os eventos e campos de [dados de diagnóstico do Windows 10 recolhidos através da política de dados](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)de diagnóstico reforçado. |
 | **PermitirNomeNameInTelemetria** | GPO | Windows 10, versão 1803 e mais tarde | Ativar os dispositivos para enviar o nome do dispositivo. O nome do dispositivo não é enviado para a Microsoft por padrão. Se não enviar o nome do dispositivo, aparece no Desktop Analytics como "Desconhecido". Para mais informações, consulte [o nome do dispositivo](enroll-devices.md#device-name). |
-| **CommercialDataOptin** | Localização | Windows 8.1 e mais cedo | Desktop Analytics requer um `1`valor de . Para mais informações, consulte [O Opt-in de Dados Comerciais no Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
-| **RequestAllAppraiserVersions** | Ambos | Windows 8.1 e mais cedo | Desktop Analytics requer um `1` valor para a recolha de dados funcionar corretamente. |
-| **DisableEnterpriseAuthProxy** | GPO | Todas as versões do Windows | Se o seu ambiente necessitar de um proxy autenticado pelo utilizador com autenticação integrada `0` do Windows para acesso à Internet, o Desktop Analytics requer um valor para que a recolha de dados funcione corretamente. Para mais informações, consulte a [autenticação](enable-data-sharing.md#proxy-server-authentication)do servidor Proxy . |
+| **CommercialDataOptin** | Localização | Windows 8.1 e mais cedo | Desktop Analytics requer um valor de `1` . Para mais informações, consulte [O Opt-in de Dados Comerciais no Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **RequestAllAppraiserVersions** | Ambos | Windows 8.1 e mais cedo | Desktop Analytics requer um valor para a recolha de `1` dados funcionar corretamente. |
+| **DisableEnterpriseAuthProxy** | GPO | Todas as versões do Windows | Se o seu ambiente necessitar de um proxy autenticado pelo utilizador com autenticação integrada do Windows para acesso à Internet, o Desktop Analytics requer um valor para que a recolha de `0` dados funcione corretamente. Para mais informações, consulte a [autenticação](enable-data-sharing.md#proxy-server-authentication)do servidor Proxy . |
 
 > [!IMPORTANT]
 > Na maioria das circunstâncias, utilize apenas o Configuro Diretor de Configuração para configurar estas definições. Não aplique também estas definições em objetos de política de grupo de domínio. Para mais informações, consulte [a resolução de conflitos.](enroll-devices.md#conflict-resolution)
@@ -63,7 +64,7 @@ Em geral, utilize as coleções do Gestor de Configuração para direcionar as d
 
 O Gestor de Configuração configura as definições de ID comerciais e de diagnóstico na sua recolha de alvos. Se precisar de configurar diferentes definições de dados de diagnóstico para diferentes grupos de dispositivos, utilize as definições de política do grupo para anular as definições do Gestor de Configuração. Por exemplo, é necessário definir o nível **Melhorado (Limitado)** para alguns dispositivos e **Basic** para outros. Alguns dispositivos podem ter diferentes definições de autenticação do [servidor proxy.](enable-data-sharing.md#proxy-server-authentication)
 
-As definições de política de grupo relevantes estão no seguinte caminho: **Configuração** > de computador**Modelos Administrativos** > **Windows Components** > De Recolha de Dados de Componentes Windows**e Visualização**de Visualizações .
+As definições de política de grupo relevantes estão no seguinte caminho: **Configuração**de computador  >  **Administrative Templates**  >  **Modelos Administrativos De Recolha**de Dados de Componentes Windows  >  **e Visualização**de Visualizações .
 
 As definições de política do grupo apenas modificam as definições de registo na seguinte tecla:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
@@ -78,9 +79,9 @@ As definições de política do grupo na tabela a seguir têm o maior potencial 
 |--------------|----------------|-------------------------------------------------|
 | **Configure o ID Comercial** | Comercialid | Se definir esta política para um valor diferente, substitui o ID Comercial definido pelo Gestor de Configuração. Se não for o mesmo ID, os dispositivos configurados podem não aparecer no Desktop Analytics. |
 | **Permitir telemetria** | Permitir Telemetria | Se definir esta política para um valor diferente, sobrepõe-se ao nível global de dados de diagnóstico que definiu no Gestor de Configuração para a recolha do alvo. |
-| **Limite dados de diagnóstico melhorados ao mínimo exigido pelo Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Esta política depende da definição anterior de AllowTelemettry. Dependendo do nível definido no Gestor de Configuração ou com a política de grupo, esta política pode alterar o nível de dados de diagnóstico no dispositivo para **Melhorado** ou **Melhorado (Limitado)**. Esta política só se aplica se a `2` AllowTelemettry estiver definida para (**Melhorado).** |
+| **Limite dados de diagnóstico melhorados ao mínimo exigido pelo Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Esta política depende da definição anterior de AllowTelemettry. Dependendo do nível definido no Gestor de Configuração ou com a política de grupo, esta política pode alterar o nível de dados de diagnóstico no dispositivo para **Melhorado** ou **Melhorado (Limitado)**. Esta política só se aplica se a AllowTelemettry estiver definida `2` para (**Melhorado).** |
 | **Permitir que o nome do dispositivo seja enviado em dados de diagnóstico do Windows** | PermitirNomeNameInTelemetria | Se optar por enviar nomes de dispositivos no 'Gestor de Configuração', pode anulá-lo b configurando esta política para Desativado. Quando desativa esta definição, os nomes do dispositivo aparecem como "Desconhecidos" no Desktop Analytics. Para mais informações, consulte [o nome do dispositivo](enroll-devices.md#device-name). |
-| **Configure o uso de Proxy autenticado para o serviço de experiência e telemetria do utilizador conectado** | DisableEnterpriseAuthProxy | Se configurar os dispositivos Do Gestor de Configuração para utilizar o proxy autenticado pelo utilizador (`0`), se configurar esta política para **desativar** a utilização do Proxy Autenticado (`1`), então o dispositivo envia dados de diagnóstico no contexto do sistema em vez do contexto do utilizador. Se não configurar o dispositivo com um proxy no contexto do sistema, ou se o dispositivo não conseguir autenticar o proxy, o Windows não pode enviar dados de diagnóstico para desktop Analytics. |
+| **Configure o uso de Proxy autenticado para o serviço de experiência e telemetria do utilizador conectado** | DisableEnterpriseAuthProxy | Se configurar os dispositivos Do Gestor de Configuração para utilizar o proxy autenticado pelo utilizador ( `0` ), se configurar esta política para **desativar** a utilização do Proxy Autenticado ( ), então o dispositivo envia dados de `1` diagnóstico no contexto do sistema em vez do contexto do utilizador. Se não configurar o dispositivo com um proxy no contexto do sistema, ou se o dispositivo não conseguir autenticar o proxy, o Windows não pode enviar dados de diagnóstico para desktop Analytics. |
 
 > [!NOTE]
 > A política antiga **Configure Connected User Experiences and Telemettry** (TelemettryProxy) permite que o Windows reencaminhoos dados de diagnóstico para um representante dedicado, em vez de utilizar o utilizador (WinINET) ou proxy do dispositivo (WinHTTP). Alguns componentes do Windows não suportam esta política. Se utilizar esta política, pode causar problemas de qualidade de dados no Desktop Analytics.

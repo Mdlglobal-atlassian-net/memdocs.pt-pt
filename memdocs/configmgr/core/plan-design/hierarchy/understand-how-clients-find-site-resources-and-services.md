@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075664"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269002"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Saiba como os clientes encontram recursos e serviços do site para O Gestor de Configuração
 
@@ -62,7 +62,7 @@ Um cliente seleciona um ponto de gestão para comunicar com base na localizaçã
 
 Pode utilizar pontos de gestão preferenciais. Os pontos de gestão preferidos são pontos de gestão do site atribuído a um cliente que estão associados a um grupo de limites que o cliente está a usar para encontrar servidores do sistema do site. A associação de um ponto de gestão preferencial com um grupo de fronteiras como servidor de sistema de site é semelhante à forma como os pontos de distribuição ou pontos de migração do Estado estão associados a um grupo de fronteiras. Se ativar pontos de gestão preferenciais para a hierarquia, quando um cliente utilizar um ponto de gestão a partir do site atribuído, este tentará utilizar um ponto de gestão preferencial antes de utilizar outros pontos de gestão a partir do site atribuído.  
 
-Também pode utilizar a informação no blog de [afinidade](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) do ponto de gestão na TechNet.com para configurar a afinidade do ponto de gestão. A afinidade do ponto de gestão sobrepõe-se ao comportamento padrão dos pontos de gestão atribuídos e permite ao cliente utilizar um ou mais pontos de gestão específicos.  
+Também pode usar a informação no blog de [afinidade](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) do ponto de gestão para configurar a afinidade do ponto de gestão. A afinidade do ponto de gestão sobrepõe-se ao comportamento padrão dos pontos de gestão atribuídos e permite ao cliente utilizar um ou mais pontos de gestão específicos.  
 
 Cada vez que um cliente precisa de contactar um ponto de gestão, verifica a lista de MP, que armazena localmente na Instrumentação de Gestão do Windows (WMI). O cliente cria uma lista de MP inicial quando é instalado. Em seguida, o cliente atualiza periodicamente a lista com detalhes sobre cada ponto de gestão na hierarquia.  
 
@@ -131,12 +131,12 @@ Depois de um cliente estabelecer comunicação com um ponto de gestão, continua
 Em seguida, o cliente seleciona aleatoriamente um novo ponto de gestão a usar.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a>Diretório Ativo  
-Os clientes que têm um domínio associado podem utilizar o AD DS para a localização de serviços. Isto requer que os sites [publiquem dados no Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+Os clientes que têm um domínio associado podem utilizar o AD DS para a localização de serviços. Isto requer que os sites [publiquem dados no Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Um cliente pode utilizar AD DS para localização de serviço quando todas as seguintes condições forem verdadeiras:  
 
-- O esquema de Diretório Ativo [foi alargado](https://technet.microsoft.com/library/mt345589.aspx) ou foi estendido para System Center 2012 Configuration Manager.  
-- A [floresta de Diretório Ativo está configurada para publicação](https://technet.microsoft.com/library/hh696542.aspx), e os sites do Gestor de Configuração estão configurados para publicar.  
+- O esquema de Diretório Ativo [foi alargado](../network/extend-the-active-directory-schema.md) ou foi estendido para System Center 2012 Configuration Manager.  
+- A [floresta de Diretório Ativo está configurada para publicação](../../servers/deploy/configure/publish-site-data.md), e os sites do Gestor de Configuração estão configurados para publicar.  
 - O computador cliente é membro de um domínio do Active Directory e consegue aceder a um servidor de catálogo global.  
 
 Se um cliente não encontrar um ponto de gestão para usar para a localização do serviço a partir de AD DS, tenta utilizar DNS.  
@@ -148,7 +148,7 @@ Considere a utilização do DNS para localização de serviços quando se verifi
 - O esquema AD DS não é estendido para suportar o Gestor de Configuração.
 - Os clientes na intranet estão localizados numa floresta que não está habilitada para a publicação do Gestor de Configuração.  
 - Tem clientes em computadores de grupo de trabalho, e esses clientes não estão configurados para gestão de clientes apenas na Internet. (Um cliente de grupo de trabalho configurado para a internet comunicará apenas com pontos de gestão virados para a Internet e não utilizará DNS para a localização do serviço.)  
-- Pode [configurar clientes para encontrar pontos de gestão do DNS](https://technet.microsoft.com/library/gg682055).  
+- Pode [configurar clientes para encontrar pontos de gestão do DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Quando um site publica registos de localização de serviços para pontos de gestão no DNS:  
 
@@ -183,7 +183,7 @@ O Gestor de Configuração suporta o RFC 2782 para registos de localização de 
 
 Para publicar um ponto de gestão ao Gestor de Configuração, especifique os seguintes valores:  
 
-- **_Service**: Insira\> **_mssms_mp**_&lt;sitecode, onde &lt;o código\> de site é o código de site do ponto de gestão.  
+- **_Service**: Insira **_mssms_mp**_ &lt; sitecode, onde o código de site é o código de \> site do ponto &lt; \> de gestão.  
 - **._Proto**: Especifique **._tcp**.  
 - **.Name**: Introduza o sufixo DNS do ponto de gestão, como, por exemplo, **contoso.com**.  
 - **TTL**: Introduza **14400**, que corresponde a quatro horas.  
@@ -201,7 +201,7 @@ Se utilizar o DNS do Windows Server, poderá utilizar o procedimento seguinte pa
 
 ##### <a name="to-configure-automatic-publishing"></a>Para configurar a publicação automática:  
 
-1.  Na consola de Configuração Manager, expanda**os Sites**de**Configuração** > do Site **da Administração.** >   
+1.  Na consola de Configuração Manager, expanda os Sites de Configuração do Site **da Administração.**  >  **Site Configuration**  >  **Sites**  
 
 2.  Selecione o seu site e, em seguida, escolha os Componentes do **Site Configurar**.  
 
@@ -226,7 +226,7 @@ Se utilizar o DNS do Windows Server, poderá utilizar o procedimento seguinte pa
 4.  Utilizando a opção **New Other Records,** escolha a Localização do **Serviço (SRV)** na caixa de diálogo do Tipo de Registo de **Recursos,** escolha **Criar O Registo,** introduza as seguintes informações e, em seguida, escolha **Done:**  
 
     - **Domínio**: Se necessário, introduza o sufixo DNS do ponto de gestão, como, por exemplo, **contoso.com**.  
-    - **Serviço**: **_mssms_mp**Tipo&lt;_mssms_mp\>_ &lt;sitecode, onde o código\> de site é o código de site do ponto de gestão.  
+    - **Serviço**: Tipo **_mssms_mp**_ &lt; sitecode, onde o código de site é o código de \> site do ponto &lt; \> de gestão.  
     - **Protocolo**: Escreva **_tcp**.  
     - **Prioridade**: O Gestor de Configuração não utiliza este campo.  
     - **Peso**: O Gestor de Configuração não utiliza este campo.  

@@ -5,17 +5,17 @@ description: Saiba como configurar a cogestão de novos dispositivos Windows 10 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712716"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428609"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Tutorial: Permitir a cogestão de novos dispositivos baseados na Internet
 
@@ -96,7 +96,7 @@ Sobre este certificado:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identifique um nome único para o seu gateway de gestão de nuvem em Azure
 
-Ao solicitar o certificado de autenticação do servidor CMG, especifice qual deve ser um nome único para identificar o seu *serviço Cloud (clássico)* em Azure. Por padrão, a nuvem pública Azure utiliza *cloudapp.net*, e o CMG está hospedado dentro do domínio cloudapp.net como * \<YourUniqueDnsName>.cloudapp.net*.  
+Ao solicitar o certificado de autenticação do servidor CMG, especifice qual deve ser um nome único para identificar o seu *serviço Cloud (clássico)* em Azure. Por padrão, a nuvem pública Azure utiliza *cloudapp.net*, e o CMG está hospedado dentro do domínio cloudapp.net como * \< YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
 > Neste tutorial, o certificado de autenticação do **servidor CMG** utiliza um FQDN que termina em *contoso.com*.  Depois de criarmos o CMG, configuraremos um registo de nome canónico (CNAME) no DNS público da nossa organização. Este registo cria um pseudónimo para a CMG que mapeia o nome que usamos no certificado público.  
@@ -206,9 +206,9 @@ Executar o seguinte procedimento a partir do servidor do site principal.
 
    - **Nome da aplicação**: Especifique um nome amigável para a aplicação, como a *aplicação web Cloud Management*.  
 
-   - **URL homePage**: Este valor não é utilizado pelo Gestor de Configuração, mas é exigido pelo Azure AD. Por defeito, `https://ConfigMgrService`este valor é .  
+   - **URL homePage**: Este valor não é utilizado pelo Gestor de Configuração, mas é exigido pelo Azure AD. Por defeito, este valor é `https://ConfigMgrService` .  
 
-   - **App ID URI**: Este valor tem de ser único no seu inquilino Azure AD. Está no sinal de acesso utilizado pelo cliente do Gestor de Configuração para solicitar o acesso ao serviço. Por defeito, `https://ConfigMgrService`este valor é .  
+   - **App ID URI**: Este valor tem de ser único no seu inquilino Azure AD. Está no sinal de acesso utilizado pelo cliente do Gestor de Configuração para solicitar o acesso ao serviço. Por defeito, este valor é `https://ConfigMgrService` .  
 
    Em seguida, selecione **Iniciar sessão**e especificar uma conta de Administrador Global Azure AD. Estas credenciais não são guardadas pelo Diretor de Configuração. Esta persona não requer permissões no Gestor de Configuração e não precisa de ser a mesma conta que gere o Assistente de Serviços Azure.
 
@@ -220,7 +220,7 @@ Executar o seguinte procedimento a partir do servidor do site principal.
 
    - **Nome da aplicação**: Especifique um nome amigável para a aplicação, como a *aplicação de clientes nativos da Cloud Management*.
 
-   - **URL de resposta**: Este valor não é utilizado pelo Gestor de Configuração, mas é exigido pelo Azure AD. Por defeito, `https://ConfigMgrClient`este valor é .
+   - **URL de resposta**: Este valor não é utilizado pelo Gestor de Configuração, mas é exigido pelo Azure AD. Por defeito, este valor é `https://ConfigMgrClient` .
    Em seguida, selecione **Iniciar sessão**e especificar uma conta de Administrador Global Azure AD. Tal como a aplicação Web, estas credenciais não são guardadas e não requerem permissões no 'Gestor de Configuração'.
 
    Depois de iniciar sessão, os resultados são apresentados. Selecione **OK** para fechar o diálogo da Aplicação Do Cliente Criar e voltar à página App Properties. Em seguida, selecione **Next** para continuar.
@@ -237,11 +237,11 @@ Executar o seguinte procedimento a partir do servidor do site principal.
 
    1. Selecione a aplicação Web que criou.
 
-   2. Vá a **Definições > Permissões Necessárias,** selecione **permissões de concessão**e, em seguida, selecione **Sim**.  
+   2. Vá a **Permissões API** > selecione O consentimento do **administrador do Grant para,** <your tenant> e depois selecione **Sim**.  
 
    3. Selecione a aplicação Cliente Nativo que criou.
 
-   4. Vá a **Definições > Permissões Necessárias,** selecione **permissões de concessão**e, em seguida, selecione **Sim**.  
+   4. Vá a **Permissões API** > selecione O consentimento do **administrador do Grant para,** <your tenant> e depois selecione **Sim**.
 
 9. Na consola de Configuração Manager, vá à **Administração > visão geral > Serviços de Nuvem > Serviços Azure,** e selecione o seu Serviço Azure. Em seguida, clique à direita no **Utilizador de Diretório Ativo Azure Discover** e selecione Executar Full Discovery **Now**. Selecione **Sim** para confirmar a ação.  
 
@@ -323,7 +323,7 @@ Configure o site para suportar o HTTP melhorado.
 
 3. Agora vá ao > > Configuração do Site > Funções de Sistema de > e **servidores e sistema** de site e selecione o servidor com um ponto de gestão onde pretende instalar o ponto de ligação de gateway de gestão da nuvem.  
 
-4. **Selecione Adicionar funções**do sistema do site, e **depois**> **seguinte**.  
+4. **Selecione Adicionar funções**do sistema do site, e **depois** >  **seguinte**.  
 
 5. Selecione o ponto de ligação de gateway de **gestão cloud** e, em seguida, selecione **Next** para continuar.  
 
@@ -351,7 +351,7 @@ Utilize as Definições do Cliente para configurar os clientes do Gestor de Conf
 
    - **Permitir o acesso ao ponto de distribuição em nuvem**
 
-4. Na página Política do **Cliente,** delineie **os pedidos de política do utilizador dos clientes** = da Internet**Sim**.
+4. Na página Política do **Cliente,** **delineie os pedidos de política do utilizador dos clientes da Internet**  =  **Sim**.
 
 5. Selecione **OK** para guardar esta configuração.
 
@@ -383,11 +383,11 @@ Em seguida, quando um dispositivo Windows 10 anteriormente não gerido se inscre
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Criar uma aplicação Intune para instalar o cliente do Gestor de Configuração
 
-1. A partir do servidor principal do site, inscreva-se no [portal Azure](https://portal.azure.com/) e vá às **aplicações intune > Cliente > Apps > Add**.
+1. A partir do servidor principal do site, inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://endpoint.microsoft.com) e vá para as **Apps**  >  **All Apps**  >  **Add**.
 
-2. Para o tipo de **aplicações**: Selecione **app Line-of-business**.
+2. Para o tipo de aplicativo, selecione **app Line-of-business** em **Outros**.
 
-3. Selecione ficheiro de pacote de **aplicativos**, e, em seguida, navegue para a localização do ficheiro 'Gestor de Configuração **ccmsetup.msi'** e, em seguida, selecione **Abrir > OK**.
+3. Para o ficheiro de **pacote**si, navegue para a localização do ficheiro 'Gestor de Configuração **ccmsetup.msi'** e, em seguida, selecione **Open > OK**.
 Por exemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Selecione Informações de **aplicações**e, em seguida, especifique os seguintes detalhes:
@@ -395,7 +395,7 @@ Por exemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
    - **Editor**: Microsoft  
 
-   - **Argumentos da linha de comando**: * \<Especifique a linha de comando **CCMSETUPCMD.** Pode utilizar a linha de comando que guardou na* página de ativação do Assistente de Configuração de *Cogestão. Esta linha de comando inclui os nomes do seu serviço na nuvem e valores adicionais que permitem aos dispositivos instalar o software cliente Do Gestor de Configuração.>*  
+   - **Argumentos da linha de comando**: * \< Especifique a linha de comando **CCMSETUPCMD.** Pode utilizar a linha de comando que guardou na* página de ativação do Assistente de Configuração de *Cogestão. Esta linha de comando inclui os nomes do seu serviço na nuvem e valores adicionais que permitem aos dispositivos instalar o software cliente Do Gestor de Configuração.>*  
 
      A estrutura da linha de comando deve assemelhar-se a este exemplo utilizando apenas os parâmetros CCMSETUPCMD e SMSSiteCode:  
 
@@ -412,18 +412,18 @@ Por exemplo, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
 O procedimento seguinte implementa a aplicação para instalar o cliente Do Gestor de Configuração que criou no procedimento anterior.
 
-1. Inicie sessão no [portal do Azure](https://portal.azure.com/).  Selecione **todos os serviços > Intune > Aplicações do Cliente > Apps**, e, em seguida, selecione **ConfigMgr Client Setup Bootstrap**, a app que criou para implementar o cliente De Configuração Manager.  
+1. Inscreva-se no centro de administração do [Microsoft Endpoint Manager](https://endpoint.microsoft.com). Selecione **Apps**  >  **Apps Todas as Aplicações** e, em seguida, selecione **ConfigMgr Client Setup Bootstrap,** a app que criou para implementar o cliente de Gestor de Configuração.  
 
-2. Selecione **Atribuições > Adicionar grupo**.  Definir **o tipo** de atribuição como **necessário**, e depois utilizar **Grupos Incluídos** e **Grupos Excluídos** para definir os grupos de Diretório Ativo Azure (AD) que têm utilizadores e dispositivos que pretende participar na cogestão.  
+2. Clique em **Propriedades** **e depois edite** para **atribuições**. Selecione **Adicionar grupo** em atribuições **necessárias** para definir os grupos de Diretório Ativo Azure (AD) que têm utilizadores e dispositivos que pretende participar na cogestão.  
 
-3. Selecione **OK** e, em seguida, **guarde** a configuração.
+3. Selecione **Rever + guardar** e, em seguida, **guardar** a configuração.
 A aplicação é agora exigida pelos utilizadores e dispositivos a que a atribuiu. Depois de a aplicação instalar o cliente do Gestor de Configuração num dispositivo, é gerido por cogestão.
 
 ## <a name="summary"></a>Resumo
 
 Depois de completar os passos de configuração deste tutorial, pode começar a cogerir os seus dispositivos.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 - Reveja o estado dos dispositivos cogeridos com o painel de [cogestão](how-to-monitor.md)
 - Utilize o [Windows Autopilot](quickstart-autopilot.md) para fornecer novos dispositivos
